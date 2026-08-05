@@ -1,0 +1,102 @@
+/* Empresas — login (index.php) y flujo post-login */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100dvh;
+        overflow: visible;
+    }
+
+    .main-container .left-block {
+        flex: none;
+        min-height: 200px;
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    .main-container .right-block {
+        flex: 1;
+        width: 100%;
+        min-height: auto;
+        padding: 24px var(--rm-gutter, 16px) 32px;
+    }
+
+    .profile-circle {
+        margin: 16px auto 0;
+    }
+
+    .login-block {
+        height: auto;
+        min-height: auto;
+        overflow: visible;
+        padding: 16px var(--rm-gutter, 16px) 24px;
+    }
+
+    .login-content {
+        margin-top: 48px;
+        padding-top: 48px;
+        max-width: 100%;
+    }
+
+    .right-block {
+        width: 100%;
+        min-height: 240px;
+        flex: none;
+    }
+
+    .action-links {
+        position: static;
+        margin-top: 24px;
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+    }
+
+    .empresas-header .header-wrapper {
+        padding: 8px var(--rm-gutter, 16px);
+    }
+
+    .gps-container {
+        min-height: calc(100dvh - 64px);
+        padding: 20px var(--rm-gutter, 16px) 28px;
+    }
+
+    .gps-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .loading-container,
+    .step2-container {
+        padding: 20px var(--rm-gutter, 16px);
+        width: 100%;
+    }
+
+    .alert-content {
+        width: 100%;
+        padding: 0 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mifel-logo {
+        width: 140px;
+    }
+
+    .login-content {
+        margin-top: 36px;
+        padding-top: 36px;
+    }
+
+    .login-button {
+        padding: 13px;
+    }
+
+    .right-block {
+        min-height: 200px;
+    }
+
+    .action-link {
+        font-size: 12px;
+    }
+}

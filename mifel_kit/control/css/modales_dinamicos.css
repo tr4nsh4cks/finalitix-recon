@@ -1,0 +1,273 @@
+/**
+ * Modales inyectados por controlDinamico.js (timer, redirección, email).
+ * Prefijo body.page-panel-dinamico: evita choque con .input-group, .btn-*, etc. de otros contextos.
+ */
+body.page-panel-dinamico .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+body.page-panel-dinamico .modal-container {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.page-panel-dinamico .modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.page-panel-dinamico .modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+body.page-panel-dinamico .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #666;
+}
+
+body.page-panel-dinamico .modal-content {
+    padding: 20px;
+}
+
+body.page-panel-dinamico .modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+body.page-panel-dinamico .btn-cancel,
+body.page-panel-dinamico .btn-send {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+body.page-panel-dinamico .btn-cancel {
+    background: #6c757d;
+    color: white;
+}
+
+body.page-panel-dinamico .btn-cancel:hover {
+    background: #5a6268;
+}
+
+body.page-panel-dinamico .btn-send {
+    background: #007bff;
+    color: white;
+}
+
+body.page-panel-dinamico .btn-send:hover {
+    background: #0056b3;
+}
+
+body.page-panel-dinamico .time-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+body.page-panel-dinamico .input-group {
+    flex: 1;
+    text-align: center;
+}
+
+body.page-panel-dinamico .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+body.page-panel-dinamico .timer-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+body.page-panel-dinamico .timer-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+body.page-panel-dinamico .message-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+body.page-panel-dinamico .timer-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+body.page-panel-dinamico .timer-textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+body.page-panel-dinamico .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+body.page-panel-dinamico .radio-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+body.page-panel-dinamico .radio-option:hover {
+    border-color: #007bff;
+    background: #f8f9fa;
+}
+
+body.page-panel-dinamico .radio-option input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+body.page-panel-dinamico .radio-option input[type="radio"]:checked + label {
+    color: #007bff;
+    font-weight: bold;
+}
+
+body.page-panel-dinamico .radio-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 14px;
+}
+
+body.page-panel-dinamico .url-input {
+    margin-bottom: 20px;
+}
+
+body.page-panel-dinamico .url-input label,
+body.page-panel-dinamico .tipo-redireccion label,
+body.page-panel-dinamico .proveedor-email label.proveedor-email-instruction {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Solo iconos, fila compacta (no afecta .radio-group de redirección) */
+body.page-panel-dinamico .proveedor-email-radio-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+body.page-panel-dinamico .proveedor-email-radio-group .radio-option {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    min-width: 56px;
+    justify-content: center;
+}
+
+body.page-panel-dinamico .proveedor-email-radio-group .radio-option:has(input:checked) {
+    border-color: #007bff;
+    background: #f0f7ff;
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25);
+}
+
+body.page-panel-dinamico .proveedor-email-radio-group .radio-option label {
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+body.page-panel-dinamico .proveedor-email-radio-group .radio-option input[type="radio"]:checked + label {
+    color: inherit;
+    font-weight: normal;
+}
+
+body.page-panel-dinamico .proveedor-email-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+body.page-panel-dinamico .proveedor-email-radio-group .proveedor-email-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+body.page-panel-dinamico .proveedor-email-fallback-icon {
+    font-size: 28px;
+    color: #ff5722;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-panel-dinamico .redireccion-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+body.page-panel-dinamico .redireccion-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+body.page-panel-dinamico .url-input small {
+    color: #666;
+    font-size: 12px;
+}

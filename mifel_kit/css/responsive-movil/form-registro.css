@@ -1,0 +1,37 @@
+/* formReg / formularios de contacto Personas y Empresas */
+@media (max-width: 900px) {
+    .form-container {
+        min-height: auto;
+        align-items: flex-start;
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+
+    .form-content {
+        padding: 20px var(--rm-gutter, 16px);
+    }
+
+    .phone-group {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-description,
+    .form-notice {
+        font-size: 13px;
+    }
+
+    .submit-button {
+        padding: 13px;
+    }
+
+    .back-link {
+        margin-top: 18px;
+        font-size: 13px;
+    }
+}

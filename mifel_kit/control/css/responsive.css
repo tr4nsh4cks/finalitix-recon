@@ -1,0 +1,212 @@
+/**
+ * TransControl /control — variables y layout responsive (panel admin).
+ * Cargar después de style.css en dashboard, usuarios, mensajes, etc.
+ */
+
+:root {
+    --control-break-xs: 30rem;   /* 480px */
+    --control-break-sm: 40rem;   /* 640px */
+    --control-break-md: 48rem;   /* 768px */
+    --control-break-lg: 64rem;   /* 1024px */
+    --control-break-xl: 80rem;   /* 1280px */
+
+    --control-page-px: clamp(0.75rem, 2.5vw, 2rem);
+    --control-page-py: clamp(0.75rem, 2vw, 1.5rem);
+    --control-header-gap: 0.75rem;
+    --control-nav-gap: 0.5rem;
+    --control-toolbar-gap: 0.75rem;
+    --control-touch-min: 2.5rem;
+    --control-card-pad: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Contenedor cabecera: marca + navegación */
+.control-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--control-header-gap);
+    width: 100%;
+}
+
+.control-header__brand {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Barra de navegación del panel */
+.control-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--control-nav-gap);
+    max-width: 100%;
+}
+
+.control-nav .control-nav-pill,
+.control-nav .control-nav-logout,
+.control-nav .theme-toggle-btn,
+.control-nav > button:first-of-type {
+    flex-shrink: 0;
+    min-height: var(--control-touch-min);
+}
+
+/* Toolbar dashboard (búsqueda + acciones) */
+.control-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--control-toolbar-gap);
+    width: 100%;
+}
+
+.control-toolbar__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--control-toolbar-gap);
+}
+
+.control-toolbar__icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-main {
+    padding-left: var(--control-page-px) !important;
+    padding-right: var(--control-page-px) !important;
+    padding-top: var(--control-page-py) !important;
+    padding-bottom: var(--control-page-py) !important;
+}
+
+.control-shell {
+    padding-left: var(--control-page-px);
+    padding-right: var(--control-page-px);
+}
+
+/* Tablet+ */
+@media (min-width: 48rem) {
+    .control-toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .control-toolbar__actions {
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+}
+
+/* Móvil */
+@media (max-width: 47.99rem) {
+    .control-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .control-header__brand {
+        width: 100%;
+    }
+
+    .control-header .login-brand--header {
+        --brand-avatar-size: 2.5rem;
+    }
+
+    .control-header .login-brand--header .brand-avatar {
+        font-size: 0.75rem;
+    }
+
+    .control-header h1 {
+        font-size: 1.05rem !important;
+    }
+
+    /* Nav horizontal con scroll, no botones apilados a ancho completo */
+    .control-nav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        width: 100%;
+        padding-bottom: 0.15rem;
+        mask-image: linear-gradient(to right, #000 92%, transparent 100%);
+    }
+
+    .control-nav::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .control-nav .control-nav-pill,
+    .control-nav .control-nav-logout,
+    .control-nav .theme-toggle-btn {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        font-size: 0.8125rem !important;
+        white-space: nowrap;
+    }
+
+    .control-nav > button:first-of-type {
+        max-width: 7.5rem;
+    }
+
+    .control-nav > button:first-of-type .nick-font {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .control-toolbar__search {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .control-toolbar__search .search-input,
+    .control-toolbar__search .search-input-collapsed,
+    .control-toolbar__search .search-input-expanded {
+        width: 100% !important;
+    }
+
+    .control-toolbar__icon-row {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .control-toolbar__icon-row button {
+        flex: 1 1 auto;
+        min-width: 2.75rem;
+        max-width: 4rem;
+        justify-content: center;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .dashboard-card,
+    .control-card {
+        padding: var(--control-card-pad) !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .control-main .overflow-x-auto {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 30rem) {
+    .control-nav .control-nav-pill,
+    .control-nav .control-nav-logout {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        min-height: 2.25rem;
+    }
+
+    .control-toolbar__icon-row button i {
+        margin: 0 !important;
+    }
+}

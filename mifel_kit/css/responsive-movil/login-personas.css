@@ -1,0 +1,43 @@
+/* personas.html — login Personas */
+@media (max-width: 768px) {
+    .main-container {
+        min-height: 100dvh;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 var(--rm-gutter, 16px);
+    }
+
+    .left-block {
+        border-radius: 12px;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .register-text {
+        padding-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-wrapper {
+        justify-content: flex-end;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .forgot-link {
+        margin-bottom: 16px;
+    }
+
+    .register-text {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}

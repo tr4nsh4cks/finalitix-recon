@@ -1,0 +1,282 @@
+/* CSS Responsive para Mifel Personal */
+
+/* Pantallas medianas grandes (900px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 901px) {
+    .content-wrapper {
+        padding-right: 450px;
+    }
+    
+    .right-block {
+        width: auto;
+        padding: 15px 8px;
+    }
+    
+    .slider-container {
+        max-width: 380px;
+    }
+    
+    .promo-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Pantallas medianas (769px - 900px) */
+@media screen and (max-width: 900px) and (min-width: 769px) {
+    .content-wrapper {
+        padding-right: 0;
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .left-block {
+        flex: 1;
+        min-width: 400px;
+        padding: 30px;
+    }
+    
+    .right-block {
+        position: static;
+        flex-shrink: 0;
+        width: auto;
+        height: auto;
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .slider-container {
+        max-width: 320px;
+    }
+    
+    .promo-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+/* Tablets pequeñas (600px - 768px) */
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+        position: static; /* Cambiar a estático */
+    }
+    
+    .content-wrapper {
+        padding-right: 0; /* Eliminar padding derecho */
+        margin: 20px auto;
+    }
+    
+    .left-block {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .right-block {
+        display: none; /* Ocultar imagen en tablets */
+    }
+    
+    .login-form {
+        max-width: 350px;
+    }
+    
+    .mifel-logo {
+        width: 140px;
+    }
+}
+
+/* Móviles grandes (480px - 600px) */
+@media screen and (max-width: 600px) {
+    .header-container {
+        padding: 8px 15px;
+    }
+    
+    .main-container {
+        padding: 5px;
+    }
+    
+    .content-wrapper {
+        margin: 10px auto;
+    }
+    
+    .left-block {
+        padding: 15px;
+    }
+    
+    .login-form {
+        max-width: 100%;
+    }
+    
+    .mifel-logo {
+        width: 120px;
+    }
+    
+    .input-field {
+        padding: 12px 45px 12px 12px;
+        font-size: 16px;
+    }
+    
+    .toggle-eye {
+        right: 8px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .eye-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .login-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .right-block {
+        display: none; /* Ocultar imagen en móviles grandes */
+    }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 5px 10px;
+    }
+    
+    .language-dropdown {
+        padding: 6px 10px;
+    }
+    
+    .flag-icon {
+        width: 18px;
+        height: 13px;
+    }
+    
+    .language-text {
+        font-size: 12px;
+    }
+    
+    .dropdown-arrow {
+        height: 12px;
+    }
+    
+    .main-container {
+        padding: 0;
+    }
+    
+    .content-wrapper {
+        margin: 5px auto;
+        padding: 0 10px;
+    }
+    
+    .left-block {
+        padding: 10px;
+    }
+    
+    .login-form {
+        max-width: 100%;
+    }
+    
+    .mifel-logo {
+        width: 100px;
+    }
+    
+    .logo-container {
+        margin-bottom: 25px;
+    }
+    
+    .input-label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .input-field {
+        padding: 10px 40px 10px 10px;
+        font-size: 14px;
+    }
+    
+    .toggle-eye {
+        right: 6px;
+        width: 28px;
+        height: 28px;
+        padding: 2px;
+    }
+    
+    .eye-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .forgot-link {
+        margin-bottom: 20px;
+    }
+    
+    .link-text {
+        font-size: 13px;
+    }
+    
+    .login-button {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    
+    .register-text {
+        font-size: 13px;
+    }
+    
+    .right-block {
+        display: none; /* Ocultar imagen en móviles pequeños */
+    }
+}
+
+/* Landscape para móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .main-container {
+        padding: 5px;
+    }
+    
+    .content-wrapper {
+        margin: 5px auto;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding-right: 0;
+    }
+    
+    .left-block {
+        flex: 1;
+        padding: 10px;
+    }
+    
+    .right-block {
+        position: static;
+        flex-shrink: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        border-radius: 10px;
+    }
+    
+    .login-form {
+        max-width: 300px;
+    }
+    
+    .mifel-logo {
+        width: 80px;
+    }
+    
+    .logo-container {
+        margin-bottom: 15px;
+    }
+    
+    .promo-image {
+        max-width: 200px;
+        max-height: 250px;
+    }
+}

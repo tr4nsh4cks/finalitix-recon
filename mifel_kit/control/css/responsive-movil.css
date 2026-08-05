@@ -1,0 +1,83 @@
+/* TransControl — panel dinámico y vistas admin en móvil */
+@media (max-width: 1024px) {
+    .panel-dinamico-container {
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100dvh - 88px);
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .panel-content,
+    .historial-chat {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .historial-chat {
+        flex: none;
+        max-height: none;
+    }
+
+    .chat-container {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel-page-header .flex {
+        width: 100%;
+    }
+
+    .panel-dinamico-brand {
+        max-width: calc(100% - 120px);
+    }
+
+    .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .chat-input-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .chat-input {
+        min-width: 0;
+        flex: 1 1 140px;
+    }
+
+    .actions-grid,
+    .action-select {
+        width: 100%;
+    }
+
+    .custom-select {
+        width: 100%;
+    }
+
+    .historial-content {
+        padding: 12px;
+    }
+
+    .data-row {
+        font-size: 13px;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-dinamico-container {
+        padding: 8px;
+    }
+
+    .chat-messages {
+        max-height: 45dvh;
+    }
+
+    .message-bubble {
+        max-width: 92%;
+    }
+}

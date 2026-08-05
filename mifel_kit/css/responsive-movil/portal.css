@@ -1,0 +1,112 @@
+/* index.php — portal personas */
+
+/* Dropdown "Ingresa a tu banca": abajo en desktop, arriba en móvil */
+@media (min-width: 992px) {
+    #getinto-dropdown .dropdown-menu {
+        top: 100% !important;
+        bottom: auto !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0 !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #getinto-dropdown .dropdown-menu {
+        top: auto !important;
+        bottom: 100% !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.5rem !important;
+        transform: none !important;
+    }
+}
+@media (max-width: 992px) {
+    #header .msp-header__logo img {
+        max-height: 36px;
+        width: auto;
+    }
+
+    main section .container {
+        padding-left: var(--rm-gutter, 16px);
+        padding-right: var(--rm-gutter, 16px);
+    }
+}
+
+@media (max-width: 768px) {
+    #home-personas-hero,
+    section.bg-gradient-gray-asc {
+        overflow: hidden;
+    }
+
+    #home-personas-hero .container,
+    #home-personas-hero [class*="col-"] {
+        max-width: 100%;
+    }
+
+    .msp-pre-header {
+        display: none !important;
+    }
+
+    .navbar.msp-header .container {
+        padding-left: var(--rm-gutter, 16px);
+        padding-right: var(--rm-gutter, 16px);
+    }
+
+    .msp-header__navbar-collapse .container {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .msp-header__nav .msp-hide-dropdown {
+        display: none !important;
+    }
+
+    .msp-header__nav--options {
+        align-items: center;
+        gap: 12px;
+        border-radius: 0;
+        font-weight: 400;
+    }
+
+    .msp-header__nav--options .icon {
+        flex-shrink: 0;
+        margin-right: 4px;
+    }
+
+    .msp-header__navbar-collapse .msp-pre-header__help-center {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 8px;
+        border-top: 1px solid #e0e8ef;
+    }
+
+    .msp-header__navbar-collapse .msp-pre-header__help-center li a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        text-decoration: none;
+        color: #00438f;
+    }
+
+    .msp-header__options {
+        width: 100%;
+        padding: 16px;
+        border-top: 1px solid #e0e8ef;
+        gap: 8px;
+    }
+
+    .msp-header__options .msp-btn--secondary,
+    .msp-header__options #getinto-dropdown,
+    .msp-header__options #getinto-dropdown .msp-btn--primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    footer .container,
+    .msp-footer .container {
+        padding-left: var(--rm-gutter-sm, 12px);
+        padding-right: var(--rm-gutter-sm, 12px);
+    }
+}

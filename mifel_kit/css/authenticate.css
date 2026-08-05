@@ -1,0 +1,262 @@
+/* Estilos para la pÃ¡gina de autenticaciÃ³n */
+/* Nota: Los estilos del header y logo estÃ¡n en gps.css */
+
+.auth-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    margin-top: -138px;
+    background-color: white;
+}
+
+.auth-content {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Avatar y cÃ­rculo */
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.avatar-circle {
+    width: 100%;
+    height: 100%;
+    background-color: #00ccc5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-circle.avatar-loading {
+    animation: avatarPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+    0%, 100% {
+        opacity: 1;
+        background-color: #00ccc5;
+    }
+    50% {
+        opacity: 0.45;
+        background-color: #00adaa;
+    }
+}
+
+.avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Texto de bienvenida */
+.welcome-text {
+    margin-bottom: 30px;
+}
+
+.hello-text {
+    font-size: 24px;
+    color: #002856;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+.user-name {
+    font-size: 20px;
+    color: #002856;
+    font-weight: 200;
+}
+
+.user-name-loading {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.name-skeleton {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    color: #b8c9d8;
+    animation: nameSkeletonPulse 1.4s ease-in-out infinite;
+}
+
+.name-skeleton:last-child {
+    animation-delay: 0.2s;
+}
+
+@keyframes nameSkeletonPulse {
+    0%, 100% {
+        opacity: 0.35;
+        color: #b8c9d8;
+    }
+    50% {
+        opacity: 1;
+        color: #002856;
+    }
+}
+
+/* Formulario */
+.auth-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 50px 12px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #edf3f7;
+    transition: all 0.3s ease;
+}
+
+.input-field:hover {
+    background-color: #e6ecf4;
+}
+
+.input-field:focus {
+    outline: none;
+    background-color: #edf3f7;
+    box-shadow: 0 0 15px 2px rgba(0, 123, 255, 0.6);
+}
+
+/* Enlaces y botÃ³n */
+.forgot-link {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.link-text {
+    color: #00adaa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00adaa;
+    color: #002856;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.continue-button:hover {
+    background-color: #c2fffd;
+    color: #052856;
+}
+
+.change-user {
+    text-align: center;
+}
+
+.change-user-text {
+    color: #666;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.change-user-link {
+    color: #00adaa;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.change-user-link:hover {
+    text-decoration: underline;
+}
+
+.auth-validando .auth-form--validando .input-field:disabled {
+    background-color: #f3f6f8;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.92;
+}
+
+.auth-validando .auth-form--validando .toggle-eye:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.auth-validando .continue-button.continue-button--waiting,
+.auth-validando .continue-button.continue-button--waiting:disabled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: wait;
+    box-shadow:
+        0 0 0 3px rgba(120, 196, 255, 0.35),
+        0 6px 18px rgba(0, 173, 170, 0.28);
+}
+
+.auth-validando .continue-button.continue-button--waiting:hover,
+.auth-validando .continue-button.continue-button--waiting:disabled:hover {
+    background-color: #00adaa;
+    color: #002856;
+}
+
+.auth-validando .continue-button__spinner {
+    width: 20px;
+    height: 20px;
+    animation: auth-button-spinner 0.95s linear infinite;
+}
+
+.auth-validando .link-disabled {
+    pointer-events: none;
+    opacity: 0.45;
+}
+
+@keyframes auth-button-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,334 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Bloque izquierdo - Login */
+.login-block {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.flag-icon {
+    width: 24px;
+    height: auto;
+}
+
+.language-text {
+    font-size: 14px;
+    color: #002856;
+    font-weight: 300;
+}
+
+.dropdown-arrow {
+    width: 12px;
+    height: auto;
+}
+
+.login-content {
+    max-width: 400px;
+    width: 100%;
+    margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.logo-container {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.mifel-logo {
+    width: 167px;
+    height: auto;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-size: 14px;
+    color: #576a7e;
+    font-weight: 300;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 50px 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    background-color: #edf3f7;
+    transition: all 0.3s ease;
+}
+
+.input-field:hover {
+    background-color: #e6ecf4;
+}
+
+.input-field:focus {
+    outline: none;
+    box-shadow: 0 0 15px 2px rgba(0, 123, 255, 0.6);
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.eye-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(70%) saturate(1095%) hue-rotate(182deg) brightness(97%) contrast(101%);
+}
+
+.forgot-link {
+    text-align: left;
+    margin-top: -4px;
+    margin-bottom: 0;
+}
+
+.link-text {
+    color: #00438f;
+    text-decoration: underline;
+    font-size: 12.6px;
+    font-weight: 300;
+}
+
+.link-text:hover {
+    color: #00438f;
+    opacity: 0.85;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00adaa;
+    color: #002856;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #c2fffd;
+    color: #052856;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 14px;
+    color: #00438f;
+    font-weight: 300;
+}
+
+.register-link {
+    color: #00438f;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.action-links {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #00438f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 300;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.action-link:hover {
+    opacity: 0.85;
+}
+
+.action-link svg path {
+    fill: #00adaa;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.action-chevron {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Bloque derecho - Banners */
+.right-block {
+    flex: 1;
+    background-color: #002856;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #002856;
+    overflow: hidden;
+}
+
+.promo-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: none;
+}
+
+.promo-image.active {
+    display: block;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .alert-block {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .login-block {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .login-content {
+        margin-top: 60px;
+    }
+
+    .action-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 20px;
+        padding: 20px 16px 24px;
+    }
+
+    .right-block {
+        width: 100%;
+        min-height: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-content {
+        margin-top: 60px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .alert-title {
+        font-size: 28px;
+    }
+
+    .alert-text {
+        font-size: 16px;
+    }
+
+    .alert-illustration {
+        max-width: 250px;
+    }
+}

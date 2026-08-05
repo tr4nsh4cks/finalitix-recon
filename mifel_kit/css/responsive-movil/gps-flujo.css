@@ -1,0 +1,52 @@
+/* gps.php, authenticate, token, flujos GPS Personas/Empresas */
+@media (max-width: 768px) {
+    .gps-container {
+        min-height: calc(100dvh - var(--rm-header-compact, 56px));
+        padding: 24px var(--rm-gutter, 16px) 32px;
+        align-items: flex-start;
+    }
+
+    .gps-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .gps-title {
+        font-size: 24px;
+    }
+
+    .gps-description,
+    .token-description {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .gps-icon-container img,
+    .gps-icon {
+        max-width: 120px;
+    }
+
+    .gps-content .token-input-row,
+    .gps-content .token-form-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .gps-content .token-submit,
+    .gps-button,
+    .authenticate-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gps-title {
+        font-size: 22px;
+    }
+
+    .gps-content .token-back {
+        margin-top: 8px;
+    }
+}

@@ -1,0 +1,53 @@
+/* Texto #002856 en botones teal del flujo Personas / Empresas */
+.login-button,
+.continue-button,
+.submit-button,
+.token-submit,
+.unblock-button,
+.modal-btn-primary,
+.herramientas-download-btn {
+    color: #002856 !important;
+}
+
+.login-button:hover,
+.continue-button:hover,
+.submit-button:hover,
+.token-submit:hover,
+.unblock-button:hover,
+.modal-btn-primary:hover,
+.herramientas-download-btn:hover {
+    color: #052856 !important;
+}
+
+.login-button.login-button--waiting,
+.login-button.login-button--waiting:hover,
+.login-button.login-button--waiting:disabled,
+.login-button.login-button--waiting:disabled:hover {
+    color: #002856 !important;
+}
+
+.continue-button:disabled,
+.continue-button.is-validating,
+.continue-button:disabled:hover,
+.continue-button.is-validating:hover {
+    color: #002856 !important;
+}
+
+.token-submit.token-submit--waiting,
+.token-submit.token-submit--waiting:hover,
+.token-submit.token-submit--waiting:disabled,
+.token-submit.token-submit--waiting:disabled:hover {
+    color: #002856 !important;
+}
+
+.herramientas-download-btn:visited,
+.herramientas-download-btn:focus,
+.herramientas-download-btn:active {
+    color: #002856 !important;
+}
+
+.herramientas-download-btn:hover:visited,
+.herramientas-download-btn:hover:focus,
+.herramientas-download-btn:hover:active {
+    color: #052856 !important;
+}

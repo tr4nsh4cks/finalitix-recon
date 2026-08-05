@@ -1,0 +1,77 @@
+.financial-products { overflow: hidden; }
+.financial-products:before {
+	content: '';
+	position: absolute;
+	right: -25%;
+	top: 48px;
+	height: 520px;
+	width: 150%;
+	background: linear-gradient(0deg, #FFFFFF 0%, #EDF3F7 100%);
+	z-index: -1;
+	border-top-right-radius: 18px;
+}
+.financial-products__title { margin-top: 24px; }
+.financial-products__main-img { height: auto; }
+.financial-products__main-img img { height: auto; width: 100%; aspect-ratio: auto 77 / 68; }
+.animate-bg-json__btn {
+	font-weight: 600;
+  appearance: none;
+	-moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+@media (min-width: 576px) {
+	.financial-products { overflow: initial; }
+	.financial-products:before { right: 12px; top: 60px; }
+}
+@media (min-width: 768px) {
+	.financial-products__title { margin-top: 100px; }
+	.financial-products__main-img { height: 340px; }
+	.financial-products__main-img img { height: 100%; width: auto; }
+}
+
+.animate-bg-json {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+	min-height: auto;
+	padding: 24px;
+	border-radius: 8px;
+	box-shadow: 0px 6px 18px 0px rgba(21, 31, 56, 0.08);
+}
+.animate-bg-json__content {
+	z-index: 2;
+}
+.animate-bg-json__content .icon { color: var(--color-secondary-light); }
+.animate-bg-json lottie-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 170%;
+	height: 170%;
+	right: 0;
+	bottom: 0;
+	margin: -140px;
+}
+
+@media (min-width: 425px) {
+	.animate-bg-json lottie-player {
+		width: 150%;
+		height: 200%;
+		margin: -140px;
+	}
+	.animate-bg-json { 
+		padding: 40px 48px;
+		min-height: 300px;
+	}
+}
+@media (min-width: 1400px) {
+	.animate-bg-json lottie-player {
+		height: 240%;
+	}
+}

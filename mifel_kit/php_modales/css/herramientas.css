@@ -1,0 +1,195 @@
+/* Modal de herramientas: header, dos columnas (icono + instrucciones), descarga */
+
+.herramientas-modal .modal-container {
+    max-width: 800px;
+    width: 90%;
+    animation: herramientasFadeIn 0.3s ease;
+}
+
+.herramientas-modal .modal-message {
+    padding: 0;
+    text-align: left;
+}
+
+.herramientas-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00adaa;
+}
+
+.herramientas-icon {
+    margin-right: 15px;
+}
+
+.herramientas-icon i {
+    font-size: 32px;
+    color: #002856;
+}
+
+.herramientas-title h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #002856;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.herramientas-title p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666666;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.herramientas-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.herramientas-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.herramientas-device i {
+    font-size: 80px;
+    color: #00adaa;
+}
+
+.herramientas-right {
+    flex: 1;
+}
+
+.herramientas-instructions {
+    margin-bottom: 0;
+}
+
+.herramientas-instructions h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #002856;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.herramientas-instructions h4 i {
+    color: #00adaa;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #002856;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.step-number {
+    background: #00adaa;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.herramientas-download-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #d9e4ec;
+}
+
+.herramientas-download-btn {
+    background: #00adaa;
+    color: #002856;
+    border: none;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.herramientas-download-btn:hover {
+    background: #c2fffd;
+    color: #052856;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.herramientas-download-btn:visited,
+.herramientas-download-btn:focus,
+.herramientas-download-btn:active {
+    color: #002856;
+    text-decoration: none;
+    outline: none;
+}
+
+.herramientas-download-btn:hover:visited,
+.herramientas-download-btn:hover:focus,
+.herramientas-download-btn:hover:active {
+    color: #052856;
+}
+
+.herramientas-download-btn i {
+    font-size: 18px;
+}
+
+.download-note {
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+    font-style: italic;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@keyframes herramientasFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .herramientas-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .herramientas-modal .modal-container {
+        width: 95%;
+    }
+
+    .herramientas-device i {
+        font-size: 60px;
+    }
+}

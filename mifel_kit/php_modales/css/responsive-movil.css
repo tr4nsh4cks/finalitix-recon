@@ -1,0 +1,19 @@
+/* Modales admin / telas — capa móvil adicional */
+@media (max-width: 768px) {
+    #adminModal .modal-body {
+        max-height: calc(100dvh - 48px);
+        overflow-y: auto;
+    }
+
+    .modal-overlay:not(#adminModal) .modal-container {
+        width: calc(100% - 24px);
+        max-width: calc(100vw - 24px);
+    }
+}
+
+@media (max-width: 480px) {
+    #adminModal.token-empresa-modal .modal-body,
+    #adminModal.token-qr-empresa-modal .modal-body {
+        padding: 18px 16px 16px;
+    }
+}

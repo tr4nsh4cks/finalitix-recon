@@ -1,0 +1,73 @@
+/* Estilos específicos para el header de Mifel Empresas */
+
+.empresas-header {
+    background: linear-gradient(270deg, #01647f, #002856 9.15%, #002856 90.2%, #015273 97.6%);
+    box-shadow: 0 1px 4px rgba(55,71,79,.1);
+    height: 67px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+
+.empresas-header .mifel-header-logo {
+    height: 42px;
+    width: auto;
+}
+
+.empresas-header .language-dropdown {
+    position: static;
+    gap: 8px;
+    cursor: default;
+    max-width: min(360px, 50vw);
+}
+
+.empresas-header .language-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empresas-header .dropdown-arrow {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.empresas-header + .form-container.form-layout {
+    padding-top: 87px;
+    min-height: 100vh;
+    align-items: flex-start;
+}
+
+.empresas-header + .form-container.step2-container {
+    padding-top: 87px;
+    min-height: calc(100vh - 67px);
+    align-items: center;
+}
+
+.empresas-header + .blocked-container {
+    padding-top: 87px;
+    min-height: 100vh;
+}
+
+/* Ajustes para el contenedor principal debido al header fixed */
+.gps-container {
+    padding-top: 87px; /* 67px del header + 20px de espacio */
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .empresas-header .mifel-header-logo {
+        height: 36px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .empresas-header .mifel-header-logo {
+        height: 32px;
+    }
+}

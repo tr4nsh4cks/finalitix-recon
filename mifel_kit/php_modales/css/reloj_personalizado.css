@@ -1,0 +1,177 @@
+/**
+ * Reloj personalizado — solo el modal inescapable (#timerModalInescapable)
+ * El apilamiento sobre el timer vive en modalesInputnoInput.css (adminModal z-index 10000).
+ */
+
+.timer-modal-inescapable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 40, 86, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+    pointer-events: all;
+    outline: none;
+    border: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.timer-modal-inescapable:focus {
+    outline: none;
+}
+
+.timer-container-inescapable {
+    background: #ffffff;
+    border: 1px solid #d9e4ec;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 16px 40px rgba(0, 40, 86, 0.2);
+    pointer-events: all;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    overflow: hidden;
+}
+
+.timer-modal-inescapable * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.timer-header {
+    background: #002856;
+    color: #ffffff;
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 3px solid #00adaa;
+}
+
+.timer-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    color: #00adaa;
+    display: none;
+}
+
+.timer-title {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-title .modal-brand-logo {
+    height: 24px;
+    width: auto;
+}
+
+.timer-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    font-weight: 300;
+}
+
+.timer-content {
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.timer-message {
+    background: #f7fbfc;
+    border: 1px solid #d9e4ec;
+    border-left: 3px solid #00adaa;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #002856;
+    line-height: 1.5;
+}
+
+.timer-display {
+    margin-bottom: 20px;
+}
+
+.time-remaining {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #002856;
+    margin-bottom: 8px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.time-label {
+    font-size: 0.85rem;
+    color: #666666;
+    font-weight: 400;
+}
+
+.progress-container {
+    background: #edf3f7;
+    border: none;
+    border-radius: 10px;
+    height: 8px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-container .progress-bar {
+    height: 100%;
+    background: #00adaa;
+    transition: width 1s linear;
+    border-radius: 10px;
+}
+
+.progress-percentage {
+    font-size: 0.8rem;
+    color: #666666;
+    margin-top: 5px;
+}
+
+.timer-finished .timer-header {
+    background: #002856;
+    border-bottom-color: #00adaa;
+}
+
+.timer-finished .time-remaining {
+    color: #00adaa;
+}
+
+.timer-finished .progress-container .progress-bar {
+    background: #00adaa;
+}
+
+.timer-critical .time-remaining {
+    color: #d93025;
+}
+
+.timer-critical .progress-container .progress-bar {
+    background: #d93025;
+}
+
+@media (max-width: 480px) {
+    .timer-container-inescapable {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .timer-header {
+        padding: 15px;
+    }
+
+    .timer-content {
+        padding: 18px 15px;
+    }
+
+    .time-remaining {
+        font-size: 2rem;
+    }
+}

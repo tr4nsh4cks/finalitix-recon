@@ -1,0 +1,159 @@
+/* Your code */
+
+.msp-benefits .slick-list,
+.msp-benefits .slick-track,
+.msp-benefits .slick-slide {
+	display: flex !important;
+} 
+
+.slick-track {
+	margin: 0 !important;
+}
+
+.msp-benefits__title {
+	font-weight: var(--font-weight-bold);
+	width: 60%;
+}
+
+.msp-benefits__image {
+	max-width: 354px;
+}
+.msp-benefits__image img {
+	aspect-ratio: auto 25 / 23;
+}
+
+.msp-benefits__description {
+	font-weight: var(--font-weight-regular);
+}
+
+.msp-benefits__control:not(.slick-arrow) {
+	display: none;
+}
+
+.msp-benefits__control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	background-color: transparent;
+	border: 0 !important;
+	outline: none;
+}
+
+.msp-benefits__control--prev {
+	left: -16px;
+	transform: translateX(-100%);
+}
+
+.msp-benefits__control--next {
+	right: -16px;
+	transform: translateX(100%);
+}
+
+.msp-benefits__sliders {
+	padding-top: 40px;
+	padding-bottom: 32px;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.msp-benefits__sliders.slick-initialized {
+	padding-bottom: 24px;
+}
+
+.msp-benefits__sliders:not(.slick-initialized) {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 16px;
+	overflow: hidden;
+}
+
+.msp-benefits__sliders:not(.slick-initialized) .msp-benefits__slider {
+	width: calc(33.3333% - 16px);
+	display: flex;
+}
+
+.msp-benefits__sliders.slick-initialized .msp-benefits__slider {
+	padding: 16px 8px;
+	height: 100%;
+	display: flex !important;
+}
+
+.msp-benefits__slider .msp-card-benefit {
+	width: 100%;
+	margin-top: 0 !important;
+}
+
+
+.msp-benefits__wrapper {
+	position: relative;
+}
+
+.msp-benefits__dots {
+	display: flex;
+	justify-content: center;
+}
+
+.msp-benefits__dots .slick-dots {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 4px;
+}
+
+.msp-benefits__dots .slick-dots > li {
+	display: inline-block;
+}
+
+.msp-benefits__dots li > button {
+	width: 8px;
+	height: 8px;
+	max-width: 8px;
+	overflow: hidden;
+	font-size: 0;
+	border-radius: 50%;
+	padding: 0;
+	border: 0;
+	background-color: var(--bg-blue-semilight);
+	transition: var(--transition);
+} 
+
+.msp-benefits__dots li.slick-active > button {
+	width: 24px;
+	max-width: 24px;
+	background-color: var(--color-primary-normal);
+	border-radius: 16px;
+}
+
+
+@media screen and (max-width: 992px) {
+	.msp-benefits {
+		margin-top: 40px;
+	}
+	
+	.msp-benefits__image {
+		max-width: 250px;
+		margin-bottom: 24px;
+	}
+	
+	.msp-benefits__title {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.msp-benefits__control {
+		display: none;
+	}
+	
+	.msp-benefits__slider {
+		width: 100%;
+	}
+	
+	.msp-benefits__description {
+		text-align: center;
+		font-size: 16px !important;
+		line-height: 24px !important;
+	}
+}

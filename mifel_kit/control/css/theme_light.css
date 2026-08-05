@@ -1,0 +1,248 @@
+/**
+ * TEMA CLARO — TransControl /control
+ * Scope: [data-theme="light"]   (o sin data-theme, ya que el CSS base ya es claro)
+ * Este archivo solo necesita correcciones mínimas; el CSS base (style.css) es el tema claro.
+ */
+
+/* ═══════════ 1. Variables ═══════════ */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    /* Tema claro: acento neutro (blanco/negro); sin rojo en UI principal */
+    --accent: #111827;
+    --accent-soft: rgba(17, 24, 39, 0.08);
+    --accent-text: #111827;
+    color-scheme: light;
+}
+
+/* ═══════════ 2. Degradados de fila (para consistencia con dark) ═══════════ */
+[data-theme="light"] .estado-online {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.18) 0%, rgba(34, 197, 94, 0.06) 50%, transparent 100%) !important;
+    border-left: 4px solid #22c55e !important;
+}
+[data-theme="light"] .estado-online:hover {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.28) 0%, rgba(34, 197, 94, 0.1) 50%, transparent 100%) !important;
+}
+[data-theme="light"] .estado-inactive {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.18) 0%, rgba(245, 158, 11, 0.06) 50%, transparent 100%) !important;
+    border-left: 4px solid #f59e0b !important;
+}
+[data-theme="light"] .estado-inactive:hover {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.28) 0%, rgba(245, 158, 11, 0.1) 50%, transparent 100%) !important;
+}
+[data-theme="light"] .estado-offline {
+    background: transparent !important;
+    border-left: 4px solid #ef4444 !important;
+}
+[data-theme="light"] .estado-nunca-conectado {
+    background: transparent !important;
+    border-left: 4px solid #9ca3af !important;
+}
+
+[data-theme="light"] #tableBody tr.estado-online td:first-child {
+    border-left: 4px solid #22c55e !important;
+}
+[data-theme="light"] #tableBody tr.estado-inactive td:first-child {
+    border-left: 4px solid #f59e0b !important;
+}
+[data-theme="light"] #tableBody tr.estado-offline td:first-child {
+    border-left: 4px solid #ef4444 !important;
+}
+[data-theme="light"] #tableBody tr.estado-nunca-conectado td:first-child {
+    border-left: 4px solid #9ca3af !important;
+}
+
+/* ═══════════ 3. Toggle tema — el HTML trae text-white; en fondo claro hay que oscurecer icono */
+[data-theme="light"] .theme-toggle-btn {
+    background: #e5e7eb !important;
+    border: 1px solid #9ca3af !important;
+    color: #111827 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+[data-theme="light"] .theme-toggle-btn:hover {
+    background: #d1d5db !important;
+    border-color: #6b7280 !important;
+    color: #030712 !important;
+}
+[data-theme="light"] .theme-toggle-btn i {
+    color: #111827 !important;
+}
+[data-theme="light"] .theme-toggle-btn:hover i {
+    color: #030712 !important;
+}
+
+/* Barra nav: pestaña activa y salir = negro/gris, sin rojo */
+[data-theme="light"] .control-nav-pill--active {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
+    --tw-ring-shadow: 0 0 #0000;
+}
+[data-theme="light"] .control-nav-crown {
+    color: #d1d5db !important;
+}
+[data-theme="light"] button.control-nav-logout {
+    background: #111827 !important;
+    color: #fff !important;
+    border: 1px solid #1f2937 !important;
+}
+[data-theme="light"] button.control-nav-logout:hover {
+    background: #1f2937 !important;
+}
+
+/* Botones primarios que en HTML usan rojo (dashboard / tabla / paginación) → negro en tema claro */
+[data-theme="light"] .bg-red-600 {
+    background-color: #111827 !important;
+    border: 1px solid #374151 !important;
+}
+[data-theme="light"] .bg-red-600:hover {
+    background-color: #1f2937 !important;
+}
+
+/* Alertas de error: gris en lugar de rosa/rojo pastel */
+[data-theme="light"] .bg-red-100 {
+    background: #f3f4f6 !important;
+}
+[data-theme="light"] .border-red-400 {
+    border-color: #9ca3af !important;
+}
+[data-theme="light"] .text-red-700 {
+    color: #374151 !important;
+}
+
+/* Panel dinámico: tema claro = marca como dashboard (sin contenedor negro) */
+[data-theme="light"] .page-panel-dinamico .panel-dinamico-brand {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+[data-theme="light"] .page-panel-dinamico .panel-dinamico-brand h1 {
+    color: #1f2937 !important;
+}
+[data-theme="light"] .page-panel-dinamico .panel-dinamico-brand span.text-white {
+    color: #1f2937 !important;
+}
+[data-theme="light"] .page-panel-dinamico .panel-dinamico-brand .version-text {
+    color: #9ca3af !important;
+}
+[data-theme="light"] .page-panel-dinamico .panel-dinamico-transhacks {
+    color: #6b7280 !important;
+}
+
+/* ═══════════ Login (control/index.php) — mismo bxTheme que el panel ═══════════ */
+[data-theme="light"] body.login-page {
+    color: #111827 !important;
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 45%, #e2e8f0 100%) !important;
+    background-attachment: fixed !important;
+}
+
+[data-theme="light"] body.login-page .login-wave-ring {
+    border-color: rgba(15, 23, 42, 0.1) !important;
+    box-shadow: 0 0 28px rgba(15, 23, 42, 0.06) !important;
+}
+[data-theme="light"] body.login-page .login-wave-ring:nth-child(2) {
+    border-color: rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] body.login-page .login-wave-ring:nth-child(3),
+[data-theme="light"] body.login-page .login-wave-ring:nth-child(4) {
+    border-color: rgba(15, 23, 42, 0.07) !important;
+}
+[data-theme="light"] body.login-page .login-wave-ring--soft {
+    border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .login-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.04) inset,
+        0 12px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .login-card::before {
+    background: conic-gradient(
+        from var(--login-border-angle),
+        transparent 0deg,
+        transparent 260deg,
+        rgba(15, 23, 42, 0.05) 280deg,
+        rgba(15, 23, 42, 0.12) 302deg,
+        rgba(15, 23, 42, 0.08) 312deg,
+        rgba(15, 23, 42, 0.06) 322deg,
+        transparent 340deg,
+        transparent 360deg
+    ) !important;
+}
+
+[data-theme="light"] .login-heading {
+    background: none !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: border-box !important;
+    color: #111827 !important;
+    text-shadow: none !important;
+}
+
+[data-theme="light"] .login-brand-sub {
+    color: #64748b !important;
+}
+
+[data-theme="light"] .login-field {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #111827 !important;
+}
+[data-theme="light"] .login-field::placeholder {
+    color: #94a3b8 !important;
+}
+[data-theme="light"] .login-field:focus {
+    border-color: #64748b !important;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08) !important;
+}
+[data-theme="light"] .login-input-wrap .login-input-lock {
+    color: #64748b !important;
+}
+[data-theme="light"] .login-input-wrap:focus-within .login-input-lock {
+    color: #334155 !important;
+}
+
+[data-theme="light"] .login-submit:not(:disabled) {
+    color: #ffffff !important;
+    background: #111827 !important;
+    border: 1px solid #1f2937 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+}
+[data-theme="light"] .login-submit:not(:disabled):hover {
+    color: #ffffff !important;
+    background: #1f2937 !important;
+    border-color: #334155 !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18) !important;
+}
+[data-theme="light"] .login-submit:not(:disabled):active {
+    background: #0f172a !important;
+}
+[data-theme="light"] .login-submit:disabled {
+    color: #94a3b8 !important;
+    border-color: #e2e8f0 !important;
+    background: #f1f5f9 !important;
+}
+
+[data-theme="light"] .login-tagline {
+    color: #64748b !important;
+    text-shadow: none !important;
+}
+
+[data-theme="light"] .login-alert {
+    background: #f3f4f6 !important;
+    border: 1px solid #9ca3af !important;
+    color: #374151 !important;
+}
+
+[data-theme="light"] body.login-page .theme-toggle-btn {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}

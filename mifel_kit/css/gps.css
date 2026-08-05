@@ -1,0 +1,226 @@
+/* CSS especÃƒÂ­fico para la pÃƒÂ¡gina GPS */
+
+/* Header con logo centrado */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+   
+    
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mifel-header-logo {
+    height: 42px;
+    width: auto;
+    
+}
+
+.language-dropdown {
+    margin-left: auto;
+}
+
+/* Contenedor principal GPS */
+.gps-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: -106px;
+}
+
+.gps-content {
+    text-align: left;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    padding-top: 60px;
+}
+
+.gps-icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:  0;
+}
+
+.gps-icon {
+    /* width: 40px; */
+    /* height: 40px; */
+    color: #00adaa;
+}
+
+.gps-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    color: #002856;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.gps-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 499px;
+    text-align: left;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00adaa;
+    color: #002856;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.continue-button:hover {
+    background-color: #c2fffd;
+    color: #052856;
+}
+
+.continue-button:disabled,
+.continue-button.is-validating {
+    background-color: #7fd4d2;
+    color: #002856;
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.continue-button:disabled:hover,
+.continue-button.is-validating:hover {
+    background-color: #7fd4d2;
+    color: #002856;
+}
+
+.gps-content .token-back {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #002856;
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: underline;
+    margin-top: 18px;
+}
+
+.gps-content .token-back:hover {
+    color: #00adaa;
+}
+
+/* Responsive para GPS */
+@media screen and (max-width: 768px) {
+    .gps-container {
+        padding: 40px 15px 20px;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .mifel-header-logo {
+        height: 28px;
+    }
+
+    .gps-content {
+        padding-top: 50px;
+    }
+    
+    .gps-icon-container {
+        top: 0;
+        right: 15px;
+    }
+    
+    .gps-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .gps-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .gps-description {
+        font-size: 15px;
+        margin-bottom: 35px;
+    }
+    
+    .continue-button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 5px 10px;
+    }
+    
+    .mifel-header-logo {
+        height: 24px;
+    }
+    
+    .language-dropdown {
+        padding: 6px 8px;
+    }
+    
+    .flag-icon {
+        width: 16px;
+        height: 12px;
+    }
+    
+    .language-text {
+        font-size: 12px;
+    }
+    
+    .gps-container {
+        padding: 30px 10px 15px;
+    }
+
+    .gps-content {
+        padding-top: 45px;
+    }
+    
+    .gps-icon-container {
+        top: 0;
+        right: 10px;
+    }
+    
+    .gps-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .gps-title {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+    
+    .gps-description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .continue-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

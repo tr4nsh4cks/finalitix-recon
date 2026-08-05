@@ -1,0 +1,763 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Variables CSS - Tema Blanco y Negro */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --success-color: #000000;
+    --danger-color: #000000;
+    --warning-color: #000000;
+    --info-color: #000000;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f8f8;
+    --bg-dark: #000000;
+    
+}
+
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desactivar hover en filas de tabla */
+tbody tr {
+    transition: none !important;
+}
+
+tbody tr:hover {
+    background-color: transparent !important;
+    transform: none !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    min-height: 100vh;
+    color: var(--text-primary);
+}
+
+/* Header */
+header {
+    background: var(--bg-primary) !important;
+    border-bottom: 2px solid var(--border-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Login — degradado oscuro + ondas rojas animadas detrás del formulario */
+.login-page {
+    font-family:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        system-ui,
+        sans-serif;
+    color: #f5f5f7;
+    background: radial-gradient(ellipse 120% 80% at 50% 40%, #2a2a2e 0%, #121214 45%, #050506 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login-bg-effects {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.login-waves-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    z-index: 0;
+}
+
+.login-waves-hub--slow {
+    opacity: 0.55;
+    transform: scale(1.15);
+}
+
+.login-wave-ring {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 260px;
+    margin-left: -130px;
+    margin-top: -130px;
+    border: 2px solid rgba(220, 38, 38, 0.45);
+    border-radius: 42% 58% 48% 52% / 46% 54% 51% 49%;
+    animation: loginWaveRipple 7s ease-out infinite;
+    box-shadow: 0 0 40px rgba(185, 28, 28, 0.12);
+}
+
+.login-wave-ring:nth-child(2) {
+    animation-delay: -1.75s;
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+.login-wave-ring:nth-child(3) {
+    animation-delay: -3.5s;
+    border-color: rgba(127, 29, 29, 0.35);
+}
+
+.login-wave-ring:nth-child(4) {
+    animation-delay: -5.25s;
+    border-color: rgba(185, 28, 28, 0.25);
+}
+
+.login-wave-ring--soft {
+    width: 320px;
+    height: 320px;
+    margin-left: -160px;
+    margin-top: -160px;
+    border-width: 1px;
+    border-color: rgba(239, 68, 68, 0.22);
+    animation: loginWaveRipple 11s ease-out infinite;
+    box-shadow: none;
+}
+
+.login-wave-ring--soft:nth-child(2) {
+    animation-delay: -5.5s;
+    border-radius: 55% 45% 52% 48% / 52% 48% 50% 50%;
+}
+
+@keyframes loginWaveRipple {
+    0% {
+        transform: rotate(0deg) scale(0.35);
+        opacity: 0.9;
+    }
+    55% {
+        opacity: 0.25;
+    }
+    100% {
+        transform: rotate(360deg) scale(2.35);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-wave-ring {
+        animation: none;
+        opacity: 0.12;
+        transform: rotate(0deg) scale(1.2);
+    }
+}
+
+.login-tagline {
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem 0.5rem;
+}
+
+.login-tagline-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.login-tagline-row i {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.login-tagline-sep {
+    opacity: 0.55;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+@property --login-border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.login-card {
+    position: relative;
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+    overflow: hidden;
+    isolation: isolate;
+    background: linear-gradient(
+        165deg,
+        rgba(52, 52, 58, 0.55) 0%,
+        rgba(28, 28, 34, 0.82) 42%,
+        rgba(14, 14, 18, 0.92) 100%
+    );
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+        0 28px 56px rgba(0, 0, 0, 0.55),
+        0 0 100px -30px rgba(220, 38, 38, 0.35),
+        0 0 60px -15px rgba(255, 255, 255, 0.06);
+    animation: loginFadeIn 0.35s ease-out;
+}
+
+/*
+ * Borde animado: reflejo rojo en el perímetro.
+ * No usar transform: rotate() en el pseudo — el rectángulo girado sobresale del radio y se ve un “cuadro”.
+ * Se anima solo el ángulo del conic-gradient vía @property.
+ */
+.login-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: conic-gradient(
+        from var(--login-border-angle),
+        transparent 0deg,
+        transparent 260deg,
+        rgba(220, 38, 38, 0.15) 280deg,
+        rgba(153, 27, 27, 0.9) 302deg,
+        rgba(127, 29, 29, 0.55) 312deg,
+        rgba(220, 38, 38, 0.35) 322deg,
+        transparent 340deg,
+        transparent 360deg
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: loginBorderReflect 4.5s linear infinite;
+}
+
+@keyframes loginBorderReflect {
+    from {
+        --login-border-angle: 0deg;
+    }
+    to {
+        --login-border-angle: 360deg;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login-card::before {
+        animation: none;
+        --login-border-angle: 48deg;
+        opacity: 0.75;
+    }
+}
+
+.login-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes loginFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Marca panel: avatar + dos líneas alineadas a la izquierda */
+.login-brand {
+    --login-brand-line1: 1.125rem;
+    --login-brand-line2: 0.6875rem;
+    --login-brand-gap: 0.2rem;
+    --brand-avatar-size: calc(
+        var(--login-brand-line1) * 1.15 + var(--login-brand-line2) + var(--login-brand-gap) + 0.35rem
+    );
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.brand-avatar {
+    flex-shrink: 0;
+    width: var(--brand-avatar-size);
+    height: var(--brand-avatar-size);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    color: #fff;
+    font-size: calc(var(--brand-avatar-size) * 0.34);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    user-select: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--login-brand-gap);
+    min-width: 0;
+}
+
+.login-brand-title {
+    margin: 0;
+    font-size: var(--login-brand-line1);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.login-brand-version {
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    opacity: 0.92;
+}
+
+.login-brand-sub {
+    margin: 0;
+    font-size: var(--login-brand-line2);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.login-brand-sub b {
+    font-weight: 700;
+}
+
+.login-brand--header {
+    --login-brand-line1: 1.25rem;
+    --login-brand-line2: 0.65rem;
+    --brand-avatar-size: 2.75rem;
+}
+
+.login-brand--header .brand-avatar {
+    font-size: 0.8125rem;
+}
+
+header .login-brand-sub {
+    color: #6b7280;
+}
+
+[data-theme="dark"] header .login-brand-sub {
+    color: var(--text-secondary, #9ca3af);
+}
+
+/* Título estilo macOS: gradiente metálico (sin filter: combina mal con clip en WebKit) */
+.login-heading {
+    letter-spacing: -0.035em;
+    font-weight: 600;
+    background: linear-gradient(180deg, #ffffff 0%, #c8c8d0 45%, #909098 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+@supports not (background-clip: text) {
+    .login-heading {
+        color: #f5f5f7;
+        background: none;
+        text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.18),
+            0 -1px 0 rgba(0, 0, 0, 0.45);
+    }
+}
+
+.login-field {
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f5f5f7;
+}
+
+.login-field::placeholder {
+    color: rgba(255, 255, 255, 0.32);
+}
+
+.login-field:focus {
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, 0.22),
+        0 0 20px rgba(220, 38, 38, 0.12);
+}
+
+.login-input-wrap .login-input-lock {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.login-input-wrap:focus-within .login-input-lock {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Botón: negro → hover blanco; deshabilitado hasta que haya contraseña */
+.login-submit {
+    color: #f5f5f7;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.login-submit:not(:disabled):hover {
+    color: #0a0a0a;
+    background: #f5f5f7;
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 6px 22px rgba(255, 255, 255, 0.12);
+}
+
+.login-submit:not(:disabled):active {
+    background: #e4e4ea;
+}
+
+.login-submit:disabled {
+    opacity: 0.42;
+    cursor: not-allowed;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: rgba(245, 245, 247, 0.65);
+}
+
+.login-alert {
+    border: 1px solid rgba(127, 29, 29, 0.5);
+    background: rgba(69, 10, 10, 0.45);
+    color: #e7e5e4;
+    backdrop-filter: blur(8px);
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Stats Cards */
+.stats-card {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Table Styles */
+.table-container {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table Headers */
+.bg-gray-50 {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Estilos para encabezados de tabla - Degradado plateado vertical, texto negro, sin hover */
+thead.bg-black {
+    background: linear-gradient(to bottom, #fff, #f9f9f9, #ddd) !important;
+    border: 1px solid #c8c8c8;
+}
+
+thead.bg-black th,
+thead th {
+    background: linear-gradient(to bottom, #fff, #f9f9f9, #ddd) !important;
+    color: #000000 !important;
+}
+
+thead.bg-black th:hover,
+thead th:hover {
+    background: linear-gradient(to bottom, #fff, #f9f9f9, #ddd) !important;
+    color: #000000 !important;
+    transform: none !important;
+}
+
+/* Font Medium Override */
+.font-medium {
+    font-weight: 400;
+}
+
+/* Estilo de texto para encabezados (sin sombra) */
+thead.bg-black th .header-text-shadow,
+thead th .header-text-shadow {
+    display: inline-block;
+    line-height: 1;
+    color: #000000;
+    font-weight: 400;
+    font-size: inherit;
+}
+
+/* Table Borders */
+.divide-gray-200 > tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Search Input */
+.search-input {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    background: var(--bg-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Search Input Collapsed State */
+.search-input-collapsed {
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+    border: none !important;
+}
+
+.search-input-expanded {
+    width: 300px !important;
+    padding-left: 2.5rem !important;
+    padding-right: 1rem !important;
+    opacity: 1;
+    pointer-events: auto;
+    border: 2px solid var(--border-color) !important;
+}
+
+/* Buttons */
+.bg-blue-600 {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-blue-600:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-green-600 {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-green-600:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+.bg-red-600 {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-red-600:hover {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Pagination */
+.pagination-btn {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.pagination-btn.active {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Colors */
+.text-gray-600 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-700 {
+    color: var(--text-primary) !important;
+}
+
+.text-gray-800 {
+    color: var(--text-primary) !important;
+}
+
+.text-gray-500 {
+    color: var(--text-secondary) !important;
+}
+
+/* Icon Colors */
+.text-blue-600 {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .table-container {
+        margin: 1rem;
+    }
+}
+
+/* === DEGRADADOS DE ESTADO DE USUARIO === */
+
+/* Degradado Verde - Usuario En Línea */
+.estado-online {
+    background: linear-gradient(90deg, 
+        rgba(34, 197, 94, 0.2) 0%, 
+        rgba(34, 197, 94, 0.1) 50%, 
+        rgba(255, 255, 255, 0) 100%) !important;
+    border-left: 4px solid #22c55e !important;
+    transition: all 0.3s ease;
+}
+
+.estado-online:hover {
+    background: linear-gradient(90deg, 
+        rgba(34, 197, 94, 0.3) 0%, 
+        rgba(34, 197, 94, 0.15) 50%, 
+        rgba(255, 255, 255, 0) 100%) !important;
+    transform: translateX(2px);
+}
+
+/* Usuario Desconectado — sin degradado (franja roja misma anchura que inactivo/online en #tableBody td:first-child) */
+.estado-offline {
+    background: transparent !important;
+    border-left: 4px solid #ef4444 !important;
+    transition: all 0.3s ease;
+}
+
+/* Degradado Amarillo - Usuario Inactivo */
+.estado-inactive {
+    background: linear-gradient(90deg, 
+        rgba(245, 158, 11, 0.2) 0%, 
+        rgba(245, 158, 11, 0.1) 50%, 
+        rgba(255, 255, 255, 0) 100%) !important;
+    border-left: 4px solid #f59e0b !important;
+    transition: all 0.3s ease;
+}
+
+.estado-inactive:hover {
+    background: linear-gradient(90deg, 
+        rgba(245, 158, 11, 0.3) 0%, 
+        rgba(245, 158, 11, 0.15) 50%, 
+        rgba(255, 255, 255, 0) 100%) !important;
+    transform: translateX(2px);
+}
+
+/* Usuario Sin Conexión — sin degradado */
+.estado-nunca-conectado {
+    background: transparent !important;
+    border-left: 4px solid #9ca3af !important;
+    transition: all 0.3s ease;
+}
+
+/*
+ * Dashboard: border-left en <tr> no se pinta bien con tablas (divide-y / modelo de bordes).
+ * La franja de color va en la primera celda.
+ */
+#tableBody tr.estado-online td:first-child {
+    border-left: 4px solid #22c55e !important;
+}
+#tableBody tr.estado-inactive td:first-child {
+    border-left: 4px solid #f59e0b !important;
+}
+#tableBody tr.estado-offline td:first-child {
+    border-left: 4px solid #ef4444 !important;
+}
+#tableBody tr.estado-nunca-conectado td:first-child {
+    border-left: 4px solid #9ca3af !important;
+} 

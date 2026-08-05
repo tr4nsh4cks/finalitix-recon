@@ -1,0 +1,276 @@
+/* CSS para el Header con bandera de MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©xico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-feature-settings: 'liga' 1, 'kern' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header-container {
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 1px 4px rgba(55,71,79,.1);
+    position: relative;
+    z-index: 10;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.language-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    /* background-color: white; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+}
+
+.dropdown-arrow {
+    /* width: 12px; */
+    height: 15px;
+    margin-left: 8px;
+}
+
+.language-text {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Main container y layout horizontal */
+.main-container {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    /* background-color: #f8f9fa; */
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding-right: 600px; /* MÃƒÆ’Ã‚Â¡s espacio entre formulario e imagen */
+}
+
+.left-block {
+    width: 100%;
+    /* background-color: white; */
+    padding: 0px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+.right-block {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f7fafd;
+    padding: 15px 9px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 15px;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+}
+
+/* Slider/Carrusel */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.promo-image {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.promo-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Formulario de login */
+.login-form {
+    max-width: 400px;
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.mifel-logo {
+    width: 167px;
+    height: auto;
+}
+
+.form-content {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 50px 12px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #edf3f7;
+    transition: all 0.3s ease;
+}
+
+/* Ocultar el toggle eye nativo del navegador */
+.input-field::-ms-reveal,
+.input-field::-ms-clear {
+    display: none;
+}
+
+.input-field::-webkit-credentials-auto-fill-button,
+.input-field::-webkit-caps-lock-indicator {
+    display: none !important;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+
+/* Para Firefox */
+.input-field[type="password"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Para Safari y Chrome - ocultar el icono nativo del password */
+.input-field[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+}
+
+.input-field:hover {
+    background-color: #e6ecf4;
+}
+
+.input-field:focus,
+.input-field:active {
+    outline: none;
+    background-color: #edf3f7;
+    box-shadow: 0 0 15px 2px rgba(0, 123, 255, 0.6);
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(89%) saturate(2284%) hue-rotate(205deg) brightness(96%) contrast(101%);
+}
+
+.forgot-link {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.link-text {
+    color: #00adaa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00adaa;
+    color: #002856;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #c2fffd;
+    color: #052856;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-weight: 300;
+}
+
+.register-link {
+    color: #00adaa;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}

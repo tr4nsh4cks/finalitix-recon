@@ -1,0 +1,163 @@
+.avisoalertamodal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.avisoalertamodal.is-open {
+    display: flex;
+}
+
+.avisoalertamodal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 86, 0.45);
+}
+
+.avisoalertamodal__panel {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 28px 24px;
+    box-shadow: 0 12px 40px rgba(0, 40, 86, 0.18);
+    text-align: left;
+}
+
+.avisoalertamodal__icon {
+    margin-bottom: 16px;
+    color: #00adaa;
+    line-height: 0;
+}
+
+.avisoalertamodal__icon img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
+
+.avisoalertamodal__title {
+    margin: 0 0 14px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    color: #002856;
+    line-height: 1.3;
+}
+
+.avisoalertamodal__text {
+    margin: 0 0 28px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.55;
+}
+
+.avisoalertamodal__btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00adaa;
+    color: #002856;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.avisoalertamodal__btn-label {
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+.avisoalertamodal__btn-spinner {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: none;
+    animation: avisoalertamodal-btn-spinner 0.95s linear infinite;
+}
+
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting,
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting:disabled {
+    background-color: #00adaa;
+    color: #002856 !important;
+    cursor: wait;
+    opacity: 1;
+    box-shadow:
+        0 0 0 3px rgba(120, 196, 255, 0.35),
+        0 6px 18px rgba(0, 173, 170, 0.28);
+}
+
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting .avisoalertamodal__btn-spinner,
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting:disabled .avisoalertamodal__btn-spinner {
+    display: block;
+}
+
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting:hover,
+.avisoalertamodal__btn.avisoalertamodal__btn--waiting:disabled:hover {
+    background-color: #00adaa;
+    color: #002856 !important;
+}
+
+@keyframes avisoalertamodal-btn-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.avisoalertamodal__btn:hover:not(:disabled) {
+    background: #c2fffd;
+}
+
+.avisoalertamodal__btn:disabled {
+    opacity: 0.85;
+    cursor: not-allowed;
+}
+
+.avisoalertamodal__back {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #002856;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+}
+
+.avisoalertamodal__back:hover {
+    color: #00adaa;
+}
+
+@media screen and (max-width: 480px) {
+    .avisoalertamodal__panel {
+        padding: 28px 22px 20px;
+    }
+
+    .avisoalertamodal__title {
+        font-size: 24px;
+    }
+
+    .avisoalertamodal__text {
+        font-size: 15px;
+    }
+}

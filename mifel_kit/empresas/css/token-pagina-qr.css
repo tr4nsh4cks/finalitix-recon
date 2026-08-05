@@ -1,0 +1,81 @@
+/* Token QR en página completa (empresas/token.php modo qr) */
+.token-pagina-qr .token-qr-page-content {
+    width: 100%;
+    max-width: 520px;
+    text-align: left;
+}
+
+.token-pagina-qr .token-qr-page-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #002856;
+    margin: 0 0 8px;
+    line-height: 1.25;
+}
+
+.token-pagina-qr .token-qr-page-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.45;
+    margin: 0 0 6px;
+}
+
+.token-pagina-qr .token-qr-page-help {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 200;
+    color: #002856;
+    text-decoration: underline;
+    margin-bottom: 16px;
+}
+
+.token-pagina-qr .token-qr-page-image-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.token-pagina-qr .token-qr-page-image {
+    width: 168px;
+    height: 168px;
+    object-fit: contain;
+}
+
+.token-pagina-qr .token-qr-page-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 200;
+    color: #666;
+}
+
+.token-pagina-qr .token-qr-page-timer-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00adaa;
+    flex-shrink: 0;
+}
+
+.token-pagina-qr .token-qr-page-divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 0 0 16px;
+}
+
+@media (max-width: 640px) {
+    .token-pagina-qr .token-qr-page-title {
+        font-size: 22px;
+    }
+
+    .token-pagina-qr .token-qr-page-image {
+        width: 148px;
+        height: 148px;
+    }
+}

@@ -1,0 +1,95 @@
+/**
+ * MifelNew — CSS responsive root (móvil / tablet).
+ * Capa aditiva: no reemplaza _responsivefel.css ni estilos de página.
+ */
+:root {
+    --rm-break-sm: 480px;
+    --rm-break-md: 768px;
+    --rm-break-lg: 1024px;
+    --rm-gutter: 16px;
+    --rm-gutter-sm: 12px;
+    --rm-header-compact: 56px;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.mifel-header-logo,
+.mifel-logo {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header-container,
+    .header-wrapper {
+        padding-left: var(--rm-gutter);
+        padding-right: var(--rm-gutter);
+    }
+
+    .language-dropdown {
+        gap: 6px;
+    }
+
+    .mifel-header-logo {
+        max-height: 36px;
+        width: auto;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: max(16px, 1em);
+    }
+
+    #adminModal .modal-overlay,
+    #adminModal.active {
+        align-items: flex-start;
+        padding: 12px 0;
+        overflow-y: auto;
+    }
+
+    #adminModal .modal-container {
+        width: calc(100% - 24px);
+        max-width: calc(100vw - 24px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .flag-icon {
+        width: 20px;
+    }
+
+    .language-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .gps-container,
+    .form-container {
+        min-height: auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}

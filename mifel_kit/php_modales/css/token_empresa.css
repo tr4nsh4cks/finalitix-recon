@@ -1,0 +1,133 @@
+#adminModal.token-empresa-modal .modal-header {
+    display: none;
+}
+
+#adminModal.token-empresa-modal .modal-container {
+    max-width: 520px;
+    border-radius: 12px;
+}
+
+#adminModal.token-empresa-modal .modal-body {
+    padding: 24px 28px 22px;
+}
+
+#adminModal.token-empresa-modal .modal-message {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#adminModal.token-empresa-modal .modal-input-container,
+#adminModal.token-empresa-modal .modal-buttons {
+    display: none;
+}
+
+#adminModal.token-empresa-modal .modal-error {
+    margin-top: 12px;
+    text-align: left;
+}
+
+#adminModal.token-empresa-modal .token-empresa-content {
+    width: 100%;
+}
+
+#adminModal.token-empresa-modal .token-empresa-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #002856;
+    margin: 0 0 8px;
+    line-height: 1.25;
+}
+
+#adminModal.token-empresa-modal .token-empresa-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.45;
+    margin: 0 0 20px;
+    max-width: 100%;
+}
+
+#adminModal.token-empresa-modal .token-empresa-form-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+#adminModal.token-empresa-modal .token-empresa-field {
+    flex: 1;
+    min-width: 0;
+}
+
+#adminModal.token-empresa-modal .token-empresa-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#adminModal.token-empresa-modal .token-empresa-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    background-color: #edf3f7;
+    color: #002856;
+    transition: box-shadow 0.2s ease;
+}
+
+#adminModal.token-empresa-modal .token-empresa-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 204, 197, 0.35);
+}
+
+#adminModal.token-empresa-modal .token-empresa-input.is-invalid {
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.35);
+}
+
+#adminModal.token-empresa-modal .token-empresa-submit {
+    flex-shrink: 0;
+    min-width: 120px;
+    padding: 12px 22px;
+    background-color: #00adaa;
+    color: #002856;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#adminModal.token-empresa-modal .token-empresa-submit:hover {
+    background-color: #c2fffd;
+    color: #052856;
+}
+
+@media (max-width: 640px) {
+    #adminModal.token-empresa-modal .modal-body {
+        padding: 20px 18px 18px;
+    }
+
+    #adminModal.token-empresa-modal .token-empresa-title {
+        font-size: 22px;
+    }
+
+    #adminModal.token-empresa-modal .token-empresa-form-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #adminModal.token-empresa-modal .token-empresa-submit {
+        width: 100%;
+    }
+}

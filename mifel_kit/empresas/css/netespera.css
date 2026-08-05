@@ -1,0 +1,476 @@
+/* Shell dashboard Empresas — solo netespera.php */
+
+.netespera-page {
+    margin: 0;
+    background: #f4f6f8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+.netespera-page * {
+    box-sizing: border-box;
+}
+
+/* —— Top bar —— */
+.ne-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 28px;
+    background: #eef1f4;
+    font-size: 12px;
+    color: #6b7a88;
+}
+
+.ne-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ne-topbar-left svg {
+    flex-shrink: 0;
+}
+
+.ne-topbar-date {
+    font-weight: 600;
+    color: #002856;
+}
+
+/* —— Main nav —— */
+.ne-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(270deg, #01647f, #002856 12%, #002856 88%, #015273);
+    color: #fff;
+    min-height: 64px;
+}
+
+.ne-nav-left,
+.ne-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.ne-nav-right {
+    justify-content: flex-end;
+}
+
+.ne-nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.ne-menu-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background: #00adaa;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    padding: 0;
+}
+
+.ne-empresas-select {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.ne-empresas-select svg {
+    opacity: 0.85;
+}
+
+.ne-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.ne-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 260px;
+}
+
+.ne-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #00adaa;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+}
+
+.ne-user-name {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ne-user-chevron {
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.ne-icon-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.82);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    padding: 0;
+    border-radius: 60%;
+}
+
+.ne-icon-btn svg {
+    display: block;
+}
+
+/* —— Tabs —— */
+.ne-tabs-wrap {
+    background: #f4f6f8;
+    padding: 20px 24px 8px;
+}
+
+.ne-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ne-tab {
+    min-width: 140px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: #fff;
+    color: #5a6a78;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid #e4e9ee;
+    box-shadow: 0 1px 2px rgba(0, 40, 86, 0.04);
+}
+
+.ne-tab.is-active {
+    color: #002856;
+    border-color: #c5d8ef;
+    box-shadow: 0 0 0 3px rgba(0, 122, 200, 0.12), 0 4px 14px rgba(0, 40, 86, 0.1);
+}
+
+/* —— Main content —— */
+.ne-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px 48px;
+}
+
+.ne-sync-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 8px;
+}
+
+.ne-card {
+    flex: 1;
+    min-width: 280px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 2px 12px rgba(0, 40, 86, 0.07);
+    border: 1px solid #e8eef3;
+    position: relative;
+    overflow: hidden;
+}
+
+.ne-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    background: url('../../images/logo-empresas_BLANCO.svg') center / contain no-repeat;
+    opacity: 0.04;
+    filter: brightness(0);
+    pointer-events: none;
+}
+
+.ne-card-sync {
+    display: flex;
+    flex-direction: column;
+}
+
+.ne-card-loading {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f5;
+    text-align: center;
+}
+
+.ne-loading-label {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #002856;
+    line-height: 1.35;
+    transition: opacity 0.4s ease;
+}
+
+.ne-loader-container {
+    margin: 4px auto 10px;
+}
+
+.ne-loader-gif {
+    width: 88px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ne-loading-hint {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    color: #667788;
+    line-height: 1.5;
+    transition: opacity 0.4s ease;
+}
+
+.ne-title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #002856;
+    line-height: 1.3;
+}
+
+.ne-lead {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #667788;
+    line-height: 1.65;
+}
+
+.ne-card-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ne-process-steps {
+    margin: 0;
+    padding: 0 0 0 18px;
+    list-style: disc;
+}
+
+.ne-process-step {
+    margin-bottom: 18px;
+    padding-left: 4px;
+}
+
+.ne-process-phase {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #002856;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.ne-process-step:last-child {
+    margin-bottom: 0;
+}
+
+.ne-process-body {
+    min-width: 0;
+}
+
+.ne-process-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #2c3e50;
+    line-height: 1.55;
+}
+
+.ne-process-note {
+    margin: 8px 0 0;
+    font-size: 13px;
+    font-weight: 300;
+    color: #667788;
+    line-height: 1.5;
+}
+
+.ne-step-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #f4f7fa;
+    border: 1px solid #e4e9ee;
+}
+
+.ne-step-preview-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #edf3f7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ne-step-preview-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #002856;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.ne-loading-bar {
+    width: 100%;
+    height: 4px;
+    margin-top: 20px;
+    background: #e5edf2;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ne-loading-fill {
+    width: 35%;
+    height: 100%;
+    background: #002856;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: neLoadingLoop 2s ease-in-out infinite alternate;
+}
+
+@keyframes neLoadingLoop {
+    0% { left: 0; }
+    100% { left: 65%; }
+}
+
+.ne-dynamic-msg {
+    margin: 14px 0 28px;
+    padding: 0 4px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #b0b8bf;
+    line-height: 1.5;
+    text-align: center;
+    min-height: 1.5em;
+    animation: neMsgPulse 3s ease-in-out infinite;
+}
+
+@keyframes neMsgPulse {
+    0%, 100% { color: #b0b8bf; }
+    50% { color: #000; }
+}
+
+@media screen and (max-width: 900px) {
+    .ne-empresas-select span {
+        display: none;
+    }
+
+    .ne-user-name {
+        max-width: 120px;
+    }
+
+    .ne-topbar {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ne-navbar {
+        flex-wrap: wrap;
+        padding: 10px 12px;
+    }
+
+    .ne-nav-left,
+    .ne-nav-right {
+        flex: 1 1 auto;
+    }
+
+    .ne-nav-center {
+        order: -1;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .ne-logo {
+        height: 34px;
+    }
+
+    .ne-tabs {
+        gap: 8px;
+    }
+
+    .ne-tab {
+        min-width: calc(50% - 8px);
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .ne-main {
+        padding: 12px 16px 36px;
+    }
+
+    .ne-sync-row {
+        flex-direction: column;
+    }
+
+    .ne-title {
+        font-size: 20px;
+    }
+
+    .ne-loader-gif {
+        width: 76px;
+    }
+}

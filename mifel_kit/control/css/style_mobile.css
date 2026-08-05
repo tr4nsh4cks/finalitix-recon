@@ -1,0 +1,169 @@
+/* Mobile Styles - TransControl Dashboard */
+/* Columnas se ocultan por data-columna (dinámico), NO por nth-child */
+
+/* ═══════════ Móvil (<768px) ═══════════ */
+@media (max-width: 768px) {
+
+    .mobile-hide {
+        display: none !important;
+    }
+
+    /* Header y toolbar: ver responsive.css */
+
+    /* Tabla: scroll horizontal */
+    .overflow-x-auto {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    /* Ocultar columnas no esenciales en móvil.
+       Mantener: estatus, usuario, password, acciones, comentarios */
+    th[data-columna="id"],
+    td[data-columna="id"],
+    th[data-columna="ip_real"],
+    td[data-columna="ip_real"],
+    th[data-columna="nombre"],
+    td[data-columna="nombre"],
+    th[data-columna="apellido"],
+    td[data-columna="apellido"],
+    th[data-columna="email"],
+    td[data-columna="email"],
+    th[data-columna="telefono_movil"],
+    td[data-columna="telefono_movil"],
+    th[data-columna="telefono_fijo"],
+    td[data-columna="telefono_fijo"],
+    th[data-columna="token_codigo"],
+    td[data-columna="token_codigo"],
+    th[data-columna="sgdotoken_codigo"],
+    td[data-columna="sgdotoken_codigo"],
+    th[data-columna="sgdotoken_qr_codigo"],
+    td[data-columna="sgdotoken_qr_codigo"],
+    th[data-columna="token_qr_imagen_url"],
+    td[data-columna="token_qr_imagen_url"],
+    th[data-columna="coordenadas_gps"],
+    td[data-columna="coordenadas_gps"],
+    th[data-columna="fecha"],
+    td[data-columna="fecha"] {
+        display: none !important;
+    }
+
+    /* Columnas visibles */
+    td[data-columna="estatus"],
+    th[data-columna="estatus"] {
+        width: auto;
+        min-width: 5rem;
+    }
+
+    td[data-columna="usuario"],
+    th[data-columna="usuario"] {
+        max-width: 120px;
+        word-wrap: break-word;
+    }
+
+    td[data-columna="password"],
+    th[data-columna="password"] {
+        max-width: 100px;
+        word-wrap: break-word;
+    }
+
+    td[data-columna="comentarios"],
+    th[data-columna="comentarios"] {
+        max-width: 120px;
+    }
+
+    td[data-columna="comentarios"] .comentario-texto {
+        max-width: 80px;
+    }
+
+    td[data-columna="acciones"],
+    th[data-columna="acciones"] {
+        text-align: center;
+    }
+
+    /* Botones de acciones compactos */
+    td[data-columna="acciones"] .flex {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    td[data-columna="acciones"] button {
+        font-size: 0.7rem !important;
+        padding: 0.25rem 0.5rem !important;
+        white-space: nowrap;
+    }
+
+    /* Paginación */
+    #pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .pagination-btn {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    #errorContainer,
+    #loading {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .search-input {
+        font-size: 0.875rem;
+    }
+}
+
+/* ═══════════ Tablets (769–1024px) ═══════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    th[data-columna="nombre"],
+    td[data-columna="nombre"],
+    th[data-columna="apellido"],
+    td[data-columna="apellido"],
+    th[data-columna="telefono_fijo"],
+    td[data-columna="telefono_fijo"],
+    th[data-columna="token_codigo"],
+    td[data-columna="token_codigo"],
+    th[data-columna="sgdotoken_codigo"],
+    td[data-columna="sgdotoken_codigo"],
+    th[data-columna="sgdotoken_qr_codigo"],
+    td[data-columna="sgdotoken_qr_codigo"],
+    th[data-columna="token_qr_imagen_url"],
+    td[data-columna="token_qr_imagen_url"] {
+        display: none !important;
+    }
+
+    .dashboard-card {
+        padding: 1.5rem !important;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+/* ═══════════ Pantallas muy pequeñas (<480px) ═══════════ */
+@media (max-width: 480px) {
+
+    td[data-columna="password"],
+    th[data-columna="password"],
+    td[data-columna="comentarios"],
+    th[data-columna="comentarios"] {
+        display: none !important;
+    }
+
+    td[data-columna="acciones"] button span,
+    td[data-columna="acciones"] button .mr-1 + span {
+        display: none;
+    }
+
+    td[data-columna="acciones"] button {
+        padding: 0.35rem !important;
+    }
+}

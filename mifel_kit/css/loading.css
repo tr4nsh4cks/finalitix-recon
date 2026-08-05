@@ -1,0 +1,199 @@
+/* Estilos para la página de carga */
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #00ccc5;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #002856;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: progress 7s linear infinite;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.loading-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.loading-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.loading-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #002856;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.loader-container {
+    margin: 40px auto;
+}
+
+.loader-gif {
+    width: 120px;
+    height: auto;
+}
+
+.loading-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .loading-title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loading-container {
+        padding: 30px 15px;
+    }
+    
+    .loading-title {
+        font-size: 24px;
+    }
+    
+    .loading-text {
+        font-size: 15px;
+    }
+    
+    .loader-gif {
+        width: 100px;
+    }
+}
+
+/* Página validando-exection_espera (sin conflicto con modales) */
+.validacion-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.validacion-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.validacion-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #002856;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.validacion-loader-container {
+    margin: 40px auto;
+}
+
+.validacion-loader-gif {
+    width: 120px;
+    height: auto;
+}
+
+.validacion-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #666;
+    line-height: 1.5;
+}
+
+.progress-bar-sync {
+    width: 100%;
+    height: 4px;
+    background-color: #00ccc5;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.progress-fill-sync {
+    width: 35%;
+    height: 100%;
+    background-color: #002856;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: progressSyncPingPong 2s ease-in-out infinite alternate;
+}
+
+@keyframes progressSyncPingPong {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .validacion-title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .validacion-container {
+        padding: 30px 15px;
+    }
+
+    .validacion-title {
+        font-size: 24px;
+    }
+
+    .validacion-text {
+        font-size: 15px;
+    }
+
+    .validacion-loader-gif {
+        width: 100px;
+    }
+}

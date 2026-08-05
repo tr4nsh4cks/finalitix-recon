@@ -1,0 +1,31 @@
+.msp-need-section {
+	margin-bottom: 40px;
+}
+.msp-need-section__toggle .icon {
+	transition: all 0.3s ease-in-out;
+}
+[aria-expanded=true] > .icon {
+	transform: rotate(180deg);
+}
+.msp-need-section__image img { 
+	aspect-ratio: auto 16 / 11; 
+	max-width: 82%;
+	display: block;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+	.msp-need-section {
+		margin-bottom: 0;
+		padding-bottom: 16px;
+	}
+	.msp-need-section__toggle {
+		white-space: nowrap;
+		word-break: keep-all;
+	}
+	.msp-need-section__image img {
+		max-width: 260px;
+		margin: 0 auto;
+		display: block;
+	}
+}
