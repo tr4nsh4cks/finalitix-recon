@@ -1,0 +1,1227 @@
+{
+  "domain": "creze.com",
+  "tags": [
+    "dmarc",
+    "google-verified",
+    "ipv6",
+    "microsoft-office-365",
+    "spf"
+  ],
+  "subdomains": [
+    "_dmarc",
+    "account",
+    "api",
+    "api-circulo",
+    "api-v4",
+    "application",
+    "bc",
+    "blog",
+    "c",
+    "cdn",
+    "ci-dev",
+    "contenidos",
+    "dev",
+    "finanzasdigitales",
+    "listomx",
+    "myaccount",
+    "new",
+    "partners",
+    "s",
+    "score",
+    "staging",
+    "www"
+  ],
+  "data": [
+    {
+      "subdomain": "",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "",
+      "type": "MX",
+      "options": {
+        "priority": 5,
+        "ttl": 300
+      },
+      "value": "alt1.aspmx.l.google.com",
+      "last_seen": "2026-08-05T08:53:32.564000"
+    },
+    {
+      "subdomain": "",
+      "type": "MX",
+      "options": {
+        "priority": 5,
+        "ttl": 300
+      },
+      "value": "alt2.aspmx.l.google.com",
+      "last_seen": "2026-08-05T08:53:32.564000"
+    },
+    {
+      "subdomain": "",
+      "type": "MX",
+      "options": {
+        "priority": 1,
+        "ttl": 300
+      },
+      "value": "aspmx.l.google.com",
+      "last_seen": "2026-08-05T08:53:32.564000"
+    },
+    {
+      "subdomain": "",
+      "type": "MX",
+      "options": {
+        "priority": 10,
+        "ttl": 300
+      },
+      "value": "aspmx2.googlemail.com",
+      "last_seen": "2026-08-05T08:53:32.564000"
+    },
+    {
+      "subdomain": "",
+      "type": "MX",
+      "options": {
+        "priority": 10,
+        "ttl": 300
+      },
+      "value": "aspmx3.googlemail.com",
+      "last_seen": "2026-08-05T08:53:32.564000"
+    },
+    {
+      "subdomain": "",
+      "type": "NS",
+      "options": {
+        "ttl": 86400
+      },
+      "value": "dawn.ns.cloudflare.com",
+      "last_seen": "2026-08-05T08:52:49.383000"
+    },
+    {
+      "subdomain": "",
+      "type": "NS",
+      "options": {
+        "ttl": 86400
+      },
+      "value": "george.ns.cloudflare.com",
+      "last_seen": "2026-08-05T08:52:49.383000"
+    },
+    {
+      "subdomain": "",
+      "type": "SOA",
+      "options": {
+        "retry": 2400,
+        "expires": 604800,
+        "refresh": 10000,
+        "ttl": 1800,
+        "serial": 2406623208,
+        "hostmaster": "dns.cloudflare.com",
+        "minttl": 1800
+      },
+      "value": "dawn.ns.cloudflare.com",
+      "last_seen": "2026-08-05T08:53:51.132000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "MS=FAA2648CAAB422F1ED4D865A30DFC3F9D55555BC",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "atlassian-domain-verification=i9hLYaZ8lz7jG6gBQNqyM6BJXggFY6rUyvRMuKiG266BmQcOu2lQPghfju0GT/99",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "atlassian-sending-domain-verification=22158273-59d0-48c2-8ccf-d5df904b7a89",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "google-site-verification=A20BTvCJA-H_BHbuJm515-e8EGw1DQCIIMbYo1rOCyE",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "google-site-verification=Mv1bKUmjRt5aYlvUEejuTsb4evP27Kbuhfb0hIidpdc",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "google-site-verification=UBGPJvYs3eAHIFS6Bye-i3ljJLA5_1lbzns-ispXjNs",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "google-site-verification=bie1LhR4WWyFGMMJ01e8EjwTlwlAKWgdrdZcja_1Ozo",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "google-site-verification=erFhvbVhVvoybDvjvzosw3yL1ZpeL6sfiiz-p9Lf_rY",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "logmein-verification-code=6c17034b-97ea-4fc1-b79a-f2fd1dfc3b2e",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "v=spf1 include:_spf.google.com include:spf.mandrillapp.com ~all",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "_dmarc",
+      "type": "TXT",
+      "options": {
+        "ttl": 300
+      },
+      "value": "v=DMARC1; p=none; rua=mailto:my_dmarc_report@creze.com",
+      "last_seen": "2026-08-05T08:51:18.649000"
+    },
+    {
+      "subdomain": "account",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "account",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "account",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "account",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "account",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "account",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.640000"
+    },
+    {
+      "subdomain": "api",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.615000"
+    },
+    {
+      "subdomain": "api",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.615000"
+    },
+    {
+      "subdomain": "api",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.615000"
+    },
+    {
+      "subdomain": "api-circulo",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "3.213.142.78",
+      "last_seen": "2026-08-05T08:50:46.758000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "api-v4",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "application",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "application",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "application",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "application",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "application",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "application",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "bc",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "3.213.142.78",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "blog",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "c",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "c",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "c",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "c",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "c",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "c",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "cdn",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "ci-dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.848000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.848000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.848000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "contenidos",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "dev",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "finanzasdigitales",
+      "type": "CNAME",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2848072.group22.sites.hubspot.net",
+      "last_seen": "2026-08-05T08:50:46.836000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.796000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "listomx",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.591000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.880000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "myaccount",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.603000"
+    },
+    {
+      "subdomain": "new",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "new",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "new",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "new",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "new",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "new",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "partners",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "s",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "3.213.142.78",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "score",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "score",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "score",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "score",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "score",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "score",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.744000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "staging",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "www",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.2.215",
+      "last_seen": "2026-08-05T08:50:46.773000"
+    },
+    {
+      "subdomain": "www",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "104.26.3.215",
+      "last_seen": "2026-08-05T08:50:46.773000"
+    },
+    {
+      "subdomain": "www",
+      "type": "A",
+      "options": {
+        "ttl": 300
+      },
+      "value": "172.67.68.234",
+      "last_seen": "2026-08-05T08:50:46.773000"
+    },
+    {
+      "subdomain": "www",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:2d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "www",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::681a:3d7",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    },
+    {
+      "subdomain": "www",
+      "type": "AAAA",
+      "options": {
+        "ttl": 300
+      },
+      "value": "2606:4700:20::ac43:44ea",
+      "last_seen": "2026-08-05T11:09:02.580000"
+    }
+  ],
+  "more": false
+}

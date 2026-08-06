@@ -1,0 +1,635 @@
+{
+  "total_unique_creds": 1288,
+  "hosts_top": [
+    [
+      "creze.com",
+      1768
+    ],
+    [
+      "www.creze.com",
+      1567
+    ],
+    [
+      "application.creze.com",
+      1231
+    ],
+    [
+      "c.creze.com",
+      245
+    ],
+    [
+      "ci.creze.com",
+      202
+    ],
+    [
+      "officedepot.creze.com",
+      152
+    ],
+    [
+      "partners.creze.com",
+      92
+    ],
+    [
+      "register.creze.com",
+      31
+    ],
+    [
+      "myaccount.creze.com",
+      18
+    ],
+    [
+      "tion.creze.com",
+      11
+    ],
+    [
+      "dev.creze.com",
+      9
+    ],
+    [
+      "ion.creze.com",
+      3
+    ]
+  ],
+  "emails_creze_count": 87,
+  "emails_creze": [
+    "...n+pruebaregitro4@creze.com",
+    "...pruebaregistro1@creze.com",
+    "agomez@creze.com",
+    "alejandra.vazquez@creze.com",
+    "anayansi.sorkin@creze.com",
+    "andres.robles@creze.com",
+    "angela.trujillo@creze.com",
+    "aramirez@creze.com",
+    "arodriguez@creze.com",
+    "atencion@creze.com",
+    "beta+1127@creze.com",
+    "beta+1769@creze.com",
+    "beta+2797@creze.com",
+    "beta+3474@creze.com",
+    "beta+3705@creze.com",
+    "caguilar@creze.com",
+    "celine@creze.com",
+    "contacto@creze.com",
+    "daniel.barajas@creze.com",
+    "dcreel@creze.com",
+    "diego.moreno@creze.com",
+    "dlask@creze.com",
+    "dmoreno@creze.com",
+    "dpineda@creze.com",
+    "eceron+contrato1@creze.com",
+    "eceron+log214@creze.com",
+    "eceron+log229@creze.com",
+    "eceron+log230@creze.com",
+    "eceron+log260@creze.com",
+    "eceron+log263@creze.com",
+    "eceron+prueba1@creze.com",
+    "eceron+prueba22@creze.com",
+    "eceron+prueba30@creze.com",
+    "eceron+prueba32@creze.com",
+    "eceron+prueba5@creze.com",
+    "eceron+pruebaregistro1@creze.com",
+    "eceron+pruebaregitro4@creze.com",
+    "eceron+test7@creze.com",
+    "eceron@creze.com",
+    "ecervantes@creze.com",
+    "edgar.victoriano@creze.com",
+    "egante+prueba1@creze.com",
+    "enrique.cervantes@creze.com",
+    "erodriguez@creze.com",
+    "esalinas+testu@creze.com",
+    "esalinas@creze.com",
+    "euribe+apipartner@creze.com",
+    "euribe+cont@creze.com",
+    "euribe@creze.com",
+    "fabian.castorena@creze.com",
+    "fvalle@creze.com",
+    "gcegarra@creze.com",
+    "gcruz+20180110@creze.com",
+    "gcruz+20180116@creze.com",
+    "gcruz+pm20180123@creze.com",
+    "iolivares@creze.com",
+    "jahedo@creze.com",
+    "jchavez@creze.com",
+    "jesica.moreno@creze.com",
+    "jreyes@creze.com",
+    "juan.ahedo@creze.com",
+    "karredondo@creze.com",
+    "laguirre@creze.com",
+    "lgomez@creze.com",
+    "libertad.anaya@creze.com",
+    "lllano@creze.com",
+    "luis.enrile@creze.com",
+    "luis.llano@creze.com",
+    "mrangel+1@creze.com",
+    "mrangel@creze.com",
+    "mvillalba+109@creze.com",
+    "pablo.deharoazcarraga@creze.com",
+    "pdeharo+5@creze.com",
+    "pdeharo@creze.com",
+    "pdiaz+prueba@creze.com",
+    "riesgo@creze.com",
+    "rrelloso@creze.com",
+    "rrubio@creze.com",
+    "rzepeda@creze.com",
+    "sales@creze.com",
+    "sandra.castro@creze.com",
+    "se-gcegarra@creze.com",
+    "smb@creze.com",
+    "ulises+40@creze.com",
+    "ulises+41@creze.com",
+    "uuribe@creze.com",
+    "xsantos@creze.com"
+  ],
+  "application_creds_count": 170,
+  "ci_creds_count": 23,
+  "c_creds_count": 42,
+  "partner_creds_count": 32,
+  "employee_ulps_count": 0,
+  "employee_ulps": [],
+  "application_sample": [
+    {
+      "url": "application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "rafael.rojas@gaipsa.com.mx",
+      "pass": "Asterix69-"
+    },
+    {
+      "url": "application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "federico.rojas@gaipsa.com.mx",
+      "pass": "Asterix69-"
+    },
+    {
+      "url": "application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "david@ventamaq.com",
+      "pass": "Durango#1"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "Claveprivada_FIEL_HEGD671210IP0_20211118_134430.key",
+      "pass": "VENTAMAQ"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "jairo.espericueta@gmail.com",
+      "pass": "ZettaBB100$"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "alemanex@gmail.com",
+      "pass": "Pechmo72"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "jairo.espericueta@gmail.com",
+      "pass": "ZettaBB222$"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "direccion.comercial@alebrijez.com.mx",
+      "pass": "Miguelito3_"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "schietekat@yahoo.com.mx",
+      "pass": "FLEXflex98"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "geosinlab@gmail.com",
+      "pass": "queretaro"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "jose_baca_duarte@hotmail.com",
+      "pass": "Ef3ct1v0@"
+    },
+    {
+      "url": "https://application.creze.com/widget-signup",
+      "host": "application.creze.com",
+      "user": "maguilar642@hotmail.com",
+      "pass": "Miguel123."
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "federico.rojas.mx",
+      "pass": "Asterix69-"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "rafael.rojas.mx",
+      "pass": "Asterix69-"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "{mail}",
+      "pass": "FLEXflex78"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "jairo.espericueta@gmail.com",
+      "pass": "ZettaBB300$"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "jairo.espericueta@gmail.com",
+      "pass": "ZettaBB222$"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "engymbv@hotmail.com",
+      "pass": "Felipe-Angeles0412"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "aaolvera.mx",
+      "pass": "Despacho1."
+    },
+    {
+      "url": "http://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "5515397999",
+      "pass": "Mexico113#"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "federico.rojas.mx",
+      "pass": "Asterix69"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "jgarcia@ledstudio.com.mx",
+      "pass": "Kronos11"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "angel-lagalm@outlook.es",
+      "pass": "Ryasgremory@2"
+    },
+    {
+      "url": "https://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "wolfybarman1@hotmail.com",
+      "pass": "Creze.1"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "tsenergiasrenovables@outlook.com",
+      "pass": "Creze123."
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "m.duransuarez@icloud.com",
+      "pass": "Mfds929584"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "david@ventamaq.com",
+      "pass": "Durango#1"
+    },
+    {
+      "url": "https://application.creze.com",
+      "host": "application.creze.com",
+      "user": "Claveprivada_FIEL_HEGD671210IP0_20211118_134430.key",
+      "pass": "VENTAMAQ"
+    },
+    {
+      "url": "application.creze.com",
+      "host": "application.creze.com",
+      "user": "geosinlab@gmail.com",
+      "pass": "Delabra63#"
+    },
+    {
+      "url": "https://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "RwMiLls@virgilio.it",
+      "pass": "As22sur"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "jairo.espericueta",
+      "pass": "ZettaBB100$"
+    },
+    {
+      "url": "https://application.creze.com",
+      "host": "application.creze.com",
+      "user": "geosinlab@gmail.com",
+      "pass": "Delabra74#"
+    },
+    {
+      "url": "https://application.creze.com/financial",
+      "host": "application.creze.com",
+      "user": "glasses180",
+      "pass": "L1esbEi4th79"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "sezsmlo@yahoo.es",
+      "pass": "udspai"
+    },
+    {
+      "url": "https://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "jose_baca_duarte@hotmail.com",
+      "pass": "Ef3ct1v0@"
+    },
+    {
+      "url": "https://application.creze.com",
+      "host": "application.creze.com",
+      "user": "geosinlab@gmail.com",
+      "pass": "queretaro"
+    },
+    {
+      "url": "https://application.creze.com/signin",
+      "host": "application.creze.com",
+      "user": "omar_tipro@hotmail.com",
+      "pass": "2Wired27$"
+    },
+    {
+      "url": "https://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "Somera",
+      "pass": "@Gonz@1985"
+    },
+    {
+      "url": "https://application.creze.com/signup",
+      "host": "application.creze.com",
+      "user": "8837618111",
+      "pass": "Mexico236#"
+    },
+    {
+      "url": "https://application.creze.com",
+      "host": "application.creze.com",
+      "user": "joga.garmon",
+      "pass": "Password:"
+    }
+  ],
+  "ci_sample": [
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lec.meoropszo_76@hotmail.com",
+      "pass": "5515942684"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "55159"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lec.meoropszo_76@hotmail.com",
+      "pass": "55159"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_87",
+      "pass": "6626053795"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "7761291336",
+      "pass": "dacosta'sb"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "5515942684"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "Parquesan1$$$$"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "evoluttionlife@gmail.com",
+      "pass": "Toshiba$10201"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "evoluttionlife@gmail.com",
+      "pass": "Toshiba$20302"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lazcanorpedro@gmail.com",
+      "pass": "yamel120*"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_73@hotmail.com",
+      "pass": "2202918381"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "5515942684:"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "Parquesan1$$$$"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "55159"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lic.mioropeza_76@hotmail.com",
+      "pass": "5515942684"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "g.ladas@comcast.net",
+      "pass": "123456.scc"
+    },
+    {
+      "url": "ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "ocampos@salud.gob.sv",
+      "pass": "aiesectm.123"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "7761291336",
+      "pass": "dacosta'sb"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "lazcanorpedro@gmail.com",
+      "pass": "dacosta'sb"
+    },
+    {
+      "url": "https://ci.creze.com",
+      "host": "ci.creze.com",
+      "user": "oropexa",
+      "pass": "Parquesan1$$$$"
+    }
+  ],
+  "partner_sample": [
+    {
+      "url": "https://partners.creze.com",
+      "host": "partners.creze.com",
+      "user": "f.espinoza@creditaria.com",
+      "pass": "Espinoza#2023"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "gregpardueles@gmail.com",
+      "pass": "Garcia#2021"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "asolis@socasesores.com",
+      "pass": "DesachyS#2022"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "gregpardueles",
+      "pass": "Garcia#2021"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "yonatan.hdz@outlook.com",
+      "pass": "Madrecuixe42."
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "ldaniel.hero@gmail.com",
+      "pass": "Temporal1!"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "2721548933",
+      "pass": "Alejandro74"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "2721548933",
+      "pass": "Beristain2607"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "2721548933",
+      "pass": "alejandro74"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "almarosamoreno1990",
+      "pass": "Beristain2607"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "mbadillor",
+      "pass": "alejandro74"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "almarosamoreno1990@gmail.com",
+      "pass": "Beristain2607"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "mbadillor@msn.com",
+      "pass": "alejandro74"
+    },
+    {
+      "url": "partners.creze.com",
+      "host": "partners.creze.com",
+      "user": "gregpardueles@gmail.com",
+      "pass": "Garcia#2021"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "ldaniel.hero.com",
+      "pass": "Temporal1!"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "gregpardueles@gmail.com",
+      "pass": "Garcia#3032"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "gregpardueles@gmail.com",
+      "pass": "Garcia#8980"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "yonatan.hdz@outlook.com",
+      "pass": "Madrecuixe42"
+    },
+    {
+      "url": "https://partners.creze.com/signin",
+      "host": "partners.creze.com",
+      "user": "osirisbourne@gmail.com",
+      "pass": "OMedina#2022"
+    },
+    {
+      "url": "https://officedepot.creze.com",
+      "host": "officedepot.creze.com",
+      "user": "4943760155",
+      "pass": "Alejandro96"
+    }
+  ]
+}

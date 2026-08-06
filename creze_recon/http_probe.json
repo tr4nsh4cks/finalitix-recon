@@ -1,0 +1,212 @@
+[
+  {
+    "url": "https://creze.com/",
+    "status": 403,
+    "final": "https://creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Just a moment...",
+    "len": 5698,
+    "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+  },
+  {
+    "url": "https://www.creze.com/",
+    "status": 403,
+    "final": "https://www.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Just a moment...",
+    "len": 5745,
+    "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+  },
+  {
+    "url": "https://application.creze.com/",
+    "status": 403,
+    "final": "https://application.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://application.creze.com/signin",
+    "status": 403,
+    "final": "https://application.creze.com/signin",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://c.creze.com/",
+    "status": 403,
+    "final": "https://c.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://ci.creze.com/",
+    "status": 403,
+    "final": "https://ci.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://partners.creze.com/",
+    "status": 403,
+    "final": "https://partners.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Just a moment...",
+    "len": 5785,
+    "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+  },
+  {
+    "url": "https://partners.creze.com/signin",
+    "status": 403,
+    "final": "https://partners.creze.com/signin",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Just a moment...",
+    "len": 5825,
+    "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+  },
+  {
+    "url": "https://officedepot.creze.com/",
+    "status": 403,
+    "final": "https://officedepot.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://register.creze.com/",
+    "status": 403,
+    "final": "https://register.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://myaccount.creze.com/",
+    "status": 403,
+    "final": "https://myaccount.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Just a moment...",
+    "len": 5785,
+    "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content"
+  },
+  {
+    "url": "https://account.creze.com/",
+    "status": 403,
+    "final": "https://account.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://api-account.creze.com/",
+    "status": 403,
+    "final": "https://api-account.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://api.creze.com/",
+    "status": 403,
+    "final": "https://api.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://api-v4.creze.com/",
+    "status": 403,
+    "final": "https://api-v4.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://dev.creze.com/",
+    "status": 403,
+    "final": "https://dev.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://staging.creze.com/",
+    "status": 403,
+    "final": "https://staging.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://score.creze.com/",
+    "status": 403,
+    "final": "https://score.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://new.creze.com/",
+    "status": 403,
+    "final": "https://new.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://blog.creze.com/",
+    "status": 403,
+    "final": "https://blog.creze.com/",
+    "server": "cloudflare",
+    "cf": true,
+    "title": "Attention Required! | Cloudflare",
+    "len": 5505,
+    "snippet": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h"
+  },
+  {
+    "url": "https://creze.com.mx/",
+    "status": 200,
+    "final": "https://creze.com.mx/",
+    "server": null,
+    "cf": false,
+    "title": null,
+    "len": 114,
+    "snippet": "<!DOCTYPE html><html><head><script>window.onload=function(){window.location.href=\"/lander\"}</script></head></html>"
+  }
+]

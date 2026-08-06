@@ -1,0 +1,533 @@
+[
+  {
+    "host": "account.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "admin.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "api-account.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "api-circulo.creze.com",
+    "dns": [
+      "3.213.142.78"
+    ],
+    "scheme": null,
+    "status": "URLError:<urlopen error timed out>",
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "api-v4.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "api.account.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "api.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "app.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "application.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "bc.creze.com",
+    "dns": [
+      "3.213.142.78"
+    ],
+    "scheme": null,
+    "status": "URLError:<urlopen error timed out>",
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "beta.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "blog.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "c.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "ci-dev.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "ci.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "contenidos.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "creze.com.mx",
+    "dns": [
+      "15.197.148.33",
+      "3.33.130.190"
+    ],
+    "scheme": "https",
+    "status": 200,
+    "title": null,
+    "server": null,
+    "redir": "https://creze.com.mx/",
+    "cf": null
+  },
+  {
+    "host": "dev.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "finanzasdigitales.creze.com",
+    "dns": [
+      "199.60.103.2",
+      "199.60.103.254",
+      "2606:2c40::c73c:6702",
+      "2606:2c40::c73c:67fe"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "listomx.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "mail.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "myaccount.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "new.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "officedepot.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "partners.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "portal.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "qa.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "register.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "s.creze.com",
+    "dns": [
+      "3.213.142.78"
+    ],
+    "scheme": null,
+    "status": "URLError:<urlopen error timed out>",
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "score.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "staging.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "vpn.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "www.blog.creze.com",
+    "dns": null,
+    "scheme": null,
+    "status": null,
+    "title": null,
+    "server": null,
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "www.creze.com",
+    "dns": [
+      "104.26.2.215",
+      "104.26.3.215",
+      "172.67.68.234",
+      "2606:4700:20::681a:2d7",
+      "2606:4700:20::681a:3d7",
+      "2606:4700:20::ac43:44ea"
+    ],
+    "scheme": "https",
+    "status": 403,
+    "title": null,
+    "server": "cloudflare",
+    "redir": null,
+    "cf": null
+  },
+  {
+    "host": "www.creze.com.mx",
+    "dns": [
+      "15.197.148.33",
+      "3.33.130.190"
+    ],
+    "scheme": "https",
+    "status": 200,
+    "title": null,
+    "server": null,
+    "redir": "https://www.creze.com.mx/",
+    "cf": null
+  }
+]
