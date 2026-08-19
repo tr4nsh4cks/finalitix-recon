@@ -1,7 +1,7 @@
 # INSTRUCCIONES PARA EL GEMELO (otra máquina Cursor)
 # Pégale esto completo al agente de la otra PC.
-# Link directo a este archivo (si prefieres bajarlo): http://hexagon:H3x4g0n-M3m0ry-2026%21@157.180.98.220:8080/INSTRUCCIONES_GEMELO.md
-# Índice de todo lo compartido (mismo auth): http://157.180.98.220:8080/
+# Link directo a este archivo (si prefieres bajarlo): http://hexagon:H3x4g0n-M3m0ry-2026%21@157.180.98.220:8080/compartido/INSTRUCCIONES_GEMELO.md
+# Índice navegable (mismo auth): http://157.180.98.220:8080/compartido/ — también /pentagi/ y /pentagi_gemelo/
 
 ---
 
@@ -193,85 +193,53 @@ Reglas del compartido:
 3. Si subes una lista grande, déjale un `LEEME.txt` al lado con: qué es, cuántos registros, fuente, fecha.
 4. Documenta en la memoria (entidad `Hexagon Agent System`) qué subiste, para que el otro nodo sepa que existe.
 
-## 9. SYNC CRUZADO DIARIO — al final del día, ambos nodos tienen lo mismo
+## 9. ACCESO AL OTRO NODO — ON-DEMAND. PROHIBIDO jalar el espejo completo
 
-Una vez al día, cada nodo JALA lo nuevo del espejo del otro. **Tú jalas de `/storage/pentagi/`** (espejo de la PC principal); la PC principal jala de `/storage/pentagi_gemelo/` (tu espejo). Así los dos workspaces terminan idénticos.
+**REGLA DURA:** NUNCA jales `/storage/pentagi/` completo a tu máquina. Son **1.1TB** — te llena el disco y Cursor crashea indexando un workspace doble. El acceso es **on-demand**: buscas en el servidor y bajas SOLO lo que necesitas.
 
-Reglas del cruce:
+"Al final del día ambos tienen lo mismo" = ambos pueden ACCEDER a lo mismo (todo vive en el servidor). NO significa tener las dos copias localmente.
 
-- `--update`: solo se escriben archivos MÁS NUEVOS que los tuyos — nunca te regresa versiones viejas.
-- SIN `--delete`: nada se borra, jamás.
-- Corre una vez al día (loop de 24h); tu mismo watchdog lo mantiene vivo.
+### 9.1 Si activaste el pull diario — APÁGALO YA
 
-### 9.1 Crea `sync_pull_diario.sh` en tu workspace (ajusta LOG y DST a tu ruta)
+```powershell
+wsl -d kali-linux -- pkill -f sync_pull_diario
+```
+
+Borra `sync_pull_diario.sh` y usa el watchdog de la sección 7.3 (el que SOLO cuida `sync_live.sh`). Si tu disco se llenó con lo que el pull ya bajó, mueve ese contenido FUERA de tu workspace o bórralo — todo está seguro en el servidor.
+
+### 9.2 Buscar sin bajar nada (el grep corre EN el servidor)
 
 ```bash
-#!/bin/bash
-LOG=/mnt/c/xampp/htdocs/pentagi/sync_pull.log
-DST=/mnt/c/xampp/htdocs/pentagi/
-echo "PULL_START $(date)" >> "$LOG"
-while true; do
-  rsync -a --update --partial --timeout=120 \
-    --exclude=node_modules/ --exclude=__pycache__/ \
-    -e "sshpass -p '?hK7L3jH76vRT7' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ServerAliveInterval=15 -o ServerAliveCountMax=4" \
-    root@157.180.98.220:/storage/pentagi/ "$DST" >> "$LOG" 2>&1
-  echo "PULL_DONE code=$? $(date)" >> "$LOG"
-  sleep 86400
-done
+# Por nombre de archivo:
+ssh root@157.180.98.220 "find /storage/pentagi -iname '*parte-del-nombre*'"
+
+# Por contenido:
+ssh root@157.180.98.220 "grep -ril 'texto' /storage/pentagi/"
+
+# Ver qué hay:
+ssh root@157.180.98.220 "ls -la /storage/pentagi/ | head -50"
 ```
 
-Quita los CRLF después de crearlo: `wsl -d kali-linux -- sed -i "s/\r$//" <ruta>/sync_pull_diario.sh`
+### 9.3 Bajar solo lo que necesitas — por WEB (mismo auth que la memoria)
 
-### 9.2 Reemplaza tu `sync_watchdog.ps1` por esta versión que cuida AMBOS procesos
+| Qué | URL |
+|---|---|
+| Espejo PC principal (1.1TB) | `http://157.180.98.220:8080/pentagi/` |
+| Tu espejo | `http://157.180.98.220:8080/pentagi_gemelo/` |
+| Compartido | `http://157.180.98.220:8080/compartido/` |
 
-```powershell
-$me = $PID
-$others = Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" |
-    Where-Object { $_.ProcessId -ne $me -and $_.CommandLine -like '*sync_watchdog.ps1*' }
-if ($others) { exit }
+Usuario `hexagon` / password `H3x4g0n-M3m0ry-2026!` — navegable con autoindex, click para bajar archivos individuales.
 
-$sig = @'
-[DllImport("kernel32.dll")]
-public static extern uint SetThreadExecutionState(uint esFlags);
-'@
-$es = Add-Type -MemberDefinition $sig -Name "ES" -Namespace "Win32" -PassThru
-$es::SetThreadExecutionState(0x80000000 -bor 0x00000001) | Out-Null
+O por rsync, UNA carpeta específica a una ruta FUERA de tu workspace:
 
-$wsl = "C:\Windows\System32\wsl.exe"
-$base = "C:\xampp\htdocs\pentagi"   # ajusta a TU workspace
-$wlog = Join-Path $base "sync_watchdog.log"
-
-function Log($msg) { Add-Content -Path $wlog -Value "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $msg" }
-function WslRunning($pat) {
-    $out = & $wsl -d kali-linux -- pgrep -f $pat 2>$null
-    return (-not [string]::IsNullOrWhiteSpace(($out | Out-String).Trim()))
-}
-function StartWsl($script) {
-    Start-Process -WindowStyle Hidden -FilePath $wsl -ArgumentList "-d kali-linux -- bash /mnt/c/xampp/htdocs/pentagi/$script"
-    Log "RELAUNCH $script"
-}
-
-Log "WATCHDOG START (gemelo: push 15min + pull diario)"
-while ($true) {
-    if (-not (WslRunning "sync_live[.]sh")) { StartWsl "sync_live.sh" }
-    if (-not (WslRunning "sync_pull_diario[.]sh")) { StartWsl "sync_pull_diario.sh" }
-    Start-Sleep -Seconds 180
-}
+```bash
+rsync -a -e "sshpass -p '?hK7L3jH76vRT7' ssh -o StrictHostKeyChecking=no" \
+  root@157.180.98.220:/storage/pentagi/ALGUNA_CARPETA/ /mnt/c/ruta_fuera_del_workspace/
 ```
 
-### 9.3 Relanza el watchdog para cargar la versión nueva
+### 9.4 Resumen del flujo correcto
 
-```powershell
-Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" |
-  Where-Object { $_.CommandLine -like '*sync_watchdog.ps1*' } |
-  ForEach-Object { Invoke-CimMethod -InputObject $_ -MethodName Terminate | Out-Null }
-
-Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{
-  CommandLine='powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File <RUTA>\sync_watchdog.ps1' }
-```
-
-### 9.4 Verificación
-
-- `tail sync_pull.log` → `PULL_DONE code=0` una vez al día
-- El primer PULL tarda: baja hasta 1.1TB del espejo principal (solo lo que te falta, gracias a `--update`)
-- La PC principal hace lo mismo en reversa: jala de `/storage/pentagi_gemelo/` diario. Nada que configurar de tu lado para eso.
+1. Tu push cada 15 min → `/storage/pentagi_gemelo/` (solo lo tuyo único, vía `--compare-dest`)
+2. ¿Necesitas algo de la PC principal? → búscalo en el servidor (9.2) o baja el archivo suelto por web (9.3)
+3. ¿Algo grande que ambos usan seguido? → súbelo a `/storage/compartido/` (sección 8)
+4. Nunca almacenes el espejo del otro completo — por eso existe el servidor.
