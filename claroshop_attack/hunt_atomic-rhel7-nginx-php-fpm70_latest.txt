@@ -1,0 +1,67 @@
+
+
+=== ID ===
+'uid=0(root) gid=0(root) groups=0(root)
+=== HOME_LS ===
+/home:
+total 0
+,drwxr-xr-x.  2 root root   6 May  7  2018 .
+-dr-xr-xr-x. 18 root root 279 Aug 24 03:56 ..
+
+/opt:
+total 0
+,drwxr-xr-x.  3 root root  16 Apr  5  2019 .
+-dr-xr-xr-x. 18 root root 279 Aug 24 03:56 ..
+-drwxr-xr-x.  4 root root  42 Apr  5  2019 rh
+
+/root:
+	total 12
+-dr-xr-x---.  4 root root   81 Apr  5  2019 .
+.dr-xr-xr-x. 18 root root  279 Aug 24 03:56 ..
+0drwxr-----.  3 root root   19 Apr  5  2019 .pki
+;-rw-------.  1 root root 4747 May  7  2018 anaconda-ks.cfg
+5drwxr-xr-x.  2 root root   45 May  7  2018 buildinfo
+;-rw-------.  1 root root 3961 May  7  2018 original-ks.cfg
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 May  7  2018 .
+-drwxr-xr-x. 13 root root 155 May  7  2018 ..
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 May  7  2018 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+@/opt/rh/rh-php70/register.content/etc/opt/rh/rh-php70/pear.conf
+>/opt/rh/rh-php70/register.content/etc/opt/rh/rh-php70/php.ini
+D/opt/rh/rh-php70/root/usr/share/doc/rh-php70-php-common-7.0.27/NEWS
+R/opt/rh/rh-php70/root/usr/share/doc/rh-php70-php-common-7.0.27/README.REDIST.BINS
+S/opt/rh/rh-php70/root/usr/share/doc/rh-php70-php-common-7.0.27/php.ini-development
+R/opt/rh/rh-php70/root/usr/share/doc/rh-php70-php-common-7.0.27/php.ini-production
+;/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Auth.php
+;/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Auth.xml
+?/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Channels.php
+?/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Channels.xml
+=/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Config.php
+>/opt/rh/rh-php70/root/usr/share/pear/PEAR/Command/Package.php
+5/opt/rh/rh-php70/root/usr/share/pear/PEAR/Config.php
+9/opt/rh/rh-php70/root/usr/share/pear/PEAR/Downloader.php
+7/opt/rh/rh-php70/root/usr/share/pear/PEAR/Frontend.php
+3/opt/rh/rh-php70/root/usr/share/pear/PEAR/REST.php
+/root/anaconda-ks.cfg
+/root/original-ks.cfg
+=== HUNT_DONE ===

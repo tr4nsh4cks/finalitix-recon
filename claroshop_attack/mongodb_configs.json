@@ -1,0 +1,2121 @@
+{
+  "engagement": "Sears/Claroshop — MongoDB deep enum (aliensito / Tr4nsHack)",
+  "fecha": "2026-08-23",
+  "instances": {
+    "publica_t1envios": {
+      "host": "3.231.83.29",
+      "port": 27017,
+      "version": "7.0.14",
+      "replica_set": {
+        "name": "rs0",
+        "members": [
+          "3.231.83.29:27017 (PRIMARY)",
+          "3.231.83.29:27018",
+          "3.231.83.29:27019"
+        ]
+      },
+      "auth": {
+        "user": "appt1envios",
+        "pass": "4Ap971EnvI0KI1",
+        "authSource": "tracking"
+      },
+      "sharding": false,
+      "notas": "Replica set de 3 miembros en el MISMO host. Usuario sin privilegios de cluster (rs.conf/serverStatus denegados).",
+      "reachability": {
+        "jenkins_master": "OK",
+        "docker_5b32e909c295": "OK"
+      }
+    },
+    "interna_sears": {
+      "host": "172.26.84.132",
+      "port": 27021,
+      "version": "4.0.10",
+      "hostname_interno": "mongotestslave.service:27021",
+      "replica_set": {
+        "name": "rs0",
+        "setVersion": 114775,
+        "members": [
+          "172.26.84.132:27020 (SECONDARY)",
+          "172.26.84.132:27021 (PRIMARY)"
+        ]
+      },
+      "auth": {
+        "user": "appsears",
+        "pass": "S34rSu64RD0Jhy63",
+        "authSource": "sears_tracking"
+      },
+      "sharding": false,
+      "uptime_s": 79598301,
+      "notas": "58 DBs. appsears tiene readWrite amplio (incluye admin.system.users, admin.system.keys, config).",
+      "reachability": {
+        "jenkins_master": "OK (27020/27021/22)",
+        "docker_5b32e909c295": "OK"
+      }
+    },
+    "atlas_t1envios": {
+      "srv": "mongodb+srv://appmasivas_inb:nReyDxpQJXM0yvAYQTsa@t1envios.kqoop.mongodb.net/",
+      "txt_record": "authSource=admin&replicaSet=atlas-12ith0-shard-0",
+      "shards_reales": [
+        "t1envios-shard-00-00.kqoop.mongodb.net (89.192.124.251)",
+        "t1envios-shard-00-01.kqoop.mongodb.net (89.192.125.73)",
+        "t1envios-shard-00-02.kqoop.mongodb.net (89.192.125.25)",
+        "t1envios-shard-00-03.kqoop.mongodb.net (89.192.114.79)"
+      ],
+      "estado": "INALCANZABLE desde red interna",
+      "dns_poisoning": {
+        "jenkins_master": "*.kqoop.mongodb.net -> 172.27.141.24 (wildcard override; mismo IP que dbasears.mrc-services.io = PROD Sears)",
+        "container": "bare domain NXDOMAIN; shards resuelven a IPs reales pero egress TCP 27017 filtrado (timeout)"
+      },
+      "pendiente": "Validar creds appmasivas_inb desde VPS fleet (OPSEC: nunca red local)"
+    }
+  },
+  "enumeration": {
+    "INTERNA": {
+      "databases": {
+        "addressms": {
+          "collections": {
+            "address": {
+              "count": 69,
+              "interest": false
+            },
+            "test": {
+              "count": 1,
+              "interest": false
+            }
+          }
+        },
+        "admin": {
+          "collections": {
+            "system.keys": {
+              "count": 22,
+              "interest": true
+            },
+            "system.roles": {
+              "count": 1,
+              "interest": false
+            },
+            "tempusers": {
+              "count": 3,
+              "interest": true
+            },
+            "tracking_mensajerias": {
+              "count": 25860,
+              "interest": false
+            },
+            "lotes": {
+              "count": 2,
+              "interest": false
+            },
+            "system.users": {
+              "count": 126,
+              "interest": true
+            },
+            "users": {
+              "count": 1,
+              "interest": true
+            },
+            "peticionesApi": {
+              "count": 34,
+              "interest": false
+            },
+            "system.version": {
+              "count": 3,
+              "interest": false
+            },
+            "estatus_mensajeria": {
+              "count": 25863,
+              "interest": false
+            }
+          }
+        },
+        "api_products": {
+          "collections": {
+            "products": {
+              "count": 23511,
+              "interest": false
+            }
+          }
+        },
+        "carga_productos_sears": {
+          "collections": {
+            "rel_categorias_sears_claroshop": {
+              "count": 2016,
+              "interest": false
+            },
+            "productos_activos_claroshop": {
+              "count": 55,
+              "interest": false
+            },
+            "rel_productos_xml_claroshop": {
+              "count": 443982,
+              "interest": false
+            },
+            "hash_productos_xml": {
+              "count": 196572,
+              "interest": false
+            },
+            "productos_activos": {
+              "count": 55,
+              "interest": false
+            },
+            "rel_productos_xml_sears": {
+              "count": 196570,
+              "interest": false
+            }
+          }
+        },
+        "cartms": {
+          "collections": {
+            "products": {
+              "count": 2,
+              "interest": false
+            },
+            "carts": {
+              "count": 1,
+              "interest": false
+            }
+          }
+        },
+        "carts_db": {
+          "collections": {
+            "cart_v2": {
+              "count": 3,
+              "interest": false
+            },
+            "cart": {
+              "count": 303,
+              "interest": false
+            },
+            "products": {
+              "count": 5,
+              "interest": false
+            }
+          }
+        },
+        "carts_db_claroshop": {
+          "collections": {
+            "cart": {
+              "count": 35,
+              "interest": false
+            },
+            "cart_v2": {
+              "count": 7,
+              "interest": false
+            },
+            "notificacion": {
+              "count": 5,
+              "interest": false
+            },
+            "event": {
+              "count": 62,
+              "interest": false
+            },
+            "products": {
+              "count": 12,
+              "interest": false
+            }
+          }
+        },
+        "carts_db_sanborns": {
+          "collections": {
+            "cart": {
+              "count": 61,
+              "interest": false
+            }
+          }
+        },
+        "categories": {
+          "collections": {
+            "category": {
+              "count": 942,
+              "interest": false
+            },
+            "category_ago2022": {
+              "count": 1515,
+              "interest": false
+            },
+            "category2": {
+              "count": 1515,
+              "interest": false
+            }
+          }
+        },
+        "clarolive": {
+          "collections": {
+            "carrito": {
+              "count": 48,
+              "interest": false
+            },
+            "pedido": {
+              "count": 2,
+              "interest": false
+            }
+          }
+        },
+        "clarolive_sears": {
+          "collections": {
+            "carrito": {
+              "count": 4,
+              "interest": false
+            }
+          }
+        },
+        "claroshop": {
+          "collections": {
+            "conciliacion_credito": {
+              "count": 0,
+              "interest": true
+            },
+            "peticiones": {
+              "count": 0,
+              "interest": false
+            },
+            "mensajerias_track": {
+              "count": 1,
+              "interest": false
+            },
+            "tracking": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "config": {
+          "collections": {
+            "system.sessions": {
+              "count": 10,
+              "interest": false
+            },
+            "transactions": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "credito-claroshop": {
+          "collections": {
+            "credit_installment": {
+              "count": 6,
+              "interest": true
+            },
+            "payment": {
+              "count": 175,
+              "interest": false
+            },
+            "orders": {
+              "count": 12158,
+              "interest": false
+            },
+            "url_short": {
+              "count": 0,
+              "interest": false
+            },
+            "purchase_charge": {
+              "count": 176,
+              "interest": false
+            }
+          }
+        },
+        "credito_claroshop_stores": {
+          "collections": {
+            "subsidiaries": {
+              "count": 10,
+              "interest": false
+            },
+            "sellers": {
+              "count": 3,
+              "interest": false
+            },
+            "stores": {
+              "count": 3,
+              "interest": false
+            }
+          }
+        },
+        "dbpixel": {
+          "collections": {
+            "tracking": {
+              "count": 69,
+              "interest": false
+            }
+          }
+        },
+        "dbpixel_cs": {
+          "collections": {
+            "tracking": {
+              "count": 64,
+              "interest": false
+            }
+          }
+        },
+        "dbpixel_se": {
+          "collections": {
+            "tracking": {
+              "count": 764,
+              "interest": false
+            }
+          }
+        },
+        "dbshipping_cost": {
+          "collections": {
+            "shops": {
+              "count": 14763,
+              "interest": false
+            },
+            "shipping_costs": {
+              "count": 2509200,
+              "interest": false
+            }
+          }
+        },
+        "guias_masivas": {
+          "collections": {
+            "pedidos_pendientes": {
+              "count": 5891,
+              "interest": false
+            },
+            "estatus_mensajeria": {
+              "count": 1,
+              "interest": false
+            },
+            "lotes": {
+              "count": 585,
+              "interest": false
+            },
+            "usuarios": {
+              "count": 3,
+              "interest": false
+            }
+          }
+        },
+        "indexado_db": {
+          "collections": {
+            "ProductsAnteater": {
+              "count": 24,
+              "interest": false
+            }
+          }
+        },
+        "marketing": {
+          "collections": {
+            "Copy_of_HomeAppV2Document": {
+              "count": 3,
+              "interest": false
+            },
+            "products": {
+              "count": 2,
+              "interest": false
+            },
+            "HomeAppV2Document": {
+              "count": 3,
+              "interest": false
+            },
+            "HomeFreezeDocument": {
+              "count": 1,
+              "interest": false
+            },
+            "ShopsDocument": {
+              "count": 8,
+              "interest": false
+            },
+            "PromotionAnnouncementDocument": {
+              "count": 13,
+              "interest": false
+            },
+            "EditHomeAppV2Document": {
+              "count": 3,
+              "interest": false
+            },
+            "cart": {
+              "count": 1,
+              "interest": false
+            },
+            "ConfigurationDocument": {
+              "count": 35,
+              "interest": true
+            },
+            "BombshellProductDocument": {
+              "count": 1,
+              "interest": false
+            },
+            "HomeAppDocument": {
+              "count": 36,
+              "interest": false
+            },
+            "CarouselsDocument": {
+              "count": 8,
+              "interest": false
+            },
+            "SlidersDocument": {
+              "count": 20,
+              "interest": false
+            },
+            "QuickAccessDocument": {
+              "count": 20,
+              "interest": false
+            },
+            "DataInputDocument": {
+              "count": 42,
+              "interest": false
+            }
+          }
+        },
+        "marketing_sanborns": {
+          "collections": {
+            "HomeAppV2Document": {
+              "count": 13,
+              "interest": false
+            },
+            "BombshellProductDocument": {
+              "count": 3,
+              "interest": false
+            },
+            "QuickAccessDocument": {
+              "count": 18,
+              "interest": false
+            },
+            "ShopsDocument": {
+              "count": 5,
+              "interest": false
+            },
+            "SlidersDocument": {
+              "count": 11,
+              "interest": false
+            },
+            "PromotionAnnouncementDocument": {
+              "count": 22,
+              "interest": false
+            },
+            "ConfigurationDocument": {
+              "count": 11,
+              "interest": true
+            },
+            "HomeAppDocument": {
+              "count": 6,
+              "interest": false
+            },
+            "CarouselsDocument": {
+              "count": 7,
+              "interest": false
+            }
+          }
+        },
+        "marketing_sears": {
+          "collections": {
+            "PromotionAnnouncementDocument": {
+              "count": 10,
+              "interest": false
+            },
+            "HomeAppDocument": {
+              "count": 6,
+              "interest": false
+            },
+            "SlidersDocument": {
+              "count": 12,
+              "interest": false
+            },
+            "CarouselsDocument": {
+              "count": 4,
+              "interest": false
+            },
+            "BombshellProductDocument": {
+              "count": 1,
+              "interest": false
+            },
+            "QuickAccessDocument": {
+              "count": 18,
+              "interest": false
+            },
+            "HomeAppV2Document": {
+              "count": 13,
+              "interest": false
+            },
+            "ShopsDocument": {
+              "count": 5,
+              "interest": false
+            }
+          }
+        },
+        "marketing_wl": {
+          "collections": {
+            "ConfigurationDocument": {
+              "count": 35,
+              "interest": true
+            },
+            "CarouselsDocument": {
+              "count": 4,
+              "interest": false
+            },
+            "DataInputDocument": {
+              "count": 42,
+              "interest": false
+            },
+            "HomeFreezeDocument": {
+              "count": 1,
+              "interest": false
+            },
+            "HomeAppDocument": {
+              "count": 36,
+              "interest": false
+            },
+            "SlidersDocument": {
+              "count": 4,
+              "interest": false
+            },
+            "QuickAccessDocument": {
+              "count": 20,
+              "interest": false
+            },
+            "BombshellProductDocument": {
+              "count": 1,
+              "interest": false
+            },
+            "PromotionAnnouncementDocument": {
+              "count": 13,
+              "interest": false
+            },
+            "HomeAppV2Document": {
+              "count": 1,
+              "interest": false
+            },
+            "ShopsDocument": {
+              "count": 8,
+              "interest": false
+            }
+          }
+        },
+        "myprueba": {
+          "collections": {
+            "borrame": {
+              "count": 3,
+              "interest": false
+            },
+            "stores": {
+              "count": 5,
+              "interest": false
+            }
+          }
+        },
+        "peticiones_api": {
+          "collections": {
+            "peticiones_sanborns": {
+              "count": 0,
+              "interest": false
+            },
+            "peticiones_cs": {
+              "count": 0,
+              "interest": false
+            },
+            "peticiones_sears": {
+              "count": 8,
+              "interest": false
+            }
+          }
+        },
+        "productos_xml_sears": {
+          "collections": {
+            "rel_productos_xml_sears": {
+              "count": 203392,
+              "interest": false
+            },
+            "productos_activos_claroshop": {
+              "count": 0,
+              "interest": false
+            },
+            "productos_activos": {
+              "count": 50963,
+              "interest": false
+            },
+            "rel_categorias_sears_claroshop": {
+              "count": 2078,
+              "interest": false
+            },
+            "rel_productos_xml_claroshop": {
+              "count": 0,
+              "interest": false
+            },
+            "hash_productos_xml": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "repst1": {
+          "collections": {
+            "ejecucionProceso": {
+              "count": 78,
+              "interest": false
+            },
+            "tiendas": {
+              "count": 382,
+              "interest": false
+            },
+            "users": {
+              "count": 5,
+              "interest": true
+            },
+            "ventasDelDia": {
+              "count": 78,
+              "interest": false
+            }
+          }
+        },
+        "reviews": {
+          "collections": {
+            "notificationproccess": {
+              "count": 1,
+              "interest": false
+            },
+            "test1": {
+              "count": 1,
+              "interest": false
+            },
+            "reviewsvote": {
+              "count": 3,
+              "interest": false
+            },
+            "productsReviews": {
+              "count": 3,
+              "interest": false
+            },
+            "reviews": {
+              "count": 260201,
+              "interest": false
+            },
+            "forbiddenWords": {
+              "count": 29,
+              "interest": false
+            },
+            "comercio": {
+              "count": 3,
+              "interest": false
+            },
+            "summary": {
+              "count": 107811,
+              "interest": false
+            },
+            "notification": {
+              "count": 20,
+              "interest": false
+            }
+          }
+        },
+        "reviews_sanborns": {
+          "collections": {
+            "notification": {
+              "count": 0,
+              "interest": false
+            },
+            "forbiddenWords": {
+              "count": 0,
+              "interest": false
+            },
+            "summary": {
+              "count": 0,
+              "interest": false
+            },
+            "productsReviews": {
+              "count": 0,
+              "interest": false
+            },
+            "reviews": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "reviews_sears": {
+          "collections": {
+            "reviews": {
+              "count": 0,
+              "interest": false
+            },
+            "summary": {
+              "count": 1,
+              "interest": false
+            },
+            "productsReviews": {
+              "count": 1,
+              "interest": false
+            },
+            "forbiddenWords": {
+              "count": 0,
+              "interest": false
+            },
+            "notification": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "reviews_test": {
+          "collections": {
+            "reviews_test": {
+              "count": 222,
+              "interest": false
+            },
+            "summary_test": {
+              "count": 83,
+              "interest": false
+            }
+          }
+        },
+        "sanborns": {
+          "collections": {
+            "mensajerias_track": {
+              "count": 3,
+              "interest": false
+            },
+            "tracking": {
+              "count": 0,
+              "interest": false
+            },
+            "peticiones": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "sanborns_categories": {
+          "collections": {
+            "categories_controladas": {
+              "count": 768,
+              "interest": false
+            },
+            "category_junio2022": {
+              "count": 473,
+              "interest": false
+            },
+            "category": {
+              "count": 768,
+              "interest": false
+            },
+            "category_julio2022": {
+              "count": 473,
+              "interest": false
+            }
+          }
+        },
+        "sanborns_shipping": {
+          "collections": {
+            "turns": {
+              "count": 10,
+              "interest": false
+            },
+            "subsidiary": {
+              "count": 29,
+              "interest": false
+            },
+            "scheduleLegacy": {
+              "count": 1,
+              "interest": false
+            },
+            "schedule": {
+              "count": 8,
+              "interest": false
+            },
+            "postalCode": {
+              "count": 1674,
+              "interest": false
+            }
+          }
+        },
+        "sears": {
+          "collections": {
+            "mensajerias_track": {
+              "count": 9,
+              "interest": false
+            },
+            "tracking": {
+              "count": 2,
+              "interest": false
+            },
+            "peticiones": {
+              "count": 8,
+              "interest": false
+            }
+          }
+        },
+        "sears_categories": {
+          "collections": {
+            "category_10dic": {
+              "count": 1515,
+              "interest": false
+            },
+            "category_vieja": {
+              "count": 1459,
+              "interest": false
+            },
+            "category4": {
+              "count": 1317,
+              "interest": false
+            },
+            "category": {
+              "count": 1636,
+              "interest": false
+            },
+            "category_junio2022": {
+              "count": 1317,
+              "interest": false
+            },
+            "category_old": {
+              "count": 1115,
+              "interest": false
+            },
+            "category_mayo2022": {
+              "count": 1269,
+              "interest": false
+            },
+            "category2": {
+              "count": 1515,
+              "interest": false
+            },
+            "category3": {
+              "count": 1316,
+              "interest": false
+            }
+          }
+        },
+        "sears_shipping": {
+          "collections": {
+            "schedule": {
+              "count": 8,
+              "interest": false
+            },
+            "subsidiary": {
+              "count": 29,
+              "interest": false
+            },
+            "scheduleLegacy": {
+              "count": 1,
+              "interest": false
+            },
+            "turns": {
+              "count": 10,
+              "interest": false
+            },
+            "postalCode": {
+              "count": 1674,
+              "interest": false
+            }
+          }
+        },
+        "shein_ms": {
+          "collections": {
+            "token_handler": {
+              "count": 1,
+              "interest": true
+            },
+            "orders_id_sync": {
+              "count": 1,
+              "interest": false
+            },
+            "seller": {
+              "count": 1,
+              "interest": false
+            },
+            "webhook": {
+              "count": 666,
+              "interest": false
+            },
+            "orders_sync_progress": {
+              "count": 1,
+              "interest": false
+            },
+            "orders_sync": {
+              "count": 1,
+              "interest": false
+            }
+          }
+        },
+        "shipping": {
+          "collections": {
+            "scheduleLegacy": {
+              "count": 1,
+              "interest": false
+            },
+            "schedule": {
+              "count": 8,
+              "interest": false
+            },
+            "postalCode": {
+              "count": 2714,
+              "interest": false
+            },
+            "turns": {
+              "count": 10,
+              "interest": false
+            },
+            "subsidiary": {
+              "count": 61,
+              "interest": false
+            }
+          }
+        },
+        "shipping_ms": {
+          "collections": {
+            "shipping_costs": {
+              "count": 2509200,
+              "interest": false
+            }
+          }
+        },
+        "sif": {
+          "collections": {
+            "historicos_s": {
+              "count": 10,
+              "interest": false
+            },
+            "User": {
+              "count": 2,
+              "interest": true
+            },
+            "consumo_guias": {
+              "count": 568,
+              "interest": false
+            },
+            "peticionesApi": {
+              "count": 850,
+              "interest": false
+            },
+            "saldo_anticipo": {
+              "count": 100,
+              "interest": false
+            },
+            "suscripcion": {
+              "count": 0,
+              "interest": false
+            },
+            "imrTransaccionDev": {
+              "count": 0,
+              "interest": false
+            },
+            "anticipo": {
+              "count": 52,
+              "interest": false
+            },
+            "historico_consumo_guias": {
+              "count": 1166,
+              "interest": false
+            },
+            "imrTransaccion": {
+              "count": 39,
+              "interest": false
+            },
+            "transaccion": {
+              "count": 6,
+              "interest": false
+            }
+          }
+        },
+        "singlepages": {
+          "collections": {
+            "mediaproducts": {
+              "count": 0,
+              "interest": false
+            },
+            "ordersrestored3": {
+              "count": 41,
+              "interest": false
+            },
+            "passwordrecoveries": {
+              "count": 16,
+              "interest": true
+            },
+            "ssoinvitations": {
+              "count": 0,
+              "interest": false
+            },
+            "brands": {
+              "count": 1,
+              "interest": false
+            },
+            "ordersrestored": {
+              "count": 883,
+              "interest": false
+            },
+            "tickets": {
+              "count": 2,
+              "interest": false
+            },
+            "wallets": {
+              "count": 0,
+              "interest": false
+            },
+            "recordpurchasehistories": {
+              "count": 0,
+              "interest": false
+            },
+            "customerrecords": {
+              "count": 0,
+              "interest": false
+            },
+            "deliveryroutes": {
+              "count": 0,
+              "interest": false
+            },
+            "purchasestorehouses": {
+              "count": 0,
+              "interest": false
+            },
+            "eshoporderhistories": {
+              "count": 0,
+              "interest": false
+            },
+            "eshoppages": {
+              "count": 0,
+              "interest": false
+            },
+            "eshopcollections": {
+              "count": 2,
+              "interest": false
+            },
+            "products": {
+              "count": 54,
+              "interest": false
+            },
+            "forms": {
+              "count": 0,
+              "interest": false
+            },
+            "inventorysupplies": {
+              "count": 0,
+              "interest": false
+            },
+            "shippingmethods": {
+              "count": 3,
+              "interest": false
+            },
+            "eshopsubcarts": {
+              "count": 0,
+              "interest": false
+            },
+            "roles": {
+              "count": 8,
+              "interest": false
+            },
+            "tags": {
+              "count": 1,
+              "interest": false
+            },
+            "taskhistories": {
+              "count": 0,
+              "interest": false
+            },
+            "tasks": {
+              "count": 0,
+              "interest": false
+            },
+            "wholesales": {
+              "count": 0,
+              "interest": false
+            },
+            "surveyanswers": {
+              "count": 0,
+              "interest": false
+            },
+            "permissions": {
+              "count": 22,
+              "interest": false
+            },
+            "recordanalyses": {
+              "count": 0,
+              "interest": false
+            },
+            "tasklists": {
+              "count": 0,
+              "interest": false
+            },
+            "discounts": {
+              "count": 0,
+              "interest": false
+            },
+            "eshoporders": {
+              "count": 442,
+              "interest": false
+            },
+            "eshopcomments": {
+              "count": 0,
+              "interest": false
+            },
+            "eshopusers": {
+              "count": 1808,
+              "interest": true
+            },
+            "mailingsubscribers": {
+              "count": 919,
+              "interest": false
+            },
+            "blogcategories": {
+              "count": 2,
+              "interest": false
+            },
+            "mailinggroupsubscribers": {
+              "count": 1,
+              "interest": false
+            },
+            "bundles": {
+              "count": 0,
+              "interest": false
+            },
+            "coupons": {
+              "count": 0,
+              "interest": false
+            },
+            "systemconfigs": {
+              "count": 1,
+              "interest": true
+            },
+            "accounts": {
+              "count": 1,
+              "interest": false
+            },
+            "cachedocuments": {
+              "count": 0,
+              "interest": false
+            },
+            "eshopwishlists": {
+              "count": 1808,
+              "interest": false
+            },
+            "recordreviews": {
+              "count": 0,
+              "interest": false
+            },
+            "users": {
+              "count": 4,
+              "interest": true
+            },
+            "admincharges": {
+              "count": 0,
+              "interest": true
+            },
+            "questiongroups": {
+              "count": 0,
+              "interest": false
+            },
+            "banners": {
+              "count": 0,
+              "interest": false
+            },
+            "eshopattributes": {
+              "count": 0,
+              "interest": false
+            },
+            "counters": {
+              "count": 28,
+              "interest": false
+            },
+            "inventories": {
+              "count": 108,
+              "interest": false
+            },
+            "recorddocuments": {
+              "count": 0,
+              "interest": false
+            },
+            "satpaymethods": {
+              "count": 0,
+              "interest": false
+            },
+            "clients": {
+              "count": 1808,
+              "interest": false
+            },
+            "eshopcarts": {
+              "count": 1432,
+              "interest": false
+            },
+            "recordtypes": {
+              "count": 0,
+              "interest": false
+            },
+            "eshoptemplates": {
+              "count": 2,
+              "interest": false
+            },
+            "cashiers": {
+              "count": 0,
+              "interest": false
+            },
+            "tickethistories": {
+              "count": 0,
+              "interest": false
+            },
+            "transaccion": {
+              "count": 5006,
+              "interest": false
+            },
+            "usermediacatalogs": {
+              "count": 0,
+              "interest": true
+            },
+            "marketingcampaings": {
+              "count": 0,
+              "interest": false
+            },
+            "sessions": {
+              "count": 1812,
+              "interest": false
+            },
+            "supplyhistories": {
+              "count": 0,
+              "interest": false
+            },
+            "eshoppaymethods": {
+              "count": 3,
+              "interest": false
+            },
+            "billingdatas": {
+              "count": 1,
+              "interest": false
+            },
+            "clientdebts": {
+              "count": 0,
+              "interest": false
+            },
+            "customertypes": {
+              "count": 0,
+              "interest": false
+            },
+            "satproducts": {
+              "count": 52800,
+              "interest": false
+            },
+            "supplies": {
+              "count": 0,
+              "interest": false
+            },
+            "facturas3": {
+              "count": 41,
+              "interest": false
+            },
+            "surveys": {
+              "count": 0,
+              "interest": false
+            },
+            "recordphotos": {
+              "count": 0,
+              "interest": false
+            },
+            "blognavigations": {
+              "count": 2,
+              "interest": false
+            },
+            "customproducts": {
+              "count": 0,
+              "interest": false
+            },
+            "quotations": {
+              "count": 0,
+              "interest": false
+            },
+            "facturas": {
+              "count": 883,
+              "interest": false
+            },
+            "businesses": {
+              "count": 2,
+              "interest": false
+            },
+            "eshopinventories": {
+              "count": 0,
+              "interest": false
+            },
+            "expenses": {
+              "count": 0,
+              "interest": false
+            },
+            "transfers": {
+              "count": 0,
+              "interest": false
+            },
+            "blogentries": {
+              "count": 21,
+              "interest": false
+            },
+            "webpages": {
+              "count": 3,
+              "interest": false
+            },
+            "ordersrestored2": {
+              "count": 774,
+              "interest": false
+            },
+            "facturas2": {
+              "count": 774,
+              "interest": false
+            },
+            "proposaltypes": {
+              "count": 0,
+              "interest": false
+            },
+            "paymethods": {
+              "count": 2,
+              "interest": false
+            },
+            "subscriptions": {
+              "count": 0,
+              "interest": false
+            },
+            "debts": {
+              "count": 0,
+              "interest": false
+            },
+            "singlepages": {
+              "count": 18,
+              "interest": false
+            },
+            "billings": {
+              "count": 0,
+              "interest": false
+            },
+            "mailingcampaings": {
+              "count": 0,
+              "interest": false
+            },
+            "recordproposals": {
+              "count": 0,
+              "interest": false
+            },
+            "categories": {
+              "count": 27,
+              "interest": false
+            },
+            "histories": {
+              "count": 325,
+              "interest": false
+            },
+            "attributes": {
+              "count": 2,
+              "interest": false
+            },
+            "customercredits": {
+              "count": 0,
+              "interest": true
+            },
+            "inventorycaches": {
+              "count": 0,
+              "interest": false
+            },
+            "expensestests": {
+              "count": 0,
+              "interest": false
+            },
+            "test": {
+              "count": 0,
+              "interest": false
+            },
+            "pendingexpenses": {
+              "count": 0,
+              "interest": false
+            },
+            "inventoryhistories": {
+              "count": 0,
+              "interest": false
+            },
+            "productpackages": {
+              "count": 0,
+              "interest": false
+            }
+          }
+        },
+        "sistema_trace": {
+          "collections": {
+            "mensajes_ss": {
+              "count": 42,
+              "interest": false
+            }
+          }
+        },
+        "sms-notifications": {
+          "collections": {
+            "logs": {
+              "count": 1,
+              "interest": false
+            }
+          }
+        },
+        "sso": {
+          "collections": {
+            "SessionDocument": {
+              "count": 3585,
+              "interest": false
+            }
+          }
+        },
+        "sso_sanborns": {
+          "collections": {
+            "SessionDocument": {
+              "count": 1382,
+              "interest": false
+            }
+          }
+        },
+        "t1_envios": {
+          "collections": {
+            "recolecciones": {
+              "count": 32,
+              "interest": false
+            },
+            "bitacora_requests": {
+              "count": 1752,
+              "interest": false
+            },
+            "cotizaciones_productos": {
+              "count": 325,
+              "interest": false
+            },
+            "cotizaciones": {
+              "count": 156,
+              "interest": false
+            },
+            "cartas_porte_response": {
+              "count": 37,
+              "interest": false
+            },
+            "zpl_fallidos": {
+              "count": 7,
+              "interest": false
+            },
+            "cotizaciones_response": {
+              "count": 102,
+              "interest": false
+            },
+            "tabuladores_zonas": {
+              "count": 248460,
+              "interest": false
+            },
+            "cp_mensajerias_gandhi": {
+              "count": 33621,
+              "interest": false
+            },
+            "guias_response": {
+              "count": 227,
+              "interest": false
+            },
+            "recolecciones_response": {
+              "count": 81,
+              "interest": false
+            },
+            "guias": {
+              "count": 59,
+              "interest": false
+            },
+            "tarifas_zonas_base": {
+              "count": 81,
+              "interest": false
+            }
+          }
+        },
+        "t1fullfilment": {
+          "collections": {
+            "guias": {
+              "count": 587,
+              "interest": false
+            },
+            "userst1fullfilment": {
+              "count": 4,
+              "interest": true
+            },
+            "codigosPostalesBigSmart": {
+              "count": 1732,
+              "interest": false
+            },
+            "faltantes_imr": {
+              "count": 145,
+              "interest": false
+            },
+            "appointment": {
+              "count": 290,
+              "interest": false
+            },
+            "ctgCajas": {
+              "count": 88,
+              "interest": false
+            },
+            "productsFulfillment": {
+              "count": 511,
+              "interest": false
+            },
+            "anterior_productsFulfillment": {
+              "count": 8375,
+              "interest": false
+            },
+            "tokenLyde": {
+              "count": 9,
+              "interest": true
+            },
+            "warehouseStock": {
+              "count": 69,
+              "interest": false
+            },
+            "peticionesApit1fullfilment": {
+              "count": 3481,
+              "interest": false
+            },
+            "salesOrderMongo": {
+              "count": 50,
+              "interest": false
+            },
+            "codigosPostalesClicOH": {
+              "count": 1814,
+              "interest": false
+            },
+            "codigosPostales": {
+              "count": 43588,
+              "interest": false
+            },
+            "codigos_postales_ups": {
+              "count": 31305,
+              "interest": false
+            }
+          }
+        },
+        "t1fullfilment_prueba": {
+          "collections": {
+            "ctgCajas": {
+              "count": 13,
+              "interest": false
+            },
+            "userst1fullfilment": {
+              "count": 1,
+              "interest": true
+            },
+            "productsFulfillment": {
+              "count": 9,
+              "interest": false
+            }
+          }
+        },
+        "t1pagos": {
+          "collections": {
+            "users": {
+              "count": 4,
+              "interest": true
+            },
+            "payment_links": {
+              "count": 10,
+              "interest": false
+            },
+            "orders": {
+              "count": 317,
+              "interest": false
+            },
+            "tokens": {
+              "count": 1,
+              "interest": true
+            },
+            "promotion_details": {
+              "count": 9,
+              "interest": false
+            },
+            "stores": {
+              "count": 3,
+              "interest": false
+            },
+            "short_tokens": {
+              "count": 10,
+              "interest": true
+            }
+          }
+        },
+        "tienda": {
+          "collections": {
+            "reporte": {
+              "count": 9196,
+              "interest": false
+            },
+            "concilia": {
+              "count": 10417,
+              "interest": false
+            },
+            "conciliacargos": {
+              "count": 10236,
+              "interest": false
+            }
+          }
+        },
+        "tracking": {
+          "collections": {
+            "numeros_guias": {
+              "count": 25,
+              "interest": false
+            },
+            "catalogo_familia": {
+              "count": 558,
+              "interest": false
+            },
+            "swsws": {
+              "count": 7,
+              "interest": false
+            },
+            "tracks_fallidos": {
+              "count": 16546,
+              "interest": false
+            },
+            "fdds": {
+              "count": 8,
+              "interest": false
+            },
+            "guias_duplicadas": {
+              "count": 25,
+              "interest": false
+            },
+            "guias_desconocidas": {
+              "count": 268,
+              "interest": false
+            },
+            "log_track": {
+              "count": 391,
+              "interest": false
+            },
+            "s_general": {
+              "count": 90,
+              "interest": false
+            },
+            "estatus_mensajeria": {
+              "count": 190898,
+              "interest": false
+            },
+            "usuarios_webhook": {
+              "count": 10,
+              "interest": false
+            },
+            "peticiones_sears": {
+              "count": 7,
+              "interest": false
+            },
+            "tracking_mensajerias": {
+              "count": 12285,
+              "interest": false
+            },
+            "guias_excedentes": {
+              "count": 0,
+              "interest": false
+            },
+            "historicos_s": {
+              "count": 670,
+              "interest": false
+            }
+          }
+        },
+        "tracking_cs": {
+          "collections": {
+            "c_mensajerias": {
+              "count": 10,
+              "interest": false
+            },
+            "tracking_mensajerias": {
+              "count": 6,
+              "interest": false
+            },
+            "usuarios_webhook": {
+              "count": 6,
+              "interest": false
+            }
+          }
+        },
+        "users-t1pay": {
+          "collections": {
+            "addresses": {
+              "count": 5,
+              "interest": false
+            }
+          }
+        },
+        "wishlist_db": {
+          "collections": {
+            "wishlist": {
+              "count": 4,
+              "interest": false
+            },
+            "cart": {
+              "count": 1,
+              "interest": false
+            }
+          }
+        }
+      }
+    },
+    "PUBLICA": {
+      "databases": {
+        "sif": {
+          "collections": {
+            "imrTransaccionDev": {
+              "count": 0,
+              "interest": false
+            },
+            "historico_consumo_guias": {
+              "count": 3383,
+              "interest": false
+            },
+            "transaccion": {
+              "count": 4,
+              "interest": false
+            },
+            "anticipo": {
+              "count": 52,
+              "interest": false
+            },
+            "peticionesApi": {
+              "count": 847,
+              "interest": false
+            },
+            "historicos_s": {
+              "count": 10,
+              "interest": false
+            },
+            "consumo_guias": {
+              "count": 568,
+              "interest": false
+            },
+            "imrTransaccion": {
+              "count": 39,
+              "interest": false
+            },
+            "suscripcion": {
+              "count": 0,
+              "interest": false
+            },
+            "saldo_anticipo": {
+              "count": 100,
+              "interest": false
+            }
+          }
+        },
+        "t1_envios": {
+          "collections": {
+            "cotizaciones_response": {
+              "count": 102,
+              "interest": false
+            },
+            "recolecciones": {
+              "count": 32,
+              "interest": false
+            },
+            "tarifas_zonas_base": {
+              "count": 81,
+              "interest": false
+            },
+            "guias_response": {
+              "count": 227,
+              "interest": false
+            },
+            "sobrepesos": {
+              "count": 3,
+              "interest": false
+            },
+            "recolecciones_response": {
+              "count": 81,
+              "interest": false
+            },
+            "cotizaciones_productos": {
+              "count": 325,
+              "interest": false
+            },
+            "tabuladores_zonas": {
+              "count": 248460,
+              "interest": false
+            },
+            "cp_mensajerias_gandhi": {
+              "count": 33621,
+              "interest": false
+            },
+            "cotizaciones": {
+              "count": 156,
+              "interest": false
+            },
+            "cartas_porte_response": {
+              "count": 37,
+              "interest": false
+            },
+            "bitacora_requests": {
+              "count": 1752,
+              "interest": false
+            },
+            "guias": {
+              "count": 59,
+              "interest": false
+            },
+            "zpl_fallidos": {
+              "count": 7,
+              "interest": false
+            }
+          }
+        },
+        "tracking": {
+          "collections": {
+            "numeros_guias": {
+              "count": 33,
+              "interest": false
+            },
+            "guias_excedentes": {
+              "count": 0,
+              "interest": false
+            },
+            "fdds": {
+              "count": 8,
+              "interest": false
+            },
+            "catalogo_familia_backup_251219": {
+              "count": 626,
+              "interest": false
+            },
+            "guias_desconocidas": {
+              "count": 653,
+              "interest": false
+            },
+            "log_track": {
+              "count": 840,
+              "interest": false
+            },
+            "historicos_s": {
+              "count": 1017,
+              "interest": false
+            },
+            "folio_counter": {
+              "count": 1,
+              "interest": false
+            },
+            "swsws": {
+              "count": 7,
+              "interest": false
+            },
+            "estatus_mensajeria": {
+              "count": 194297,
+              "interest": false
+            },
+            "s_general": {
+              "count": 131,
+              "interest": false
+            },
+            "cotizaciones_masivas": {
+              "count": 1915,
+              "interest": false
+            },
+            "notifications": {
+              "count": 1,
+              "interest": false
+            },
+            "peticiones_sears": {
+              "count": 7,
+              "interest": false
+            },
+            "family_catalog": {
+              "count": 601,
+              "interest": false
+            },
+            "tracks_fallidos": {
+              "count": 16572,
+              "interest": false
+            },
+            "tracking_mensajerias": {
+              "count": 66320,
+              "interest": false
+            },
+            "catalogo_familia": {
+              "count": 643,
+              "interest": false
+            },
+            "usuarios_webhook": {
+              "count": 10,
+              "interest": false
+            },
+            "guias_duplicadas": {
+              "count": 13,
+              "interest": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "string_search": {
+    "needles": [
+      "dbasears",
+      "172.27.141",
+      "apifincadob",
+      "payment_t1",
+      "app_t1",
+      "mrc-services",
+      "mongodb://",
+      "mongodb+srv",
+      "mysql://",
+      ":3308",
+      ":3310",
+      "api.claropagos",
+      "keycloak",
+      "jdbc:"
+    ],
+    "hits": [
+      {
+        "collection": "credito_claroshop_stores.stores",
+        "needle": ":3310",
+        "doc_id": "{\"$oid\":\"6536887246b36c079c9edb52\"}",
+        "snippet": "{\"_id\":{\"$oid\":\"6536887246b36c079c9edb52\"},\"name\":\"sears\",\"external_id\":3310,\"is_active\":true,\"created_at\":\"2023-10-23T14:51:30.101447987\",\"updated_at\":\"2023-10-23T14:51:30.101474098\"}"
+      },
+      {
+        "collection": "sears.peticiones",
+        "needle": "mrc-services",
+        "doc_id": "{\"$oid\":\"635868e87953540a8c726062\"}",
+        "snippet": "ido\\\":null,\\\"datos_facturacion\\\":null}}\",\"pedido\":900042,\"estatus\":\"ErrorFincado\",\"url\":\"https://beta-pse-admin-api.dev.mrc-services.io\",\"uri\":\"beta-pse/order\",\"ip\":\"172.27.140.134\",\"metodo\":\"POST\",\"fecha_modificacion\":{\"$date\":{\"$numberLong\":\"1666738409000\"}},\"fecha_alta\":{\"$date\":{\"$numberLong\":\"1666738408000\"}},\"cod"
+      },
+      {
+        "collection": "shein_ms.webhook",
+        "needle": "172.27.141",
+        "doc_id": "{\"$oid\":\"66e3597b0db2640b6be07d74\"}",
+        "snippet": "ede0dd9eaed:0\",\"x-lt-openkeyid\":\"D45DAFBA87424CD58E0D2D325F63AC50\",\"x-forwarded-port\":\"443\",\"accept\":\"*/*\",\"x-real-ip\":\"172.27.141.4\",\"x-original-forwarded-for\":\"172.27.141.4\",\"x-forwarded-server\":\"coapi-beta.dev.t1comercios.com\",\"x-forwarded-host\":\"coapi-beta.dev.t1comercios.com:443\",\"x-lt-eventcode\":\"order_push_notic"
+      },
+      {
+        "collection": "shein_ms.webhook",
+        "needle": "172.27.141",
+        "doc_id": "{\"$oid\":\"66e35b970db2640b6be07d75\"}",
+        "snippet": "42253f3646b:0\",\"x-lt-openkeyid\":\"D45DAFBA87424CD58E0D2D325F63AC50\",\"x-forwarded-port\":\"443\",\"accept\":\"*/*\",\"x-real-ip\":\"172.27.141.4\",\"x-original-forwarded-for\":\"172.27.141.4\",\"x-forwarded-server\":\"coapi-beta.dev.t1comercios.com\",\"x-forwarded-host\":\"coapi-beta.dev.t1comercios.com:443\",\"x-lt-eventcode\":\"order_push_notic"
+      },
+      {
+        "collection": "shein_ms.webhook",
+        "needle": "172.27.141",
+        "doc_id": "{\"$oid\":\"66e35be70db2640b6be07d76\"}",
+        "snippet": "e8e7248f66b:0\",\"x-lt-openkeyid\":\"D45DAFBA87424CD58E0D2D325F63AC50\",\"x-forwarded-port\":\"443\",\"accept\":\"*/*\",\"x-real-ip\":\"172.27.141.4\",\"x-original-forwarded-for\":\"172.27.141.4\",\"x-forwarded-server\":\"coapi-beta.dev.t1comercios.com\",\"x-forwarded-host\":\"coapi-beta.dev.t1comercios.com:443\",\"x-lt-eventcode\":\"order_push_notic"
+      },
+      {
+        "collection": "shein_ms.webhook",
+        "needle": "172.27.141",
+        "doc_id": "{\"$oid\":\"66e391ed0db2640b6be07d77\"}",
+        "snippet": "79d0bdd5d6a:0\",\"x-lt-openkeyid\":\"D45DAFBA87424CD58E0D2D325F63AC50\",\"x-forwarded-port\":\"443\",\"accept\":\"*/*\",\"x-real-ip\":\"172.27.141.4\",\"x-original-forwarded-for\":\"172.27.141.4\",\"x-forwarded-server\":\"coapi-beta.dev.t1comercios.com\",\"x-forwarded-host\":\"coapi-beta.dev.t1comercios.com:443\",\"x-lt-eventcode\":\"order_push_notic"
+      },
+      {
+        "collection": "shein_ms.webhook",
+        "needle": "172.27.141",
+        "doc_id": "{\"$oid\":\"66e3923d0db2640b6be07d78\"}",
+        "snippet": "ab0fa596ec1:0\",\"x-lt-openkeyid\":\"D45DAFBA87424CD58E0D2D325F63AC50\",\"x-forwarded-port\":\"443\",\"accept\":\"*/*\",\"x-real-ip\":\"172.27.141.4\",\"x-original-forwarded-for\":\"172.27.141.4\",\"x-forwarded-server\":\"coapi-beta.dev.t1comercios.com\",\"x-forwarded-host\":\"coapi-beta.dev.t1comercios.com:443\",\"x-lt-eventcode\":\"order_push_notic"
+      },
+      {
+        "collection": "singlepages.eshopcarts",
+        "needle": ":3308",
+        "doc_id": "{\"$oid\":\"6279b43c93b15f7976a10428\"}",
+        "snippet": "\",\"discountsArray\":[],\"uses\":[],\"variations\":[],\"qtyAvailable\":99}],\"user_id\":{\"$oid\":\"6279b43c93b15f7976a10422\"},\"code\":3308,\"__v\":11,\"coupon\":[]}"
+      },
+      {
+        "collection": "singlepages.eshopcarts",
+        "needle": ":3310",
+        "doc_id": "{\"$oid\":\"6279b4eb93b15f7976a11abf\"}",
+        "snippet": ",\"discountsArray\":[],\"uses\":[],\"variations\":[],\"qtyAvailable\":435}],\"user_id\":{\"$oid\":\"6279b4eb93b15f7976a11ab9\"},\"code\":3310,\"__v\":4,\"coupon\":[]}"
+      },
+      {
+        "collection": "singlepages.eshoppaymethods",
+        "needle": "api.claropagos",
+        "doc_id": "{\"$oid\":\"6220ea2ba0db5e7a6cff428a\"}",
+        "snippet": ",\"showMerchant\":false,\"showUrl\":false,\"showWebhook\":false,\"showWidget\":false,\"automated\":false,\"urlProduction\":\"https://api.claropagos.com/v1/\",\"urlSandbox\":\"https://api.sandbox.claropagos.com/v1/\",\"name\":\"T1Pagos\"},\"deadLine\":0,\"priceLimit\":1,\"priceType\":1,\"appliesTo\":[\"eshop\"],\"commissionIsCondonable\":true,\"commissio"
+      },
+      {
+        "collection": "t1pagos.tokens",
+        "needle": "keycloak",
+        "doc_id": "{\"$oid\":\"651b40c0a81d39593dba1e99\"}",
+        "snippet": "DqXeWsnrRNEHN5v1fYuO2lzVwYzRj4IVrt3h9toYYh6g3QpMMqKVeLCQ3cXBNcJyaxmMfxUlz4WDHv7W7cApLxY6-BdnIgZvQgPYJWpC7U4QAcXQ==\",\"id_keycloak\":\"418d15ec-d615-480a-a7b0-e8693d114bc0\",\"created_at\":\"2023-10-02T22:14:24.462565680\",\"updated_at\":\"2023-10-02T22:14:24.462613199\"}"
+      }
+    ],
+    "hallazgos_clave": [
+      "sears.peticiones -> url https://beta-pse-admin-api.dev.mrc-services.io (uri beta-pse/order, ip 172.27.140.134) — API PSE (fincado/credito) Sears en dev.mrc-services.io",
+      "shein_ms.webhook -> x-real-ip/x-original-forwarded-for = 172.27.141.4 (host T1Pagos actua como gateway coapi-beta.dev.t1comercios.com)",
+      "singlepages.eshoppaymethods -> urlProduction https://api.claropagos.com/v1/ (T1Pagos)",
+      "credito_claroshop_stores.stores -> external_id 3310 (falso positivo numerico)",
+      "NO se encontraron dbasears / apifincadob / payment_t1 / app_t1 en Mongo (son creds MySQL de configs Jenkins/codigo, no de Mongo)"
+    ]
+  },
+  "credenciales_mongo": {
+    "admin_system_users_total": 126,
+    "root_users": [
+      "dbadminuser",
+      "devgomezt",
+      "dbencisan",
+      "devgarzas",
+      "dbortjima"
+    ],
+    "userAdminAnyDatabase": [
+      "dbmorgar",
+      "admin.azucena.rosales",
+      "admin.dbmcastilloj",
+      "admin.devisaac.trenado",
+      "admin.devjose.gomez",
+      "admin.juan.martinez",
+      "admin.marketing",
+      "pedro.delacruz",
+      "admin.ivan.gonzalez",
+      "admin.luis.galvan",
+      "admin.angel.sanchez"
+    ],
+    "nota": "Hashes SCRAM-SHA-1/256 completos en mongo_interest_dump_raw.txt (lineas 2-128)",
+    "cluster_hmac_keys": "admin.system.keys (22 keys rotativas) dumpeadas; key vigente Ago-2026: 8rxN9rCXWrzbx2UXVcNLqVVSVlc= (expiresAt t=1795025144)"
+  },
+  "credenciales_aplicacion": {
+    "admin.users (t1 fullfilment webhook)": {
+      "user": "Admin api t1 fullfilment",
+      "pass_b64_decoded": "ApiT13nv!0s170220234dm1N",
+      "token": "O31VTfoM55h/fPuV5yCDAiK8C++WMb7zOrUzj0+JIs0="
+    },
+    "sif.User": [
+      {
+        "name": "Administrador",
+        "pass_b64_decoded": "KidvsKat3",
+        "token": "OOlQjNW/W28iPRjMisunqg=="
+      },
+      {
+        "name": "Api Pavel",
+        "pass_b64_decoded": "ApiT13nv!0s29102021aP1Fr0nT",
+        "token": "IURUqNApHPSbbhelah5XJA0quOnuSXuytZfbGW+w4rU="
+      }
+    ],
+    "repst1.users": "5 users bcrypt: sergio.garza@claroshop.com (admin), prueba@prueba.com, usuario.prueba@claroshop.com, sergio.garza2@, sergio.garza3@",
+    "singlepages.users": "4 users, password debil tipo \"2f55e4bc742538\": orders@perezracing.mx, adrian@monadic.com, hola@t1envios.com",
+    "singlepages.systemconfigs": "reCAPTCHA secret 6Le2glYfAAAAAJEzZGgTbXEmSTdlnDgDLvNo-bMe (checoperez.com / sergioperezstore)",
+    "singlepages.eshoppaymethods": {
+      "T1Pagos_monadic": "JWT RS256 key_public + key_private (scopes tarjetas-crear/actualizar/eliminar/consultar/listar, transacciones, clientes) — api.claropagos.com/v1",
+      "PayPal": "key_public AZXj1w7hSnMxjq7p... / key_private EON8D4Un5Did31gB_1pFzQgHa9pgXs91HMx8R6XyZUYAL3IlP1SWmnBMn07kqS3WC5GDnbh0QoXiLjzH"
+    },
+    "marketing.ConfigurationDocument": "t1_ios / t1_android = JWT RS256 sub=72 scopes cliente-tarjetas/transacciones/clientes/suscripciones/planes/antifraude/webhooks/conciliacion (ClaroPagos/T1Pagos)",
+    "shein_ms.token_handler": {
+      "client_id": "selfservice-beta-dev",
+      "client_secret": "20e69f2b-b915-44ea-b55b-5bd2a3720c0e",
+      "iss": "sso.dev.claroshop.com/auth/realms/claroshop-sapi-sa-cv"
+    },
+    "shein_ms.seller": {
+      "open_key_id": "E42C8ADE3E6B472F9E77AE198584960C",
+      "open_secret_key": "050F96A96C58448A91B5DF03CE09811D",
+      "store_id": "12028"
+    },
+    "t1fullfilment.userst1fullfilment": "4 users bcrypt + JWT HS256 (AdminApiT1Fullfilment/David/CarlosT1/Julio) — secret debil, tokens exp 1992xxxx (2033)",
+    "t1fullfilment.tokenLyde": "Lyde bearer wRW_egbQR0cbW%2ex9dZ$chIHP&#EzFMySnny9_#nMak4qz2j* + 8x SSO_T1COMERCIOS Keycloak JWTs",
+    "guias_masivas.usuarios": "3 users bcrypt (masivasAdmin ADMIN, alejandroT1paginas, TEST) + JWT HS256",
+    "tracking.usuarios_webhook / tracking_cs.usuarios_webhook": "10 users bcrypt + JWT HS256: adminClaroshop(ADMIN), ivoy, cargamos, bigsmart, imile, ampm, express, cargamasiva, test, clicoh",
+    "t1pagos.tokens": "Keycloak token enorme (id_keycloak 418d15ec = lgalvanb19@outlook.es)",
+    "t1pagos.short_tokens": "10 pares original_token/short_token",
+    "t1pagos.users": "4 usuarios con id_t1_pagos + externalId keycloak (azucena.rosales@claro.com, lgalvanb19@outlook.es, angel.sanchez@claroshop.com, martino2197@gmail.com)"
+  },
+  "datos_sensibles": {
+    "credito-claroshop.purchase_charge": "PAN encriptado (AES) + TRACK2 EN CLARO (527600401360=9912, 647601044769=9912) + nombre tarjetahabiente — 176 docs",
+    "credito-claroshop.payment": "175 pagos aprobados con codigos de autorizacion",
+    "credito-claroshop.orders": "12158 ordenes de credito",
+    "sso.SessionDocument / sso_sanborns.SessionDocument": "4967 sesiones con accessToken Keycloak RS256 (expirados 2022)",
+    "singlepages.eshopusers": "1808 usuarios con telefonos/direcciones",
+    "singlepages.passwordrecoveries": "16 tokens de recuperacion con emails+IPs",
+    "sms-notifications.logs": "SMS con codigos de verificacion via AWS SNS"
+  },
+  "pivot": {
+    "mongo_host_como_pivot": "NO directo — 172.26.84.132 es mongod en container (pid 1), sin shell via protocolo Mongo. SSH 22 abierto desde Jenkins (fuerza bruta/keys aparte).",
+    "rutas_desde_jenkins_master": {
+      "172.27.141.4 (T1Pagos host)": "MySQL 3306 OPEN, SSH 22 OK, HTTPS 443 OK; 3310/27017 refused. Auth MySQL depende de grants por IP origen (app_t1 denegado desde .23, OK desde 172.27.141.6:3310 segun docker_connectivity_matrix.json)",
+      "172.27.141.24 (PROD Sears / dbasears)": "SSH 22 OK, HTTPS 443 OK; MySQL 3308/3306 y Mongo 27017 filtrados (DROP) desde esta red",
+      "172.26.84.132 (Mongo interno)": "27020/27021/22 OK"
+    },
+    "rutas_desde_docker_host": {
+      "publica 3.231.83.29:27017": "OK",
+      "interna 172.26.84.132:27021": "OK",
+      "172.27.141.6:3310": "MySQL enterprise AUTH_OK app_t1 -> payment_t1 (evidencia previa docker_connectivity_matrix.json)",
+      "Atlas real": "egress bloqueado"
+    },
+    "dns_interno": "dbasears.mrc-services.io y *.kqoop.mongodb.net -> 172.27.141.24 (override wildcard en DNS de Jenkins master)",
+    "recomendacion": "Pivot a T1Pagos ya probado via 172.27.141.6:3310 (app_t1). Para PROD Sears 3308: usar SSH 172.27.141.24 (jenkins user, ver g_ssh_to_prod.groovy) o desde 172.27.141.6."
+  }
+}

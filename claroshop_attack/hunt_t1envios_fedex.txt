@@ -1,0 +1,3053 @@
+
+
+=== ID ===
+(uid=1000(jre-user) gid=1000 groups=1000
+=== DOCKER_CONFIGS ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+)--- /etc/pki/ca-trust/ca-legacy.conf ---
+D# The upstream Mozilla.org project tests all changes to the root CA
+9# list with the NSS (Network Security Services) library.
+#
+?# Occassionally, changes might cause compatibility issues with
+<# other cryptographic libraries, such as openssl or gnutls.
+#
+F# The package maintainers of the CA certificates package might decide
+E# to temporarily keep certain (legacy) root CA certificates trusted,
+0# until incompatibility issues can be resolved.
+# 
+A# Using this configuration file it is possible to opt-out of the
+8# compatibility choices made by the package maintainer.
+#
+# legacy=default :
+H#   This configuration uses the choices made by the package maintainer.
+D#   It may keep root CA certificate as trusted, which the upstream 
+A#   Mozilla.org project has already marked as no longer trusted.
+F#   The set of CA certificates that are being kept enabled may change
+
+#   between package versions.
+#
+# legacy=disable :
+5#   Follow all removal decisions made by Mozilla.org
+#
+legacy=default
+
+--- /etc/vconsole.conf ---
+
+KEYMAP="us"
+FONT="latarcyrheb-sun16"
+
+--- /etc/locale.conf ---
+LANG="en_US.UTF-8"
+
+--- /etc/host.conf ---
+	multi on
+
+5--- /etc/prelink.conf.d/nss-softokn-prelink.conf ---
+-b /lib{,64}/libfreeblpriv3.so
+
+-b /lib{,64}/libsoftokn3.so
+-b /lib{,64}/libnssdbm3.so
+#-b /usr/lib{,64}/libfreeblpriv3.so
+ -b /usr/lib{,64}/libsoftokn3.so
+-b /usr/lib{,64}/libnssdbm3.so
+
+--- /etc/ld.so.conf ---
+
+include ld.so.conf.d/*.conf
+
+--- /etc/libaudit.conf ---
+Fhead: cannot open '/etc/libaudit.conf' for reading: Permission denied
+
+--- /etc/krb5.conf ---
+A# Configuration snippets may be placed in this directory as well
+
+includedir /etc/krb5.conf.d/
+
+
+[logging]
+& default = FILE:/var/log/krb5libs.log
+! kdc = FILE:/var/log/krb5kdc.log
+* admin_server = FILE:/var/log/kadmind.log
+
+[libdefaults]
+ dns_lookup_realm = false
+ ticket_lifetime = 24h
+ renew_lifetime = 7d
+ forwardable = true
+ rdns = false
+8 pkinit_anchors = FILE:/etc/pki/tls/certs/ca-bundle.crt
+
+# default_realm = EXAMPLE.COM
+1 default_ccache_name = KEYRING:persistent:%{uid}
+
+	[realms]
+# EXAMPLE.COM = {
+
+#  kdc = kerberos.example.com
+'#  admin_server = kerberos.example.com
+# }
+
+[domain_realm]
+
+# .example.com = EXAMPLE.COM
+
+# example.com = EXAMPLE.COM
+
+ --- /etc/openldap/ldap.conf ---
+#
+# LDAP Defaults
+#
+
+# See ldap.conf(5) for details
+=# This file should be world readable but not world writable.
+
+#BASE	dc=example,dc=com
+@#URI	ldap://ldap.example.com ldap://ldap-master.example.com:666
+
+#SIZELIMIT	12
+#TIMELIMIT	15
+#DEREF		never
+
+"TLS_CACERTDIR	/etc/openldap/certs
+
+B# Turning this off breaks GSSAPI used with krb5 when rdns = false
+SASL_NOCANON	on
+
+--- /etc/nsswitch.conf ---
+#
+# /etc/nsswitch.conf
+#
+B# An example Name Service Switch config file. This file should be
+7# sorted with the most-used services at the beginning.
+#
+=# The entry '[NOTFOUND=return]' means that the search for an
+?# entry should stop if the search in the previous entry turned
+F# up nothing. Note that if the search failed due to some other reason
+E# (like no NIS server responding) then the search continues with the
+# next entry.
+#
+# Valid entries include:
+#
+%#	nisplus			Use NIS+ (NIS version 3)
+0#	nis			Use NIS (NIS version 2), also called YP
+&#	dns			Use DNS (Domain Name Service)
+
+#	files			Use the local files
+*#	db			Use the local database (.db) files
+"#	compat			Use NIS on compat mode
+'#	hesiod			Use Hesiod for user lookups
+3#	sss			Use sssd (System Security Services Daemon)
+7#	[NOTFOUND=return]	Stop searching if not found so far
+#
+O# WARNING: Running nscd with a secondary caching service like sssd may lead to
+I# 	   unexpected behaviour, especially with how long entries are cached.
+
+I# To use db, put the "db" in front of "files" for entries you want to be
+## looked up first in the databases
+#
+
+# Example:
+!#passwd:    db files nisplus nis
+!#shadow:    db files nisplus nis
+!#group:     db files nisplus nis
+
+passwd:     files sss
+shadow:     files sss
+group:      files sss
+#initgroups: files sss
+
+%#hosts:     db files nisplus nis dns
+hosts:      files dns
+
+/# Example - obey only what nisplus tells us...
+-#services:   nisplus [NOTFOUND=return] files
+-#networks:   nisplus [NOTFOUND=return] files
+-#protocols:  nisplus [NOTFOUND=return] files
+-#rpc:        nisplus [NOTFOUND=return] files
+-#ethers:     nisplus [NOTFOUND=return] files
+2#netmasks:   nisplus [NOTFOUND=return] files     
+
+,bootparams: nisplus [NOTFOUND=return] files
+
+ethers:     files
+netmasks:   files
+networks:   files
+protocols:  files
+rpc:        files
+services:   files sss
+
+netgroup:   nisplus sss
+
+publickey:  nisplus
+
+
+automount:  files nisplus sss
+aliases:    files nisplus
+
+
+--- /etc/asound.conf ---
+#
+3# Place your global alsa-lib configuration here...
+#
+
+1--- /etc/fonts/conf.d/10-hinting-slight.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+  <match target="pattern">
+	    <!--
+I      This configuration is available on the major desktop environments.
+?      We shouldn't overwrite it with "assign" unconditionally.
+H      Most clients may picks up the first value only. so using "append"
+$      may simply works to avoid it.
+    -->
+J    <edit name="hintstyle" mode="append"><const>hintslight</const></edit>
+
+  </match>
+</fontconfig>
+
+5--- /etc/fonts/conf.d/10-scale-bitmap-fonts.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!--
+-  If font is bitmap, calculate scale factor.
+9  Note that color bitmap fonts have scalable=true, while
+G  non-color ones have scalable=false.  Both groups have outline=false.
+  -->
+<match target="font">
+%  <test name="outline" compare="eq">
+    <bool>false</bool>
+
+  </test>
+3  <edit name="pixelsizefixupfactor" mode="assign">
+
+    <divide>
+.      <name target="pattern">pixelsize</name>
+.      <name target="font"   >pixelsize</name>
+    </divide>
+
+  </edit>
+	</match>
+<!--
+6  For non-scalable bitmap fonts (ie. non-color), skip
+'  minor scaling if hinting is enabled.
+  -->
+<match target="font">
+%  <test name="outline" compare="eq">
+    <bool>false</bool>
+
+  </test>
+&  <test name="scalable" compare="eq">
+    <bool>false</bool>
+
+  </test>
+%  <test name="hinting" compare="eq">
+    <bool>true</bool>
+
+  </test>
+/  <edit name="scalingnotneeded" mode="assign">
+
+    <and>
+
+      <less>
+*        <name>pixelsizefixupfactor</name>
+
+        <double>1.2</double>
+      </less>
+
+      <more>
+*        <name>pixelsizefixupfactor</name>
+
+        <double>0.8</double>
+      </more>
+
+    </and>
+
+  </edit>
+	</match>
+<match target="font">
+.  <test name="scalingnotneeded" compare="eq">
+    <bool>true</bool>
+
+  </test>
+3  <edit name="pixelsizefixupfactor" mode="assign">
+    <double>1.0</double>
+
+  </edit>
+	</match>
+<!--
+2  If we *are* going to scale, go ahead and do it.
+  -->
+<match target="font">
+%  <test name="outline" compare="eq">
+    <bool>false</bool>
+
+  </test>
+6  <test name="pixelsizefixupfactor" compare="not_eq">
+    <double>1.0</double>
+
+  </test>
+%  <edit name="matrix" mode="assign">
+
+    <times>
+      <name>matrix</name>
+      <matrix>
+=        <name>pixelsizefixupfactor</name> <double>0</double>
+=        <double>0</double> <name>pixelsizefixupfactor</name>
+       </matrix>
+
+    </times>
+
+  </edit>
+#  <edit name="size" mode="assign">
+
+    <divide>
+      <name>size</name>
+(      <name>pixelsizefixupfactor</name>
+    </divide>
+
+  </edit>
+	</match>
+
+</fontconfig>
+
+;--- /etc/fonts/conf.d/20-unhint-small-dejavu-sans.conf ---
+'<?xml version="1.0" encoding="UTF-8"?>
+,<!DOCTYPE fontconfig SYSTEM "../fonts.dtd">
+
+<fontconfig>
+;  <!--  /etc/fonts/conf.d/20-unhint-small-dejavu-sans.conf
+
+<        Disable hinting manually at smaller sizes (< 8ppem)
+K        This is a copy of the Bistream Vera fonts fonts rule, as DejaVu is
+        derived from Vera.
+
+F	The Bistream Vera fonts have GASP entries suggesting that hinting be
+F	disabled below 8 ppem, but FreeType ignores those, preferring to use
+B	the data found in the instructed hints. The initial Vera release
+<	didn't include the right instructions in the 'prep' table.
+ -->
+  <match target="font">
+    <test name="family">
+#      <string>DejaVu Sans</string>
+
+    </test>
++    <test compare="less" name="pixelsize">
+      <double>7.5</double>
+
+    </test>
+    <edit name="hinting">
+      <bool>false</bool>
+
+    </edit>
+
+  </match>
+</fontconfig>
+
+4--- /etc/fonts/conf.d/20-unhint-small-vera.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!-- 
+G	The Bitstream Vera fonts have GASP entries suggesting that hinting be
+F	disabled below 8 ppem, but FreeType ignores those, preferring to use
+C	the data found in the instructed hints.  The initial Vera release
+E	didn't include the right instructions in the 'prep' table. Fix this
+:	by disabling hinting manually at smaller sizes (< 8ppem)
+ -->
+
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+(			<string>Bitstream Vera Sans</string>
+
+		</test>
+)		<test name="pixelsize" compare="less">
+			<double>7.5</double>
+
+		</test>
+		<edit name="hinting">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+)			<string>Bitstream Vera Serif</string>
+
+		</test>
+)		<test name="pixelsize" compare="less">
+			<double>7.5</double>
+
+		</test>
+		<edit name="hinting">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+-			<string>Bitstream Vera Sans Mono</string>
+
+		</test>
+)		<test name="pixelsize" compare="less">
+			<double>7.5</double>
+
+		</test>
+		<edit name="hinting">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+</fontconfig>
+
+3--- /etc/fonts/conf.d/25-no-bitmap-fedora.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+	<match target="font">
+$		<test name="family" compare="eq">
+!			<string>Kochi Mincho</string>
+
+		</test>
+-		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+$		<test name="family" compare="eq">
+!			<string>Kochi Gothic</string>
+
+		</test>
+-		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+$		<test name="family" compare="eq">
+$			<string>Sazanami Mincho</string>
+
+		</test>
+-		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+$		<test name="family" compare="eq">
+$			<string>Sazanami Gothic</string>
+
+		</test>
+-		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+        <match target="font">
+2                <test name="family" compare="eq">
+>                        <string>AR PL ShanHeiSun Uni</string>
+                </test>
+;                <edit name="embeddedbitmap" mode="assign">
+*                        <bool>true</bool>
+                </edit>
+        </match>
+</fontconfig>
+
+2--- /etc/fonts/conf.d/25-unhint-nonlatin.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+J<!-- We can't hint CJK fonts well, so turn off hinting for CJK fonts. -->
+
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+!			<string>Kochi Mincho</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+!			<string>Kochi Gothic</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+$			<string>Sazanami Mincho</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+$			<string>Sazanami Gothic</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+#			<string>Baekmuk Batang</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+"			<string>Baekmuk Dotum</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+"			<string>Baekmuk Gulim</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+%			<string>Baekmuk Headline</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+(			<string>AR PL Mingti2L Big5</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+)			<string>AR PL ShanHeiSun Uni</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+&			<string>AR PL KaitiM Big5</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+%			<string>AR PL ZenKai Uni</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+%			<string>AR PL SungtiL GB</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+$			<string>AR PL KaitiM GB</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+	<match target="font">
+9		<test name="family" compare="eq" ignore-blanks="true">
+ 			<string>ZYSong18030</string>
+
+		</test>
+&		<edit name="hinting" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+</fontconfig>
+
+1--- /etc/fonts/conf.d/30-metric-aliases.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+
+<!--
+
+?Alias similar/metric-compatible families from various sources:
+
+OPostScript fonts:       URW fonts:           GUST fonts:        Windows fonts:
+R======================  ==================  =================  ==================
+;Helvetica               Nimbus Sans         TeX Gyre Heros
+>Helvetica Narrow        Nimbus Sans Narrow  TeX Gyre Heros Cn
+<Times                   Nimbus Roman        TeX Gyre Termes
+<Courier                 Nimbus Mono PS      TeX Gyre Cursor
+>ITC Avant Garde Gothic  URW Gothic          TeX Gyre Adventor
+QITC Bookman             URW Bookman         TeX Gyre Bonum     Bookman Old Style
+<ITC Zapf Chancery       Z003                TeX Gyre Chorus
+QPalatino                P052                TeX Gyre Pagella   Palatino Linotype
+RNew Century Schoolbook  C059                TeX Gyre Schola    Century Schoolbook
+
+aMicrosoft fonts:  Liberation fonts:       Google CrOS core fonts:  StarOffice fonts:  AMT fonts:
+e================  ======================  =======================  =================  ==============
+aArial             Liberation Sans         Arimo                    Albany             Albany AMT
+)Arial Narrow      Liberation Sans Narrow
+dTimes New Roman   Liberation Serif        Tinos                    Thorndale          Thorndale AMT
+eCourier New       Liberation Mono         Cousine                  Cumberland         Cumberland AMT
+2Cambria                                   Caladea
+2Calibri                                   Carlito
+4Symbol                                    SymbolNeu
+
+Microsoft fonts:  Other fonts:
+================  ============
+Georgia           Gelasio
+
+@We want for each of them to fallback to any of these available,
+Nbut in an order preferring similar designs first.  We do this in three steps:
+
+.1) Alias each specific to its generic family.
+!   e.g. Liberation Sans to Arial
+
+?2) Weak alias each generic to the other generic of its family.
+   e.g. Arial to Helvetica
+
+(3) Alias each generic to its specifics.
+@   e.g. Arial to Liberation Sans, Arimo, Albany, and Albany AMT
+
+-->
+
+#<!-- Map specifics to generics -->
+
+	<!-- PostScript -->
+	<alias binding="same">
+"	  <family>Nimbus Sans L</family>
+
+	  <default>
+
+	  <family>Helvetica</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+ 	  <family>Nimbus Sans</family>
+
+	  <default>
+
+	  <family>Helvetica</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+#	  <family>TeX Gyre Heros</family>
+
+	  <default>
+
+	  <family>Helvetica</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+'	  <family>Nimbus Sans Narrow</family>
+
+	  <default>
+%	  <family>Helvetica Narrow</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+&	  <family>TeX Gyre Heros Cn</family>
+
+	  <default>
+%	  <family>Helvetica Narrow</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+'	  <family>Nimbus Roman No9 L</family>
+
+	  <default>
+	  <family>Times</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+!	  <family>Nimbus Roman</family>
+
+	  <default>
+	  <family>Times</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+$	  <family>TeX Gyre Termes</family>
+
+	  <default>
+	  <family>Times</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+"	  <family>Nimbus Mono L</family>
+
+	  <default>
+
+	  <family>Courier</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+ 	  <family>Nimbus Mono</family>
+
+	  <default>
+
+	  <family>Courier</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+#	  <family>Nimbus Mono PS</family>
+
+	  <default>
+
+	  <family>Courier</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+$	  <family>TeX Gyre Cursor</family>
+
+	  <default>
+
+	  <family>Courier</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+ 	  <family>Avant Garde</family>
+
+	  <default>
++	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+!	  <family>URW Gothic L</family>
+
+	  <default>
++	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+
+	</alias>
+
+	<alias binding="same">
+	  <
+.--- /etc/fonts/conf.d/30-urw-aliases.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!--
+J  URW provides metric and shape compatible fonts for some Adobe families.
+7  Most of these are handled in 30-metric-aliases.conf.
+  -->
+	<alias binding="same">
+"	  <family>Zapf Dingbats</family>
+
+	  <accept>
+	    <family>D050000L</family>
+	    <family>Dingbats</family>
+
+	  </accept>
+
+	</alias>
+	<alias binding="same">
+&	  <family>ITC Zapf Dingbats</family>
+
+	  <accept>
+	    <family>D050000L</family>
+	    <family>Dingbats</family>
+
+	  </accept>
+
+	</alias>
+	<match target="pattern">
+:	  <test name="family" compare="eq" ignore-blanks="true">
+
+	    <string>Symbol</string>
+
+	  </test>
+5	  <edit name="family" mode="append" binding="same">
+*	    <string>Standard Symbols PS</string>
+
+	  </edit>
+5	  <edit name="family" mode="append" binding="same">
+)	    <string>Standard Symbols L</string>
+
+	  </edit>
+
+	</match>
+</fontconfig>
+
++--- /etc/fonts/conf.d/40-nonlatin.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!--
+8  Mark common families with their generics so we'll get
+  something reasonable
+-->
+
+<!--
+  Serif faces
+ -->
+		<alias>
+		<family>Nazli</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Lotoos</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Mitra</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Ferdosi</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Badr</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Zar</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Titr</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Jadid</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+ 		<family>Kochi Mincho</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+$		<family>AR PL SungtiL GB</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+'		<family>AR PL Mingti2L Big5</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>ＭＳ 明朝</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>NanumMyeongjo</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>UnBatang</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+"		<family>Baekmuk Batang</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>MgOpen Canonica</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>Sazanami Mincho</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+$		<family>AR PL ZenKai Uni</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>ZYSong18030</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>FreeSerif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>SimSun</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+<!--
+  Sans-serif faces
+ -->
+		<alias>
+		<family>Arshia</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Elham</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Farnaz</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Nasim</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Sina</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Roya</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Koodak</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Terafik</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+ 		<family>Kochi Gothic</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>AR PL KaitiM GB</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+%		<family>AR PL KaitiM Big5</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+'		<family>ＭＳ ゴシック</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>NanumGothic</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>UnDotum</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>Baekmuk Dotum</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>MgOpen Modata</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>Sazanami Gothic</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+(		<family>AR PL ShanHeiSun Uni</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>ZYSong18030</family>
+		<default><family>sans-
+*--- /etc/fonts/conf.d/45-generic.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+
++<!-- Keep in sync with 60-generic.conf -->
+
+<!-- Emoji -->
+
+	<!-- System emoji -->
+	<alias binding="same">
+4		<family>Noto Color Emoji</family> <!-- Google -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+4		<family>Apple Color Emoji</family> <!-- Apple -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+5		<family>Segoe UI Emoji</family> <!-- Microsoft -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+8		<family>Twitter Color Emoji</family> <!-- Twitter -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+5		<family>EmojiOne Mozilla</family> <!-- Mozilla -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+
+	<!-- Third-party emoji -->
+	<alias binding="same">
+
+		<family>Emoji Two</family>
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+
+		<family>Emoji One</family>
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<!-- B&W -->
+	<alias binding="same">
+.		<family>Noto Emoji</family> <!-- Google -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+	<alias binding="same">
+1		<family>Android Emoji</family> <!-- Google -->
+,		<default><family>emoji</family></default>
+
+	</alias>
+
+>	<!-- Add language for emoji, to match other emoji fonts. -->
+		<match>
+		<test name="family">
+			<string>emoji</string>
+
+		</test>
+$		<edit name="lang" mode="prepend">
+
+			<string>und-zsye</string>
+
+		</edit>
+
+	</match>
+
+		<match>
+		<test name="lang">
+
+			<string>und-zsye</string>
+
+		</test>
+3		<test qual="all" name="family" compare="not_eq">
+			<string>emoji</string>
+
+		</test>
+
+		<!-- Add generic family. -->
+6		<edit name="family" mode="append" binding="strong">
+			<string>emoji</string>
+
+		</edit>
+
+	</match>
+
+
+<!-- Math -->
+
+Q	<!-- https://en.wikipedia.org/wiki/Category:Mathematical_OpenType_typefaces -->
+	<alias binding="same">
+3		<family>XITS Math</family> <!-- Khaled Hosny -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+.		<family>STIX Two Math</family> <!-- AMS -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+3		<family>Cambria Math</family> <!-- Microsoft -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+2		<family>Latin Modern Math</family> <!-- TeX -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+.		<family>Minion Math</family> <!-- Adobe -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+.		<family>Lucida Math</family> <!-- Adobe -->
++		<default><family>math</family></default>
+
+	</alias>
+	<alias binding="same">
+
+		<family>Asana Math</family>
++		<default><family>math</family></default>
+
+	</alias>
+
+<	<!-- Add language for math, to match other math fonts. -->
+		<match>
+		<test name="family">
+			<string>math</string>
+
+		</test>
+$		<edit name="lang" mode="prepend">
+
+			<string>und-zmth</string>
+
+		</edit>
+
+	</match>
+
+		<match>
+		<test name="lang">
+
+			<string>und-zmth</string>
+
+		</test>
+3		<test qual="all" name="family" compare="not_eq">
+			<string>math</string>
+
+		</test>
+
+
+		<!-- Add generic family -->
+6		<edit name="family" mode="append" binding="strong">
+			<string>math</string>
+
+		</edit>
+
+	</match>
+
+
+</fontconfig>
+
+(--- /etc/fonts/conf.d/45-latin.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!--
+8  Mark common families with their generics so we'll get
+  something reasonable
+-->
+
+<!--
+  Serif faces
+ -->
+		<alias>
+(		<family>Bitstream Vera Serif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Cambria</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Constantia</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+ 		<family>DejaVu Serif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Elephant</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Garamond</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Georgia</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+$		<family>Liberation Serif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Luxi Serif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>MS Serif</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+&		<family>Nimbus Roman No9 L</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+ 		<family>Nimbus Roman</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+%		<family>Palatino Linotype</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>Thorndale AMT</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Thorndale</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>Times New Roman</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Times</family>
+,		<default><family>serif</family></default>
+
+	</alias>
+<!--
+  Sans-serif faces
+ -->
+		<alias>
+
+		<family>Albany AMT</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Albany</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+$		<family>Arial Unicode MS</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Arial</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+'		<family>Bitstream Vera Sans</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Britannic</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Calibri</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Candara</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+"		<family>Century Gothic</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Corbel</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>DejaVu Sans</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Helvetica</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+$		<family>Haettenschweiler</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+#		<family>Liberation Sans</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>MS Sans Serif</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+!		<family>Nimbus Sans L</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Nimbus Sans</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+
+		<family>Luxi Sans</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Tahoma</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+ 		<family>Trebuchet MS</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+%		<family>Twentieth Century</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+		<alias>
+		<family>Verdana</family>
+1		<default><family>sans-serif</family></default>
+
+	</alias>
+<!
+,--- /etc/fonts/conf.d/49-sansserif.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!--
+8  If the font still has no generic name, add sans-serif
+ -->
+	<match target="pattern">
+3		<test qual="all" name="family" compare="not_eq">
+			<string>sans-serif</string>
+
+		</test>
+3		<test qual="all" name="family" compare="not_eq">
+			<string>serif</string>
+
+		</test>
+3		<test qual="all" name="family" compare="not_eq">
+
+			<string>monospace</string>
+
+		</test>
+*		<edit name="family" mode="append_last">
+			<string>sans-serif</string>
+
+		</edit>
+
+	</match>
+</fontconfig>
+
+'--- /etc/fonts/conf.d/50-user.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+	<!--
+J	    Load per-user customization files where stored on XDG Base Directory
+;	    specification compliant places. it should be usually:
+'	      $HOME/.config/fontconfig/conf.d
++	      $HOME/.config/fontconfig/fonts.conf
+	-->
+H	<include ignore_missing="yes" prefix="xdg">fontconfig/conf.d</include>
+L	<include ignore_missing="yes" prefix="xdg">fontconfig/fonts.conf</include>
+?	<!-- the following elements will be removed in the future -->
+J	<include ignore_missing="yes" deprecated="yes">~/.fonts.conf.d</include>
+H	<include ignore_missing="yes" deprecated="yes">~/.fonts.conf</include>
+</fontconfig>
+
+(--- /etc/fonts/conf.d/51-local.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+/	<!-- Load local system customization file -->
+4	<include ignore_missing="yes">local.conf</include>
+</fontconfig>
+
+.--- /etc/fonts/conf.d/57-dejavu-sans.conf ---
+'<?xml version="1.0" encoding="UTF-8"?>
+,<!DOCTYPE fontconfig SYSTEM "../fonts.dtd">
++<!-- /etc/fonts/conf.d/57-dejavu-sans.conf
+
+7     Define aliasing and other fontconfig settings for
+     DejaVu Sans.
+
+C     © 2006-2008 Nicolas Mailhot <nicolas.mailhot at laposte.net>
+-->
+
+<fontconfig>
+#  <!-- Font substitution rules -->
+  <alias binding="same">
+    <family>Arev Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+    <family>Bepa</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+*    <family>Bitstream Prima Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+)    <family>Bitstream Vera Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+%    <family>DejaVu LGC Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+     <family>Hunky Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+     <family>Olwen Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+    <family>SUSE Sans</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+  <alias binding="same">
+
+    <family>Verajja</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+@  <!-- In case VerajjaPDA stops declaring itself as Verajja -->
+  <alias binding="same">
+     <family>VerajjaPDA</family>
+
+    <accept>
+#      <family>DejaVu Sans</family>
+    </accept>
+
+  </alias>
+#  <!-- Generic name assignment -->
+
+  <alias>
+!    <family>DejaVu Sans</family>
+    <default>
+"      <family>sans-serif</family>
+    </default>
+
+  </alias>
+!  <!-- Generic name aliasing -->
+
+  <alias>
+     <family>sans-serif</family>
+
+    <prefer>
+#      <family>DejaVu Sans</family>
+    </prefer>
+
+  </alias>
+</fontconfig>
+
+*--- /etc/fonts/conf.d/60-generic.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
++<!-- Keep in sync with 45-generic.conf -->
+
+<!-- Emoji -->
+
+,	<!-- Prefer to match color emoji font. -->
+		<match>
+		<test name="lang">
+
+			<string>und-zsye</string>
+
+		</test>
+2		<test qual="all" name="color" compare="not_eq">
+			<bool>true</bool>
+
+		</test>
+2		<test qual="all" name="color" compare="not_eq">
+			<bool>false</bool>
+
+		</test>
+$		<edit name="color" mode="append">
+			<bool>true</bool>
+
+		</edit>
+
+	</match>
+
+
+	<!-- TODO
+H	 ! Match on "color" and alias B&W ones first if no color is requested.
+H	 ! That's "hard" because <alias> doesn't work in match and needs to be
+$	 ! expanded to its non-sugar form.
+	 !-->
+	<alias binding="same">
+		<family>emoji</family>
+
+		<prefer>
+			<!-- System fonts -->
+5			<family>Noto Color Emoji</family> <!-- Google -->
+5			<family>Apple Color Emoji</family> <!-- Apple -->
+6			<family>Segoe UI Emoji</family> <!-- Microsoft -->
+9			<family>Twitter Color Emoji</family> <!-- Twitter -->
+6			<family>EmojiOne Mozilla</family> <!-- Mozilla -->
+
+			<!-- Third-Party fonts -->
+
+			<family>Emoji Two</family>
+
+			<family>Emoji One</family>
+			<!-- Non-color -->
+/			<family>Noto Emoji</family> <!-- Google -->
+2			<family>Android Emoji</family> <!-- Google -->
+
+		</prefer>
+
+	</alias>
+
+<!-- Math -->
+	<alias binding="same">
+R		<!-- https://en.wikipedia.org/wiki/Category:Mathematical_OpenType_typefaces -->
+		<family>math</family>
+
+		<prefer>
+4			<family>XITS Math</family> <!-- Khaled Hosny -->
+/			<family>STIX Two Math</family> <!-- AMS -->
+4			<family>Cambria Math</family> <!-- Microsoft -->
+3			<family>Latin Modern Math</family> <!-- TeX -->
+/			<family>Minion Math</family> <!-- Adobe -->
+/			<family>Lucida Math</family> <!-- Adobe -->
+			<family>Asana Math</family>
+
+		</prefer>
+
+	</alias>
+
+</fontconfig>
+
+(--- /etc/fonts/conf.d/60-latin.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+		<alias>
+		<family>serif</family>
+
+		<prefer>
+)			<family>Bitstream Vera Serif</family>
+!			<family>DejaVu Serif</family>
+$			<family>Times New Roman</family>
+"			<family>Thorndale AMT</family>
+			<family>Luxi Serif</family>
+'			<family>Nimbus Roman No9 L</family>
+!			<family>Nimbus Roman</family>
+			<family>Times</family>
+
+		</prefer>
+
+	</alias>
+		<alias>
+
+		<family>sans-serif</family>
+
+		<prefer>
+(			<family>Bitstream Vera Sans</family>
+ 			<family>DejaVu Sans</family>
+
+			<family>Verdana</family>
+			<family>Arial</family>
+			<family>Albany AMT</family>
+
+			<family>Luxi Sans</family>
+"			<family>Nimbus Sans L</family>
+ 			<family>Nimbus Sans</family>
+
+			<family>Helvetica</family>
+(			<family>Lucida Sans Unicode</family>
+G			<family>BPG Glaho International</family> <!-- lat,cyr,arab,geor -->
+@			<family>Tahoma</family> <!-- lat,cyr,greek,heb,arab,thai -->
+
+		</prefer>
+
+	</alias>
+		<alias>
+
+		<family>monospace</family>
+
+		<prefer>
+-			<family>Bitstream Vera Sans Mono</family>
+%			<family>DejaVu Sans Mono</family>
+ 			<family>Inconsolata</family>
+ 			<family>Andale Mono</family>
+ 			<family>Courier New</family>
+#			<family>Cumberland AMT</family>
+
+			<family>Luxi Mono</family>
+"			<family>Nimbus Mono L</family>
+ 			<family>Nimbus Mono</family>
+#			<family>Nimbus Mono PS</family>
+
+			<family>Courier</family>
+
+		</prefer>
+
+	</alias>
+<!--
+  Fantasy faces
+ -->
+
+ 	<alias>
+		<family>fantasy</family>
+
+		<prefer>
+			<family>Impact</family>
++			<family>Copperplate Gothic Std</family>
+			<family>Cooper Std</family>
+ 			<family>Bauhaus Std</family>
+
+		</prefer>
+
+	</alias>
+<!--
+  Cursive faces
+  -->
+		<alias>
+		<family>cursive</family>
+
+		<prefer>
+*			<family>ITC Zapf Chancery Std</family>
+
+			<family>Zapfino</family>
+"			<family>Comic Sans MS</family>
+
+		</prefer>
+
+	</alias>
+
+</fontconfig>
+
+0--- /etc/fonts/conf.d/65-fonts-persian.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<!--
+  fonts-persian.conf
+8  To configure Persian fonts from The FarsiWeb Project.
+
+D  Copyright (C) 2005  Sharif FarsiWeb, Inc. <license@farsiweb.info>
+
+N  Permission to use, copy, modify, distribute, and sell this software and its
+M  documentation for any purpose is hereby granted without fee, provided that
+E  the above copyright notice appear in all copies and that both that
+C  copyright notice and this permission notice appear in supporting
+K  documentation, and that the name of Sharif FarsiWeb, Inc. not be used in
+N  advertising or publicity pertaining to distribution of the software without
+F  specific, written prior permission.  Sharif FarsiWeb, Inc. makes no
+N  representations about the suitability of this software for any purpose.  It
+;  is provided "as is" without express or implied warranty.
+
+O  SHARIF FARSIWEB, INC. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+I  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+C  EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+N  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+I  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+C  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+   PERFORMANCE OF THIS SOFTWARE.
+
+
+  ChangeLog:
+4    2005-04-03  Behdad Esfahbod:  Initial revision.
+M    2005-10-09  Behdad Esfahbod:  Turned off back-slant and Tahoma sections.
+K    2005-11-30  Behdad Esfahbod:  Set Titr susbtitution size to 24 points.
+>    2008	Behdad Esfahbod:  Cleanup.  Add fantasy and cursive.
+  -->
+
+<fontconfig>
+
+
+*<!-- Deprecated fonts are discouraged -->
+
+F	<!-- Nesf[2] is officially deprecated and has problematic tables -->
+	<alias binding="same">
+	  <family>Nesf</family>
++	  <accept><family>Nesf2</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Nesf2</family>
+?	  <accept><family>Persian_sansserif_default</family></accept>
+
+	</alias>
+
+3<!-- Name changes and spelling variant aliases -->
+
+	<alias binding="same">
+
+	  <family>Nazanin</family>
++	  <accept><family>Nazli</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Lotus</family>
+,	  <accept><family>Lotoos</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Yaqut</family>
+-	  <accept><family>Yaghoot</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Yaghut</family>
+-	  <accept><family>Yaghoot</family></accept>
+
+	</alias>
+	<alias binding="same">
+
+	  <family>Traffic</family>
+-	  <accept><family>Terafik</family></accept>
+
+	</alias>
+	<alias binding="same">
+
+	  <family>Ferdowsi</family>
+-	  <accept><family>Ferdosi</family></accept>
+
+	</alias>
+	<alias binding="same">
+
+	  <family>Fantezy</family>
+-	  <accept><family>Fantezi</family></accept>
+
+	</alias>
+
+
+<!-- Classify fonts. -->
+
+
+	<!-- Persian_title class -->
+	<alias binding="same">
+	  <family>Jadid</family>
+3	  <accept><family>Persian_title</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Titr</family>
+3	  <accept><family>Persian_title</family></accept>
+
+	</alias>
+
+ 	<!-- Persian_fantasy class -->
+	<alias binding="same">
+	  <family>Kamran</family>
+
+	  <accept>
+$	  <family>Persian_fantasy</family>
+	  <family>Homa</family>
+
+	  </accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Homa</family>
+
+	  <accept>
+$	  <family>Persian_fantasy</family>
+	  <family>Kamran</family>
+
+	  </accept>
+
+	</alias>
+	<alias binding="same">
+
+	  <family>Fantezi</family>
+5	  <accept><family>Persian_fantasy</family></accept>
+
+	</alias>
+	<alias binding="same">
+
+	  <family>Tabassom</family>
+5	  <accept><family>Persian_fantasy</family></accept>
+
+	</alias>
+
+	<!-- Persian_square class -->
+	<alias binding="same">
+	  <family>Arshia</family>
+4	  <accept><family>Persian_square</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Nasim</family>
+4	  <accept><family>Persian_square</family></accept>
+
+	</alias>
+	<alias binding="same">
+	  <family>Elham</family>
+
+	  <accept>
+#	  <family>Persian_square</family>
+	  <family>Farnaz</family>
+
+	  </accept>
++--- /etc/fonts/conf.d/65-nonlatin.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+		<alias>
+		<family>serif</family>
+
+		<prefer>
+/			<family>Artsounk</family> <!-- armenian -->
+1			<family>BPG UTF8 M</family> <!-- georgian -->
+*			<family>Kinnari</family> <!-- thai -->
+)			<family>Norasi</family> <!-- thai -->
+0			<family>Frank Ruehl</family> <!-- hebrew -->
+*			<family>Dror</family>  <!-- hebrew -->
+.			<family>JG LaoTimes</family>  <!-- lao -->
+4			<family>Saysettha Unicode</family>  <!-- lao -->
+:			<family>Pigiarniq</family> <!-- canadian syllabics -->
+1			<family>B Davat</family> <!-- arabic (fa) -->
+4			<family>B Compset</family>  <!-- arabic (fa) -->
+2			<family>Kacst-Qr</family> <!-- arabic (ar) -->
+?			<family>Urdu Nastaliq Unicode</family> <!-- arabic (ur) -->
+1			<family>Raghindi</family> <!-- devanagari -->
+2			<family>Mukti Narrow</family> <!-- bengali -->
+1			<family>malayalam</family> <!-- malayalam -->
+-			<family>Sampige</family> <!-- kannada -->
+-			<family>padmaa</family> <!-- gujarati -->
+5			<family>Hapax Berbère</family> <!-- tifinagh -->
+0			<family>MS Mincho</family> <!-- han (ja) -->
+6			<family>SimSun</family> <!-- han (zh-cn,zh-tw) -->
+2			<family>PMingLiu</family> <!-- han (zh-tw) -->
+A			<family>WenQuanYi Zen Hei</family> <!-- han (zh-cn,zh-tw) -->
+E			<family>WenQuanYi Bitmap Song</family> <!-- han (zh-cn,zh-tw) -->
+G			<family>AR PL ShanHeiSun Uni</family> <!-- han (ja,zh-cn,zh-tw) -->
+>			<family>AR PL New Sung</family> <!-- han (zh-cn,zh-tw) -->
+;			<family>ZYSong18030</family> <!-- han (zh-cn,zh-tw) -->
+9			<family>HanyiSong</family> <!-- han (zh-cn,zh-tw) -->
+$			<family>MgOpen Canonica</family>
+$			<family>Sazanami Mincho</family>
+"			<family>IPAMonaMincho</family>
+
+			<family>IPAMincho</family>
+!			<family>Kochi Mincho</family>
+%			<family>AR PL SungtiL GB</family>
+(			<family>AR PL Mingti2L Big5</family>
+& 			<family>AR PL Zenkai Uni</family>
+"			<family>ＭＳ 明朝</family>
+! 			<family>ZYSong18030</family>
+7			<family>NanumMyeongjo</family> <!-- hangul (ko) -->
+2			<family>UnBatang</family> <!-- hangul (ko) -->
+8			<family>Baekmuk Batang</family> <!-- hangul (ko) -->
+ 			<family>KacstQura</family>
+% 			<family>Frank Ruehl CLM</family>
+"			<family>Lohit Bengali</family>
+$ 			<family>Lohit Gujarati</family>
+! 			<family>Lohit Hindi</family>
+"			<family>Lohit Marathi</family>
+#			<family>Lohit Maithili</family>
+#			<family>Lohit Kashmiri</family>
+"			<family>Lohit Konkani</family>
+!			<family>Lohit Nepali</family>
+!			<family>Lohit Sindhi</family>
+# 			<family>Lohit Punjabi</family>
+! 			<family>Lohit Tamil</family>
+			<family>Meera</family>
+$			<family>Lohit Malayalam</family>
+# 			<family>Lohit Kannada</family>
+" 			<family>Lohit Telugu</family>
+! 			<family>Lohit Oriya</family>
+ 			<family>LKLUG</family>
+
+		</prefer>
+
+	</alias>
+		<alias>
+
+		<family>sans-serif</family>
+
+		<prefer>
+.			<family>Nachlieli</family> <!-- hebrew -->
+(			<family>Lucida Sans Unicode</family>
+"			<family>Yudit Unicode</family>
+*			<family>Kerkis</family> <!-- greek -->
+7			<family>ArmNet Helvetica</family> <!-- armenian -->
+/			<family>Artsounk</family> <!-- armenian -->
+1			<family>BPG UTF8 M</family> <!-- georgian -->
+(			<family>Waree</family> <!-- thai -->
+'			<family>Loma</family> <!-- thai -->
+)			<family>Garuda</family> <!-- thai -->
+)			<family>Umpush</family> <!-- thai -->
+4			<family>Saysettha Unicode</family> <!-- lao? -->
+2			<family>JG Lao Old Arial</family> <!-- lao -->
+7			<family>GF Zemen Unicode</family> <!-- ethiopic -->
+:			<family>Pigiarniq</family> <!-- canadian syllabics -->
+1			<family>B Davat</family> <!-- arabic (fa) -->
+3			<family>B Compset</family> <!-- arabic (fa) -->
+2			<family>Kacst-Qr</family> <!-- arabic (ar) -->
+?			<family>Urdu Nastaliq Unicode</family> <!-- arabic (ur) -->
+1			<family>Raghindi</family> <!-- devanagari -->
+2			<family>Mukti Narrow</family> <!-- bengali -->
+1			<family>malayalam</family> <!-- malayalam -->
+-			<family>Sampige</family> <!-- kannada -->
+-			<family>padmaa</family> <!-- gujarati -->
+5			<family>Hapax Berbère</family> <!-- tifinagh -->
+			
+*--- /etc/fonts/conf.d/69-unifont.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+		<alias>
+		<family>serif</family>
+
+		<prefer>
+
+			<family>FreeSerif</family>
+
+			<family>Code2000</family>
+8			<family>Code2001</family> <!-- plane1 and beyond -->
+
+		</prefer>
+
+	</alias>
+		<alias>
+
+		<family>sans-serif</family>
+
+		<prefer>
+
+			<family>FreeSans</family>
+%			<family>Arial Unicode MS</family>
+"			<family>Arial Unicode</family>
+H			<family>Code2000</family> <!-- almost everything; serif actually -->
+8			<family>Code2001</family> <!-- plane1 and beyond -->
+
+		</prefer>
+
+	</alias>
+		<alias>
+
+		<family>monospace</family>
+
+		<prefer>
+
+			<family>FreeMono</family>
+
+		</prefer>
+
+	</alias>
+</fontconfig>
+
+,--- /etc/fonts/conf.d/80-delicious.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+&<!-- Fix-ups for Delicious family -->
+
+:<!-- Delicious 'heavy' variant says its Medium weight -->
+<match target="scan">
+8	<test name="family" compare="eq" ignore-blanks="true">
+
+		<string>Delicious</string>
+		</test>
+	<test name="style">
+		<string>Heavy</string>
+		</test>
+	<edit name="weight">
+		<const>heavy</const>
+		</edit>
+	</match>
+
+</fontconfig>
+
+,--- /etc/fonts/conf.d/90-synthetic.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+
+<fontconfig>
+<!-- 
+C Artificial oblique for fonts without an italic or oblique version
+ -->
+ 
+	<match target="font">
+-		<!-- check to see if the font is roman -->
+		<test name="slant">
+			<const>roman</const>
+
+		</test>
+;		<!-- check to see if the pattern requested non-roman -->
+8		<test target="pattern" name="slant" compare="not_eq">
+			<const>roman</const>
+
+		</test>
+1		<!-- multiply the matrix to slant the font -->
+%		<edit name="matrix" mode="assign">
+
+			<times>
+				<name>matrix</name>
+3				<matrix><double>1</double><double>0.2</double>
+*					<double>0</double><double>1</double>
+				</matrix>
+
+			</times>
+
+		</edit>
++		<!-- pretend the font is oblique now -->
+$		<edit name="slant" mode="assign">
+			<const>oblique</const>
+
+		</edit>
+?		<!-- and disable embedded bitmaps for artificial oblique -->
+-		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+
+		</edit>
+
+	</match>
+
+<!--
+F Synthetic emboldening for fonts that do not have bold face available
+ -->
+
+	<match target="font">
+f		<!-- check to see if the weight in the font is less than medium which possibly need emboldening -->
+)		<test name="weight" compare="less_eq">
+			<const>medium</const>
+
+		</test>
+5		<!-- check to see if the pattern requests bold -->
+:		<test target="pattern" name="weight" compare="more_eq">
+			<const>bold</const>
+
+		</test>
+		<!--
+		  set the embolden flag
+D		  needed for applications using cairo, e.g. gucharmap, gedit, ...
+		-->
+'		<edit name="embolden" mode="assign">
+			<bool>true</bool>
+
+		</edit>
+		<!--
+		 set weight to bold
+A		 needed for applications using Xft directly, e.g. Firefox, ...
+		-->
+%		<edit name="weight" mode="assign">
+			<const>bold</const>
+
+		</edit>
+
+	</match>
+</fontconfig>
+
+
+--- /etc/fonts/fonts.conf ---
+<?xml version="1.0"?>
+)<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+D<!-- /etc/fonts/fonts.conf file to configure system font access -->
+
+<fontconfig>
+<!--
+	DO NOT EDIT THIS FILE.
+1	IT WILL BE REPLACED WHEN FONTCONFIG IS UPDATED.
+'	LOCAL CHANGES BELONG IN 'local.conf'.
+
+F	The intent of this standard configuration file is to be adequate for
+E	most environments.  If you have a reasonably normal environment and
+@	have found problems with this configuration, they are probably
+=	things that others will also want fixed.  Please submit any
+F	problems to the fontconfig bugzilla system located at fontconfig.org
+
+D	Note that the normal 'make install' procedure for fontconfig is to
+C	replace any existing fonts.conf file with the new version.  Place
+D	any local customizations in local.conf which this file references.
+
+	Keith Packard
+-->
+
+
+<!-- Font directory list -->
+
+
+	<dir>/usr/share/fonts</dir>
+m	<dir>/usr/share/X11/fonts/Type1</dir> <dir>/usr/share/X11/fonts/TTF</dir> <dir>/usr/local/share/fonts</dir>
+	<dir prefix="xdg">fonts</dir>
+>	<!-- the following element will be removed in the future -->
+	<dir>~/.fonts</dir>
+
+<!--
+@  Accept deprecated 'mono' alias, replacing it with 'monospace'
+-->
+	<match target="pattern">
+"		<test qual="any" name="family">
+			<string>mono</string>
+
+		</test>
+4		<edit name="family" mode="assign" binding="same">
+
+			<string>monospace</string>
+
+		</edit>
+
+	</match>
+
+<!--
+I  Accept alternate 'sans serif' spelling, replacing it with 'sans-serif'
+-->
+	<match target="pattern">
+"		<test qual="any" name="family">
+			<string>sans serif</string>
+
+		</test>
+4		<edit name="family" mode="assign" binding="same">
+			<string>sans-serif</string>
+
+		</edit>
+
+	</match>
+
+<!--
+A  Accept deprecated 'sans' alias, replacing it with 'sans-serif'
+-->
+	<match target="pattern">
+"		<test qual="any" name="family">
+			<string>sans</string>
+
+		</test>
+4		<edit name="family" mode="assign" binding="same">
+			<string>sans-serif</string>
+
+		</edit>
+
+	</match>
+
+<!--
+'  Load local system customization file
+-->
+0	<include ignore_missing="yes">conf.d</include>
+
+#<!-- Font cache directory list -->
+
+0	<cachedir>/usr/lib/fontconfig/cache</cachedir>
+.	<cachedir prefix="xdg">fontconfig</cachedir>
+>	<!-- the following element will be removed in the future -->
+$	<cachedir>~/.fontconfig</cachedir>
+
+
+	<config>
+<!--
+E  Rescan configuration every 30 seconds when FcFontSetList is called
+ -->
+
+		<rescan>
+			<int>30</int>
+
+		</rescan>
+
+	</config>
+
+</fontconfig>
+
+"--- /etc/java/font.properties ---
+)# Project JPackage java font preferences
+# http://www.jpackage.org/
+># $Id: font.properties,v 1.1 2004/12/15 16:23:45 robert Exp $
+
+Dserif.0=-b&h-Lucida Bright-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Kserif.1=-monotype-Times New Roman-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Dserif.2=-microsoft-Georgia-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Aserif.3=-b&h-Luxi Serif-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Hserif.4=-URW-Nimbus Roman No9 L-medium-r-normal--*-%d-*-*-p-*-iso8859-1
+;serif.5=-URW-Times-medium-r-normal--*-%d-*-*-p-*-iso8859-1
+Qserif.6=-Bitstream-Bitstream Vera Serif-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Eserif.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Kserif.italic.0=-b&h-Lucida Bright-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Rserif.italic.1=-monotype-Times New Roman-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Kserif.italic.2=-microsoft-Georgia-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Hserif.italic.3=-b&h-Luxi Serif-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Oserif.italic.4=-URW-Nimbus Roman No9 L-medium-i-normal--*-%d-*-*-p-*-iso8859-1
+Bserif.italic.5=-URW-Times-medium-i-normal--*-%d-*-*-p-*-iso8859-1
+Xserif.italic.6=-Bitstream-Bitstream Vera Serif-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Lserif.italic.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Gserif.bold.0=-b&h-Lucida Bright-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Nserif.bold.1=-monotype-Times New Roman-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Gserif.bold.2=-microsoft-Georgia-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Dserif.bold.3=-b&h-Luxi Serif-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Kserif.bold.4=-URW-Nimbus Roman No9 L-bold-r-normal--*-%d-*-*-p-*-iso8859-1
+>serif.bold.5=-URW-Times-bold-r-normal--*-%d-*-*-p-*-iso8859-1
+Tserif.bold.6=-Bitstream-Bitstream Vera Serif-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Jserif.bold.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Mserif.bolditalic.0=-b&h-Lucida Bright-bold-i-normal--*-%d-*-*-p-*-iso10646-1
+Tserif.bolditalic.1=-monotype-Times New Roman-bold-i-normal--*-%d-*-*-p-*-iso10646-1
+Mserif.bolditalic.2=-microsoft-Georgia-bold-i-normal--*-%d-*-*-p-*-iso10646-1
+Jserif.bolditalic.3=-b&h-Luxi Serif-bold-i-normal--*-%d-*-*-p-*-iso10646-1
+Qserif.bolditalic.4=-URW-Nimbus Roman No9 L-bold-i-normal--*-%d-*-*-p-*-iso8859-1
+Dserif.bolditalic.5=-URW-Times-bold-i-normal--*-%d-*-*-p-*-iso8859-1
+Zserif.bolditalic.6=-Bitstream-Bitstream Vera Serif-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Pserif.bolditalic.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Fsansserif.0=-b&h-Lucida Sans-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Tsansserif.1=-Bitstream-Bitstream Vera Sans-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Hsansserif.2=-microsoft-Verdana-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Esansserif.3=-monotype-Arial-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Dsansserif.4=-b&h-Luxi Sans-medium-r-normal--*-%d-*-*-p-*-iso10646-1
+Gsansserif.5=-URW-Nimbus Sans L-medium-r-normal--*-%d-*-*-p-*-iso8859-1
+Csansserif.6=-URW-Helvetica-medium-r-normal--*-%d-*-*-p-*-iso8859-1
+Isansserif.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Msansserif.italic.0=-b&h-Lucida Sans-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+[sansserif.italic.1=-Bitstream-Bitstream Vera Sans-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Osansserif.italic.2=-microsoft-Verdana-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Lsansserif.italic.3=-monotype-Arial-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Ksansserif.italic.4=-b&h-Luxi Sans-medium-i-normal--*-%d-*-*-p-*-iso10646-1
+Nsansserif.italic.5=-URW-Nimbus Sans L-medium-o-normal--*-%d-*-*-p-*-iso8859-1
+Jsansserif.italic.6=-URW-Helvetica-medium-o-normal--*-%d-*-*-p-*-iso8859-1
+Psansserif.italic.7=-URW-Symbol-medium-r-normal--*-%d-*-*-p-*-adobe-fontspecific
+
+Isansserif.bold.0=-b&h-Lucida Sans-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Wsansserif.bold.1=-Bitstream-Bitstream Vera Sans-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+Ksansserif.bold.2=-microsoft-Verdana-bold-r-normal--*-%d-*-*-p-*-iso10646-1
+)sansserif.bold.3=-monotype-Arial-bold-r-
+
+--- /etc/java/java.conf ---
+2# System-wide Java configuration file  -*- sh -*-
+
+&# Location of jar files on the system
+
+JAVA_LIBDIR=/usr/share/java
+
+4# Location of arch-specific jar files on the system
+JNI_LIBDIR=/usr/lib/java
+
+ # Root of all JVM installations
+JVM_ROOT=/usr/lib/jvm
+
+E# You can define a system-wide JVM root here if you're not using the
+# default one.
+#
++# If you have a base JRE package installed
+
+# (e.g. java-1.6.0-openjdk):
+#JAVA_HOME=$JVM_ROOT/jre
+#
+,# If you have a devel JDK package installed
+## (e.g. java-1.6.0-openjdk-devel):
+#JAVA_HOME=$JVM_ROOT/java
+
+*# Options to pass to the java interpreter
+#JAVACMD_OPTS=
+
+E# You can disable ABRT Java Connector by setting JAVA_ABRT to "off".
+6# See: https://github.com/jfilak/abrt-java-connector/
+#JAVA_ABRT=off
+
+"--- /etc/security/access.conf ---
+
+# Login access control table.
+#
+7# Comment line must start with "#", no space at front.
+# Order of lines is important.
+#
+F# When someone logs in, the table is scanned for the first entry that
+E# matches the (user, host) combination, or, in case of non-networked
+I# logins, the first entry that matches the (user, tty) combination.  The
+J# permissions field of that table entry determines whether the login will
+# be accepted or refused.
+#
+J# Format of the login access control table is three fields separated by a
+# ":" character:
+#
+D# [Note, if you supply a 'fieldsep=|' argument to the pam_access.so
+># module, you can change the field separation character to be
+E# '|'. This is useful for configurations where you are trying to use
+F# pam_access with X applications that provide PAM_TTY values that are
+'# the display variable like "host:0".]
+#
+
+# 	permission:users:origins
+#
+J# The first field should be a "+" (access granted) or "-" (access denied)
+
+# character.
+#
+F# The second field should be a list of one or more login names, group
+E# names, or ALL (always matches). A pattern of the form user@host is
+D# matched when the login name matches the "user" part, and when the
+.# "host" part matches the local machine name.
+#
+A# The third field should be a list of one or more tty names (for
+I# non-networked logins), host names, domain names (begin with "."), host
+B# addresses, internet network numbers (end with "."), ALL (always
+=# matches), NONE (matches no tty on non-networked logins) or
+D# LOCAL (matches any string that does not contain a "." character).
+#
+F# You can use @netgroupname in host or user patterns; this even works
+&# for @usergroup@@hostgroup patterns.
+#
+E# The EXCEPT operator makes it possible to write very compact rules.
+#
+I# The group file is searched only when a name does not match that of the
+G# logged-in user. Both the user's primary group is matched, as well as
+/# groups in which users are explicitly listed.
+H# To avoid problems with accounts, which have the same name as a group,
+F# you can use brackets around group names '(group)' to differentiate.
+=# In this case, you should also set the "nodefgroup" option.
+#
+I# TTY NAMES: Must be in the form returned by ttyname(3) less the initial
+
+# "/dev" (e.g. tty1 or vc/1)
+#
+O##############################################################################
+#
+## Disallow non-root logins on tty1
+#
+#-:ALL EXCEPT root:tty1
+#
+5# Disallow console logins to all but a few accounts.
+#
+(#-:ALL EXCEPT wheel shutdown sync:LOCAL
+#
+C# Same, but make sure that really the group wheel and not the user
+0# wheel is used (use nodefgroup argument, too):
+#
+*#-:ALL EXCEPT (wheel) shutdown sync:LOCAL
+#
+B# Disallow non-local logins to privileged accounts (group wheel).
+#
+&#-:wheel:ALL EXCEPT LOCAL .win.tue.nl
+#
+8# Some accounts are not allowed to login from anywhere:
+#
+8#-:wsbscaro wsbsecr wsbspac wsbsym wscosor wstaiwde:ALL
+#
+9# All other accounts are allowed to login from anywhere.
+#
+O##############################################################################
+I# All lines from here up to the end are building a more complex example.
+O##############################################################################
+#
+E# User "root" should be allowed to get access via cron .. tty5 tty6.
+4#+:root:cron crond :0 tty1 tty2 tty3 tty4 tty5 tty6
+#
+L# User "root" should be allowed to get access from hosts with ip addresses.
+2#+:root:192.168.200.1 192.168.200.4 192.168.200.9
+#+:root:127.0.0.1
+#
+:# User "root" should get access from network 192.168.201.
+2# This term will be evaluated by string matching.
+># comment: It might be better to use network/netmask instead.
+G#          The same is 192.168.201.0/24 or 192.168.201.0/255.255.255.0
+#+:root:192.168.201.
+#
+9# User "root" should be able to have access from domain.
+
+# Uses string matching also.
+#+:root:.foo.bar.org
+#
+E# User "root" should be denied to get access from all other sources.
+
+#-:root:ALL
+#
+;# User "foo" and members of netgroup "nis_group" should be
+*# allowed to get access from all sources.
+
+# This will only work if netg
+"--- /etc/security/chroot.conf ---
+
+# /etc/security/chroot.conf
+
+# format:
+
+# username_regex	chroot_dir
+#matthew		/home
+
+!--- /etc/security/group.conf ---
+#
+;# This is the configuration file for the pam_group module.
+#
+
+#
+E# *** Please note that giving group membership on a session basis is
+E# *** NOT inherently secure. If a user can create an executable that
+D# *** is setgid a group that they are infrequently given membership
+C# *** of, they can basically obtain group membership any time they
+H# *** like. Example: games are allowed between the hours of 6pm and 6am
+E# *** user joe logs in at 7pm writes a small C-program toplay.c that
+9# *** invokes their favorite shell, compiles it and does
+E# *** "chgrp play toplay; chmod g+s toplay". They are basically able
+:# *** to play games any time... You have been warned. AGM
+#
+
+#
+)# The syntax of the lines is as follows:
+#
+)#       services;ttys;users;times;groups
+#
+F# white space is ignored and lines maybe extended with '\\n' (escaped
+;# newlines). From reading these comments, it is clear that
+:# text following a '#' is ignored to the end of the line.
+#
+D# the combination of individual users/terminals etc is a logic list
+J# namely individual tokens that are optionally prefixed with '!' (logical
+B# not) and separated with '&' (logical and) and '|' (logical or).
+#
+
+# services
+G#       is a logic list of PAM service names that the rule applies to.
+#
+# ttys
+E#       is a logic list of terminal names that this rule applies to.
+#
+# users
+E#       is a logic list of users or a netgroup of users to whom this
+#       rule applies.
+#
+E# NB. For these items the simple wildcard '*' may be used only once.
+B#     With netgroups no wildcards or logic operators are allowed.
+#
+# times
+J#       It is used to indicate "when" these groups are to be given to the
+@#       user. The format here is a logic list of day/time-range
+F#       entries the days are specified by a sequence of two character
+I#       entries, MoTuSa for example is Monday Tuesday and Saturday. Note
+L#       that repeated days are unset MoMo = no day, and MoWk = all weekdays
+@#       bar Monday. The two character combinations accepted are
+#
+.#               Mo Tu We Th Fr Sa Su Wk Wd Al
+#
+D#       the last two being week-end days and all 7 days of the week
+M#       respectively. As a final example, AlFr means all days except Friday.
+#
+M#       Each day/time-range can be prefixed with a '!' to indicate "anything
+
+#       but"
+#
+L#       The time-range part is two 24-hour times HHMM separated by a hyphen
+L#       indicating the start and finish time (if the finish time is smaller
+I#       than the start time it is deemed to apply on the following day).
+#
+	# groups
+>#	The (comma or space separated) list of groups that the user
+A#	inherits membership of. These groups are added if the previous
+-#	fields are satisfied by the user's request
+#
+G# For a rule to be active, ALL of service+ttys+users must be satisfied
+# by the applying process.
+#
+
+#
+># Note, to get this to work as it is currently typed you need
+#
+## 1. to run an application as root
+6# 2. add the following groups to the /etc/group file:
+#		floppy, play, sound
+#
+
+#
+G# Here is a simple example: running 'xsh' on tty* (any ttyXXX device),
+E# the user 'us' is given access to the floppy (through membership of
+# the floppy group)
+#
+
+'#xsh;tty*&!ttyp*;us;Al0000-2400;floppy
+
+#
+># another example: running 'xsh' on tty* (any ttyXXX device),
+C# the user 'sword' is given access to games (through membership of
+.# the sound and play group) after work hours.
+#
+
++#xsh; tty* ;sword;!Wk0900-1800;sound, play
+!#xsh; tty* ;*;Al0900-1800;floppy
+
+#
+?# yet another example: any member of the group 'admin' running
+H# 'xsh' on tty*, is granted access (at any time) to the group 'plugdev'
+#
+
+'#xsh; tty* ;%admin;Al0000-2400;plugdev
+
+#
+# End of group.conf file
+#
+
+"--- /etc/security/limits.conf ---
+
+# /etc/security/limits.conf
+#
+E#This file sets the resource limits for the users logged in via PAM.
+<#It does not affect resource limits of the system services.
+#
+I#Also note that configuration files in /etc/security/limits.d directory,
+E#which are read in alphabetical order, override the settings in this
+7#file in case the domain is the same or more specific.
+F#That means for example that setting a limit for wildcard domain here
+B#can be overriden with a wildcard setting in a config file in the
+F#subdirectory, but a user specific setting here can be overriden only
+3#with a user specific setting in the subdirectory.
+#
+5#Each line describes a limit for a user in the form:
+#
+)#<domain>        <type>  <item>  <value>
+#
+#Where:
+#<domain> can be:
+#        - a user name
+,#        - a group name, with @group syntax
+-#        - the wildcard *, for default entry
+@#        - the wildcard %, can be also used with %group syntax,
+%#                 for maxlogin limit
+#
+!#<type> can have the two values:
+0#        - "soft" for enforcing the soft limits
+,#        - "hard" for enforcing hard limits
+#
+%#<item> can be one of the following:
+1#        - core - limits the core file size (KB)
+%#        - data - max data size (KB)
+)#        - fsize - maximum filesize (KB)
+=#        - memlock - max locked-in-memory address space (KB)
+8#        - nofile - max number of open file descriptors
+,#        - rss - max resident set size (KB)
+'#        - stack - max stack size (KB)
+$#        - cpu - max CPU time (MIN)
++#        - nproc - max number of processes
+)#        - as - address space limit (KB)
+:#        - maxlogins - max number of logins for this user
+=#        - maxsyslogins - max number of logins on the system
+<#        - priority - the priority to run user process with
+>#        - locks - max number of file locks the user can hold
+6#        - sigpending - max number of pending signals
+F#        - msgqueue - max memory used by POSIX message queues (bytes)
+J#        - nice - max nice priority allowed to raise to values: [-20, 19]
+*#        - rtprio - max realtime priority
+#
+.#<domain>      <type>  <item>         <value>
+#
+
++#*               soft    core            0
+/#*               hard    rss             10000
+,#@student        hard    nproc           20
+,#@faculty        soft    nproc           20
+,#@faculty        hard    nproc           50
++#ftp             hard    nproc           0
++#@student        -       maxlogins       4
+
+# End of file
+
+---- /etc/security/limits.d/20-nproc.conf ---
+:# Default limit for number of user's processes to prevent
+# accidental fork bombs.
+"# See rhbz #432903 for reasoning.
+
+"*          soft    nproc     4096
+'root       soft    nproc     unlimited
+
+%--- /etc/security/namespace.conf ---
+# /etc/security/namespace.conf
+#
+K# See /usr/share/doc/pam-*/txts/README.pam_namespace for more information.
+#
+># Uncommenting the following three lines will polyinstantiate
+E# /tmp, /var/tmp and user's home directories. /tmp and /var/tmp will
+Z# be polyinstantiated based on the MLS level part of the security context as well as user
+S# name, Polyinstantion will not be performed for user root and adm for directories
+V# /tmp and /var/tmp, whereas home directories will be polyinstantiated for all users.
+@# The user name and context is appended to the instance prefix.
+#
+B# Note that instance directories do not have to reside inside the
+G# polyinstantiated directory. In the examples below, instances of /tmp
+I# will be created in /tmp-inst directory, where as instances of /var/tmp
+E# and users home directories will reside within the directories that
+
+# are being polyinstantiated.
+#
+C# Instance parent directories must exist for the polyinstantiation
+F# mechanism to work. By default, they should be created with the mode
+@# of 000. pam_namespace module will enforce this mode unless it
+B# is explicitly called with an argument to ignore the mode of the
+G# instance parent. System administrators should use this argument with
+@# caution, as it will reduce security and isolation achieved by
+# polyinstantiation.
+#
+0#/tmp     /tmp-inst/       	level      root,adm
+4#/var/tmp /var/tmp/tmp-inst/   	level      root,adm
+&#$HOME    $HOME/$USER.inst/     level
+
+#--- /etc/security/pam_env.conf ---
+#
+F# This is the configuration file for pam_env, a PAM module to load in
+5# a configurable list of environment variables for a
+#
+<# The original idea for this came from Andrew G. Morgan ...
+	#<quote>
+G#   Mmm. Perhaps you might like to write a pam_env module that reads a
+>#   default environment from a file? I can see that as REALLY
+H#   useful... Note it would be an "auth" module that returns PAM_IGNORE
+H#   for the auth part and sets the environment returning PAM_SUCCESS in
+
+#   the setcred function...
+
+#</quote>
+#
+D# What I wanted was the REMOTEHOST variable set, purely for selfish
+@# reasons, and AGM didn't want it added to the SimpleApps login
+F# program (which is where I added the patch). So, my first concern is
+G# that variable, from there there are numerous others that might/would
+E# be useful to be set: NNTPSERVER, LESS, PATH, PAGER, MANPAGER .....
+#
+G# Of course, these are a different kind of variable than REMOTEHOST in
+;# that they are things that are likely to be configured by
+G# administrators rather than set by logging in, how to treat them both
+# in the same config file?
+#
+# Here is my idea:
+#
+G# Each line starts with the variable name, there are then two possible
+2# options for each variable DEFAULT and OVERRIDE.
+;# DEFAULT allows and administrator to set the value of the
+F# variable  to some default value, if none is supplied then the empty
+F# string is assumed. The OVERRIDE option tells pam_env that it should
+D# enter in its value (overriding the default value) if there is one
+F# to use. OVERRIDE is not used, "" is assumed and no override will be
+# done.
+#
+3# VARIABLE   [DEFAULT=[value]]  [OVERRIDE=[value]]
+#
+F# (Possibly non-existent) environment variables may be used in values
+G# using the ${string} syntax and (possibly non-existent) PAM_ITEMs may
+A# be used in values using the @{string} syntax. Both the $ and @
+C# characters can be backslash escaped to be used as literal values
+<# values can be delimited with "", escaped " not supported.
+B# Note that many environment variables that you would like to use
+3# may not be set by the time the module is called.
+5# For example, HOME is used below several times, but
+I# many PAM applications don't make it available by the time you need it.
+#
+#
+ # First, some special variables
+#
+E# Set the REMOTEHOST variable for any hosts that are remote, default
+2# to "localhost" rather than not being set at all
+4#REMOTEHOST	DEFAULT=localhost OVERRIDE=@{PAM_RHOST}
+#
+2# Set the DISPLAY variable if it seems reasonable
+8#DISPLAY		DEFAULT=${REMOTEHOST}:0.0 OVERRIDE=${DISPLAY}
+#
+#
+
+#  Now some simple variables
+#
+#PAGER		DEFAULT=less
+#MANPAGER	DEFAULT=less
+##LESS		DEFAULT="M q e h15 z23 b80"
+
+#NNTPSERVER	DEFAULT=localhost
+0#PATH		DEFAULT=${HOME}/bin:/usr/local/bin:/bin\
++#:/usr/bin:/usr/local/bin/X11:/usr/bin/X11
+#
+C# silly examples of escaped variables, just to show how they work.
+#
+#DOLLAR		DEFAULT=\$
+,#DOLLARDOLLAR	DEFAULT=	OVERRIDE=\$${DOLLAR}
+0#DOLLARPLUS	DEFAULT=\${REMOTEHOST}${REMOTEHOST}
+ #ATSIGN		DEFAULT=""	OVERRIDE=\@
+
+%--- /etc/security/pwquality.conf ---
+7# Configuration for systemwide password quality limits
+
+# Defaults:
+#
+K# Number of characters in the new password that must not be present in the
+# old password.
+
+# difok = 5
+#
+<# Minimum acceptable size for the new password (plus one if
+M# credits are not disabled which is the default). (See pam_cracklib manual.)
+'# Cannot be set to lower value than 6.
+
+# minlen = 9
+#
+K# The maximum credit for having digits in the new password. If less than 0
+:# it is the minimum number of digits in the new password.
+# dcredit = 1
+#
+J# The maximum credit for having uppercase characters in the new password.
+M# If less than 0 it is the minimum number of uppercase characters in the new
+
+# password.
+# ucredit = 1
+#
+J# The maximum credit for having lowercase characters in the new password.
+M# If less than 0 it is the minimum number of lowercase characters in the new
+
+# password.
+# lcredit = 1
+#
+F# The maximum credit for having other characters in the new password.
+I# If less than 0 it is the minimum number of other characters in the new
+
+# password.
+# ocredit = 1
+#
+C# The minimum number of required classes of characters for the new
+3# password (digits, uppercase, lowercase, others).
+# minclass = 0
+#
+Q# The maximum number of allowed consecutive same characters in the new password.
++# The check is disabled if the value is 0.
+# maxrepeat = 0
+#
+P# The maximum number of allowed consecutive characters of the same class in the
+# new password.
++# The check is disabled if the value is 0.
+# maxclassrepeat = 0
+#
+Q# Whether to check for the words from the passwd entry GECOS string of the user.
+.# The check is enabled if the value is not 0.
+# gecoscheck = 0
+#
+M# Path to the cracklib dictionaries. Default is to use the cracklib default.
+
+# dictpath =
+
+$--- /etc/security/sepermit.conf ---
+
+# /etc/security/sepermit.conf
+#
+
+# Each line contains either:
+#        - an user name
+,#        - a group name, with @group syntax
+4#        - a SELinux user name, with %seuser syntax
+:# Each line can contain optional arguments separated by :
+
+# The possible arguments are:
+6#        - exclusive - only single login session will
+<#          be allowed for the user and the user's processes
+$#          will be killed on logout
+
+ --- /etc/security/time.conf ---
+L# this is an example configuration file for the pam_time module. Its syntax
+M# was initially based heavily on that of the shadow package (shadow-960129).
+#
+)# the syntax of the lines is as follows:
+#
+"#       services;ttys;users;times
+#
+F# white space is ignored and lines maybe extended with '\\n' (escaped
+=# newlines). As should be clear from reading these comments,
+:# text following a '#' is ignored to the end of the line.
+#
+D# the combination of individual users/terminals etc is a logic list
+J# namely individual tokens that are optionally prefixed with '!' (logical
+B# not) and separated with '&' (logical and) and '|' (logical or).
+#
+
+# services
+A#	is a logic list of PAM service names that the rule applies to.
+#
+# ttys
+?#	is a logic list of terminal names that this rule applies to.
+#
+# users
+?#	is a logic list of users or a netgroup of users to whom this
+#	rule applies.
+#
+E# NB. For these items the simple wildcard '*' may be used only once.
+#
+# times
+4#	the format here is a logic list of day/time-range
+@#	entries the days are specified by a sequence of two character
+C#	entries, MoTuSa for example is Monday Tuesday and Saturday. Note
+F#	that repeated days are unset MoMo = no day, and MoWk = all weekdays
+:#	bar Monday. The two character combinations accepted are
+#
+!#		Mo Tu We Th Fr Sa Su Wk Wd Al
+#
+>#	the last two being week-end days and all 7 days of the week
+G#	respectively. As a final example, AlFr means all days except Friday.
+#
+G#	each day/time-range can be prefixed with a '!' to indicate "anything
+#	but"
+#
+F#	The time-range part is two 24-hour times HHMM separated by a hyphen
+F#	indicating the start and finish time (if the finish time is smaller
+C#	than the start time it is deemed to apply on the following day).
+#
+G# for a rule to be active, ALL of service+ttys+users must be satisfied
+# by the applying process.
+#
+
+#
+G# Here is a simple example: running blank on tty* (any ttyXXX device),
+># the users 'you' and 'me' are denied service all of the time
+#
+
+)#blank;tty* & !ttyp*;you|me;!Al0000-2400
+
+:# Another silly example, user 'root' is denied xsh access
+7# from pseudo terminals at the weekend and on mondays.
+
+#xsh;ttyp*;root;!WdMo0000-2400
+
+#
+# End of example file.
+#
+
+--- /etc/resolv.conf ---
+
+# Generated by NetworkManager
+:search cloud.triara.local backup.triara.local localdomain
+nameserver 172.27.140.132
+#nameserver 192.168.201.89
+#nameserver 192.168.201.90
+
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+/etc/pki/tls/openssl.cnf
+/etc/nsswitch.conf.bak
+/etc/services
+/etc/default/nss
+	/etc/rpc
+/etc/nsswitch.conf
+
+/etc/pam.d/fingerprint-auth
+/etc/pam.d/other
+/etc/pam.d/password-auth
+/etc/pam.d/smartcard-auth
+/etc/pam.d/system-auth
+
+/etc/security/namespace.init
+
+/etc/security/pwquality.conf
+=== HUNT_DONE ===

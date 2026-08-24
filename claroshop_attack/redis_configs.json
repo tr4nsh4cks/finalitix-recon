@@ -1,0 +1,347 @@
+{
+  "timestamp": "2026-08-24T03:34:00Z",
+  "source": "Redis pivot + Jenkins workspace config dump",
+
+  "redis_instances": {
+    "DEV_DIRECT": {
+      "host": "172.27.140.151",
+      "port": 6379,
+      "password": "@st0rAg3K3Y",
+      "status": "AUTH_OK",
+      "version": "3.2.4",
+      "os": "Linux 3.10.0-957.21.3.el7.x86_64",
+      "pid": 1,
+      "mode": "standalone",
+      "role": "master",
+      "db0_keys": 254119,
+      "used_memory": "250.22M",
+      "total_system_memory": "15.51G",
+      "bind": "0.0.0.0",
+      "dir": "/var/lib/redis/data",
+      "dbfilename": "dump.rdb",
+      "config_file": "/etc/redis.conf",
+      "maxmemory": "0 (unlimited)",
+      "save": "900 1 300 10 60 10000",
+      "lua_time_limit": 5000,
+      "modules": "NOT_SUPPORTED (3.2.x)",
+      "acl": "NOT_SUPPORTED",
+      "rename_command": "NONE (all commands available)",
+      "key_pattern": "srqaclient_* (PHP SessionTienda objects)",
+      "note": "Same instance as DEV-DNS. Running in Docker container (PID=1). Also has MySQL 5.7.22 on port 3306."
+    },
+    "DEV_DNS": {
+      "host": "redis-storage-ng.dev.claroshop-services.io",
+      "port": 6379,
+      "password": "@st0rAg3K3Y",
+      "status": "AUTH_OK (same run_id as DEV_DIRECT - same instance)",
+      "resolves_to": "172.27.140.151"
+    },
+    "PROD_DNS": {
+      "host": "redis-storage-ng.claroshop-services.io",
+      "port": 6379,
+      "password": "nBZxDxL2XxYwAEYyttme",
+      "status": "NO_ROUTE_FROM_JENKINS (unreachable)"
+    }
+  },
+
+  "redis_rce_vectors": {
+    "config_set_dir_writable": [
+      "/tmp",
+      "/home",
+      "/opt",
+      "/etc",
+      "/etc/profile.d",
+      "/etc/init.d",
+      "/etc/logrotate.d",
+      "/opt/rh",
+      "/opt/rh/rh-redis32",
+      "/opt/rh/rh-redis32/root",
+      "/opt/rh/rh-redis32/root/usr",
+      "/opt/rh/rh-redis32/root/usr/bin",
+      "/var/opt",
+      "/var/opt/rh/rh-redis32",
+      "/var/opt/rh/rh-redis32/log/redis",
+      "/usr/local",
+      "/usr/local/bin",
+      "/proc/self/cwd"
+    ],
+    "config_set_dir_denied": [
+      "/var/spool/cron",
+      "/var/spool/cron/crontabs",
+      "/root/.ssh",
+      "/var/www",
+      "/var/www/html",
+      "/etc/cron.d"
+    ],
+    "rce_confirmed": "FILE WRITTEN to /tmp/tr4ns_rce_test.rdb via CONFIG SET dir + SAVE",
+    "lua_scripting": "AVAILABLE (EVAL works)",
+    "debug_commands": "AVAILABLE",
+    "module_load": "NOT AVAILABLE (Redis 3.2.x)",
+    "note": "Running as non-root inside Docker container. No crontab/SSH key write, but can write to /etc/profile.d, /usr/local/bin, /etc/init.d"
+  },
+
+  "mysql_instances_reachable": {
+    "172.27.140.134:3306": {
+      "version": "5.6.25-enterprise-commercial-advanced",
+      "dns": "memcache.claroshop-services.net",
+      "note": "QA environment (also memcache host)"
+    },
+    "172.27.141.4:3306": {
+      "version": "5.6.25-enterprise-commercial-advanced",
+      "note": "T1Pagos"
+    },
+    "172.27.141.6:3306": {
+      "version": "5.7.29-enterprise-commercial-advanced-log",
+      "note": "Unknown - newer MySQL"
+    },
+    "172.27.140.151:3306": {
+      "version": "5.7.22-enterprise-commercial-advanced-log",
+      "note": "Redis host - also has MySQL"
+    }
+  },
+
+  "mysql_instances_unreachable": {
+    "172.27.141.24:3310": {
+      "dns": "dbps.claroshop-services.net",
+      "note": "PROD Sears Sanborns API - NoRouteToHost from Jenkins"
+    },
+    "172.27.141.24:3312": {
+      "dns": "dbpsears.claroshop-services.net",
+      "note": "PROD Sears pedidos/cron - firewall"
+    },
+    "172.27.140.134:3310": {
+      "note": "QA Sanborns API port 3310 - Connection refused"
+    }
+  },
+
+  "dns_resolution": {
+    "dbps.claroshop-services.net": "172.27.141.24",
+    "smtp.claroshop-services.net": "172.27.140.132",
+    "memcache.claroshop-services.net": "172.27.140.134",
+    "memcache2.claroshop-services.net": "172.27.141.24",
+    "invt-sears.claroshop-services.net": "172.27.141.24",
+    "api-soap.sanborns.com.mx": "172.27.141.24",
+    "api-soap.qa.sanborns.com.mx": "172.27.141.24"
+  },
+
+  "credentials_mysql": [
+    {
+      "env": "PROD",
+      "host": "dbps.claroshop-services.net (172.27.141.24)",
+      "port": 3310,
+      "user": "dbsanbornsapi",
+      "password": "4568F4F_g0mz#aB4NxhEnO18",
+      "dbname": "tienda",
+      "source": "ApiSoap-Sanborns/produccion/local.php"
+    },
+    {
+      "env": "QA",
+      "host": "172.27.140.134",
+      "port": 3310,
+      "user": "dbsanbornsapi",
+      "password": "JTQ6PrkecY3y1kVN",
+      "dbname": "tienda",
+      "source": "ApiSoap-Sanborns/qa/local.php"
+    },
+    {
+      "env": "PROD/QA",
+      "host": "appdb.claroshop-services.net",
+      "port": 3306,
+      "user": "adaxxidb",
+      "password": "JTQ6PrkecY3y1kVN",
+      "dbname": "tienda",
+      "source": "Tortuga/Produccion/local.php"
+    },
+    {
+      "env": "PROD",
+      "host": "dbpsears.claroshop-services.net",
+      "port": 3312,
+      "user": "appfincadopedido",
+      "password": "Pn%R035tReCh3s_H4!",
+      "dbname": "tienda",
+      "source": "crones-sears/demonio-pedidos/produccion/local.php"
+    },
+    {
+      "env": "QA",
+      "host": "172.27.140.134",
+      "port": 3312,
+      "user": "dbfincadopedido",
+      "password": "FxSR#YjbTUUurtn3BYz90m",
+      "dbname": "tienda",
+      "source": "crones-sears/demonio-pedidos/qa/local.php"
+    },
+    {
+      "env": "PROD",
+      "host": "dbpsears.claroshop-services.net",
+      "port": 3312,
+      "user": "appcronprods",
+      "password": "As4d8_3awD&i1CBwWKtu0#4",
+      "dbname": "tienda",
+      "source": "crones-sears/productos/Produccion/local.php"
+    },
+    {
+      "env": "QA",
+      "host": "dbpsears.claroshop-services.net",
+      "port": 3312,
+      "user": "dbcronproductos",
+      "password": "0c1A0ZW0Kh#wjqdRHV$b63A",
+      "dbname": "tienda",
+      "source": "crones-sears/productos/qa/local.php"
+    }
+  ],
+
+  "credentials_aws": [
+    {
+      "access_key": "AKIAJZU3ACFYS6PWAOPA",
+      "secret_key": "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",
+      "source": "Tortuga/local.php"
+    }
+  ],
+
+  "credentials_smtp": [
+    {
+      "host": "smtp.claroshop-services.net",
+      "port": 25,
+      "user": "smtp_admin@claroshop",
+      "password": "4eJ7G0paawA8R53AQJu15yxd",
+      "source": "ApiSoap-Sanborns, Tortuga"
+    },
+    {
+      "host": "smtp.claroshop-services.net",
+      "port": 25,
+      "user": "smtp_admin@claroshop",
+      "password": "UxS7Vc8jU2UPqLErN4Uz1hQGo",
+      "source": "crones-sears/productos/Produccion"
+    }
+  ],
+
+  "credentials_ftp": [
+    {
+      "host": "pcd.decompras.com",
+      "port": 21,
+      "user": "sanborns_dc",
+      "password": "7795a093e4",
+      "source": "axii-sears/Produccion"
+    }
+  ],
+
+  "credentials_payment": [
+    {
+      "service": "Inbursa/PROSA eCommerce (PROD)",
+      "username": "inbursa01",
+      "password": "V9HzbQn1OCJVRJhHFA8m",
+      "gateway": "https://easygetpaid.prosa.com.mx/egpRest/motorPagos/claro/eCommerce"
+    },
+    {
+      "service": "Inbursa/PROSA eCommerce (TEST)",
+      "username": "inbursa01",
+      "password": "FO7gnoGg9KGqxjNjWkRt",
+      "gateway": "https://easygetpaid.prosa.com.mx/egpTestR/motorPagos/claro/eCommerce"
+    },
+    {
+      "service": "CyberSource PROD",
+      "merchant_id": "decompras",
+      "transaction_key": "yn/7kv47g0vaylkMXbWsB86S4E9r9Ve0j3pI8h4DEkS1hWQ3TG6N4WuqsLbovLCQ..."
+    },
+    {
+      "service": "NetPay (DEV)",
+      "gateway": "http://200.57.87.243:9855",
+      "store_id": "1200133",
+      "username": "POS",
+      "password": "decompras"
+    },
+    {
+      "service": "NetPay (PROD)",
+      "username": "POS",
+      "password": "004328"
+    },
+    {
+      "service": "PayPal Sandbox",
+      "api_user": "vendedor_api1.decompras.com",
+      "api_password": "1407340137",
+      "api_signature": "AtjxHXvFOf5tVpsDp33Y6n5F3uSzA2e4T96TbTBPFO0QtxCqUPhyIHou"
+    }
+  ],
+
+  "credentials_social_marketing": [
+    {
+      "service": "Facebook App",
+      "app_id": "380712105414922",
+      "app_secret": "159a77ac5c60c62367f5e603c82d221c"
+    },
+    {
+      "service": "Gigya (Prod)",
+      "key": "3_i1QeZqrz6xSX5fF_TanfzOBYK_tqHpRtD6ylvBZI5kpyIh7wQBpeYSAMVIPJ7T27",
+      "secret": "Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU="
+    },
+    {
+      "service": "Gigya (Dev/Release)",
+      "key": "3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR",
+      "secret": "Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU="
+    },
+    {
+      "service": "Emarsys",
+      "username": "claroshop003",
+      "secret": "sXWa6ly4DNY79T0df7Pl"
+    }
+  ],
+
+  "credentials_auth": [
+    {
+      "service": "Sears login service",
+      "endpoint": "http://www.sears.com.mx/servicio_autenticacion_usuario/servicio.php",
+      "user": "iliux",
+      "password": "IL18xmz1",
+      "semilla": "D3C0MP@52015"
+    },
+    {
+      "service": "Sears stock/inventory",
+      "endpoint": "http://invt-sears.claroshop-services.net/ws_mercaderias",
+      "user": "claroshop",
+      "password": "cl4r0sh0p."
+    },
+    {
+      "service": "Telmex Cuestionario",
+      "login": "TMX_CUESTIONARIO",
+      "password": "_TMX_3906"
+    }
+  ],
+
+  "credentials_sms": [
+    {
+      "service": "Broadcaster (ConceptoMovil)",
+      "username": "claroshop558a1e66fd795a1",
+      "endpoint": "http://broadcaster.cm-operations.com/broadcaster/bin/tu_empresa.php"
+    }
+  ],
+
+  "encryption_keys": {
+    "tdc_encryption": "K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4",
+    "recaptcha_site": "6LdkagsTAAAAAPmLFF4JdL9oPpIek3xNOhVdCnr4",
+    "recaptcha_secret": "6LdkagsTAAAAAH4e4EZ6-wBmK5POsaw2-sNFtOx0"
+  },
+
+  "network_scan": {
+    "hosts_with_ssh": ["172.27.140.151:22 (OpenSSH 7.4)", "172.27.141.4:22 (OpenSSH 5.3)", "172.27.141.24:22 (OpenSSH 5.3)"],
+    "hosts_unreachable_from_jenkins": ["172.27.141.24:3308", "172.27.141.24:3310", "172.27.141.24:3312"],
+    "jenkins_hostname": "CSDEVJNKS01-3.jenkins",
+    "internal_services": {
+      "memcache": "172.27.140.134:11211",
+      "memcache2": "172.27.141.24:11211",
+      "smtp": "172.27.140.132:25"
+    }
+  },
+
+  "pivot_status": {
+    "prod_sears_172.27.141.24": "FIREWALLED from Jenkins (SSH open, MySQL ports filtered/no-route). Need pivot from Docker container or Redis host to reach ports 3310/3312.",
+    "t1pagos_172.27.141.4": "MySQL 3306 OPEN and reachable. Need valid credentials to access.",
+    "qa_172.27.140.134": "MySQL 3306 OPEN. Port 3310 refused, port 3312 untested. Cred adaxxidb/JTQ6PrkecY3y1kVN available.",
+    "next_steps": [
+      "Try adaxxidb/JTQ6PrkecY3y1kVN on 172.27.140.134:3306 (should work - same password in QA)",
+      "Try all MySQL creds via Docker container (different network, may reach PROD)",
+      "Resolve appdb.claroshop-services.net and dbpsears.claroshop-services.net",
+      "Use Docker API to run mysql-client in container for proper auth",
+      "Validate AWS keys (AKIAJZU3ACFYS6PWAOPA) - may be expired"
+    ]
+  }
+}

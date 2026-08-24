@@ -1,0 +1,1001 @@
+﻿Id,Empresa,Nombre,Apellido_Paterno,Apellido_Materno,Email,Password,fecha_nacimiento,Tienda,fecha_creacion,quiere_tarjeta,noventa,unicard_foto,promocion_tarjeta_vip,limite,tc,referido_por,estatus_tc,rfc,fecha_unicard,sears,sexo,telefono_telmex,num_puntosinfin,Es_Proveedor,contrasena_2,contrasena_3,usuario_cobro,preferencias,foto_perfil,fecha_modificacion,ip,telefono,tipo_rfc,Direccion,Entre_Calles,Colonia,Ciudad,Estado,Codigo_Postal,Pais,Lada,Telefono1,Celular,datos_Fecha_Inicio,datos_Fecha_Nacimiento,Tarjeta,num_ext,num_int,es_telmex,es_telcel,municipio,municipio_id
+198858,,dafnee,vidales,GOMEZ,dafvidales@gmail.com,,,,2019-11-22 14:49:22,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Universidad, #1000 Int: sin_datos",N/A,General Anaya,Benito Juárez,CDMX,03540,Mexico,,5537217650,5537217650,2019-11-22 13:49:22,0000-00-00,0,1000,sin_datos,1,1,Benito Juárez,1
+198859,,ERICK,ACUÑA,GONZALEZ,erickacunag@gmail.com,,,,2019-11-22 14:49:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"RAFAEL SANCHEZ TAPIA, #48 Int: sin_datos",BOULEVARD GARCIA DE LEON Y SANTOS DEGOLLADO-,Del Empleado,Morelia,Michoacán de Ocampo,58280,Mexico,,443 / 4433,443 / 4433,2019-11-22 13:49:23,0000-00-00,0,48,sin_datos,1,1,Morelia,1
+198860,,Daniel,Mesina,Hernandez,mesina31@hotmail.com,,,,2019-11-22 14:49:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Antonio de Montes, #2112 Int: 1",-,Adición Universidad,Chihuahua,Chihuahua,31203,Mexico,,6141963071,6141963071,2019-11-22 13:49:23,0000-00-00,0,2112,1,1,1,Chihuahua,1
+198861,,Raymundo,Castañeda,Peralta,ray_hp00@hotmail.com,,,,2019-11-22 14:49:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Vicente Guerrero, #129 Int: sin_datos",Benito Juárez-Bahía Falsa,Popular San Quintín,San Quintín,Baja California,22930,Mexico,,616 / 6161,616 / 6161,2019-11-22 13:49:23,0000-00-00,0,129,sin_datos,1,1,San Quintín,1
+198862,,Karen angelica,Juarez,Colin,angelique3089@hotmail.com,,,,2019-11-22 14:49:24,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Malibu 2301, #2301 Int: sin_datos",-,Villa Colonial,Mexicali,Baja California,21298,Mexico,,5523721148,5523721148,2019-11-22 13:49:24,0000-00-00,0,2301,sin_datos,1,1,Mexicali,1
+198863,,sofia,belmar,,sofia.belmar@gmail.com,,,,2019-11-22 14:49:24,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"montaña, #498 Int: sin_datos",periferico-llanura,Jardines del Pedregal de San Ángel,Coyoacán,Ciudad de México,04500,Mexico,,5562361767,5562361767,2019-11-22 13:49:24,0000-00-00,0,498,sin_datos,1,1,Coyoacán,1
+198864,,Elizabeth del Socorro,Macías,Ortega,elimaciaso@hotmail.com,,,,2019-11-22 14:49:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Juventino Rosas, #147 Int: 303",-,Peralvillo,Cuauhtémoc,Ciudad de México,06220,Mexico,,5555555555,5555555555,2019-11-22 13:49:25,0000-00-00,0,147,303,1,1,Cuauhtémoc,1
+198865,,Hector miguel,Govea,Ramirez,cruzolga030785@gmail.com,,,,2019-11-22 14:49:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Bosque de olivos, #50 Int: sin_datos",Bosque de ciruelos-,Bosques Tres Marías,Morelia,Michoacán de Ocampo,58200,Mexico,,4431469813,4431469813,2019-11-22 13:49:25,0000-00-00,0,50,sin_datos,1,1,Morelia,1
+198866,,fabiola,armendariz Amaya,,fabs.armendariz53@gmail.com,,,,2019-11-22 14:49:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Independencia, #7003 Int: sin_datos",Chihuahua-Mitla,Arturo Gámiz,Juárez,Chihuahua,32663,Mexico,,6566263280,6566263280,2019-11-22 13:49:25,0000-00-00,0,7003,sin_datos,1,1,Juárez,1
+198867,,Adrian,Leon,Garcia,morro2k@msn.com,,,,2019-11-22 14:49:26,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Plan de San Luis, #3642 Int: sin_datos",Batalla de Bachimba-Batalla de Trinidad,Residencial Revolución,San Pedro Tlaquepaque,Jalisco,45580,Mexico,,5555555555,5555555555,2019-11-22 13:49:26,0000-00-00,0,3642,sin_datos,1,1,San Pedro Tlaquepaque,1
+198868,,ivan,heredia,alonso,iuha@hotmail.com,,,,2019-11-22 14:49:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"JOSE LUIS ALAMO, #622 Int: sin_datos",HORACIO ZUÑIGA-FRANCISCO JAVIER GAXIOLA,Ciprés,Toluca,México,50120,Mexico,,7223969402,7223969402,2019-11-22 13:49:27,0000-00-00,0,622,sin_datos,1,1,Toluca,1
+198869,,Jose,Rodriguez,Tellez,eoncito21@yahoo.com.mx,,,,2019-11-22 14:49:28,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"CDA MORELOS, #S N Int: sin_datos",ANTG CMNO CUERN TOPILEJO CAMINO A CUERNA-,San Miguel Topilejo,Tlalpan,Ciudad de México,14500,Mexico,,55 / 55128,55 / 55128,2019-11-22 13:49:28,0000-00-00,0,S N,sin_datos,1,1,Tlalpan,1
+198870,,rodolfo,chavez ,,mtrodolfochavez@gmail.com,,,,2019-11-22 14:49:36,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"acatita de bajan, #181 Int: sin_datos",av del maestro-,Lomas de Hidalgo,Morelia,Michoacán de Ocampo,58240,Mexico,,5555555555,5555555555,2019-11-22 13:49:36,0000-00-00,0,181,sin_datos,1,1,Morelia,1
+198871,,Erik,Romero,Romero,transportador1717@yahoo.com,,,,2019-11-22 14:49:36,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Circuito la mancha, #94 Int: sin_datos",-,Lagos de Puente Moreno,Medellín de Bravo,Veracruz de Ignacio de la Llave,94274,Mexico,,2292657422,2292657422,2019-11-22 13:49:36,0000-00-00,0,94,sin_datos,1,1,Medellín de Bravo,1
+198872,,Enrique,Lopez,,alienrrr5@gmail.com,,,,2019-11-22 14:49:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle la gema mz77, #812 Int: sin_datos",-,Jardines del Pedregal,Tuxtla Gutiérrez,Chiapas,29049,Mexico,,9619499922,9619499922,2019-11-22 13:49:37,0000-00-00,0,812,sin_datos,1,1,Tuxtla Gutiérrez,1
+198873,,Héctor,Mendoza,,hectoormr@hotmail.com,,,,2019-11-22 14:49:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Monte Himalaya, #582 Int: sin_datos",Av Belisario Domínguez-Monte Parnaso,Independencia Oriente,Guadalajara,Jalisco,44340,Mexico,,3316925546,3316925546,2019-11-22 13:49:37,0000-00-00,0,582,sin_datos,1,1,Guadalajara,1
+198874,,Jose,Nieto,Nieves,nietonievesjose@gmail.com,,,,2019-11-22 14:49:38,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"cefiro, #12 Int: 406",-,Pedregal de Carrasco,Coyoacán,Ciudad de México,04700,Mexico,,5556222540,5556222540,2019-11-22 13:49:38,0000-00-00,0,12,406,1,1,Coyoacán,1
+198875,,Verónica,Rodriguez,Ladrón de Guevara,vrodriguezladron@gmail.com,,,,2019-11-22 14:49:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Rómulo OFarril, #570 Int: 7",N/A,Olivar de los Padres,N/A,Ciudad de México,01780,Mexico,,55 / 55286,55 / 55286,2019-11-22 13:49:39,0000-00-00,0,570,7,1,1,N/A,1
+198876,,Janet,Perez Ramírez,,janethperez.405@gmail.com,,,,2019-11-22 14:49:40,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Candelilla, #862 Int: sin_datos",Zotol-Cactus,Anacahuita,Ramos Arizpe,Coahuila de Zaragoza,25902,Mexico,,8441896648,8441896648,2019-11-22 13:49:40,0000-00-00,0,862,sin_datos,1,1,Ramos Arizpe,1
+198877,,Guillermina,González,,jhsgdfajgds@dskadsajdh.com,,,,2019-11-22 14:49:40,0,,0,0,,,,0,N/A,,,,,,,,,,,,2022-11-09 12:14:06,,,,"Beisbol, #306 Int: sin_datos",Natación-Ajedrez,San Miguel Zinacantepec,Zinacantepec,México,51350,Mexico,,5555555555,5555555555,2019-11-22 13:49:40,0000-00-00,0,306,sin_datos,1,1,Zinacantepec,1
+198878,,Rosario,Gutierrez ,Ronquillo ,coromuel69@hotmail.com,,,,2019-11-22 14:49:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Araras 118 Las brisas, #118 Int: sin_datos",Tepoca y Juan vicente melo-,INFONAVIT las Brisas,Veracruz,Veracruz de Ignacio de la Llave,91809,Mexico,,2294142138,2294142138,2019-11-22 13:49:41,0000-00-00,0,118,sin_datos,1,1,Veracruz,1
+198879,,Juan manuel,GarcÍa,Ortega,jmgo200793@gmail.com,,,,2019-11-22 14:49:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Montesitos 38-2o.Piso, #38-2o.Piso Int: sin_datos",NA,Napoles,Mexico,Ciudad de Mexico,55555,Mexico,,55 / 55605,55 / 55605,2019-11-22 13:49:41,0000-00-00,0,38-2o.Piso,sin_datos,1,1,Mexico,1
+198880,,Georgina ,Rojas  ,Bahena,dobermann@outlook.com,,,,2019-11-22 14:49:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Reforma, #9 Int: 2",8 norte-10 norte,Plan de Ayala,Cuautla,Morelos,62743,Mexico,,7352229604,7352229604,2019-11-22 13:49:42,0000-00-00,0,9,2,1,1,Cuautla,1
+198881,,Manuel noradino,Barron,Montes,mnbarronm@gmail.com,,,,2019-11-22 14:49:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Marques de las Cruces, #166 Int: sin_datos",Marques de Miraflores-Marques de Maceira,Lomas del Marqués,Querétaro,Querétaro,76146,Mexico,,4423868918,4423868918,2019-11-22 13:49:43,0000-00-00,0,166,sin_datos,1,1,Querétaro,1
+198882,,Ernesto,Galicia,Paredes,ernesto.galiciap@gmail.com,,,,2019-11-22 14:49:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Canal de Miramontes, #3122 Int: sin_datos",N/A,Ex hacienda de Coapa,Tlalpan,CDMX,14300,Mexico,,55 / 55541,55 / 55541,2019-11-22 13:49:43,0000-00-00,0,3122,sin_datos,1,1,Tlalpan,1
+198883,,Lidia,Macuil,Tlachi,alizxmac@gmail.com,,,,2019-11-22 14:49:44,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Cerrada del bosque, #4 Int: sin_datos",Calle malintzi-Calle morelos,Panzacola,Papalotla de Xicohténcatl,Tlaxcala,90796,Mexico,,2211984483,2211984483,2019-11-22 13:49:44,0000-00-00,0,4,sin_datos,1,1,Papalotla de Xicohténcatl,1
+198884,,Bertha,Sandoval,Jiménez,titi_sjb@yahoo.com.mx,,,,2019-11-22 14:49:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"AV UNIÓN, #738 Int: sin_datos",Sangre de Cristo-San Policarpio,El Colonial,Irapuato,Guanajuato,36558,Mexico,,4621537645,4621537645,2019-11-22 13:49:46,0000-00-00,0,738,sin_datos,1,1,Irapuato,1
+198885,,IRWING,LONA,HERRERA,irwinglonah12@gmail.com,,,,2019-11-22 14:49:47,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"PLAZA BUENAVISTA, #2 Int: 611",-,Buenavista,Cuauhtémoc,Ciudad de México,06350,Mexico,,5555555555,5555555555,2019-11-22 13:49:47,0000-00-00,0,2,611,1,1,Cuauhtémoc,1
+198886,,Omar Israel ,Arevalo González,,ikarevalo@hotmail.com,,,,2019-11-22 14:49:47,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Canal Atlicolco, #61 Int: sin_datos",Canal 27-Canal Tlilac,Barrio 18,Xochimilco,Ciudad de México,16034,Mexico,,5514736999,5514736999,2019-11-22 13:49:47,0000-00-00,0,61,sin_datos,1,1,Xochimilco,1
+198887,,Giuliana,Rodriguez,Miranda,giulsromi@gmail.com,,,,2019-11-22 14:49:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"1, #7 Int: 2",Esquina con calle 2-,Independencia,Naucalpan de Juárez,México,53830,Mexico,,5540775369,5540775369,2019-11-22 13:49:48,0000-00-00,0,7,2,1,1,Naucalpan de Juárez,1
+198888,,NESTOR,MORA,,nestorms@gmail.com,,,,2019-11-22 14:49:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Mar mediterraneo, #280 Int: sin_datos",Reyes heroles-Costa de oro,Costa Verde,Boca del Río,Veracruz de Ignacio de la Llave,94294,Mexico,,5555555555,5555555555,2019-11-22 13:49:48,0000-00-00,0,280,sin_datos,1,1,Boca del Río,1
+198889,,Daniela,Fuentes,Alvarado,daniela_fu20@hotmail.com,,,,2019-11-22 14:49:49,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Prolongación real de Guadalupe, #90 Int: sin_datos",Ojo de agua-La brecha,Santa Rosa Xochiac,Álvaro Obregón,Ciudad de México,01830,Mexico,,5574063110,5574063110,2019-11-22 13:49:49,0000-00-00,0,90,sin_datos,1,1,Álvaro Obregón,1
+198890,,Angelina,Hernández,Murillo,ahernandezmurillo@yahoo.com.mx,,,,2019-11-22 14:49:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Morelos, #203 Int: sin_datos",Luis Moya-González Ortega,Calera de Víctor Rosales Centro,Calera,Zacatecas,98500,Mexico,,4781001040,4781001040,2019-11-22 13:49:50,0000-00-00,0,203,sin_datos,1,1,Calera,1
+198891,,JOEL,VILLELA,ARANDA,joelvillela1962@gmail.com,,,,2019-11-22 14:49:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"ALMEJA, #44 Int: sin_datos",N/A,Rodeo de La Punta,N/A,Nayarit,63110,Mexico,,311 / 3112,311 / 3112,2019-11-22 13:49:51,0000-00-00,0,44,sin_datos,1,1,N/A,1
+198892,,Mirna Virginia,Saldivar,Solís,mv.ss@live.com,,,,2019-11-22 14:49:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Olmos, #17 Int: sin_datos",Juanacatlan-Olivo,Los Sauces,Tepic,Nayarit,63197,Mexico,,311 / 3111,311 / 3111,2019-11-22 13:49:52,0000-00-00,0,17,sin_datos,1,1,Tepic,1
+198893,,Mirna nayeli ,Diaz  solis,,drasolis87@gmail.com,,,,2019-11-22 14:49:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Manzano, #210 Int: sin_datos",Ébano-Limón,El Huapacalito,Las Choapas,Veracruz de Ignacio de la Llave,96980,Mexico,,9231078444,9231078444,2019-11-22 13:49:52,0000-00-00,0,210,sin_datos,1,1,Las Choapas,1
+198894,,Pedro Luis,Cordova Velasques Cordova,Velasques,cristianricardesvelazquez@gmail.com,,,,2019-11-22 20:01:49,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Candelilla 862, #862 Int: 862",Sotol-Cactus,Anacahuita,Ramos Arizpe,Coahuila de Zaragoza,25902,Mexico,,8444526971,8444526971,2019-11-22 19:01:49,0000-00-00,0,862,862,1,1,Ramos Arizpe,1
+198895,,Daniel,Saldivar ,Reyes,danielcole122@gmail.com,,,,2019-11-22 20:01:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle 95, #42 y 44 Int: 610",95 x 42 y 44-,Paseos de Opichen,Mérida,Yucatán,97246,Mexico,,9991253361,9991253361,2019-11-22 19:01:50,0000-00-00,0,42 y 44,610,1,1,Mérida,1
+198896,,Fernanda ,Salazar,Reynoso,fsalazarmx@gmail.com,,,,2019-11-22 20:01:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"2da calle de hidrometria, #30 Int: SN",-,San Francisco,Chilpancingo de los Bravo,Guerrero,39068,Mexico,,2224863188,2224863188,2019-11-22 19:01:50,0000-00-00,0,30,SN,1,1,Chilpancingo de los Bravo,1
+198897,,José Leonardo ,Martinez  Salas,,leonardomartsal@gmail.com,,,,2019-11-22 20:01:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Circuito Puente Moreno, #1 Int: 102",-,Puente Moreno,Medellín de Bravo,Veracruz de Ignacio de la Llave,94274,Mexico,,2291209917,2291209917,2019-11-22 19:01:51,0000-00-00,0,1,102,1,1,Medellín de Bravo,1
+198898,,Leonardo,Domínguez,Robles,leonardodomr@gmail.com,,,,2019-11-22 20:01:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"La Colorada, #252 Int: 252",General Piña-Guadalupe Victoria,Insurgentes,Hermosillo,Sonora,83106,Mexico,,6622969336,6622969336,2019-11-22 19:01:52,0000-00-00,0,252,252,1,1,Hermosillo,1
+198899,,Gabriel,Lopez,Cordoba,gabi_cordoba85@hotmail.com,,,,2019-11-22 20:01:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"xicotencatl, #2321 Int: sin_datos",-,Adolfo Lopez Mateos,Apizaco,Tlaxcala,90357,Mexico,,2411630545,2411630545,2019-11-22 19:01:52,0000-00-00,0,2321,sin_datos,1,1,Apizaco,1
+198900,,Sandra,Rubi,Herrera,s.rubi78@hotmail.com,,,,2019-11-22 20:01:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Cantera, #107 Int: sin_datos",Porfido-Rosa de los vientos,Alcázar Residencial,Jesús María,Aguascalientes,20908,Mexico,,7224981909,7224981909,2019-11-22 19:01:53,0000-00-00,0,107,sin_datos,1,1,Jesús María,1
+198901,,María Dolores,Carrillo,Pérez,emiliano_gc8@hotmail.com,,,,2019-11-22 20:01:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Circuito Los Reyes, #200 Int: sin_datos",-,Circuito Los Reyes,Lerdo,Durango,35159,Mexico,,871 / 8711,871 / 8711,2019-11-22 19:01:53,0000-00-00,0,200,sin_datos,1,1,Lerdo,1
+198902,,María Guadalupe ,Funes,Sesman,lufuness@hotmail.com,,,,2019-11-22 20:01:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Emiliano Zapata, #1 Int: 1",Circuito exterior metropolitano-Lázaro Cardenas,Santa María,San Mateo Atenco,México,52104,Mexico,,7223155891,7223155891,2019-11-22 19:01:54,0000-00-00,0,1,1,1,1,San Mateo Atenco,1
+198903,,Jessica,Flores,Toledo,nenyess@gmail.com,,,,2019-11-22 20:01:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Margarita maza de Juárez, #8 Int: sin_datos",Pedro Ramírez del castillo-Guadalupe i Ramírez,Barrio San Pedro,Xochimilco,Ciudad de México,16090,Mexico,,5541273156,5541273156,2019-11-22 19:01:54,0000-00-00,0,8,sin_datos,1,1,Xochimilco,1
+198904,,Juan,Aria,,juanariasmx@gmail.com,,,,2019-11-22 20:01:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-07-08 15:31:26,,,,"Occidental, #1130 Int: sin_datos",Insurgentes-Jose de Escandon,Longoria,Reynosa,Tamaulipas,88660,Mexico,,5555555555,5555555555,2019-11-22 19:01:55,0000-00-00,0,1130,sin_datos,1,1,Reynosa,1
+198905,,Ma.Teresa,Soto,Ponce,raul.silva.rodriguez@gmail.com,,,,2019-11-22 20:01:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Aldama, #591A Int: sin_datos",Fco Silva romero-Abasolo,Gral. Real,Guadalajara,Jalisco,44400,Mexico,,3322265629,3322265629,2019-11-22 19:01:55,0000-00-00,0,591A,sin_datos,1,1,Guadalajara,1
+198906,,Carlos Daniel,Villar,Fellix,carlos_daniel13@hotmail.com,,,,2019-11-22 20:01:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Edificio H 8 entrada 3, #Ent. 3 Int: 34",AVE. Centenario-Circuito num 4,Lomas de Plateros,Álvaro Obregón,Ciudad de México,01480,Mexico,,55 / 55124,55 / 55124,2019-11-22 19:01:56,0000-00-00,0,Ent. 3,34,1,1,Álvaro Obregón,1
+198907,,Marcial Agustin,Avila,Martínez,marcialavi1961@gmail.com,,,,2019-11-22 20:01:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Niños Heroes Col. San luis, #212 Int: sin_datos",Molino del Rey-Independencia,San Luis,Tulancingo de Bravo,Hidalgo,43670,Mexico,,1 / 775771,1 / 775771,2019-11-22 19:01:56,0000-00-00,0,212,sin_datos,1,1,Tulancingo de Bravo,1
+198908,,Deisy,Dorado,,deod_2012@hotmail.com,,,,2019-11-22 20:01:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Toma de juarez, #106 Int: sin_datos",Emiliano zapata-Centauro del Norte,División del Norte,Durango,Durango,34140,Mexico,,3313517693,3313517693,2019-11-22 19:01:57,0000-00-00,0,106,sin_datos,1,1,Durango,1
+198909,,jesus ,pedraza,diaz,jesdiped23@gmail.com,,,,2019-11-22 20:01:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"cerrada navidad, #2 Int: sin_datos",la quinta-,La Quinta,Uruapan,Michoacán de Ocampo,60030,Mexico,,4520945545,4520945545,2019-11-22 19:01:57,0000-00-00,0,2,sin_datos,1,1,Uruapan,1
+198910,,Ileana,Castillo,Loa,ileana9877@gmail.com,,,,2019-11-22 20:01:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"German Cueto, #303 Int: sin_datos",Av de la Paz y Gomez Farias-,Real de San Miguel Sector I,Guadalupe,Nuevo León,67113,Mexico,,5555555555,5555555555,2019-11-22 19:01:59,0000-00-00,0,303,sin_datos,1,1,Guadalupe,1
+198911,,ana lilia,viveros,hernandez,anahernandez_99@hotmail.com,,,,2019-11-22 20:01:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"francisco i madero, #65 Int: sin_datos",guadalupe victoria-benito juarez,Cuautepec de Madero,Gustavo A. Madero,Ciudad de México,07200,Mexico,,5585278717,5585278717,2019-11-22 19:01:59,0000-00-00,0,65,sin_datos,1,1,Gustavo A. Madero,1
+198912,,Elba,Gonzalez,Cabrera,cuteandcraftymx@gmail.com,,,,2019-11-22 20:02:00,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Dalia, #14 Int: sin_datos",Circuito margaritas-Clavel,Jardines del Molinito,Naucalpan de Juárez,México,53530,Mexico,,55 / 55212,55 / 55212,2019-11-22 19:02:00,0000-00-00,0,14,sin_datos,1,1,Naucalpan de Juárez,1
+198913,,Amador,Jacobo,Brito,ajb@prodigy.net.mx,,,,2019-11-22 20:02:00,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Duraznos 22A, #Lt2 Int: int8",Juan de la Barrera-Cda de Duraznos,Santa Maria Cuautepec (Fracc. Las Terrazas),Tultitlán,México,54949,Mexico,,5555555555,5555555555,2019-11-22 19:02:00,0000-00-00,0,Lt2,int8,1,1,Tultitlán,1
+198914,,Alejandrina,Garcia ,Ocampo,macorinna@icloud.com,,,,2019-11-22 20:02:01,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"La mesa, #31 Int: 4",Cantera y aljibe-,Cumbres de Tepetongo,Tlalpan,Ciudad de México,14420,Mexico,,5519340937,5519340937,2019-11-22 19:02:01,0000-00-00,0,31,4,1,1,Tlalpan,1
+198915,,David armando,Gonzalez,Garcia,davidarmando615@gmail.com,,,,2019-11-22 20:02:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Casa de Janos, #1617 Int: sin_datos",Noria-Palomas,Toribio Ortega,Juárez,Chihuahua,32675,Mexico,,656 / 6562,656 / 6562,2019-11-22 19:02:02,0000-00-00,0,1617,sin_datos,1,1,Juárez,1
+198916,,SERGIO ESTEBAN,BARRIOS,CORTES,sbarrios@cuervo.com.mx,,,,2019-11-22 20:02:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"PORTAL DE HIERRO, #377 Int: sin_datos",CALLE UNICA-,5 Plumas,Tuxtla Gutiérrez,Chiapas,29020,Mexico,,993 / 9933,993 / 9933,2019-11-22 19:02:02,0000-00-00,0,377,sin_datos,1,1,Tuxtla Gutiérrez,1
+198917,,KARLA PATRICIA,GASCA,MARTINEZ,k_3192@hotmail.com,,,,2019-11-22 20:02:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"ANTONIO ALBARRAN, #157 Int: sin_datos",AV TOLLOCAN AV SOLIDARIDAD LAS TORRES,Santa María de las Rosas,Toluca,México,50140,Mexico,,7221855532,7221855532,2019-11-22 19:02:02,0000-00-00,0,157,sin_datos,1,1,Toluca,1
+198918,,ARACELI,almanza ,gonzalez ,cosy_chely1606@hotmail.com,,,,2019-11-22 20:02:03,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"PAQUIME, #103 Int: sin_datos",GUACHOCHI-,Álamos 3a Secc,Celaya,Guanajuato,38024,Mexico,,4611169716,4611169716,2019-11-22 19:02:03,0000-00-00,0,103,sin_datos,1,1,Celaya,1
+198919,,Miguel,Martínez ,,eduardo_mtz12@hotmail.com,,,,2019-11-22 20:02:03,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Del Barranco, #4902 Int: sin_datos",Casi Esquina con pedregal del océano-,Prados de la Silla 1 Sector,Monterrey,Nuevo León,64898,Mexico,,8114137914,8114137914,2019-11-22 19:02:03,0000-00-00,0,4902,sin_datos,1,1,Monterrey,1
+198920,,Ana isabel,Rodriguez,Gonzalez,franahi2011@hotmail.com,,,,2019-11-22 20:02:04,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Plutarco Elías calles, #Mz 1 Int: Lt 60",Saturno-Emiliano Zapata,Novela Mexicana II,Ecatepec de Morelos,México,55268,Mexico,,5548308519,5548308519,2019-11-22 19:02:04,0000-00-00,0,Mz 1,Lt 60,1,1,Ecatepec de Morelos,1
+198921,,René Alejandro,Navarro,López,rene.navarro@outlook.com,,,,2019-11-22 20:02:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"95 ORIENTE, #226 Int: sin_datos",PRIV 2 SUR Y CALLE 4 SUR,Jardines de Bugambilias,Puebla,Puebla,72474,Mexico,,662 / 6621,662 / 6621,2019-11-22 19:02:05,0000-00-00,0,226,sin_datos,1,1,Puebla,1
+198922,,Perla del Rosario ,Valdez,Rosales,malikramvaal@hotmail.com,,,,2019-11-22 20:02:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Estado de Sonora, #230 Int: sin_datos",Estado de Oaxaca-Villa de Ayala,Providencia,Gustavo A. Madero,Ciudad de México,07550,Mexico,,5548805965,5548805965,2019-11-22 19:02:05,0000-00-00,0,230,sin_datos,1,1,Gustavo A. Madero,1
+198923,,victor,diaz,galindo,vdiaz1485@gmail.com,,,,2019-11-22 20:02:06,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Shakespeare ANZURES, #30 Int: 201",leibnitz-,Anzures,Miguel Hidalgo,Ciudad de México,11590,Mexico,,5577112961,5577112961,2019-11-22 19:02:06,0000-00-00,0,30,201,1,1,Miguel Hidalgo,1
+198924,,Carmen ,Díaz  Díaz,,njshdhd@gmail.com,,,,2019-11-22 20:02:07,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle Nabidad  número 2, #2 Int: sin_datos",-,La Quinta,Uruapan,Michoacán de Ocampo,60030,Mexico,,4521023554,4521023554,2019-11-22 19:02:07,0000-00-00,0,2,sin_datos,1,1,Uruapan,1
+198925,,Ivan,Olazaran,Vera,ivanolazaran@hotmail.com,,,,2019-11-22 20:02:07,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Ave Ejército Mexicano Local 101, #503 Int: sin_datos",Pachuca-Jalapa,Guadalupe,Tampico,Tamaulipas,89120,Mexico,,8332902162,8332902162,2019-11-22 19:02:07,0000-00-00,0,503,sin_datos,1,1,Tampico,1
+198926,,Vicente,Moreno,Rodríguez,vmorenor0709@hotmail.com,,,,2019-11-22 20:02:08,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av del ferrocarril, #26 Int: sin_datos",Fresno-Nogal,San José,Chicoloapan,México,56377,Mexico,,55 / 55669,55 / 55669,2019-11-22 19:02:08,0000-00-00,0,26,sin_datos,1,1,Chicoloapan,1
+198927,,jose antonio,camacho,suarez,camachosua@prodigy.net.mx,,,,2019-11-22 20:02:09,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"pedro moreno, #13 Int: 31",francisco I madero y-alfonso cardenas,Zacuautitla,Coacalco de Berriozábal,México,55700,Mexico,,55 / 55317,55 / 55317,2019-11-22 19:02:09,0000-00-00,0,13,31,1,1,Coacalco de Berriozábal,1
+198928,,Jazmín Marisol ,Torres  Muñoz,,marjazt@gmail.com,,,,2019-11-22 20:02:10,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Ejercito nacional 843B, #843b Int: -1",Mollier-Ferrocarril de Cuernavaca,Granada,Miguel Hidalgo,Ciudad de México,11520,Mexico,,5535500982,5535500982,2019-11-22 19:02:10,0000-00-00,0,843b,-1,1,1,Miguel Hidalgo,1
+198929,,EDGAR ANTONIO,ORTIZ,FUENTES,alexey78@hotmail.com,,,,2019-11-22 20:02:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"QUICHES MZ 35, #LT 1 Int: sin_datos",TARASCOS-CHEAQUES,Pedregal de Santa Úrsula Xitla,Tlalpan,Ciudad de México,14438,Mexico,,55 / 55270,55 / 55270,2019-11-22 19:02:12,0000-00-00,0,LT 1,sin_datos,1,1,Tlalpan,1
+198930,,Fatima Lizeth,Martinez,Martinez,fatimamtzmtz@yahoo.com,,,,2019-11-22 20:02:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Boulevard Palmas Hills Torre B, #sn Int: GH1",Torre B Depto GH1-,Valle de las Palmas,Huixquilucan,México,52787,Mexico,,5513041657,5513041657,2019-11-22 19:02:12,0000-00-00,0,sn,GH1,1,1,Huixquilucan,1
+198931,,KARLA GUADALUPE,PAEZ,MARTINEZ,karla_licantropo@hotmail.com,,,,2019-11-22 20:02:13,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"calle fray geronimo de mendoza, #608 Int: sin_datos",secundaria-leandro fernandez,Nombre de Dios Centro,Nombre de Dios,Durango,34840,Mexico,,675 / 6181,675 / 6181,2019-11-22 19:02:13,0000-00-00,0,608,sin_datos,1,1,Nombre de Dios,1
+198932,,J Julián ,Rodríguez ,V,drjjulianrove@hotmail.com,,,,2019-11-22 20:02:13,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Apatzingan, #697 Int: sin_datos",Benito Diaz de Gamarra-Virrey de Mendoza,Jardinadas,Zamora,Michoacán de Ocampo,59680,Mexico,,3318483490,3318483490,2019-11-22 19:02:13,0000-00-00,0,697,sin_datos,1,1,Zamora,1
+198933,,Susana Patricia,Tello,Castilla,paty.tello@gmail.com,,,,2019-11-22 20:02:15,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Tripoli, #799 Int: 1",Zapata-Divisón del Norte,Portales Sur,Benito Juárez,Ciudad de México,03300,Mexico,,55 / 55138,55 / 55138,2019-11-22 19:02:15,0000-00-00,0,799,1,1,1,Benito Juárez,1
+198934,,itzel,montecino,sanchez,itzelsanchez0793@gmail.com,,,,2019-11-22 20:02:16,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"gaviota, #354 Int: sin_datos",mañanitas-rancho grande,Benito Juárez (La Aurora),Nezahualcóyotl,México,57000,Mexico,,5586854558,5586854558,2019-11-22 19:02:16,0000-00-00,0,354,sin_datos,1,1,Nezahualcóyotl,1
+198935,,Rodrigo misael,Gomez,Cano,gomezcanorodrigo@gmail.com,,,,2019-11-22 20:02:16,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"3ra Priv Emilio Carranza, #1 Int: SN",Ramos Millan-Paseo Tlaixco,San Isidro,Melchor Ocampo,México,54882,Mexico,,55 / 55545,55 / 55545,2019-11-22 19:02:16,0000-00-00,0,1,SN,1,1,Melchor Ocampo,1
+198936,,María ,Mijangos  Escudero,,atipul_mcr110@hotmail.com,,,,2019-11-22 20:02:17,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Chilpaya, #186 Int: sin_datos",Aretillo y circuito palmas-,Coyol FOVISSSTE,Veracruz,Veracruz de Ignacio de la Llave,91779,Mexico,,5555555555,5555555555,2019-11-22 19:02:17,0000-00-00,0,186,sin_datos,1,1,Veracruz,1
+198937,,María Jaqueline,Hernández,Mondragón,jack_2807@yahoo.com,,,,2019-11-22 20:02:17,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Sur 115 B, #2405 Int: sin_datos",Oriente 102-Oriente 100 A,Gabriel Ramos Millán Sección Tlacotal,Iztacalco,Ciudad de México,08720,Mexico,,5517041472,5517041472,2019-11-22 19:02:17,0000-00-00,0,2405,sin_datos,1,1,Iztacalco,1
+198938,,Angelica,Delgado,Huerta,alvin.demo@gmail.com,,,,2019-11-22 20:02:18,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"General Álvaro Obregón, #616 Int: sin_datos",El mirador-Plan de ayala,Alto,Encarnación de Díaz,Jalisco,47270,Mexico,,4751035715,4751035715,2019-11-22 19:02:18,0000-00-00,0,616,sin_datos,1,1,Encarnación de Díaz,1
+198939,,ivan,garcia,ruiz,cisarsrg91@gmail.com,,,,2019-11-22 20:02:19,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"PRESA SANTA ROSA, #639 Int: sin_datos",PRESA ESCONDIDA-PRESA SOLIS,San Joaquín,Guadalajara,Jalisco,44770,Mexico,,3324977164,3324977164,2019-11-22 19:02:19,0000-00-00,0,639,sin_datos,1,1,Guadalajara,1
+198940,,Julio,Altamirano,Barrera,altamirano@tec.mx,,,,2019-11-22 20:02:19,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle 16 de Septiembre, #10 Int: sin_datos",Zaragoza-Benjamín Chaparro,Huatabampo Centro,Huatabampo,Sonora,85900,Mexico,,8117788670,8117788670,2019-11-22 19:02:19,0000-00-00,0,10,sin_datos,1,1,Huatabampo,1
+198941,,Anai,Cruz ,Ramirez,anaidenery3@gmail.com,,,,2019-11-22 20:02:20,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle 10 esq. Juan sotos, #1455 Int: sin_datos",-,Pocitos y Rivera,Veracruz,Veracruz de Ignacio de la Llave,91729,Mexico,,2291048346,2291048346,2019-11-22 19:02:20,0000-00-00,0,1455,sin_datos,1,1,Veracruz,1
+198942,,Nancy,Felix,Trapero,aracely_0206@icloud.com,,,,2019-11-22 20:02:20,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Igualdad, #123 Int: sin_datos",Escudo nacional-Símbolos patrios,Diana Laura,La Paz,Baja California Sur,23084,Mexico,,6121008805,6121008805,2019-11-22 19:02:20,0000-00-00,0,123,sin_datos,1,1,La Paz,1
+198943,,Mariana,Oyervides,Tijerina,marianat93do@gmail.com,,,,2019-11-22 20:02:21,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Malvinas, #405 Int: sin_datos",Martinica-Paseo de San Angel,Vista Hermosa,Monterrey,Nuevo León,64620,Mexico,,5555555555,5555555555,2019-11-22 19:02:21,0000-00-00,0,405,sin_datos,1,1,Monterrey,1
+198944,,Jacqueline ,Garcia ,Campos,jackogarciac@gmail.com,,,,2019-11-22 20:02:21,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Alfredo de Musset, #353 Int: sin_datos",Ejército nacional-Homero,Polanco IV Sección,Miguel Hidalgo,Ciudad de México,11550,Mexico,,5569057435,5569057435,2019-11-22 19:02:21,0000-00-00,0,353,sin_datos,1,1,Miguel Hidalgo,1
+198945,,Israel,Vazquez,Cortes,ivc.18k@gmail.com,,,,2019-11-22 20:02:22,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Jesus Carranza, #406 Int: sin_datos",Hidalgo y Juarez-,Centro,Apizaco,Tlaxcala,90300,Mexico,,55 / 55810,55 / 55810,2019-11-22 19:02:22,0000-00-00,0,406,sin_datos,1,1,Apizaco,1
+198946,,Maria Leticia,Arellano,Carrillo,pofygusa@gmail.com,,,,2019-11-22 20:02:22,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Montevideo, #363 Int: sin_datos",N/A,Lindavista,Gustavo A. Madero,CDMX,07300,Mexico,,5543730310,5543730310,2019-11-22 19:02:22,0000-00-00,0,363,sin_datos,1,1,Gustavo A. Madero,1
+198947,,Dante de Jesus,Escareno,Salazar,jesusescareno_85@outlook.com,,,,2019-11-22 20:02:24,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Colibries, #155 Int: sin_datos",Golondrinas-Condores,Portal del Sur,Saltillo,Coahuila de Zaragoza,25093,Mexico,,844 / 8124,844 / 8124,2019-11-22 19:02:24,0000-00-00,0,155,sin_datos,1,1,Saltillo,1
+198948,,Janeth bethzabeth,Martinez,Rico,janeth_bmr@hotmail.com,,,,2019-11-22 20:02:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Prolongación leon garcia, #4109 Int: A",Bulevar Antonio Rocha cordero-Flor de liz,Campestre Juan Silos,San Luis Potosí,San Luis Potosí,78365,Mexico,,5555555555,5555555555,2019-11-22 19:02:25,0000-00-00,0,4109,A,1,1,San Luis Potosí,1
+198949,,Maribel,Martinez,Contreras,marimari12329@gmail.com,,,,2019-11-22 20:02:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Poniente 7 esquina sur 2, #SN Int: SN",Sur 8 y sur 10-Bbva Bancomer centro,Orizaba Centro,Orizaba,Veracruz de Ignacio de la Llave,94300,Mexico,,2722252151,2722252151,2019-11-22 19:02:25,0000-00-00,0,SN,SN,1,1,Orizaba,1
+198950,,Daniela,Garcia,Soriano,dan.garcso@hotmail.com,,,,2019-11-22 20:02:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Unidad habitacional San carlos, #Mod 2 Int: Dep 103",-,El Caracol (Campo Chiquito),Yautepec,Morelos,62737,Mexico,,7351912794,7351912794,2019-11-22 19:02:25,0000-00-00,0,Mod 2,Dep 103,1,1,Yautepec,1
+198951,,Blanca ,Corpus Martínez,,normacm.1801@gmail.com,,,,2019-11-22 20:02:26,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Oro, #115 Int: sin_datos",Niquel-Plata,Nexxus Residencial Sector Dorado,General Escobedo,Nuevo León,66059,Mexico,,8116627739,8116627739,2019-11-22 19:02:26,0000-00-00,0,115,sin_datos,1,1,General Escobedo,1
+198952,,VALERIA,ROBLES,CORONA,valeria_roblesc@hotmail.com,,,,2019-11-22 20:02:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Manuel Gómez Morin y Río rojo, #Sn Int: Sn",Manuel Gómez Morin-Río rojo,El Socorro,Cuautitlán Izcalli,México,54714,Mexico,,55 / 55766,55 / 55766,2019-11-22 19:02:27,0000-00-00,0,Sn,Sn,1,1,Cuautitlán Izcalli,1
+198953,,María Del Pilar ,Guzmán  Figueroa,,pilar.guzmanfa@gmail.com,,,,2019-11-22 20:02:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Sur 9, #225 Int: sin_datos",Oriente 4-Oriente 6,Orizaba Centro,Orizaba,Veracruz de Ignacio de la Llave,94300,Mexico,,2227660945,2227660945,2019-11-22 19:02:27,0000-00-00,0,225,sin_datos,1,1,Orizaba,1
+198954,,Oscar,Marquez,Alvarez,ecosport1974@hotmail.com,,,,2019-11-22 20:02:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Hortencia, #104 Int: sin_datos",Dalia y Barrios-,Hogares Ferrocarrileros,Tlalnepantla de Baz,México,54090,Mexico,,5535517003,5535517003,2019-11-22 19:02:27,0000-00-00,0,104,sin_datos,1,1,Tlalnepantla de Baz,1
+198955,,SILVIA,SERRANO,VELASCO,karenolv.s@hmail.com,,,,2019-11-22 20:02:28,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Universidad, #1000 Int: sin_datos",N/A,General Anaya,Benito Juárez,CDMX,03540,Mexico,,5539727035,5539727035,2019-11-22 19:02:28,0000-00-00,0,1000,sin_datos,1,1,Benito Juárez,1
+198956,,Aline,Carreño ,Aburto ,acarren_1002@hotmail.com,,,,2019-11-22 20:02:28,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Eje 7 A Sur Zapata, #360 Int: E202",Cuauhtémoc-Prolongacion uxmal,Santa Cruz Atoyac,Benito Juárez,Ciudad de México,03310,Mexico,,5522967452,5522967452,2019-11-22 19:02:28,0000-00-00,0,360,E202,1,1,Benito Juárez,1
+198957,,ERNESTO,PEREZ,PEREZ,ing.ernestoprz@gmail.com,,,,2019-11-22 20:02:29,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"AMAPA, #5204 Int: sin_datos",Privada Bruma-Privda Aurora,Las Brisas,Mazatlán,Sinaloa,82133,Mexico,,6691460484,6691460484,2019-11-22 19:02:29,0000-00-00,0,5204,sin_datos,1,1,Mazatlán,1
+198958,,Elizabeth,Pérez,Torres,elizatorres1807@gmail.com,,,,2019-11-22 20:02:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"José María Velasco, #Mz.1 L5 Int: Dep. 26",Lote 4-Canchas de basket ball,Geovillas de Ayotla,Ixtapaluca,México,56566,Mexico,,5510809430,5510809430,2019-11-22 19:02:30,0000-00-00,0,Mz.1 L5,Dep. 26,1,1,Ixtapaluca,1
+198959,,Francisco Javier,Arellano,Lara,javierarellano73@yahoo.com.mx,,,,2019-11-22 20:02:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"San Lorenzo, #106 Int: 401",Av. Insurgentes Sur-Manzanas,Tlacoquemécatl,Benito Juárez,Ciudad de México,03200,Mexico,,5536555431,5536555431,2019-11-22 19:02:30,0000-00-00,0,106,401,1,1,Benito Juárez,1
+198960,,Yanet,Jimenez,Garcia,yanet.jimenez@yahoo.com.mx,,,,2019-11-22 20:02:31,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"12 de octubre, #61 Int: sin_datos",N/A,Moroleón Centro,N/A,Guanajuato,38800,Mexico,,445 / 4451,445 / 4451,2019-11-22 19:02:31,0000-00-00,0,61,sin_datos,1,1,N/A,1
+198961,,EDGAR,CAMPOS,BENITEZ,edgmey@gmail.com,,,,2019-11-22 20:02:32,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Rincón del Roble, #2014 Int: 11",Rincón del Rosal-,Rincón de Otay,Tijuana,Baja California,22450,Mexico,,664 / 6641,664 / 6641,2019-11-22 19:02:32,0000-00-00,0,2014,11,1,1,Tijuana,1
+198962,,Jennyffer priscila,Ibarra,Baltazar,prisscesita_ib@hotmail.com,,,,2019-11-22 20:02:32,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Rey caltzontzin, #474 Int: sin_datos",Naraxan-Vicente Santa María,Félix Ireta,Morelia,Michoacán de Ocampo,58070,Mexico,,443 / 4432,443 / 4432,2019-11-22 19:02:32,0000-00-00,0,474,sin_datos,1,1,Morelia,1
+198963,,Orquidea,Castro,Cortes,orquidea.castro@hotmail.com,,,,2019-11-22 20:02:33,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Andres arrieta, #437 Int: sin_datos",Mariano arrieta-Patria libre,Domingo Arrieta,Durango,Durango,34180,Mexico,,6182211097,6182211097,2019-11-22 19:02:33,0000-00-00,0,437,sin_datos,1,1,Durango,1
+198964,,Alejandro,Gonzalez,,alejandro.glz.rdz@gmail.com,,,,2019-11-22 20:02:33,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Rio Orinoco, #488 Int: a",Rio Tamesis-Rio Bravo Norte,Del Valle,San Pedro Garza García,Nuevo León,66220,Mexico,,8114857684,8114857684,2019-11-22 19:02:33,0000-00-00,0,488,a,1,1,San Pedro Garza García,1
+198965,,VICTOR,BAHENA ,BAHENA,vicangenrgad@hotmail.com,,,,2019-11-22 20:02:34,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Matamoros, #113 Int: sin_datos",Jaras-Aldama,Valle Dorado (San Rafael Chamapa VI),Naucalpan de Juárez,México,53690,Mexico,,5552527029,5552527029,2019-11-22 19:02:34,0000-00-00,0,113,sin_datos,1,1,Naucalpan de Juárez,1
+198966,,Carlos Augusto,Rico,Alegre,ricocarlos579@gmail.com,,,,2019-11-22 20:02:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Loma del rey, #251 Int: sin_datos",Lama feliz-Loma del parque,INFONAVIT Lomas del Valle,Morelia,Michoacán de Ocampo,58170,Mexico,,52 / 44316,52 / 44316,2019-11-22 19:02:35,0000-00-00,0,251,sin_datos,1,1,Morelia,1
+198967,,Elias,Guevara,,treseeli9@gmail.com,,,,2019-11-22 20:02:36,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Minio, #415 Int: sin_datos",Galena-Ciequito olivino,Villas de San Juan,León,Guanajuato,37295,Mexico,,4778646130,4778646130,2019-11-22 19:02:36,0000-00-00,0,415,sin_datos,1,1,León,1
+198968,,yahel,ygotoku,vilchis,gyv01@hotmail.com,,,,2019-11-22 20:02:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Desfiladero, #24 Int: sin_datos",Av. De los valles-Breñal,Atlanta 1a Sección,Cuautitlán Izcalli,México,54740,Mexico,,55 / 55374,55 / 55374,2019-11-22 19:02:37,0000-00-00,0,24,sin_datos,1,1,Cuautitlán Izcalli,1
+198969,,Carmen ,Mejia,Europa,alica_meeu@hotmail.com,,,,2019-11-22 20:02:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Portón, #8 Int: sin_datos",Av. Santa Lucía-Potrero,Colina del Sur,Álvaro Obregón,Ciudad de México,01430,Mexico,,5566043019,5566043019,2019-11-22 19:02:37,0000-00-00,0,8,sin_datos,1,1,Álvaro Obregón,1
+198970,,DALIA LUCIA,GONZALEZ,MONTOYA,dalia_lgm@hotmail.com,,,,2019-11-22 20:02:38,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Becerra y tanco, #247 Int: sin_datos",N/A,Chapalita,N/A,Jalisco,44500,Mexico,,33 / 33106,33 / 33106,2019-11-22 19:02:38,0000-00-00,0,247,sin_datos,1,1,N/A,1
+198971,,Lakeisha Sherazada,Nieves,Chávez,lakeishachavez64@gmail.com,,,,2019-11-22 20:02:38,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Jade, #121 Int: sin_datos",Pizarra-Antiguo camino hacia Jurica,Cosmos (Satelite),Querétaro,Querétaro,76110,Mexico,,4425192025,4425192025,2019-11-22 19:02:38,0000-00-00,0,121,sin_datos,1,1,Querétaro,1
+198972,,Ivan,Ceja,Ceja,goliath_art@hotmail.com,,,,2019-11-22 20:02:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"CALLE TRIGO, #17 Int: sin_datos",AV. TE  Y AVENIDA VAINILLA,Ex-Ejido de La Magdalena Mixiuhca,Iztacalco,Ciudad de México,08010,Mexico,,5526753891,5526753891,2019-11-22 19:02:39,0000-00-00,0,17,sin_datos,1,1,Iztacalco,1
+198973,,Felix Francisco,Rios,Benites,albertor.colin@gmail.com,,,,2019-11-22 20:02:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Prolongacion Emiliano Zapata, #30 Int: sin_datos",Vialidad Adolfo Lopez Mateos-Adolfo Lopez Mateos,San Luis Mextepec,Zinacantepec,México,51355,Mexico,,722 / 7228,722 / 7228,2019-11-22 19:02:39,0000-00-00,0,30,sin_datos,1,1,Zinacantepec,1
+198974,,Sandra Jimena ,Lino Avendaño,,sandrajimena.lino@gmail.com,,,,2019-11-22 20:02:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Heroes Coacalco Calle Panelillos, #Mz 4 Int: LT 25-A",San Francisco-Panelillos,San Francisco Coacalco (Sección Héroes),Coacalco de Berriozábal,México,55712,Mexico,,5554321309,5554321309,2019-11-22 19:02:39,0000-00-00,0,Mz 4,LT 25-A,1,1,Coacalco de Berriozábal,1
+198975,,Irvin,Molina,,lopez45jo@gmail.com,,,,2019-11-22 20:02:40,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"av tecnologico, #17 Int: sin_datos",-,20 de Noviembre,Zacatepec,Morelos,62780,Mexico,,7621142425,7621142425,2019-11-22 19:02:40,0000-00-00,0,17,sin_datos,1,1,Zacatepec,1
+198976,,Modesta maribel,Francisco,Vazquez,cintasgl@aim.com,,,,2019-11-22 20:02:40,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Mar de china, #7a Int: sin_datos",Carrillo purerto-Mar adriatico,Popotla,Miguel Hidalgo,Ciudad de México,11400,Mexico,,5555555555,5555555555,2019-11-22 19:02:40,0000-00-00,0,7a,sin_datos,1,1,Miguel Hidalgo,1
+198977,,Christopher,Vargas,Vargas,christoph13@gmail.com,,,,2019-11-22 20:02:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Ejército Nacional, #980 Int: sin_datos",N/A,Chapultepec Morales,Miguel Hidalgo,CDMX,11510,Mexico,,5529919037,5529919037,2019-11-22 19:02:41,0000-00-00,0,980,sin_datos,1,1,Miguel Hidalgo,1
+198978,,Edwin Anton,Barbosa,Lopez,bale8@hotmail.com,,,,2019-11-22 20:02:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av. Revolucion, #1999 Int: CONTPAQ",José Alvarado-,Buenos Aires,Monterrey,Nuevo León,64800,Mexico,,81 / 81159,81 / 81159,2019-11-22 19:02:41,0000-00-00,0,1999,CONTPAQ,1,1,Monterrey,1
+198979,,Guadalupe,Aguilar,Orozco,krayoli727@gmail.com,,,,2019-11-22 20:02:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Club Excursionista Tacana, #992 Int: MZA 87",Cinematográficas-Cuerpo alpino de México,Lázaro Cárdenas 2da. Sección,Tlalnepantla de Baz,México,54189,Mexico,,722643163,722643163,2019-11-22 19:02:42,0000-00-00,0,992,MZA 87,1,1,Tlalnepantla de Baz,1
+198980,,Patricia,Montes de oca,Valaguez,crusantonio55@gmail.com,,,,2019-11-22 20:02:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Ernesto p uruchurtu, #70 Int: Loc tor",Sta lucia-Esquina Hidalgo,Olivar del Conde 2a Sección,Álvaro Obregón,Ciudad de México,01408,Mexico,,5563357873,5563357873,2019-11-22 19:02:42,0000-00-00,0,70,Loc tor,1,1,Álvaro Obregón,1
+198981,,Jaime gregorio,Gutierrez,Serrano,jggmucho@hotmail.com,,,,2019-11-22 20:02:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Talavera, #4c Int: sin_datos",Jarrones-Bronce,Hacienda las Fuentes 2a. Sección,Puebla,Puebla,72495,Mexico,,5555555555,5555555555,2019-11-22 19:02:43,0000-00-00,0,4c,sin_datos,1,1,Puebla,1
+198982,,Anahí,BECERRA Mora,,anahidelamorac@gmail.com,,,,2019-11-22 20:02:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"General Méndez, #3 Int: B402",Constituyentes-Periférico,Ampliación Daniel Garza,Miguel Hidalgo,Ciudad de México,11840,Mexico,,5560142768,5560142768,2019-11-22 19:02:43,0000-00-00,0,3,B402,1,1,Miguel Hidalgo,1
+198983,,Laura,Torres,,audio_slave.cornell@hotmail.com,,,,2019-11-22 20:02:44,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Paseo de los Alamos, #22 65 Int: 101",Paseo de las haciendas-Paseo de los bosques,San Buenaventura,Ixtapaluca,México,56536,Mexico,,5516994653,5516994653,2019-11-22 19:02:44,0000-00-00,0,22 65,101,1,1,Ixtapaluca,1
+198984,,Erika Azucena,Mejia ,Serrano,erimej234@gmail.com,,,,2019-11-22 20:02:44,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Pino, #7 Int: A",Escalerillas-Tule,Bellavista Puente de Vigas,Tlalnepantla de Baz,México,54080,Mexico,,5514200963,5514200963,2019-11-22 19:02:44,0000-00-00,0,7,A,1,1,Tlalnepantla de Baz,1
+198985,,Hana,Tello,Ventura,hanaventura3321@gmail.com,,,,2019-11-22 20:02:45,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av. Obsidiana, #Edif. V Int: Dep.303",Av. Obsidiana-,Paseos del Mar,Benito Juárez,Quintana Roo,77519,Mexico,,9983930329,9983930329,2019-11-22 19:02:45,0000-00-00,0,Edif. V,Dep.303,1,1,Benito Juárez,1
+198986,,DOMINGO AMADOR,CAMACHO,SANCHEZ,defacmet@msn.com,,,,2019-11-22 20:02:45,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"5 DE FEBRERO, #142 Int: sin_datos",AV INSTITUTO TECNOLOGICO-IGNACIO ZARAGOZA,Bellavista,Metepec,México,52172,Mexico,,722 / 7223,722 / 7223,2019-11-22 19:02:45,0000-00-00,0,142,sin_datos,1,1,Metepec,1
+198987,,Paola,Guerrero,,g_paolag@yahoo.com,,,,2019-11-22 20:02:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Benito Juárez, #153 E17 Int: Dep 201",Mar de la tranquilidad y prol Div Nte-,Jardines de Coyoacán,Coyoacán,Ciudad de México,04890,Mexico,,5541404659,5541404659,2019-11-22 19:02:46,0000-00-00,0,153 E17,Dep 201,1,1,Coyoacán,1
+198988,,Miguel Angel,Carrizales,Ruiz,m.carrizalesruiz@hotmail.es,,,,2019-11-22 20:02:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"carolino anaya, #509 Int: sin_datos",bernado simonin-jose maria caracas,Infonavit Vista al Mar,Coatzacoalcos,Veracruz de Ignacio de la Llave,96529,Mexico,,5555555555,5555555555,2019-11-22 19:02:46,0000-00-00,0,509,sin_datos,1,1,Coatzacoalcos,1
+198989,,Cynthia Alejandra,González,Martínez,skn36@hotmail.com,,,,2019-11-22 20:02:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle bueno, #20 Int: sin_datos",Calle Zaragoza-Calle Xico,Ayotla,Ixtapaluca,México,56560,Mexico,,5555555555,5555555555,2019-11-22 19:02:46,0000-00-00,0,20,sin_datos,1,1,Ixtapaluca,1
+198990,,Zayra lizette,Higuera,Lira,zayralizette@hotmail.com,,,,2019-11-22 20:02:47,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Marina caimán 3 b, #3 b Int: sin_datos",-,El Cid,Mazatlán,Sinaloa,82110,Mexico,,6691064864,6691064864,2019-11-22 19:02:47,0000-00-00,0,3 b,sin_datos,1,1,Mazatlán,1
+198991,,Laura Angélica ,Trujillo Juárez,,lauraangelica_01@hotmail.com,,,,2019-11-22 20:02:47,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"TINUM, #164 Int: sin_datos",Tizmin y Hlacho-,Pedregal de San Nicolás 1A Sección,Tlalpan,Ciudad de México,14100,Mexico,,5531963390,5531963390,2019-11-22 19:02:47,0000-00-00,0,164,sin_datos,1,1,Tlalpan,1
+198992,,Rocío,Hernández,Vigueras,uichtli@hotmail.com,,,,2019-11-22 20:02:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Pames, #103 Int: sin_datos",Xanambres-Pimas,Tezozomoc,Azcapotzalco,Ciudad de México,02459,Mexico,,555 / 5522,555 / 5522,2019-11-22 19:02:48,0000-00-00,0,103,sin_datos,1,1,Azcapotzalco,1
+198993,,Gabriel,Baeza,Pérez,baeza123@outlook.com,,,,2019-11-22 20:02:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Miguel hidalgo, #617 Int: sin_datos",Justo Sierra-Manuel doblado,Cortazar Centro,Cortazar,Guanajuato,38300,Mexico,,411 / 4111,411 / 4111,2019-11-22 19:02:48,0000-00-00,0,617,sin_datos,1,1,Cortazar,1
+198994,,Vanessa,Zempoalteca,Andres,vanessajztiki@hotmail.com,,,,2019-11-22 20:10:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av Hidalgo, #81a Int: sin_datos",Camino viejo a nativitas-,San Lorenzo Atemoaya,Xochimilco,Ciudad de México,16400,Mexico,,5586002866,5586002866,2019-11-22 19:10:50,0000-00-00,0,81a,sin_datos,1,1,Xochimilco,1
+198995,,Lorena ,Zambrano ,Hernandez,rafael69alfaro@gmail.com,,,,2019-11-22 20:10:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Real de loreto, #Mza. 22 Int: Lote. 9",Real de minas-Camino al monte,Geovillas de Costitlán,Chicoloapan,México,56386,Mexico,,5517480474,5517480474,2019-11-22 19:10:50,0000-00-00,0,Mza. 22,Lote. 9,1,1,Chicoloapan,1
+198996,,Juan Pablo ,Ponce de León  Alvarez del castillo,,poncedeleonjuanpablo@gmail.com,,,,2019-11-22 20:10:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lisboa 400, #400 Int: sin_datos",Alemania y Finlandia-,Ampliación Valle Quieto,Morelia,Michoacán de Ocampo,58066,Mexico,,4431639208,4431639208,2019-11-22 19:10:50,0000-00-00,0,400,sin_datos,1,1,Morelia,1
+198997,,Ulises,Acosta,Arjona,ulises.acar16@gmail.com,,,,2019-11-22 20:10:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Dio, #205 Int: sin_datos",pireos-servidumbre,Atenas,Durango,Durango,34235,Mexico,,9991746488,9991746488,2019-11-22 19:10:51,0000-00-00,0,205,sin_datos,1,1,Durango,1
+198998,,Angélica ,Maldonado  Covarrubias,,angiemalcov@gmail.com,,,,2019-11-22 20:10:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Camino Real, #1349 Int: 25",-,El Rosario,Guadalajara,Jalisco,44890,Mexico,,3316043063,3316043063,2019-11-22 19:10:51,0000-00-00,0,1349,25,1,1,Guadalajara,1
+198999,,Carlos Arnulfo,Martinez P ,Perez,elreivax@gmail.com,,,,2019-11-22 20:10:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Periférico Sur, #4690 Int: sin_datos",N/A,Jardines del Pedregal de San Angel,Coyoacán,CDMX,04500,Mexico,,5566739902,5566739902,2019-11-22 19:10:52,0000-00-00,0,4690,sin_datos,1,1,Coyoacán,1
+199000,,Ximena,Rodríguez Pérez,,xime_0715@hotmail.com,,,,2019-11-22 20:10:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Adalberto Tejeda, #10 Int: sin_datos",Justo sierra-Manuel acuña,Alto de Viñas,Pánuco,Veracruz de Ignacio de la Llave,93996,Mexico,,8334291880,8334291880,2019-11-22 19:10:52,0000-00-00,0,10,sin_datos,1,1,Pánuco,1
+199001,,Carolina ,Lozano ,Gallego,caro7903@icloud.com,,,,2019-11-22 20:10:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Km 8 carretera ant xalapa -Coatepec, #437 Int: sin_datos",-,Coatepec Centro,Coatepec,Veracruz de Ignacio de la Llave,91500,Mexico,,2281347283,2281347283,2019-11-22 19:10:52,0000-00-00,0,437,sin_datos,1,1,Coatepec,1
+199002,,MARIA LUISA,ESCOBAR,SNCHEZ,escobarluisa@hotmail.com,,,,2019-11-22 20:10:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Polux, #21 Int: sin_datos",N/A,Prados de Coyoacán,N/A,Ciudad de México,04810,Mexico,,55 / 55434,55 / 55434,2019-11-22 19:10:53,0000-00-00,0,21,sin_datos,1,1,N/A,1
+199003,,Lillian,Dector,Orive,dector37@hotmail.com,,,,2019-11-22 20:10:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"sofocles, #136 Int: 1001",ejercito nacional y homero-2 cuadras pabellon polanco,Polanco II Sección,Miguel Hidalgo,Ciudad de México,11530,Mexico,,5532626130,5532626130,2019-11-22 19:10:53,0000-00-00,0,136,1001,1,1,Miguel Hidalgo,1
+199004,,Lorena,Leon,Batres,loreleonbatres@yahoo.com,,,,2019-11-22 20:10:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Abasolo, #171 Int: sin_datos",Berlin-Viena,Del Carmen,Coyoacán,Ciudad de México,04100,Mexico,,5555555555,5555555555,2019-11-22 19:10:54,0000-00-00,0,171,sin_datos,1,1,Coyoacán,1
+199005,,Alvaro,Gomez,Navarro,alvarogomezn1972@gmail.com,,,,2019-11-22 20:10:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Monte Olimpo, #1419 Int: sin_datos",Sierra Madre-Monte Aconcagua,Independencia Oriente,Guadalajara,Jalisco,44340,Mexico,,3325066611,3325066611,2019-11-22 19:10:54,0000-00-00,0,1419,sin_datos,1,1,Guadalajara,1
+199006,,Celia del Carmen,Cruces,Barajas,celia211090_chiquis@hotmail.com,,,,2019-11-22 20:10:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Protasio Tagle, #132D Int: sin_datos",Gobernador Moran-Gobernador Gelati,San Miguel Chapultepec I Sección,Miguel Hidalgo,Ciudad de México,11850,Mexico,,55 / 55343,55 / 55343,2019-11-22 19:10:55,0000-00-00,0,132D,sin_datos,1,1,Miguel Hidalgo,1
+199007,,Cesar,Carrera,Vazquez,elchicharo_1@hotmail.com,,,,2019-11-22 20:22:31,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av. Plazas de Aragon mz 7 lt 42, #1 Int: sin_datos",Tlacoquemecatl-Fes aragon,Plazas de Aragón,Nezahualcóyotl,México,57139,Mexico,,5580177696,5580177696,2019-11-22 19:22:32,0000-00-00,0,1,sin_datos,1,1,Nezahualcóyotl,1
+199015,,luis,galvan,,lgalvanb19@outlook.es,,,,2019-11-26 16:38:03,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-10-03 12:42:36,,,,"eclipse, #32 Int: 1 2",pluton-meteoro,Ciudad Galaxia los Reyes,Chicoloapan,México,56383,Mexico,,5584752023,5584752023,2019-11-26 15:38:03,0000-00-00,0,32,1 2,1,1,Chicoloapan,1
+199016,,Enrique Francisco,Colorado,Padilla,enriquecolorado8585@gmail.com,,,,2019-11-26 17:00:32,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Madroño, #Mz 11 Lt 7",,Ampliación Lomas de San Bernabé,La Magdalena Contreras,Ciudad de México,10369,México,,5549416061,5549416061,2019-11-26 16:00:32,0000-00-00,0,Mz 11 Lt 7,,1,1,La Magdalena Contreras,1
+199017,,Roberto Amador,Garcés Zenil,Zenil,cambaceocelex@gmail.com,,,,2019-11-26 19:36:24,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Francisco Javier Mina, #Mz 2 Lt 3 Int: Casa 9",Calle José María y Morelos y S/N,Los Héroes,Ixtapaluca,Estado de México,56585,México,,5579909133,5579909133,2019-11-26 18:36:24,0000-00-00,0, Mz 2 Lt 3,Casa 9,1,1,Ixtapaluca,1
+199018,,Cinthia,García,Balderas,cgarciab@celex.com,,,,2019-11-26 19:36:48,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Oriente 233, #70 Int: Apt 401",Av. Sur 4 y Av. Ignacio Zaragoza,Agricola Oriental,Iztacalco,Ciudad de México,08500,México,,5531388377,5531388377,2019-11-26 18:36:48,0000-00-00,0,70,Apt 401,1,1,Iztacalco,1
+199019,,Samuel,Blanco,Rodríguez,blanco.samuel.rodriguez@gmail.com,,,,2019-11-26 19:37:05,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Tacubaya, #331",Petróleos Mexicanos y Av. Pantitlán,General José Vicente Villada,Nezahualcoyotl,Estado de México,57710,México,,5537178623,5537178623,2019-11-26 18:37:05,0000-00-00,0,331,,1,1,Nezahualcoyotl,1
+199020,,Leobardo,López,Carrera,leobardolopez46@gmail.com,,,,2019-11-26 19:38:30,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Dibujantes, #46",Av. Río Churubusco y Físicos,Sifón,Iztapalapa,Ciudad de México,09400,México,,5560137415,5560137415,2019-11-26 18:38:30,0000-00-00,0,46,,1,1,Iztapalapa,1
+199021,,Rafael,Torres,Gil,rafaeltorres351@hotmail.com,,,,2019-11-26 19:39:06,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle 18, #98",Emiliano Zapata y Cda. de Escondida,Esperanza,Nezahualcoyotl,Estado de México,57800,México,,5543382160,5543382160,2019-11-26 18:39:06,0000-00-00,0,98,,1,1,Nezahualcoyotl,1
+199022,,Francisco Javier,Gónzalez,Herrera,franc.ma19@gmail.com,,,,2019-11-26 19:39:35,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"General Manuel Rincón, #96",Agustín Gutiérrez y Bruno Traven,General Anaya,Benito Juárez,Ciudad de México,03340,México,,5539038075,5539038075,2019-11-26 18:39:35,0000-00-00,0,96,,1,1,Benito Juárez,1
+199023,,Jesús,Silva,Olivares,jesus.silva1949@gmail.com,,,,2019-11-26 19:39:55,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle Sur 133, #2204",Av. del Recreo y Ote. 106,Gabriel Ramos Millán,Iztacalco,Ciudad de México,08730,México,,5550573026,5550573026,2019-11-26 18:39:55,0000-00-00,0,2204,,1,1,Iztacalco,1
+199024,,María de Lourdes,Rico,Rivera,lourdes122617@gmail.com,,,,2019-11-26 19:40:13,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av. Fernando 208, #208 Int: 102B",Simón Bolivar y Castilla,Álamos,Beníto Juárez,Ciudad de México,03400,México,,5542956276,5542956276,2019-11-26 18:40:13,0000-00-00,0,208,102B,1,1,Beníto Juárez,1
+199025,,Francisco Guillermo,Sánchez,García,franciscosanchez370@gmail.com,,,,2019-12-04 17:25:44,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle Emiliano Zapata, #Sector 19 Int: Mz 48",Calle Porfirio Díaz y Calle Álvaro Obregón,Héroes Tecámac,Ecatepec de Morelos,Estado de México,55763,México,,5510432961,5510432961,2019-12-04 16:25:45,0000-00-00,0,Sector 19,Mz 48,1,1,Ecatepec de Morelos,1
+199026,,belen,treviño,reyes,belem-18@hotmail.com,,,,2019-12-05 17:58:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av Juarez, #37 Int: 2",2 de abril-Callejón del maestro,San Mateo Tecoloapan,Atizapán de Zaragoza,México,52920,Mexico,,5555555555,5555555555,2019-12-05 16:58:04,0000-00-00,0,37,2,1,1,Atizapán de Zaragoza,1
+199027,,Jaime,Romero,Vallejo,romero.jaime0458@gmail.com,,,,2019-12-06 12:21:32,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle Sotuta, #Mz 98 Lt 5",,Pedregal de San Nicolas Casas,Tlalpan,Ciudad de México,14100,México,,5537228266,5537228266,2019-12-06 11:21:34,0000-00-00,0,Mz 98 Lt 5,,1,1,Tlalpan,1
+199028,,Emilio,Lucas,Martínez,lucasmartinezemilio5@gmail.com,,,,2019-12-09 16:12:17,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Armando Borjón Parga, #6989 Int: 6989",Bulevar Zaragoza-Hiedra,INFONAVIT Juárez Nuevo,Juárez,Chihuahua,32583,Mexico,,6566450761,6566450761,2019-12-09 15:12:17,0000-00-00,0,6989,6989,1,1,Juárez,1
+199029,,Ricardo Alonso , Flores,Torres,ralonso.flores@gmail.com,,,,2019-12-10 12:55:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Privada Miguel Barragán, #1508 Int: sin_datos",J.G. Leal-Héroes del 47,Terminal,Monterrey,Nuevo León,64580,Mexico,,8180114866,8180114866,2019-12-10 11:55:55,0000-00-00,0,1508,sin_datos,1,1,Monterrey,1
+199030,,luis ,galvan,benavides,angelito_1910@hotmail.com,,,,2019-12-10 16:23:15,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"eclipse, #32 Int: 1",pluton-meteoro,Ciudad Galaxia los Reyes,Chicoloapan,México,56383,Mexico,,5584752023,5584752023,2019-12-10 15:23:15,0000-00-00,0,32,1,1,1,Chicoloapan,1
+199031,,José,Gónzalez,Hernández,jose.gonzalez.h19@gmail.com,,,,2019-12-16 12:55:20,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Plan de San Luis, #Mz 1 Lt 5",,Texalpa,Ecatepec de Morelos,Estado de México,55416,México,,5534017198,5534017198,2019-12-16 11:55:20,0000-00-00,0,Mz 1 Lt 5,,1,1,Ecatepec de Morelos,1
+199032,,Yanet ,Morales,Perez,aceptar@claroshop.com,,,,2020-01-15 20:55:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-03-08 10:30:30,,,,"Jacarandas, #12 Int: sin_datos",-,Anáhuac I Sección,Miguel Hidalgo,Ciudad de México,11320,Mexico,,5555555555,5555555555,2020-01-15 19:55:53,0000-00-00,0,12,sin_datos,1,1,Miguel Hidalgo,1
+199033,,Lililana,Palacios,Becerril,lilipalabe@gmail.com,,,,2020-01-22 12:47:13,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Prol Bugambilias, #9 Int: sin_datos",Pino-Fresno,Jardines de Las Ánimas,Xalapa,Veracruz de Ignacio de la Llave,91196,Mexico,,2281073798,2281073798,2020-01-22 11:47:15,0000-00-00,0,9,sin_datos,1,1,Xalapa,1
+199034,,Adelina del Carmen Violeta,Alcántar,Martínez,adelina.alcantar@gmail.com,,,,2020-01-23 20:16:33,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av. Ana de Austria 19, #sin_datos Int: sin_datos",N/A,Urbi Alameda Los Encinos I.II.III,N/A,Sonora,83293,Mexico,,5555555555,5555555555,2020-01-23 19:16:33,0000-00-00,0,sin_datos,sin_datos,1,1,N/A,1
+199035,,FLOR MANUELLA,ABRAJAN,SOSA,fmabrajan@gmail.com,,,,2020-02-04 17:53:32,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Blvd.Stanza Cantabria, #5671 Int: 28",Av. Universo en la Privada Río Escudo-Es la 3 privada del fraccionamiento,Bacurimi,Culiacán,Sinaloa,80301,Mexico,,5555555555,5555555555,2020-02-04 16:53:37,0000-00-00,0,5671,28,1,1,Culiacán,1
+199036,,yeralith,castro,34,sandra.luz.vazquez.lea@gmail.com,,,,2020-02-11 17:36:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"abedules, #81 Int: sin_datos",oriente 7-oriente 8,Antorcha Valle de Chalco,Valle de Chalco Solidaridad,México,56614,Mexico,,5534876051,5534876051,2020-02-11 16:36:42,0000-00-00,0,81,sin_datos,1,1,Valle de Chalco Solidaridad,1
+199037,,Luis Alfredo ,Méndez  Lucero,,kenick.mendez@gmail.com,,,,2020-02-26 12:46:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Canal de Tezontle, #1520 Int: sin_datos",N/A,Dr. Alfonso Ortiz Tirado,Iztapalapa,CDMX,09020,Mexico,,5531598022,5531598022,2020-02-26 11:46:07,0000-00-00,0,1520,sin_datos,1,1,Iztapalapa,1
+199038,,Araceli,Herrera,Cárdenas,hecxo@hotmail.com,,,,2020-03-03 14:08:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Fray Bernardino de Sahagun, #4 Int: 2",Padre Juan Bosco-Fray Francisco de los Angeles,Vasco de Quiroga,Gustavo A. Madero,Ciudad de México,07440,Mexico,,5562561635,5562561635,2020-03-03 13:09:01,0000-00-00,0,4,2,1,1,Gustavo A. Madero,1
+199039,,María Guadalupe,Pichardo,Jaramillo,guadalupe0721@hotmail.com,,,,2020-03-03 14:17:44,0,,0,0,,,,0,NVA,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Mixcalco, #63",Av. Texcoco e Indio triste,Metropolitana 3ra Sección,Nezahualcóyotl,Estado de México,57750,México,,5535105672,5535105672,2020-03-03 13:17:47,0000-00-00,0,63,,1,1,Nezahualcóyotl,1
+199040,,MDaniela,MArtinez,,martha.martinez@claroshop.com,,,,2020-03-04 17:06:24,0,,0,0,,,,0,N/A,,,,,,,,,,,,2023-07-25 18:37:34,,,,"San Luis Potosí, #214 Int: sin_datos",N/A,Roma,Cuauhtémoc,CDMX,06700,Mexico,,5555555555,5555555555,2020-03-04 16:06:24,0000-00-00,0,214,sin_datos,1,1,Cuauhtémoc,1
+199041,,Carolina,Granados,,carolina.granados@claroshop.com,,,,2020-03-04 17:24:15,0,,0,0,,,,0,N/A,,,,,,,,,,,,2024-02-26 19:38:58,,,,"Hualahuises, #LT 420 Int: Mz 25",-,Jardines de Aragún,Juárez,Ciudad de México,07510,Mexico,,5586884177,5586884177,2020-03-04 16:24:15,0000-00-00,0,LT 420,Mz 25,1,1,Gustavo A. Madero,1
+199042,,Elba,Vega,Goiz,evegagoiz@hotmail.com,,,,2020-03-04 17:27:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Odesa, #917 Int: 306",Eje 8 sur-Pirineos,Portales Sur,Benito Juárez,Ciudad de México,03300,Mexico,,5512580956,5512580956,2020-03-04 16:27:05,0000-00-00,0,917,306,1,1,Benito Juárez,1
+199043,,Rafael,Aguirre,Mendoza,aguirrer@sanborns.com.mx,,,,2020-03-04 18:40:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich 245 Ed Presa Falcon, #Piso 8 Int: sin_datos",Presa Falcon-Miguel de Cervantes Saavedra,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5591980290,5591980290,2020-03-04 17:40:37,0000-00-00,0,Piso 8,sin_datos,1,1,Miguel Hidalgo,1
+199044,,Yazz,Herappe,Mellado,yazzherappe@hotmail.com,,,,2020-03-04 19:00:19,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"BALBOA 608 DEPTO B501 COL PORTALES, #608 Int: B501",-,Portales Sur,Benito Juárez,Ciudad de México,03300,Mexico,,5554180817,5554180817,2020-03-04 18:00:19,0000-00-00,0,608,B501,1,1,Benito Juárez,1
+199048,,ANA LUCIA,MUÑOZ,RANGEL,ana_mrangel@hotmail.com,,,,2020-03-06 17:57:10,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Universidad, #1000 Int: sin_datos",N/A,General Anaya,Benito Juárez,CDMX,03540,Mexico,,5555555555,5555555555,2020-03-06 16:57:11,0000-00-00,0,1000,sin_datos,1,1,Benito Juárez,1
+199049,,Ivan,Benitez,be,benitez11@hotmail.com,,,,2020-03-06 21:26:13,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"lago zurich, #245 Int: sin_datos",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5555555555,5555555555,2020-03-06 20:26:13,0000-00-00,0,245,sin_datos,1,1,Miguel Hidalgo,1
+199050,,Mirna,Carbajal Pacheco,,mircarbajal@gmail.com,,,,2020-03-10 13:41:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Universidad, #1000 Int: sin_datos",N/A,General Anaya,Benito Juárez,CDMX,03540,Mexico,,5539845750,5539845750,2020-03-10 11:41:55,0000-00-00,0,1000,sin_datos,1,1,Benito Juárez,1
+199051,,Carlos,Ramos,,test@auditoria.com,,,,2020-03-11 14:12:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: 145",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5555555555,5555555555,2020-03-11 12:12:02,0000-00-00,0,245,145,1,1,Miguel Hidalgo,1
+199052,,MERCEDES,GARCIA VELTEN GARCIA,VELTEN,mechon15@yahoo.com.mx,,,,2020-03-12 14:44:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Mercaderes, #162 Int: 502",revolucion-sagredo,San José Insurgentes,Benito Juárez,Ciudad de México,03900,Mexico,,5518851097,5518851097,2020-03-12 12:44:50,0000-00-00,0,162,502,1,1,Benito Juárez,1
+199053,,gerardo,bautista,hernández,gerbautistahernandez@gmail.com,,,,2020-03-12 14:51:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,2020-07-28 18:31:40,,,,"churubusco, #117 Int: sin_datos",escalerillas-indio triste,Metropolitana Tercera Sección,Nezahualcóyotl,México,57750,Mexico,,5523092465,5523092465,2020-03-12 12:51:41,0000-00-00,0,117,sin_datos,1,1,Nezahualcóyotl,1
+199054,,Esther,Baqueiro,Olbera,vaqueiroesther@gmail.com,,,,2020-03-12 14:54:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Desierto central, #1193 Int: sin_datos",Miramar y punta de canoas-Fraccionamiento san felipe,San Felipe,Torreón,Coahuila de Zaragoza,27085,Mexico,,6567724336,6567724336,2020-03-12 12:54:28,0000-00-00,0,1193,sin_datos,1,1,Torreón,1
+199055,,Iris Anahi,Vega,Rangel,iris_anahi30@hotmail.com,,,,2020-03-17 22:51:58,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Hacienda de pasteje, #17 Int: sin_datos",-,Bosque de Echegaray,Naucalpan de Juárez,México,53310,Mexico,,55 / 55541,55 / 55541,2020-03-17 20:52:01,0000-00-00,0,17,sin_datos,1,1,Naucalpan de Juárez,1
+199056,,Valeria,Garcia,Xx,valeria.garcia@claroshop.com,,,,2020-03-18 14:12:47,0,,0,0,,,,0,N/A,,,,,,,,,,,,2022-01-11 13:02:10,,,,"ampliacion granada, #321 Int: sin_datos",panico-,Cuauhtémoc,Cuauhtémoc,Ciudad de México,06500,Mexico,,5512345259,5512345259,2020-03-18 12:12:47,0000-00-00,0,321,sin_datos,1,1,Cuauhtémoc,1
+199057,,carlos,ramos,flores,carlos.ramos@claroshop.com,,,,2020-03-18 18:44:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-07-13 18:46:36,,,,"Lago ZuricH, #245 Int: sin_datos",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5555555555,5555555555,2020-03-18 16:44:35,0000-00-00,0,245,sin_datos,1,1,Miguel Hidalgo,1
+199058,,Arturo,Mares,Luna,seramal17@gmail.com,,,,2020-03-23 11:23:09,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida 1 de mayo, #Lote 2 Mz Int: sin_datos",N/A,Jardines de Morelos 5a sección,Ecatepec,Estado de México,55075,Mexico,,55 / 55104,55 / 55104,2020-03-23 09:23:13,0000-00-00,0,Lote 2 Mz ,sin_datos,1,1,Ecatepec,1
+199059,,Ricardo,Romero,Uscanga,gracoosir@gmail.com,,,,2020-03-23 11:24:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"San Luis Potosí, #214 Int: sin_datos",N/A,Roma,Cuauhtémoc,CDMX,06700,Mexico,,5585817819,5585817819,2020-03-23 09:24:16,0000-00-00,0,214,sin_datos,1,1,Cuauhtémoc,1
+199060,,Javier,Garcia,Diaz,garciaja.diaz@gmail.com,,,,2020-03-23 11:33:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle 6 Manzana 3 Lote 13, #Lote 13 Int: sin_datos",Calle 1-Calle 9,La Magdalena,Ixtapaluca,México,56539,Mexico,,55 / 55613,55 / 55613,2020-03-23 09:33:44,0000-00-00,0,Lote 13,sin_datos,1,1,Ixtapaluca,1
+199061,,Norma Patricia,Nuño ,Ornelas,normapatricia.nuno@gmail.com,,,,2020-03-23 11:43:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Rio volga, #1325 Int: sin_datos",Rio tamesis-Cerrada,Atlas,Guadalajara,Jalisco,44870,Mexico,,3318922553,3318922553,2020-03-23 09:43:33,0000-00-00,0,1325,sin_datos,1,1,Guadalajara,1
+199062,,Marta Ester,Alvarez,Lope,alvarez580809@hotmail.com,,,,2020-03-23 11:45:44,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"AV CEREZOS, #171 Int: sin_datos",ALAMOS Y-ESCONDIDA,La Perla,Nezahualcóyotl,México,57820,Mexico,,5521760335,5521760335,2020-03-23 09:45:50,0000-00-00,0,171,sin_datos,1,1,Nezahualcóyotl,1
+199063,,Juan Octavio,Manriquez,Rodriguez,simpson1jc@hotmail.com,,,,2020-03-23 11:46:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Eucalipto, #3288 Int: sin_datos",Arce-Peral,Bajada de San Martín,Irapuato,Guanajuato,36555,Mexico,,4622379302,4622379302,2020-03-23 09:46:40,0000-00-00,0,3288,sin_datos,1,1,Irapuato,1
+199064,,María Isabel,Rodríguez,Roca,arq.maria.rdz@hotmail.com,,,,2020-03-23 11:47:20,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"45, #195 Int: sin_datos",16 Y 18-,Pet-kanche,Mérida,Yucatán,97145,Mexico,,999 / 9991,999 / 9991,2020-03-23 09:47:24,0000-00-00,0,195,sin_datos,1,1,Mérida,1
+199065,,Lizeth,Caldela,Hernandez,liz_hernandez5@hotmail.com,,,,2020-03-23 11:48:01,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"35, #20 Int: sin_datos",18-20,Venustiano Carranza,Boca del Río,Veracruz de Ignacio de la Llave,94297,Mexico,,2291384426,2291384426,2020-03-23 09:48:04,0000-00-00,0,20,sin_datos,1,1,Boca del Río,1
+199066,,Adelaido I.,Matias,Dominguez,i_md70@hotmail.com,,,,2020-03-23 12:31:21,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Palacio de Iturbide, #112 Int: sin_datos",escalerillas-Indio triste,Metropolitana Segunda Sección,Nezahualcóyotl,México,57740,Mexico,,5555555555,5555555555,2020-03-23 10:31:23,0000-00-00,0,112,sin_datos,1,1,Nezahualcóyotl,1
+199067,,Zein,Gomez,Robles,zeingomezrobles17@gmail.com,,,,2020-03-23 12:32:09,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Col. El castaño 19, #Col: 19 Int: Col:16",Circunvalacion-Jacaranda,El Castaño,Macuspana,Tabasco,86708,Mexico,,9361171223,9361171223,2020-03-23 10:32:11,0000-00-00,0,Col: 19,Col:16,1,1,Macuspana,1
+199068,,Ivonne,Pintor,Benitez,difojitos@hotmail.com,,,,2020-03-25 13:35:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"San Raul, #578 Int: Lt 17",San Benito-Macario,Pedregal de Santa Úrsula,Coyoacán,Ciudad de México,04600,Mexico,,5545039429,5545039429,2020-03-25 11:35:12,0000-00-00,0,578,Lt 17,1,1,Coyoacán,1
+199069,,luis,galvan,benavides,luis.galvan@claroshop.com,,,,2020-03-25 14:38:04,0,,0,0,,,,0,N/A,,,,,,,,,,,,2022-11-29 11:32:15,,,,"Eclipse, #32 Int: 1 2",pluton-meteoro,Ciudad Galaxia los Reyes,Chicoloapan,México,56383,Mexico,,5584752023,5584752023,2020-03-25 12:38:04,0000-00-00,0,32,1 2,1,1,Chicoloapan,1
+199070,,Andrea Estefanía,Morales,Mendoza,an.dy_morales@hotmail.com,,,,2020-03-27 12:48:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago gascasonica, #224 Int: sin_datos",Lago tana-Lago managua,Huíchapan,Miguel Hidalgo,Ciudad de México,11290,Mexico,,5534794350,5534794350,2020-03-27 10:48:35,0000-00-00,0,224,sin_datos,1,1,Miguel Hidalgo,1
+199071,,Alejandro Valentin,Alvarado,Rodriguez,avalentinalvrdz@gmail.com,,,,2020-03-27 12:58:04,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Alpes, #719 Int: 719",Himalaya-Sierra Morena,Francisco Garza Sada,San Nicolás de los Garza,Nuevo León,66490,Mexico,,8180741038,8180741038,2020-03-27 10:58:06,0000-00-00,0,719,719,1,1,San Nicolás de los Garza,1
+199072,,Daniel,Garcia,Rivas,dansmoking@gmail.com,,,,2020-03-27 12:58:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"nueces, #221 Int: sin_datos",prueba-prueba,Nueva Santa María,Azcapotzalco,Ciudad de México,02800,Mexico,,5534256987,5534256987,2020-03-27 10:58:26,0000-00-00,0,221,sin_datos,1,1,Azcapotzalco,1
+199073,,jorge,Ramírez,martinez,mac311009@hotmail.com,,,,2020-03-27 12:58:44,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"callejon de Guadalupe victoria, #114 Int: sin_datos",guadalupe victoria-huzarez,Oaxaca,Oaxaca de Juárez,Oaxaca,68000,Mexico,,9513797966,9513797966,2020-03-27 10:58:47,0000-00-00,0,114,sin_datos,1,1,Oaxaca de Juárez,1
+199074,,Miguel angel,Toledo,Flores,migueltf2006@hotmail.com,,,,2020-03-27 12:59:03,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Primera cerrada del mirador, #16 Int: sin_datos",prolongacion abasolo-caoba,Fuentes de Tepepan,Tlalpan,Ciudad de México,14643,Mexico,,5555555555,5555555555,2020-03-27 10:59:08,0000-00-00,0,16,sin_datos,1,1,Tlalpan,1
+199075,,mar,cordoba,chi,marcordovachi@gmail.com,,,,2020-03-27 12:59:32,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"calle hopelchen, #27 Int: sin_datos",tulum y chancala-mar cordoba chi,20 de Noviembre,Campeche,Campeche,24085,Mexico,,9999237289,9999237289,2020-03-27 10:59:36,0000-00-00,0,27,sin_datos,1,1,Campeche,1
+199076,,cristian luis,briones,oros,horusbrioneslm@gmail.com,,,,2020-03-27 12:59:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"lago de chapala, #1 Int: sin_datos",lago de chapala-lago de texcoco,Cantaros III,Nicolás Romero,México,54416,Mexico,,5567060109,5567060109,2020-03-27 10:59:46,0000-00-00,0,1,sin_datos,1,1,Nicolás Romero,1
+199077,,Gabriela,Escobar,Tapia,sydney_princess06@hotmail.com,,,,2020-03-27 13:00:19,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Blvd jardín de las orquídeas, #1621 Int: sin_datos",Blvd Salvador Alvarado-,Colinas de La Rivera,Culiacán,Sinaloa,80025,Mexico,,6671268797,6671268797,2020-03-27 11:00:28,0000-00-00,0,1621,sin_datos,1,1,Culiacán,1
+199078,,Maritza,Araujo,Hernandez,maritza.ara.her@gmail.com,,,,2020-03-27 13:00:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Morelos, #26 Int: sin_datos",20 de noviembre-Puerto La Paz,Bajamar,Ensenada,Baja California,22760,Mexico,,6461629042,6461629042,2020-03-27 11:00:43,0000-00-00,0,26,sin_datos,1,1,Ensenada,1
+199079,,Adriana,Horta,Zárate,adrianahortazarate@gmail.com,,,,2020-04-07 14:24:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Unidad del seguro social, #12 Int: 13",10-14,IMSS Tlalnepantla,Tlalnepantla de Baz,México,54030,Mexico,,5521705807,5521705807,2020-04-07 13:24:36,0000-00-00,0,12,13,1,1,Tlalnepantla de Baz,1
+199080,,Ruben,Alcocer,Hitss,ruben.alcocer@claroshop.com,,,,2020-04-08 18:44:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-01-13 10:46:48,,,,"aquiles serdan, #24 Int: 402",-,Las Trancas,Azcapotzalco,Ciudad de México,02450,Mexico,,5555555555,5555555555,2020-04-08 17:44:23,0000-00-00,0,24,402,1,1,Azcapotzalco,1
+199081,,Julio ,Carbajal,Guadarrama,carbajal.dev@sears.com,,,,2020-05-18 15:37:38,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle Uno, #12 Int: 1",Principal-Secundari,Ampliación Ejidal San Isidro,Cuautitlán Izcalli,México,54763,Mexico,,7223668877,7223668877,2020-05-18 14:37:38,0000-00-00,0,12,1,1,1,Cuautitlán Izcalli,1
+199082,,Julio,Carbajal,Guadarrama,apicreditosears@dev.com,,,,2020-05-25 14:04:22,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Uno, #1 Int: 1",Mexico-1,Chimalpa,Acolman,México,55885,Mexico,,7223664455,7223664455,2020-05-25 13:04:22,0000-00-00,0,1,1,1,1,Acolman,1
+199085,,MARIA DEL CARMEN,ORTIZ,ISLAS,maricarmen@americamovil.com,,,,2020-05-25 14:16:43,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"FRAMBOYANES, #39 Int: sin_datos",AILES Y FRESNOS-,Jardines de San Mateo,Naucalpan de Juárez,México,53240,Mexico,,5549524322,5549524322,2020-05-25 13:16:45,0000-00-00,0,39,sin_datos,1,1,Naucalpan de Juárez,1
+199086,,laura,arellano,castañeda,arellanolaura280@yahoo.com,,,,2020-05-28 13:51:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Av Prol del colli, #1637 Int: sin_datos",ahuehuete-casuarina,Paraísos Del Colli,Zapopan,Jalisco,45069,Mexico,,3314581762,3314581762,2020-05-28 12:51:29,0000-00-00,0,1637,sin_datos,1,1,Zapopan,1
+199087,,Luis,Zamora,,luisangelzamo18@gmail.com,,,,2020-06-04 14:39:15,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Hda de la puntada, #6A Int: sin_datos",-,Lomas de La Hacienda,Atizapán de Zaragoza,México,52925,Mexico,,5555555555,5555555555,2020-06-04 13:39:15,0000-00-00,0,6A,sin_datos,1,1,Atizapán de Zaragoza,1
+199088,,Luis,Zamora,,luisangelzamo@hotmail.com,,,,2020-06-05 10:08:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Hda de la puntada, #6A Int: sin_datos",Hda de San miguel-Lomas de la Hacienda,Lomas de La Hacienda,Atizapán de Zaragoza,México,52925,Mexico,,5555555555,5555555555,2020-06-05 09:08:51,0000-00-00,0,6A,sin_datos,1,1,Atizapán de Zaragoza,1
+199089,,roberto,sanchez,,eximus2001@yahoo.com.mx,,,,2020-06-12 14:57:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Eduardo Vasconcelos, #100 Int: sin_datos",Mariano Jiménez-Niños héroes,1a Ampliación de Xoxo,Santa Cruz Xoxocotlán,Oaxaca,71233,Mexico,,5555555555,5555555555,2020-06-12 13:57:50,0000-00-00,0,100,sin_datos,1,1,Santa Cruz Xoxocotlán,1
+199090,,karla,zarate,,kzarate75@hotmail.com,,,,2020-06-12 15:30:32,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"lluvia, #450 Int: 8",agua-av de las fuentes,Jardines del Pedregal,Álvaro Obregón,Ciudad de México,01900,Mexico,,5530451257,5530451257,2020-06-12 14:30:35,0000-00-00,0,450,8,1,1,Álvaro Obregón,1
+199091,,Ana,Hernandez,Hernandez,nu3vas.c0mpras@hotmail.com,,,,2020-06-15 17:07:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: sin_datos",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,7745896524,7745896524,2020-06-15 16:07:50,0000-00-00,0,245,sin_datos,1,1,Miguel Hidalgo,1
+199092,,Carlos,Ramos,,rcarlosasesor@gmail.com,,,,2020-06-17 10:24:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Tonantzin, #48 Int: B402",Nopalztin-Nezahualpilli,Tlaxpana,Miguel Hidalgo,Ciudad de México,11370,Mexico,,55 / 55252,55 / 55252,2020-06-17 09:25:01,0000-00-00,0,48,B402,1,1,Miguel Hidalgo,1
+199093,,Carolina,QA,,caro_granados@live.com,,,,2020-06-17 21:44:14,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: sin_datos",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5586884177,5586884177,2020-06-17 20:44:14,0000-00-00,0,245,sin_datos,1,1,Miguel Hidalgo,1
+199094,,Maritza ,Arreguín,Sánchez,marecursosh@gmail.com,,,,2020-07-28 20:03:14,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Priv. Zirahuen, #23 Int: sin_datos",Mar y lluvia-,Manantiales del Curutarán,Jacona,Michoacán de Ocampo,59835,Mexico,,5555555555,5555555555,2020-07-28 19:03:18,0000-00-00,0,23,sin_datos,1,1,Jacona,1
+199095,,Tania ,Hernandez ,,tany_jul@hotmail.com,,,,2020-07-28 20:24:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Campillo, #106 Int: sin_datos",Jose Maria iglesias-Rio salado,Altavista Juárez,Heroica Ciudad de Huajuapan de León,Oaxaca,69005,Mexico,,9531872042,9531872042,2020-07-28 19:24:10,0000-00-00,0,106,sin_datos,1,1,Heroica Ciudad de Huajuapan de León,1
+199096,,Edgar,Hernandez,Tapia,sears-tapia@outlook.com,,,,2020-08-28 12:08:50,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: Piso 7",Presa Flacón-Miguel de Cervantes Saavedra,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5524222390,5524222390,2020-08-28 11:08:50,0000-00-00,0,245,Piso 7,1,1,Miguel Hidalgo,1
+199097,,Giovanni Edgar,Hernandez,Tapia,edgar.hernandez@claroshop.com,,,,2020-08-28 15:03:28,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: Piso 7",Presa Falcón-Miguel de Cervantes Saavedra,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5524222390,5524222390,2020-08-28 14:03:28,0000-00-00,0,245,Piso 7,1,1,Miguel Hidalgo,1
+199098,,Gustavo ,Saldaña,Bautista,gustavo.saldana@claroshop.com,,,,2020-08-28 16:36:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"2a cda de hortensia, #mz57 Int: lt94",Cardos-Hortensia,Miguel Hidalgo,Tlalpan,Ciudad de México,14250,Mexico,,5555555555,5555555555,2020-08-28 15:36:23,0000-00-00,0,mz57,lt94,1,1,Tlalpan,1
+199099,,Edgar,Hernandez,Tapia,sears.pruebas@gmail.com,,,,2020-08-28 16:45:22,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Zurich, #245 Int: Piso 9",Presa Falcón-Miguel de Cervantes Saavedra,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5524222390,5524222390,2020-08-28 15:45:22,0000-00-00,0,245,Piso 9,1,1,Miguel Hidalgo,1
+199100,,Gustavo,Saldaña,Bautista,prueba.snb@outlook.com,,,,2020-08-28 16:48:14,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"2a cda de Hortensia, #mz57 Int: lt94",Cardos-Hortensia,Miguel Hidalgo,Tlalpan,Ciudad de México,14250,Mexico,,5555555555,5555555555,2020-08-28 15:48:14,0000-00-00,0,mz57,lt94,1,1,Tlalpan,1
+199101,,Israel,Lozano,NAgarcia ,lozano.ilg@gmail.com,,,,2020-09-02 17:47:01,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Real de Montroy, #336 Int: 0",Real de peten-Orquideas,Lomas de La Higuera,Villa de Álvarez,Colima,28979,Mexico,,5555555555,5555555555,2020-09-02 16:47:02,0000-00-00,0,336,0,1,1,Villa de Álvarez,1
+199102,,Carlos ,Cruz,Cuvillos,carlos.cruz@claroshop.com,,,,2020-09-14 21:46:00,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-07-13 18:46:24,,,,"Ermita, #1518 Int: H104",-,Lomas de la Estancia,Iztapalapa,Ciudad de México,09640,Mexico,,5519482994,5519482994,2020-09-14 20:46:00,0000-00-00,0,1518,H104,1,1,Iztapalapa,1
+199103,,César,Vázquez,Ortíz,cuentasears01@gmail.com,,,,2020-09-17 20:49:15,0,,0,0,,,,0,N/A,,,,,,,,,,,,2022-09-14 17:47:42,,,,"Principal, #98 Int: 3",Principal-Sección IV,Chapultepec,Creel,Chihuahua,33200,Mexico,,5521212121,5521212121,2020-09-17 19:49:15,0000-00-00,0,98,3,1,1,Creel,1
+199104,,Julio,Carbajal,Guadarrama,cyrcontador@sears.dev,,,,2020-09-30 12:20:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Ejército Nacional, #980 Int: sin_datos",N/A,Chapultepec Morales,Miguel Hidalgo,CDMX,11510,Mexico,,7223558877,7223558877,2020-09-30 11:20:55,0000-00-00,0,980,sin_datos,1,1,Miguel Hidalgo,1
+199105,,eder,gonzalez,garcia,ederglz.cicsa@gmail.com,,,,2020-10-28 11:34:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"ocampo, #108 Int: 108",N/A,Emilio Carranza,N/A,Tamaulipas,89540,Mexico,,833 / 8333,833 / 8333,2020-10-28 09:35:01,0000-00-00,0,108,108,1,1,N/A,1
+199106,,SERGIO,PACHECO,CHAVEZ,pachecheco@yahoo.com.mx,,,,2020-10-28 11:37:10,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Escuela Naval militar, #13 Int: 402",Andador 6 paseo chico-Paseo de los naranjos,Paseos de Taxqueña,Coyoacán,Ciudad de México,04250,Mexico,,8110340098,8110340098,2020-10-28 09:37:10,0000-00-00,0,13,402,1,1,Coyoacán,1
+199107,,Alejandro,Solis,Patiño,alexsolisp@hotmail.com,,,,2020-11-12 13:35:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"67C, #514 Int: sin_datos",66 Y 68-PRIVADA CAMPOCIELO,Royal del Parque,Mérida,Yucatán,97302,Mexico,,9997379917,9997379917,2020-11-12 12:37:08,0000-00-00,0,514,sin_datos,1,1,Mérida,1
+203168,,MIGUEL ANGEL,CEBALLOS,ILLESCAS,mceballosillescas@hotmail.com,,,,2019-08-01 18:51:41,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+206770,,Noemi,luis,perez,noemi.luisp@hotmail.com,,,,2019-08-09 23:32:35,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+208785,,Julian,Carranza ,Solorio,julian.carr_18@hotmail.com,,,,2019-08-12 20:55:29,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+210796,,diego alberto,gonzalez,de paz,vanfrieden@hotmail.com,,,,2019-08-17 11:57:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-08-30 17:16:48,,,,,,,,,,,,,,,,,,,,,,
+235995,,maria,vazquez,del valle,mariadevalle@yahoo.com,,,,2019-10-12 21:48:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+240039,,Jesus Francisco,Ojeda,Rodríguez,jesus.ojeda.r@gmail.com,,,,2019-10-21 09:48:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+247441,,ROSA ISELA,VELAZQUEZ,PEREZ,huertadela@gmail.com,,,,2019-11-08 10:28:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+251453,,Edgar allan,Garcia,Ramos,allangarciar@yahoo.com,,,,2019-11-15 09:14:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-01-06 21:32:49,,,,,,,,,,,,,,,,,,,,,,
+258896,,MARIA,CONTRERAS,LAMAS,aracelycontreras@gmail.com,,,,2019-11-17 17:15:18,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-09-26 17:53:07,,,,,,,,,,,,,,,,,,,,,,
+264834,,Alberto ,Aguilar,H,alberto_ah@hotmail.com,,,,2019-11-18 21:20:49,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+270631,,eduardo,canales,gutierrez,eduardo.canales.g@hotmail.com,,,,2019-11-29 21:35:29,0,,0,0,,,,0,N/A,,,,,,,,,,,,2026-03-06 11:57:18,,,,,,,,,,,,,,,,,,,,,,
+275632,,GUILLERMO,ROJAS,PEREZ,sanderoj@hotmail.es,,,,2019-12-06 12:57:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+293077,,Fernando,Jimenez,Maldonado,fernandojm@live.com.mx,,,,2019-12-31 14:59:00,0,,0,0,,,,0,N/A,,,,,,,,,,,,2020-05-23 11:54:13,,,,,,,,,,,,,,,,,,,,,,
+297801,,MARIA FELIX,DAVILA,GARCIA,porsiempreaprendo@gmail.com,,,,2020-01-07 23:58:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,2026-04-04 03:07:33,,,,,,,,,,,,,,,,,,,,,,
+308159,,Josué jesus,Castillo,Nuñez,joshkazz89@gmail.com,,,,2020-02-03 00:09:26,0,,0,0,,,,0,N/A,,,,,,,,,,,,2026-03-24 22:59:43,,,,,,,,,,,,,,,,,,,,,,
+312906,,Pedro javier,Campos,Hernandez,pcampox04@gmail.com,,,,2020-02-15 14:29:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-09-06 12:52:10,,,,,,,,,,,,,,,,,,,,,,
+321639,,eduardo,velasquillo,herrera,evelas7@yahoo.com,,,,2020-03-11 10:18:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-05-04 14:09:02,,,,,,,,,,,,,,,,,,,,,,
+327526,,Irene ,Vargas,Campos,varirene@hotmail.com,,,,2020-03-26 22:21:18,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+328904,,Rosa De Jesus,Munoz,Resendes,zsarelem@hotmail.com,,,,2020-03-29 15:17:24,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-08-17 14:05:26,,,,,,,,,,,,,,,,,,,,,,
+378227,,CONCEPCION,LOPEZ,PADILLA,lbs_connie@hotmail.com,,,,2020-05-06 20:37:37,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+389918,,Carmen,Borrego,Perez,maestra_borrego@yahoo.com.mx,,,,2020-05-12 19:57:20,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+420763,,GABRIELA,RAMIREZ,PACHECO,gabiirp@hotmail.com,,,,2020-05-23 10:49:36,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-09-28 18:04:36,,,,,,,,,,,,,,,,,,,,,,
+442735,,Ruben,Diaz,Contreras,mariaesmeraldadiaz293@gmail.com,,,,2020-05-26 13:07:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+446043,,Maria esther,Moreno,Armendariz,tmoreno_armendariz@hotmail.com,,,,2020-05-26 22:18:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+459510,,Lizeth guadalupe,Guerrero,Guerra,guerrerolizeth1998@gmail.com,,,,2020-05-29 16:36:16,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+474989,,Noemi,Jiménez,López,noemi-jimenez.08@live.com.mx,,,,2020-05-31 21:40:48,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+483258,,Juana,Martinez,Sanchez,scoit2006@gmail.com,,,,2020-06-01 22:48:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+489740,,SENDY PATRICIA,DE LEON,RIVAS,sendydeleon@yahoo.com,,,,2020-06-03 23:58:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-09-22 19:10:52,,,,,,,,,,,,,,,,,,,,,,
+507442,,ELIZABETH,HERNANDEZ,HERNANDEZ,elyhdpruebas@pruebas.com,,,,2020-06-11 12:19:13,0,,0,0,,,,0,N/A,,,,,,,,,,,,2020-12-08 14:05:52,,,,,,,,,,,,,,,,,,,,,,
+507443,,Julio Enrique,Carbajal,Guadarrama,carbajal@se.com,,,,2021-01-07 11:56:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Boulevard Miguel Aleman 109, #109 Int: sin_datos",Miguel Aleman-,Álvaro Obregón,San Mateo Atenco,México,52105,Mexico,,7223668375,7223668375,2021-01-07 10:56:12,0000-00-00,0,109,sin_datos,1,1,San Mateo Atenco,1
+507444,,Ana Karen ,Avila,Monzon,anakrn_2389@hotmail.com,,,,2021-01-08 19:00:28,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Transmisiones Militares, #30 Int: sin_datos",N/A,Fraccionamiento Industrial Naucalpan,Naucalpan,Estado de México,11260,Mexico,,5532015969,5532015969,2021-01-08 18:00:29,0000-00-00,0,30,sin_datos,1,1,Naucalpan,1
+507445,,Alejandra,Perez,Prueba,alejandra.perez@claroshop.com,,,,2021-02-12 16:56:21,0,,0,0,,,,0,N/A,,,,,,,,,,,,2022-06-03 17:07:28,,,,"Lago Zurich, #245 Int: sin_datos",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5555555555,5555555555,2021-02-12 15:56:21,0000-00-00,0,245,sin_datos,1,1,Miguel Hidalgo,1
+507446,,César ,Vázquez,Ortíz,cesar.vazquez@claroshop.com,,,,2021-02-17 13:04:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Legaria, #823 Int: 8",Reforma-Palmas,Chapultepec,Bocoyna,Chihuahua,33200,Mexico,,5526560266,5526560266,2021-02-17 12:04:55,0000-00-00,0,823,8,1,1,Bocoyna,1
+507447,,Daniel Vargas Ramirez,Vargas,Ramírez,varada082@gmail.com,,,,2021-03-03 20:20:04,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Xochiapan 179, #179 Int: sin_datos",Mayas-Tosnene,Pedregal de Santo Domingo,Coyoacán,Ciudad de México,04369,Mexico,,5581503514,5581503514,2021-03-03 19:20:06,0000-00-00,0,179,sin_datos,1,1,Coyoacán,1
+507448,,Karen,Martinez,,ikarenmrz@gmail.com,,,,2021-03-04 20:29:02,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Camino real de Calacoaya, #124 Int: 102",-,La Cruz,Atizapán de Zaragoza,México,52985,Mexico,,5555555555,5555555555,2021-03-04 19:29:03,0000-00-00,0,124,102,1,1,Atizapán de Zaragoza,1
+507449,,Laura,García Salmones,Gómez,dra.laurasalmones@outlook.com,,,,2021-03-16 21:45:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Cerrada hacienda derramadero, #Mz 16Lt Int: 001A",Entrando por hacienda Lanzarote-,Hacienda del Parque 2a Sección,Cuautitlán Izcalli,México,54769,Mexico,,5518445300,5518445300,2021-03-16 19:46:02,0000-00-00,0,Mz 16Lt,001A,1,1,Cuautitlán Izcalli,1
+507450,,Andres,Vazquez,Alzua,andreslove48@hotmail.com,,,,2021-03-26 15:47:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"La Presa, #78 Int: sin_datos",Ferrocarril de Cuernavaca-Trini,San Jerónimo Lídice,La Magdalena Contreras,Ciudad de México,10200,Mexico,,5519521185,5519521185,2021-03-26 13:47:32,0000-00-00,0,78,sin_datos,1,1,La Magdalena Contreras,1
+507451,,Rosalinda,Suarez,NA,rosalindasuarezc@gmail.com,,,,2021-04-08 13:52:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"53, #924 Int: 0",112-108-A,Las Américas II,Mérida,Yucatán,97302,Mexico,,5555555555,5555555555,2021-04-08 12:53:06,0000-00-00,0,924,0,1,1,Mérida,1
+507453,,Martha Angelica,Alvarez,NA,angelicaao91@icloud.com,,,,2021-04-16 18:47:35,0,,0,0,,,,0,N/A,,,F,,,,,,,,,2021-04-16 17:10:34,,5573611118,FISICA,"Calle Argos, #112 Int: 0",Pericles-Andros,Valle de San Carlos,San Nicolás de los Garza,Nuevo León,66437,Mexico,,8111549696,8111549696,2021-04-16 17:47:37,0000-00-00,0,112,0,1,1,San Nicolás de los Garza,1
+507454,,Alan,Garcia,Dominguez,alangarciad93@gmail.com,,,,2021-04-16 19:16:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"4ta Díaz Miron, #8088 Int: 5",CONSTITUCIÓN-Y NIÑOS HÉROES,Zona Centro,Tijuana,Baja California,22000,Mexico,,6641215313,6641215313,2021-04-16 18:16:27,0000-00-00,0,8088,5,1,1,Tijuana,1
+507455,,daniel,macedo,pineda,dmacedo42@gmail.com,,,,2021-04-19 13:51:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"sierra de inguaran, #141 Int: sin_datos",volcan del jorullo-pico del tzirate,Santiaguito,Morelia,Michoacán de Ocampo,58110,Mexico,,4431045798,4431045798,2021-04-19 12:51:54,0000-00-00,0,141,sin_datos,1,1,Morelia,1
+507456,,maria,escobedo,guevara,charo.83@hotmail.com,,,,2021-04-19 15:01:45,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"paseo del mezquite, #99 Int: sin_datos",Jose Juan Tablada-Cto Corzo,Fraccionamiento Villa de las palmas tercera etapa,Torreón,Coahuila de Zaragoza,27023,Mexico,,8117901876,8117901876,2021-04-19 14:01:48,0000-00-00,0,99,sin_datos,1,1,Torreón,1
+507457,,Sonia Ivette,Hernandez,NA,sonia_hf@outlook.com,,,,2021-04-19 18:46:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"SAN ANTONIO, #5369 Int: 0",N/A,San Antonio,Juárez,Chihuahua,32250,Mexico,,6562857151,6562857151,2021-04-19 17:46:57,0000-00-00,0,5369,0,1,1,Juárez,1
+507458,,Jorge,Guaneros,Cruz,jorge15179998@gmail.com,,,,2021-04-22 17:38:25,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Bordo de Xochiaca, #No. 3 Int: sin_datos",N/A,Jardín Bicentenario,Nezahualcóyotl,Estado de México,57200,Mexico,,5577250172,5577250172,2021-04-22 16:38:28,0000-00-00,0,No. 3,sin_datos,1,1,Nezahualcóyotl,1
+507459,,Claudia,Morriz,Ramírez,claudiaivette1985@gmail.com,,,,2021-04-22 17:39:06,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Avenida Bordo de Xochiaca, #No. 3 Int: sin_datos",N/A,Jardín Bicentenario,Nezahualcóyotl,Estado de México,57200,Mexico,,5529396529,5529396529,2021-04-22 16:39:07,0000-00-00,0,No. 3,sin_datos,1,1,Nezahualcóyotl,1
+507460,,Hugo ,Malagon,Perez,hugo-malagon2011@hotmail.com,,,,2021-04-26 17:05:52,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Fray matias de Escobar, #61 Int: sin_datos",Francisco matos coronado-José Pérez Calama,Lázaro Cárdenas,Morelia,Michoacán de Ocampo,58229,Mexico,,4432294061,4432294061,2021-04-26 16:05:58,0000-00-00,0,61,sin_datos,1,1,Morelia,1
+507461,,Ana Maria,Baza,Bonilla,mcbaza@prodigy.net.mx,,,,2021-04-26 17:13:58,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Paseo de la niña, #150 Int: 1501",Marigalante-Reyes catolicos,De las Américas,Boca del Río,Veracruz de Ignacio de la Llave,94299,Mexico,,229 / 2292,229 / 2292,2021-04-26 16:14:03,0000-00-00,0,150,1501,1,1,Boca del Río,1
+507462,,Gloria ,Helu Ordoñez,,correogho@gmail.com,,,,2021-04-26 17:18:58,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Carretera Mexico Laredo km 205, #11 Int: sin_datos",-,Venustiano Carranza (San Pedro),Zimapán,Hidalgo,42344,Mexico,,7711276339,7711276339,2021-04-26 16:19:02,0000-00-00,0,11,sin_datos,1,1,Zimapán,1
+507463,,Berenice,Garín,Morán,berenicegarin@hotmail.com,,,,2021-04-26 17:22:36,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Francisco Canal, #No. 736 Int: sin_datos",N/A,Centro,Veracruz,Veracruz,91700,Mexico,,2297789296,2297789296,2021-04-26 16:22:40,0000-00-00,0,No. 736,sin_datos,1,1,Veracruz,1
+507464,,Yadira Zoé,Garcia,Aburto,de_yady@yahoo.es,,,,2021-04-26 17:26:38,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"natal 599, #599 Int: sin_datos",Ricarte-Moctezuma,Churubusco Tepeyac,Gustavo A. Madero,Ciudad de México,07730,Mexico,,5530205500,5530205500,2021-04-26 16:26:47,0000-00-00,0,599,sin_datos,1,1,Gustavo A. Madero,1
+507465,,Eunice,Merida,Perez,eumeridap76@hotmail.com,,,,2021-04-26 17:28:07,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"canguros, #203 Int: sin_datos",pavorreales y guacamayas-,Las Gaviotas,Coatzacoalcos,Veracruz de Ignacio de la Llave,96536,Mexico,,9211427469,9211427469,2021-04-26 16:28:19,0000-00-00,0,203,sin_datos,1,1,Coatzacoalcos,1
+507466,,RAUL MOISES,LOPEZ,PEREZ,ramolope65@gmail.com,,,,2021-04-26 17:51:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"SAN CRISTOBAL 111, #111 Int: sin_datos",SANTA CECILIA-SAN VICENTE,El Saucito,San Luis Potosí,San Luis Potosí,78110,Mexico,,5555555555,5555555555,2021-04-26 16:51:16,0000-00-00,0,111,sin_datos,1,1,San Luis Potosí,1
+507471,,Luis Isaac,Legorreta,Gómez,luislegorretag@gmail.com,,,,2021-04-29 12:32:10,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Privada Alfredo del Mazo, #201 Int: sin_datos",Quetzalcóatl-Atzayacatl,Celanese,Toluca,México,50010,Mexico,,7223954032,7223954032,2021-04-29 11:32:12,0000-00-00,0,201,sin_datos,1,1,Toluca,1
+507472,,Miguel Angel,Maldonado,Jacobo,maldonadojacobo@gmail.com,,,,2021-04-29 12:53:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"FRANCISCO ZARCO, #105 Int: sin_datos",Zaragoza-Barranca de la morena,Bejero del Pueblo Santa Fe,Álvaro Obregón,Ciudad de México,01340,Mexico,,5513972123,5513972123,2021-04-29 11:53:14,0000-00-00,0,105,sin_datos,1,1,Álvaro Obregón,1
+507473,,Maria,Ordoñez,Ordoñez,asirammc1@gmail.com,,,,2021-04-29 14:33:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Veracruz, #4 Int: sin_datos",Juárez-Ocampo,Cuajimalpa,Cuajimalpa de Morelos,Ciudad de México,05000,Mexico,,5530581925,5530581925,2021-04-29 13:33:52,0000-00-00,0,4,sin_datos,1,1,Cuajimalpa de Morelos,1
+507474,,karla,ximello,ximello,karlaxh2012@gmail.com,,,,2021-05-05 16:39:45,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Central Telefónica, #102 Int: sin_datos",Municipio Libre-Andrés Molina Enríquez,Ampliación Sinatel,Iztapalapa,Ciudad de México,09479,Mexico,,5534010961,5534010961,2021-05-05 15:40:04,0000-00-00,0,102,sin_datos,1,1,Iztapalapa,1
+507475,,Daniela,prueba,,daniela1@prueba.com,,,,2021-05-12 21:26:59,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Lago Chapala 26, #F108 Int: sin_datos",-,Anáhuac I Sección,Miguel Hidalgo,Ciudad de México,11320,Mexico,,5512345678,5512345678,2021-05-12 20:26:59,0000-00-00,0,F108,sin_datos,1,1,Miguel Hidalgo,1
+507476,,Invitado,Sears,,angel.martz24@gmail.com,,,,2021-05-14 19:06:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,2023-06-12 13:16:37,,,,"Insurgentes Sur, #45 Int: 48",eje 6-eje 5,Independencia,Benito Juárez,Ciudad de México,03630,Mexico,,5555555555,5555555555,2021-05-14 18:06:42,0000-00-00,0,45,48,1,1,Benito Juárez,1
+515734,,Catalina,Carriles,Sanchez,carrilesk@hotmail.com,,,,2020-06-14 17:47:16,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+520594,,Fabian,Caballero,,fabianpython@hotmail.com,,,,2020-06-17 12:24:51,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+529266,,martha,aguliar,velazco,marthajulieta.aguilar@gmail.com,,,,2020-06-20 18:22:23,0,,0,0,,,,0,N/A,,,,,,,,,,,,2026-06-22 15:40:19,,,,,,,,,,,,,,,,,,,,,,
+529575,,CRISTINA,RAMIREZ,DE LA O,crirdo72@gmail.com,,,,2020-06-20 19:43:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,2026-02-06 19:22:42,,,,,,,,,,,,,,,,,,,,,,
+541330,,maria irene,robles,lopez,malena.18_dep@hotmail.com,,,,2020-06-27 16:55:18,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+545912,,ana luisa,martinez,cardenas,anluisann002@gmail.com,,,,2020-06-30 23:46:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-08-10 14:47:42,,,,,,,,,,,,,,,,,,,,,,
+546775,,FEDERICO,NAVARRO,VAZQUEZ,federico_nv@yahoo.com.mx,,,,2020-07-01 19:13:09,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+556447,,YOLANDA,SALAZAR,ESQUIVEL,kiss08@live.com.mx,,,,2020-07-10 20:36:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+558437,,FERNANDO,BENITEZ,ANGELES,bfernando.benitez@hotmail.com,,,,2020-07-12 22:24:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,2025-07-28 18:46:17,,,,,,,,,,,,,,,,,,,,,,
+574852,,Esther,Arce,Morales,esther.arce@gmail.com,,,,2020-07-26 13:32:12,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+576537,,Linda Esmeralda,Vazquez,Gonzalez,linda_ajcr@hotmail.com,,,,2020-07-27 09:20:18,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580948,,Liliana ,Serrano,Licona,lilisibi26@hotmail.com,,,,2020-07-30 15:22:54,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580949,,Test,Sears,Alibaba,testalibaba@gmail.com,,,,2021-06-10 18:33:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"SIN CALLE, #678 Int: sin_datos",sin calle 1-calle 2,San Bartolo Ameyalco,Álvaro Obregón,Ciudad de México,01800,Mexico,,5555555555,5555555555,2021-06-10 17:33:30,0000-00-00,0,678,sin_datos,1,1,Álvaro Obregón,1
+580950,,CARLOS ENRIQUE,ROMERO,SOTO,carlosromero30@hotmail.com,,,,2021-06-22 21:41:58,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"AV ALUMINIO, #1389 Int: sin_datos",TOPACIO-DIAMANTE,Satélite,Mexicali,Baja California,21385,Mexico,,6861137700,6861137700,2021-06-22 20:42:00,0000-00-00,0,1389,sin_datos,1,1,Mexicali,1
+580951,,Roberto ,Flores,Marcos,robertinmarcos1204@gmail.com,,,,2021-07-07 18:55:27,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Calle magueyales, #107 Int: 04",Rafael Domínguez-Ranchito,Tenorios,Iztapalapa,Ciudad de México,09680,Mexico,,5561750952,5561750952,2021-07-07 17:55:27,0000-00-00,0,107,04,1,1,Iztapalapa,1
+580952,,claudia,luna,vargas,ruben.alcocer@claroshop.com,,,,2021-07-14 10:43:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-08-12 18:35:04,,,,"Avenida Vasco de Quiroga, #No. 3850 Int: sin_datos",N/A,Santa Fe Antigua Mina la Totolapa,Cuajimalpa,CDMX,55555,Mexico,,5555555555,5555555555,2021-07-14 09:43:56,0000-00-00,0,No. 3850,sin_datos,1,1,Cuajimalpa,1
+580963,,ALEXIS,HERRERA,,eduardoh016@gmail.com,,,,2021-07-19 18:37:26,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"AGUILAS, #24 Int: sin_datos",AGUILAS-ESQUINA CON JUAN ESCUTIA,San Francisco de Asís,Ecatepec de Morelos,México,55029,Mexico,,5547931442,5547931442,2021-07-19 17:37:28,0000-00-00,0,24,sin_datos,1,1,Ecatepec de Morelos,1
+580964,,Julio,Carbajal,Guadarrama,testcyber@sears.dev,,,,2021-08-05 12:33:05,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Boulevard Miguel Aleman, #109 Int: sin_datos",-,Álvaro Obregón,San Mateo Atenco,México,52105,Mexico,,7225447788,7225447788,2021-08-05 11:33:05,0000-00-00,0,109,sin_datos,1,1,San Mateo Atenco,1
+580965,,claudia,luna,vargas,claudia.vargas@claroshop.com,,,,2021-08-12 20:37:42,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-08-13 08:20:59,,,,"Madin, #120 Int: 701",18 de marzo-,Granada,Miguel Hidalgo,Ciudad de México,11520,Mexico,,5555555555,5555555555,2021-08-12 19:37:42,0000-00-00,0,120,701,1,1,Miguel Hidalgo,1
+580966,,Farique José,cetina,Carrillo,farique.cetina@nationalsoft.com.mx,,,,2021-08-12 22:14:39,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"16 x 5 y 18 diagonal, #91 Int: N/A",x 5 y 18 diagonal-,Montecristo,Mérida,Yucatán,97133,Mexico,,9999001002,9999001002,2021-08-12 21:14:43,0000-00-00,0,91,N/A,1,1,Mérida,1
+580967,,Invitado,Sears,,sobec201@gmail.com.mxx,,,,2021-08-20 14:23:57,0,,0,0,,,,0,N/A,,,,,,,,,,,,2023-10-12 14:06:11,,,,"Calle alamos, #23 Int: 25",calle 1-calle 2,Argentina Poniente,Miguel Hidalgo,Ciudad de México,11230,Mexico,,5555555555,5555555555,2021-08-20 13:23:57,0000-00-00,0,23,25,1,1,Miguel Hidalgo,1
+580968,,Auditoria,Sistemas,,gaby.audishop@gmail.com,,,,2021-08-20 16:20:11,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-08-20 16:50:50,,,,"@ @m05 p3dr3g4, #b1 40 Int: b1 40",c4ll3 1-c4ll3 2,T35t3r @5d1tr1A,M7n1c p ,Este es un estado modificado manual,66280,Mexico,,5555555555,5555555555,2021-08-20 15:20:11,0000-00-00,0,b1 40,b1 40,1,1,M7n1c p,1
+580969,,Gabriela,Castillo,,ecommercea.sanborns@gmail.com,,,,2021-08-20 18:49:46,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-12-10 15:40:13,,,,"Lago zurich, #245 Int: P17",-,Ampliación Granada,Miguel Hidalgo,Ciudad de México,11529,Mexico,,5555555555,5555555555,2021-08-20 17:49:46,0000-00-00,0,245,P17,1,1,Miguel Hidalgo,1
+580973,,Saito,Hagime,Oro,bulungas02@mailinator.com,,,,2021-10-06 22:35:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580974,,Claudia,Luna,Vargas,testqasears@gmail.com,,,,2021-10-07 18:57:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580975,,Azucena Sears,Bla,Bla,azucena.rosales@gmail.com,,,,2021-10-08 12:23:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580976,,eidth,sanxhez,,edithsg63@gmail.com,,,,2021-10-08 13:05:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580977,,Javier,Picazo,sin_datos,javierclaroshop@gmail.com,,,,2021-10-11 11:56:04,0,,0,0,,,,0,,,,,,,,,,,,,2023-01-09 11:59:04,,,,,,,,,,,,,,,,,,,,,,
+580978,,Sabine,Goiz,Ramírez,sabineprueba@gmail.com,,,,2021-10-15 13:12:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580979,,Azucena,Sears,,azucena.rosales@claro.com,,,,2021-10-15 15:31:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580980,,test,test,test,ecommercea12.sanborns@gmail.com,,,,2021-10-15 18:17:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"juarez, #74 Int: 4",-,Barrio Norte,Álvaro Obregón,Ciudad de México,01410,Mexico,,5544844254,5544844254,2021-10-15 17:17:30,0000-00-00,0,74,4,1,1,Álvaro Obregón,1
+580981,,Clau,Prueba,Prueba,claudia.hitss@gmail.com,,,,2021-10-18 15:04:24,0,,0,0,,,,0,,,,,,,,,,,,,2026-02-18 18:39:09,,,,,,,,,,,,,,,,,,,,,,
+580982,,valeria,garcia,,valeriagarcia.front@gmail.com,,,,2021-10-21 10:50:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580983,,Test,Test,,test@correo.com,,,,2021-10-21 14:25:57,0,,0,0,,,,0,,,,,,,,,,,,,2021-11-11 16:51:19,,,,,,,,,,,,,,,,,,,,,,
+580984,,Iván,Benítez,González,ivan.gonzalez@claroshop.com,,,,2021-10-21 22:04:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580985,,Santa,Paterno,Materno,ramirezsl@globalhitss.com,,,,2021-10-22 14:48:40,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-10-26 17:51:51,,,,"16 de Septiembre, #245 Int: sin_datos",Principal-16 de Septiembre,San José Zacatepec,Xochimilco,Ciudad de México,16220,Mexico,,5597852598,5597852598,2021-10-22 13:48:40,0000-00-00,0,245,sin_datos,1,1,Xochimilco,1
+580986,,Javier,Paterno,Materno,hernandezjaal@globalhitss.com,,,,2021-10-22 17:24:56,0,,0,0,,,,0,N/A,,,,,,,,,,,,2021-10-26 17:17:18,,,,"Avenida Lázaro Cárdenas, #No. 3950 Int: sin_datos",N/A,Chapalita,Zapopan,Jalisco,45050,Mexico,,5597852598,5597852598,2021-10-22 16:24:56,0000-00-00,0,No. 3950,sin_datos,1,1,Zapopan,1
+580987,,Carolina,Granados,Mota,eduardo.cruz@claroshop.com,,,,2021-10-26 11:57:14,0,,0,0,,,,0,,,,,,,,,,,,,2021-12-22 11:41:27,,,,,,,,,,,,,,,,,,,,,,
+580988,,Prueba ,Sistemas,SC,nbr1800@gmail.com,,,,2021-11-05 13:57:59,0,,0,0,,,,0,,,,,,,,,,,,,2026-04-29 17:21:01,,,,,,,,,,,,,,,,,,,,,,
+580989,,Daniela,Martinez,,cielo.danii2@gmail.com,,,,2021-11-16 13:28:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580990,,Julio,Carbajal,Guadarrama,carbajal@sears.dev,,,,2021-11-16 13:34:53,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"sdfdsfdsf, #2111 Int: sin_datos",-,Álvaro Obregón,San Mateo Atenco,México,52105,Mexico,,7223668375,7223668375,2021-11-16 12:34:53,0000-00-00,0,2111,sin_datos,1,1,San Mateo Atenco,1
+580991,,Pedro Alfonso,Delgado,Orozco,odelpedro@gmail.com,,,,2021-11-17 13:28:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580992,,Luis Angel,Galvan,Benavides,luis.angel.galvan.benavides@protonmail.com,,,,2021-11-23 19:09:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580993,,SANDRA,PEREZ,BONILLA,s_and_rix222@hotmail.com,,,,2021-11-26 09:41:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580994,,Gustavo,Saldaña,Bautista,correo-cliente@dominio.com,,,,2021-11-30 18:03:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580995,,Angel,Martinez,Lopez,angel.martz.24@gmail.com,,,,2021-12-01 18:10:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580996,,CESAR,CASARES,ALVAREZ,cesarcascjn@gmail.com,,,,2021-12-03 19:41:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580997,,Victor Quintin,Gutierrez,,victorq.gutierrez@gmail.com,,,,2021-12-05 23:36:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580998,,Nombre Cliente ,Rivas ,Tanori,email_cliente@dominio.com,,,,2021-12-06 13:48:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+580999,,Jafet,Castillo,Martinez,nombre_cliente@dominio-email.com,,,,2021-12-06 13:52:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581000,,Norma Elizabeth,Hernandez Del,angel,correo_cliente@dominio-correo.com,,,,2021-12-06 13:55:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581001,,mauricio,salazar,hernandez,correo-cliente@dominio-correo.com,,,,2021-12-06 17:10:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581002,,persona recibe,Balderrama,Dueñas,correo-cliente@correo-dominio.com,,,,2021-12-06 17:18:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581004,,mario,alquicira,camacho,mac_alquicira@hotmail.com,,,,2021-12-06 18:47:55,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Jorge Enciso, #1709 Int: sin_datos",pablo luis rivas-hector ezpinoza,Escuadrón 201,Iztapalapa,Ciudad de México,09060,Mexico,,5520802730,5520802730,2021-12-06 17:47:58,0000-00-00,0,1709,sin_datos,1,1,Iztapalapa,1
+581006,,Usuario,Prueba,Encimado,test@sears30.com,,,,2021-12-07 00:50:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581007,,Cliente,Apellido1,Castañeda,nombre-cliente-1@sin-dominio.com,,,,2021-12-07 12:39:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581008,,Pepe Antonio,Mendiola,Osorio,000000-1@sin-dominio.com,,,,2021-12-07 13:09:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581009,,Angel,Martinez,Lopez,angelmartz.24@gmail.com,,,,2021-12-07 14:34:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581010,,Manuel Jaime ,Rodríguez ,Galindo,luliyankeeskywalkeer89@gmail.com,,,,2021-12-07 20:47:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581011,,Felipe de jesus,Valdovino ,Vargas,feva271073@gmail.com,,,,2021-12-10 08:54:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581012,,Cliente,Juárez ,,lnkghkhsad.juarez@dominio-ghdsag.com,,,,2021-12-10 13:30:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581013,,Nancy,Hernandez,Chavez,qfb.nancyhdzc@gmail.com,,,,2021-12-10 13:36:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581014,,Josimar,Hernandez,Castillo,josimar__97@hotmail.com,,,,2021-12-11 19:55:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581015,,Cliente,López,Muñoz,cliente.sislm@dominio.com,,,,2021-12-14 13:32:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581016,,cliente cliente2,marquez,rincon,cliesakdhg@fdfgjk.com,,,,2021-12-14 18:54:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581017,,JORGE FERNANDO,LOPEZ,PEREZ,moyo_lopez18@hotmail.com,,,,2021-12-15 19:34:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581018,,Fernand,Esquivel,Gonzalez,fesqui190668@gmail.com,,,,2021-12-16 01:17:03,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581019,,Clientte test,Mejia,Salomon,cliente.test@dominio.com,,,,2021-12-16 19:08:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581020,,Cliente,Apellido1,Apellido2,correoclientre8lkds76@dominio.com,,,,2021-12-16 19:14:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581021,,Cliente ,Apellido1 ,Apellido2 ,emailcliente75321@dominio.com,,,,2021-12-16 19:18:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581022,,Cliente ,Hernández ,Gonzalez,cleinte_apellido_17@dominio.com,,,,2021-12-16 19:21:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581023,,Fernando,Hernández,Rios,geoa35223@gmail.com,,,,2021-12-23 14:20:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581024,,Oscar leonardo,Zuniga,Arenas,ger_limb@hotmail.com,,,,2021-12-23 17:40:29,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Héroes de Oaxaca, #172 Int: 2",Héroes rasario-Blvd nahualt,Arboleda San José,León,Guanajuato,37545,Mexico,,5555555555,5555555555,2021-12-23 16:40:33,0000-00-00,0,172,2,1,1,León,1
+581025,,Luis enrique,Zavala,Garcia,luisenriquezavalagarcia@outlook.com,,,,2021-12-23 17:41:30,0,,0,0,,,,0,N/A,,,,,,,,,,,,0000-00-00 00:00:00,,,,"Gladiola, #274 Int: A",Violeta-Pasionaria,Campestre de las Flores,Irapuato,Guanajuato,36625,Mexico,,3337046573,3337046573,2021-12-23 16:41:34,0000-00-00,0,274,A,1,1,Irapuato,1
+581026,,Bruno Marionny,Rodríguez,Guevara,brunomarionny20@outlook.com,,,,2021-12-23 19:34:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581027,,claudia,lunz,prueba,testw37@gmail.com,,,,2021-12-27 19:58:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581028,,testapp2@claroshop.com,sdasds,sdasd,nbr1800@gmail.com,,,,2021-12-28 13:05:40,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:32,,,,,,,,,,,,,,,,,,,,,,
+581029,,Carlos,Velazquez,,dev_test@test.com,,,,2022-01-07 23:48:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581030,,Juan Pablo,Velazquez,Lopez,test@dominio.com,,,,2022-01-12 14:18:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581031,,JORGE ALEJANDRO,PALOMO,ESCAMILLA,jorgepalomoescami@dominio-x.com,,,,2022-01-12 18:50:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581032,,Kenia Tanaeri,Santiago,Martinez,test@domioasdlfjh.com,,,,2022-01-12 18:52:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581033,,Eduardo ,Becerra ,Vargas,e.test@sadgjkh.com,,,,2022-01-12 18:54:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581034,,Henrietta,Malcomson,Malcomson,test@sadghdjk.com,,,,2022-01-12 18:56:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581035,,sadsad,sadsad,asdsad,julio.pwa@sears.dev,,,,2022-01-13 12:04:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581036,,Prueba,Veintidos,Materno,fabian+1981@test.com,,,,2022-01-27 12:51:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581037,,Carolina,Granados,Mota,granadoscarm@globalhitss.com,,,,2022-02-03 12:45:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581038,,SDADSAD,SADSAD,SADSAD,carbajalse@sears.dev,,,,2022-02-04 14:02:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581039,,ROY,NIETO,GILLIAM,solnavic@gmail.com,,,,2022-02-15 15:16:18,0,,0,0,,,,0,,,,,,,,,,,,,2023-03-30 16:54:18,,,,,,,,,,,,,,,,,,,,,,
+581040,,Pedro Editado,Muñoz,Ramos,kdhsakdhk@kjhd.com,,,,2022-02-22 15:13:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581041,,Marco,Deheza,Meraz,marco.deheza@backbones.io,,,,2022-02-25 19:18:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581042,,Fabian,Yañez,Galvan,fabian@red10.com,,,,2022-02-25 21:30:52,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-15 14:16:12,,,,,,,,,,,,,,,,,,,,,,
+581043,,Martha Daniela,Martinez,Correa,cielo.danii1@gmail.com,,,,2022-03-04 15:11:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581044,,Daniela UNO,MARTINEZ,,mdmc1@hotmail.com,,,,2022-03-04 19:28:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581045,,Jonh,LOPEZ,,jonh@hotmail.com,,,,2022-03-04 20:22:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581046,,karina,martinez,Correa,karina3@hotmail.com,,,,2022-03-07 20:19:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581047,,karina,,,karina@hotmail.com,,,,2022-03-08 13:32:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581049,,Fabian,Yañez,Yañez,fabian+mesa-crecion@red10.com,,,,2022-04-04 21:18:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581050,,Raul,Gonzalez,,raul@uniko.co,,,,2022-04-19 13:51:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581051,,Prueba,Credi,Tienda,prueba.creditienda@claroshop.com,,,,2022-04-26 13:26:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581052,,Mauricio,Lopez,Muñoz,mauclaroshop@gmail.com,,,,2022-04-26 14:21:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581053,,Prueba Uno,Credi PRUEBA,Tienda DOS,prueba.unocredi.pruebatienda.dos@searscreditienda.com,,,,2022-05-02 14:23:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581054,,PruebaPrductoSkuInvalido1,Credi,Tienda,pruebaprductoskuinvalido1creditienda@searscreditienda.com,,,,2022-05-05 16:13:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581055,,HARVEY,OLSON,KNOX,harveyolsonknox@searscreditienda.com,,,,2022-05-11 18:48:57,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581056,,FERNANDA GUADALUPE,CASTANEDA,OSUNA,fernanda.guadalupecastanedaosuna@searscreditienda.com,,,,2022-05-13 20:41:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581057,,FERNANDA GUADALUPE,CASTANEDA,OSU NANA,fernanda.guadalupecastanedaosu.nana@searscreditienda.com,,,,2022-05-13 20:49:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581058,,FERNANDIA GUADALUPEO,CASTANEDALL,OSU NANA,fernandia.guadalupeocastanedallosu.nana@searscreditienda.com,,,,2022-05-13 20:57:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581059,,ROY,NIETO,GILLIAM,roynietogilliam@searscreditienda.com,,,,2022-05-14 12:35:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581060,,FERNANDIA GUADALUPEO,CASTANEDA CASTANEDALL,OSU NANA,fernandia.guadalupeocastaneda.castanedallosu.nana@searscreditienda.com,,,,2022-05-16 18:16:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581061,,Jesús Elías,Paredes,Carrossssss,nbr1800@gmail.com,,,,2022-05-16 18:34:59,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:32,,,,,,,,,,,,,,,,,,,,,,
+581062,,Angel,Martinez,Lopez,angel.martinez@claroshop.com,,,,2022-05-17 17:24:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581063,,prueba lo quiero Rodriguez,,,nbr1800@gmail.com,,,,2022-05-17 21:23:17,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:32,,,,,,,,,,,,,,,,,,,,,,
+581066,,kelly,rodriguez,flores,nbr1800@gmail.com,,,,2022-05-24 12:24:56,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:32,,,,,,,,,,,,,,,,,,,,,,
+581067,,PAOLA GUADALUPE,SALDANA,ACOSTA,paola.guadalupesaldanaacosta@searscreditienda.com,,,,2022-05-24 17:53:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581068,,VERONICA ,GONZALEZ ,JIMENEZ ,veronica.gonzalez.jimenez@searscreditienda.com,,,,2022-05-24 18:07:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581069,,MARIA DEL ROSARIO,CASTANEDA,SERRANO,maria.del.rosariocastanedaserrano@searscreditienda.com,,,,2022-05-24 18:14:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581070,,MIRIAM JANETH,MICHACA,CASTANON,miriam.janethmichacacastanon@searscreditienda.com,,,,2022-05-24 18:15:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581071,,MARIA DEL CONSUELO,VILLASENOR,ALCANTAR,maria.del.consuelovillasenoralcantar@searscreditienda.com,,,,2022-05-24 18:16:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581072,,MA NORMA ,MANCERA ,HUARACHA ,ma.norma.mancera.huaracha@searscreditienda.com,,,,2022-05-24 18:17:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581073,,CECILIA ABILENE,NUNEZ,CORTEZ,cecilia.abilenenunezcortez@searscreditienda.com,,,,2022-05-24 18:17:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581074,,CARMEN ADRIANA,TEPEYAC,MUNOS,carmen.adrianatepeyacmunos@searscreditienda.com,,,,2022-05-24 18:19:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581075,,MARIA BRISIA ,HERNANDEZ ,MURO ,maria.brisia.hernandez.muro@searscreditienda.com,,,,2022-05-24 18:21:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581076,,MARTHA ,DORANTES ,ENRIQUEZ ,martha.dorantes.enriquez@searscreditienda.com,,,,2022-05-24 18:22:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581077,,MARIA AGUSTINA ,MARTINEZ  ,MARES,maria.agustina.martinez.mares@searscreditienda.com,,,,2022-05-24 18:23:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581078,,MARIA AGUSTINA 1,MARTINEZ a,MARES LOPEZ u,maria.agustina.1.martinez.a.mares.lopez.u@searscreditienda.com,,,,2022-05-24 18:43:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581079,,SARA,MORALES,MORALES,sara.morales.morales@searscreditienda.com,,,,2022-05-24 19:11:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581080,,AIDA GABRIELA,LOPEZ,ESTRADA,aida.gabriela.lopez.estrada@searscreditienda.com,,,,2022-05-24 19:11:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581081,,MARINA,VARGAS,CORRALES,marina.vargas.corrales@searscreditienda.com,,,,2022-05-24 19:12:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581082,,MARINA,VARGAS,CORRN nALES,marina.vargas.corrn.nales@searscreditienda.com,,,,2022-05-24 19:21:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581083,,MARINN A,VARG AS,CORRALES,marinn.a.varg.as.corrales@searscreditienda.com,,,,2022-05-25 12:13:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581084,,HARVEY,OLSON,KNOX,harvey.olson.knox@searscreditienda.com,,,,2022-05-25 19:05:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581085,,HARVEY NANEZ CAZ,OLSON ALO,KNOX,harvey.nanez.caz.olson.alo.knox@searscreditienda.com,,,,2022-05-25 19:06:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581086,,HARVEY NANEZ CAZAS,OLSON ALO,KNOX,harvey.nanez.cazas.olson.alo.knox@searscreditienda.com,,,,2022-05-25 19:12:21,0,,0,0,,,,0,,,,,,,,,,,,,2022-05-25 17:17:10,,,,,,,,,,,,,,,,,,,,,,
+581087,,HARVEY NANEZ CAZAS,OLSON ALO,JUAREZ,harvey.nanez.cazas.olson.alo.juarez@searscreditienda.com,,,,2022-05-25 19:18:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581088,,HARVEY NANEZ CAZAS,OLSON,JUAREZ,harvey.nanez.cazas.olson.juarez@searscreditienda.com,,,,2022-05-25 19:21:57,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581089,,HARVEY NANEZ CAZAS,OLSON YAMIL,JUAREZ,harvey.nanez.cazas.olson.yamil.juarez@searscreditienda.com,,,,2022-05-25 19:22:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581090,,Prueba,Credi,Tienda,prueba.pos@claroshop.com,,,,2022-05-26 12:36:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581091,,Malani,Vázquez,Carreño,nbr1800@gmail.com,,,,2022-05-30 14:35:47,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:32,,,,,,,,,,,,,,,,,,,,,,
+581092,,BLANCA ESTRELLA,CONTRERAS,SCHULTZ,blanca.estrella.contreras.schultz@searscreditienda.com,,,,2022-06-03 18:22:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581093,,NORMA LETICIA,CARAVEO,PEREZ,norma.leticia.caraveo.perez@searscreditienda.com,,,,2022-06-03 18:35:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581094,,Martin,Ortiz,Hernandez,maohalejandr@gmail.com,,,,2022-06-10 13:41:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581095,,NURI GLORIA,MENDOZA,GONZALEZ,nuri.gloria.mendoza.gonzalez@searscreditienda.com,,,,2022-06-13 14:40:35,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581096,,Jose,Pérez,Labastida,nbr1800@gmail.com,,,,2022-06-15 15:02:55,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:39:57,,,,,,,,,,,,,,,,,,,,,,
+581097,,valeria,garcia,,valeclaroshop@gmail.com,,,,2022-06-20 21:10:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581098,,Selene ,Campos,Campos,fabian+selene@red10.com,,,,2022-06-30 11:40:32,0,,0,0,,,,0,,,,,,,,,,,,,2026-08-03 19:56:52,,,,,,,,,,,,,,,,,,,,,,
+581099,,Dario ruben,Godinez,Fuentes,fdsg@jk.com,,,,2022-07-11 13:29:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581100,,Martha,Martinez,,martha@hotmail.com,,,,2022-07-18 18:32:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581101,,María Fernanda,Silva,Cruz,nbr1800@gmail.com,,,,2022-07-21 20:17:45,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:39:59,,,,,,,,,,,,,,,,,,,,,,
+581102,,JOSEFINA,RAMIREZ,GARCIA,josefina.ramirez.garcia@searscreditienda.com,,,,2022-07-26 20:52:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581103,,SILVIA,RAMIREZ,RODRIGUEZ,silvia.ramirez.rodriguez@searscreditienda.com,,,,2022-07-26 20:53:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581104,,ROSARIO AMPARO,ANDRADE,JUAREZ,rosario.amparo.andrade.juarez@searscreditienda.com,,,,2022-07-26 20:53:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581105,,Petra,Fake,Ramírez,nbr1800@gmail.com,,,,2022-08-10 13:25:48,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:31,,,,,,,,,,,,,,,,,,,,,,
+581106,,Kelly,Rodriguez,,kellyahime@gmail.com,,,,2022-08-22 18:52:38,0,,0,0,,,,0,,,,,,,,,,,,,2024-06-04 11:17:57,,,,,,,,,,,,,,,,,,,,,,
+581107,,MARIA ASUNCION,ESCARENO,,maria.asuncion.escareno@searscreditienda.com,,,,2022-09-01 19:46:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581108,,angel,san,Sánchez,nbr1800@gmail.com,,,,2022-09-05 22:09:06,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:39:59,,,,,,,,,,,,,,,,,,,,,,
+581109,,Carlos,Cruz ,Cuvillos,cuvillos@gmail.com,,,,2022-09-06 12:23:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581110,,MARIA ASUNCION,ESCARENO,PEREZ,maria.asuncion.escareno.perez@searscreditienda.com,,,,2022-09-07 12:13:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581112,,Samanta,Pedroza,Rosas,nbr1800@gmail.com,,,,2022-09-07 20:07:10,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:31,,,,,,,,,,,,,,,,,,,,,,
+581113,,Jonathan,Contreras,Borjon,jonathancontreras18@outlook.com,,,,2022-09-13 19:41:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581115,,Jonathan,Contreras,Borjon,dsad@dsad.com,,,,2022-09-13 19:42:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581116,,jorge,machado,machado,jorge.machado@the-cocktail.com,,,,2022-09-23 13:13:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581117,,Jesus,Galll,Ortiz,nbr1800@gmail.com,,,,2022-10-14 11:32:50,0,,0,0,,,,0,,,,,,,,,,,,,2022-11-11 13:28:31,,,,,,,,,,,,,,,,,,,,,,
+581118,,María Fernanda,Silva,Cruz,fer_s_c_0101@hotmail.com,,,,2022-11-14 11:31:38,0,,0,0,,,,0,,,,,,,,,,,,,2024-03-11 14:06:31,,,,,,,,,,,,,,,,,,,,,,
+581119,,Jose,Pérez,Labastida,ruben.alcocer@claroshop.com,,,,2022-11-14 18:37:03,0,,0,0,,,,0,,,,,,,,,,,,,2023-07-01 00:38:14,,,,,,,,,,,,,,,,,,,,,,
+581120,,kelly,rodriguez,flores,kelly.1311@live.com,,,,2022-11-16 16:53:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581121,,Daniela,Martinez,,daniela@hotmail.com,,,,2022-11-18 12:43:26,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-07 14:46:59,,,,,,,,,,,,,,,,,,,,,,
+581122,,MARILU,DIAZ,LICONA,marilu.diaz.licona@searscreditienda.com,,,,2022-11-18 19:19:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581123,,LORENA DEL CARMEN,SANCHEZ,HERNANDEZ,lorena.del.carmen.sanchez.hernandez@searscreditienda.com,,,,2022-11-18 19:22:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581124,,JAQUELINE,CARO,AYALA,jaqueline.caro.ayala@searscreditienda.com,,,,2022-11-18 20:31:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581125,,FREDDY,PEREZ,HERNANDEZ,freddy.perez.hernandez@searscreditienda.com,,,,2022-11-18 20:32:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581126,,MAURA ALICIA,FELIX,MONZON,maura.alicia.felix.monzon@searscreditienda.com,,,,2022-11-18 20:32:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581127,,MAYRA ALEJANDRA,VAZQUEZ,CHAVEZ,mayra.alejandra.vazquez.chavez@searscreditienda.com,,,,2022-11-18 20:48:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581128,,PERLA ISABEL,CASTILLO,ESPINOZA,perla.isabel.castillo.espinoza@searscreditienda.com,,,,2022-11-18 20:48:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581129,,TERESITA DE JESUS,QUINTERO,BARRAZA,teresita.de.jesus.quintero.barraza@searscreditienda.com,,,,2022-11-18 20:48:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581130,,YOLANDA,CRUZ,AGUILAR,yolanda.cruz.aguilar@searscreditienda.com,,,,2022-11-18 20:49:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581131,,PATRICIA,MARTINEZ,FAUSTO,patricia.martinez.fausto@searscreditienda.com,,,,2022-11-18 21:05:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581132,,LEONOR,FRAGA,CASTRO,leonor.fraga.castro@searscreditienda.com,,,,2022-11-18 21:06:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581133,,MANUELA ISABEL,ENRIQUEZ,GARCIA,manuela.isabel.enriquez.garcia@searscreditienda.com,,,,2022-11-18 21:06:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581134,,ROSARIO GUADALUPE,ESPINOZA,CIANUQUI,rosario.guadalupe.espinoza.cianuqui@searscreditienda.com,,,,2022-11-23 11:33:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581135,,PAULA,RODRIGUEZ,LOPEZ,paula.rodriguez.lopez@searscreditienda.com,,,,2022-11-23 11:35:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581136,,MARIA LUISA,PADILLA,URIBE,maria.luisa.padilla.uribe@searscreditienda.com,,,,2022-11-23 11:54:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581137,,MARIA DEL REFUGIO,REYES,LOPEZ,maria.del.refugio.reyes.lopez@searscreditienda.com,,,,2022-11-23 19:34:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581138,,ANAYELI,ROMERO,MEJIA,anayeli.romero.mejia@searscreditienda.com,,,,2022-11-23 19:46:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581139,,MARIA SOFIA,PADILLA,VARELA,maria.sofia.padilla.varela@searscreditienda.com,,,,2022-11-23 19:47:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581140,,MA DE LOURDES,GALVAN,VAZQUEZ,ma.de.lourdes.galvan.vazquez@searscreditienda.com,,,,2022-11-23 19:47:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581141,,FLORIDALVA,ENRIQUEZ,LOPEZ,floridalva.enriquez.lopez@searscreditienda.com,,,,2022-11-23 19:48:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581142,,HILDA AMELIA,LOPEZ,CERVANTES,hilda.amelia.lopez.cervantes@searscreditienda.com,,,,2022-11-23 19:48:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581143,,Clara,Cordero ,Lopez,claracordero001@gmail.com,,,,2022-11-29 18:12:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581144,,angel,san,Sánchez,nbr1800@gmail.com,,,,2022-11-29 18:51:23,0,,0,0,,,,0,,,,,,,,,,,,,2025-08-27 20:41:16,,,,,,,,,,,,,,,,,,,,,,
+581145,,fdsafhl,fdsfdsf,Ortiz,fdsafhl@fdsfdsf.mx,,,,2022-12-07 13:06:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581146,,Marcos,Milland,Ortiz,marcos@milland.mx,,,,2022-12-07 14:51:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581147,,Gustavo,Saldaña,Bautista,ecommercea@claroshop.com,,,,2022-12-27 18:20:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581149,,DENISSE,REYES,CANO,denisseang@icloud.com,,,,2023-01-03 20:19:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581150,,Rosalva,Aaaaaaa,Cccccccc,fdsafg@fdsgh.com,,,,2023-01-16 19:38:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581151,,Rosalva,Amador,Cazares,dsad@hgj.com,,,,2023-01-17 13:54:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581152,,Laura Abigayl,Apellido1,Apellido2,dsfsdf@cvxcb.com,,,,2023-01-24 17:32:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581154,,claudia,luna,vargas,fincado.tienda@claroshop.com,,,,2023-01-30 19:32:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581155,,Invitado,Sears,,ana.hernandez@claroshop.com,,,,2023-02-07 18:25:25,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-06 13:28:42,,,,,,,,,,,,,,,,,,,,,,
+581156,,NOMBRE1,APELLIDO2,APELLIDO3,cxvb@fgdhy.com,,,,2023-02-14 13:50:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581157,,Manuel Alejandro,Garcia,Leon,dsagdg@bvc.com,,,,2023-02-15 20:18:15,0,,0,0,,,,0,,,,,,,,,,,,,2023-02-20 13:34:20,,,,,,,,,,,,,,,,,,,,,,
+581158,,PRUEBA,HITS,ALIBABA,prueba.hits.alibaba@searscreditienda.com,,,,2023-02-24 17:00:03,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581176,,Invitado,Sears,,invitadomesa@sears.com.mx,,,,2023-05-03 12:01:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581180,,claudia,luna,vargas,fincado.tienda.pos@claroshop.com,,,,2023-05-04 15:57:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581181,,Invitado,Sears,,nbr1800@hotmail.com,,,,2023-05-11 12:27:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581182,,RAUL,CAMBRON,RIVIERA,rcambron@sears.com.mx,,,,2023-05-11 16:52:57,0,,0,0,,,,0,,,,,,,,,,,,,2025-03-01 21:20:51,,,,,,,,,,,,,,,,,,,,,,
+581183,,Ivette,Perez,Garcia,iperez@sears.com.mx,,,,2023-05-11 18:20:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581186,,Juan,Perez,p,pp@hotmail.com,,,,2023-05-15 18:48:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581189,,Juan,Perez,P,jpp@hostmail.com,,,,2023-05-15 19:07:46,0,,0,0,,,,0,,,,,,,,,,,,,2023-05-17 11:57:47,,,,,,,,,,,,,,,,,,,,,,
+581190,,Juan,Perez,Martinez,jpm@hostmail.com,,,,2023-05-15 19:22:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581191,,juan,perez,perez,diazpm@sanborns.com.mx,,,,2023-05-16 13:06:21,0,,0,0,,,,0,,,,,,,,,,,,,2023-07-14 13:17:00,,,,,,,,,,,,,,,,,,,,,,
+581192,,PRUEBA,PEDIDOS,FINCADOS,prueba@sears.com,,,,2023-05-16 13:46:50,0,,0,0,,,,0,,,,,,,,,,,,,2025-07-15 09:48:23,,,,,,,,,,,,,,,,,,,,,,
+581193,,PRUEBAlab,PEDIDO,,prueba@sears.com.mx,,,,2023-05-16 13:56:23,0,,0,0,,,,0,,,,,,,,,,,,,2025-06-12 11:23:46,,,,,,,,,,,,,,,,,,,,,,
+581194,,Juan,Perez,,jp@mimail.com,,,,2023-05-16 16:29:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581195,,Invitado,Sears,,jose@claroshop.com,,,,2023-05-17 15:19:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581196,,Invitado,Sears,,demo@demo.com,,,,2023-05-18 12:21:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581197,,prueba,fincado,pedido,fincado@sears.com.mx,,,,2023-05-18 12:24:39,0,,0,0,,,,0,,,,,,,,,,,,,2024-09-23 15:25:02,,,,,,,,,,,,,,,,,,,,,,
+581198,,Invitado,Sears,,demoinvitado@gmail.com,,,,2023-05-18 12:30:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581199,,Invitado,Sears,,demo24@gmail.com,,,,2023-05-18 12:42:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581200,,Invitado,Sears,,cielo.danii@gmail.com,,,,2023-05-18 12:51:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581201,,pruebas fincado,pedido,cinco,dev@sears.com.mx,,,,2023-05-18 12:58:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581202,,prueba,fincado,x,xfin@gmail.com,,,,2023-05-18 14:04:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581203,,prueba fincado,pedido,pedido,pedido@gmail.com,,,,2023-05-18 14:10:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581204,,prueba,ficnado,x,pedido@sears.com.mx,,,,2023-05-18 14:17:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581205,,prueba,big,small,tes@sears.com.mx,,,,2023-05-18 14:25:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581206,,prueba,mesa,descuento,dsmanual@sears.com.mx,,,,2023-05-18 14:30:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581207,,prueba,desceuntoemp,descporcentaje,revolvente@gmai.com,,,,2023-05-18 14:36:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581208,,prueba,revolvete,desceunto,desceunto@gmail.com,,,,2023-05-18 14:45:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581209,,Juan,Perez,p,ppp@mimail.com,,,,2023-05-18 14:46:39,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581210,,Juan,Perez,p,ppp@hostmail.com,,,,2023-05-18 14:49:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581211,,Juan,Perez,P.,jpp@mimail.com,,,,2023-05-18 15:13:50,0,,0,0,,,,0,,,,,,,,,,,,,2023-05-19 16:25:02,,,,,,,,,,,,,,,,,,,,,,
+581212,,Jose,Pérez,Labastida,jose.perez@claroshop.com,,,,2023-05-18 20:02:03,0,,0,0,,,,0,,,,,,,,,,,,,2025-10-30 18:19:08,,,,,,,,,,,,,,,,,,,,,,
+581213,,ERICKA,ROSAS,RAMIREZ,erick@gmail.com,,,,2023-05-19 18:11:43,0,,0,0,,,,0,,,,,,,,,,,,,2025-03-19 18:09:22,,,,,,,,,,,,,,,,,,,,,,
+581214,,xxxxxx,xxxxx,xxxx,juanp@gmail.com,,,,2023-05-19 18:19:44,0,,0,0,,,,0,,,,,,,,,,,,,2026-04-20 12:31:39,,,,,,,,,,,,,,,,,,,,,,
+581215,,Invitado,Sears,,pruebamesa0@gmail.com,,,,2023-05-23 13:27:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581216,,Invitado,Sears,,pruebamesados@gmail.com,,,,2023-05-23 14:40:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581217,,xxxxxx,xxxxxxxx,xxxxxxxx,xxxxx@gmail.com,,,,2023-05-23 14:48:12,0,,0,0,,,,0,,,,,,,,,,,,,2026-04-20 12:22:10,,,,,,,,,,,,,,,,,,,,,,
+581218,,Invitado,Sears,,pruebamesauno@gmail.com,,,,2023-05-23 15:30:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581219,,Renato Carlos,Rojas,,rojasr@sanborns.com.mx,,,,2023-05-28 13:09:21,0,,0,0,,,,0,,,,,,,,,,,,,2026-08-14 15:26:58,,,,,,,,,,,,,,,,,,,,,,
+581220,,caro,gamundi,,cgamundi@sears.com.mx,,,,2023-05-28 14:24:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581221,,small,sin descuento,,small@sanborns.com.mx,,,,2023-05-28 15:56:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581222,,pruebados,fincado,small,small@sears.com.mx,,,,2023-05-28 15:59:06,0,,0,0,,,,0,,,,,,,,,,,,,2023-07-14 17:12:48,,,,,,,,,,,,,,,,,,,,,,
+581223,,big,descuento,adicional,big@sears.com.mx,,,,2023-05-28 18:46:19,0,,0,0,,,,0,,,,,,,,,,,,,2023-05-28 18:26:37,,,,,,,,,,,,,,,,,,,,,,
+581224,,small big,descuento,empleado,small_big@sears.com.mx,,,,2023-05-28 19:29:25,0,,0,0,,,,0,,,,,,,,,,,,,2023-05-28 18:32:49,,,,,,,,,,,,,,,,,,,,,,
+581225,,test,uno,fincado,prueba1@sears.com.mx,,,,2023-05-29 16:16:37,0,,0,0,,,,0,,,,,,,,,,,,,2023-05-29 16:34:22,,,,,,,,,,,,,,,,,,,,,,
+581226,,PRUEBAS,FINCADO,PEDIDOS,pruebas@sears.com.mx,,,,2023-05-29 17:38:47,0,,0,0,,,,0,,,,,,,,,,,,,2025-08-29 11:28:59,,,,,,,,,,,,,,,,,,,,,,
+581227,,testdos,contrato,,contrato@searts.com,,,,2023-05-29 18:11:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581228,,test,consecutivo,xx,consec@sears.com.mx,,,,2023-05-29 18:15:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581229,,fincado,cambio,precio,cambioprecio@sears.com.mx,,,,2023-05-29 18:20:33,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-07 13:11:42,,,,,,,,,,,,,,,,,,,,,,
+581230,,xx,xx,xx,cxxx@gmail.com,,,,2023-05-29 19:05:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581231,,j,j,,jj@hostmail.com,,,,2023-05-30 10:04:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581232,,gisela,gis,gis,igespindola@sears.com.mx,,,,2023-05-30 13:31:45,0,,0,0,,,,0,,,,,,,,,,,,,2023-07-15 18:46:08,,,,,,,,,,,,,,,,,,,,,,
+581233,,prueba,prueba,prueba,igespindola@sears.com,,,,2023-05-30 13:56:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581234,,gisela,espindola,espindola,gis@hotmail.com,,,,2023-05-30 14:47:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581235,,gisela,espindola,espindola,igespindola@seras.com.mx,,,,2023-05-30 16:22:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581236,,Juan,Perez,,jp@hostmail.com,,,,2023-05-31 19:40:29,0,,0,0,,,,0,,,,,,,,,,,,,2024-12-02 13:45:47,,,,,,,,,,,,,,,,,,,,,,
+581237,,Juan,Perez,,pp@hostmail.com,,,,2023-06-01 13:11:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581238,,Daniela,ciiiiyy,,danii_mc23@live.com,,,,2023-06-01 17:01:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581239,,melisa,pavon,,melisa@hotmail.com,,,,2023-06-01 17:51:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581240,,Daniela,ciiiiyy,,isnardo.lugardo@claroshop.com,,,,2023-06-01 22:31:24,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-01 21:31:52,,,,,,,,,,,,,,,,,,,,,,
+581241,,xx,xxx,x,gis@hotmail.es,,,,2023-06-02 12:47:00,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-02 12:23:18,,,,,,,,,,,,,,,,,,,,,,
+581242,,xxXXxx,xx,xx,fincadoamigokit@sears.com.mx,,,,2023-06-02 13:59:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581243,,ss,sss,,possap@sears.com.mx,,,,2023-06-02 17:49:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581244,,Invitado,Sears,,fds@fdjh.com,,,,2023-06-05 19:30:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581245,,Invitado,Sears,,dfsad3r@sdadjl.com,,,,2023-06-05 19:51:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581246,,erick,rojo,,possap5@sears.com.mx,,,,2023-06-07 13:33:13,0,,0,0,,,,0,,,,,,,,,,,,,2026-07-29 15:15:09,,,,,,,,,,,,,,,,,,,,,,
+581247,,xxx,xx,xx,xxx@gmail.com,,,,2023-06-07 13:42:03,0,,0,0,,,,0,,,,,,,,,,,,,2025-12-17 10:50:38,,,,,,,,,,,,,,,,,,,,,,
+581248,,fincado,xx,xx,xxx@fin.com,,,,2023-06-07 14:00:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581249,,xx,xx,bigsmall,bigsmal@sears.com.mx,,,,2023-06-07 17:42:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581250,,xxx,xx,xx,xx@gmail.com,,,,2023-06-07 17:46:26,0,,0,0,,,,0,,,,,,,,,,,,,2025-12-17 11:02:56,,,,,,,,,,,,,,,,,,,,,,
+581251,,xx,contrato,mantenimi,contrarto@sears.com,,,,2023-06-07 17:55:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581252,,x,x,x,gg@gmai.com,,,,2023-06-07 17:58:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581253,,x,xx,compania,ccc@gmail.com,,,,2023-06-07 18:00:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581254,,xxxxxx,xxxx,xxxx,xxxx@gmail.com,,,,2023-06-07 18:23:02,0,,0,0,,,,0,,,,,,,,,,,,,2026-05-14 10:49:01,,,,,,,,,,,,,,,,,,,,,,
+581255,,xx,xx,xx,hh@gmail.com,,,,2023-06-07 18:29:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581256,,xxfincado,contrato,xx,contatrato@sears.com.mx,,,,2023-06-07 19:14:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581257,,xx,garantia,zzz,xxgarantia@gmail.com,,,,2023-06-07 19:22:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581258,,Invitado,Sears,,abcdeg@gfhjl.com,,,,2023-06-07 23:31:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581259,,Invitado,Sears,,pruebasauditoria0@gmail.com,,,,2023-06-08 10:47:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581260,,juan,perez,perez,prueba@sears.mx,,,,2023-06-08 13:14:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581261,,Invitado,Sears,,pruebamesatres@outlook.com,,,,2023-06-08 20:24:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581262,,Invitado,Sears,,pruebamesatres@outlok.com,,,,2023-06-09 10:07:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581263,,pruebados,fincado,pedido,fincadopedido@sears.com.mx,,,,2023-06-13 11:49:23,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-17 17:54:56,,,,,,,,,,,,,,,,,,,,,,
+581264,,juan,perez,gonzalez,juanperez@sears.com.mx,,,,2023-06-13 12:07:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581265,,karla,martinez,rojas,karlita@sears.com.mx,,,,2023-06-13 12:12:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581266,,FINCADO,PAGO,CREDITO,CRDITO@SEARS.CON.MX,,,,2023-06-13 12:57:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581267,,Invitado,Sears,,pruebasmesatres@outlook.com,,,,2023-06-13 13:20:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581268,,Juan,Perez,,jp@hotmail.com.mx,,,,2023-06-16 13:41:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581269,,Juan,Perez,,jp@hotmail.com,,,,2023-06-16 13:55:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581270,,Erick,ramirez,rojo,eriik@sears.com.mx,,,,2023-06-23 16:43:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581271,,Alessa,garcia,tellez,ale@sears.com.mx,,,,2023-06-23 16:46:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581272,,pedido,dos,descuento empleado,pedido2@sears.com.mx,,,,2023-06-23 16:50:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581273,,XXX,XXX,XXX,xxx@sears.com,,,,2023-06-23 16:56:02,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-30 17:43:13,,,,,,,,,,,,,,,,,,,,,,
+581274,,mensulidades,fijas,desceunto,empleado@ed.com,,,,2023-06-23 17:01:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581275,,xxx,xxx,xx,xxx@sears.com.mx,,,,2023-06-23 17:09:44,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-02 12:27:20,,,,,,,,,,,,,,,,,,,,,,
+581276,,xxxx,xxxxx,xxxxxx,xxxxx@sears.com,,,,2023-06-23 17:18:27,0,,0,0,,,,0,,,,,,,,,,,,,2024-11-25 11:00:29,,,,,,,,,,,,,,,,,,,,,,
+581277,,xxx,xx,xxx,dd@sears.com.mx,,,,2023-06-23 17:28:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581278,,xxx,xxx,xxx,xxx@se.com,,,,2023-06-23 17:40:12,0,,0,0,,,,0,,,,,,,,,,,,,2023-09-25 16:07:14,,,,,,,,,,,,,,,,,,,,,,
+581279,,xxx,xxx,xxxx,xxxx@sears.com,,,,2023-06-23 17:54:23,0,,0,0,,,,0,,,,,,,,,,,,,2024-11-22 11:38:37,,,,,,,,,,,,,,,,,,,,,,
+581280,,PRUEBA,DOS,XXX,PREBA2@SEARS.COM,,,,2023-06-26 18:41:39,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581281,,pruebq,tres,sap,PRUEBA3@SEARS.COM,,,,2023-06-26 19:17:01,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-27 12:16:35,,,,,,,,,,,,,,,,,,,,,,
+581282,,PRUEBA,CUATRO,DESEMPLEADO,pprueba4@sears.com,,,,2023-06-26 19:20:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581283,,prueba,tarj,sears,pruebatar@sears.com,,,,2023-06-26 19:26:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581284,,alejandra,rodriguez,perez,possap7@sears.com.mx,,,,2023-06-27 12:39:21,0,,0,0,,,,0,,,,,,,,,,,,,2025-01-06 15:56:34,,,,,,,,,,,,,,,,,,,,,,
+581285,,prueba,dos,sap,prueba2@sears.com,,,,2023-06-27 12:54:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581286,,prueba,cuatro,sap,possap7@sears.com,,,,2023-06-27 13:30:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581287,,prueba,cinco,sap,prueba5@sears.com,,,,2023-06-27 13:41:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581288,,prueba,seis,sap,prueba6@sears.com,,,,2023-06-27 13:51:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581289,,PRUEBA,SIETE,SAP,PRUEBA7@SEARS.COM,,,,2023-06-27 13:55:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581290,,PRUEBA,OCHO,SAP,PRUEBA8@SEARS.COM,,,,2023-06-27 16:15:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581291,,PRUEBA,NUEVE,POS,PRUEB@SEARS.COM,,,,2023-06-27 16:24:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581292,,PRUEBA,DIEZ,POS,PRUBA10@SEARS.COM,,,,2023-06-27 17:31:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581293,,PRUEBA,DOCE,POS,PRUEBA12@SEARS.COM,,,,2023-06-27 18:48:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581294,,PRUEBA,TRECE,POS,PRUEBA13@SEARS.COM,,,,2023-06-27 18:57:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581295,,prueba,pos,sap,sap@sears.com,,,,2023-06-28 13:46:47,0,,0,0,,,,0,,,,,,,,,,,,,2024-08-01 18:13:12,,,,,,,,,,,,,,,,,,,,,,
+581296,,pos,sap,lab,hechomedida@sears.com,,,,2023-06-28 14:39:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581297,,JUAN,PEREZ,RAMIREZ,pruebas@sears.com,,,,2023-06-29 11:04:47,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-15 17:02:55,,,,,,,,,,,,,,,,,,,,,,
+581298,,NHGJHGUJ,GHGGGJ,JHJGJG,ASAFFSFSA@SEARS.COM,,,,2023-06-29 11:08:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581299,,ADFGHN,CONTRATO,,PRUEBA@SERAS.COM,,,,2023-06-29 11:12:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581300,,PRUEBA,CONTRATO,,ESM@SEARS.COM,,,,2023-06-29 11:16:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581301,,pRUEBA,SANBORNS,,TARJETA@SEARS.COM,,,,2023-06-29 16:35:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581302,,PRUEBA,TARJ,SEARS,PRUEBATARJ@SEARS.COM,,,,2023-06-29 16:39:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581303,,PRUEBA,TARJ,AMEX,PRUEBA@AMEX.COM,,,,2023-06-29 16:56:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581304,,PRUEBA,HECHO,,MEDIDA@SEARS.COM,,,,2023-06-29 17:06:10,0,,0,0,,,,0,,,,,,,,,,,,,2023-06-29 16:11:01,,,,,,,,,,,,,,,,,,,,,,
+581305,,prueba,cuatro,fincado,CUATRO@SEARS.COM,,,,2023-06-29 17:15:47,0,,0,0,,,,0,,,,,,,,,,,,,2023-11-09 10:43:05,,,,,,,,,,,,,,,,,,,,,,
+581306,,PRUEBA,SMAL,SMAL,SMAL@SEARS.COM,,,,2023-06-29 17:27:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581307,,prueba,dos,,SAP@SEARS.COM.MX,,,,2023-06-29 17:31:55,0,,0,0,,,,0,,,,,,,,,,,,,2024-02-06 10:17:16,,,,,,,,,,,,,,,,,,,,,,
+581308,,PRUEBA,MANUAL,PORCENTAJE,DESCUANTA@SEARS.COM,,,,2023-06-29 17:46:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581309,,PRUEBA,CANCELACION,,CANCELA@SEARS.COM,,,,2023-06-29 17:49:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581310,,PRUEBA,SMALL,SMALL,SMALL@SERAS.COM,,,,2023-06-29 18:02:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581311,,PRUEBA,CANCELACION,,SOLO@SEARS.COM,,,,2023-06-29 18:08:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581312,,FDR,SAP,,DDDRA@SEARS.XOM,,,,2023-06-29 18:25:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581313,,Daniela,m,,danielahome@hotmail.com,,,,2023-06-30 11:52:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581314,,prueba,hecho,medida,repetir@sears.com,,,,2023-07-03 13:07:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581315,,margarita,diaz,peralta,prueba@sanborns.com.mx,,,,2023-07-03 19:45:39,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581316,,q,q,q,rojasr@hotmail.com,,,,2023-07-10 13:34:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581317,,j,j,,j@hostmail.xom,,,,2023-07-13 11:20:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581318,,f,f,,f@hostmail.com,,,,2023-07-13 11:43:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581319,,g,g,,g@hostmail.com,,,,2023-07-13 11:59:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581320,,Invitado,Sears,,correo@jdfsakd.com,,,,2023-07-14 14:11:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581321,,pruebatres,fincado,smallybig,smallybig@sears.com.mx,,,,2023-07-14 18:19:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581322,,pruebauno,fincado,smallticket,possap5@sears.com.mc,,,,2023-07-18 17:51:35,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581323,,Jose,Pérez,Labastida,perezjoal@globalhitss.com,,,,2023-07-21 17:18:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581324,,prueba,textil,xx,poss@gmail.com,,,,2023-07-24 14:12:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581325,,prueba,textil,xx,pos@gmail.com,,,,2023-07-24 14:17:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581326,,x,x,x,x@gmail.com,,,,2023-07-24 17:59:17,0,,0,0,,,,0,,,,,,,,,,,,,2026-05-14 11:03:53,,,,,,,,,,,,,,,,,,,,,,
+581327,,xx,x,x,x@gma.com,,,,2023-07-24 18:02:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581328,,x,x,x,cc@gmail.com,,,,2023-07-24 18:07:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581329,,x,x,x,f@gmasil.vom,,,,2023-07-27 13:04:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581330,,x,x,x,dddd@gmail.com,,,,2023-07-27 14:15:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581331,,Xx,X,X,X@GGG.COM,,,,2023-08-01 12:42:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581332,,Xx,X,X,X@CC.COM,,,,2023-08-01 13:03:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581333,,xx,xx,xx,XX@GM.COM,,,,2023-08-01 13:19:29,0,,0,0,,,,0,,,,,,,,,,,,,2025-12-17 09:25:33,,,,,,,,,,,,,,,,,,,,,,
+581334,,X,X,X,X@FF.COM,,,,2023-08-01 13:23:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581335,,jjjjjj,nn,nn,kkkkkkkkk@gmail.com,,,,2023-08-01 16:19:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581336,,x,x,x,testred@gmail.com,,,,2023-08-01 16:57:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581337,,xxxxx,xxxxx,xxxxxx,xxxxxx@gmail.com,,,,2023-08-01 17:04:44,0,,0,0,,,,0,,,,,,,,,,,,,2025-04-11 17:20:07,,,,,,,,,,,,,,,,,,,,,,
+581338,,x,x,x,sdsfd@gmail.com,,,,2023-08-01 17:14:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581339,,xx,x,x,x@gmial.vom,,,,2023-08-01 17:19:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581340,,JUAN,PEREZ,PEREZ,dfsgdh@f.com,,,,2023-08-01 17:26:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581341,,x,x,x,xxx@gg.com,,,,2023-08-01 18:26:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581342,,pru,po,,la@sears.com,,,,2023-08-01 18:45:15,0,,0,0,,,,0,,,,,,,,,,,,,2024-04-26 18:29:10,,,,,,,,,,,,,,,,,,,,,,
+581343,,uytuyty,fff,,cf@dr.com,,,,2023-08-01 18:48:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581344,,ghfhy,aa,,de@de.com,,,,2023-08-01 18:52:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581345,,xx,xx,xxx,zzzz@gmail.com,,,,2023-08-01 19:00:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581346,,xxx,xxxx,xxx,jjjjjjjjjjjjQWq@GMAIL.COM,,,,2023-08-01 19:09:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581347,,x,x,x,xQsasa@gmail.com,,,,2023-08-02 11:18:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581348,,x,x,x,eQ@gmail.com,,,,2023-08-02 11:25:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581349,,xxx,xxx,xxx,xxxxQ@gmail.com,,,,2023-08-02 11:51:42,0,,0,0,,,,0,,,,,,,,,,,,,2025-12-15 18:34:47,,,,,,,,,,,,,,,,,,,,,,
+581350,,oeoeoeo,o,o,ooooooooo@gmail.com,,,,2023-08-02 11:57:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581351,,ASS,SS,S,KKq@GMAI.COM,,,,2023-08-02 12:07:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581352,,X,X,X,X@GMIAL.COM,,,,2023-08-02 12:35:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581353,,LL,LL,LL,M@SE.COM,,,,2023-08-02 12:42:48,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581354,,ninguno,no,tiene,nohay@sears.com,,,,2023-08-02 13:39:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581355,,nn,n,n,nn@gmail.com,,,,2023-08-02 14:19:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581356,,jojojj,xx,x,xvvv@gmail.com,,,,2023-08-02 14:32:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581357,,LL,MN,J,KA@SE.COM,,,,2023-08-02 16:55:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581358,,LL,K,J,HH@SE.COM,,,,2023-08-02 17:09:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581359,,L,P,O,FA@SE.COM,,,,2023-08-02 17:15:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581360,,A,B,C,LA@SE.COM,,,,2023-08-02 17:17:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581361,,JHKJH,GJJH,KK,DFG@SEA.COM,,,,2023-08-02 17:29:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581362,,PRUEBA,BUENA,ESPERO,VA@SEARS.COM,,,,2023-08-02 17:49:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581363,,PRUEBA,CASI,LA,TENGO@SEARS.COM,,,,2023-08-02 18:32:57,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581364,,DDD,LLLLL,LLLLL,LAS@SEARS.COM,,,,2023-08-02 18:37:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581365,,AA,KK,KK,LL@SE.COM,,,,2023-08-02 18:41:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581366,,X,X,X,XX@GGMAIL.COM,,,,2023-08-02 18:41:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581367,,X,X,X,XXKJ@GMAIL.COM,,,,2023-08-02 18:44:23,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581368,,X,X,X,X@HOT.COM,,,,2023-08-02 18:52:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581369,,xxxxxx,xxxxx,xxxx,xxxxxheric@gmail.com,,,,2023-08-03 11:31:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581370,,xxx,xxx,xxxx,xxxxtsts@gmail.com,,,,2023-08-03 11:46:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581371,,xxx,xxx,xxxx,xsdd@gmail.com,,,,2023-08-03 11:57:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581372,,gdgdgd,gsgs,xx,7373@gmail.com,,,,2023-08-03 12:05:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581373,,xxxXXX,XX,X,XXHDHD@GMAIL.COM,,,,2023-08-03 12:08:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581374,,XX,XXX,XX,XXJDJDq@HOTMAIL.COM,,,,2023-08-03 12:18:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581375,,red,red,red,RED@GMAIL.COM,,,,2023-08-03 12:29:21,0,,0,0,,,,0,,,,,,,,,,,,,2025-03-11 20:10:21,,,,,,,,,,,,,,,,,,,,,,
+581376,,ERI,CC,CC,HHH@GMAIL.COM,,,,2023-08-03 12:34:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581377,,xxx,xxx,xx,xxxQ@gmail.com,,,,2023-08-03 13:00:03,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-22 11:18:45,,,,,,,,,,,,,,,,,,,,,,
+581378,,xxXX,XX,XX,XXHHD@GMAIL.COM,,,,2023-08-03 13:26:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581379,,juan,perez,gonzalez,juanperezg@gmail.com,,,,2023-08-04 18:05:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581380,,xx,xx,xx,xxQ@gmail.com,,,,2023-08-04 18:07:23,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-22 13:04:07,,,,,,,,,,,,,,,,,,,,,,
+581381,,erick,resr,error,error@gmail.com,,,,2023-08-07 11:40:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581382,,fincado,pedido,x,ficnado@sears.com.mx,,,,2023-08-07 12:16:55,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-18 15:33:58,,,,,,,,,,,,,,,,,,,,,,
+581383,,fincado,pedido,dos,ficnado@gmail.com,,,,2023-08-07 12:19:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581384,,fincado,PEDIDO,errorticket,ticketcopiatienda@gmail.com,,,,2023-08-07 12:22:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581385,,xx,xx,xx,jhdjhs@gmail.com,,,,2023-08-07 18:21:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581386,,xx,udhhdhdhd,xx,lllQ@gmail.com,,,,2023-08-08 12:55:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581387,,x,x,x,xxxQQ@gmail.com,,,,2023-08-09 19:54:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581388,,pruebauno,formapago,parcial,pagoparcia@sears.com,,,,2023-08-10 12:46:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581389,,pruebados,pago,parcial,pparcial@gmail.com,,,,2023-08-10 12:52:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581390,,pruebatres,formapago,parcial,pparcialQ@sears.com.mx,,,,2023-08-10 12:56:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581391,,prueba uno,prueba,prueba,pruebauno@sears.com.mx,,,,2023-08-17 18:51:58,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-15 09:58:52,,,,,,,,,,,,,,,,,,,,,,
+581392,,xx,xx,xx,xxxQ@gmai.com,,,,2023-08-17 19:00:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581393,,xx,xx,xxx,jjjjjj@gmail.com,,,,2023-08-17 19:05:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581394,,xxxxx,xxxx,xxx,xxxxxQ@gmail.com,,,,2023-08-17 19:49:51,0,,0,0,,,,0,,,,,,,,,,,,,2025-01-06 15:05:28,,,,,,,,,,,,,,,,,,,,,,
+581395,,xx,xx,xx,xxxx@h.com,,,,2023-08-17 19:51:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581396,,BRENDA LILIAN,MARTINEZ,VAZQUEZ,enr5osol1473@gmail.com,,,,2023-08-18 10:53:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581397,,pruebacinco,fincado,pedido,fincdo@sears.com.mx,,,,2023-08-18 14:17:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581398,,fincado,pedido,smalbig,fincadoQ@sears.com.mx,,,,2023-08-18 16:45:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581399,,erick,prueba,cancelacion,cancelacionQ@sears.com.mx,,,,2023-08-18 17:04:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581400,,prueba,cuatro,cancelacion,cancelacion@sears.com.mx,,,,2023-08-18 17:07:49,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-28 12:37:53,,,,,,,,,,,,,,,,,,,,,,
+581401,,cancelacion,cancealcion,cancelacion,cancealcion@sears.com.mx,,,,2023-08-18 17:16:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581402,,alex,rodriguez,,alex@sears.com.mx,,,,2023-08-21 11:35:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581403,,erick,rojo,,eri@sears.com.mx,,,,2023-08-21 11:40:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581404,,erick,rojo,,erii@sears.com.mx,,,,2023-08-21 11:43:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581405,,erick,rojo,,eriickQ@sears.com.mx,,,,2023-08-21 11:46:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581406,,pruebas,cancelacion,,canceclacion@sears.com.mx,,,,2023-08-21 13:09:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581407,,cancelacion,big,ticket,canelacionb@sears.com.mx,,,,2023-08-21 13:21:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581408,,cancelacion,sku,,cancelacion@gmail.com,,,,2023-08-21 13:27:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581409,,cancealcion,mkp,,mkp@sears.com.mx,,,,2023-08-21 13:31:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581410,,carlos,gonzalz,,carp@sears.com.mx,,,,2023-08-21 13:37:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581411,,juan,perez,gonzalez,juanp@sears.com.mx,,,,2023-08-21 14:06:58,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-13 17:03:44,,,,,,,,,,,,,,,,,,,,,,
+581412,,juan,perez,perez,juanpp@sears.com.mx,,,,2023-08-21 14:20:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581413,,pedido,xx,xx,correo@gmail.com,,,,2023-08-22 12:42:55,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-22 12:17:44,,,,,,,,,,,,,,,,,,,,,,
+581414,,juan,perez,perez,corr@gmail.com,,,,2023-08-22 12:47:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581415,,juan perez,perez,,correo@gmai.com,,,,2023-08-22 13:01:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581416,,juan,perez,,corre@gmail.com,,,,2023-08-22 13:08:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581417,,x,x,x,xx@ggg.com,,,,2023-08-22 16:44:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581418,,Ricardo,Santiago,Ortiz,cct0103@sears.com.mx,,,,2023-08-23 14:41:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581419,,Gsaklj,Vcxvb,Rubio,dsad@dghf.com,,,,2023-08-23 21:15:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581420,,pruebauno,cancelacion,pedido,cncelacion@sears.com.mx,,,,2023-08-28 13:29:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581421,,prueba,cinco,cancelacion,cancela@sears.com.mx,,,,2023-08-28 13:40:41,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581422,,xxx,xx,xx,xxx@ddd.com,,,,2023-08-28 16:32:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581423,,xxx,xxx,xx,xxx@gil.com,,,,2023-08-28 16:40:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581424,,xx,xx,xx,xxxxQ@gmial.com,,,,2023-08-28 16:50:57,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581425,,xxxxxxx,xxxxxxxx,xxxxxxx,xxxxxxx@gmail.com,,,,2023-08-28 17:37:07,0,,0,0,,,,0,,,,,,,,,,,,,2025-01-21 16:10:41,,,,,,,,,,,,,,,,,,,,,,
+581426,,xx,xx,xx,xxxxhdhdhd@gmail.com,,,,2023-08-28 17:40:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581427,,xx,xx,xxx,xxxxx@sears.co.mx,,,,2023-08-28 17:51:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581428,,prueba,ocho,holdeo,holdeo@sears.com.mx,,,,2023-08-29 12:37:04,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-29 12:52:15,,,,,,,,,,,,,,,,,,,,,,
+581429,,Invitado,Sears,,jahahaq@hhh.com,,,,2023-08-29 13:10:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581430,,prueba,holdeo,cinco,cinco@holdeo.com,,,,2023-08-29 13:20:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581431,,prueba,siete,holdeo,holdeo@gmail.com,,,,2023-08-29 13:35:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581432,,prueba,tres,ficnado,fincado@gmial.com,,,,2023-08-29 14:09:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581436,,luis,diez,,ecommerce4@outlook.com,,,,2023-08-29 18:16:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581437,,finxado,pedido,fecha,fecha@gmail.com,,,,2023-08-30 13:17:34,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-30 12:53:45,,,,,,,,,,,,,,,,,,,,,,
+581438,,fecha,validacion,x,fecha@sears.com,,,,2023-08-30 13:41:24,0,,0,0,,,,0,,,,,,,,,,,,,2023-08-30 13:04:44,,,,,,,,,,,,,,,,,,,,,,
+581439,,fincado,validacion,fecha,fecha@sears.com.mx,,,,2023-08-30 13:46:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581440,,xx,xx,xx,fecha@fecha.com,,,,2023-08-30 14:01:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581441,,juan,perez,gonzalez,juanorg@sears.com.mx,,,,2023-08-30 14:38:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581442,,carlos,gutierrez,trejo,carlos@sears.com.com,,,,2023-09-07 13:28:23,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581443,,juna,gonzalez,gutierrez,junape@mesa.com,,,,2023-09-07 13:33:57,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581444,,Invitado,Sears,,dfsfds@dsad.com,,,,2023-09-11 14:38:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581445,,Invitado,Sears,,nvbnhg@kjfds.com,,,,2023-09-11 14:45:48,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581446,,Invitado,Sears,,kjldf@fuiuw.com,,,,2023-09-11 14:48:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581447,,prueba,anulacion,,anulacion@sears.com.mx,,,,2023-09-11 18:18:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581448,,fincado,pedido,idrelacion,relacion@sears.com.mx,,,,2023-09-14 18:30:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581449,,Invitado,Sears,,guestcheckout-001@correo.com,,,,2023-09-15 13:42:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581450,,alejandra,uribe,gonzalez,emilya.uribee2@hotmail.com,,,,2023-09-15 14:23:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581451,,elliot,lafarga,lopez,cct0108@sears.com,,,,2023-09-15 14:28:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581452,,A,A,,a@hostmail.xom,,,,2023-09-18 18:40:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581453,,a,s,,a@hostmail.com,,,,2023-09-18 18:47:39,0,,0,0,,,,0,,,,,,,,,,,,,2023-10-19 15:28:50,,,,,,,,,,,,,,,,,,,,,,
+581454,,ggggg,gggg,ggg,ggggg@prueba.com,,,,2023-09-22 19:28:39,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581455,,preuba,tres,ficnado,ficna@sears.com.mx,,,,2023-09-25 13:39:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581456,,prueba,cuatro,ficnado,finQ@sears.com.mx,,,,2023-09-25 13:44:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581457,,xxx,xxx,xx,xxQ@sears.com.mx,,,,2023-09-25 14:01:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581458,,xxx,xxx,xxx,xxxxQ@sears.com.mx,,,,2023-09-25 14:06:48,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581459,,x,xx,xx,xxx@sear.com,,,,2023-09-25 14:08:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581460,,a,a,,a@hymai.com,,,,2023-09-25 14:37:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581461,,juan,perez,gonzalez,xx@sears.com.mx,,,,2023-09-25 16:33:31,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-31 11:01:50,,,,,,,,,,,,,,,,,,,,,,
+581462,,xxx,xxx,xx,xxxx@sears.com.mx,,,,2023-09-25 16:35:42,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-08 10:15:47,,,,,,,,,,,,,,,,,,,,,,
+581463,,xx,xxx,xxx,xx@ggg.xom,,,,2023-09-25 16:47:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581464,,x,x,x,xx@dd.com,,,,2023-09-25 16:52:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581465,,x,x,x,xx@gg.xom,,,,2023-09-25 16:56:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581466,,x,xx,xxx,xxxQ@se.com,,,,2023-09-25 16:59:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581467,,xx,xx,xx,xxxxQ@ssc.com,,,,2023-09-25 17:05:16,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581468,,prueba,prueba,prueba,prueba@prueba.com,,,,2023-09-25 18:18:20,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-22 09:47:01,,,,,,,,,,,,,,,,,,,,,,
+581469,,prueba,dos,fincado,fincd@df.com,,,,2023-09-27 12:11:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581470,,xx,xx,xx,xx23@sear.com,,,,2023-09-27 12:20:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581471,,xx,xx,xx,xxxx@ss.com,,,,2023-09-27 12:36:48,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581472,,zxx,xx,xx,xxxx@fdf.com,,,,2023-09-27 12:39:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581473,,xxXXxxx,xx,xxx,xxxxQQ@ggg.com,,,,2023-09-27 13:37:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581474,,xx,xx,xx,xxxxxQ@sss.com,,,,2023-09-27 13:48:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581475,,prueba,fincado,fallo,pruebauno@sears.com,,,,2023-09-27 14:17:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581476,,prueba,tres,error,jghj@gmial.com,,,,2023-09-27 14:22:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581477,,prueba,cuatro,error,preuba@dd.com,,,,2023-09-27 14:23:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581478,,prueba,cinco,error,edd@gd.com,,,,2023-09-27 14:30:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581479,,prueba,uno,fincado,finc@sears.com,,,,2023-09-28 11:59:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581480,,prueba,dos,fincado,fin@sea.com,,,,2023-09-28 12:05:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581481,,prueba,tres,fincado,fin@sears.com,,,,2023-09-28 12:10:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581482,,prueba,dos,fincado,finca@sea.com,,,,2023-09-28 12:22:00,0,,0,0,,,,0,,,,,,,,,,,,,2023-10-02 10:47:52,,,,,,,,,,,,,,,,,,,,,,
+581483,,prueba,seis,fincado,finc@sea.co,,,,2023-09-28 12:25:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581484,,prueba,uno,fincado,fincado@sea.com,,,,2023-09-28 12:29:24,0,,0,0,,,,0,,,,,,,,,,,,,2023-09-28 12:56:47,,,,,,,,,,,,,,,,,,,,,,
+581485,,prueba,dos,fincado,dos@sea.coom,,,,2023-09-28 13:59:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581486,,juan,perez,tres,error@sea.com,,,,2023-09-28 14:04:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581487,,cuatro,fincado,prueba,dddn@ff.com,,,,2023-09-28 14:07:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581488,,cinco,pedido,ficnado,fincadosea@sea.com,,,,2023-09-28 14:10:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581489,,seis,no,anulado,noanuladoQ@sea.com,,,,2023-09-28 14:12:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581490,,xx,xx,xx,xxxx@sea.com,,,,2023-09-29 18:53:13,0,,0,0,,,,0,,,,,,,,,,,,,2023-10-02 15:56:22,,,,,,,,,,,,,,,,,,,,,,
+581491,,XXX,XXX,XX,XXXX@GGG.COM,,,,2023-09-29 19:00:54,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-07 17:30:53,,,,,,,,,,,,,,,,,,,,,,
+581492,,XXX,XXX,XXX,XXXXXq@GMIAL.COM,,,,2023-09-29 19:05:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581493,,XXX,X X,XXX,XXXq@GMIAL.COM,,,,2023-09-29 19:16:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581494,,XXX,XXXX,XXX,XXX@GS.COM,,,,2023-09-29 19:19:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581495,,xx,xxx,xxx,xxQ@dd.com,,,,2023-10-02 10:56:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581496,,juan,vega,lopez,sanjuan.v@hotmail.com,,,,2023-10-02 11:18:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581497,,prueba,uno,fincado,finca@gama.com,,,,2023-10-02 11:41:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581498,,prueba,dos,fincado,juan.gonzalez@hotmail.com,,,,2023-10-02 12:26:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581499,,erick,ramirez,rojo,eriickrojo@gmail.com,,,,2023-10-02 12:33:08,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-31 12:05:56,,,,,,,,,,,,,,,,,,,,,,
+581500,,JUAN,PEREZ,GONZALEZ,juanpere.gonzaleaz@hotmail.com,,,,2023-10-02 12:40:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581501,,JUAN,PEREZ,GONZALEZ,juan.v@hotmail.com,,,,2023-10-02 12:47:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581502,,JUAN,PEREZ,GONZALEZ,juan.perez.gonzalez.345@hotmail.com,,,,2023-10-02 13:18:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581503,,juan,perez,perez,juan.perez.gonzalez.1723@hotmail.com,,,,2023-10-02 13:40:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581504,,xxxxxxx,xxxxx,,juan.perfv@hotmail.com,,,,2023-10-02 14:09:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581505,,xx,xxx,xx,xxxQ@sea.com,,,,2023-10-02 16:27:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581506,,ERICK,RAMIREZ,ROJO,eriic_r@hotmail.com,,,,2023-10-02 17:03:02,0,,0,0,,,,0,,,,,,,,,,,,,2025-01-02 17:04:01,,,,,,,,,,,,,,,,,,,,,,
+581507,,juan,perez,gonzalez,juanperezgonzalez@hotmail.com,,,,2023-10-02 17:15:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581508,,juan,perez,dos,juanQ@sears.com.mx,,,,2023-10-02 17:17:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581509,,juan,perez,,pruebatres@sear.com,,,,2023-10-02 17:20:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581510,,juan,perez,gonzalez,juanQ@sear.com.mx,,,,2023-10-02 17:23:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581511,,prueba,cinco,,pruebacincoQ@sears.com,,,,2023-10-02 17:28:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581512,,prueb,seis,,validacion@sear.com,,,,2023-10-02 17:34:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581513,,juan,perez,,JUANPq@SEARS.COM.MX,,,,2023-10-02 17:47:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581514,,juna,perez,jajaa,juand34Q@sea.com.mx,,,,2023-10-02 17:51:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581515,,jaun,perez,perez,perezQ@sear.com,,,,2023-10-02 17:58:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581517,,deniss,bonilla,martinez,denicebonilla.movilidad@gmail.com,,,,2023-10-02 18:35:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581518,,xxx,xxx,xxx,xxxA@gmail.com,,,,2023-10-02 19:10:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581519,,xxx,xxx,xx,xxxx@gmil.com,,,,2023-10-03 12:01:07,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581520,,xxx,xxx,xx,xxxxx@sears.com.mx,,,,2023-10-03 12:15:59,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-22 10:51:53,,,,,,,,,,,,,,,,,,,,,,
+581521,,xxxxxxx,xxxxxx,xxxx,xxxxxxx@sears.com.mx,,,,2023-10-03 12:38:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581522,,xxxxx,xxxx,xxxx,xxxxx@sea.com,,,,2023-10-03 12:57:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581523,,juan,perez,gonzalez,juanperg@sears.com.mx,,,,2023-10-03 13:11:25,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581524,,xxxx,xxx,xxx,xxxxxxQ@gmail.com,,,,2023-10-03 13:50:36,0,,0,0,,,,0,,,,,,,,,,,,,2025-01-21 18:02:03,,,,,,,,,,,,,,,,,,,,,,
+581525,,xxx,xx,xx,fotografica_200@yahoo.com.mx,,,,2023-10-03 14:37:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581526,,xxx,xxx,xx,xxxxxx@gamil.com,,,,2023-10-03 16:57:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581527,,adan,steven roman,espino,Sroman@gmail.com,,,,2023-10-03 17:06:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581528,,adan stiven,roman,espino,Sroman743@gmail.com,,,,2023-10-03 17:33:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581529,,xxxXXX,XX,XXX,XXXXXqq2q@GMAIL.COM,,,,2023-10-03 18:49:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581530,,JUAN,PEREZ,GONZALEZ,catepechrdf@gmail.com,,,,2023-10-04 14:03:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581531,,prueba,fin,ids,fincadiids@gmail.com,,,,2023-10-04 16:41:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581532,,finc,prueba,ids,idsprueba@sears.com,,,,2023-10-04 16:50:03,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581533,,prueba,fin,id,ids@seras.com,,,,2023-10-04 16:58:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581534,,juan,perez,gonzalez,junanap@gmail.com,,,,2023-10-04 17:05:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581535,,juan,perez,trejo,pereztrejo@mgail.com,,,,2023-10-04 17:15:11,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581536,,juan,robles,mancera,juanroblmance@gmail.com,,,,2023-10-04 17:20:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581537,,juan,perez,gomez,juannperx@gmail.com,,,,2023-10-04 17:24:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581538,,JESSICA VIANEY,MORENO,HERNANDEZ,jessica.hernandez.gonznroses@gmail.com,,,,2023-10-05 12:59:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581539,,juan,perez,gonzalez,juan.perez.gonzalez.perez.perez@sears.com.mx,,,,2023-10-05 13:09:35,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581540,,nombre,paterno,meterno,nombre@sears.com.mx,,,,2023-10-05 16:48:35,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581541,,saasgssassasaasssa,koj,n,jjjjjj@jks.com,,,,2023-10-05 17:18:21,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581542,,assass,Garduno,Moral,dayna.Mo@gmail.com,,,,2023-10-05 17:26:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581543,,dolores,vargas,perez,dolidoli.v.prex@yahoo.com,,,,2023-10-05 17:31:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581544,,xxx,xxx,xxx,xxxxxQ@ggagaga.com,,,,2023-10-05 17:35:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581545,,lasjkashajdh,hvghcdfh,ghfghfghf,hghgf@gmail.com,,,,2023-10-05 17:48:28,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581546,,xxx,xxx,xxx,xxxx@kjrrjirjirjigjr.com,,,,2023-10-05 18:00:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581547,,lorena,rios,Valle,lorena.lorel.riodpx@gma.com,,,,2023-10-05 18:06:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581548,,juan,perez,gonzalez,juanpe@gmail.com,,,,2023-10-05 18:12:36,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-23 11:28:02,,,,,,,,,,,,,,,,,,,,,,
+581549,,juan,perez,rodriguez,juapr@gmail.com,,,,2023-10-05 18:35:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581550,,doloree,rivera,maya,doli.doli@gmail.com,,,,2023-10-05 18:43:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581551,,eugenia,flores,domguez,euge.flo@gmail.com,,,,2023-10-05 18:51:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581552,,prueba,fincado,idrelacion,relacion@sears.com,,,,2023-10-06 18:47:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581553,,fff,aaaa,,a@hostmail.com.mx,,,,2023-10-09 16:36:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581554,,prueba,leyenda,fincado,leyenda@sears.com,,,,2023-10-18 18:13:51,0,,0,0,,,,0,,,,,,,,,,,,,2023-10-19 13:03:00,,,,,,,,,,,,,,,,,,,,,,
+581555,,leyenda,prueba,fincado,leyenda@serars.com,,,,2023-10-18 18:30:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581556,,XXX,XX,X,HJHHSHS@SEARS.COM,,,,2023-10-19 18:53:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581557,,PRUEBA,TECLA,CANTIDAD,CANTIDAD@SEARS.COM,,,,2023-10-19 18:58:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581558,,prueba,uno,fincado,uno@sears.com,,,,2023-10-20 13:44:45,0,,0,0,,,,0,,,,,,,,,,,,,2023-11-09 10:25:53,,,,,,,,,,,,,,,,,,,,,,
+581559,,Cliente,APELLIDO1,APELLIDO2,fdskjjfh@lfdsiufil.com,,,,2023-11-07 11:32:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581560,,prueba,dos,fincado,dos@sears.com,,,,2023-11-09 10:31:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581561,,prueba,tres,fincado,tres@sears.com,,,,2023-11-09 10:39:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581562,,PRUEBA,CINCO,FINCADO,CINCO@SEARS.COM,,,,2023-11-09 10:47:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581563,,MARIA DE LOURDES,BAUTISTA,REYES,mil.bautista@outlook.es,,,,2023-11-13 17:25:04,0,,0,0,,,,0,,,,,,,,,,,,,2023-11-13 17:51:47,,,,,,,,,,,,,,,,,,,,,,
+581564,,prueba,fin,uno,p_uno@sears.com.mx,,,,2023-11-15 15:52:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581565,,prueba,fincado,dos,p_dos@sears.com.mx,,,,2023-11-15 16:08:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581566,,prueba,fincado,fin,fijn@sears.com.mx,,,,2023-11-15 17:21:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581567,,FRIDA,DOMINGUEZ,ROMAN,FRIDI@SEARS.COM.MX,,,,2023-11-15 17:29:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581568,,HGHHGHGH,HHHH,HHH,HHHHYH@GGEDGED.COM,,,,2023-11-15 17:48:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581569,,HGJHGHGHGHGH,HGHGHG,HGHGHGHG,GHGHGHGHG@FGFF.COM,,,,2023-11-15 17:50:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581570,,XXXX,XX,X,XXXXXX@HHHGH.COM,,,,2023-11-15 17:53:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581571,,XXxxxXX,XX,XX,XXXXXX@2GJDGJCDJHCJD.COM,,,,2023-11-15 17:56:24,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581572,,HGHGHGHHGH,GHGHGHGHGHGHGHHGHG,GHGHGH,HGHHGHGU@KFK.COM,,,,2023-11-15 17:58:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581573,,Nombre1 Nombre2 ,Apellido1 ,Apellido2 ,dfsfdsg@hgsdsa.com,,,,2023-11-19 14:24:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581574,,prueba,uno,fincado,preubauno@sears.com.mx,,,,2023-11-22 13:51:04,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581575,,prueba,dos,fincado,pruebados@gmail.com,,,,2023-11-22 13:54:48,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581576,,Nombre ,López ,Lopez,fdsf@fdsffdd.com,,,,2023-11-24 19:25:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581577,,Valentín ,Ortiz ,Luna,dsakdhj@kjfhdskjfh.dfhjsg,,,,2023-11-30 16:47:35,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581578,,Gustavo,Saldaña,,kjdhsak@dsafg.com,,,,2023-11-30 19:22:33,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581579,,Aopfdis,Galdkjlks,Jkjshad,fdsrfsda@kjhdgs.com,,,,2023-12-01 11:19:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581580,,pruebas,dos,fincado,smmal@gmail.com,,,,2023-12-01 17:01:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581581,,pruebas,tres,fincado,fincadotres@sears.com.mx,,,,2023-12-01 17:08:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581582,,prueba,cuatro,fincado,tcautro@sears.com.mx,,,,2023-12-01 17:12:14,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581583,,pruebas,cinco,fincado,fincadocinco@sears.com.mx,,,,2023-12-01 17:14:38,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581584,,prueba,seis,fincado,fincadoseis@sears.com.mx,,,,2023-12-01 17:17:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581585,,Manuel,Valencia,Torres,wqe@tre.com,,,,2023-12-13 11:41:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581586,,prueba,dos,,dos@prueba.com,,,,2023-12-13 13:46:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581587,,prueba,tres,,tres@prueba.com,,,,2023-12-13 13:51:22,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581588,,prueba,cuatro,,cuatro@prueba.com,,,,2023-12-13 13:54:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581589,,prueba,cinco,,cinco@prueba.com,,,,2023-12-13 13:56:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581590,,seis,prueba,,seis@prueba.com,,,,2023-12-13 13:59:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581591,,prueba,siete,,siete@prueba.com,,,,2023-12-13 14:04:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581592,,prueba,ocho,,ocho@prueba.com,,,,2023-12-13 14:07:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581593,,prueba,nueve,,nueve@prueba.com,,,,2023-12-13 14:09:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581594,,prueba,pos,,pod@sears.com,,,,2023-12-14 09:21:18,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581595,,prueba,uno,,uno@prueba.com,,,,2023-12-14 10:37:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581596,,prueba,fincado,pedido,pedidos@sears.com.mx,,,,2023-12-20 16:26:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581597,,prueba,dos,fincado,pruebasseras@sears.com,,,,2023-12-20 16:30:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581598,,fincado,mesa,loquiero,FINCADO@SEARS.COM,,,,2023-12-20 16:39:09,0,,0,0,,,,0,,,,,,,,,,,,,2025-05-19 13:31:46,,,,,,,,,,,,,,,,,,,,,,
+581599,,PRUEBA,SIETE,FINCADO,FINCADOS@SEARS.COM,,,,2023-12-20 16:55:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581600,,a,a,,a@y.com.mx,,,,2023-12-21 10:46:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581601,,c,r,,r@sanborns.com.mx,,,,2023-12-21 13:36:13,0,,0,0,,,,0,,,,,,,,,,,,,2023-12-26 15:10:13,,,,,,,,,,,,,,,,,,,,,,
+581602,,asdasdasdas,asdadas,,a@hotmail.com,,,,2023-12-21 13:44:30,0,,0,0,,,,0,,,,,,,,,,,,,2024-10-25 12:54:24,,,,,,,,,,,,,,,,,,,,,,
+581603,,X,X,X,XXXXXXXXXXXXXA64@GMAIL.COM,,,,2023-12-22 17:31:19,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581604,,PRUEBA,CINCO,FINCADO,FIN.PRUEB@SEARS.COM.MX,,,,2024-01-09 13:28:35,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-09 15:37:58,,,,,,,,,,,,,,,,,,,,,,
+581605,,PRUEBA,FINCADO,DOS,FIN.PRUEBA@SEARS.COM.MX,,,,2024-01-09 15:16:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581606,,PRUEBA,CUATRO,FINCADO,FIN.PRUEB@SEARS.COM,,,,2024-01-09 15:33:37,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581607,,xxx,xxx,xxx,xxx2@gmail.com,,,,2024-01-19 17:16:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581608,,xxx,x,xx,xxxx@gmasl.com,,,,2024-01-19 17:24:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581609,,XCXXX,XXX,XXX,XXXX2@GLDKF.VOPM,,,,2024-01-22 11:06:30,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581610,,juan,perez,dos,dos@sears.com.mx,,,,2024-01-23 13:29:46,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-30 17:22:27,,,,,,,,,,,,,,,,,,,,,,
+581611,,prueba,tres,time,tres@sears.com.mx,,,,2024-01-23 13:36:37,0,,0,0,,,,0,,,,,,,,,,,,,2024-02-02 12:17:56,,,,,,,,,,,,,,,,,,,,,,
+581612,,asdasd,asdasdas,,asdasda@asdasd.com,,,,2024-01-29 10:59:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581613,,aaaaa,bbbbb,,cccc@hostmail.com,,,,2024-01-29 13:23:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581614,,aaaa,aaaaa,,a@a.ccc,,,,2024-01-29 15:34:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581615,,juna,perez,xx,juanperez@sears.com,,,,2024-01-30 17:14:40,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581616,,juan,perez,trejo,xxjep@sera.com.mx,,,,2024-01-30 17:25:46,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581617,,juan,perez,seis,seis@sears.com,,,,2024-01-30 17:30:59,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581618,,xxx,xx,xx,xxx@sera.com.mx,,,,2024-01-31 11:03:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581619,,juan,perez,uno,pruebamk@sears.com.mx,,,,2024-01-31 11:34:50,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581620,,juan,perezz,dos,pruebasmk@sears.com.mx,,,,2024-01-31 11:37:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581621,,karla,miranda,trejo,pmk@sears.com.mx,,,,2024-01-31 11:41:36,0,,0,0,,,,0,,,,,,,,,,,,,2024-01-31 12:04:30,,,,,,,,,,,,,,,,,,,,,,
+581622,,carlos,rodriguez,gonzalez,pmk@seras.com.mx,,,,2024-01-31 11:44:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581623,,juan,trejo,gonzlez,pmk@sears.com.x,,,,2024-01-31 11:51:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581624,,ESMERALDA,BAUTISTA,MARTINEZ,ESMERALDA@GMAIL.COM,,,,2024-01-31 12:38:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581625,,Invitado,Sears,,possap07@gmail.com,,,,2024-01-31 17:18:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581626,,x,c,c,prueba@seasrs.com,,,,2024-02-01 16:44:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581627,,PRUEBA,UNO,FINCado,timeout@sears.com.mx,,,,2024-02-02 10:56:45,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581628,,prueba,prueba,prueba,prueba@prueba.com.mx,,,,2024-02-02 11:47:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581629,,prueba,uno,mk,fincados@sears.com.mx,,,,2024-02-02 12:04:09,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581630,,prueba,dos,fincado,fincadotimeout@sears.com.mx,,,,2024-02-02 12:10:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581631,,prueba,diezz,time,time@sears.com.mx,,,,2024-02-02 12:29:45,0,,0,0,,,,0,,,,,,,,,,,,,2024-02-02 13:40:08,,,,,,,,,,,,,,,,,,,,,,
+581632,,prueba,siete,xx,xxxtime@gmail.com,,,,2024-02-02 12:57:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581633,,prueba,ocho,xx,xxx@sears.om.mx,,,,2024-02-02 13:01:12,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581634,,juan,perez,tres,pruebaQ@sears.com.mx,,,,2024-02-06 12:34:34,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581635,,juan,perez,gonzalez,junap@sears.com.mx,,,,2024-02-06 16:34:45,0,,0,0,,,,0,,,,,,,,,,,,,2024-02-13 16:53:17,,,,,,,,,,,,,,,,,,,,,,
+581636,,juan,perez,dos,juanpd@sears.com.mx,,,,2024-02-06 16:53:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581637,,Claudia,Lunq,Vargas,lunezz@gmail.com,,,,2024-02-06 17:38:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581638,,juan,perez,gonzalez,juanperz@gmail.com,,,,2024-02-07 10:17:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581639,,juan,perez,gonzalez,juanoerz@gmail.com,,,,2024-02-07 10:22:27,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581640,,juan,perez,doas,juanpdos@sears.com.mx,,,,2024-02-13 16:56:58,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581641,,juan,martinez,gutierrez,juanmgu@sears.com.mx,,,,2024-02-14 12:44:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581642,,juan,perez,gutierrez,juanoperegutieerez@sears.com.mx,,,,2024-02-14 13:40:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581643,,Djkldskj ,dsadasd ,ghjjs,dsad@dt872hy.com,,,,2024-02-15 14:05:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581644,,IVETTE ANGÉLICA,COLUNGA,NUÑEZ,angelica_colunga@hotmail.com,,,,2024-02-22 08:21:00,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581645,,dsg54 Mdhda,LFhdsoew9 Acosta,LFhdsoew9 Acosta,dsadsa.dsa@gmail.com,,,,2024-03-15 19:15:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581646,,prueba,dos,sap,labora@sears.com.mx,,,,2024-03-25 17:38:03,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581647,,Alejandro,Flores,Gonzalez,afumigaciones@hotmail.com,,,,2024-04-03 09:38:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581648,,Prueba,uno,fincado,puno@sears.com,,,,2024-04-03 11:15:31,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581649,,prueba,dos,fincado,pdos@sears.com,,,,2024-04-03 11:19:26,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581650,,prueba,tres,fincado,ptres@sears.com,,,,2024-04-03 11:26:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581651,,cinco,pruebas,fincados,pcinco@sears.com,,,,2024-04-03 11:34:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581652,,prueba,seis,fincado,pseis@sears.com,,,,2024-04-03 11:37:49,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581653,,siete,prueba,fincado,psiete@sears.com,,,,2024-04-03 11:40:54,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581654,,prueba,ocho,fin,pocho@sears.com,,,,2024-04-03 11:42:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581655,,prueba,fincado,pos,pruebafecha@sears.com,,,,2024-04-19 12:52:10,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581656,,PRUEBA,DOS,PEDIDO,PEDIDO2@SEARS.COM,,,,2024-04-19 13:10:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581657,,Prueba,Pos,Sap,lab@sears.com,,,,2024-04-23 13:41:49,0,,0,0,,,,0,,,,,,,,,,,,,2024-07-17 12:26:31,,,,,,,,,,,,,,,,,,,,,,
+581658,,nosport,tres,xxx,xxxxQ@sears.com,,,,2024-04-29 18:47:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581659,,testnospot,xx,xx,hhhhnospot@sears.com.mx,,,,2024-04-29 18:49:02,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581660,,nospot,cinco,test,nospotcinco@sears.com,,,,2024-04-29 18:51:20,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581661,,JUAN,PEREZ,FINCADO,nospot@sears.com.mx,,,,2024-04-29 18:53:09,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-07 16:49:28,,,,,,,,,,,,,,,,,,,,,,
+581662,,fincado,pedidos,xxx,fincadonospot@sears.com,,,,2024-04-29 18:54:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581663,,juan,perez,gonzalez,nospot@sears.com,,,,2024-04-30 14:00:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581664,,juan,perez,sol,jpsol@sears.com.mx,,,,2024-04-30 14:03:05,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581665,,prueba,dos,fincado,FALLO@SEARS.COM.MX,,,,2024-05-02 13:56:39,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-07 11:54:49,,,,,,,,,,,,,,,,,,,,,,
+581666,,aaaaaa,aaaaa,aaaaa,aaaaaa@sears.com,,,,2024-05-02 14:32:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581667,,bbbbbb,bbbbbbb,b,bbbb@sears.com,,,,2024-05-02 14:37:51,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581668,,Braulio,Ramirez,Rosas,b.jared.ramirose@gmail.com,,,,2024-05-03 11:40:32,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581669,,JUAN,PEREZ,XX,JUAN@DEARS.COM.MX,,,,2024-05-07 17:58:44,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581670,,TERESA,SANTANA,SAUCEDO,paolamcr_93@hotmail.com,,,,2024-05-07 20:59:17,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581671,,ivette,arambula,,pivette489@gmail.com,,,,2024-05-08 15:35:29,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581672,,mariana,munoz,munoz,cosuplan@hotmail.com,,,,2024-05-09 11:15:39,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581673,,prueba,mk,fincado,mkf@mk.com,,,,2024-05-09 18:40:13,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581674,,JUAN,PEREZ,MK,MK@MK.COM,,,,2024-05-09 18:42:05,0,,0,0,,,,0,,,,,,,,,,,,,2024-05-09 17:51:55,,,,,,,,,,,,,,,,,,,,,,
+581675,,FINCADO,FINCADO,FINCADO,FINCADOq@FINCADO.COM,,,,2024-05-09 18:48:43,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581676,,MK,MK,MK,MKq@MK.COM,,,,2024-05-09 18:53:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581677,,test,fincado,pedido,fincapedido@sears.com.mx,,,,2024-05-10 13:29:36,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581678,,fincado,market,place,marlerplace@sears.com,,,,2024-05-10 13:35:15,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581679,,fincado,marker,place,markerp@sears.com,,,,2024-05-10 13:38:42,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581680,,fincado,venta,parcial,fincadovp@sears.com.mx,,,,2024-05-10 13:45:01,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581681,,a,a,,xx@hotmail.com,,,,2024-05-10 17:41:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581682,,JUAN,PEREZ,GONZALEZ,JUANPRG@SEARS.COM.MX,,,,2024-05-10 19:06:06,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581683,,JUAN,PEREZ,GONZALEZ,juanpg@sears.com.mx,,,,2024-05-13 13:20:44,0,,0,0,,,,0,,,,,,,,,,,,,2026-02-23 12:13:23,,,,,,,,,,,,,,,,,,,,,,
+581684,,laura,gonzalez,trejo,laura@sears.com.mx,,,,2024-05-13 13:29:53,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581685,,juan,perez,xx,juanp@sears.con.mx,,,,2024-05-13 18:53:55,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581686,,juan,perez,gonzalez,junapg@gmail.com,,,,2024-05-14 13:27:18,0,,0,0,,,,0,,,,,,,,,,,,,2024-12-16 18:55:21,,,,,,,,,,,,,,,,,,,,,,
+581687,,c,c,,c@sears.com.mx,,,,2024-05-15 14:13:08,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581688,,sin_datos,sin_datos,sin_datos,osped@hotmail.com,,,,2024-05-17 13:15:52,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581689,,JUAN,PEREZ,GONZALEZ,JUNAPG@SEARS.COM.MX,,,,2024-05-20 17:16:47,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,
+581690,,JUAN,PEREZ,TREJJO,JUANPERET@SEARS.COM.MX,,,,2024-05-20 17:22:56,0,,0,0,,,,0,,,,,,,,,,,,,0000-00-00 00:00:00,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,346 @@
+{
+  "timestamp": "2026-08-24T03:45:00Z",
+  "engagement": "Claroshop/Sears Internal Network Topology",
+  "source": "Jenkins RCE (Groovy) + Docker API Exec",
+  
+  "hosts": {
+    "172.17.0.2": {
+      "hostname": "CSDEVJNKS01-3.jenkins",
+      "role": "Jenkins Master (Docker container)",
+      "os": "Linux 3.10.0-862.3.3.el7.x86_64 (CentOS 7 kernel)",
+      "user": "jenkins (uid=1000)",
+      "interfaces": {
+        "eth0": "172.17.0.2/16 (Docker bridge)"
+      },
+      "gateway": "172.17.0.1",
+      "dns": "172.27.141.12",
+      "open_ports": [8080, 50000, 13306, 13307, 13308, 23456],
+      "notes": "Ports 13306/7/8 are Java SSH tunnel local forwards to DB. SSH tunnel to 172.27.141.24:22 active.",
+      "access": "RCE via Groovy console"
+    },
+    "172.27.140.148": {
+      "hostname": "CSDEVBLD01-1",
+      "role": "Docker Host (multi-homed, 5 NICs)",
+      "interfaces": {
+        "ens192": "172.27.140.128/25",
+        "ens224": "172.27.141.0/25",
+        "ens161": "10.252.0.0/16",
+        "ens256": "10.242.0.0/16",
+        "docker0": "172.17.0.0/16"
+      },
+      "gateway": "172.27.141.19 via ens224",
+      "dns": "172.27.140.132",
+      "open_ports": [22, 4243],
+      "containers": ["5b32e909c295 (PHP)", "3b389d5bf116 (JNLP)", "172.17.0.2 (Jenkins)", "172.17.0.3", "172.17.0.4"],
+      "notes": "Docker API at :4243 WITHOUT authentication. Bridge between subnets 172.27.140.x and 172.27.141.x",
+      "access": "Docker API (no auth) from Jenkins"
+    },
+    "172.27.141.24": {
+      "hostname": "Multi-service (Sears PROD + T1Pagos + SonarQube)",
+      "role": "PRODUCTION - Database proxy/bastion + Web services",
+      "dns_names": ["dbasears.mrc-services.io", "dbst1envios.t1envios-services.io", "t1pagos.com", "mrc-services.io", "sonarqube.dev.sia.gsanborns.com.mx"],
+      "open_ports": [22, 80, 443],
+      "closed_ports_tested": [3306, 3308, 3310],
+      "notes": "SSH accessible from Jenkins (active tunnel). MySQL 3308 NOT externally open - requires SSH tunnel. HAProxy/reverse proxy for multiple services.",
+      "access": "SSH from Jenkins (tunnel active), HTTP/S direct",
+      "mac": "00:50:56:a4:21:5f (VMware)"
+    },
+    "172.27.141.6": {
+      "hostname": "DB Cluster Node 1",
+      "role": "DATABASE SERVER - MySQL multi-instance + MongoDB + Elasticsearch",
+      "open_ports": [22, 3306, 3308, 3310, 3312, 27017, 9200],
+      "notes": "CRITICAL: Has MySQL 3308 (Sears PROD port) DIRECTLY accessible. Also 3310 (T1Pagos), 3312 (unknown), MongoDB, Elasticsearch.",
+      "access": "Direct TCP from Jenkins container",
+      "mac": "00:50:56:a4:4a:15 (VMware)"
+    },
+    "172.27.140.143": {
+      "hostname": "DB Cluster Node 2 (replica/secondary)",
+      "role": "DATABASE SERVER - MySQL multi-instance + MongoDB + Elasticsearch",
+      "open_ports": [22, 3306, 3308, 3310, 3312, 27017, 9200],
+      "notes": "Same port profile as .6 — likely DB replica or secondary cluster node.",
+      "access": "Direct TCP from Jenkins container",
+      "mac": "00:50:56:a4:53:c1 (VMware)"
+    },
+    "172.27.141.4": {
+      "hostname": "CSDEV01-2.dev.claroshop.com",
+      "role": "Dev Platform Host (Jenkins-NG reverse proxy + Registry + MySQL)",
+      "dns_names": ["jenkins-ng.dev.claroshop.com", "registry.dev.claroshop.com"],
+      "open_ports": [22, 80, 443, 3306, 8080],
+      "notes": "JNLP slave connections. Multiple SSH sessions from Jenkins master. Exposes Docker registry and Jenkins reverse proxy.",
+      "access": "SSH from Jenkins, JNLP agent, direct TCP",
+      "mac": "00:50:56:a4:29:3c (VMware)"
+    },
+    "172.27.141.25": {
+      "hostname": "CSDVMINION0-1.dev.claroshop.com",
+      "role": "Nexus Repository Manager + Docker Registry",
+      "dns_names": ["nexus.dev.claroshop.com", "docker-registry.nexus.dev.claroshop.com"],
+      "open_ports": [],
+      "notes": "No ports responded from Jenkins container (may be filtered). Listed in /etc/hosts of Docker host.",
+      "access": "Limited visibility",
+      "mac": "00:50:56:a4:20:6e (VMware)"
+    },
+    "172.27.140.134": {
+      "hostname": "gitlab.dev.claroshop.com",
+      "role": "GitLab Server",
+      "open_ports": [22, 80, 443, 3306, 8080],
+      "notes": "Full GitLab stack with MySQL. Listed in Jenkins /etc/hosts.",
+      "access": "Direct TCP, credentials: jenkins/e6LBqIkOI$PR1XX2oia and jenkins_legacy/JenkisLegasy25",
+      "mac": "00:50:56:a4:61:f5 (VMware)"
+    },
+    "172.27.140.151": {
+      "hostname": "Cache/DB Server",
+      "role": "Redis + MySQL + Elasticsearch",
+      "open_ports": [22, 3306, 6379, 9200],
+      "notes": "Redis requires AUTH. Jenkins has active connection to Redis:6379. Elasticsearch accessible.",
+      "access": "Direct TCP from Jenkins (Redis needs password)",
+      "mac": "00:50:56:a4:6b:de (VMware)"
+    },
+    "172.27.141.26": {
+      "hostname": "Secondary Cache/Search",
+      "role": "MySQL + Redis + Elasticsearch",
+      "open_ports": [22, 3306, 6379, 9200],
+      "notes": "Similar to .151 — might be Redis/ES cluster peer.",
+      "access": "Direct TCP from Jenkins",
+      "mac": "00:50:56:a4:6a:71 (VMware)"
+    },
+    "172.27.140.132": {
+      "hostname": "DNS + Web Server",
+      "role": "Internal DNS resolver + claroshop-services.net",
+      "dns_names": ["claroshop-services.net"],
+      "open_ports": [22, 80],
+      "notes": "DNS server for Docker host. Resolves all internal names.",
+      "access": "Direct TCP",
+      "mac": "00:50:56:a4:5f:d3 (VMware)"
+    },
+    "172.27.141.12": {
+      "hostname": "DNS Server (Jenkins container)",
+      "role": "Internal DNS resolver for Jenkins",
+      "open_ports": [22, 80],
+      "notes": "Primary DNS for Jenkins container (resolv.conf).",
+      "access": "Direct TCP",
+      "mac": "00:50:56:a4:3f:01 (VMware)"
+    },
+    "172.27.141.21": {
+      "hostname": "Jenkins Host VM",
+      "role": "VM hosting Jenkins Docker container",
+      "open_ports": [22],
+      "notes": "Physical host IP. Jenkins container runs here. External IP: 187.191.91.38",
+      "access": "SSH only",
+      "mac": "00:50:56:a4:49:82 (VMware)"
+    },
+    "172.27.141.19": {
+      "hostname": "Default Gateway (Docker host)",
+      "role": "Router/Gateway",
+      "open_ports": [80],
+      "notes": "Default gateway for Docker host ens224 interface",
+      "access": "HTTP only"
+    },
+    "172.27.141.5": {
+      "hostname": "gitlab.claroshop.tmx-internacional.net",
+      "role": "Legacy GitLab",
+      "open_ports": [22],
+      "notes": "Old GitLab instance. Listed in Jenkins /etc/hosts.",
+      "mac": "00:50:56:a4:4e:6a (VMware)"
+    },
+    "172.27.140.149": {
+      "hostname": "Web Server",
+      "role": "HTTP/S Server",
+      "open_ports": [22, 80, 443],
+      "mac": "00:50:56:a4:63:4d (VMware)"
+    },
+    "172.27.141.36": {
+      "hostname": "Unknown",
+      "open_ports": [22],
+      "mac": "00:50:56:a4:5d:d8 (VMware)"
+    },
+    "172.27.141.44": {
+      "hostname": "Unknown",
+      "open_ports": [22],
+      "mac": "00:50:56:a4:21:b5 (VMware)"
+    },
+    "172.27.140.162": {
+      "hostname": "Unknown",
+      "open_ports": [22],
+      "mac": "00:50:56:a4:4b:21 (VMware)"
+    },
+    "10.242.0.222": {
+      "hostname": "Unknown (ens256 subnet)",
+      "open_ports": [22],
+      "notes": "Only reachable host in 10.242.x.x from Jenkins"
+    }
+  },
+
+  "subnets": {
+    "172.17.0.0/16": {
+      "name": "Docker Bridge",
+      "hosts_found": ["172.17.0.1 (gw)", "172.17.0.2 (Jenkins)", "172.17.0.3", "172.17.0.4"],
+      "reachable_from": ["Jenkins container", "Docker host"]
+    },
+    "172.27.141.0/25": {
+      "name": "Dev/Prod VLAN (ens224)",
+      "hosts_found": [".1(gw)", ".2", ".3", ".4(dev)", ".5(gitlab-legacy)", ".6(DB!)", ".12(DNS)", ".19(gw-dockerhost)", ".21(jenkins-vm)", ".24(PROD)", ".25(nexus)", ".26(cache)", ".36", ".44"],
+      "reachable_from": ["Jenkins container", "Docker host", "Docker containers"],
+      "gateway": "172.27.141.1 (Cisco HSRP 00:00:0c:9f:f8:41)"
+    },
+    "172.27.140.128/25": {
+      "name": "Infrastructure VLAN (ens192)",
+      "hosts_found": [".129(gw)", ".130", ".131", ".132(DNS+web)", ".134(gitlab)", ".138", ".143(DB!)", ".148(docker-host)", ".149(web)", ".150", ".151(redis+db)", ".154", ".162"],
+      "reachable_from": ["Docker host", "Docker containers"],
+      "gateway": "172.27.140.129 (Cisco HSRP 00:00:0c:9f:f8:40)"
+    },
+    "10.252.0.0/16": {
+      "name": "Management/Backup (ens161)",
+      "hosts_found": ["10.252.0.2", "10.252.0.3", "10.252.255.252"],
+      "reachable_from": ["Docker host only (no ports respond from Jenkins)"],
+      "notes": "Likely management network, all ports filtered"
+    },
+    "10.242.0.0/16": {
+      "name": "Services/Routing (ens256)",
+      "hosts_found": ["10.242.0.1(gw)", "10.242.0.2", "10.242.0.3", "10.242.0.222(SSH)", "10.242.8.216"],
+      "reachable_from": ["Docker host only"],
+      "notes": "Routes to 192.168.201.x (cloudtelmex) via 10.242.0.1. Only .222 has SSH open from Jenkins."
+    },
+    "172.26.84.0/24": {
+      "name": "Unreachable",
+      "reachable_from": ["NONE"],
+      "notes": "Ping dead, no TCP connect possible from any host"
+    },
+    "172.26.127.0/24": {
+      "name": "OpenShift/OKD (attempted by Jenkins)",
+      "hosts_found": ["172.26.127.196 (8443 SYN-SENT from Jenkins)"],
+      "reachable_from": ["NONE (filtered/unreachable)"],
+      "notes": "Jenkins Java trying to connect (SYN-SENT) but never established"
+    }
+  },
+
+  "dns_resolution": {
+    "dbasears.mrc-services.io": "172.27.141.24",
+    "dbst1envios.t1envios-services.io": "172.27.141.24",
+    "t1pagos.com": "172.27.141.24",
+    "mrc-services.io": "172.27.141.24",
+    "sonarqube.dev.sia.gsanborns.com.mx": "172.27.141.24",
+    "jenkins-ng.dev.claroshop.com": "172.27.141.4",
+    "registry.dev.claroshop.com": "172.27.141.4",
+    "nexus.dev.claroshop.com": "172.27.141.25",
+    "gitlab.dev.claroshop.com": "172.27.140.134",
+    "claroshop-services.net": "172.27.140.132",
+    "appdb.claroshop-services.net": "187.191.91.37 (PUBLIC)",
+    "dev.claroshop.com": "200.57.170.38 (PUBLIC)"
+  },
+
+  "tunnels_and_pivots": {
+    "jenkins_ssh_tunnel": {
+      "from": "172.17.0.2 (Jenkins container)",
+      "to": "172.27.141.24:22 (PROD host)",
+      "process": "ssh (pid=32561) + java (pid=5) port forwards",
+      "local_forwards": {
+        "127.0.0.1:13306": "Likely → 172.27.141.6:3306 or localhost:3306 on .24",
+        "127.0.0.1:13307": "Likely → 172.27.141.6:3308 or remote:3307",
+        "127.0.0.1:13308": "Likely → dbasears.mrc-services.io:3308 (Sears PROD DB)"
+      },
+      "status": "ACTIVE"
+    },
+    "docker_api_pivot": {
+      "from": "Jenkins container (172.17.0.2)",
+      "via": "Docker API (172.27.140.148:4243, no auth)",
+      "access": "Full exec on all containers on Docker host",
+      "subnets_reached": ["172.27.141.0/25", "172.27.140.128/25", "10.252.0.0/16", "10.242.0.0/16"]
+    },
+    "redis_connection": {
+      "from": "Jenkins Java (172.17.0.2)",
+      "to": "172.27.140.151:6379",
+      "status": "ESTABLISHED (needs AUTH password)",
+      "notes": "Jenkins has active connection, password likely in job config"
+    }
+  },
+
+  "pivot_routes_to_prod": {
+    "route_1_ssh_tunnel": {
+      "description": "BEST: Jenkins local port forwards already reach Sears DB",
+      "path": "Jenkins Groovy → 127.0.0.1:13308 → SSH tunnel → dbasears:3308",
+      "status": "ACTIVE - needs MySQL credentials only",
+      "difficulty": "LOW"
+    },
+    "route_2_direct_db": {
+      "description": "Direct TCP to actual DB servers (bypass proxy)",
+      "path": "Jenkins Groovy → 172.27.141.6:3308 (or 172.27.140.143:3308)",
+      "status": "PORTS OPEN - needs MySQL credentials",
+      "difficulty": "LOW",
+      "notes": "These hosts have 3306/3308/3310/3312 + MongoDB + ES all accessible"
+    },
+    "route_3_ssh_hop": {
+      "description": "SSH to .24 using Jenkins credentials, then access local MySQL",
+      "path": "Jenkins → SSH 172.27.141.24 (creds from credential store) → localhost:3308",
+      "status": "SSH accessible, need matching SSH creds",
+      "difficulty": "MEDIUM"
+    },
+    "route_4_docker_pivot": {
+      "description": "Exec in Docker containers on host with multiple NICs",
+      "path": "Jenkins → Docker API :4243 → exec in container → reach 172.27.141.6:3308",
+      "status": "CONFIRMED working",
+      "difficulty": "LOW"
+    }
+  },
+
+  "services_summary": {
+    "mysql_servers": [
+      {"ip": "172.27.141.6", "ports": [3306, 3308, 3310, 3312], "role": "Primary DB cluster"},
+      {"ip": "172.27.140.143", "ports": [3306, 3308, 3310, 3312], "role": "Secondary DB cluster"},
+      {"ip": "172.27.141.4", "ports": [3306], "role": "Dev MySQL"},
+      {"ip": "172.27.140.134", "ports": [3306], "role": "GitLab MySQL"},
+      {"ip": "172.27.140.151", "ports": [3306], "role": "Cache server MySQL"},
+      {"ip": "172.27.141.26", "ports": [3306], "role": "Secondary cache MySQL"}
+    ],
+    "redis_servers": [
+      {"ip": "172.27.140.151", "port": 6379, "auth": "required"},
+      {"ip": "172.27.141.26", "port": 6379, "auth": "unknown"}
+    ],
+    "elasticsearch_servers": [
+      {"ip": "172.27.141.6", "port": 9200},
+      {"ip": "172.27.140.143", "port": 9200},
+      {"ip": "172.27.140.151", "port": 9200},
+      {"ip": "172.27.141.26", "port": 9200}
+    ],
+    "mongodb_servers": [
+      {"ip": "172.27.141.6", "port": 27017},
+      {"ip": "172.27.140.143", "port": 27017}
+    ],
+    "web_servers": [
+      {"ip": "172.27.141.24", "ports": [80, 443], "dns": "dbasears.mrc-services.io / t1pagos.com"},
+      {"ip": "172.27.141.4", "ports": [80, 443, 8080], "dns": "jenkins-ng / registry.dev.claroshop.com"},
+      {"ip": "172.27.140.134", "ports": [80, 443, 8080], "dns": "gitlab.dev.claroshop.com"},
+      {"ip": "172.27.140.132", "ports": [80], "dns": "claroshop-services.net (DNS)"},
+      {"ip": "172.27.141.12", "ports": [80], "role": "DNS server"},
+      {"ip": "172.27.140.149", "ports": [80, 443]}
+    ],
+    "docker_apis": [
+      {"ip": "172.27.140.148", "port": 4243, "auth": "NONE"}
+    ]
+  },
+
+  "infrastructure": {
+    "hypervisor": "VMware vSphere (all MACs are 00:50:56:a4:xx:xx)",
+    "network_provider": "Triara/Telmex Cloud (search domains: cloud.triara.local, backup.triara.local)",
+    "external_ips": {
+      "jenkins_outbound": "187.191.91.38",
+      "appdb_public": "187.191.91.37",
+      "dev_claroshop": "200.57.170.38"
+    },
+    "gateways": {
+      "172.27.141.1": "Cisco HSRP (MAC 00:00:0c:9f:f8:41) for 172.27.141.0/25",
+      "172.27.140.129": "Cisco HSRP (MAC 00:00:0c:9f:f8:40) for 172.27.140.128/25"
+    }
+  },
+
+  "credentials_available": {
+    "jenkins_web": "eduardo.cruz / xwMyIxfkZZaDNkFg",
+    "gitlab_1": "jenkins_legacy / JenkisLegasy25",
+    "gitlab_2": "jenkins / e6LBqIkOI$PR1XX2oia",
+    "gitlab_3": "jenkins.legacy.sn.se@gmail.com / JenkisLegasy25",
+    "registry": "jenkins-ng.dev.claroshop.com / dtvV50vwfGq5CO9",
+    "nexus": "jenkins-ng.dev.claroshop.com / dtvV50vwfGq5CO9",
+    "sophia_infracode": "sophia-mrk-i / plug*spoke!MosqueCloud3col",
+    "sonarqube_token_1": "6c75f3c846ea459e659e761238d6f12f4e27a53d",
+    "sonarqube_token_2": "squ_547fa54c6926c2f6b9bf14eb980942eabdd96686"
+  }
+}

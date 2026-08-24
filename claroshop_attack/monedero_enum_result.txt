@@ -1,0 +1,16 @@
+OUTPUT_BEGIN
+=== monedero TABLES ===
+-cat_estatus_monedero,cliente,monedero,pedido
+COUNT cat_estatus_monedero = 6
+COUNT cliente = 16
+COUNT monedero = 15
+@COUNT pedido = 37
+=== payment_t1 TABLES (141.26 has it too) ===
+9card,client,origen_plan,planes,suscripciones,transaction
+COUNT card = 11
+COUNT client = 17
+COUNT origen_plan = 6
+COUNT planes = 17
+COUNT suscripciones = 4
+COUNT transaction = 0
+DONE

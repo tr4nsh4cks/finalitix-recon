@@ -1,0 +1,43 @@
+﻿=== STEP 1: CHECK CONTAINER ENV ===
+=== OS INFO ===
+NAME="Red Hat Enterprise Linux Server"
+VERSION="7.9 (Maipo)"
+ID="rhel"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="7.9"
+PRETTY_NAME="Red Hat Enterprise Linux Server 7.9 (Maipo)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:7.9:GA:server"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 7"
+REDHAT_BUGZILLA_PRODUCT_VERSION=7.9
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="7.9"
+
+=== PACKAGE MANAGERS ===
+
+=== FIND SSH BINARIES ===
+
+=== FIND PYTHON/NC/CURL ===
+/usr/bin/python2.7
+/usr/lib/tmpfiles.d/python.conf
+/usr/lib64/python2.7/idlelib/Icons/python.gif
+/usr/share/man/man1/python2.7.1.gz
+
+=== PHP EXTENSIONS (ssh2) ===
+NO_PHP_SSH2HAS_PHP_SOCKETS
+=== CONTAINER IP ===
+/bin/bash: line 26: hostname: command not found
+
+
+=== STEP 2: INSTALL SSH ===
+=== INSTALL ATTEMPT ===
+NO_PKG_MANAGER
+=== SSH AFTER INSTALL ===
+
+=== FIN CONTAINER ENV ===
+

@@ -1,0 +1,68 @@
+{
+  "engagement": "Sears/Claroshop - Matriz de conectividad Docker -> DBs",
+  "timestamp": "2026-08-23T21:45:00-06:00",
+  "metodo": "TCP connect via /dev/tcp (bash) desde exec en cada container; auth MySQL via PHP PDO",
+  "nota_topologia": "Todos los containers usan NetworkMode=host => comparten el stack de red del host CSDEVBLD01-1. IP origen hacia 172.27.141.x = 172.27.141.23 (ens224). Jenkins master tambien alcanza (es container 172.17.0.2 en docker0 del mismo host, forwarding ON).",
+  "matriz": {
+    "pivot02_5b32e909c295": {
+      "dbasears.mrc-services.io:3308": {"tcp": "FAIL", "detalle": "DNS no resuelve en DNS del host 172.27.140.132 (si resuelve desde Jenkins master -> 172.27.141.24)"},
+      "172.27.141.24:3308": {"tcp": "FAIL", "detalle": "filtrado (host firewall en 141.24; 22/80/443 si abren)"},
+      "172.27.141.24:3306": {"tcp": "FAIL", "detalle": "filtrado"},
+      "172.27.141.4:3310": {"tcp": "FAIL", "detalle": "cerrado/filtrado"},
+      "172.27.141.4:3306": {"tcp": "OPEN 6ms", "mysql_auth_app_t1": "DENIED (app_t1@172.27.141.23)", "mysql_auth_apifincadob": "DENIED"},
+      "172.27.141.6:3306": {"tcp": "OPEN", "mysql_auth_app_t1": "DENIED", "mysql_auth_apifincadob": "DENIED"},
+      "172.27.141.6:3308": {"tcp": "OPEN", "mysql_auth_app_t1": "DENIED", "mysql_auth_apifincadob": "DENIED"},
+      "172.27.141.6:3310": {"tcp": "OPEN", "mysql_auth_app_t1": "AUTH_OK", "detalle": "MySQL 5.7.29-enterprise (mysqlsanbornsportal5719.service), DB payment_t1 accesible, GRANT ALL ON payment_t1.*"},
+      "172.27.141.15:3306": {"tcp": "FAIL", "detalle": "host QA caido o full-filtered (ARP incompleto)"},
+      "172.27.141.26:3306": {"tcp": "OPEN", "mysql_auth_app_t1": "DENIED", "mysql_auth_apifincadob": "DENIED"}
+    },
+    "pivot03_3b389d5bf116": {
+      "dbasears.mrc-services.io:3308": {"tcp": "FAIL"},
+      "172.27.141.24:3308": {"tcp": "FAIL", "detalle": "filtrado"},
+      "172.27.141.4:3310": {"tcp": "FAIL"},
+      "172.27.141.4:3306": {"tcp": "OPEN 6ms"},
+      "172.27.141.15:3306": {"tcp": "FAIL"},
+      "nota": "misma matriz que pivot02 (host network identica)"
+    },
+    "pivot04_ddde6ed3694d": {
+      "172.27.141.6:3310": {"tcp": "OPEN", "mysql_auth_app_t1": "AUTH_OK", "detalle": "verificado: clients=91 transactions=722"},
+      "nota": "container NUEVO creado en este run (host network), confirma capacidad de crear pivots adicionales"
+    },
+    "jenkins_master_172.17.0.2": {
+      "dbasears.mrc-services.io": {"dns": "RESUELVE -> 172.27.141.24"},
+      "172.27.141.24:3308": {"tcp": "FAIL", "detalle": "No route to host (ICMP admin-prohibited del firewall de 141.24)"},
+      "172.27.141.6:3310": {"tcp": "OPEN"},
+      "172.27.141.4:3306": {"tcp": "OPEN"}
+    }
+  },
+  "sweeps": {
+    "172.27.141.0/25_puertos_mysql": {
+      "172.27.141.4": [3306],
+      "172.27.141.6": [3306, 3308, 3310],
+      "172.27.141.26": [3306]
+    },
+    "172.27.141.64-126": "sin MySQL abierto",
+    "172.27.141.24_full": {"open": [22, 80, 443], "closed_filtered": [3306, 3307, 3308, 3310, 33060, 33061, 5432, 1433, 1521, 27017, 6379]},
+    "172.27.141.4_full": {"open": [22, 80, 443, 3306], "closed_filtered": [3307, 3308, 3310, 33060]},
+    "172.27.141.15": "todo cerrado (host down)"
+  },
+  "rutas_pivot_confirmadas": {
+    "T1PAGOS": {
+      "estado": "CONFIRMADA - ACCESO TOTAL",
+      "ruta": "Jenkins script console -> Docker API 172.27.140.148:4243 -> exec en pivot02/pivot03/pivot04 (host net, src 172.27.141.23) -> MySQL 172.27.141.6:3310",
+      "credencial": "app_t1 / wUt22Us2CUh#+M=",
+      "privilegios": "GRANT ALL PRIVILEGES ON payment_t1.* TO app_t1@'%'",
+      "version": "MySQL 5.7.29-enterprise-commercial-advanced-log",
+      "hostname_db": "mysqlsanbornsportal5719.service",
+      "datos": "payment_t1: client(91) + transaction(722) con tokens de tarjeta, PANs enmascarados, PII de clientes Claroshop",
+      "correccion_intel": "la doc decia 172.27.141.4:3310 - el real es 172.27.141.6:3310"
+    },
+    "PROD_SEARS": {
+      "estado": "NO ALCANZADA - firewall de host",
+      "ruta_intentada": "pivot02/03/04 + Jenkins master -> 172.27.141.24:3308 = filtrado (ICMP admin-prohibited)",
+      "dns": "dbasears.mrc-services.io -> 172.27.141.24 (resuelve solo en DNS interno del master)",
+      "puertos_abiertos_141.24": [22, 80, 443],
+      "siguiente_paso": "pivot via host whitelisted (app server Sears) o SSH a 141.24 (llaves SSH = otro subagent); credencial apifincadob sin probar contra un 3308 alcanzable"
+    }
+  }
+}

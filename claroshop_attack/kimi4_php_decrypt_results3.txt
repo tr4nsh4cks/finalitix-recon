@@ -1,0 +1,1862 @@
+
+======================================================================
+R3T1 FULL Service.php (RC4 encrypt/decrypt)  (5.3s)
+======================================================================
+<?php
+namespace tienda\Librerias\Cyber;
+
+use \Modelos_Tiendas;
+use tienda\Librerias\Rc4;
+use \Modelos_CardOneclick;
+use \tienda\Librerias\System\Direcciones;
+use \Modelos_Clientes;
+use tienda\Librerias\Caja\Caja;
+use tienda\Librerias\Cyber\BillTo;
+use tienda\Librerias\Cyber\Card;
+use tienda\Librerias\Cyber\CardOneclick;
+use tienda\Librerias\Cyber\ShipTo;
+use tienda\Librerias\Cyber\Requestmsg;
+use tienda\Librerias\Cyber\PurchaseTotals;
+use tienda\Librerias\Cyber\MerchantDefinedData;
+use tienda\Librerias\Cyber\Cybersource;
+use tienda\Librerias\Caja\Fincado;
+use tienda\Librerias\Encrypt\AesCtr;
+
+require_once    "app/Librerias/BancomerUtils.php";
+require_once    "app/Modelos/Tiendas.class.php";
+require_once    "app/Modelos/Productos.class.php";
+require_once    "app/Modelos/Clientes.class.php";
+
+/**
+ * Clase para tratar las tarjetas
+ * @author Axel Lango <axel.lango@decompras.com>
+ * @version 1.0
+ * @date 2014-11-24
+ */
+
+class Service
+{
+    private $idUsuario;
+    public $tarjeta;
+    private $nombre;
+    private $apellido;
+    private $idDir;
+    private $key;
+
+    public function __construct(){
+
+     }
+
+
+    //GETTERS 
+    public function getIdUsuario(){
+        return $this->idUsuario;
+    }
+    public function getTarjeta(){
+        return $this->tarjeta;
+    }
+    public function getNombre(){
+        return $this->nombre;
+    }
+    public function getApellido(){
+        return $this->apellido;
+    }
+    public function getIdDir(){
+        return $this->idDir;
+    }
+
+
+    public function setKey($key){
+        $this->key = $key;
+    }
+
+    /**
+     * Guarda la tarjeta en base de datos
+     * @param int
+     * @param string
+     * @param string
+     * @param object tienda\Librerias\Cyber\Card
+     * @param int
+     * 
+     */
+    public function guardaTarjeta($idUsuario,$nombre,$apellido,Card $tarjeta,$idDir)
+    {
+        
+        //setea las variables
+        $this->exchangeArray($idUsuario,$nombre,$apellido,$tarjeta,$idDir);
+
+        //valida tamaño y numericos en numero de tarjet, mes y año
+        $validacion = $this->validaTarjeta();
+        if( $validacion != '' ){
+            echo $validacion;
+            return false;
+        }
+
+
+        //evita xss y sql injection
+        $this->nombre   = htmlspecialchars($this->nombre);
+        $this->apellido = htmlspecialchars($this->apellido);
+        $this->encrypt();
+        //guarda en bd
+        $modeloCardOneClick= new  Modelos_CardOneclick();
+        
+        $error = $modeloCardOneClick->guardaCard($idUsuario,$this->nombre,$this->apellido,$tarjeta,$this->idDir);
+
+        return $error;
+    }
+
+    /**
+    * Guarda los parametros en las variables del objeto
+    * @param int
+    * @param string
+    * @param string
+    * @param object tienda\Librerias\Cyber\Card
+    * @param int
+    *
+    */
+    private function  exchangeArray($idUsuario,$nombre,$apellido,$tarjeta,$idDir)
+    {
+        $this->tarjeta   = $tarjeta;
+        $this->idDir     = $idDir;
+        $this->idUsuario = $idUsuario;
+        $this->nombre    = $nombre;
+        $this->apellido  = $apellido;
+    }
+     /**
+     * Elimina Registro de la Tarjeta ligada al usuario 
+     *
+     * @param int
+     */
+    public function eliminaTarjeta($idUsuario)
+    {
+        $modeloCardOneClick = new  Modelos_CardOneclick();  
+        
+        $res = $modeloCardOneClick->eliminaCard($idUsuario);
+        return $res;
+    }
+
+    /**
+     * Modifica la tarjeta en base de datos por id de cliente
+     * @param int
+     * @param string
+     * @param string
+     * @param object tienda\Librerias\Cyber\Card
+     * @param int
+     * 
+     */
+    public function modificaTarjeta($idUsuario,$nombre,$apellido,Card $tarjeta,$idDir, $tarjetaID)
+    {
+
+        //setea las variables
+        $this->exchangeArray($idUsuario,$nombre,$apellido,$tarjeta,$idDir);
+        
+         //valida tamaño y numericos en numero de tarjet, mes y año
+        $validacion = $this->validaTarjeta();
+        if( $validacion != '' ){
+            echo $validacion;
+            return false;
+        }
+
+        //evita xss
+        $this->nombre   = htmlspecialchars($this->nombre);
+        $this->apellido = htmlspecialchars($this->apellido);
+        $this->encrypt();
+
+        //guarda en bd
+        $modeloCardOneClick= new  Modelos_CardOneclick();        
+        
+        $error = $modeloCardOneClick->modificaCard($idUsuario,$this->nombre,$this->apellido,$tarjeta, $tarjetaID);
+
+        return $error;
+    }
+
+    /**
+    * Funcion para modificar la direccion de envio en Oneclick
+    * @param array
+    *
+    */
+    public function modificaDireccion($dir)
+    {
+      // VALIDAMOS DATOS
+        $vIdCliente = $_SESSION['cliente']['id'];
+
+        $direccion = new Direcciones();
+        $direccion->setPais("Mexico");
+        
+
+        $direccion->setId               ( isset($dir['id'])               ? $dir['id'] : "");
+        $direccion->setIdCliente        ( isset($dir['idCliente'])        ? $dir['idCliente'] : "");
+        $direccion->setNombre           ( isset($dir['nombre'])           ? $dir['nombre'] : "");
+        $direccion->setApellido_materno ( isset($dir['apellido_materno']) ? $dir['apellido_materno'] : "");
+        $direccion->setApellido_paterno ( isset($dir['apellido_paterno']) ? $dir['apellido_paterno'] : "");
+
+        $direccion->setEstado           ( isset($dir['estado'])           ? $dir['estado'] : "");
+        $direccion->setMunicipio        ( isset($dir['municipio'])        ? $dir['municipio'] : "");
+        $direccion->setDireccion        ( isset($dir['direccion'])        ? $dir['direccion'] : "");
+        $direccion->setCalle            ( isset($dir['calle'])            ? $dir['calle'] : "");
+        $direccion->setColonia          ( isset($dir['colonia'])          ? $dir['colonia'] : "");
+        $direccion->setCiudad           ( isset($dir['ciudad'])           ? $dir['ciudad'] : "");
+        $direccion->setCp               ( isset($dir['codigo_postal'])    ? $dir['codigo_postal'] : "");
+        $direccion->setNum_ext          ( isset($dir['numero_exterior'])  ? $dir['numero_exterior'] : "");
+
+        $mensaje="";
+
+        //Validaciones 
+
+        if (self::valVacLen( $direccion->getNombre(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Nombre";
+        } elseif (self::valVacLen( $direccion->getApellido_materno(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Apellido Materno";
+        } elseif (self::valVacLen( $direccion->getApellido_paterno(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Apellido Paterno";
+        } elseif (self::valVacLen( $direccion->getEstado(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Estado";
+        } elseif (self::valVacLen($direccion->getMunicipio(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Municipio";
+        } elseif (self::valVacLen($direccion->getDireccion(),"mayor",100)) {
+            $mensaje = "¡Calle y n&uacute;mero son requeridos!";
+        } elseif (self::valVacLen($direccion->getColonia(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Colonia";
+        } elseif (self::valVacLen($direccion->getCiudad(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Ciudad";
+        } elseif (self::valVacLen($direccion->getCp(),"igual",5) || !is_numeric($direccion->getCp())) {
+            $mensaje = "Hay un error en el campo C&oacute;digo Postal";
+        }else {
+
+            
+            //si pasa todas las validaciones ejecuta el metodo para hacer el update 
+            $result = Modelos_CardOneclick::modificaDireccionTarjeta($direccion);
+            
+            //el result devuelve un boolean
+            if ($result) {
+                $mensajeE = 'Sus datos fueron guardados con exito!';
+
+            } else {
+                $mensajeE = 'Hubo un error guardando sus datos, por favor comuniquese por chat con un representante de servicio a cliente';
+            }
+            //error_log( $mensajeE );
+            return $result;
+        }
+        //error_log( $mensaje );
+    }
+
+    /**
+    * Funcion para modificar el registro de bd de
+    * la  direccion de facturacion
+    * @param array()
+    *
+    */
+    public function modificaDireccionTarjeta($dir)
+    {
+      // VALIDAMOS DATOS
+        $vIdCliente = $_SESSION['cliente']['id'];
+
+        $direccion = new Direcciones();
+        $direccion->setPais("Mexico");
+        
+        $direccion->setId               ( isset($dir['id'])               ? $dir['id']            : "" );
+        $direccion->setDireccion        ( isset($dir['direccion'])        ? $dir['direccion']     : "" );
+        $direccion->setCiudad           ( isset($dir['ciudad'])           ? $dir['ciudad']        : "" );
+        $direccion->setCp               ( isset($dir['codigo_postal'])    ? $dir['codigo_postal'] : "" );
+
+        $mensaje="";
+
+        if (self::valVacLen($direccion->getDireccion(),"mayor",100)) {
+            $mensaje = "¡Calle y n&uacute;mero son requeridos!";
+        } elseif (self::valVacLen($direccion->getCiudad(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Ciudad";
+        } elseif (self::valVacLen($direccion->getCp(),"igual",5) || !is_numeric($direccion->getCp())) {
+            $mensaje = "Hay un error en el campo C&oacute;digo Postal";
+        }else {            
+            
+            $result = Modelos_CardOneclick::modificaDireccionTarjeta($direccion);
+            
+            if ($result) {
+                $mensajeE = 'Sus datos fueron guardados con exito!';
+
+            } else {
+                $mensajeE = 'Hubo un error guardando sus datos, por favor comuniquese por chat con un representante de servicio a cliente';
+            }
+            //error_log( $mensajeE );
+            return $result;
+        }
+        //error_log( $mensaje );
+    }
+
+    /**
+     * Obtiene los datos de la tarjeta por Id de cliente
+     * @param int
+     * @return object tienda\Librerias\Cyber\Card
+     * 
+     */
+    public function getTarjetaByUsuario($idUsuario)
+    {
+        $respuesta = array();
+        $datos = Modelos_CardOneclick::getCardOneclick($idUsuario,$this->tarjeta);
+        if(count($datos)>0){
+            foreach ($datos as $registro) {
+                //$respuesta[] = $registro;
+                $registro['tarjeta'] = AesCtr::decrypt($registro['numero'], $this->getKey(), 256);
+                $registro['mv'] = AesCtr::decrypt($registro['mes'], $this->getKey(), 256);
+                $registro['av'] = $registro['anio'];
+                $tmp = new CardOneclick($registro);
+                $registro['tipoTarjeta'] = strtolower($tmp->getTipoNombre());
+                $registro['digitos'] = $tmp->getTarjeta4();
+                $respuesta[] = $registro;
+            }
+        }
+        return $respuesta;
+    }
+    /**
+     * Obtiene los datos de la tarjeta por Id de cliente
+     * @param int
+     * @return object tienda\Librerias\Cyber\Card
+     * 
+     */
+    public function getTarjetaByUsuarioOne($idUsuario, $tarjetaID)
+    {
+        $respuesta = array();
+        $registro = Modelos_CardOneclick::getCardOneclickOne($idUsuario,$tarjetaID);
+        if(count($registro)>0){
+            //foreach ($datos as $registro) {
+                //$respuesta[] = $registro;
+                $registro['tarjeta'] = AesCtr::decrypt($registro['numero'], $this->getKey(), 256);
+                $registro['mv'] = AesCtr::decrypt($registro['mes'], $this->getKey(), 256);
+                $registro['av'] = $registro['anio'];
+                $tmp = new CardOneclick($registro);
+                $registro['tipoTarjeta'] = strtolower($tmp->getTipoNombre());
+                $registro['digitos'] = $tmp->getTarjeta4();
+                $respuesta = $registro;
+            //}
+        }
+        return $respuesta;
+    }
+
+    /**
+     * Encripta el numero, mes y año de las tarjetas, con la llave que recibe por parámetro
+     * @param string
+     * 
+     */
+    public function encrypt()
+    {
+        $this->tarjeta->setAccountNumber    (AesCtr::encrypt($this->tarjeta->getAccountNumber(), $this->getKey(), 256));
+        $this->tarjeta->setExpirationMonth  (AesCtr::encrypt($this->tarjeta->getExpirationMonth_Complete(), $this->getKey(), 256));
+        //$this->tarjeta->setExpirationYear   (AesCtr::encrypt($this->tarjeta->getExpirationYear_Complete(), $this->getKey(), 256));
+        //$this->tarjeta->setExpirationMonth( $this->Rc4Encrypt($this->tarjeta->getExpirationMonth_Complete()) );
+        //$this->tarjeta->setExpirationYear(  $this->Rc4Encrypt($this->tarjeta->getExpirationYear_Complete())  );
+    }
+    /**
+     * Encripta por Rc4
+     * @param string
+     * 
+     */
+    private function Rc4Encrypt($string)
+    {
+        $rc4crypt = new Rc4();
+        return $rc4crypt->StringToHexString($rc4crypt->Salaa($string,$this->key));
+    }
+    /**
+     * Desencripta por Rc4
+     * @param string
+     * 
+     */
+    private function Rc4Decrypt($string)
+    {
+        $rc4crypt = new Rc4();
+        return $rc4crypt->Salaa($rc4crypt->HexStringToString($string),$this->key);
+    }
+    /**
+     * Valida que los datos de la tarjeta, nombre y apellidos
+     * se encuentren como se requieren
+     * 
+     */
+    public function validaTarjeta()
+    {
+        $error  = '';
+        $error .= $this->valFunctions('Numero de tarjeta',$this->tarjeta->getAccountNumber(),16);
+        $error .= $this->valFunctions('Mes de expiracion',$this->tarjeta->getExpirationMonth(),2);
+        $error .= $this->valFunctions('Año de expiracion',$this->tarjeta->getExpirationYear(),2);
+
+        return $error;
+    }
+    /**
+     * Funciones para validar
+     * 
+     */
+    private function valFunctions($tipo,$dato,$length)
+    {
+        $res='';
+        if( strlen($dato)!=$length ){
+            $res .=  $tipo." no es del tamanio ".$length.", mide ".strlen($dato)." : ".$dato."<br/>";
+        }
+        
+        $dato = intval($dato)!=0?intval($dato):"";
+        if( !is_int($dato) ){
+            $res .=  $tipo." no es numerico ".$dato."<br/>";
+        }
+        
+        return $res;
+    }
+
+    /**
+    * Funcion para guardar las direcciones de Envio
+    * en Oneclick 
+    *
+    * @param array()
+    *
+    */
+    public static function guardaDireccion($dir)
+    { 
+      // VALIDAMOS DATOS
+        $vIdCliente = $_SESSION['cliente']['id'];
+
+        $direccion = new Direcciones();
+        $direccion->setPais("Mexico");
+        $direccion->setIdCliente($vIdCliente);
+
+        $direccion->setNombre           ( isset($dir['nombre'])           ? $dir['nombre'] : "");
+        //$direccion->setApellido_materno ( isset($dir['apellido_materno']) ? $dir['apellido_paterno'] : "");
+        $direccion->setApellido_paterno ( isset($dir['apellido_paterno']) ? $dir['apellido_paterno'] : "");
+        
+        $direccion->setEstado           ( isset($dir['estado'])           ? $dir['estado'] : "");
+        $direccion->setMunicipio        ( isset($dir['municipio'])        ? $dir['municipio'] : "");
+        $direccion->setDireccion        ( isset($dir['direccion'])        ? $dir['direccion'] : "");
+        $direccion->setCalle            ( isset($dir['calle'])            ? $dir['calle'] : "");
+        $direccion->setColonia          ( isset($dir['colonia'])          ? $dir['colonia'] : "");
+        $direccion->setCiudad           ( isset($dir['ciudad'])           ? $dir['ciudad'] : "");
+        $direccion->setCp               ( isset($dir['codigo_postal'])    ? $dir['codigo_postal'] : "");
+        $direccion->setNum_ext          ( isset($dir['numero_exterior'])  ? $dir['numero_exterior'] : "");
+        $direccion->setLada             ( isset($dir['lada'])             ? $dir['lada'] : "");
+        $direccion->setTelefono         ( isset($dir['telefono'])         ? $dir['telefono'] : "");
+        $direccion->setCelular          ( isset($dir['celular'])          ? $dir['celular'] : "");
+        $direccion->setEntre_calles     ( isset($dir['entre_calles'])     ? $dir['entre_calles'] : "");
+        $direccion->setTipo_cliente     ( isset($dir['tipo_cliente'])     ? $dir['tipo_cliente'] : false);
+
+        $mensaje="";
+
+        if (self::valVacLen( $direccion->getNombre(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Nombre";
+        } elseif (self::valVacLen( $direccion->getApellido_materno(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Apellido Materno";
+        } elseif (self::valVacLen( $direccion->getApellido_paterno(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Apellido Paterno";
+        } elseif (self::valVacLen( $direccion->getEstado(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Estado";
+        } elseif (self::valVacLen($direccion->getMunicipio(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Municipio";
+        } elseif (self::valVacLen($direccion->getDireccion(),"mayor",100)) {
+            $mensaje = "¡Calle y n&uacute;mero son requeridos!";
+        } elseif (self::valVacLen($direccion->getColonia(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Colonia";
+        } elseif (self::valVacLen($direccion->getCiudad(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Ciudad";
+        } elseif (self::valVacLen($direccion->getLada(),"igual",2 || !is_numeric($direccion->getCp()) )) {
+            $mensaje = "Hay un error en el campo Lada";
+        } elseif (self::valVacLen($direccion->getTelefono(),"igual",8 || !is_numeric($direccion->getCp()) )) {
+            $mensaje = "Hay un error en el campo Telefono";
+        } elseif (self::valVacLen($direccion->getCelular(),"igual",10 || !is_numeric($direccion->getCp()) )) {
+            $mensaje = "Hay un error en el campo Celular";
+        } elseif (self::valVacLen($direccion->getEntre_calles(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Entre_calles";
+        } elseif (self::valVacLen($direccion->getCp(),"igual",5) || !is_numeric($direccion->getCp()) ) {
+            $mensaje = "Hay un error en el campo C&oacute;digo Postal";
+        }else {
+
+            
+            //el result recibe el id del registro generado
+            $result = Modelos_Clientes::guardaDireccion($direccion);
+            
+            if ($result) {
+                $mensajeE = 'Sus datos fueron guardados con exito!';
+
+            } else {
+                $mensajeE = 'Hubo un error guardando sus datos, por favor comuniquese por chat con un representante de servicio a cliente';
+            }
+            //error_log( $mensajeE );
+            return $result;
+        }
+        //error_log( $mensaje );
+    }
+
+    /**
+    * Funcion que setea la direccion default para oneclick
+    * de las direcciones existentes 
+    *
+    * @param int
+    * @param int
+    * 
+    * @return boolean
+    *
+    */
+    public function cambiaEnvioOneclick($idDir,$idUsuario)
+    {
+        self::falseToOneclickDirecciones($idUsuario);
+        $res = Modelos_CardOneclick::setOneclickTrue($idDir,$idUsuario);
+        return $res;
+    }
+    
+    /**
+    * Funcion que elimina una direccion de envio
+    *
+    * @param int
+    * @param int
+    * 
+    * @return boolean|string
+    *
+    */
+    public function eliminaEnvioOneclick($idDir,$idUsuario)
+    {
+        $res = Modelos_Clientes::eliminarDireccion($idUsuario,$idDir);
+        return $res;
+    }
+
+    /**
+    * Funcion para obtener la dirección oneclick si existe
+    * 
+    * @param int
+    * 
+    * @return array
+    * 
+    */
+    public function buscaOneclick($id, $dir)
+    {
+        $dir = Modelos_CardOneclick::getDireccionOneclick($id, $dir);
+        return $dir;
+    }
+    /**
+    * Funcion para obtener la dirección oneclick si existe
+    * 
+    * @param int
+    * 
+    * @return array
+    * 
+    */
+    public function buscaOneclick2($id)
+    {
+        $dir = Modelos_CardOneclick::getDireccionOneclick2($id);
+        return $dir;
+    }
+
+    /**
+    * Funcion para guardar las direcciones de facturación para 
+    * las tarjetas Oneclick
+    * 
+    * @param Array de String
+    * 
+    * @return Int|String
+    * 
+    * 
+    **/
+    public static function guardaDireccionTar($dir)
+    {
+      // VALIDAMOS DATOS
+        $vIdCliente = $_SESSION['cliente']['id'];
+
+        $direccion = new Direcciones();
+        $direccion->setPais("Mexico");
+        
+        $direccion->setDireccion        ( isset($dir['direccion'])     ? $dir['direccion']     : "");
+        $direccion->setCiudad           ( isset($dir['ciudad'])        ? $dir['ciudad']        : "");
+        $direccion->setCp               ( isset($dir['codigo_postal']) ? $dir['codigo_postal'] : "");
+
+        $mensaje="";
+
+        if (self::valVacLen( $direccion->getNombre(),"mayor",100 )) {
+            $mensaje = "Hay un error en el campo Nombre";
+        }elseif (self::valVacLen($direccion->getDireccion(),"mayor",100)) {
+            $mensaje = "¡Calle y n&uacute;mero son requeridos!";
+        }elseif (self::valVacLen($direccion->getCiudad(),"mayor",100)) {
+            $mensaje = "Hay un error en el campo Ciudad";
+        } elseif ( self::valVacLen($direccion->getCp(),"igual",5) || !is_numeric(intval( $direccion->getCp() ) )) {
+            $mensaje = "Hay un error en el campo C&oacute;digo Postal";
+        }else {
+            
+            $result = Modelos_CardOneclick::guardaDireccionTarjeta($direccion);
+            
+            if ($result) {
+                $mensajeE = 'Sus datos fueron guardados con exito!';
+
+            } else {
+                $mensajeE = 'Hubo un error guardando sus datos, por favor comuniquese por chat con un representante de servicio a cliente';
+            }
+            //error_log( $mensajeE );
+            return $result;
+        }
+        //error_log( $mensaje );
+    }
+
+    /**
+    * Funcion para obtener el registro de una direccion de envio por Id
+    *
+    * @param int
+    *
+    * @return obj \tienda\Librerias\System\Direcciones
+    */
+    public function getDireccionById($id)
+    {
+        $dir = Modelos_Clientes::obtenerDireccionesIdDireccion($id);
+        $direccion = new Direcciones();
+        
+        $direccion->setPais             ( isset($dir['pais'])             ? $dir['nombre'] : "");
+        $direccion->setIdCliente        ( isset($dir['idCliente'])        ? $dir['nombre'] : "");
+        $direccion->setNombre           ( isset($dir['nombre'])           ? $dir['nombre'] : "");
+        $direccion->setApellido_materno ( isset($dir['apellido_materno']) ? $dir['apellido_materno'] : "");
+        $direccion->setApellido_paterno ( isset($dir['apellido_materno']) ? $dir['apellido_materno'] : "");
+        
+        $direccion->setEstado           ( isset($dir['estado'])           ? $dir['estado'] : "");
+        $direccion->setMunicipio        ( isset($dir['municipio'])        ? $dir['municipio'] : "");
+        $direccion->setDireccion        ( isset($dir['direccion'])        ? $dir['direccion'] : "");
+        $direccion->setCalle            ( isset($dir['calle'])            ? $dir['calle'] : "");
+        $direccion->setColonia          ( isset($dir['colonia'])          ? $dir['colonia'] : "");
+        $direccion->setCiudad           ( isset($dir['ciudad'])           ? $dir['ciudad'] : "");
+        $direccion->setCp               ( isset($dir['cp'])               ? $dir['cp'] : "");
+        $direccion->setNum_ext          ( isset($dir['num_ext'])          ? $dir['num_ext'] : "");
+
+        return $direccion;
+    }
+
+    /**
+    * Funcion para obtener la direccion de facturacion por id
+    *
+    * @param int
+    * @return obj \tienda\Librerias\System\Direcciones;
+    *
+    */
+    public function getDireccionTarjetaById($id)
+    {
+        $dir       = Modelos_CardOneclick::getDireccionesTarjetaByIdDirEnvio($id);
+        /*$direccion = new Direcciones();
+
+                $direccion->setPais             ( isset($dir['pais'])          ? $dir['pais']          : "");
+                $direccion->setDireccion        ( isset($dir['direccion'])     ? $dir['direccion']     : "");
+                $direccion->setCiudad           ( isset($dir['ciudad'])        ? $dir['ciudad']        : "");
+                $direccion->setCp               ( isset($dir['codigo_postal']) ? $dir['codigo_postal'] : "");
+        */
+        return $dir;
+    }
+
+    /**
+    * Funcion para validar la longitud
+    * 
+    * @param string
+    * @param string
+    * @param int
+    *
+    *@return boolean
+    *
+    */
+    private function valVacLen($aValidar,$comparacion,$tamanio)
+    {
+        if(empty($avalidar)){
+            return false;
+        }elseif ($comparacion == "igual" && strlen($aValidar) != $tamanio ) {
+            return false;
+        }elseif ($comparacion == "mayor" && strlen($aValidar) > $tamanio ) {
+            return false;
+        }elseif ($comparacion == "menor" && strlen($aValidar) < $tamanio ) {
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    /**
+    * Setea a false el campo tipo_cliente ligado a un cliente. 
+    * El campo se utiliza para identificar la dirección default
+    * para oneclick
+    *
+    * @param int
+    *
+    **/
+    public function falseToOneclickDirecciones($idUsuario)
+    {
+        Modelos_CardOneclick::falseToOneclickDirecciones($idUsuario);
+    }
+    
+    /**
+    * Realiza las funciones para pagar y fincar un pedido
+    * 
+    * @param array()
+    * @param obj tienda\Librerias\Cyber\Card
+    * @param int
+    * @param array()
+    * @param int
+    * @param array()
+    * 
+    * @return array()
+    * 
+    */
+    public function procesar($dirEnvio,Card $tarjetaClass,$idUsuario, $config,$tienda_origen_id, $deviceFinger,$msi)
+    {
+        $cuponData = null; //pro lo pronto oneclick no acepta cupones
+        
+        $tienda_model                       = new Modelos_Tiendas();
+        $cliente_model                      = new Modelos_Clientes();
+        #info del cliente
+        $cliente_info                       = $cliente_model->obtenerCliente($idUsuario);
+        $data3 = $cliente_info;
+        # Cambios
+
+        $dir = self::getDireccionTarjetaById($dirEnvio);
+        $data = array_merge($data3, $dir);
+        $data['direccion']= $dir;
+        $data['telefono']= $dir['telefono'];
+        $data['lada']= "-";
+
+        /*$billToArr["direccion"]["ciudad"]    = $dir->getCiudad();
+        $billToArr["direccion"]["pais"]      = $dir->getPais();
+        $billToArr["direccion"]["cp"]        = $dir->getCp();
+        $billToArr["direccion"]["estado"]    = $dir->getEstado();
+        $billToArr["direccion"]["direccion"] = $dir->getDireccion();
+
+        $billToArr["email"]     = $cliente_info["email"];
+        $billToArr["nombre"]    = $this->nombre;
+        $billToArr["apellidos"] = $this->apellido;
+        $billToArr["telefono"]  = $dir->getTelefono();        */
+
+        $billto                             = new BillTo($data);
+
+        #datos de donde se compro
+//        $shipTo["direccion"]["ciudad"]    = $dirEnvio["ciudad"];
+//        $shipTo["direccion"]["pais"]      = $dirEnvio["pais"];
+//        $shipTo["direccion"]["cp"]        = $dirEnvio["cp"];
+//        $shipTo["direccion"]["estado"]    = $dirEnvio["estado"];
+//        $shipTo["direccion"]["direccion"] = $dirEnvio["direccion"];
+//        $shipTo["direccion"]["nombre"]    = $dirEnvio["nombre"]." ".$dirEnvio["apellido_paterno"]." ".$dirEnvio["apellido_materno"];
+//
+//        $shipTo["email"]     = $cliente_info["email"];
+//        $shipTo["telefono"]  = $dirEnvio["telefono"];
+
+        $shipClass                          = new ShipTo($data);
+        #Mensaje
+        $requestmsg                         = new Requestmsg($deviceFinger, $idUsuario.date("ymdHis"));
+        #empiezan los datos del cobro
+        $cajaNueva                          = new Caja($tienda_origen_id, $_SESSION['carrito']['productos'], $cuponData, 3912,$dir["cp"], $tarjetaClass->getBim() );
+        $totalCarro                         = $cajaNueva->calculoTotal();
+        $promocionMSI                       = $cajaNueva->validMSI();
+        #creacion de la clase con la cual se debera de calcular
+        
+        $dataTotal = array(
+            'mensualidad'   => $msi,
+            'total'         => $totalCarro,
+            'promocionMSI'  => $promocionMSI
+        );
+        $purchaseTotalClass                 = new PurchaseTotals($dataTotal);
+        #Creacion del MerchantDefine Data
+        $data2 =  array(
+            'departamentos' => $cajaNueva->getDepartamentos(),
+            'tiendas'       => $cajaNueva->getTiendas(),
+            'cupon'         => $cajaNueva->existsCupon(),
+            'msi'           => $promocionMSI,
+            'password'      => $cliente_info["password"],
+            'fecha_creacion'=> $cliente_info["fecha_creacion"],
+            'telefono'      => $data["telefono"],
+            'portal'        => $idUsuario,
+            'cat_fil'       => $cajaNueva->getCategorias(),
+            'mensualidad'   => $msi
+        );
+        $merchantDefinedData            = new MerchantDefinedData($data2);
+        #Recuerda que usa inicio.php en el archivo de produccion se pasa por producccion
+        #en las ramas distintas por sandbox
+        //error_log("iniciando cyber");
+        $cyberClass = new Cybersource($billto, $tarjetaClass, $shipClass, $requestmsg, $purchaseTotalClass, $cajaNueva->getProductos(), $merchantDefinedData , $totalCarro, $config['cyber'], $config['app_environment']);
+        
+        $fincado  = new Fincado($cyberClass, $cajaNueva, $idUsuario, $msi);
+        $fincado->crearPedido($data['direccion'],true);
+        $fincado->pagarPedido($config['inbursa'], $idUsuario);
+        $fincado->crearComentario("Este pedido es OneClick");
+        $fincado->enviarCorreoSalida();
+        
+        $resArray = $fincado->getDatosVista();
+        $fincado->limpiarDesmadredeSessiones();
+        
+        return $resArray;
+        
+    }
+    
+    public function validarTarjeta(Card $tarjetaBuscar, $cliente, $nombre, $apellido)
+    {
+        //$cardSearch = AesCtr::encrypt($tarjetaBuscar->getAccountNumber(), $this->getKey(), 256);
+
+        
+        $modeloCardOneClick= new  Modelos_CardOneclick();
+        $tarjetaData = $modeloCardOneClick->findCard($cliente);
+        $find = null;
+        if(count($tarjetaData)>0) {
+            foreach ($tarjetaData as $reg) {
+                if($tarjetaBuscar->getAccountNumber() == AesCtr::decrypt($reg['numero'], $this->getKey(), 256)) {
+                    $find = $reg['id'];
+                }
+            }
+            if (!is_null($find)) {
+                $this->modificaTarjeta($cliente, $nombre, $apellido, $tarjetaBuscar, 1, $find);
+            } else {
+                $this->guardaTarjeta($cliente, $nombre, $apellido, $tarjetaBuscar, 1);
+            }
+        } else {
+            $this->guardaTarjeta($cliente, $nombre, $apellido, $tarjetaBuscar, 1);
+        }
+    }
+    public function setTarjeta($datos){
+        
+    }
+    public function getKey()
+    {
+        return $this->key;
+    }
+}
+
+
+
+
+======================================================================
+R3T2 FULL Cybersource.php (key wiring)  (1.8s)
+======================================================================
+<?php
+namespace tienda\Librerias\Cyber;
+
+use Claroshop\Core\Caja\FormaPago;
+use tienda\Librerias\Cyber\Service;
+
+use SoapClient;
+use SoapVar;
+use SoapHeader;
+use Modelos_Pedidos;
+use Zend\Log\LoggerInterface;
+
+require_once dirname(__FILE__)."/../../Modelos/Pedidos.class.php";
+/**
+ * Description of Cybersource
+ *
+ * @author rikardo
+ */
+class Cybersource implements FormaPago
+{
+	/**
+	 * 
+	 * @var Terminal $terminal
+	 */
+	private $terminal;
+    
+    public $avs_codes = array(
+        'A' => 'Partial match: Street address matches, but 5-digit and 9-digit postal codes do not match.',
+        'B' => 'Partial match: Street address matches, but postal code is not verified.',
+        'C' => 'No match: Street address and postal code do not match.',
+        'D' => 'Match: Street address and postal code match.',
+        'E' => 'Invalid: AVS data is invalid or AVS is not allowed for this card type.',
+        'F' => 'Partial match: Card member\'s name does not match, but billing postal code matches.',
+        'G' => 'Not supported: Non-U.S. issuing bank does not support AVS.',
+        'H' => 'Partial match: Card member\'s name does not match, but street address and postal code match.',
+        'I' => 'No match: Address not verified.',
+        'K' => 'Partial match: Card member\'s name matches, but billing address and billing postal code do not match.',
+        'L' => 'Partial match: Card member\'s name and billing postal code match, but billing address does not match.',
+        'M' => 'Match: Street address and postal code match.',
+        'N' => 'No match: Card member\'s name, street address, or postal code do not match.',
+        'O' => 'Partial match: Card member\'s name and billing address match, but billing postal code does not match.',
+        'P' => 'Partial match: Postal code matches, but street address not verified.',
+        'R' => 'System unavailable.',
+        'S' => 'Not supported: U.S. issuing bank does not support AVS.',
+        'T' => 'Partial match: Card member\'s name does not match, but street address matches.',
+        'U' => 'System unavailable: Address information is unavailable because either the U.S. bank does not support non-U.S. AVS or AVS in a U.S. bank is not functioning properly.',
+        'V' => 'Match: Card member\'s name, billing address, and billing postal code match.',
+        'W' => 'Partial match: Street address does not match, but 9-digit postal code matches.',
+        'X' => 'Match: Street address and 9-digit postal code match.',
+        'Y' => 'Match: Street address and 5-digit postal code match.',
+        'Z' => 'Partial match: Street address does not match, but 5-digit postal code matches.',
+        '1' => 'Not supported: AVS is not supported for this processor or card type.',
+        '2' => 'Unrecognized: The processor returned an unrecognized value for the AVS response.',
+    );
+    public $cvn_codes = array(
+        'D' => 'The transaction was determined to be suspicious by the issuing bank.',
+        'I' => 'The CVN failed the processor\'s data validation check.',
+        'M' => 'The CVN matched.',
+        'N' => 'The CVN did not match.',
+        'P' => 'The CVN was not processed by the processor for an unspecified reason.',
+        'S' => 'The CVN is on the card but waqs not included in the request.',
+        'U' => 'Card verification is not supported by the issuing bank.',
+        'X' => 'Card verification is not supported by the card association.',
+        '1' => 'Card verification is not supported for this processor or card type.',
+        '2' => 'An unrecognized result code was returned by the processor for the card verification response.',
+        '3' => 'No result code was returned by the processor.',
+    );
+    public $result_codes = array(
+        
+        '100' => 'Successful transaction.',
+        '101' => 'The request is missing one or more required fields.',
+        '102' => 'One or more fields in the request contains invalid data.',
+        '110' => 'Only a partial amount was approved.',
+        '150' => 'Error: General system failure.',
+        '151' => 'Error: The request was received but there was a server timeout.',
+        '152' => 'Error: The request was received, but a service did not finish running in time.',
+        '200' => 'The authorization request was approved by the issuing bank but declined by CyberSource because it did not pass the Address Verification Service (AVS) check.',
+        '201' => 'The issuing bank has questions about the request.',
+        '202' => 'Expired card.',
+        '203' => 'General decline of the card.',
+        '204' => 'Insufficient funds in the account.',
+        '205' => 'Stolen or lost card.',
+        '207' => 'Issuing bank unavailable.',
+        '208' => 'Inactive card or card not authorized for card-not-present transactions.',
+        '209' => 'American Express Card Identification Digits (CID) did not match.',
+        '210' => 'The card has reached the credit limit.',
+        '211' => 'Invalid CVN.',
+        '221' => 'The customer matched an entry on the processor\'s negative file.',
+        '230' => 'The authorization request was approved by the issuing bank but declined by CyberSource because it did not pass the CVN check.',
+        '231' => 'Invalid credit card number.',
+        '232' => 'The card type is not accepted by the payment processor.',
+        '233' => 'General decline by the processor.',
+        '234' => 'There is a problem with your CyberSource merchant configuration.',
+        '235' => 'The requested amount exceeds the originally authorized amount.',
+        '236' => 'Processor failure.',
+        '237' => 'The authorization has already been reversed.',
+        '238' => 'The authorization has already been captured.',
+        '239' => 'The requested transaction amount must match the previous transaction amount.',
+        '240' => 'The card type sent is invalid or does not correlate with the credit card number.',
+        '241' => 'The request ID is invalid.',
+        '242' => 'You requested a capture, but there is no corresponding, unused authorization record.',
+        '243' => 'The transaction has already been settled or reversed.',
+        '246' => 'The capture or credit is not voidable because the capture or credit information has laready been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.',
+        '247' => 'You requested a credit for a capture that was previously voided.',
+        '250' => 'Error: The request was received, but there was a timeout at the payment processor.',
+        '520' => 'The authorization request was approved by the issuing bank but declined by CyberSource based on your Smart Authorization settings.',
+    );
+    /**
+     * @var float The amount of time in seconds to wait for both a connection and a response. Total potential wait time is this value times 2 (connection + response).
+     */
+    public  $timeout = 10;
+    private $billTo;
+    /**
+     * 
+     * @var Card
+     */
+    public  $card;
+    private $shipTo;
+    private $invoiceHeader;
+    private $requestMsg;
+    private $purchaseTotals;
+    private $item;
+    private $merchantDefineData;
+    private $totalAmount;
+    private $transaction_key;
+    private $merchantID;
+    private $wsdl;
+    private $response;
+    private $request;
+    private $environment;
+    public  $soapclient;
+    private $cardtype;
+    private $meses;
+    private $transaction;
+    private $terminalTransacion;
+    private $cliente;
+    private $maxPedidosDia;
+    private $maxPedidosSemana;
+    private $maxPedidosMes;
+    /**
+     * 
+     * @var LoggerInterface
+     */
+    private $logger;
+    
+    private $acceptBims = array('481515','481514','481516','481517');
+    //FIXME richard
+    private $bannedBims = array('350304','354567','370276','370780','370782','370783','370786','370788',
+        '370789','371389','371772','372550','372798','375380','375888','376066','376449','376621','376660',
+        '376662','376663','376665','376667',
+        '376668','376672','376674','376675','376676','376678','376689','376690','376702','376706','376720',
+        '376721','376723','376725','376782','376791','379911','557469','424343','492087','512717',
+        '552102','402918','405071','405896','430496','450832','450843','451766','454642','454659',
+        '454832','455599','473717','476606','490696','498435','553670','554991','526678','544990',
+        '548400','423953','423954','455701','455702','456471','456472','516310','516361','521729',
+        '528013','532655','535316','552350','418117','554686','477218','400178','403254','409308',
+        '409601','422005','422061','455187','474525','491674','498406','514004','527496','539018',
+        '544731','546056','552289','552668','554906','557914','542927','428434','450003','450550',
+        '450553','451407','452005','452088','453091','453704','453708','453810','472409','516075',
+        '519123','519133','519490','541590','552489','405912','434960','530826','540445','542809',
+        '517980','402791','458123','463758','489592','489445','491268','540625','548494','411757',
+        '418374','418376','491261','530362','474578','520655','403650','424201','426354','440768',
+        '454618','474843','490638','491782','491787','499897','520615','523227','523253','523254',
+        '523256','525615','526838','531000','540187','544888','547341','548602','548696','548699',
+        '402620','457117','457122','457124','457132','457136','457147','457148','457155','457160',
+        '457172','457175','457181','457194','457196','457197','535939','540287','547133','547512',
+        '552753','438108','456787','542258','553660','434127','413388','417480','425735','435690',
+        '437864','453945','453996','454656','459990','479187','490943','491847','492120','494000',
+        '494019','496691','516097','535120','544958','424397','432467','543065','453300','456225',
+        '497490','497874','513774','420672','446223','446291','447318','465901','475129','475130',
+        '492181','492942','528838','530072','530124','540439','546016','556625','510155','439124',
+        '440825','476271','477251','420184','475490','475491','475492','515884','546735','402736',
+        '431931','431939','431944','431947','491876','458001','402741','437551','524193','524247',
+        '554378','554637','559300','450742','402360','453997','465549','520678','522701','526430',
+        '529204','535921','539832','548398','552615','453490','491866','521012','533600','533630','405207','436420','532092','400601','510091','521806','533683','550044','552167','402767','527530','491887','462826','469555','519603','559998','539941','428149','456354','524886','547503','559276','429941','457949','492556','512688','517376','526948','545185','545478','552519','428418','454860','483561','492102','453932','559308','463402','528802','468826','402725','477915','547900','454951','518920','520608','422865','547260','536462','425603','533687','402743','427655','533685','543019','520430','453903','455262','516815','520952','520991','554501','421808','462845','512186','450634','453202','454360','524677','530853','533360','540836','546678','400022','400344','400390','400759','401115','401138','401174','401867','401908','402400','402740','402760','402944','403690','403766','403784','404601','405037','405063','405482','406019','406068','406095','407110','407166','407221',
+        '408161','411111','411770','411773','411774','412039','412061','412138','412451','412712','412800','412913','414349','414709','414718','414720','414721','414734','414737','414740','415376','415417','415746','417095','418571','418581','418662','419455','420307','420767','421156','421766','422324','422695','423568','423579','424631','425032','425838','425907','426156','426290','426428','426429','426452','426684','426690','426692','427081','427178','427535','428211','428735','430023','430326','430697','431102','431307','432515','432522','432626','432739','434256','434257','434258','435037','435142','435387','435544','435545','435577','435630','435983','436618','437307','438838','438854','438856','438857','439707','440066','440265','441103','441219','441597','441840','442630','442732','442742','442743','442789','442790','442791','442793','443045','443047','443516','445843','446540','447973','448275','448559','448565','449036','449210','449488','451440','451932','452144',
+        '453296','455625','456424','461043','461046','463066','463158','464018','464041','465288','465345','466309','467001','467068','469072','469596','470132','470788','471511','471618','471691','472776','473302','473336','473702','473703','474165','474472','474475','474476','474477','474478','474487','474488','474665','475055','476516','477733','477748','478200','478433','479165','480011','480213','480990','481181','481582','481583','482757','482851','483312','483313','483316','483324','484340','485340','485620','485898','486796','486895','488893','489257','490066','490243','496842','498404','510707','510774','510802','510805','510982','511028',
+        '511055','511145','511197','511238','511317','511560','512025','512107','512711','514204','514230','514525','514600','514750','514887','515597','517559','517572','517800','517805','519880','522535','523766','524027','524912','526218','526219','527505','527515','527518','527519','527520','527521','528071','528726','528817','528852','531258','531262','531265','532562','533248','533602','533606','533644','533698','537697','537800','539237','539634','539654','539745','540168','540278','540324','540707','541630','542269','542418','542437','543805','544448','544602','544643','545510','545958','546064','546528','546540','546604','546616','546630','547067','547415','548042','549035','549110','549122','549170','549944','550703','550854','550860','551223','551237','551257','551265','551277','551563','552030','552285','553744','553822','554514','554690','557231','557919','558158','558955','558987','601100','601120','601167','421821','453231','521778','540142','402771','522126');
+    
+    public function __construct(BillTo $billto, Card $card, ShipTo $shipto, Requestmsg $requestMsg, PurchaseTotals $purcharseTotals, $items , MerchantDefinedData $merchant, $total, $config, $enviroment = "desa", $cardtype = "debit", InvoiceHeader $invoiceheader = null)
+    {
+        $this->billTo           = $billto;
+        $this->card             = $card;
+        $this->shipTo           = $shipto;
+        $this->invoiceHeader    = $invoiceheader;
+        $this->requestMsg       = $requestMsg;
+        $this->purchaseTotals   = $purcharseTotals;
+        $this->item             = $items;
+        $this->merchantDefineData = $merchant;
+        $this->totalAmount      = $total;
+        $this->transaction_key  = $config['TRANSACTION_KEY'];
+        $this->merchantID       = $config['MERCHANT_ID'];
+        $this->wsdl             = $config['WSDL_URL'];
+        $this->maxPedidosDia	= key_exists('Max_Pedidos_dia', $config)?$config['Max_Pedidos_dia']:5;
+        $this->maxPedidosSemana	= key_exists('Max_Pedidos_sem', $config)?$config['Max_Pedidos_sem']:7;
+        $this->maxPedidosMes	= key_exists('Max_Pedidos_mes', $config)?$config['Max_Pedidos_mes']:15;
+        $this->response         = false;
+        $this->environment      = $enviroment;
+        $this->request          = new \stdClass();
+        $this->paymentticket    = new \stdClass();
+        $this->cardtype         = $cardtype;
+        $this->meses            = "1";
+        $this->transaction      = null;
+        $this->logger           = \Bootstrap::getServiceManager()->get("logger");
+    }
+    /**
+     * Procesa la transaccion, aqui aun falta integrar cyber
+     * @return stdClass
+     */
+    public function prepagar($cliente) {
+        
+        if (in_array($this->card->getBim(), $this->acceptBims)) {
+            
+            $this->response = new \stdClass();
+            $this->response->decision = "ACCEPT";
+            $this->response->requestID = time();
+            $this->response->merchantReferenceCode = $this->requestMsg->getmerchantReferenceCode();
+            $this->response->reasonCode = 100;
+            $this->response->afsReply = new \stdClass();
+            $this->response->afsReply->cardScheme = null;
+            return $this->response;
+            
+        } else {
+            $this->runTransaction();
+            if(is_null($this->invoiceHeader) && $this->response->decision == 'ACCEPT') {
+                $config = \BootStrap::loadConfig();
+                $servicio = New Service();
+                $servicio->setKey($config["llave_encriptacion_tdc"]);
+                $oneClickCard =  new CardOneclick($this->card->getArrayCopy());
+                $servicio->validarTarjeta($oneClickCard, $cliente, $this->billTo->getFirstName(), $this->billTo->getLastName());
+            }
+            $this->cliente = $cliente;
+            return $this->response;
+        }
+        
+        
+    }
+    /**
+     * Regresa el estatus de la transaccion.
+     * @return string
+     */
+    public function estatus()
+    {
+        $status = 0;
+        switch ($this->response->decision) {
+            case "REJECT" :
+                $status = 62;
+                break;
+            case "REVIEW":
+                $status = 50;
+                break;
+            default :
+                $status = 0;
+                break;
+        }
+        return $status;
+    }
+    
+    /**
+     * Obtiene el extra que se debe de pasar al campo extra de la base de datos
+     * @param int $cupon
+     * @param int $formaPago
+     * @return \stdClass
+     */
+    public function getExtra($cupon = 0, $formaPago = 0, $msi = false)
+    {
+        $extra = new \stdClass();
+        $extra->total               = $this->purchaseTotals->grandTotalAmount;
+        $extra->mens                = $this->meses;
+        $extra->intr                = 0;
+//        $extra->cybersource_id      = $this->response->requestID;
+//        $extra->cybersource_status  = $this->response->merchantReferenceCode;;
+        $extra->numero_targeta      = substr($this->card->getTarjeta4(),-4);
+        $extra->tipo_targeta        = $this->cardtype;
+        #$extra->mencanismo_pago     = $this->getMecanismoPago();
+//        $extra->estatus_global      = $this->getEstatusGlobal();
+        $extra->msi                 = $msi;
+        $extra->dscap               = new \stdClass();
+            $extra->dscap->tienda   = 0;
+            $extra->dscap->cupon    = $cupon;
+            $extra->dscap->fpago    = $formaPago;
+        return $extra;
+    }
+    /**
+     * Regresa el status de si envia o no una transacción o si fue correcta
+     * @return boolean
+     */
+    public function pagar($config, $ordenId, $clienteId, $numeroPedido, $arrayCupones)
+    {
+        $orden = $ordenId.date("ymdHis");
+        $status = false;
+		if ($this->response->decision === "ACCEPT"){
+                $terminal = $this->getTerminal();
+                $expiracion     = $this->card->getExpirationMonth()."/". $this->card->getExpirationYear();
+                $promocion = ($this->getMSI()) ? $this->meses : NULL;
+                //para Multienvios
+                if ($this->transaction === null){ 
+                	$this->transaction = $terminal->autorizar($this->card->getAccountNumber(), $expiracion, $this->card->getCvNumber(), $this->totalAmount, $numeroPedido, $promocion, $this->getMeses());
+                }
+                    $data = array(
+                            'tipo_targeta' => $this->card->getCardType(),
+                            'targeta_numero' => $this->card->getAccountNumber()
+                    );
+                        $transaccion = $terminal->saveTranscaccion((!is_null($ordenId)) ? $ordenId : $numeroPedido, $clienteId, $numeroPedido, $data, $arrayCupones);
+                    $comprobante = (key_exists("AuthCode",$this->transaction['respuesta'])) ? $this->transaction['respuesta']["AuthCode"] : "";
+                    $this->crearComprobante(($transaccion === "aprobada") ? true : false, $numeroPedido, $comprobante, $this->totalAmount);
+                    if(!in_array(0, $arrayCupones)) {
+                            $status = $this->switchAfiliacionBancaria($transaccion, $ordenId);
+                        Modelos_Pedidos::crearComentariosEstatusTransaccion(
+                            array(
+                                "Id_Pedido" => $ordenId,
+                                "Fecha" => date("Y/m/d H:i:s"),
+                                "Comentario" => "Se envia a la terminal Bancaria, el resultado"
+                                    ."de la transaccion es: {$transaccion} -",
+                                "usuario" => substr("Sistema",0,49),
+                                "visible" => 1,
+                                "id_usuario" => 1989,
+                                "frontend" => 0//??
+                            )
+                         );
+                    } else {
+                            $status = ($transaccion === "aprobada") ? true : false;
+                            $this->switchAfiliacionBancaria($transaccion, $ordenId);
+                    }
+                } else {
+                	#Status 62 Se rechaza de manera automatica
+                	$this->updatePedido($ordenId, 62);
+                	$transaccion = "rechazado";
+                    $status = false;
+                }
+        return $status;
+    }
+
+    
+    private function condicionesRechazo(){
+  		// regla 1 mas de 5 pedidos en un dia 
+    	$pedidosDia = Modelos_Pedidos::getPedidosCoincidentesPorDias($this->cliente,$this->card->getAccountNumber(),1);
+    	// regla 1 mas de 7 pedidos en una semana
+    	$pedidosSemana = Modelos_Pedidos::getPedidosCoincidentesPorDias($this->cliente,$this->card->getAccountNumber(),7);
+    	// regla 1 mas de 15 pedidos en un mes
+    	$pedidosMes = Modelos_Pedidos::getPedidosCoincidentesPorDias($this->cliente,$this->card->getAccountNumber(),30);
+    	
+    	if ($pedidosDia > $this->maxPedidosDia 
+    			|| $pedidosSemana > $this->maxPedidosSemana 
+    			|| $pedidosMes > $this->maxPedidosMes ){
+    		return false;
+    	}
+    	
+    	//regla 6 por bines baneados 
+    	if (in_array($this->card->getBim(), $this->bannedBims)){
+    		return false;
+    	}
+    	
+    	return true;
+    }
+    public function crearComprobante($status, $pedido, $comprobante, $total)
+    {
+        $control = false;
+        if($status) {
+            $control = Modelos_Pedidos::crearPedidoRelComprobanteTransaccion(
+                array(
+                    "Pedido" => $pedido,
+                    "Comprobante" => $comprobante,
+                    "Total" => $total,
+                    "Tipo" => 0,
+                    "usr" => 1989,
+                    "Fecha" => date("Y/m/d H:i:s"),
+                    "motivo" => 1,
+                    "validado" => 0,
+                    "fecha_validacion" => date("Y/m/d H:i:s"),
+                    "usr_validacion" => 1989,
+                    "estado" => 1,
+                    "detalle" => "pedido validado desde cybersource"
+                )
+            );
+        }
+        return $control;
+    }
+    /**
+     * Actualiza los estatus dependiendo de la transacion de cyber
+     * @param string $transaccion
+     * @param string $ordenId
+     * @return boolean
+     */
+    public function switchAfiliacionBancaria($transaccion, $ordenId)
+    {
+        $respuesta = false;
+        switch ($transaccion) {
+            case 'rechazado':
+                $this->updatePedido($ordenId, 8);
+                break;
+            case 'aprobada':
+                $this->updatePedido($ordenId, 71);
+                $respuesta = true;
+                break;
+            default :
+                $this->updatePedido($ordenId, 8);
+                break;
+        }
+        return $respuesta;
+    }
+    /**
+     * 
+     * @param string $pedido
+     * @param string $clienteId
+     */
+    public function registerTerminalPago($pedido, $clienteId)
+    {
+        $cybersource_transaccion_datos = array();
+        $cybersource_transaccion_datos["request_id"]    = $this->response->requestID;
+        $cybersource_transaccion_datos["id_pedido"]     = $pedido;
+        $cybersource_transaccion_datos["id_cliente"]    = $clienteId;
+        $cybersource_transaccion_datos["tipo_targeta"]  = $this->cardtype;
+        $cybersource_transaccion_datos["targeta_numero"] = $this->card->getAccountNumber();
+        $cybersource_transaccion_datos["fecha"]         = date("Y/m/d H:i:s");
+        $cybersource_transaccion_datos["merchant_reference_code"] = $this->response->merchantReferenceCode;
+        $cybersource_transaccion_datos["decision"]      = $this->response->decision;
+        $cybersource_transaccion_datos["reason_code"]   = $this->response->reasonCode;
+        $cybersource_transaccion_datos["card_scheme"]   = (isset($this->response->afsReply->cardScheme)) ? $this->response->afsReply->cardScheme : "";
+        $cybersource_transaccion_datos["card_issuer"]   = (property_exists($this->response->afsReply,"cardIssuer")) ? substr($this->response->afsReply->cardIssuer,0,23) : "";
+        $cybersource_transaccion_datos["total"]         = $this->totalAmount;
+        Modelos_Pedidos::crearCybersourceTransaccion($cybersource_transaccion_datos);
+    }
+    /**
+     * 
+     * @param string $pedido
+     * @param string $clienteId
+     * @param object $extra
+     */
+    public function registerPago($pedidoNormalizado, $pedidoId, $clienteId, $extra, $datosCupones =array(1))
+    {
+        $cybersource_transaccion_datos = array();
+        $cybersource_transaccion_datos["request_id"]    = $this->response->requestID;
+        $cybersource_transaccion_datos["id_pedido"]     = $pedidoNormalizado;
+        $cybersource_transaccion_datos["id_cliente"]    = $clienteId;
+        $cybersource_transaccion_datos["tipo_targeta"]  = $this->cardtype;
+        $cybersource_transaccion_datos["targeta_numero"] = $this->card->getAccountNumber();
+        $cybersource_transaccion_datos["fecha"]         = date("Y/m/d H:i:s");
+        //error_log("--Cyber--");
+        //error_log(print_r($this->response, TRUE));
+        //error_log("--Cyber-end--");
+        $cybersource_transaccion_datos["merchant_reference_code"] = (property_exists($this->response, "merchantReferenceCode")) ? $this->response->merchantReferenceCode : "";
+        $cybersource_transaccion_datos["decision"]      = $this->response->decision;
+        $cybersource_transaccion_datos["reason_code"]   = $this->response->reasonCode;
+        $cybersource_transaccion_datos["card_scheme"]   = (property_exists($this->response->afsReply, "cardScheme")) ? $this->response->afsReply->cardScheme : "";
+        $cybersource_transaccion_datos["card_issuer"]   = (property_exists($this->response->afsReply, "cardIssuer")) ? substr($this->response->afsReply->cardIssuer,0,23) : "";
+        $cybersource_transaccion_datos["total"]         = $this->totalAmount;
+        
+        Modelos_Pedidos::crearCybersourceTransaccion($cybersource_transaccion_datos);
+        if(!in_array(0, $datosCupones)) {
+            Modelos_Pedidos::crearComentariosEstatusTransaccion(
+               array(
+                   "Id_Pedido" => $pedidoId,
+                   "Fecha" => date("Y/m/d H:i:s"),
+                   "Comentario" => "Se paso por CyberSource y se cobro -".$this->totalAmount.
+                   "- Con la desición -" .$this->response->decision,
+                   "usuario" => substr("Sistema",0,49),
+                   "visible" => 1,
+                   "id_usuario" => 1989,
+                   "frontend" => 0//??
+               )
+            );
+            $pedidosClase = new \Modelos_Pedidos();
+            $dataPedido = $pedidosClase->obtenerPedidoPorNum2($pedidoNormalizado);
+            $this->logger->debug($dataPedido);
+            $extraPedido = json_decode($dataPedido['extra']);
+            $extraPedido = $extraPedido instanceof \stdClass ? $extraPedido : new \stdClass(); 
+            $extraPedido->cybersource_status = $this->response->decision;
+            $extraPedido->netpay = $this->response;
+            $extraPedido->netpay->total = $this->purchaseTotals->getTotalAmount();
+            $pedidosClase->updateTransaccionExtraData($pedidoNormalizado, json_encode($extraPedido)); 
+        }
+    }
+    /**
+     * funcion para correr la transaccion sobre cybersurce
+     */
+    protected function runTransaction ()
+    {
+
+        $context_options = array(
+            'http' => array(
+                'timeout' => $this->timeout,
+            ),
+        );
+        $context = stream_context_create( $context_options );
+        // options we pass into the soap client
+        $soap_options = array(
+            'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP | SOAP_COMPRESSION_DEFLATE,// turn on HTTP compression
+            'encoding' => 'utf-8',// set the internal character encoding to avoid random conversions
+            'exceptions' => true,// throw SoapFault exceptions when there is an error
+            'connection_timeout' => $this->timeout,
+            'stream_context' => $context,
+        );
+        $soap_options['cache_wsdl'] = ( $this->environment == "prod" ) ? WSDL_CACHE_BOTH : WSDL_CACHE_NONE;
+        try {           
+            $soap = new \SoapClient($this->wsdl, $soap_options );
+            $this->addWsseToken($soap);
+            $this->createRequest();
+            //error_log(print_r($this->request, true));
+            $response = $soap->runTransaction($this->request); 
+            $this->response = $response;
+        } catch ( Exception $ex ) {
+
+            error_log( $ex->getMessage());
+        }
+    }
+    private function addWsseToken($soap)
+    {
+        $wsse_namespace = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
+        $type_namespace = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText';
+        $user = new \SoapVar( $this->merchantID, XSD_STRING, null, $wsse_namespace, null, $wsse_namespace );
+        $pass = new \SoapVar( $this->transaction_key, XSD_STRING, null, $type_namespace, null, $wsse_namespace );
+        // create the username token container object
+        $username_token = new \stdClass();
+        $username_token->Username = $user;
+        $username_token->Password = $pass;
+        // convert the username token object into a soap var
+        $username2_token = new \SoapVar( $username_token, SOAP_ENC_OBJECT, null, $wsse_namespace, 'UsernameToken', $wsse_namespace );
+        // create the security container object
+        $security = new \stdClass();
+        $security->UsernameToken = $username2_token;
+        // convert the security container object into a soap var
+        $securitySoap = new \SoapVar( $security, SOAP_ENC_OBJECT, null, $wsse_namespace, 'Security', $wsse_namespace );
+        // create the header out of the security soap var
+        $header = new \SoapHeader( $wsse_namespace, 'Security', $securitySoap, true );
+        // add the headers to the soap client
+        $soap->__setSoapHeaders( $header );
+    }
+    protected function createRequest()
+    {
+        $this->request->merchantID              = $this->merchantID;
+        $this->request->merchantReferenceCode   = $this->requestMsg->getmerchantReferenceCode();
+        $this->request->deviceFingerprintID     = $this->requestMsg->getdeviceFingerprintID();
+        $this->request->clientLibrary           = "PHP";
+        $this->request->clientLibraryVersion    = phpversion();
+        $this->request->clientEnvironment       = php_uname();
+        $afsService = new \stdClass();
+        $afsService->run = "true";
+        $this->request->afsService = $afsService;
+        $this->request->invoiceHeader = $this->invoiceHeader;
+        $this->request->billTo = $this->billTo;
+        $this->request->shipTo = $this->shipTo;
+        $this->request->card = $this->card;
+        $this->request->purchaseTotals = $this->purchaseTotals;
+        $this->request->item = $this->item;
+        $this->request->merchantDefinedData = $this->merchantDefineData;
+    }
+    
+    /**
+     * Regresa el estatus Global para registarlo
+     * @return string
+     */
+    public function getEstatusGlobal()
+    {
+        $status = "";
+        switch ($this->response->decision) {
+           
+            case "REJECT" :
+                $status = "rechazado";
+                break;
+            default :
+                $status = "aprobado";
+                break;
+        }
+        return $status;
+    }
+    /**
+     * Devuelve el estatus de la transaccion
+     * @return boolean
+     */
+    public function getStatus(){
+        $status = false;
+        switch ($this->response->decision) {
+             case "ACCEPT" :
+            case "REVIEW" :
+                $status = true;
+                break;
+            default :
+                $status = false;
+                break;
+        }
+        return $status;
+    }
+    
+    public function getMecanismoPago()
+    {
+        $status = "";
+        switch ($this->response->decision) {
+            case "REJECT" :
+                $status = "cybersource_rechazada";
+                break;
+            default :
+                $status = "";
+                break;
+        }
+        return $status;
+    }
+    public function setMeses($meses)
+    {
+        $this->meses = $meses;
+    }
+    public function getMeses()
+    {
+        return $this->meses;
+    }
+    public function gettotalAmount() {
+        return $this->totalAmount;
+    }
+    public function getMSI()
+    {
+        return ($this->merchantDefineData->getMSI() === "Y") ? true :false;
+    }
+    public function updatePedido($id, $status)
+    {
+        $pedidoModelos =  new Modelos_Pedidos();
+        $pedidoModelos->updatePedido($id, $status);
+    }
+    /**
+     * Regresa la respuesta de la terminal
+     * @return array
+     */
+    public function getTransaccion()
+    {
+        return $this->transaction;
+    }
+    public function getCard4()
+    {
+        return $this->card->getTarjeta4();
+    }
+    public function setVariablesSession()
+    {
+        $_SESSION["sistema_pago"] = "netpay";
+        $_SESSION["netpay"]["status"] = true;
+    }
+    public function getFormaPagoId(){
+    	return 3912;
+    }
+    
+    public function getBim(){
+    	return $this->card->getBim();
+    }
+    
+    private function getTerminal(){
+    	$config = \BootStrap::loadConfig();
+    	
+    	if ($this->terminal === null){
+    		//$this->terminal = new Inbursa($config["inbursa"]);
+    		$this->terminal = new Netpay($config["pagos"]["netpay"]);
+    	}
+    	return $this->terminal;
+    }
+}
+
+
+
+
+======================================================================
+R3T3 FULL CardOneclick.php  (2.0s)
+======================================================================
+<?php
+namespace tienda\Librerias\Cyber;
+
+
+/**
+ * Clase para tratar las tarjetas
+ * @author Axel Lango <axel.lango@decompras.com>
+ * @version 1.0
+ * @date 2014-11-24
+ */
+
+
+class CardOneclick extends Card
+{/**
+     * Guarda los 16 numeros de las tarjetas
+     */
+    public function setAccountNumber($accountNumber)
+    {
+        $this->accountNumber        = (!empty($accountNumber)) ? trim($accountNumber) : "";
+    }
+    /**
+     * Guarda la fecha de expiracion de mes de la tarjeta
+     */
+    public function setExpirationMonth($expirationMonth)
+    {
+        
+        $this->expirationMonth      = (!empty($expirationMonth)) ? trim($expirationMonth) : "";
+    }
+    /**
+     * Guarda la fecha de expiracion de la tarjeta
+     */
+    public function setExpirationYear($expirationYear)
+    {
+        $this->expirationYear       = (!empty($expirationYear)) ? "20".trim($expirationYear) : "";
+    }
+    /**
+     * Obtiene los 2 dígitos del año
+     * @Override 
+     */
+    public function getExpirationYear()
+    {
+        if(strlen($this->expirationYear)==4){
+            return substr(trim($this->expirationYear), -2);
+        }else{
+            return $this->expirationYear;
+        }
+
+    }
+    /**
+     * Guarda la código de seguridad
+     */
+    public function setCvNumber($cvNumber)
+    {
+        $this->cvNumber       = (!empty($cvNumber)) ? trim($cvNumber) : "";
+    }
+    /**
+     * Regresa la fecha de expiracion de mes de la tarjeta completo, se usa para devolver la cadena encriptada
+     * @return string
+     */
+    public function getExpirationMonth_Complete()
+    {
+        return $this->expirationMonth;
+    }
+    /**
+     * Regresa la fecha de expiracion de la tarjeta completo, se usa para devolver la cadena encriptada
+     * @return string
+     */
+    public function getExpirationYear_Complete()
+    {
+        if(strlen($this->expirationYear)==6){
+            return substr(trim($this->expirationYear), -4);
+        }else{
+            return $this->expirationYear;
+        }
+    }
+    /**
+    * Setea el la compañia de la tarjeta
+    * @return void
+    *
+    */
+    public function setCardCompany()
+    {
+        $this->cardType = (!empty($this->accountNumber)) ? $this->creditCartCompany(trim($this->accountNumber)) : "";
+    }
+    /**
+    **    001: Visa
+    *    002: MasterCard, Eurocard (European regional brand of MasterCard)
+    *    003: American Express
+    *    004: Discover
+    *    005: Diners Club
+    *    006: Carte Blanche
+    *    007: JCB
+    *    014: EnRoute
+    *    021: JAL
+    *    024: Maestro (UK Domestic)
+    *    031: Delta(For the Global Payment Service processor only. For othe processors, use 001.)
+    *    033: Visa Electron
+    *    034: Dankort
+    *    035: Laser
+    *    036: Carte Bleue
+    *    037: Carta Si
+    *    039: Encoded account number
+    *    040: UATP
+    *    042: Maestro (International)
+    *    043: GE Money UK card (Before setting up your system for these cards, contact the CyberSource UK Support Group.)
+    *    045: Style (Streamline only)
+    */
+    public function getTipoNombre(){
+        $this->cardType=$this->creditCartCompany($this->accountNumber);
+        switch ($this->cardType) {
+            case '001':
+                return "Visa";
+                break;
+
+            case '002':
+                return "MasterCard";
+                break;
+
+            case '003':
+                return "American";
+                break;
+
+            case '004':
+                return "Discover";
+                break;
+
+            case '005':
+                return "Diners";
+                break;
+
+            case '006':
+                return "Carte";
+                break;
+
+            case '007':
+                return "JCB";
+                break;
+
+            case '014':
+                return "EnRoute";
+                break;
+
+            case '021':
+                return "JAL";
+                break;
+
+            case '024':
+                return "Maestro";
+                break;
+
+            case '031':
+                return "Delta";
+                break;
+
+            case '033':
+                return "Visa";
+                break;
+
+            case '034':
+                return "Dankort";
+                break;
+
+            case '035':
+                return "Laser";
+                break;
+
+            case '036':
+                return "Carte Bleue";
+                break;
+
+            case '037':
+                return "Carta Si";
+                break;
+
+            case '039':
+                return "Encoded account number";
+                break;
+
+            case '040':
+                return "UATP";
+                break;
+
+            case '042':
+                return "Maestro";
+                break;
+
+            case '043':
+                return "GE Money UK card";
+                break;
+
+            case '045':
+                return "Style";
+                break;
+            
+            default:
+                return "Error ".$this->cardType;
+                break;
+        }
+    }
+
+    /**
+    * Retorna los primeros 6 dígitos de la tarjeta
+    *
+    * @return int;
+    * 
+    */
+    public function getBim(){
+        return substr($this->accountNumber, 0, 6);
+    }
+ }
+
+
+
+
+======================================================================
+R3T4 Datostarjeta entity + any other datostarjeta refs  (4.9s)
+======================================================================
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+Script1.groovy: 1: unexpected char: '\' @ line 1, column 233.
+   S---'; grep -rln 'Datostarjeta\|datostar
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:310)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:150)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:120)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:132)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:350)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:139)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:110)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:234)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:168)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:943)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:605)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:581)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:558)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:298)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:268)
+	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:688)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:700)
+	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:584)
+	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:623)
+	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:594)
+	at hudson.util.RemotingDiagnostics$Script.call(RemotingDiagnostics.java:142)
+	at hudson.util.RemotingDiagnostics$Script.call(RemotingDiagnostics.java:114)
+	at hudson.remoting.LocalChannel.call(LocalChannel.java:45)
+	at hudson.util.RemotingDiagnostics.executeGroovy(RemotingDiagnostics.java:111)
+	at jenkins.model.Jenkins._doScript(Jenkins.java:4465)
+	at jenkins.model.Jenkins.doScriptText(Jenkins.java:4443)
+	at java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:627)
+	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:396)
+	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:408)
+	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:212)
+	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:145)
+	at org.kohsuke.stapler.MetaClass$11.doDispatch(MetaClass.java:535)
+	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:58)
+	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:747)
+	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:878)
+	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:676)
+	at org.kohsuke.stapler.Stapler.service(Stapler.java:238)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:755)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1617)
+	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:154)
+	at jenkins.security.ResourceDomainFilter.doFilter(ResourceDomainFilter.java:76)
+	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:151)
+	at hudson.plugins.audit_trail.AuditTrailFilter.doFilter(AuditTrailFilter.java:111)
+	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:151)
+	at jenkins.telemetry.impl.UserLanguages$AcceptLanguageFilter.doFilter(UserLanguages.java:128)
+	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:151)
+	at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:157)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:99)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:84)
+	at hudson.security.UnwrapSecurityExceptionFilter.doFilter(UnwrapSecurityExceptionFilter.java:51)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at jenkins.security.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at org.acegisecurity.providers.anonymous.AnonymousProcessingFilter.doFilter(AnonymousProcessingFilter.java:125)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at org.acegisecurity.ui.rememberme.RememberMeProcessingFilter.doFilter(RememberMeProcessingFilter.java:142)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at org.acegisecurity.ui.AbstractProcessingFilter.doFilter(AbstractProcessingFilter.java:271)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at jenkins.security.BasicHeaderProcessor.success(BasicHeaderProcessor.java:139)
+	at jenkins.security.BasicHeaderProcessor.doFilter(BasicHeaderProcessor.java:82)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at org.acegisecurity.context.HttpSessionContextIntegrationFilter.doFilter(HttpSessionContextIntegrationFilter.java:249)
+	at hudson.security.HttpSessionContextIntegrationFilter2.doFilter(HttpSessionContextIntegrationFilter2.java:67)
+	at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:87)
+	at hudson.security.ChainedServletFilter.doFilter(ChainedServletFilter.java:90)
+	at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:171)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.kohsuke.stapler.compression.CompressionFilter.doFilter(CompressionFilter.java:49)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:82)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:30)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:566)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1607)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1297)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1577)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1212)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:270)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:388)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+
+======================================================================
+R3T5 ls Cyber dir + grep RC4 usage across app  (2.6s)
+======================================================================
+total 160
+drwxr-xr-x.  2 jenkins jenkins  4096 Jul  1  2018 .
+drwxr-xr-x. 23 jenkins jenkins  4096 Jul  1  2018 ..
+-rwxr-xr-x.  1 jenkins jenkins  4098 Jul  1  2018 BillTo.php
+-rwxr-xr-x.  1 jenkins jenkins  5106 Jul  1  2018 Card.php
+-rwxr-xr-x.  1 jenkins jenkins  5226 Jul  1  2018 CardOneclick.php
+-rwxr-xr-x.  1 jenkins jenkins  1197 Jul  1  2018 CardSears.php
+-rwxr-xr-x.  1 jenkins jenkins 34518 Jul  1  2018 Cybersource.php
+-rwxr-xr-x.  1 jenkins jenkins  9389 Jul  1  2018 Inbursa.php
+-rwxr-xr-x.  1 jenkins jenkins   897 Jul  1  2018 InvoiceHeader.php
+-rwxr-xr-x.  1 jenkins jenkins  2077 Jul  1  2018 MerchantDefinedData.php
+-rwxr-xr-x.  1 jenkins jenkins  9149 Jul  1  2018 Netpay.php
+-rwxr-xr-x.  1 jenkins jenkins  5789 Jul  1  2018 Product.php
+-rwxr-xr-x.  1 jenkins jenkins  1712 Jul  1  2018 PurchaseTotals.php
+-rwxr-xr-x.  1 jenkins jenkins  1079 Jul  1  2018 Requestmsg.php
+-rwxr-xr-x.  1 jenkins jenkins 30899 Jul  1  2018 Service.php
+-rwxr-xr-x.  1 jenkins jenkins  3368 Jul  1  2018 ShipTo.php
+-rwxr-xr-x.  1 jenkins jenkins   518 Jul  1  2018 Terminal.php
+---RC4---
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/HttpClients/fb_ca_chain_bundle.crt:927:ADCCAQoCggEBAMBxM4KK0HDrc4eCQNUd5MvJDkKQ+d40uaG6EfQlhfPMcm3ye5drswfxdySRXyWP
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/HttpClients/fb_ca_chain_bundle.crt:1405:z+qMkjvN9wfcZnSX9EUi3fRc4L9t875lM+QVOr/bmJBVOMTtplVjC7B4BPTjbsE/jvxReB+SnoPC
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/HttpClients/fb_ca_chain_bundle.crt:2219:BhMCSlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xKjAoBgNVBAsTIVNl
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/HttpClients/fb_ca_chain_bundle.crt:3601:SlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xJzAlBgNVBAsTHlNlY3Vy
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert2.pem:851:ADCCAQoCggEBAMBxM4KK0HDrc4eCQNUd5MvJDkKQ+d40uaG6EfQlhfPMcm3ye5drswfxdySRXyWP
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert2.pem:1222:z+qMkjvN9wfcZnSX9EUi3fRc4L9t875lM+QVOr/bmJBVOMTtplVjC7B4BPTjbsE/jvxReB+SnoPC
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert2.pem:2005:BhMCSlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xKjAoBgNVBAsTIVNl
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert2.pem:3323:SlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xJzAlBgNVBAsTHlNlY3Vy
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert.pem:851:ADCCAQoCggEBAMBxM4KK0HDrc4eCQNUd5MvJDkKQ+d40uaG6EfQlhfPMcm3ye5drswfxdySRXyWP
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert.pem:1222:z+qMkjvN9wfcZnSX9EUi3fRc4L9t875lM+QVOr/bmJBVOMTtplVjC7B4BPTjbsE/jvxReB+SnoPC
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert.pem:2005:BhMCSlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xKjAoBgNVBAsTIVNl
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/MercadoPago/cacert.pem:3323:SlAxJTAjBgNVBAoTHFNFQ09NIFRydXN0IFN5c3RlbXMgQ08uLExURC4xJzAlBgNVBAsTHlNlY3Vy
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:5:use tienda\Librerias\Rc4;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:341:        //$this->tarjeta->setExpirationMonth( $this->Rc4Encrypt($this->tarjeta->getExpirationMonth_Complete()) );
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:342:        //$this->tarjeta->setExpirationYear(  $this->Rc4Encrypt($this->tarjeta->getExpirationYear_Complete())  );
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:345:     * Encripta por Rc4
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:349:    private function Rc4Encrypt($string)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:351:        $rc4crypt = new Rc4();
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:352:        return $rc4crypt->StringToHexString($rc4crypt->Salaa($string,$this->key));
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:355:     * Desencripta por Rc4
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:359:    private function Rc4Decrypt($string)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:361:        $rc4crypt = new Rc4();
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:362:        return $rc4crypt->Salaa($rc4crypt->HexStringToString($string),$this->key);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:5: * Clase RC4 para el encriptadp
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:12: *           $rc4crypt = new Rc4();
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:14: *           $encryptedstring = $rc4crypt->StringToHexString($rc4crypt->Salaa($string,'SEMILLA'));
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:17: *           $string = $rc4crypt->Salaa($rc4crypt->HexStringToString($HTTP_POST_VARS[respuesta]),'SEMILLA');
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:20:class Rc4
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:29:    public function RC4Initialize($strPwd)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php:51:        $this->RC4Initialize($key);
+
+

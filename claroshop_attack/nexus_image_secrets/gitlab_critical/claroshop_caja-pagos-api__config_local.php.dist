@@ -1,0 +1,656 @@
+<?php
+return array(
+    'template' => array(
+        'cache'         => true,
+        'templates'     => realpath(dirname(__FILE__) . "/../app/Templates/"),
+        'cachePath'     => realpath(sys_get_temp_dir()),
+        'optimizations' => 1,
+        'modo'          => true
+    ),
+    'claro_360' => [
+         'sso' => [
+                'endpoint' => "https://preprodrp.threesixtylabs.net:7500/nt/SSO_UserInfo/1/19/userinfo",
+                'authkey' => "72+qw4135A8+4sdagfa/rIUFlnksaWas6dl58msadDNhy11=",
+                'options' => [],
+                'failURL' => 'https://www.claro360.com/login',
+                'successURL' => "/"
+         ]
+    ],
+    'gigya'=> array(
+        'key'=>'3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR', // release.claroshop.com
+        'secret'=>'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU='
+        // 'key'=>'3_i1QeZqrz6xSX5fF_TanfzOBYK_tqHpRtD6ylvBZI5kpyIh7wQBpeYSAMVIPJ7T27' // claroshop.com
+    ),
+    'cache' => array(
+    //'consistente' => true,
+      'prefix' => 'local',
+        'servidores' => array(
+            array('127.0.0.1', 11211),
+            array('192.168.56.10', 11211),
+        )
+    ),
+    'imgs_cache' => array(
+        //'consistente' => true,
+        'servidores' => array(
+            array('192.168.56.10', 11213),
+            array('192.168.56.10', 11213),
+        )
+    ),
+    'inbursa'=> array(
+        "username" => "inbursa01",
+        "password" => "FO7gnoGg9KGqxjNjWkRt",
+        "httpGateway" => "https://easygetpaid.prosa.com.mx/egpTestR/motorPagos/claro/eCommerce"
+    ),
+    'imgs_decompras' => "http://imgs.dc.devel.decompras.tmx-internacional.net/",
+    'endpoint_telmex' => "http://200.57.163.19",
+    'endpoint_recibo_telmex' => 'http://200.57.141.31',
+    'forma_pago_recibo_telmex' => '{"1":"4432", "6":"4433", "13": "4434", "18":"4435", "24":"4436", "36":"4437", "48":"4438"}',
+    'categorias_sin_recibo_telmex' => '15026, 15190, 15197',
+    'precioRDD' => 49,
+    'cyber'=> array(
+        "TRANSACTION_KEY"   => "E7S25IFpiy/fKWc2LRDdJbxhVlqRRwCxVhzAbBm2n6M/4mENR1PFOIi1fbPO2F3O75kCJAeFvnhBTRwM3q0x9a/Dla5lGh5mOMQNQkoRHzsTzVeHo3NwROlzCMSrDRC5u/VmGPrplgLPgw/502DC8ys81yy5y5F3V7uUGNbsGp8vSr6hh8jZIVlcZz912rjtoZFjuDReBEYorcINxvSrrR17qeMRkjz59k8rS8AykMaaO3la3Sl8+k7xqqGsGmAHV/jQ8ZV1iPQY/eslHHv3HjvbSRuKwSwpThZyHuesr9oe+vFMX3SeUj4J2+WV9rG/0n1q0WMHWKZuBXUmzwuHZg==",
+        "MERCHANT_ID"       => "decompras",
+        "WSDL_URL"          => "https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.127.wsdl",
+        "WSDL_AKAMAI"       => "https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.127.wsdl"
+    ),
+    "pagos"=>array(
+        'netpay'=>array(
+            "httpGateway"       => "http://200.57.87.243:9855",
+            "storeID"           => "1200133",
+            "username"          => "POS",
+            "password"          => "decompras",
+            "mode"              => "A"
+        ),
+    ),
+     'login_sears' => array(
+        'api_endpoit'   => 'http://www.sears.com.mx/servicio_autenticacion_usuario/servicio.php',//'sears.d.plazavip.com/servicio_autenticacion_usuario/servicio.php',
+        'auth_user'     => 'iliux',
+        'auth_pasword'  => 'IL18xmz1',
+        'semilla'      => 'D3C0MP@52015',
+        'mode'=>'A'
+
+    ),
+    'paypal_express'=> array(
+        'url'               =>'https://www.sandbox.paypal.com/cgi-bin/webscr',
+        'api_user'          =>'vendedor_api1.decompras.com',
+        'api_password'      =>'1407340137',
+        'api_signature'     =>'AtjxHXvFOf5tVpsDp33Y6n5F3uSzA2e4T96TbTBPFO0QtxCqUPhyIHou',
+        'api_endpoint'      =>'https://api-3t.sandbox.paypal.com/nvp',
+        'api_version'       =>124,
+        'api_return_url'    =>'http://www.claroshop.local.com/caja/paypal/process/',
+        'api_cancel_url'    =>'http://www.claroshop.local.com/caja/forma-pago/',
+        'api_brand_logo' => 'https://www.claroshop.com/css/img/claroshop-com_30px.png',
+    ),
+    'login_sears' => array(
+        'api_endpoit'   => 'http://www.sears.com.mx/servicio_autenticacion_usuario/servicio.php',//'sears.d.plazavip.com/servicio_autenticacion_usuario/servicio.php',
+        'auth_user'     => 'iliux',
+        'auth_pasword'  => 'IL18xmz1',
+        'semilla'      => 'D3C0MP@52015',
+        'mode'=>'A'
+
+    ),
+    'captcha'=>array(
+        'KEY'=>'6LdXSwsTAAAAAHa8REoxZWKEf0Ym5w01GkDb7E3q',
+        'KEY_SECRET'=>'6LdXSwsTAAAAAMZaWJmUjEbKRk59YXv77F2FU98R',
+        'URL_CAPTCHA'=>'https://www.google.com/recaptcha/api/siteverify'
+    ),
+    'boxpay'=> array(
+        "TRANSACTION_KEY"   => "da4b9237bacccdf19c0760cab7aec4a8359010b0",  //id_pos
+        "VAK"               => "1c6637a8f2e1f75e06ff9984894d6bd16a3a36a9",
+        "MERCHANT_ID"       => "decompras",
+        "CURL_URL"          => "http://tcdla-dev.plazavip.com/pay"
+    ),
+    'bd' => array(
+        'servidores' => array(
+            array(
+                'host' => 'db.claroshop.tmx-internacional.net',
+                'peso' => 1
+            )
+        ),
+    'usuario' => 'tienda_decompras',
+    'contrasena' => 'nInUOWrUCaRdrJBJYTbc',
+    'basedatos' => 'tienda',
+    'charset' => 'UTF-8',
+    'auto_cache' => 7200,
+    'depurar'=>false),
+    'olark'=>array(
+        'identify'=>'9935-670-10-3951',
+        'system_group' => 'd1c2f8ebb7cb844375c9cf71fb8c822d'
+    ),
+    'doctrine' => array(
+        'connection' => array(
+            // default connection name
+            'orm_default' => array(
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => array(
+                    'host'     => 'db.claroshop.tmx-internacional.net',
+                    'port'     => '3306',
+                    'user'     => 'usr',
+                    'password' => 'pass',
+                    'dbname'   => 'tienda',
+                    'charset' => 'utf8',
+                    'driverOptions' => array(1002=>'SET NAMES utf8'),
+                )
+            )
+        ),
+        'configuration' => array(
+            'orm_default' => array(
+                'proxy_dir' => '/tmp/Proxy',
+                'proxy_namespace' => 'DoctrineORMModule\Proxy',
+                'result_cache'      => 'mycache',
+            )
+        )
+    ),
+    'amdocs' => array(
+        'endpoint'      => 'http://200.57.158.26:1701/search/?sei=MexDeComprasSystem',
+        'endpointA'     => 'http://200.57.158.26:1701/search/?sei=AutoSuggestionSystem',
+    ),
+    'imgs_servicio'=>'http://imagenes.decompras.com/servicios/',
+    'app_environment'=>'desa',
+    'base_path' => 'http://www.decompras.local.com/',
+    'llave_encriptacion_tdc'=>'K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4',
+    'tcSears'=> array(
+        'seed'  => 'SEMILLA',
+        'url'   => 'http://sears.d.plazavip.com/servicio/servicio.php?instancia_produccion=1',
+        'credentials' => array(
+            'user'=>'zeke',
+            'pass'=> 'zmedina'
+        ),
+        'mode'=>'D'
+    ),
+    'tiendas'=> array(
+        'bannerHome' => array(
+            '3509'=>'242',//Telmex
+            '2626'=>'245',//Telcel
+            '2430'=>'246',//Sears
+            '3496'=>'244',//Sanborns
+            '3571'=>'320',//Samsung
+            '3562' => '365',//BOXBANNER_MABE -PROD
+            '3574' => '366',//BOXBANNER_PHILOSOPHY
+            '3575' => '367',//BOXBANNER_HASBRO
+            '3576' => '368',//BOXBANNER_FLEXI
+            '3577' => '369',//BOXBANNER_ENTIENDAS
+            '3578' => '388',//BOXBANNER_CRAFTMAN
+        ),
+        'dbBannerHome' => array(
+            '3509'=>'247',//Telmex
+            '2626'=>'248',//Telcel
+            '2430'=>'249',//Sears
+            '3496'=>'250',//Sanborns
+            '3562' => '370', //REC_PRODUCTOS_MABE
+            '3574' => '371', //REC_PRODUCTOS_PHILOSOPHY
+            '3575' => '372', //REC_PRODUCTOS_HASBRO'
+            '3576' => '373', //REC_PRODUCTOS_FLEXI'
+            '3577' => '374', //REC_PRODUCTOS_ENTIENDAS'
+            '3578' => '389', //REC_PRODUCTOS_CRAFTMAN'
+        ),
+        'recomendadosHome' => array(
+            '3509'=>'247',//Telmex
+            '2626'=>'248',//Telcel
+            '2430'=>'249',//Sears
+            '3496'=>'250',//Sanborns
+            '3562' => 'RECOMENDADOS_MABE',//mabe
+            '3574' => 'RECOMENDADOS_PHILOSOPHY',//philosophy
+            '3575' => 'RECOMENDADOS_HASBRO',//hasbro
+            '3576' => 'RECOMENDADOS_FLEXI',//flexi
+            '3577' => 'RECOMENDADOS_ENTIENDAS',//entiendas
+            '3578' => 'RECOMENDADOS_CRAFTMAN',//entiendas
+        ),
+        'recomendadosProductos' => array(
+            '3509'=>'322',//Telmex
+            '2626'=>'324',//Telcel
+            '2430'=>'325',//Sears
+            '3496'=>'323',//Sanborns
+        ),
+        'buscadosProductos' => array(
+            '3509'=>'326',//Telmex
+            '2626'=>'328',//Telcel
+            '2430'=>'329',//Sears
+            '3496'=>'327',//Sanborns
+        ),
+        'logosTienda'=>array(
+            '3509' => 'telmex', //Telmex
+            '2626' => 'telcel', //Telcel
+            '2430' => 'sears',//Sears
+            '3496' => 'sanborns',//Sanborns
+            '3571' => 'samsung',//Samsung
+            '3572' => 'piagui',//piagui
+            '16197'=>'ninewest',
+            '16199'=>'guess',
+            '16200'=>'cat',
+            '16201'=>'anneklein',
+            '3562'=> 'mabe', //mabe
+            '3574'=> 'philosophy', //philosophy
+            '3575'=> 'hasbro', //hasbro
+            '3576'=> 'flexi', //flexi
+            '3577'=> 'entiendas', //entiendas
+            '3578'=> 'craftman', //craftman
+        ),
+        'colorTienda' => array(
+            '3509' => 'menuTiendaTelmex', //Telmex
+            '2626' => 'menuTiendaTelcel', //Telcel
+            '2430' => 'menuTiendaSears',//Sears
+            '3496' => 'menuTiendaSanborns',//Sanborns
+            '3571' => 'menuTiendaSamsung',//Fancy
+            '3562' => '#686664',//mabe
+            '3574' => '#000000',//philosophy
+            '3575' => '#DCE3E9',//hasbro
+            '3576' => '#C4262E',//flexi
+            '3577' => '#67BF03',//entiendas
+            '3578' => '#000000',//entiendas
+        ),
+        'piagui' => array(
+            array('id'=>'16197','dep'=>'ninewest'),
+            array('id'=>'16199','dep'=>'guess'),
+            array('id'=>'16200','dep'=>'cat'),
+            array('id'=>'16201','dep'=>'anneklein')
+        ),
+        'artes_laterales' =>array(
+            '3562' => '383',//mabe          LATERALES_MABE
+            '3574' => '384',//philosophy 	LATERALES_HASBRO
+            '3575' => '385',//hasbro        LATERALES_ENTIENDAS
+            '3576' => '386',//flexi         LATERALES_PHILOSOPHY
+            '3577' => '387',//entiendas     LATERALES_FLEXI
+            '3578' => '390',//craftman      LATERALES_CRAFTMAN
+        ),
+    ),
+    'categorias' => array(
+        'bannerHome' =>array(
+            '13527'=>'233',//celulares
+            '13531'=>'234',//computacion
+            '13538'=>'235',//deportes
+            '13537'=>'236',//electro
+            '13543'=>'237',//entretenimiento
+            '13539'=>'238',//electronica
+            '13540'=>'239',//moda
+            '13541'=>'240',//ninios
+            '13542'=>'241',//salud
+        ),
+        'recomendadosProductos' =>array(
+            '13527'=>'303',//celulares
+            '13531'=>'304',//computacion
+            '13538'=>'305',//deportes
+            '13537'=>'306',//electro
+            '13543'=>'307',//entretenimiento
+            '13539'=>'308',//electronica
+            '13540'=>'309',//moda
+            '13541'=>'310',//ninios
+            '13542'=>'311',//salud
+        ),
+        'buscadosProductos' =>array(
+            '13527'=>'312',//celulares
+            '13531'=>'313',//computacion
+            '13538'=>'314',//deportes
+            '13537'=>'315',//electro
+            '13543'=>'316',//entretenimiento
+            '13539'=>'317',//electronica
+            '13540'=>'318',//moda
+            '13541'=>'319',//ninios
+            '13542'=>'320',//salud
+        )
+    ),
+    'landing'=> array(
+        'rebajas'=> array(
+            'leaderboard'   => '253',
+            'productos'     => '336',
+        ),
+        'outlet'=> array(
+            'leaderboard'   => '254',
+            'productos'     => '337',
+        ),
+        'backtoschool'=> array(
+            'leaderboard'   => '255',
+            'productos'     => '338',
+        ),
+        'ofertadeldia'=> array(
+            'leaderboard'   => '252',
+            'productos'     => '335',
+        ),
+    ),
+    'smtp'=> array(
+        'notificar' => true,
+        'host'      => 'smtp.claroshop-services.net',
+        'port'      => 25,
+        'auth'      => true,
+        'secc'      => false,
+        'user'      => "smtp_admin@claroshop",
+        'pass'      => "4eJ7G0paawA8R53AQJu15yxd",
+        'connection_class'      => "plain",
+        'base_path' => 'http://www.claroshop.local.com/',
+        'stage' => 'DEV'
+    ),
+    'facebook' => array(
+        'appId'     =>'944763055583404',//@fixme ver donde se usan y ver si podemos quitarlos
+        'appSecret' => 'beeece9311f5f3a87f8e5bb87ed08a4b',////@fixme ver donde se usan y ver si podemos quitarlos
+        'purchase' => array(
+            'appId' => '439349822923006',//Ver cual es el de desarrollo
+            'currency' => 'MXN'
+        ),
+        'ambiente' => 'Dev',//Estas banderas estan por no tener el control en desarrollo
+        'origen' => 'web'
+    ),
+    'fancy'=>array(
+        'urlPrecioDolar'=>'https://api.fancy.com/v1/currencies/rate?token=QE2uJRjjGpjZCrvHTN&currency=MXN',
+        'urlCalculate'  => 'https://api.fancy.com/v1/claroshop/calculate?token=QE2uJRjjGpjZCrvHTN',
+        'urlCheckout'   => 'https://api.fancy.com/v1/claroshop/checkout?token=QE2uJRjjGpjZCrvHTN',
+        'urlStatus' => 'https://api.fancy.com/v1/orders?token=QE2uJRjjGpjZCrvHTN',
+        'urlCancel' => 'https://api.fancy.com/v1/claroshop/cancel?token=QE2uJRjjGpjZCrvHTN',
+        'mode'          => 'P'
+    ),
+    'single'=>array(
+        'provider_id' => '3F1AC44F-125B-4B28-B519-061CBC27A24D',
+        'user'        => 'claroShop',
+        'pass'        => 'C14r0$h0p',
+        'key'         => 'MKY21ASTR45YUPC1',
+        'url'         => 'http://sanborns.com.mx/wsSanbornsAPI/perfiles.asmx?wsdl'
+    ),
+    'endpoint_stock_sears' => array(
+        "endpoint"  => "http://200.57.173.35/ws_mercaderias",
+        "user"  =>  "claroshop",
+        "pass" => "cl4r0sh0p.",
+        "mode" => "D"
+    ),
+    'transfer'=>array(
+		'endpoint' => 'http://187.200.120.16:8004/OPM/OpenAPI/services?wsdl',
+		'merchantId' => '400c8a81488520fc01488525948c0000',
+		'opciones' => array(),
+		'IdFormaPago' => 4448,
+	),
+	'logger'=>array(
+			'stream' => '/var/log/php-fpm/www-error.log',
+			//		Valores permitidos para el priorityFilter
+	// 			EMERG : system is unusable
+	// 			ALERT : action must be taken immediately
+	// 			CRIT  : critical conditions
+	// 			ERR   : error conditions
+	// 			WARN  : warning conditions
+	// 			NOTICE: normal but significant condition
+	// 			INFO  : informational messages
+	// 			DEBUG : Debug: debug messages
+			'priorityFilter' => 'DEBUG',
+	),
+    'cuenta_claro'=>array(
+        'user' => "mC5ubMyZ/AGIW43SQfGBVA==",
+        'pass' => "1CDX04HPxEBS9w/uiFn+Lw==",
+        'empresa' => "073",
+        'tipo' => 1,
+        'endpoint' => "http://140.240.200.34/WSiDocSEARS/ConsultaiDoc.asmx?wsdl",
+        "mode" => "D", /*P - Producción, D - Desarrollo, T - Test*/
+    ),
+    'col_lab'=>array(
+        'endpoint' => "http://140.240.200.15/claroShop/ClaroShop.asmx?wsdl",
+        "mode" => "D",
+    ),
+    '3d_secure'=>array('KEY_SECRET'=>'cl40ro78sh3op9414042',
+                       'SID'=>'225248',
+                       'RETURN_URL'=>'http://qa.claroshop.com/caja/authsecure/',
+                       'CANCEL_URL'=>'http://qa.claroshop.com/caja/forma-pago/',
+                       'TANK_PAGE'=>'http://qa.claroshop.com/caja/secure/success/')
+    ,'puntossinfin'=>array(
+        'opciones' => array(),
+        'habilitado'=> false,
+        'IdFormaPago' => 4453, //desarrollo
+        //'IdFormaPago' => 4442, //QA
+        //'IdFormaPago' => 4451, //Produccion
+        //'endpoint' => 'http://www.puntosinfin.com/wsPuntosSinFinCS/wsPuntosSinFin.asmx?wsdl'    //produccion
+        'endpoint' => 'http://ksd-dev.cloudapp.net/wsPuntosSinFin/wsPuntosSinFin.asmx?wsdl'    //desarrollo
+    ),
+     'emarsysAPI'=>array(
+        'username'      => 'claroshop003',
+        'secret'        => 'sXWa6ly4DNY79T0df7Pl',
+        'endpoint'      => 'https://api.emarsys.net/api/v2/',
+        'listaClientes' => '289458706'
+    ),
+    'GigyaService'=>array(
+        'username'      => '3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR',
+        'secret'        => 'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU=',
+        'apiMethod'     => 'socialize.notifyLogin'
+    ),
+     'session' => array(
+            'config' => array(
+                'class' => 'Zend\Session\Config\SessionConfig',
+
+            ),
+            'storage' => 'Zend\Session\Storage\SessionArrayStorage',
+            'validators' => array(
+                'Zend\Session\Validator\RemoteAddr',
+                'Zend\Session\Validator\HttpUserAgent',
+            ),
+      ),
+    'tagManagerId'=>"GTM-MX7ZV2",
+    'tagManagerIdbis' => "GTM-KDGBG4",
+    'purchaseEventsMkt' => "Dev",  //"Dev" desarrollo y qa; "Prod" release y produccion
+    'emarsysTest'       => true,
+    'fedex'             => array(
+        'prod'           => FALSE,
+        'key'            => 'LgiWacWCmeeZlgQq',
+        'password'       => 'v1KJYPOKhqVcsSOXVJsSbNrDe',
+        'accountNumber' => '510087763',
+        'meterNumber'   => '118637391',
+        'dropOffType'   => 'REGULAR_PICKUP',
+        'approvedCodes'  => [
+            'FEDEX_EXPRESS_SAVER',  // 1-3 business days
+            'STANDARD_OVERNIGHT',   // overnight
+        ],
+    ),
+    'amex' => array(
+         'urlWSDL' => 'http://sandbox.framework.sears.com.mx/?wsdl',
+         'credencial' => array(
+             'usuario' => 'ClaroShop',
+             'password' => 'Cl4r05h0p.2016',
+             'id_empresa' => 3
+         ),
+         'entrada' => array(
+             'usuario'  => 'ADMONCLARO',
+             'password' => 'Cl4r0123'
+         ),
+         'data' => array(
+            'num_compania' => '006',
+            'accepted' => array(
+                'num_tienda'   => '6574',
+                'tipo_transaccion'   => '8',
+            ),
+            'review' => array(
+                'num_tienda' => '6573',
+                'tipo_transaccion' => '1'
+            ),
+         ),
+     ),
+     'zfctwig' => array(
+	    'environment_options' => array(
+	        'cache'         => realpath ( sys_get_temp_dir () ),
+	        'debug'         => true,
+	        'auto_reload'   => true
+
+	    ),
+	),
+	'visualizarTiendasRelease' => true,
+	'ElasticSearch' => array(
+            'endpoint' => 'http://192.168.56.10:9200',
+            'options'=>array(
+                'curloptions' => array(
+                    CURLOPT_POST              => 1,
+                    CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                    CURLOPT_RETURNTRANSFER    => 1,
+                    CURLOPT_SSL_VERIFYPEER    => FALSE,
+                    CURLOPT_SSL_VERIFYHOST    => FALSE,
+                )
+            )
+        ),
+        'google'=>array(
+                'key_shortener'=>'AIzaSyB7PBFhNg6qreditjcaxAoTaSKnuGPj8ek',
+                'adwords' => array(
+                    'conversion' =>array(
+                        'id' => 878908847, //Ver cual es el de desarrollo
+                        'lenguaje' => 'en', //Ver si es lo correcto el lenguaje
+                        'formato' => '3', //Ver que es esto del formato
+                        'color' => 'ffffff',
+                        'label' => 'rsXsCKiDwGoQr6uMowM',
+                        'currency' => 'MXN',
+                        'origen' => 'web',
+                        'ambiente' => 'Dev'
+                    )
+                ),
+                'GoogleUrlApiService'=>'https://www.googleapis.com/urlshortener/v1/url',
+                'Analytics' => array(
+                        'accessType' => 'online',
+                        'applicationName' => 'Analytics',
+                        'clientId' => '108181284093182802900' ,
+                        'scope'    => array(
+                                        'https://www.googleapis.com/auth/analytics.readonly'
+                                    ),
+                        'idProfile'  => 110401561
+                ),
+                'configAnalytics' => array(
+                    "type"                        => "service_account",
+                    "project_id"                  => "analytics-163800",
+                    "private_key_id"              => "89585c2de057fcff460cc078d990094deda77336",
+                    "private_key"                 => "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDG9Ox3cffzJJgo\n13Dr7VqrXoDL8Xc543PB4GSRdOhChiCDzRyY0By5o0XaGYNrDpTtYLAqiZ7Z8o/e\nPQGZ0CYYxC+1tjyaO5YV2u10AEzmRcfhFZAtwwEnA1MHy10XzpFxpH6PV17TA+ir\n5XxeTRPSHL1zl1pOnMAXSFwSkRIEaHm4WS2hboH5rYYPnzKKwUGfo5JJTcwA25JE\niEkG017kDbECykvicsprF66T2KGaNUAjd78gg5O/3dW3NfEaer/b+xRePG6byPbU\n/xCMEny+hZZhqcYJRBqzEqwABWXwgIeopPos05CeHHHHSqsXCDKOczQdcCpYH2g9\nP3fSDGXPAgMBAAECggEAdKHSGbeLBlN2i8K4ZOYw1/M/h88W+K2ZB5fW/NpO6eid\nGQbd88tUe5L2eQOp4dGbhoi+3UDuCZBDvKGA1b2LB8vCuECLyFKUCl3cA7vFWNyh\nbxbn/ZuqikdNnm0eNr2Wz8sBkmBCq2tIM7UFMnb23p6QhTm97AXCKiP2LcAzkrbu\n3kWkySb8pAMR2EthfIcgyl9ExynUeqI2vs/Z1sU/tQioIx+j+8VU8MVWEK3D6bgI\n70m9gEHEed2K79vXOVcJ8bjLDaryRardDCIXStroCPg3CNMMYYIbR5ereEL7N36X\npvwu/4iOyXre5C0VoVS8Ji2VJmLUoU/YnY5f64h4kQKBgQD08pSpQ1uquxSa1h7O\n9DyK+q8iN2PUah5WfClZr+6I5szkPMh7j4HkIKxmdGWENV2kuqknELz9GsT03A0d\nc5qEpjfOIpwFiBIcHTN061CXJddyMSoGAQCwnxUMbgqFQBg78vcPoVd5QVRllRdp\nBqwsJ6YrZ2QgPBSaj11v8SVMyQKBgQDP7xjckmVZF/cNoAromk5HPHPrnNWgUn64\n0GIFuxqNhD5wntrHbqv+3wYQ9OsjXiOjb8W7rWcSIgdQpQ+hy5pG/8VxAji/slyN\n5V8y35yVLVGAIV9kNRPyKNBnwGuxJ/Z9tuSn6AkE9vDWm+UO3BwL+rkMY7btm/7n\nNDQFNrsh1wKBgE0c8WA4LGubaek0744Hpee689e5yFve7J4diIcLs/S1dFuGJzd+\n/k1rW9sFWdA9XLW3bfk2c8ja3JaZkCdtdX+9NGRY0PWM2Oaw6rosOrra1vDEOY6a\nUjVIX8ACBJ3eh8KXwt/Q01EBGCjCvxP5Xcqo0M9pRURApdvitm+/YxbBAoGBAIhc\n0d4dN8/E0qUh1uWSBFHdSFw03zgjwa0sI4yElrZGCrjKxMlTQAKGejD2nZn1K8QM\nEg2xe029+TQe+3Bs2MFFDVO+VD8LFn2L9fGkCckfDjrMKAXMdUczEvFnlHh6r8Dk\nB3JBzmBuHaVwWTh0iwQkKeUBI78RtYokhxUAPprDAoGAWxedmsejgOKPvTYNm6Dl\nmWIhrPu6hfSEXnsmr6vEaOzvcl/MLQOcjr65ajTOoUpDJqnz3G+hIRtOqjFu5t/L\nwkO5VGTLnoPaaLKiF60vnsP7Fo3safrzHokP3chBDWQerFHjEbMmAUmdp8/SmTtA\nC9eiiDaLQekbXS+xcCiB8ow=\n-----END PRIVATE KEY-----\n",
+                    "client_email"                =>  "983032769795-compute@developer.gserviceaccount.com",
+                    "client_id"                   => "108181284093182802900",
+                    "auth_uri"                    => "https://accounts.google.com/o/oauth2/auth",
+                    "token_uri"                   => "https://accounts.google.com/o/oauth2/token",
+                    "auth_provider_x509_cert_url" => "https://www.googleapis.com/oauth2/v1/certs",
+                    "client_x509_cert_url"        => "https://www.googleapis.com/robot/v1/metadata/x509/983032769795-compute%40developer.gserviceaccount.com",
+                ),
+            )
+
+    'ApiRestSelfService' => array(
+                'url'  => 'http://www.selfservice.local.com/ApiRest',
+                'user' => '',
+                'pass' => '',
+                'options' => array(
+                    'sslverifypeer' => false,
+                    'sslallowselfsigned' => true,
+                )
+     ),
+
+     'payu' => array(
+             'urlPayu' => 'https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi',
+             'key'     => '4Vj8eK4rloUd272L48hsrarnUA',
+             'login'   => 'pRRXKOl8ikMmt9u',
+             'merchantId' => '508029',
+             'accountId'  => '512324',
+             'test'       => false
+      ),
+
+      'google'=>array(
+			'key_shortener'=>'AIzaSyB7PBFhNg6qreditjcaxAoTaSKnuGPj8ek',
+			'adwords' => array(
+                'conversion' =>array(
+                    'id' => 878908847, //Ver cual es el de desarrollo
+                    'lenguaje' => 'en', //Ver si es lo correcto el lenguaje
+                    'formato' => '3', //Ver que es esto del formato
+                    'color' => 'ffffff',
+                    'label' => 'rsXsCKiDwGoQr6uMowM',
+                    'currency' => 'MXN',
+                    'origen' => 'web',
+                    'ambiente' => 'Dev'//Estas banderas estan por no tener el control en desarrollo
+                )
+            ),
+	  ),
+	  'recibo_telmex' =>	array(
+        	"login" => ['endpoint' =>"http://200.57.141.31/WSPromo/services/LoginHogar?wsdl",
+        					'options' => []
+        				],
+        	"credito" => ['endpoint' =>"http://200.57.141.31/WSPromo/services/DatosTmx?wsdl",
+        					'options' => []
+        				],
+        	"antifraude" => ['endpoint' =>"http://200.57.141.31/WSPromo/services/ValidacionAntifraude?wsdl",
+        						'options' => []
+        					],
+            "cuestionario" =>['endpoint' => "http://200.57.141.31/WSCuestionarioTMX/WSTMXCuestionario?wsdl",
+            				  'options' => ["login"=>"TMX_CUESTIONARIO",
+				            				"password"=>"_TMX_3906",
+				            				"soap_version"=>SOAP_1_1]
+
+            				  ],
+        ),
+      'CR' => array(
+              'endPoint' => 'http://sandboxws.dev.claroshop.com/?wsdl',
+              'location' => 'http://sandboxws.dev.claroshop.com/Framework.asmx',//Parametro solo para ambientes locales Reverse proxy
+              'httpUser' => '',//Parametro solo para ambientes locales Reverse Proxy
+              'httpPass' => '',//Parametro solo para ambientes locales Reverse Proxu
+              'options' => array(
+                  "cache_wsdl" => WSDL_CACHE_NONE,
+                  "soap_version" => SOAP_1_1
+              ),
+              'max_stock' => 3,
+              'bandera_big_ticket' => 'S',
+              'credencial' => array(
+                  'usuario' => 'Sears',
+                  'password' => '$34r5.20015',
+                  'id_empresa' => 2
+              ),
+              'entrada' => array(
+                  'usuario'  => 'ADMONCLARO',
+                  'password' => 'Cl4r0123'
+              ),
+          ),
+      'thank_you_page' => array(
+              'correo_deposito' => 'deposito@claroshop.com',
+              'correo_clientes' => 'clientes@claroshop.com',
+              'correo_datos_personales' => 'datospersonales@claroshop.com'
+          ),
+      'sears_tiempo_entrega' => array(
+              'stage' => true,
+              'endpoint' => 'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx?wsdl',
+              'location'=>'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx',
+              'httpuser'=>'karen.moreno',
+              'httppassword'=>'7o0S5Nt8hdahtJ3k',
+              'usuario'=> 'ClaroshoP',
+              'password'=>'Cl4r0$h0p17',
+              'codEmp'=>'1',
+              'tienda'=>'104',
+              'bandera_big_ticket' => 'S',
+              'dias_entrega' => "5"
+          ),
+    'apiSms' => array(
+        'endpoint' => 'http://broadcaster.cm-operations.com/broadcaster/bin/tu_empresa.php',
+        'username' => 'claroshop558a1e66fd795a1'
+    ),
+    'microsoft' => array(
+            'url' => 'http://pedro.delacruz:E4ShbyXyEvRwsuO3@intcomex-v2.dev.claroshop.com/v1',
+            'apiKey'     => '4Vj8eK4rloUd272L48hsrarnUA',
+            'accessKey'   => 'pRRXKOl8ikMmt9u',
+    ),
+    'proxy-imgs' => 'https://www.release.claroshop.com',
+
+    'wsSearsStatus' => 'http://140.240.200.34/WSiDocSEARS/ConsultaiDoc.asmx?wsdl',
+
+    'apiNipTarjeta' => array(
+            'url' => 'http://10.115.3.162:8080/WebServices2.1/NipValidator?wsdl',
+            'options' => array(
+                        'trace' => 1
+                    ),
+        ),
+
+    'mercadoPago' => array(
+            'PUBLIC_KEY'   => 'TEST-e1b67b73-03da-4b4d-b489-b3781231b819',
+            'ACCESS_TOKEN' => 'TEST-2391315972382591-111218-2369dc7f86fd409799b6f670b36e634d__LC_LB__-141882905',
+    ),
+    
+     'sears_tiempo_entrega' => array(
+        'endpoint' => 'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx?wsdl',
+        'usuario'=> 'ClaroshoP',
+        'password'=>'Cl4r0$h0p17',
+        'codEmp'=>'1',
+        'tienda'=>'104',
+        'bandera_big_ticket' => 'S',
+        'httpuser'=>'',//Usuario de Http
+        'httppassword'=>'',//Password de http
+        'location'=>'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx'
+    
+    ),
+    'secure3D'  => array(
+        'url' => 'https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge',
+        'afiliacion' => '4078394',
+        'currency' => '484',
+        'secretKey' => 'cl40ro78sh3op9414042',
+        'urlRespuesta' => 'https://www.claroshop.com/caja/secure3d/respuesta3D',
+        'urlOk' => 'https://www.claroshop.com/caja/tarjetascredito/thankupageAction',
+        'urlKo' => 'https://www.claroshop.com/caja/secure3d/redirectcaja',
+        'nombreComercio' => 'Claro Shop'
+    ),
+    'envioGratis' => true, 
+);

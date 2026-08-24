@@ -1,0 +1,47 @@
+
+
+=== ID ===
+Buid=8381029(jenkins) gid=8381029(jenkins) groups=8381029(jenkins)
+=== HOME_LS ===
+/home:
+total 0
+/drwxr-xr-x.  3 root    root  21 Aug 23  2020 .
+0dr-xr-xr-x. 18 root    root 279 Aug 24 03:55 ..
+5drwxr-xr-x.  3 jenkins root  22 Aug 23  2020 jenkins
+
+/home/jenkins:
+total 0
+-drwxr-xr-x. 3 jenkins root 22 Aug 23  2020 .
+.drwxr-xr-x. 3 root    root 21 Aug 23  2020 ..
+4drwxr-xr-x. 2 jenkins root  6 Aug 24 03:55 .jenkins
+
+/opt:
+total 0
+,drwxr-xr-x.  3 root root  16 Aug 23  2020 .
+-dr-xr-xr-x. 18 root root 279 Aug 24 03:55 ..
+-drwxr-xr-x.  3 root root  26 Aug 23  2020 rh
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 Jun 16  2020 .
+-drwxr-xr-x. 13 root root 155 Jun 16  2020 ..
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 Jun 16  2020 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+=== HUNT_DONE ===

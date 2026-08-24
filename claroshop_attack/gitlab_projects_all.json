@@ -1,0 +1,4268 @@
+[
+ {
+  "id": 999,
+  "path": "diego.hernandez/sf-report-manager",
+  "last": "2026-08-21T13:26:21.738-05:00",
+  "url": "http://gitlab.dev.claroshop.com/diego.hernandez/sf-report-manager.git"
+ },
+ {
+  "id": 995,
+  "path": "isaac.trenado/pedidos_sfcc",
+  "last": "2026-07-06T12:08:38.210-05:00",
+  "url": "http://gitlab.dev.claroshop.com/isaac.trenado/pedidos_sfcc.git"
+ },
+ {
+  "id": 993,
+  "path": "front/restaurante_nps",
+  "last": "2026-04-15T21:36:05.401-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/restaurante_nps.git"
+ },
+ {
+  "id": 992,
+  "path": "jenkins/test-audit-2",
+  "last": "2026-04-01T09:05:38.338-06:00",
+  "url": "http://gitlab.dev.claroshop.com/jenkins/test-audit-2.git"
+ },
+ {
+  "id": 991,
+  "path": "jenkins/test-audit",
+  "last": "2026-04-01T09:05:14.423-06:00",
+  "url": "http://gitlab.dev.claroshop.com/jenkins/test-audit.git"
+ },
+ {
+  "id": 990,
+  "path": "pedro.delacruz/n8n-encuestas",
+  "last": "2026-08-08T13:51:49.286-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/n8n-encuestas.git"
+ },
+ {
+  "id": 989,
+  "path": "pedro.delacruz/front-encuesta-satisfaccion-qr",
+  "last": "2026-08-08T14:12:00.865-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/front-encuesta-satisfaccion-qr.git"
+ },
+ {
+  "id": 988,
+  "path": "pedro.delacruz/dashboardsatisfaccion",
+  "last": "2026-08-20T17:17:56.434-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/dashboardsatisfaccion.git"
+ },
+ {
+  "id": 987,
+  "path": "pedro.delacruz/api-survey-php",
+  "last": "2026-08-10T13:57:40.793-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/api-survey-php.git"
+ },
+ {
+  "id": 986,
+  "path": "pedro.delacruz/api-survey-go",
+  "last": "2026-08-08T14:11:54.531-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/api-survey-go.git"
+ },
+ {
+  "id": 985,
+  "path": "pedro.delacruz/mariadb-sanborns",
+  "last": "2026-08-08T14:12:23.842-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/mariadb-sanborns.git"
+ },
+ {
+  "id": 984,
+  "path": "pedro.delacruz/circulosanborns",
+  "last": "2026-04-17T14:36:54.510-05:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/circulosanborns.git"
+ },
+ {
+  "id": 983,
+  "path": "sears/circulosanborns_marzo26",
+  "last": "2026-03-17T11:16:14.118-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/circulosanborns_marzo26.git"
+ },
+ {
+  "id": 982,
+  "path": "sanborns/circulosanborns_marzo26",
+  "last": "2026-03-11T13:04:06.024-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/circulosanborns_marzo26.git"
+ },
+ {
+  "id": 981,
+  "path": "salesforce/slim",
+  "last": "2026-08-18T15:33:46.389-05:00",
+  "url": "http://gitlab.dev.claroshop.com/salesforce/slim.git"
+ },
+ {
+  "id": 980,
+  "path": "salesforce/slim-sfra",
+  "last": "2026-08-11T11:42:31.421-05:00",
+  "url": "http://gitlab.dev.claroshop.com/salesforce/slim-sfra.git"
+ },
+ {
+  "id": 979,
+  "path": "sears/stock_delivery",
+  "last": "2026-07-27T20:13:37.354-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/stock_delivery.git"
+ },
+ {
+  "id": 978,
+  "path": "sanborns/stock_delivery",
+  "last": "2026-02-05T18:31:51.748-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/stock_delivery.git"
+ },
+ {
+  "id": 976,
+  "path": "sears/daemon-sf-products",
+  "last": "2026-01-13T10:10:07.488-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/daemon-sf-products.git"
+ },
+ {
+  "id": 975,
+  "path": "sanborns/daemon-sf-products",
+  "last": "2026-01-12T20:27:10.520-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/daemon-sf-products.git"
+ },
+ {
+  "id": 974,
+  "path": "front/test_gitlab_ci",
+  "last": "2026-04-01T18:13:02.375-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/test_gitlab_ci.git"
+ },
+ {
+  "id": 972,
+  "path": "salesforce/slim_oms-develop",
+  "last": "2026-08-11T11:42:16.446-05:00",
+  "url": "http://gitlab.dev.claroshop.com/salesforce/slim_oms-develop.git"
+ },
+ {
+  "id": 968,
+  "path": "front/apiqse",
+  "last": "2025-12-04T12:24:07.242-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/apiqse.git"
+ },
+ {
+  "id": 967,
+  "path": "front/qse-panel-main",
+  "last": "2025-12-04T12:23:54.259-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/qse-panel-main.git"
+ },
+ {
+  "id": 966,
+  "path": "front/qse-app-main",
+  "last": "2025-12-04T12:23:35.255-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/qse-app-main.git"
+ },
+ {
+  "id": 965,
+  "path": "sanborns/encuestasatisfaccion",
+  "last": "2026-05-26T11:23:01.740-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/encuestasatisfaccion.git"
+ },
+ {
+  "id": 958,
+  "path": "front/app-stock-off",
+  "last": "2026-06-25T17:37:10.361-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app-stock-off.git"
+ },
+ {
+  "id": 957,
+  "path": "front/scan-guias",
+  "last": "2026-06-25T17:39:20.546-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/scan-guias.git"
+ },
+ {
+  "id": 956,
+  "path": "front/inventarios",
+  "last": "2026-06-25T17:42:46.244-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/inventarios.git"
+ },
+ {
+  "id": 955,
+  "path": "sears/front-sf-productos",
+  "last": "2026-08-17T13:10:04.315-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/front-sf-productos.git"
+ },
+ {
+  "id": 954,
+  "path": "sears/api-sf-productos",
+  "last": "2026-08-17T16:10:14.329-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api-sf-productos.git"
+ },
+ {
+  "id": 952,
+  "path": "pedro.delacruz/xml-products-dax-scan",
+  "last": "2025-12-05T13:45:52.606-06:00",
+  "url": "http://gitlab.dev.claroshop.com/pedro.delacruz/xml-products-dax-scan.git"
+ },
+ {
+  "id": 951,
+  "path": "sears/xml-products-dax-scan",
+  "last": "2025-06-30T17:48:46.152-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/xml-products-dax-scan.git"
+ },
+ {
+  "id": 947,
+  "path": "front/app_ios_dax",
+  "last": "2026-08-21T19:52:14.706-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_ios_dax.git"
+ },
+ {
+  "id": 946,
+  "path": "sears/facturacion-polizas",
+  "last": "2025-07-23T18:31:38.416-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/facturacion-polizas.git"
+ },
+ {
+  "id": 944,
+  "path": "front/app_android_dax",
+  "last": "2026-08-23T20:13:28.433-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_android_dax.git"
+ },
+ {
+  "id": 942,
+  "path": "sears/tombola-angular",
+  "last": "2025-06-02T19:02:50.913-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/tombola-angular.git"
+ },
+ {
+  "id": 941,
+  "path": "sears/tombola",
+  "last": "2025-06-02T19:21:09.160-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/tombola.git"
+ },
+ {
+  "id": 930,
+  "path": "microservices/sso-login-dax",
+  "last": "2025-05-20T11:20:10.111-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sso-login-dax.git"
+ },
+ {
+  "id": 929,
+  "path": "microservices/sms-connector",
+  "last": "2025-09-10T14:08:10.412-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sms-connector.git"
+ },
+ {
+  "id": 916,
+  "path": "microservices/meliproducts",
+  "last": "2026-03-18T20:57:47.663-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meliproducts.git"
+ },
+ {
+  "id": 911,
+  "path": "microservices/meliprintlabels",
+  "last": "2026-02-26T18:08:43.016-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meliprintlabels.git"
+ },
+ {
+  "id": 908,
+  "path": "claroshop/delete_client_hub",
+  "last": "2025-01-16T13:49:22.811-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/delete_client_hub.git"
+ },
+ {
+  "id": 906,
+  "path": "claroshop/address_hub",
+  "last": "2025-01-15T11:53:14.800-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/address_hub.git"
+ },
+ {
+  "id": 902,
+  "path": "claroshop/c_sepomex",
+  "last": "2025-03-24T11:33:44.913-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/c_sepomex.git"
+ },
+ {
+  "id": 901,
+  "path": "microservices/meliNotifications",
+  "last": "2026-03-18T20:58:24.305-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meliNotifications.git"
+ },
+ {
+  "id": 900,
+  "path": "microservices/meliProcessOrder",
+  "last": "2026-03-18T20:58:55.867-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meliProcessOrder.git"
+ },
+ {
+  "id": 894,
+  "path": "microservices/sqslambdafunction",
+  "last": "2026-04-17T20:06:44.369-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sqslambdafunction.git"
+ },
+ {
+  "id": 892,
+  "path": "claroshop/users-hub",
+  "last": "2025-03-07T17:59:09.971-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/users-hub.git"
+ },
+ {
+  "id": 891,
+  "path": "front/afiliados_sanborns",
+  "last": "2025-02-26T18:17:20.157-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/afiliados_sanborns.git"
+ },
+ {
+  "id": 888,
+  "path": "claroshop/cart-hub",
+  "last": "2024-12-12T09:56:49.134-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cart-hub.git"
+ },
+ {
+  "id": 887,
+  "path": "claroshop/cart_hub",
+  "last": "2024-10-22T17:17:59.756-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cart_hub.git"
+ },
+ {
+  "id": 886,
+  "path": "microservices/walmartLambda",
+  "last": "2026-03-18T21:00:31.481-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/walmartLambda.git"
+ },
+ {
+  "id": 885,
+  "path": "t1/eshop-checkout",
+  "last": "2025-03-04T15:14:17.722-06:00",
+  "url": "http://gitlab.dev.claroshop.com/t1/eshop-checkout.git"
+ },
+ {
+  "id": 884,
+  "path": "t1/eshop-cart",
+  "last": "2024-12-10T17:57:54.209-06:00",
+  "url": "http://gitlab.dev.claroshop.com/t1/eshop-cart.git"
+ },
+ {
+  "id": 883,
+  "path": "claroshop/products-hub",
+  "last": "2024-12-18T13:00:16.307-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/products-hub.git"
+ },
+ {
+  "id": 881,
+  "path": "microservices/melimap",
+  "last": "2026-03-18T21:00:00.942-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/melimap.git"
+ },
+ {
+  "id": 880,
+  "path": "front/keycloak-dax-template",
+  "last": "2026-01-06T19:10:40.917-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/keycloak-dax-template.git"
+ },
+ {
+  "id": 878,
+  "path": "comercios-productos/moroni",
+  "last": "2024-10-09T14:30:13.793-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/moroni.git"
+ },
+ {
+  "id": 877,
+  "path": "mali/mumbai",
+  "last": "2024-09-12T23:46:12.218-05:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/mumbai.git"
+ },
+ {
+  "id": 874,
+  "path": "microservices/meli_products_sync",
+  "last": "2026-03-18T21:00:50.143-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meli_products_sync.git"
+ },
+ {
+  "id": 867,
+  "path": "claroshop/api_claroshop_ms",
+  "last": "2024-08-22T11:42:58.315-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_claroshop_ms.git"
+ },
+ {
+  "id": 859,
+  "path": "microservices/channelst1integrations",
+  "last": "2025-03-05T19:23:22.678-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/channelst1integrations.git"
+ },
+ {
+  "id": 856,
+  "path": "microservices/meliCustomShipping",
+  "last": "2026-03-18T21:01:11.488-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meliCustomShipping.git"
+ },
+ {
+  "id": 854,
+  "path": "microservices/shopifylambda",
+  "last": "2025-05-30T19:01:41.692-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/shopifylambda.git"
+ },
+ {
+  "id": 853,
+  "path": "microservices/normalizeServiceAws",
+  "last": "2026-05-05T14:32:45.389-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/normalizeServiceAws.git"
+ },
+ {
+  "id": 852,
+  "path": "syncphony/mwalibabafront",
+  "last": "2024-08-12T17:33:12.596-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/mwalibabafront.git"
+ },
+ {
+  "id": 850,
+  "path": "syncphony/mwalibaba",
+  "last": "2024-08-15T17:46:27.868-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/mwalibaba.git"
+ },
+ {
+  "id": 849,
+  "path": "microservices/tiendanubeLambda",
+  "last": "2026-03-18T21:01:53.594-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/tiendanubeLambda.git"
+ },
+ {
+  "id": 848,
+  "path": "microservices/aws-lambda",
+  "last": "2025-08-13T19:39:31.114-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/aws-lambda.git"
+ },
+ {
+  "id": 847,
+  "path": "mali/orderpersistservice",
+  "last": "2024-05-28T17:19:59.693-05:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/orderpersistservice.git"
+ },
+ {
+  "id": 845,
+  "path": "claroshop/api_shein_normalizacion",
+  "last": "2024-05-28T11:41:34.230-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_shein_normalizacion.git"
+ },
+ {
+  "id": 844,
+  "path": "microservices/meli-api",
+  "last": "2024-05-28T00:39:17.568-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/meli-api.git"
+ },
+ {
+  "id": 836,
+  "path": "claroshop/t1envios_cotizaciones_api",
+  "last": "2024-05-16T12:43:43.054-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/t1envios_cotizaciones_api.git"
+ },
+ {
+  "id": 835,
+  "path": "front/chat",
+  "last": "2024-04-25T13:38:02.808-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/chat.git"
+ },
+ {
+  "id": 834,
+  "path": "claroshop/integracionescommon",
+  "last": "2024-05-27T17:12:30.026-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/integracionescommon.git"
+ },
+ {
+  "id": 832,
+  "path": "claroshop/api_t1comercios_shein",
+  "last": "2024-08-28T14:58:40.271-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_t1comercios_shein.git"
+ },
+ {
+  "id": 829,
+  "path": "front/keycloak-sanborns-template",
+  "last": "2026-07-14T01:23:32.842-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/keycloak-sanborns-template.git"
+ },
+ {
+  "id": 828,
+  "path": "front/keycloak-sears-template",
+  "last": "2026-07-21T17:22:03.236-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/keycloak-sears-template.git"
+ },
+ {
+  "id": 827,
+  "path": "comercios-productos/view-product-admin",
+  "last": "2024-03-06T10:03:33.751-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/view-product-admin.git"
+ },
+ {
+  "id": 826,
+  "path": "luis.galvan/test_afrodita",
+  "last": "2024-02-06T18:24:00.073-06:00",
+  "url": "http://gitlab.dev.claroshop.com/luis.galvan/test_afrodita.git"
+ },
+ {
+  "id": 824,
+  "path": "sears/products_ct",
+  "last": "2024-01-24T10:57:16.707-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/products_ct.git"
+ },
+ {
+  "id": 822,
+  "path": "crones/cron_t1envios_gamificacion",
+  "last": "2024-01-22T18:46:49.995-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_t1envios_gamificacion.git"
+ },
+ {
+  "id": 821,
+  "path": "claroshop/api_claroshop_laravel",
+  "last": "2024-02-01T18:44:17.906-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_claroshop_laravel.git"
+ },
+ {
+  "id": 818,
+  "path": "crones/t1envios-tasks",
+  "last": "2023-12-27T12:17:22.545-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/t1envios-tasks.git"
+ },
+ {
+  "id": 817,
+  "path": "comercios-productos/lyde-sync-processor",
+  "last": "2024-03-13T11:57:11.377-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/lyde-sync-processor.git"
+ },
+ {
+  "id": 813,
+  "path": "front/keycloak-credito-claroshop-template",
+  "last": "2023-11-18T11:48:43.315-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/keycloak-credito-claroshop-template.git"
+ },
+ {
+  "id": 812,
+  "path": "microservices/creditocshop",
+  "last": "2024-04-03T19:02:36.872-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/creditocshop.git"
+ },
+ {
+  "id": 811,
+  "path": "sears/helpers-mesa",
+  "last": "2024-01-09T20:06:05.506-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/helpers-mesa.git"
+ },
+ {
+  "id": 810,
+  "path": "sears/cron-afiliados",
+  "last": "2023-11-01T11:21:15.241-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron-afiliados.git"
+ },
+ {
+  "id": 809,
+  "path": "front/afiliados_nextts",
+  "last": "2024-02-07T18:35:48.188-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/afiliados_nextts.git"
+ },
+ {
+  "id": 805,
+  "path": "box/tdc",
+  "last": "2023-11-15T12:13:24.717-06:00",
+  "url": "http://gitlab.dev.claroshop.com/box/tdc.git"
+ },
+ {
+  "id": 802,
+  "path": "front/caja_pwa",
+  "last": "2023-11-08T08:00:39.069-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/caja_pwa.git"
+ },
+ {
+  "id": 801,
+  "path": "microservices/pay_paypal",
+  "last": "2023-10-23T21:18:23.081-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pay_paypal.git"
+ },
+ {
+  "id": 800,
+  "path": "microservices/pay_oxxo",
+  "last": "2023-10-23T21:14:44.550-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pay_oxxo.git"
+ },
+ {
+  "id": 799,
+  "path": "microservices/orders",
+  "last": "2024-02-27T20:44:23.114-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/orders.git"
+ },
+ {
+  "id": 798,
+  "path": "microservices/pay_claropay",
+  "last": "2023-10-23T21:10:44.902-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pay_claropay.git"
+ },
+ {
+  "id": 797,
+  "path": "microservices/template_pos",
+  "last": "2023-10-23T14:36:44.951-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/template_pos.git"
+ },
+ {
+  "id": 796,
+  "path": "microservices/keycloak-login-pos-movil",
+  "last": "2024-09-24T17:34:04.982-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/keycloak-login-pos-movil.git"
+ },
+ {
+  "id": 795,
+  "path": "microservices/pos",
+  "last": "2023-10-11T20:25:52.142-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pos.git"
+ },
+ {
+  "id": 793,
+  "path": "microservices/pos-movil",
+  "last": "2023-10-10T12:36:01.635-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pos-movil.git"
+ },
+ {
+  "id": 789,
+  "path": "microservices/gift_table_api_v2",
+  "last": "2023-09-21T19:35:57.994-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/gift_table_api_v2.git"
+ },
+ {
+  "id": 788,
+  "path": "front/afiliados",
+  "last": "2025-10-15T18:50:01.979-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/afiliados.git"
+ },
+ {
+  "id": 787,
+  "path": "microservices/keycloak-login-apple",
+  "last": "2024-09-27T12:01:24.096-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/keycloak-login-apple.git"
+ },
+ {
+  "id": 785,
+  "path": "crones/cron_sears_reporte_pos",
+  "last": "2024-10-23T17:57:07.894-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sears_reporte_pos.git"
+ },
+ {
+  "id": 784,
+  "path": "crones/cron_sanborns_reporte_pos",
+  "last": "2023-09-08T17:50:07.820-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sanborns_reporte_pos.git"
+ },
+ {
+  "id": 783,
+  "path": "crones/cron_claroshop_reporte_pos",
+  "last": "2023-09-08T17:49:19.295-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_reporte_pos.git"
+ },
+ {
+  "id": 778,
+  "path": "claroshop/api_sanborns_java",
+  "last": "2023-09-12T13:30:57.494-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sanborns_java.git"
+ },
+ {
+  "id": 777,
+  "path": "claroshop/api_sears_java",
+  "last": "2023-09-12T13:30:54.831-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sears_java.git"
+ },
+ {
+  "id": 776,
+  "path": "claroshop/api_claroshop_java",
+  "last": "2024-11-11T17:17:46.556-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_claroshop_java.git"
+ },
+ {
+  "id": 775,
+  "path": "crones/bonificacion_mesa_sears",
+  "last": "2024-12-01T00:42:20.319-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/bonificacion_mesa_sears.git"
+ },
+ {
+  "id": 774,
+  "path": "caja/payment-departamentales",
+  "last": "2023-11-13T11:58:01.103-06:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-departamentales.git"
+ },
+ {
+  "id": 772,
+  "path": "angel.martinez/quarkus-keycloak",
+  "last": "2023-11-30T12:22:23.387-06:00",
+  "url": "http://gitlab.dev.claroshop.com/angel.martinez/quarkus-keycloak.git"
+ },
+ {
+  "id": 771,
+  "path": "comercios-productos/miami-stock-admin",
+  "last": "2026-07-23T18:51:29.316-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/miami-stock-admin.git"
+ },
+ {
+  "id": 770,
+  "path": "comercios-productos/ansan-recomendations-api",
+  "last": "2023-08-10T11:36:50.703-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/ansan-recomendations-api.git"
+ },
+ {
+  "id": 769,
+  "path": "front/cm_prod",
+  "last": "2023-09-15T05:34:34.529-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/cm_prod.git"
+ },
+ {
+  "id": 768,
+  "path": "front/t1paginasadminandroid",
+  "last": "2023-09-04T01:40:08.204-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/t1paginasadminandroid.git"
+ },
+ {
+  "id": 767,
+  "path": "angel.martinez/quarkus-3-docker",
+  "last": "2023-07-20T20:13:12.469-05:00",
+  "url": "http://gitlab.dev.claroshop.com/angel.martinez/quarkus-3-docker.git"
+ },
+ {
+  "id": 766,
+  "path": "claroshop/guias_masivas_t1envios",
+  "last": "2024-02-29T13:55:13.010-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/guias_masivas_t1envios.git"
+ },
+ {
+  "id": 765,
+  "path": "front/app_android_claroshop",
+  "last": "2026-06-25T17:37:48.665-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_android_claroshop.git"
+ },
+ {
+  "id": 762,
+  "path": "claroshop/cron_afiliados",
+  "last": "2023-06-06T15:45:21.321-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cron_afiliados.git"
+ },
+ {
+  "id": 761,
+  "path": "microservices/wish-list-api",
+  "last": "2023-11-23T13:08:04.700-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/wish-list-api.git"
+ },
+ {
+  "id": 760,
+  "path": "comercios-productos/zurich-financial-process",
+  "last": "2024-05-15T14:25:20.608-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/zurich-financial-process.git"
+ },
+ {
+  "id": 759,
+  "path": "comercios-productos/jiaxing--sync-sanborns",
+  "last": "2025-09-29T18:05:45.894-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/jiaxing--sync-sanborns.git"
+ },
+ {
+  "id": 758,
+  "path": "comercios-productos/suzhou-sync-sears",
+  "last": "2025-06-26T10:35:34.113-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/suzhou-sync-sears.git"
+ },
+ {
+  "id": 757,
+  "path": "microservices/live",
+  "last": "2024-01-09T20:08:01.165-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/live.git"
+ },
+ {
+  "id": 756,
+  "path": "ia/api-data-faqs",
+  "last": "2023-05-24T12:00:19.170-05:00",
+  "url": "http://gitlab.dev.claroshop.com/ia/api-data-faqs.git"
+ },
+ {
+  "id": 755,
+  "path": "crones/demonio_t1envios_paquete_express_claroshop",
+  "last": "2023-05-25T16:36:42.265-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/demonio_t1envios_paquete_express_claroshop.git"
+ },
+ {
+  "id": 754,
+  "path": "comercios-productos/migrate-script",
+  "last": "2023-05-20T08:57:18.066-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/migrate-script.git"
+ },
+ {
+  "id": 753,
+  "path": "crones/demonio_t1envios_ampm_track",
+  "last": "2023-07-06T13:38:27.025-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/demonio_t1envios_ampm_track.git"
+ },
+ {
+  "id": 752,
+  "path": "crones/demonio_t1envios_ups_track",
+  "last": "2024-12-30T13:34:55.023-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/demonio_t1envios_ups_track.git"
+ },
+ {
+  "id": 751,
+  "path": "microservices/products-api",
+  "last": "2025-11-03T10:33:21.903-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/products-api.git"
+ },
+ {
+  "id": 749,
+  "path": "comercios-productos/queenstown",
+  "last": "2025-04-09T18:15:28.073-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/queenstown.git"
+ },
+ {
+  "id": 748,
+  "path": "microservices/rezolve",
+  "last": "2023-08-18T12:49:53.564-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/rezolve.git"
+ },
+ {
+  "id": 747,
+  "path": "ia/embedder",
+  "last": "2023-05-12T15:07:05.465-05:00",
+  "url": "http://gitlab.dev.claroshop.com/ia/embedder.git"
+ },
+ {
+  "id": 744,
+  "path": "microservices/sync-notification",
+  "last": "2023-08-16T18:39:03.117-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sync-notification.git"
+ },
+ {
+  "id": 741,
+  "path": "sears/keycloak-attribute-search",
+  "last": "2024-04-11T13:31:50.311-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/keycloak-attribute-search.git"
+ },
+ {
+  "id": 740,
+  "path": "microservices/algolia-api",
+  "last": "2026-03-18T20:55:54.151-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/algolia-api.git"
+ },
+ {
+  "id": 738,
+  "path": "crones/cron_resguardo_credito",
+  "last": "2024-10-10T16:59:43.194-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_resguardo_credito.git"
+ },
+ {
+  "id": 737,
+  "path": "comercios-productos/tianjin-product-divider",
+  "last": "2024-01-20T00:35:36.511-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/tianjin-product-divider.git"
+ },
+ {
+  "id": 733,
+  "path": "ia/chatgpt-plugin",
+  "last": "2023-05-03T12:24:14.331-05:00",
+  "url": "http://gitlab.dev.claroshop.com/ia/chatgpt-plugin.git"
+ },
+ {
+  "id": 731,
+  "path": "microservices/portal-users-afiliados",
+  "last": "2024-07-12T16:13:37.431-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/portal-users-afiliados.git"
+ },
+ {
+  "id": 730,
+  "path": "microservices/keycloak-social-event",
+  "last": "2026-03-18T20:56:22.715-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/keycloak-social-event.git"
+ },
+ {
+  "id": 729,
+  "path": "front/next_sanborns_complete",
+  "last": "2023-04-03T20:18:58.777-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/next_sanborns_complete.git"
+ },
+ {
+  "id": 728,
+  "path": "front/next_sanborns_producto",
+  "last": "2023-04-03T20:16:02.886-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/next_sanborns_producto.git"
+ },
+ {
+  "id": 725,
+  "path": "front/keycloak-claroshop-template",
+  "last": "2024-02-09T19:02:42.034-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/keycloak-claroshop-template.git"
+ },
+ {
+  "id": 724,
+  "path": "comercios-productos/beirut-sync-processor",
+  "last": "2024-07-09T12:54:59.378-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/beirut-sync-processor.git"
+ },
+ {
+  "id": 723,
+  "path": "claroshop/conciliacion_mesa_sears",
+  "last": "2026-07-06T18:34:18.597-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/conciliacion_mesa_sears.git"
+ },
+ {
+  "id": 722,
+  "path": "microservices/sync-products",
+  "last": "2024-04-19T14:04:18.574-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sync-products.git"
+ },
+ {
+  "id": 721,
+  "path": "microservices/sync-categories",
+  "last": "2024-08-09T18:44:29.392-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sync-categories.git"
+ },
+ {
+  "id": 720,
+  "path": "comercios-productos/rotterdam_daemon_fulfillment_lyde",
+  "last": "2023-11-28T17:16:59.903-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/rotterdam_daemon_fulfillment_lyde.git"
+ },
+ {
+  "id": 715,
+  "path": "comercios-productos/ankara-stream-connector",
+  "last": "2023-10-24T19:26:57.014-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/ankara-stream-connector.git"
+ },
+ {
+  "id": 714,
+  "path": "comercios-productos/vancouver-estimated-delivery",
+  "last": "2024-03-20T12:01:16.426-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/vancouver-estimated-delivery.git"
+ },
+ {
+  "id": 712,
+  "path": "crones/cron_ids_sears",
+  "last": "2024-10-23T17:52:00.984-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_ids_sears.git"
+ },
+ {
+  "id": 711,
+  "path": "crones/cron_ids_claroshop",
+  "last": "2023-02-16T10:43:37.102-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_ids_claroshop.git"
+ },
+ {
+  "id": 710,
+  "path": "comercios-productos/poland-quick-changes",
+  "last": "2023-02-20T10:48:40.542-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/poland-quick-changes.git"
+ },
+ {
+  "id": 709,
+  "path": "microservices/keycloak-login-portales",
+  "last": "2026-01-06T17:59:26.522-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/keycloak-login-portales.git"
+ },
+ {
+  "id": 707,
+  "path": "claroshop/admin_geotrack_t1envios-",
+  "last": "2024-11-15T19:06:22.392-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_geotrack_t1envios-.git"
+ },
+ {
+  "id": 706,
+  "path": "comercios-productos/melbourne-report-generator",
+  "last": "2023-02-01T17:47:39.028-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/melbourne-report-generator.git"
+ },
+ {
+  "id": 705,
+  "path": "comercios-productos/daemon-image-processor",
+  "last": "2025-11-13T18:41:37.939-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/daemon-image-processor.git"
+ },
+ {
+  "id": 704,
+  "path": "claroshop/sonar_t1envios",
+  "last": "2023-01-16T19:51:34.341-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/sonar_t1envios.git"
+ },
+ {
+  "id": 702,
+  "path": "claroshop/demonio_qualitypost_track",
+  "last": "2023-05-17T18:17:04.635-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_qualitypost_track.git"
+ },
+ {
+  "id": 699,
+  "path": "comercios-productos/gabrovo-resources-api",
+  "last": "2023-09-05T13:13:30.983-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/gabrovo-resources-api.git"
+ },
+ {
+  "id": 698,
+  "path": "claroshop/t1mw_order_stores",
+  "last": "2022-12-14T08:55:05.222-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/t1mw_order_stores.git"
+ },
+ {
+  "id": 697,
+  "path": "claroshop/t1mw_get_detail",
+  "last": "2022-12-14T08:50:55.179-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/t1mw_get_detail.git"
+ },
+ {
+  "id": 696,
+  "path": "claroshop/t1mw_bussiness_adm",
+  "last": "2022-12-13T11:52:48.341-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/t1mw_bussiness_adm.git"
+ },
+ {
+  "id": 695,
+  "path": "comercios-productos/bremen-debezium-connector",
+  "last": "2026-05-13T18:56:41.559-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/bremen-debezium-connector.git"
+ },
+ {
+  "id": 693,
+  "path": "claroshop/api_fullfilment_t1",
+  "last": "2024-10-16T19:10:35.996-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_fullfilment_t1.git"
+ },
+ {
+  "id": 692,
+  "path": "comercios-productos/singapur-validation-products",
+  "last": "2023-11-17T18:22:38.416-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/singapur-validation-products.git"
+ },
+ {
+  "id": 691,
+  "path": "comercios-productos/yakarta-products-processor",
+  "last": "2025-04-22T17:53:18.402-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/yakarta-products-processor.git"
+ },
+ {
+  "id": 690,
+  "path": "microservices/shipping_costs",
+  "last": "2023-01-26T14:25:37.504-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/shipping_costs.git"
+ },
+ {
+  "id": 687,
+  "path": "angel.martinez/dockercs",
+  "last": "2024-03-15T17:37:14.916-06:00",
+  "url": "http://gitlab.dev.claroshop.com/angel.martinez/dockercs.git"
+ },
+ {
+  "id": 684,
+  "path": "comercios-productos/liubliana-products-bulkload",
+  "last": "2025-04-25T11:59:58.245-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/liubliana-products-bulkload.git"
+ },
+ {
+  "id": 683,
+  "path": "front/app_android_afiliados",
+  "last": "2026-06-25T17:42:11.775-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_android_afiliados.git"
+ },
+ {
+  "id": 680,
+  "path": "comercios-productos/lusail-template-processor",
+  "last": "2025-04-29T19:28:34.197-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/lusail-template-processor.git"
+ },
+ {
+  "id": 679,
+  "path": "crones/cron_postran_sears",
+  "last": "2024-10-23T17:52:54.999-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_sears.git"
+ },
+ {
+  "id": 678,
+  "path": "angel.martinez/graylog-docker",
+  "last": "2022-09-21T22:53:10.073-05:00",
+  "url": "http://gitlab.dev.claroshop.com/angel.martinez/graylog-docker.git"
+ },
+ {
+  "id": 677,
+  "path": "microservices/pixel_tracking",
+  "last": "2024-03-07T11:14:46.696-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/pixel_tracking.git"
+ },
+ {
+  "id": 676,
+  "path": "front/t1pagos_portal",
+  "last": "2023-07-20T23:16:22.955-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/t1pagos_portal.git"
+ },
+ {
+  "id": 675,
+  "path": "front/next_claroshop",
+  "last": "2026-04-01T19:05:43.006-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/next_claroshop.git"
+ },
+ {
+  "id": 674,
+  "path": "front/next_sanborns",
+  "last": "2026-08-16T16:56:30.814-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/next_sanborns.git"
+ },
+ {
+  "id": 673,
+  "path": "front/next_sears",
+  "last": "2026-08-04T13:56:27.179-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/next_sears.git"
+ },
+ {
+  "id": 672,
+  "path": "crones/cron_sn_track_t1envios",
+  "last": "2022-12-07T19:07:52.583-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sn_track_t1envios.git"
+ },
+ {
+  "id": 671,
+  "path": "crones/cron_cs_track_t1envios",
+  "last": "2022-12-07T19:00:00.149-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_cs_track_t1envios.git"
+ },
+ {
+  "id": 670,
+  "path": "crones/cron_se_track_t1envios",
+  "last": "2024-10-23T17:57:20.819-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_se_track_t1envios.git"
+ },
+ {
+  "id": 669,
+  "path": "comercios-productos/doha-batch-processor",
+  "last": "2022-09-21T09:51:51.598-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/doha-batch-processor.git"
+ },
+ {
+  "id": 668,
+  "path": "claroshop/demonio_t1envios_tookan_track_claroshop",
+  "last": "2025-05-27T13:53:37.606-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_claroshop.git"
+ },
+ {
+  "id": 667,
+  "path": "claroshop/demonio_t1envios_tookan_track_sanborns",
+  "last": "2022-12-21T13:32:56.539-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sanborns.git"
+ },
+ {
+  "id": 666,
+  "path": "claroshop/demonio_t1envios_tookan_track_sears",
+  "last": "2025-01-29T16:49:55.607-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sears.git"
+ },
+ {
+  "id": 665,
+  "path": "microservices/vendedores-afiliados",
+  "last": "2025-10-29T18:02:37.976-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/vendedores-afiliados.git"
+ },
+ {
+  "id": 664,
+  "path": "claroshop/demonio_t1envios_track_fallidos",
+  "last": "2022-12-14T18:14:27.298-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_track_fallidos.git"
+ },
+ {
+  "id": 663,
+  "path": "claroshop/demonio_t1envios_dhl_track_sanborns",
+  "last": "2024-11-19T13:04:06.400-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_sanborns.git"
+ },
+ {
+  "id": 662,
+  "path": "claroshop/demonio_t1envios_dhl_track_sears",
+  "last": "2024-11-19T12:59:56.200-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_sears.git"
+ },
+ {
+  "id": 661,
+  "path": "claroshop/demonio_t1envios_dhl_track_claroshop",
+  "last": "2024-11-19T13:04:35.730-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_claroshop.git"
+ },
+ {
+  "id": 660,
+  "path": "claroshop/demonio_t1envios_fedex_track_sanborns",
+  "last": "2024-11-19T13:10:19.287-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sanborns.git"
+ },
+ {
+  "id": 659,
+  "path": "claroshop/demonio_t1envios_fedex_track_sears",
+  "last": "2024-11-19T13:10:50.235-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sears.git"
+ },
+ {
+  "id": 658,
+  "path": "claroshop/demonio_t1envios_fedex_track_claroshop",
+  "last": "2024-11-19T13:11:46.165-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_claroshop.git"
+ },
+ {
+  "id": 656,
+  "path": "crones/cron_carga_libros",
+  "last": "2022-08-23T18:09:16.947-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_carga_libros.git"
+ },
+ {
+  "id": 655,
+  "path": "claroshop/demonio_99minutos_track",
+  "last": "2024-12-30T13:37:53.648-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_99minutos_track.git"
+ },
+ {
+  "id": 654,
+  "path": "sokar/kebehsenuf2",
+  "last": "2022-07-27T08:55:42.959-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/kebehsenuf2.git"
+ },
+ {
+  "id": 653,
+  "path": "mali/bamako2",
+  "last": "2026-04-15T17:48:39.631-05:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/bamako2.git"
+ },
+ {
+  "id": 652,
+  "path": "front/claropay_microapp",
+  "last": "2023-12-20T13:10:56.557-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/claropay_microapp.git"
+ },
+ {
+  "id": 651,
+  "path": "mali/kidal",
+  "last": "2026-02-26T16:56:53.895-06:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/kidal.git"
+ },
+ {
+  "id": 649,
+  "path": "hocestinfraestructus/gs-s3-adm",
+  "last": "2022-10-10T16:36:41.352-05:00",
+  "url": "http://gitlab.dev.claroshop.com/hocestinfraestructus/gs-s3-adm.git"
+ },
+ {
+  "id": 648,
+  "path": "crones/cron_poliza_ingresos_sanborns",
+  "last": "2024-05-31T13:10:45.728-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_ingresos_sanborns.git"
+ },
+ {
+  "id": 647,
+  "path": "crones/cron_poliza_imr_sanborns",
+  "last": "2025-02-18T16:24:29.322-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_imr_sanborns.git"
+ },
+ {
+  "id": 646,
+  "path": "crones/cron_claroshop_sears_sanborns_update_productos",
+  "last": "2022-07-20T18:29:59.195-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_sears_sanborns_update_productos.git"
+ },
+ {
+  "id": 645,
+  "path": "angel.martinez/proyectos",
+  "last": "2022-06-16T20:36:10.756-05:00",
+  "url": "http://gitlab.dev.claroshop.com/angel.martinez/proyectos.git"
+ },
+ {
+  "id": 642,
+  "path": "crones/contadores_reps_sears_mesa_regalo",
+  "last": "2024-10-23T17:50:23.710-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/contadores_reps_sears_mesa_regalo.git"
+ },
+ {
+  "id": 641,
+  "path": "crones/cron_tipo_entrega_claroshop",
+  "last": "2022-05-19T20:52:39.287-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tipo_entrega_claroshop.git"
+ },
+ {
+  "id": 640,
+  "path": "crones/cron_tipo_entrega_sanborns",
+  "last": "2022-05-16T18:26:26.372-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tipo_entrega_sanborns.git"
+ },
+ {
+  "id": 639,
+  "path": "crones/cron_tipo_entrega_sears",
+  "last": "2024-10-23T17:58:32.569-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tipo_entrega_sears.git"
+ },
+ {
+  "id": 638,
+  "path": "front/llaves_android",
+  "last": "2023-03-23T18:30:57.578-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/llaves_android.git"
+ },
+ {
+  "id": 637,
+  "path": "front/app_android_sanborns",
+  "last": "2026-06-25T17:36:36.382-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_android_sanborns.git"
+ },
+ {
+  "id": 636,
+  "path": "front/twa_sanborns",
+  "last": "2023-03-23T18:30:57.485-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/twa_sanborns.git"
+ },
+ {
+  "id": 635,
+  "path": "front/app_ios_sanborns",
+  "last": "2026-06-15T14:03:29.734-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_ios_sanborns.git"
+ },
+ {
+  "id": 634,
+  "path": "comercios-productos/conector-sapporo",
+  "last": "2026-01-22T18:35:23.711-06:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/conector-sapporo.git"
+ },
+ {
+  "id": 632,
+  "path": "front/pwa_credito_sanborns",
+  "last": "2024-11-24T03:33:01.722-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/pwa_credito_sanborns.git"
+ },
+ {
+  "id": 631,
+  "path": "keycloak-extensions/clients-templates",
+  "last": "2025-01-13T13:42:06.071-06:00",
+  "url": "http://gitlab.dev.claroshop.com/keycloak-extensions/clients-templates.git"
+ },
+ {
+  "id": 629,
+  "path": "claroshop/reporte_ejecutivo_procesos_t1",
+  "last": "2023-01-17T15:53:20.151-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/reporte_ejecutivo_procesos_t1.git"
+ },
+ {
+  "id": 628,
+  "path": "crones/contadores_reps_t1",
+  "last": "2023-07-27T17:17:40.967-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/contadores_reps_t1.git"
+ },
+ {
+  "id": 627,
+  "path": "crones/sanborns_cron_devoluciones_fedex",
+  "last": "2022-05-11T13:30:54.455-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_devoluciones_fedex.git"
+ },
+ {
+  "id": 626,
+  "path": "microservices/cron-super-express",
+  "last": "2024-12-20T14:07:26.311-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/cron-super-express.git"
+ },
+ {
+  "id": 625,
+  "path": "microservices/sms-notifications",
+  "last": "2025-02-10T20:11:43.734-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sms-notifications.git"
+ },
+ {
+  "id": 624,
+  "path": "crones/claroshop_cron_notifica_yotpo",
+  "last": "2024-02-27T12:38:57.663-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_notifica_yotpo.git"
+ },
+ {
+  "id": 623,
+  "path": "comercios-productos/wuhan-indicators-home",
+  "last": "2023-09-08T23:54:31.044-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/wuhan-indicators-home.git"
+ },
+ {
+  "id": 621,
+  "path": "microservices/reviews",
+  "last": "2023-08-31T19:19:55.821-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/reviews.git"
+ },
+ {
+  "id": 620,
+  "path": "front/app_ios_ipad",
+  "last": "2022-02-10T15:06:01.925-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/app_ios_ipad.git"
+ },
+ {
+  "id": 619,
+  "path": "claroshop/demonio_redpack_track",
+  "last": "2022-08-22T13:04:37.203-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_redpack_track.git"
+ },
+ {
+  "id": 618,
+  "path": "crones/cron_reporte_volumetria",
+  "last": "2022-02-09T13:44:57.309-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_volumetria.git"
+ },
+ {
+  "id": 617,
+  "path": "microservices/keycloak-migration-auth",
+  "last": "2024-09-27T17:17:10.001-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/keycloak-migration-auth.git"
+ },
+ {
+  "id": 616,
+  "path": "infrasupport/csdv",
+  "last": "2026-08-21T12:53:33.598-05:00",
+  "url": "http://gitlab.dev.claroshop.com/infrasupport/csdv.git"
+ },
+ {
+  "id": 615,
+  "path": "claroshop/api_marketplace_sanborns",
+  "last": "2026-07-09T14:11:57.078-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_marketplace_sanborns.git"
+ },
+ {
+  "id": 614,
+  "path": "hocestinfraestructus/echo-csharp-api",
+  "last": "2022-01-04T18:33:31.314-06:00",
+  "url": "http://gitlab.dev.claroshop.com/hocestinfraestructus/echo-csharp-api.git"
+ },
+ {
+  "id": 613,
+  "path": "hocestinfraestructus/cdn-management",
+  "last": "2023-11-10T12:39:26.266-06:00",
+  "url": "http://gitlab.dev.claroshop.com/hocestinfraestructus/cdn-management.git"
+ },
+ {
+  "id": 612,
+  "path": "front/twa_sears",
+  "last": "2023-03-23T18:30:57.425-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/twa_sears.git"
+ },
+ {
+  "id": 609,
+  "path": "front/pwa_credito_claroshop",
+  "last": "2025-08-26T17:39:13.161-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/pwa_credito_claroshop.git"
+ },
+ {
+  "id": 608,
+  "path": "microservices/sso-middleware",
+  "last": "2024-11-18T20:58:36.106-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sso-middleware.git"
+ },
+ {
+  "id": 607,
+  "path": "microservices/daemon_indexing",
+  "last": "2023-07-04T18:14:40.812-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/daemon_indexing.git"
+ },
+ {
+  "id": 605,
+  "path": "selfservice/selfservice-ats",
+  "last": "2026-08-14T15:13:38.046-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/selfservice-ats.git"
+ },
+ {
+  "id": 603,
+  "path": "crones/cron_notif_facturacion_sears",
+  "last": "2021-11-12T15:19:24.205-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_notif_facturacion_sears.git"
+ },
+ {
+  "id": 601,
+  "path": "mali/nara",
+  "last": "2026-07-30T15:01:51.313-05:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/nara.git"
+ },
+ {
+  "id": 600,
+  "path": "front/mesa_regalos_admin",
+  "last": "2026-08-04T14:32:14.114-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/mesa_regalos_admin.git"
+ },
+ {
+  "id": 599,
+  "path": "crones/extraccion_masiva_imagenes_selfservice_lista",
+  "last": "2021-10-29T17:23:01.063-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/extraccion_masiva_imagenes_selfservice_lista.git"
+ },
+ {
+  "id": 598,
+  "path": "claroshop/oms",
+  "last": "2021-12-15T18:21:33.379-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/oms.git"
+ },
+ {
+  "id": 597,
+  "path": "crones/cron_activo_pase_libre_lista_negra",
+  "last": "2024-07-23T17:23:05.268-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_activo_pase_libre_lista_negra.git"
+ },
+ {
+  "id": 596,
+  "path": "crones/cron_finazas_sif",
+  "last": "2026-04-23T12:37:25.598-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_finazas_sif.git"
+ },
+ {
+  "id": 595,
+  "path": "claroshop/api_sif",
+  "last": "2023-01-26T16:29:56.154-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sif.git"
+ },
+ {
+  "id": 594,
+  "path": "caja/payment-zip",
+  "last": "2021-10-14T18:25:41.170-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-zip.git"
+ },
+ {
+  "id": 593,
+  "path": "crones/cron_activo_pase_libre",
+  "last": "2024-07-22T13:26:47.282-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_activo_pase_libre.git"
+ },
+ {
+  "id": 592,
+  "path": "crones/cron_paselibre_activo",
+  "last": "2021-10-09T00:29:33.556-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_paselibre_activo.git"
+ },
+ {
+  "id": 591,
+  "path": "crones/carga_productos_sanborns_claroshop",
+  "last": "2024-11-14T10:06:15.075-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_productos_sanborns_claroshop.git"
+ },
+ {
+  "id": 590,
+  "path": "microservices/gift-table-admin",
+  "last": "2024-10-29T16:39:10.885-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/gift-table-admin.git"
+ },
+ {
+  "id": 589,
+  "path": "crones/cron_sif",
+  "last": "2021-10-06T18:29:32.135-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sif.git"
+ },
+ {
+  "id": 588,
+  "path": "claroshop/sistema_financiero_interno",
+  "last": "2022-01-27T18:27:04.642-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/sistema_financiero_interno.git"
+ },
+ {
+  "id": 587,
+  "path": "comercios-productos/shanghai-sync-manager",
+  "last": "2024-07-02T18:05:14.460-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/shanghai-sync-manager.git"
+ },
+ {
+  "id": 586,
+  "path": "comercios-productos/beijing-product-processor",
+  "last": "2024-07-12T18:56:55.632-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/beijing-product-processor.git"
+ },
+ {
+  "id": 585,
+  "path": "comercios-productos/viena-batch-processor",
+  "last": "2023-07-06T19:27:06.379-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/viena-batch-processor.git"
+ },
+ {
+  "id": 584,
+  "path": "hugo.hernandez/entornos-locales",
+  "last": "2021-09-15T18:46:14.054-05:00",
+  "url": "http://gitlab.dev.claroshop.com/hugo.hernandez/entornos-locales.git"
+ },
+ {
+  "id": 582,
+  "path": "claroshop/cron_sistema_financiero_interno",
+  "last": "2024-03-20T13:33:30.199-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cron_sistema_financiero_interno.git"
+ },
+ {
+  "id": 581,
+  "path": "claroshop/zendutilities",
+  "last": "2024-10-30T17:56:49.414-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/zendutilities.git"
+ },
+ {
+  "id": 580,
+  "path": "microservices/daemon-conciliation",
+  "last": "2026-05-19T15:19:13.506-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/daemon-conciliation.git"
+ },
+ {
+  "id": 578,
+  "path": "comercios-productos/tokio-stock",
+  "last": "2023-07-19T00:07:27.332-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/tokio-stock.git"
+ },
+ {
+  "id": 577,
+  "path": "claroshop/api_conciliacargos",
+  "last": "2021-10-21T17:26:23.993-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_conciliacargos.git"
+ },
+ {
+  "id": 576,
+  "path": "selfservice/onboarding-front",
+  "last": "2022-08-22T17:49:58.265-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/onboarding-front.git"
+ },
+ {
+  "id": 575,
+  "path": "microservices/sellers",
+  "last": "2026-06-03T23:05:42.778-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/sellers.git"
+ },
+ {
+  "id": 573,
+  "path": "mali/bamako",
+  "last": "2025-05-06T18:37:50.383-05:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/bamako.git"
+ },
+ {
+  "id": 572,
+  "path": "crones/cron_alibaba_excepciones",
+  "last": "2021-09-03T18:31:04.962-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_alibaba_excepciones.git"
+ },
+ {
+  "id": 571,
+  "path": "crones/cron_bigsmart_cs",
+  "last": "2024-03-25T17:22:37.560-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_bigsmart_cs.git"
+ },
+ {
+  "id": 569,
+  "path": "caja/payment-claroscore",
+  "last": "2021-07-28T13:52:37.636-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-claroscore.git"
+ },
+ {
+  "id": 568,
+  "path": "claroshop/demonio_tookan_track",
+  "last": "2023-08-23T14:22:09.741-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_tookan_track.git"
+ },
+ {
+  "id": 567,
+  "path": "claroshop/demonio_dhl_track",
+  "last": "2025-01-14T16:50:40.733-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_dhl_track.git"
+ },
+ {
+  "id": 566,
+  "path": "claroshop/demonio_fedex_track",
+  "last": "2025-01-14T17:28:08.049-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_fedex_track.git"
+ },
+ {
+  "id": 563,
+  "path": "claroshop/webhook_maestro_t1envios",
+  "last": "2026-04-24T17:12:15.034-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/webhook_maestro_t1envios.git"
+ },
+ {
+  "id": 562,
+  "path": "microservices/my-account",
+  "last": "2023-11-16T12:28:06.462-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/my-account.git"
+ },
+ {
+  "id": 560,
+  "path": "microservices/promotions",
+  "last": "2026-04-21T23:22:57.627-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/promotions.git"
+ },
+ {
+  "id": 557,
+  "path": "front/mesa_regalos_front_react",
+  "last": "2026-08-21T12:11:29.031-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/mesa_regalos_front_react.git"
+ },
+ {
+  "id": 554,
+  "path": "microservices/address_ms",
+  "last": "2025-09-23T14:16:32.739-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/address_ms.git"
+ },
+ {
+  "id": 552,
+  "path": "microservices/login_ms",
+  "last": "2021-06-14T23:30:46.674-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/login_ms.git"
+ },
+ {
+  "id": 547,
+  "path": "selfservice/internalapi",
+  "last": "2021-06-23T14:19:33.024-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/internalapi.git"
+ },
+ {
+  "id": 546,
+  "path": "front/pwa_portal_sanborns",
+  "last": "2026-08-05T17:33:02.086-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/pwa_portal_sanborns.git"
+ },
+ {
+  "id": 545,
+  "path": "claroshop/daemon_orders",
+  "last": "2025-07-14T14:43:48.531-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/daemon_orders.git"
+ },
+ {
+  "id": 544,
+  "path": "claroshop/admin_notificaciones_claro",
+  "last": "2025-06-04T23:58:36.597-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_notificaciones_claro.git"
+ },
+ {
+  "id": 543,
+  "path": "claroshop/api_notificaciones_claro",
+  "last": "2025-06-04T23:57:12.879-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_notificaciones_claro.git"
+ },
+ {
+  "id": 542,
+  "path": "sokar/shu",
+  "last": "2021-06-25T00:21:07.944-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/shu.git"
+ },
+ {
+  "id": 540,
+  "path": "microservices/stock",
+  "last": "2021-05-14T16:55:32.863-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/stock.git"
+ },
+ {
+  "id": 539,
+  "path": "microservices/daemon-notifications",
+  "last": "2021-03-19T21:55:05.253-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/daemon-notifications.git"
+ },
+ {
+  "id": 537,
+  "path": "microservices/gift-table-api",
+  "last": "2026-08-21T12:34:32.933-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/gift-table-api.git"
+ },
+ {
+  "id": 532,
+  "path": "front/pwa_portal_sears",
+  "last": "2026-08-05T19:29:07.396-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/pwa_portal_sears.git"
+ },
+ {
+  "id": 531,
+  "path": "front/pwa_credito",
+  "last": "2026-05-19T15:17:54.583-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/pwa_credito.git"
+ },
+ {
+  "id": 530,
+  "path": "microservices/credit-sears",
+  "last": "2021-03-10T14:45:48.454-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/credit-sears.git"
+ },
+ {
+  "id": 528,
+  "path": "microservices/users",
+  "last": "2021-03-11T16:27:39.033-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/users.git"
+ },
+ {
+  "id": 525,
+  "path": "crones/cron_claroshop_telmex_actualiza_saldos",
+  "last": "2021-02-05T15:39:01.662-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_telmex_actualiza_saldos.git"
+ },
+ {
+  "id": 523,
+  "path": "microservices/claro-plus",
+  "last": "2021-11-30T11:57:48.942-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/claro-plus.git"
+ },
+ {
+  "id": 522,
+  "path": "microservices/daemon-analytics",
+  "last": "2021-03-26T19:30:47.094-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/daemon-analytics.git"
+ },
+ {
+  "id": 521,
+  "path": "microservices/facebook",
+  "last": "2024-02-27T10:26:28.927-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/facebook.git"
+ },
+ {
+  "id": 520,
+  "path": "microservices/managment",
+  "last": "2026-08-02T16:59:26.046-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/managment.git"
+ },
+ {
+  "id": 519,
+  "path": "microservices/products",
+  "last": "2026-08-18T13:18:25.833-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/products.git"
+ },
+ {
+  "id": 518,
+  "path": "crones/cron_notif_facturacion_cs",
+  "last": "2020-12-31T13:03:44.625-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_notif_facturacion_cs.git"
+ },
+ {
+  "id": 517,
+  "path": "crones/cron_noif_facturacion_cs",
+  "last": "2020-12-31T13:02:10.053-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_noif_facturacion_cs.git"
+ },
+ {
+  "id": 516,
+  "path": "front/cms_vue",
+  "last": "2021-01-25T15:58:50.913-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/cms_vue.git"
+ },
+ {
+  "id": 513,
+  "path": "mali/gao",
+  "last": "2026-02-03T11:18:41.537-06:00",
+  "url": "http://gitlab.dev.claroshop.com/mali/gao.git"
+ },
+ {
+  "id": 512,
+  "path": "caja/payment-bank-deposit",
+  "last": "2022-06-03T10:53:09.857-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-bank-deposit.git"
+ },
+ {
+  "id": 511,
+  "path": "microservices/categories",
+  "last": "2025-05-04T03:00:36.458-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/categories.git"
+ },
+ {
+  "id": 510,
+  "path": "caja/payment-oxxo",
+  "last": "2022-06-03T11:03:04.586-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-oxxo.git"
+ },
+ {
+  "id": 509,
+  "path": "crones/sanborns_cron_update_productos",
+  "last": "2020-12-02T20:34:40.364-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_update_productos.git"
+ },
+ {
+  "id": 508,
+  "path": "claroshop/api_sanborns_alibaba",
+  "last": "2020-11-30T13:54:58.615-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sanborns_alibaba.git"
+ },
+ {
+  "id": 507,
+  "path": "claroshop/api_claroshop_alibaba",
+  "last": "2022-10-25T22:16:25.576-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_claroshop_alibaba.git"
+ },
+ {
+  "id": 506,
+  "path": "crones/sears_cron_update_productos",
+  "last": "2024-10-23T17:54:00.830-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_update_productos.git"
+ },
+ {
+  "id": 504,
+  "path": "crones/cron_ventas_emarsys",
+  "last": "2023-03-07T15:51:10.044-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_ventas_emarsys.git"
+ },
+ {
+  "id": 503,
+  "path": "crones/cron_contadores_pot_claroshop",
+  "last": "2023-11-23T19:50:37.471-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_contadores_pot_claroshop.git"
+ },
+ {
+  "id": 501,
+  "path": "crones/cron_tookan_track_sanborns",
+  "last": "2025-09-12T19:54:05.456-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tookan_track_sanborns.git"
+ },
+ {
+  "id": 500,
+  "path": "microservices/telmex",
+  "last": "2023-02-01T16:05:05.174-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/telmex.git"
+ },
+ {
+  "id": 499,
+  "path": "claroshop/api_sears_alibaba",
+  "last": "2023-07-25T14:24:04.123-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sears_alibaba.git"
+ },
+ {
+  "id": 498,
+  "path": "claroshop/admin_plataforma_claro_alibaba",
+  "last": "2022-04-25T10:58:15.209-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_plataforma_claro_alibaba.git"
+ },
+ {
+  "id": 497,
+  "path": "crones/cron_tookan_track_cs",
+  "last": "2022-08-16T12:34:53.292-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tookan_track_cs.git"
+ },
+ {
+  "id": 496,
+  "path": "crones/cron_tookan_track_sears",
+  "last": "2026-07-06T18:37:01.086-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tookan_track_sears.git"
+ },
+ {
+  "id": 495,
+  "path": "claroshop/api_plataforma_claro_alibaba",
+  "last": "2025-03-22T22:12:13.627-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_plataforma_claro_alibaba.git"
+ },
+ {
+  "id": 490,
+  "path": "claroshop/api_zpl_cs",
+  "last": "2023-08-04T11:42:50.847-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_zpl_cs.git"
+ },
+ {
+  "id": 486,
+  "path": "front/microapp",
+  "last": "2021-07-01T18:35:57.536-05:00",
+  "url": "http://gitlab.dev.claroshop.com/front/microapp.git"
+ },
+ {
+  "id": 485,
+  "path": "microservices/orders-consumer",
+  "last": "2021-01-05T14:33:39.244-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/orders-consumer.git"
+ },
+ {
+  "id": 484,
+  "path": "crones/cron_contadores_pot_sears",
+  "last": "2025-10-02T18:06:34.295-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_contadores_pot_sears.git"
+ },
+ {
+  "id": 483,
+  "path": "microservices/orders-producer",
+  "last": "2021-01-05T17:25:49.101-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/orders-producer.git"
+ },
+ {
+  "id": 482,
+  "path": "crones/cron_postran_sanborns_claroshop",
+  "last": "2020-09-10T17:30:34.636-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_sanborns_claroshop.git"
+ },
+ {
+  "id": 481,
+  "path": "brunei/kianggeh",
+  "last": "2024-11-04T14:03:44.298-06:00",
+  "url": "http://gitlab.dev.claroshop.com/brunei/kianggeh.git"
+ },
+ {
+  "id": 480,
+  "path": "crones/cs_notificacion_reembolso",
+  "last": "2020-09-09T21:44:08.909-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cs_notificacion_reembolso.git"
+ },
+ {
+  "id": 479,
+  "path": "crones/migracion-productos-ss",
+  "last": "2020-09-02T11:10:02.357-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/migracion-productos-ss.git"
+ },
+ {
+  "id": 478,
+  "path": "uzbekistan/samarcanda",
+  "last": "2021-02-18T13:32:55.420-06:00",
+  "url": "http://gitlab.dev.claroshop.com/uzbekistan/samarcanda.git"
+ },
+ {
+  "id": 477,
+  "path": "uzbekistan/andijan",
+  "last": "2021-09-22T17:30:48.822-05:00",
+  "url": "http://gitlab.dev.claroshop.com/uzbekistan/andijan.git"
+ },
+ {
+  "id": 476,
+  "path": "uzbekistan/navoiy",
+  "last": "2021-02-18T12:43:05.773-06:00",
+  "url": "http://gitlab.dev.claroshop.com/uzbekistan/navoiy.git"
+ },
+ {
+  "id": 475,
+  "path": "crones/cron_contadores_pot_sanborns",
+  "last": "2025-10-07T11:06:42.868-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_contadores_pot_sanborns.git"
+ },
+ {
+  "id": 474,
+  "path": "sears/marketplace-products",
+  "last": "2020-08-20T16:43:19.649-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/marketplace-products.git"
+ },
+ {
+  "id": 472,
+  "path": "microservices/tickets",
+  "last": "2024-04-23T15:00:07.493-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/tickets.git"
+ },
+ {
+  "id": 471,
+  "path": "selfservice/concentrador-pedidos",
+  "last": "2024-02-23T17:57:03.154-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/concentrador-pedidos.git"
+ },
+ {
+  "id": 469,
+  "path": "crones/cron_claroshop_historial_pagos_imr_sears",
+  "last": "2020-08-14T18:51:24.198-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_historial_pagos_imr_sears.git"
+ },
+ {
+  "id": 468,
+  "path": "crones/cron_poliza_ingresos_sears",
+  "last": "2026-04-20T15:04:13.793-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_ingresos_sears.git"
+ },
+ {
+  "id": 467,
+  "path": "crones/cron_poliza_imr_sears",
+  "last": "2025-02-18T16:23:42.440-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_imr_sears.git"
+ },
+ {
+  "id": 466,
+  "path": "claroshop/api_marketplace_sears",
+  "last": "2026-07-20T11:22:51.721-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_marketplace_sears.git"
+ },
+ {
+  "id": 465,
+  "path": "sears/demonio-indexado",
+  "last": "2020-08-11T13:34:08.705-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/demonio-indexado.git"
+ },
+ {
+  "id": 464,
+  "path": "sears/ms-producto",
+  "last": "2021-11-01T14:34:18.830-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/ms-producto.git"
+ },
+ {
+  "id": 463,
+  "path": "sears/api_manager",
+  "last": "2020-08-10T16:59:04.943-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api_manager.git"
+ },
+ {
+  "id": 461,
+  "path": "crones/sanborns_cron_devoluciones_dhl",
+  "last": "2020-08-04T13:11:50.027-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_devoluciones_dhl.git"
+ },
+ {
+  "id": 460,
+  "path": "crones/sears_cron_devoluciones_dhl",
+  "last": "2020-08-04T13:11:19.220-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_devoluciones_dhl.git"
+ },
+ {
+  "id": 459,
+  "path": "crones/sears_cron_devoluciones_fedex",
+  "last": "2022-05-11T13:18:48.178-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_devoluciones_fedex.git"
+ },
+ {
+  "id": 457,
+  "path": "ats/api-manager",
+  "last": "2020-09-02T22:00:17.085-05:00",
+  "url": "http://gitlab.dev.claroshop.com/ats/api-manager.git"
+ },
+ {
+  "id": 456,
+  "path": "ats/content",
+  "last": "2021-02-02T19:11:33.233-06:00",
+  "url": "http://gitlab.dev.claroshop.com/ats/content.git"
+ },
+ {
+  "id": 455,
+  "path": "fundacion/covid-app-ios",
+  "last": "2024-02-13T12:33:02.740-06:00",
+  "url": "http://gitlab.dev.claroshop.com/fundacion/covid-app-ios.git"
+ },
+ {
+  "id": 454,
+  "path": "comercios-productos/v2-product",
+  "last": "2020-08-28T19:19:59.200-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/v2-product.git"
+ },
+ {
+  "id": 452,
+  "path": "crones/productos_sin_guia_con_guia_claroshop",
+  "last": "2020-08-06T16:09:44.141-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/productos_sin_guia_con_guia_claroshop.git"
+ },
+ {
+  "id": 451,
+  "path": "crones/productos_sin_guia_con_guia_sanborns",
+  "last": "2020-08-06T16:14:54.311-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/productos_sin_guia_con_guia_sanborns.git"
+ },
+ {
+  "id": 450,
+  "path": "crones/productos_sin_guia_con_guia_sears",
+  "last": "2024-10-23T17:53:34.779-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/productos_sin_guia_con_guia_sears.git"
+ },
+ {
+  "id": 449,
+  "path": "microservices/wish-list",
+  "last": "2021-09-23T04:49:21.647-05:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/wish-list.git"
+ },
+ {
+  "id": 448,
+  "path": "comercios-productos/busan-products",
+  "last": "2026-04-24T17:15:30.653-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/busan-products.git"
+ },
+ {
+  "id": 447,
+  "path": "caja/payment-claropay",
+  "last": "2021-09-15T19:49:52.690-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-claropay.git"
+ },
+ {
+  "id": 446,
+  "path": "claroshop/pwa",
+  "last": "2026-04-06T05:37:18.675-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/pwa.git"
+ },
+ {
+  "id": 445,
+  "path": "crones/concilia_cargos_sp_sanborns",
+  "last": "2026-06-15T12:40:22.465-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/concilia_cargos_sp_sanborns.git"
+ },
+ {
+  "id": 444,
+  "path": "crones/concilia_cargos_sp_sears",
+  "last": "2026-06-19T11:31:33.923-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/concilia_cargos_sp_sears.git"
+ },
+ {
+  "id": 442,
+  "path": "crones/cron_feest_sanborns",
+  "last": "2023-10-05T20:18:30.288-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_feest_sanborns.git"
+ },
+ {
+  "id": 441,
+  "path": "crones/cron_feest_sears",
+  "last": "2024-10-23T17:50:49.864-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_feest_sears.git"
+ },
+ {
+  "id": 440,
+  "path": "crones/cron_feest_claroshop",
+  "last": "2023-12-07T18:15:12.048-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_feest_claroshop.git"
+ },
+ {
+  "id": 439,
+  "path": "caja/payment-t1",
+  "last": "2026-05-19T15:18:30.672-05:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-t1.git"
+ },
+ {
+  "id": 438,
+  "path": "crones/sears_cron_comprobante_pdf",
+  "last": "2020-06-10T19:04:30.336-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_comprobante_pdf.git"
+ },
+ {
+  "id": 437,
+  "path": "sokar/imset",
+  "last": "2020-06-10T23:44:58.773-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/imset.git"
+ },
+ {
+  "id": 436,
+  "path": "sokar/kebehsenuf",
+  "last": "2022-07-12T13:00:16.433-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/kebehsenuf.git"
+ },
+ {
+  "id": 435,
+  "path": "crones/sanborns_cron_genera_guias_fedex",
+  "last": "2023-11-24T18:28:15.994-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_genera_guias_fedex.git"
+ },
+ {
+  "id": 434,
+  "path": "google/merchant-center",
+  "last": "2026-08-20T17:50:51.158-05:00",
+  "url": "http://gitlab.dev.claroshop.com/google/merchant-center.git"
+ },
+ {
+  "id": 433,
+  "path": "caja/payment-paypal",
+  "last": "2026-03-18T20:47:21.702-06:00",
+  "url": "http://gitlab.dev.claroshop.com/caja/payment-paypal.git"
+ },
+ {
+  "id": 432,
+  "path": "comercios-productos/venecia-channel",
+  "last": "2025-08-11T11:53:15.162-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/venecia-channel.git"
+ },
+ {
+  "id": 431,
+  "path": "comercios-productos/milan-brands",
+  "last": "2022-07-04T20:31:40.201-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/milan-brands.git"
+ },
+ {
+  "id": 429,
+  "path": "comercios-productos/phoenix-batch",
+  "last": "2023-05-18T14:15:18.685-05:00",
+  "url": "http://gitlab.dev.claroshop.com/comercios-productos/phoenix-batch.git"
+ },
+ {
+  "id": 428,
+  "path": "hathor/bakari",
+  "last": "2020-05-27T11:22:57.313-05:00",
+  "url": "http://gitlab.dev.claroshop.com/hathor/bakari.git"
+ },
+ {
+  "id": 427,
+  "path": "hathor/atum",
+  "last": "2020-05-27T11:19:16.597-05:00",
+  "url": "http://gitlab.dev.claroshop.com/hathor/atum.git"
+ },
+ {
+  "id": 426,
+  "path": "hathor/amsi",
+  "last": "2020-05-27T11:17:41.974-05:00",
+  "url": "http://gitlab.dev.claroshop.com/hathor/amsi.git"
+ },
+ {
+  "id": 425,
+  "path": "selfservice/stres-test-sso",
+  "last": "2020-06-01T20:26:11.980-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/stres-test-sso.git"
+ },
+ {
+  "id": 424,
+  "path": "locales/api-commerce",
+  "last": "2020-05-22T09:21:05.866-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/api-commerce.git"
+ },
+ {
+  "id": 423,
+  "path": "selfservice/api-commerce",
+  "last": "2020-06-23T15:25:47.904-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/api-commerce.git"
+ },
+ {
+  "id": 421,
+  "path": "crones/cron_postran_sanborns",
+  "last": "2024-05-23T12:58:39.285-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_sanborns.git"
+ },
+ {
+  "id": 420,
+  "path": "crones/sears_cron_genera_guias_camionetas",
+  "last": "2024-10-23T17:53:48.664-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_genera_guias_camionetas.git"
+ },
+ {
+  "id": 419,
+  "path": "crones/sanborns_cron_genera_guias_camionetas",
+  "last": "2020-06-02T19:10:53.469-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_genera_guias_camionetas.git"
+ },
+ {
+  "id": 418,
+  "path": "crones/claroshop_cron_genera_guias_camionetas",
+  "last": "2020-06-03T18:08:02.239-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_genera_guias_camionetas.git"
+ },
+ {
+  "id": 417,
+  "path": "crones/cron_exportacion_clientes",
+  "last": "2021-07-16T17:42:46.392-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_exportacion_clientes.git"
+ },
+ {
+  "id": 414,
+  "path": "crones/correo_retraso_contingencia_sears",
+  "last": "2024-10-23T17:56:42.665-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/correo_retraso_contingencia_sears.git"
+ },
+ {
+  "id": 413,
+  "path": "crones/envio_correo_retraso_por_contengencia",
+  "last": "2020-05-15T12:07:35.723-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/envio_correo_retraso_por_contengencia.git"
+ },
+ {
+  "id": 412,
+  "path": "crones/cron_se_pos",
+  "last": "2026-07-10T15:35:20.452-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_se_pos.git"
+ },
+ {
+  "id": 411,
+  "path": "claroshop/ms-account",
+  "last": "2021-11-25T11:13:19.292-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-account.git"
+ },
+ {
+  "id": 410,
+  "path": "crones/cron_sn_pos",
+  "last": "2026-07-10T02:06:21.587-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sn_pos.git"
+ },
+ {
+  "id": 409,
+  "path": "front/mi-cuenta",
+  "last": "2021-03-05T17:01:14.607-06:00",
+  "url": "http://gitlab.dev.claroshop.com/front/mi-cuenta.git"
+ },
+ {
+  "id": 406,
+  "path": "claroshop/ms-clients",
+  "last": "2021-01-11T19:08:53.648-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-clients.git"
+ },
+ {
+  "id": 405,
+  "path": "crones/cron_cs_pos",
+  "last": "2024-02-09T16:38:13.344-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_cs_pos.git"
+ },
+ {
+  "id": 404,
+  "path": "fundacion/frontweb-covid",
+  "last": "2020-09-01T22:50:58.609-05:00",
+  "url": "http://gitlab.dev.claroshop.com/fundacion/frontweb-covid.git"
+ },
+ {
+  "id": 403,
+  "path": "fundacion/covid-cron",
+  "last": "2020-08-20T18:51:14.017-05:00",
+  "url": "http://gitlab.dev.claroshop.com/fundacion/covid-cron.git"
+ },
+ {
+  "id": 402,
+  "path": "fundacion/covid-api",
+  "last": "2020-08-20T19:07:43.757-05:00",
+  "url": "http://gitlab.dev.claroshop.com/fundacion/covid-api.git"
+ },
+ {
+  "id": 401,
+  "path": "fundacion/covid-app",
+  "last": "2020-07-16T19:55:49.803-05:00",
+  "url": "http://gitlab.dev.claroshop.com/fundacion/covid-app.git"
+ },
+ {
+  "id": 400,
+  "path": "sokar/jafari",
+  "last": "2021-12-21T16:54:39.901-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/jafari.git"
+ },
+ {
+  "id": 399,
+  "path": "claroshop/admin_sistemas_claro",
+  "last": "2023-09-04T19:04:07.510-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_sistemas_claro.git"
+ },
+ {
+  "id": 398,
+  "path": "syncphony/eureka-server",
+  "last": "2024-08-23T20:11:47.043-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/eureka-server.git"
+ },
+ {
+  "id": 397,
+  "path": "syncphony/business-adm",
+  "last": "2024-08-23T20:13:04.902-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/business-adm.git"
+ },
+ {
+  "id": 396,
+  "path": "syncphony/angular-front",
+  "last": "2024-08-23T20:18:22.983-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/angular-front.git"
+ },
+ {
+  "id": 395,
+  "path": "syncphony/syn5",
+  "last": "2026-07-25T15:57:51.920-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/syn5.git"
+ },
+ {
+  "id": 394,
+  "path": "syncphony/syn4",
+  "last": "2026-07-25T16:20:41.712-05:00",
+  "url": "http://gitlab.dev.claroshop.com/syncphony/syn4.git"
+ },
+ {
+  "id": 393,
+  "path": "sokar/harpocrates",
+  "last": "2020-03-14T00:27:55.679-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/harpocrates.git"
+ },
+ {
+  "id": 392,
+  "path": "sokar/duamutef",
+  "last": "2021-01-20T11:41:54.386-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/duamutef.git"
+ },
+ {
+  "id": 391,
+  "path": "sokar/amun",
+  "last": "2020-10-22T11:01:08.527-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/amun.git"
+ },
+ {
+  "id": 390,
+  "path": "sokar/asim",
+  "last": "2020-03-13T23:20:33.795-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/asim.git"
+ },
+ {
+  "id": 389,
+  "path": "sokar/keops",
+  "last": "2022-04-18T17:33:51.498-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/keops.git"
+ },
+ {
+  "id": 388,
+  "path": "sokar/jepri",
+  "last": "2021-07-07T11:30:37.526-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/jepri.git"
+ },
+ {
+  "id": 387,
+  "path": "sokar/adom",
+  "last": "2020-08-31T21:58:44.423-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sokar/adom.git"
+ },
+ {
+  "id": 386,
+  "path": "selfservice/public_docs",
+  "last": "2020-01-30T12:55:55.248-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/public_docs.git"
+ },
+ {
+  "id": 385,
+  "path": "crones/cron-migracion-tarjetas",
+  "last": "2021-10-13T18:09:20.234-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron-migracion-tarjetas.git"
+ },
+ {
+  "id": 384,
+  "path": "crones/sanborns_cron_guias_duplicadas",
+  "last": "2020-01-17T12:53:57.499-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_guias_duplicadas.git"
+ },
+ {
+  "id": 383,
+  "path": "crones/claroshop_cron_guias_duplicadas",
+  "last": "2021-02-11T19:28:29.419-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_guias_duplicadas.git"
+ },
+ {
+  "id": 382,
+  "path": "microservices/carts",
+  "last": "2020-01-14T12:50:55.181-06:00",
+  "url": "http://gitlab.dev.claroshop.com/microservices/carts.git"
+ },
+ {
+  "id": 381,
+  "path": "crones/sears_cron_guias_duplicadas",
+  "last": "2020-03-26T19:15:42.065-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_guias_duplicadas.git"
+ },
+ {
+  "id": 380,
+  "path": "crones/sync-producto",
+  "last": "2020-01-23T15:41:36.456-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sync-producto.git"
+ },
+ {
+  "id": 379,
+  "path": "claroshop/api-tracking",
+  "last": "2020-05-14T22:37:14.961-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api-tracking.git"
+ },
+ {
+  "id": 378,
+  "path": "crones/cron_notificaciones_postventa_sanborns",
+  "last": "2022-05-27T12:35:25.097-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_notificaciones_postventa_sanborns.git"
+ },
+ {
+  "id": 377,
+  "path": "claroshop/api_sistemas_claro",
+  "last": "2026-07-25T16:37:47.696-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_sistemas_claro.git"
+ },
+ {
+  "id": 376,
+  "path": "selfservice/api_sincronizador",
+  "last": "2020-03-24T16:44:04.929-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/api_sincronizador.git"
+ },
+ {
+  "id": 375,
+  "path": "crones/sears_cron_notifica_yotpo",
+  "last": "2023-06-23T17:57:31.572-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_notifica_yotpo.git"
+ },
+ {
+  "id": 374,
+  "path": "crones/sanborns_cron_notifica_yotpo",
+  "last": "2023-06-23T17:52:30.422-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_notifica_yotpo.git"
+ },
+ {
+  "id": 373,
+  "path": "claroshop/ss_api",
+  "last": "2019-11-06T19:11:00.462-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ss_api.git"
+ },
+ {
+  "id": 371,
+  "path": "portales/cron_carga_contador",
+  "last": "2024-04-19T19:52:48.148-05:00",
+  "url": "http://gitlab.dev.claroshop.com/portales/cron_carga_contador.git"
+ },
+ {
+  "id": 370,
+  "path": "portales/api_contador",
+  "last": "2024-04-19T19:49:44.875-05:00",
+  "url": "http://gitlab.dev.claroshop.com/portales/api_contador.git"
+ },
+ {
+  "id": 369,
+  "path": "claroshop/api-shipping",
+  "last": "2025-10-24T15:04:58.355-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api-shipping.git"
+ },
+ {
+  "id": 368,
+  "path": "crones/cron_review_productos",
+  "last": "2021-05-24T12:28:16.594-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_review_productos.git"
+ },
+ {
+  "id": 367,
+  "path": "crones/claroshop_cron_estafeta_track",
+  "last": "2022-03-23T12:25:46.871-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_estafeta_track.git"
+ },
+ {
+  "id": 366,
+  "path": "crones/sears_cron_genera_guias_dhl",
+  "last": "2024-10-23T18:01:18.360-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_genera_guias_dhl.git"
+ },
+ {
+  "id": 365,
+  "path": "crones/cron_ids_sanborns",
+  "last": "2023-04-06T19:37:16.813-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_ids_sanborns.git"
+ },
+ {
+  "id": 364,
+  "path": "crones/sanborns_cron_emarsys_entregados",
+  "last": "2019-11-26T18:21:19.272-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_emarsys_entregados.git"
+ },
+ {
+  "id": 363,
+  "path": "claroshop/demonio_t1envios_track",
+  "last": "2019-10-02T18:47:31.370-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_track.git"
+ },
+ {
+  "id": 362,
+  "path": "crones/sanborns_cron_genera_guia_ivoy",
+  "last": "2020-10-23T20:58:24.822-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_genera_guia_ivoy.git"
+ },
+ {
+  "id": 361,
+  "path": "crones/sears_cron_genera_guia_ivoy",
+  "last": "2020-10-27T17:11:15.192-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_genera_guia_ivoy.git"
+ },
+ {
+  "id": 360,
+  "path": "sears/app_ios",
+  "last": "2026-07-17T01:55:48.643-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/app_ios.git"
+ },
+ {
+  "id": 359,
+  "path": "sears/app_android",
+  "last": "2026-06-25T17:35:34.270-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/app_android.git"
+ },
+ {
+  "id": 356,
+  "path": "crones/sears_cron_dhl_track",
+  "last": "2024-10-23T18:00:04.588-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_dhl_track.git"
+ },
+ {
+  "id": 355,
+  "path": "sears-ia-backend/crones/cron-buro-credito",
+  "last": "2020-03-03T12:57:52.423-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/crones/cron-buro-credito.git"
+ },
+ {
+  "id": 354,
+  "path": "sanborns/api_delivery",
+  "last": "2019-09-25T13:34:56.739-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/api_delivery.git"
+ },
+ {
+  "id": 353,
+  "path": "sears/api_product",
+  "last": "2019-09-23T13:42:10.183-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api_product.git"
+ },
+ {
+  "id": 352,
+  "path": "claroshop/api_stock",
+  "last": "2019-10-03T18:42:48.977-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_stock.git"
+ },
+ {
+  "id": 351,
+  "path": "crones/claroshop_genera_guias_ivoy_sanborns",
+  "last": "2021-01-18T16:39:04.316-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_genera_guias_ivoy_sanborns.git"
+ },
+ {
+  "id": 350,
+  "path": "crones/claroshop_genera_guias_ee_sanborns",
+  "last": "2019-08-08T18:57:27.176-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_genera_guias_ee_sanborns.git"
+ },
+ {
+  "id": 349,
+  "path": "crones/cron_claroshop_historial_pagos_imr",
+  "last": "2019-09-12T16:23:23.706-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_historial_pagos_imr.git"
+ },
+ {
+  "id": 348,
+  "path": "sears/api_mails",
+  "last": "2025-10-23T12:17:57.400-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api_mails.git"
+ },
+ {
+  "id": 347,
+  "path": "crones/sanborns_cron_genera_guias_entrega_express",
+  "last": "2019-07-09T17:30:50.744-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_genera_guias_entrega_express.git"
+ },
+ {
+  "id": 346,
+  "path": "crones/cron_emarsys_entregados",
+  "last": "2019-10-09T19:01:15.840-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_emarsys_entregados.git"
+ },
+ {
+  "id": 345,
+  "path": "sears-ia-backend/crones/cron-sales-audit",
+  "last": "2019-08-07T23:23:54.925-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/crones/cron-sales-audit.git"
+ },
+ {
+  "id": 344,
+  "path": "sears-ia-backend/crones/cron-conciliacion-pagos",
+  "last": "2019-08-07T21:21:44.065-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/crones/cron-conciliacion-pagos.git"
+ },
+ {
+  "id": 343,
+  "path": "sears-ia-backend/crones/cron-generador-referencias-pagos",
+  "last": "2019-07-19T22:20:52.663-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/crones/cron-generador-referencias-pagos.git"
+ },
+ {
+  "id": 341,
+  "path": "luis.cebada/automated-qa",
+  "last": "2020-03-09T17:30:19.182-06:00",
+  "url": "http://gitlab.dev.claroshop.com/luis.cebada/automated-qa.git"
+ },
+ {
+  "id": 337,
+  "path": "crones/cron_sanborns_genera_guias_dhl",
+  "last": "2023-07-18T14:03:09.931-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sanborns_genera_guias_dhl.git"
+ },
+ {
+  "id": 336,
+  "path": "crones/vendibles_cyr_sanborns",
+  "last": "2022-03-16T14:08:14.411-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/vendibles_cyr_sanborns.git"
+ },
+ {
+  "id": 335,
+  "path": "claroshop/admin_t1pagos",
+  "last": "2026-05-26T21:01:11.786-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_t1pagos.git"
+ },
+ {
+  "id": 334,
+  "path": "claroshop/app_android",
+  "last": "2026-06-25T17:43:20.142-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/app_android.git"
+ },
+ {
+  "id": 333,
+  "path": "claroshop/app_ios",
+  "last": "2024-07-26T14:27:55.372-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/app_ios.git"
+ },
+ {
+  "id": 332,
+  "path": "sears-ia-backend/archives-config",
+  "last": "2019-07-22T10:58:48.247-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/archives-config.git"
+ },
+ {
+  "id": 328,
+  "path": "sears-ia-backend/app-api-sears",
+  "last": "2019-06-04T13:43:10.874-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/app-api-sears.git"
+ },
+ {
+  "id": 327,
+  "path": "sears-ia-backend/app-cms-sears",
+  "last": "2019-09-25T10:51:29.872-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/app-cms-sears.git"
+ },
+ {
+  "id": 326,
+  "path": "sears-ia-backend/app-credito-sears",
+  "last": "2020-03-31T09:55:33.110-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears-ia-backend/app-credito-sears.git"
+ },
+ {
+  "id": 325,
+  "path": "sanborns/api_libranda",
+  "last": "2023-11-29T09:25:35.451-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/api_libranda.git"
+ },
+ {
+  "id": 324,
+  "path": "claroshop/api_searchengine",
+  "last": "2020-04-02T17:46:44.261-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_searchengine.git"
+ },
+ {
+  "id": 323,
+  "path": "crones/cron_reporte_hotsale_se",
+  "last": "2024-10-23T17:59:07.234-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_hotsale_se.git"
+ },
+ {
+  "id": 322,
+  "path": "crones/cron_reporte_hotsale_sn",
+  "last": "2023-05-31T17:43:37.516-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_hotsale_sn.git"
+ },
+ {
+  "id": 321,
+  "path": "crones/cron_reporte_hotsale_cs",
+  "last": "2023-06-15T14:28:05.695-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_hotsale_cs.git"
+ },
+ {
+  "id": 319,
+  "path": "claroshop/monedero-api",
+  "last": "2023-11-06T17:45:04.651-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/monedero-api.git"
+ },
+ {
+  "id": 318,
+  "path": "crones/cron_notificaciones_postventa_sears",
+  "last": "2024-10-23T17:58:57.106-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_notificaciones_postventa_sears.git"
+ },
+ {
+  "id": 317,
+  "path": "crones/sincronizacion-pedidos-no-facturados",
+  "last": "2024-09-19T18:39:38.938-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sincronizacion-pedidos-no-facturados.git"
+ },
+ {
+  "id": 316,
+  "path": "crones/carga_productos_sanbornscom",
+  "last": "2022-04-07T17:08:21.245-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_productos_sanbornscom.git"
+ },
+ {
+  "id": 315,
+  "path": "claroshop/api_landings",
+  "last": "2021-03-02T13:13:14.464-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_landings.git"
+ },
+ {
+  "id": 314,
+  "path": "crones/crones_claroshop",
+  "last": "2019-05-03T10:47:50.400-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/crones_claroshop.git"
+ },
+ {
+  "id": 313,
+  "path": "crones/cron_msi",
+  "last": "2019-04-19T01:13:18.632-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_msi.git"
+ },
+ {
+  "id": 312,
+  "path": "crones/sears_cron_cancelados",
+  "last": "2024-10-23T17:59:50.259-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_cancelados.git"
+ },
+ {
+  "id": 311,
+  "path": "claroshop/api_auth",
+  "last": "2019-12-06T13:06:30.608-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_auth.git"
+ },
+ {
+  "id": 310,
+  "path": "crones/cron_cs_fecha_entrega_mensajerias",
+  "last": "2019-03-22T15:58:33.638-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_cs_fecha_entrega_mensajerias.git"
+ },
+ {
+  "id": 309,
+  "path": "crones/carga_productos_sanborns_claroshop_medalla_belisario_dominguez",
+  "last": "2021-10-08T00:04:53.625-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_productos_sanborns_claroshop_medalla_belisario_dominguez.git"
+ },
+ {
+  "id": 308,
+  "path": "crones/carga_masiva_facturas",
+  "last": "2020-03-06T11:03:20.649-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_masiva_facturas.git"
+ },
+ {
+  "id": 307,
+  "path": "selfservice/SPs",
+  "last": "2019-03-01T18:51:38.217-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/SPs.git"
+ },
+ {
+  "id": 306,
+  "path": "claroshop/core_claroenvios",
+  "last": "2026-07-16T15:33:33.118-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/core_claroenvios.git"
+ },
+ {
+  "id": 305,
+  "path": "claroshop/demonio-fincado",
+  "last": "2019-03-04T17:35:35.135-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/demonio-fincado.git"
+ },
+ {
+  "id": 304,
+  "path": "crones/transacciones_avs_sanborns",
+  "last": "2019-01-24T12:37:03.109-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/transacciones_avs_sanborns.git"
+ },
+ {
+  "id": 302,
+  "path": "crones/contadores_reps_sears",
+  "last": "2024-10-23T17:58:45.634-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/contadores_reps_sears.git"
+ },
+ {
+  "id": 301,
+  "path": "claroshop/SPs",
+  "last": "2019-02-21T13:46:26.809-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/SPs.git"
+ },
+ {
+  "id": 300,
+  "path": "crones/sears_cron_fedex_track",
+  "last": "2024-10-23T18:00:29.850-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_fedex_track.git"
+ },
+ {
+  "id": 299,
+  "path": "claroshop/reporte_ejecutivo_procesos_sears",
+  "last": "2026-03-23T19:10:54.565-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/reporte_ejecutivo_procesos_sears.git"
+ },
+ {
+  "id": 298,
+  "path": "sears/cron_vendibles_cyr",
+  "last": "2024-12-06T11:58:13.321-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron_vendibles_cyr.git"
+ },
+ {
+  "id": 296,
+  "path": "crones/sears_cron_genera_guias_entrega_express",
+  "last": "2020-05-19T15:01:58.830-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_genera_guias_entrega_express.git"
+ },
+ {
+  "id": 293,
+  "path": "crones/cron_asignaciones_automaticas",
+  "last": "2019-07-16T19:39:15.969-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_asignaciones_automaticas.git"
+ },
+ {
+  "id": 292,
+  "path": "sanborns/SPs",
+  "last": "2019-03-22T12:10:47.180-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/SPs.git"
+ },
+ {
+  "id": 291,
+  "path": "crones/cron_sanborns_comprobante_pdf",
+  "last": "2025-08-12T19:11:21.766-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sanborns_comprobante_pdf.git"
+ },
+ {
+  "id": 290,
+  "path": "claroshop/ms-auth",
+  "last": "2018-11-26T18:50:34.539-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-auth.git"
+ },
+ {
+  "id": 288,
+  "path": "crones/cron_factura_psi",
+  "last": "2024-05-23T13:04:46.577-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_factura_psi.git"
+ },
+ {
+  "id": 287,
+  "path": "crones/cron_sanbornscom_feedback",
+  "last": "2022-12-12T10:47:39.160-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sanbornscom_feedback.git"
+ },
+ {
+  "id": 286,
+  "path": "crones/cron_transito_sanbornscom",
+  "last": "2026-06-15T17:08:21.640-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_transito_sanbornscom.git"
+ },
+ {
+  "id": 285,
+  "path": "crones/cron_vence_sanbornscom",
+  "last": "2018-11-21T23:08:11.726-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_vence_sanbornscom.git"
+ },
+ {
+  "id": 284,
+  "path": "crones/cron_postran_sanbornscom",
+  "last": "2024-02-14T12:52:45.035-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_sanbornscom.git"
+ },
+ {
+  "id": 283,
+  "path": "crones/sanborns_cron_cancelados",
+  "last": "2024-06-24T18:13:09.972-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sanborns_cron_cancelados.git"
+ },
+ {
+  "id": 282,
+  "path": "crones/cron_factura_electronica",
+  "last": "2024-10-07T12:52:05.376-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_factura_electronica.git"
+ },
+ {
+  "id": 281,
+  "path": "crones/cron_verifica_pago_paypal",
+  "last": "2018-11-15T12:38:01.867-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_verifica_pago_paypal.git"
+ },
+ {
+  "id": 280,
+  "path": "crones/cron_reporte_ritter_claroshop",
+  "last": "2019-04-16T13:17:49.167-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_ritter_claroshop.git"
+ },
+ {
+  "id": 279,
+  "path": "crones/cron_reporte_telvista_sanborns",
+  "last": "2018-11-12T13:15:21.895-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_telvista_sanborns.git"
+ },
+ {
+  "id": 278,
+  "path": "crones/cron_reporte_telvista_claroshop",
+  "last": "2018-11-23T19:37:17.151-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_telvista_claroshop.git"
+ },
+ {
+  "id": 277,
+  "path": "crones/eans_productos_sears_claroshop",
+  "last": "2018-11-09T12:44:41.588-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/eans_productos_sears_claroshop.git"
+ },
+ {
+  "id": 276,
+  "path": "claroshop/ms-factura",
+  "last": "2024-10-24T20:11:50.624-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-factura.git"
+ },
+ {
+  "id": 275,
+  "path": "sanborns/ats",
+  "last": "2020-10-29T19:03:56.439-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/ats.git"
+ },
+ {
+  "id": 274,
+  "path": "crones/cron_sitemaps_sanborns",
+  "last": "2021-01-13T21:09:13.518-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sitemaps_sanborns.git"
+ },
+ {
+  "id": 273,
+  "path": "sears/cron_analytics_sears",
+  "last": "2019-03-22T12:04:36.740-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron_analytics_sears.git"
+ },
+ {
+  "id": 272,
+  "path": "crones/cron_claroshop_tarifa_6",
+  "last": "2022-04-05T18:50:28.606-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_claroshop_tarifa_6.git"
+ },
+ {
+  "id": 271,
+  "path": "crones/cron_poliza_imr",
+  "last": "2025-01-30T16:37:00.140-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_imr.git"
+ },
+ {
+  "id": 270,
+  "path": "crones/cron_poliza_ingresos",
+  "last": "2023-03-28T18:45:22.529-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_poliza_ingresos.git"
+ },
+ {
+  "id": 269,
+  "path": "crones/cron_comprobar_pago_payu",
+  "last": "2018-10-25T00:07:39.319-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_comprobar_pago_payu.git"
+ },
+ {
+  "id": 268,
+  "path": "claroshop/reporte_ejecutivo_procesos_sanborns",
+  "last": "2024-01-26T11:43:58.925-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/reporte_ejecutivo_procesos_sanborns.git"
+ },
+ {
+  "id": 267,
+  "path": "crones/cron_fedex_track_sears",
+  "last": "2018-10-10T12:41:41.048-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_fedex_track_sears.git"
+ },
+ {
+  "id": 266,
+  "path": "crones/buscador_factor",
+  "last": "2021-01-13T21:09:13.457-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/buscador_factor.git"
+ },
+ {
+  "id": 265,
+  "path": "crones/cron_reporte_retrasos_pedidos",
+  "last": "2018-10-12T19:30:48.124-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_retrasos_pedidos.git"
+ },
+ {
+  "id": 264,
+  "path": "crones/transacciones_telcel_claroshop",
+  "last": "2019-03-13T16:28:44.144-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/transacciones_telcel_claroshop.git"
+ },
+ {
+  "id": 263,
+  "path": "crones/cron_telnor_claroshop",
+  "last": "2019-02-19T10:21:24.236-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_telnor_claroshop.git"
+ },
+ {
+  "id": 262,
+  "path": "crones/cron_asigna_clic_recoge",
+  "last": "2021-07-12T13:00:46.512-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_asigna_clic_recoge.git"
+ },
+ {
+  "id": 261,
+  "path": "claroshop/panel_operativo_tiendas",
+  "last": "2026-08-20T17:51:39.864-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/panel_operativo_tiendas.git"
+ },
+ {
+  "id": 260,
+  "path": "crones/cron_notificaciones_postventa_claroshop",
+  "last": "2022-06-14T16:20:17.226-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_notificaciones_postventa_claroshop.git"
+ },
+ {
+  "id": 259,
+  "path": "claroshop/api_mails",
+  "last": "2025-10-29T17:55:24.036-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_mails.git"
+ },
+ {
+  "id": 258,
+  "path": "crones/claroshop_genera_guias_mensajeria",
+  "last": "2020-10-06T16:46:38.978-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_genera_guias_mensajeria.git"
+ },
+ {
+  "id": 257,
+  "path": "sears/ms_imagenes_sears",
+  "last": "2018-09-20T20:23:55.648-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/ms_imagenes_sears.git"
+ },
+ {
+  "id": 256,
+  "path": "claroshop/cron_conciliacion_transfer",
+  "last": "2019-01-17T17:28:53.409-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cron_conciliacion_transfer.git"
+ },
+ {
+  "id": 255,
+  "path": "sears/admin-archivos-sears",
+  "last": "2018-09-20T20:20:12.037-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/admin-archivos-sears.git"
+ },
+ {
+  "id": 254,
+  "path": "crones/claroshop_genera_guias_ivoy",
+  "last": "2020-10-12T20:37:57.306-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_genera_guias_ivoy.git"
+ },
+ {
+  "id": 253,
+  "path": "crones/cron_sitemaps",
+  "last": "2021-01-13T21:09:13.353-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sitemaps.git"
+ },
+ {
+  "id": 252,
+  "path": "selfservice/ms-factura-evidencia",
+  "last": "2018-09-13T12:28:02.628-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/ms-factura-evidencia.git"
+ },
+ {
+  "id": 251,
+  "path": "claroshop/aprobanalytics_claroshop",
+  "last": "2018-09-05T17:31:33.502-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/aprobanalytics_claroshop.git"
+ },
+ {
+  "id": 250,
+  "path": "sanborns/api-amp",
+  "last": "2018-09-05T18:15:11.643-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/api-amp.git"
+ },
+ {
+  "id": 249,
+  "path": "claroshop/api-amp",
+  "last": "2018-09-06T15:22:18.427-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api-amp.git"
+ },
+ {
+  "id": 248,
+  "path": "sanborns/amp",
+  "last": "2018-09-05T13:06:05.235-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/amp.git"
+ },
+ {
+  "id": 247,
+  "path": "claroshop/amp",
+  "last": "2018-09-06T15:07:26.071-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/amp.git"
+ },
+ {
+  "id": 246,
+  "path": "sears/api_credito_sears",
+  "last": "2021-12-05T18:11:55.905-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api_credito_sears.git"
+ },
+ {
+  "id": 245,
+  "path": "crones/cron_genera_guias_dhl",
+  "last": "2023-07-18T19:40:02.613-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_genera_guias_dhl.git"
+ },
+ {
+  "id": 244,
+  "path": "claroshop/api-cart",
+  "last": "2019-06-19T16:31:34.075-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api-cart.git"
+ },
+ {
+  "id": 243,
+  "path": "claroshop/wrapper_dhl",
+  "last": "2022-09-20T22:04:43.799-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/wrapper_dhl.git"
+ },
+ {
+  "id": 242,
+  "path": "crones/conciliacion_pago_en_tienda_claroshop",
+  "last": "2020-05-26T13:18:04.001-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/conciliacion_pago_en_tienda_claroshop.git"
+ },
+ {
+  "id": 241,
+  "path": "crones/cron_cancelaciones_automaticas_claroshop",
+  "last": "2024-02-02T19:10:24.183-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_cancelaciones_automaticas_claroshop.git"
+ },
+ {
+  "id": 240,
+  "path": "crones/claroshop_cron_guias_devolucion_dhl",
+  "last": "2022-02-24T13:58:52.747-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_guias_devolucion_dhl.git"
+ },
+ {
+  "id": 239,
+  "path": "selfservice/api_cm",
+  "last": "2021-04-07T00:57:26.428-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/api_cm.git"
+ },
+ {
+  "id": 238,
+  "path": "crones/configuracion_cron_poliza_imr_claroshop",
+  "last": "2018-07-31T17:40:54.674-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/configuracion_cron_poliza_imr_claroshop.git"
+ },
+ {
+  "id": 237,
+  "path": "crones/configuracion_cron_poliza_ingresos_claroshop",
+  "last": "2018-07-31T17:40:27.299-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/configuracion_cron_poliza_ingresos_claroshop.git"
+ },
+ {
+  "id": 236,
+  "path": "crones/cron_aprobanalytics_claroshop",
+  "last": "2019-02-19T16:33:21.040-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_aprobanalytics_claroshop.git"
+ },
+ {
+  "id": 235,
+  "path": "claroshop/mi-cuenta-front",
+  "last": "2018-07-31T17:19:32.117-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/mi-cuenta-front.git"
+ },
+ {
+  "id": 234,
+  "path": "claroshop/mi-cuenta20",
+  "last": "2018-07-27T17:19:10.311-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/mi-cuenta20.git"
+ },
+ {
+  "id": 233,
+  "path": "crones/claroshop_cron_guias_devolucion_fedex",
+  "last": "2022-05-11T13:55:02.616-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_guias_devolucion_fedex.git"
+ },
+ {
+  "id": 232,
+  "path": "crones/cron_facturacion_claroshop",
+  "last": "2018-11-14T12:18:03.376-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_facturacion_claroshop.git"
+ },
+ {
+  "id": 231,
+  "path": "claroshop/api-chat-client-seller",
+  "last": "2018-07-20T20:31:54.105-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api-chat-client-seller.git"
+ },
+ {
+  "id": 230,
+  "path": "locales/configuracion_cron_tarifa_avanzada",
+  "last": "2018-10-19T00:33:40.068-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/configuracion_cron_tarifa_avanzada.git"
+ },
+ {
+  "id": 229,
+  "path": "crones/cron_tarifa_avanzada",
+  "last": "2019-01-16T18:55:48.024-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_tarifa_avanzada.git"
+ },
+ {
+  "id": 227,
+  "path": "crones/fincado_clic_recoge_claroshop",
+  "last": "2018-07-18T16:59:41.779-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/fincado_clic_recoge_claroshop.git"
+ },
+ {
+  "id": 226,
+  "path": "locales/configuracion_reps_claro",
+  "last": "2018-10-07T10:28:24.585-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/configuracion_reps_claro.git"
+ },
+ {
+  "id": 225,
+  "path": "crones/notificacion_click_recoge_sears",
+  "last": "2024-10-23T17:59:20.581-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/notificacion_click_recoge_sears.git"
+ },
+ {
+  "id": 224,
+  "path": "crones/cron_dhl_track_claroshop",
+  "last": "2024-04-12T20:24:59.125-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_dhl_track_claroshop.git"
+ },
+ {
+  "id": 223,
+  "path": "crones/cron_fedex_track_sanborns",
+  "last": "2024-04-01T11:16:18.174-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_fedex_track_sanborns.git"
+ },
+ {
+  "id": 222,
+  "path": "crones/vendibles_cyr_claroshop",
+  "last": "2024-12-06T17:10:59.951-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/vendibles_cyr_claroshop.git"
+ },
+ {
+  "id": 221,
+  "path": "crones/conciliacion_tarjeta_departamental_claroshop_resp",
+  "last": "2023-10-18T17:45:44.650-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/conciliacion_tarjeta_departamental_claroshop_resp.git"
+ },
+ {
+  "id": 220,
+  "path": "crones/conciliacion_tarjeta_departamental_claroshop_cargo",
+  "last": "2023-11-14T12:29:29.948-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/conciliacion_tarjeta_departamental_claroshop_cargo.git"
+ },
+ {
+  "id": 219,
+  "path": "locales/axii_sanborns_config",
+  "last": "2018-07-10T11:50:00.479-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/axii_sanborns_config.git"
+ },
+ {
+  "id": 218,
+  "path": "crones/cron_layout_sanborns",
+  "last": "2018-07-04T13:32:36.677-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_layout_sanborns.git"
+ },
+ {
+  "id": 217,
+  "path": "claroshop/ms-producto",
+  "last": "2022-03-03T20:39:21.234-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-producto.git"
+ },
+ {
+  "id": 216,
+  "path": "crones/reporte_ventas_autorizadas_por_categorias_configuracion",
+  "last": "2018-07-05T17:58:04.559-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/reporte_ventas_autorizadas_por_categorias_configuracion.git"
+ },
+ {
+  "id": 215,
+  "path": "crones/reporte_ventas_autorizadas_por_categorias",
+  "last": "2018-07-09T13:12:10.666-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/reporte_ventas_autorizadas_por_categorias.git"
+ },
+ {
+  "id": 213,
+  "path": "crones/sears_cron_genera_guias_fedex",
+  "last": "2023-11-24T18:08:58.959-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_genera_guias_fedex.git"
+ },
+ {
+  "id": 212,
+  "path": "claroshop/caja-pagos-api",
+  "last": "2026-06-25T15:34:33.000-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/caja-pagos-api.git"
+ },
+ {
+  "id": 210,
+  "path": "crones/sears_cron_feedback",
+  "last": "2024-10-23T18:01:06.203-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_feedback.git"
+ },
+ {
+  "id": 209,
+  "path": "sears/api-mesa-java",
+  "last": "2019-08-16T16:29:13.748-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api-mesa-java.git"
+ },
+ {
+  "id": 208,
+  "path": "sanborns/cron-click-recoge",
+  "last": "2018-10-08T16:48:47.337-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/cron-click-recoge.git"
+ },
+ {
+  "id": 207,
+  "path": "selfservice/libValidaProducto",
+  "last": "2018-10-12T16:25:36.881-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/libValidaProducto.git"
+ },
+ {
+  "id": 206,
+  "path": "locales/carga_productos_sears_claroshop_config",
+  "last": "2018-06-15T12:14:16.415-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/carga_productos_sears_claroshop_config.git"
+ },
+ {
+  "id": 205,
+  "path": "selfservice/lib_validador_selfservice",
+  "last": "2018-06-19T18:39:49.764-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/lib_validador_selfservice.git"
+ },
+ {
+  "id": 204,
+  "path": "selfservice/api_sync_selfservice",
+  "last": "2018-08-09T19:35:29.236-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/api_sync_selfservice.git"
+ },
+ {
+  "id": 203,
+  "path": "crones/carga_productos_sears_claroshop",
+  "last": "2025-10-08T18:35:13.373-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_productos_sears_claroshop.git"
+ },
+ {
+  "id": 201,
+  "path": "crones/credban_sanbornscom",
+  "last": "2020-08-13T11:28:10.348-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/credban_sanbornscom.git"
+ },
+ {
+  "id": 200,
+  "path": "crones/cron_feedback_sanborns_claroshop",
+  "last": "2022-12-13T12:04:04.775-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_feedback_sanborns_claroshop.git"
+ },
+ {
+  "id": 199,
+  "path": "crones/cron_feedback_sears_claroshop",
+  "last": "2022-12-13T12:02:07.526-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_feedback_sears_claroshop.git"
+ },
+ {
+  "id": 198,
+  "path": "crones/claroshop_comprobante_payu",
+  "last": "2021-09-28T13:27:54.217-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_comprobante_payu.git"
+ },
+ {
+  "id": 196,
+  "path": "crones/claroshop_cron_fedex",
+  "last": "2024-03-20T19:42:21.874-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_fedex.git"
+ },
+ {
+  "id": 195,
+  "path": "crones/claroshop_sanborns_feedback",
+  "last": "2018-06-10T21:37:13.362-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_sanborns_feedback.git"
+ },
+ {
+  "id": 193,
+  "path": "crones/cron_layout_pedidos_sanborns",
+  "last": "2021-09-29T13:26:29.219-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_layout_pedidos_sanborns.git"
+ },
+ {
+  "id": 192,
+  "path": "crones/cron_cancelados_rechazadostmx",
+  "last": "2018-05-31T18:24:03.357-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_cancelados_rechazadostmx.git"
+ },
+ {
+  "id": 191,
+  "path": "crones/claroshop_asignacion_digital",
+  "last": "2021-11-08T17:12:40.225-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_asignacion_digital.git"
+ },
+ {
+  "id": 190,
+  "path": "crones/cron_reporte_respe",
+  "last": "2019-02-18T12:02:11.677-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_reporte_respe.git"
+ },
+ {
+  "id": 189,
+  "path": "crones/pedidos_cancelados_recibotmx",
+  "last": "2018-06-04T13:41:18.655-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/pedidos_cancelados_recibotmx.git"
+ },
+ {
+  "id": 188,
+  "path": "crones/decompras_pedidos_recibo_telmex",
+  "last": "2023-06-14T12:11:35.342-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/decompras_pedidos_recibo_telmex.git"
+ },
+ {
+  "id": 187,
+  "path": "crones/cron_desactivar_ip_tmx",
+  "last": "2021-09-22T17:07:22.327-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_desactivar_ip_tmx.git"
+ },
+ {
+  "id": 186,
+  "path": "crones/cron_mails",
+  "last": "2018-05-31T17:57:36.938-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_mails.git"
+ },
+ {
+  "id": 185,
+  "path": "crones/cron_layout_pedidos_sears",
+  "last": "2021-09-29T13:26:18.116-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_layout_pedidos_sears.git"
+ },
+ {
+  "id": 184,
+  "path": "locales/conciliacion_recibo_telmex_config",
+  "last": "2018-10-08T02:22:58.639-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/conciliacion_recibo_telmex_config.git"
+ },
+ {
+  "id": 183,
+  "path": "crones/claroshop_sp_extraccion_concilia",
+  "last": "2019-05-15T11:24:57.085-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_sp_extraccion_concilia.git"
+ },
+ {
+  "id": 182,
+  "path": "crones/claroshop_comprobante_pdf",
+  "last": "2019-03-28T12:21:57.929-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_comprobante_pdf.git"
+ },
+ {
+  "id": 181,
+  "path": "locales/asignaciones_automaticas_sanborns_config",
+  "last": "2018-05-25T14:36:44.007-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/asignaciones_automaticas_sanborns_config.git"
+ },
+ {
+  "id": 180,
+  "path": "locales/notificacion_click_recoge_sanborns_config",
+  "last": "2018-07-04T13:10:31.760-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/notificacion_click_recoge_sanborns_config.git"
+ },
+ {
+  "id": 179,
+  "path": "locales/configuracion_contadores_reps_claroshop",
+  "last": "2018-11-20T14:01:46.274-06:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/configuracion_contadores_reps_claroshop.git"
+ },
+ {
+  "id": 178,
+  "path": "crones/contadores_reps_claroshop",
+  "last": "2024-08-14T17:28:19.954-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/contadores_reps_claroshop.git"
+ },
+ {
+  "id": 177,
+  "path": "crones/asignaciones_automaticas_sanborns",
+  "last": "2026-07-09T15:08:38.518-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/asignaciones_automaticas_sanborns.git"
+ },
+ {
+  "id": 176,
+  "path": "locales/cancelacion_reembolso_automatico_config",
+  "last": "2018-05-23T16:32:28.852-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/cancelacion_reembolso_automatico_config.git"
+ },
+ {
+  "id": 175,
+  "path": "crones/cancelacion_reembolso_automatico",
+  "last": "2018-06-07T13:56:01.388-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cancelacion_reembolso_automatico.git"
+ },
+ {
+  "id": 174,
+  "path": "crones/feedback_sanbornscom",
+  "last": "2018-12-07T13:43:59.125-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/feedback_sanbornscom.git"
+ },
+ {
+  "id": 173,
+  "path": "crones/fincado_sanborns",
+  "last": "2022-05-23T18:58:32.892-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/fincado_sanborns.git"
+ },
+ {
+  "id": 172,
+  "path": "crones/notificacion_click_recoge_sanborns",
+  "last": "2024-12-19T19:00:56.288-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/notificacion_click_recoge_sanborns.git"
+ },
+ {
+  "id": 171,
+  "path": "crones/click-recoge-sanborns",
+  "last": "2018-10-22T13:23:31.250-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/click-recoge-sanborns.git"
+ },
+ {
+  "id": 170,
+  "path": "crones/cron_postran_claroshop_config",
+  "last": "2018-10-07T12:58:43.758-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_claroshop_config.git"
+ },
+ {
+  "id": 169,
+  "path": "claroshop/caja-pagos",
+  "last": "2026-08-13T18:07:53.242-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/caja-pagos.git"
+ },
+ {
+  "id": 167,
+  "path": "crones/cron_facturacion_pos",
+  "last": "2026-08-12T16:59:04.265-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_facturacion_pos.git"
+ },
+ {
+  "id": 166,
+  "path": "crones/cron_postran_claroshop",
+  "last": "2023-10-19T18:04:28.565-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_postran_claroshop.git"
+ },
+ {
+  "id": 164,
+  "path": "crones/claroshop_cron_notifica_click_recoje",
+  "last": "2021-07-12T12:58:24.275-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_cron_notifica_click_recoje.git"
+ },
+ {
+  "id": 163,
+  "path": "claroshop/api_pedidos_claroshop",
+  "last": "2026-02-20T13:53:28.629-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_pedidos_claroshop.git"
+ },
+ {
+  "id": 162,
+  "path": "crones/cron_genera_guias_fedex",
+  "last": "2023-11-24T17:58:12.100-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_genera_guias_fedex.git"
+ },
+ {
+  "id": 161,
+  "path": "locales/ventas_forma_pago_config",
+  "last": "2018-10-08T22:29:31.283-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/ventas_forma_pago_config.git"
+ },
+ {
+  "id": 160,
+  "path": "crones/ventas_forma_pago",
+  "last": "2021-10-14T13:32:38.489-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/ventas_forma_pago.git"
+ },
+ {
+  "id": 159,
+  "path": "crones/xml_concilia_cargos",
+  "last": "2018-05-06T23:07:35.606-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/xml_concilia_cargos.git"
+ },
+ {
+  "id": 158,
+  "path": "locales/credban_claroshop_config",
+  "last": "2018-10-07T14:02:03.717-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/credban_claroshop_config.git"
+ },
+ {
+  "id": 157,
+  "path": "crones/credban_claroshop",
+  "last": "2020-03-25T18:31:09.991-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/credban_claroshop.git"
+ },
+ {
+  "id": 156,
+  "path": "locales/reporte_productos_colocados_autorizados_configuracion",
+  "last": "2018-07-01T12:17:49.395-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/reporte_productos_colocados_autorizados_configuracion.git"
+ },
+ {
+  "id": 155,
+  "path": "locales/reporte_pedidos_con_problemas_configuracion",
+  "last": "2018-05-03T16:55:42.441-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/reporte_pedidos_con_problemas_configuracion.git"
+ },
+ {
+  "id": 154,
+  "path": "crones/reporte_productos_colocados_autorizados",
+  "last": "2018-06-29T05:32:43.107-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/reporte_productos_colocados_autorizados.git"
+ },
+ {
+  "id": 153,
+  "path": "crones/reporte_pedidos_con_problemas",
+  "last": "2018-05-02T12:09:45.251-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/reporte_pedidos_con_problemas.git"
+ },
+ {
+  "id": 150,
+  "path": "crones/claroshop_asignacion_pedidos",
+  "last": "2024-01-29T19:31:44.181-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/claroshop_asignacion_pedidos.git"
+ },
+ {
+  "id": 149,
+  "path": "crones/cron_sanborns_dhl",
+  "last": "2024-04-12T20:11:33.173-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_sanborns_dhl.git"
+ },
+ {
+  "id": 148,
+  "path": "crones/concilia_cargos_sp_claroshop",
+  "last": "2024-09-11T20:14:07.036-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/concilia_cargos_sp_claroshop.git"
+ },
+ {
+  "id": 147,
+  "path": "crones/configuracion_xml_productos_sears_claroshop",
+  "last": "2018-10-07T12:29:48.641-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/configuracion_xml_productos_sears_claroshop.git"
+ },
+ {
+  "id": 146,
+  "path": "crones/actualizacion_xml_productos_sears_claroshop",
+  "last": "2019-02-19T18:16:20.168-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/actualizacion_xml_productos_sears_claroshop.git"
+ },
+ {
+  "id": 145,
+  "path": "crones/configuracion_xml_productos_sanborns_claroshop",
+  "last": "2018-10-07T11:51:21.329-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/configuracion_xml_productos_sanborns_claroshop.git"
+ },
+ {
+  "id": 144,
+  "path": "crones/actualizacion_xml_productos_sanborns_claroshop",
+  "last": "2019-03-13T12:41:17.719-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/actualizacion_xml_productos_sanborns_claroshop.git"
+ },
+ {
+  "id": 143,
+  "path": "claroshop/configuracion_contadores_reps_sanborns",
+  "last": "2018-10-01T13:01:44.861-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/configuracion_contadores_reps_sanborns.git"
+ },
+ {
+  "id": 142,
+  "path": "claroshop/configuracion_reps_sanborns",
+  "last": "2018-10-11T11:20:59.104-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/configuracion_reps_sanborns.git"
+ },
+ {
+  "id": 141,
+  "path": "crones/contadores_reps_sanborns",
+  "last": "2023-12-14T11:36:11.850-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/contadores_reps_sanborns.git"
+ },
+ {
+  "id": 140,
+  "path": "crones/sears_cron_sales_audit",
+  "last": "2021-12-28T13:16:15.071-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_sales_audit.git"
+ },
+ {
+  "id": 139,
+  "path": "crones/sears_cron_asignaciones_automaticas",
+  "last": "2026-07-10T15:35:09.815-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_asignaciones_automaticas.git"
+ },
+ {
+  "id": 138,
+  "path": "sears/mesa_regalos",
+  "last": "2022-10-19T17:19:12.987-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/mesa_regalos.git"
+ },
+ {
+  "id": 136,
+  "path": "sears/fincado",
+  "last": "2021-11-16T15:31:55.188-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/fincado.git"
+ },
+ {
+  "id": 135,
+  "path": "crones/sears_cron_layout",
+  "last": "2021-02-08T19:51:13.033-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sears_cron_layout.git"
+ },
+ {
+  "id": 133,
+  "path": "sears/elastic",
+  "last": "2020-01-28T13:49:36.674-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/elastic.git"
+ },
+ {
+  "id": 132,
+  "path": "sears/cron-feed-google-sears",
+  "last": "2021-08-19T17:18:02.454-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron-feed-google-sears.git"
+ },
+ {
+  "id": 131,
+  "path": "sanborns/cron-feed-google-sanborns",
+  "last": "2022-02-11T15:13:05.067-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/cron-feed-google-sanborns.git"
+ },
+ {
+  "id": 130,
+  "path": "sears/api-mesa-regalos",
+  "last": "2019-03-22T11:51:55.405-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/api-mesa-regalos.git"
+ },
+ {
+  "id": 129,
+  "path": "sears/cron-productos",
+  "last": "2021-10-13T14:29:54.562-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron-productos.git"
+ },
+ {
+  "id": 128,
+  "path": "sears/cron-migracion-tarjetas",
+  "last": "2019-03-22T11:47:26.320-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron-migracion-tarjetas.git"
+ },
+ {
+  "id": 127,
+  "path": "sears/cron-migracion-clientes",
+  "last": "2019-01-18T20:42:07.430-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/cron-migracion-clientes.git"
+ },
+ {
+  "id": 125,
+  "path": "claroshop/ms-cart",
+  "last": "2026-01-21T18:34:48.913-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/ms-cart.git"
+ },
+ {
+  "id": 124,
+  "path": "sears/core",
+  "last": "2024-12-11T09:12:05.540-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/core.git"
+ },
+ {
+  "id": 123,
+  "path": "sanborns/cron-mas-vistos",
+  "last": "2019-03-22T12:13:19.044-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/cron-mas-vistos.git"
+ },
+ {
+  "id": 122,
+  "path": "sanborns/cron-feed-google",
+  "last": "2025-12-01T16:13:24.578-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/cron-feed-google.git"
+ },
+ {
+  "id": 121,
+  "path": "sears/tienda",
+  "last": "2021-11-18T11:03:18.938-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/tienda.git"
+ },
+ {
+  "id": 120,
+  "path": "sears/ats_sears",
+  "last": "2021-09-03T18:22:32.484-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sears/ats_sears.git"
+ },
+ {
+  "id": 118,
+  "path": "sanborns/tienda",
+  "last": "2022-05-31T19:30:16.840-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/tienda.git"
+ },
+ {
+  "id": 117,
+  "path": "sanborns/core",
+  "last": "2022-07-07T12:43:21.368-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/core.git"
+ },
+ {
+  "id": 116,
+  "path": "claroshop/api_fincado_sears",
+  "last": "2026-08-20T17:52:51.372-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_fincado_sears.git"
+ },
+ {
+  "id": 115,
+  "path": "crones/sn-migracion",
+  "last": "2018-03-22T07:28:49.242-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sn-migracion.git"
+ },
+ {
+  "id": 114,
+  "path": "crones/extracion_pagos_imr",
+  "last": "2018-04-03T17:27:23.495-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/extracion_pagos_imr.git"
+ },
+ {
+  "id": 113,
+  "path": "claroshop/new_axii_v2",
+  "last": "2018-01-30T17:59:22.530-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/new_axii_v2.git"
+ },
+ {
+  "id": 112,
+  "path": "sanborns/orders",
+  "last": "2022-05-24T12:01:50.978-05:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/orders.git"
+ },
+ {
+  "id": 111,
+  "path": "claroshop/api_fincado_pedidos",
+  "last": "2026-07-16T11:00:31.527-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_fincado_pedidos.git"
+ },
+ {
+  "id": 110,
+  "path": "crones/cron_extras_proveedor_ss_ats",
+  "last": "2024-01-19T20:30:57.067-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_extras_proveedor_ss_ats.git"
+ },
+ {
+  "id": 109,
+  "path": "crones/cron_direcciones_ss_ats",
+  "last": "2021-08-10T11:46:45.125-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_direcciones_ss_ats.git"
+ },
+ {
+  "id": 108,
+  "path": "crones/sn-migracion-usuarios",
+  "last": "2017-12-28T14:18:09.034-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sn-migracion-usuarios.git"
+ },
+ {
+  "id": 106,
+  "path": "crones/buscador_elasticsearch",
+  "last": "2021-02-25T16:35:09.429-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/buscador_elasticsearch.git"
+ },
+ {
+  "id": 105,
+  "path": "claroshop/TCPDF",
+  "last": "2017-11-07T20:13:12.325-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/TCPDF.git"
+ },
+ {
+  "id": 104,
+  "path": "sanborns/sn-api-www",
+  "last": "2026-01-15T19:17:16.141-06:00",
+  "url": "http://gitlab.dev.claroshop.com/sanborns/sn-api-www.git"
+ },
+ {
+  "id": 103,
+  "path": "crones/sn-tarifa-6",
+  "last": "2017-10-24T17:05:25.940-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sn-tarifa-6.git"
+ },
+ {
+  "id": 102,
+  "path": "crones/sn-elastic",
+  "last": "2019-10-24T19:13:44.537-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sn-elastic.git"
+ },
+ {
+  "id": 101,
+  "path": "crones/sn-productos",
+  "last": "2019-05-06T18:58:05.667-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sn-productos.git"
+ },
+ {
+  "id": 99,
+  "path": "crones/extraccion_masiva_imagenes_selfservice",
+  "last": "2023-10-19T11:50:02.350-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/extraccion_masiva_imagenes_selfservice.git"
+ },
+ {
+  "id": 98,
+  "path": "claroshop/graylog",
+  "last": "2017-09-27T11:47:18.395-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/graylog.git"
+ },
+ {
+  "id": 97,
+  "path": "crones/graylog",
+  "last": "2017-09-25T16:03:15.088-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/graylog.git"
+ },
+ {
+  "id": 96,
+  "path": "selfservice/api-selfservice",
+  "last": "2018-06-28T17:09:57.597-05:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/api-selfservice.git"
+ },
+ {
+  "id": 95,
+  "path": "selfservice/maqueta-selfservice-20",
+  "last": "2017-12-15T12:00:07.930-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/maqueta-selfservice-20.git"
+ },
+ {
+  "id": 94,
+  "path": "Telcel/cron-conciliacion-tarjetas-departamentales",
+  "last": "2017-09-26T12:10:07.577-05:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/cron-conciliacion-tarjetas-departamentales.git"
+ },
+ {
+  "id": 93,
+  "path": "crones/crones_analitycs",
+  "last": "2019-03-11T17:55:50.969-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/crones_analitycs.git"
+ },
+ {
+  "id": 92,
+  "path": "crones/crones_searscom",
+  "last": "2018-04-07T19:20:04.392-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/crones_searscom.git"
+ },
+ {
+  "id": 91,
+  "path": "crones/cron_selfservice_activo",
+  "last": "2024-07-22T13:13:28.904-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron_selfservice_activo.git"
+ },
+ {
+  "id": 90,
+  "path": "selfservice/selfservice-core",
+  "last": "2024-10-28T18:08:10.285-06:00",
+  "url": "http://gitlab.dev.claroshop.com/selfservice/selfservice-core.git"
+ },
+ {
+  "id": 89,
+  "path": "claroshop/selfservice-reload",
+  "last": "2017-08-01T19:52:06.900-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/selfservice-reload.git"
+ },
+ {
+  "id": 87,
+  "path": "claroshop/admin_axii_sears",
+  "last": "2026-08-20T19:01:59.254-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_axii_sears.git"
+ },
+ {
+  "id": 86,
+  "path": "crones/extrasProveedorWcfSanborns",
+  "last": "2017-08-29T11:51:42.081-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/extrasProveedorWcfSanborns.git"
+ },
+ {
+  "id": 85,
+  "path": "claroshop/crone_scraper_telcel",
+  "last": "2019-03-22T12:35:59.745-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/crone_scraper_telcel.git"
+ },
+ {
+  "id": 81,
+  "path": "Telcel/cron-conciliacion",
+  "last": "2018-07-06T19:39:22.546-05:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/cron-conciliacion.git"
+ },
+ {
+  "id": 80,
+  "path": "crones/sync-masiva-ss",
+  "last": "2024-07-22T13:09:05.486-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/sync-masiva-ss.git"
+ },
+ {
+  "id": 79,
+  "path": "Telcel/concentrador-MOCK",
+  "last": "2017-06-14T11:42:07.717-05:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/concentrador-MOCK.git"
+ },
+ {
+  "id": 78,
+  "path": "claroshop/reporte_ejecutivo_procesos",
+  "last": "2024-08-14T17:27:08.213-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/reporte_ejecutivo_procesos.git"
+ },
+ {
+  "id": 77,
+  "path": "Telcel/concentrador-vta",
+  "last": "2017-07-17T16:54:13.889-05:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/concentrador-vta.git"
+ },
+ {
+  "id": 76,
+  "path": "Telcel/oblak",
+  "last": "2017-05-10T11:28:23.852-05:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/oblak.git"
+ },
+ {
+  "id": 74,
+  "path": "crones/crones_sanbornscom",
+  "last": "2018-07-12T13:03:14.831-05:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/crones_sanbornscom.git"
+ },
+ {
+  "id": 73,
+  "path": "Telcel/Recargas",
+  "last": "2019-01-04T12:19:38.433-06:00",
+  "url": "http://gitlab.dev.claroshop.com/Telcel/Recargas.git"
+ },
+ {
+  "id": 70,
+  "path": "claroshop/templateClaroReloaded",
+  "last": "2019-01-06T15:27:07.535-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/templateClaroReloaded.git"
+ },
+ {
+  "id": 68,
+  "path": "claroshop/admin_axii_sanborns",
+  "last": "2026-07-08T12:04:02.052-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_axii_sanborns.git"
+ },
+ {
+  "id": 63,
+  "path": "claroshop/wrapperFedex",
+  "last": "2019-02-26T12:37:00.635-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/wrapperFedex.git"
+ },
+ {
+  "id": 62,
+  "path": "crones/cron-sync-ss",
+  "last": "2017-11-26T18:49:42.355-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/cron-sync-ss.git"
+ },
+ {
+  "id": 60,
+  "path": "crones/notificapedidos",
+  "last": "2017-03-28T17:27:25.036-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/notificapedidos.git"
+ },
+ {
+  "id": 59,
+  "path": "crones/carga_masiva_ss",
+  "last": "2023-11-17T20:28:24.091-06:00",
+  "url": "http://gitlab.dev.claroshop.com/crones/carga_masiva_ss.git"
+ },
+ {
+  "id": 56,
+  "path": "claroshop/Boxpay",
+  "last": "2016-11-11T04:06:22.581-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/Boxpay.git"
+ },
+ {
+  "id": 55,
+  "path": "claroshop/conciliacion_recibo_telmex",
+  "last": "2023-05-05T20:41:52.776-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/conciliacion_recibo_telmex.git"
+ },
+ {
+  "id": 53,
+  "path": "claroshop/cron_feedback",
+  "last": "2018-06-10T21:37:33.899-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cron_feedback.git"
+ },
+ {
+  "id": 52,
+  "path": "claroshop/api_comercio_pedidos",
+  "last": "2024-11-05T12:45:00.404-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_comercio_pedidos.git"
+ },
+ {
+  "id": 51,
+  "path": "claroshop/selfService",
+  "last": "2024-10-23T15:15:48.196-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/selfService.git"
+ },
+ {
+  "id": 50,
+  "path": "claroshop/webapp",
+  "last": "2026-02-10T18:41:08.110-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/webapp.git"
+ },
+ {
+  "id": 48,
+  "path": "claroshop/claroshopIonicApp",
+  "last": "2020-05-14T14:56:47.990-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/claroshopIonicApp.git"
+ },
+ {
+  "id": 47,
+  "path": "claroshop/telos",
+  "last": "2016-09-05T15:44:05.796-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/telos.git"
+ },
+ {
+  "id": 45,
+  "path": "claroshop/recargas",
+  "last": "2017-06-16T16:55:47.433-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/recargas.git"
+ },
+ {
+  "id": 44,
+  "path": "claroshop/cms_tortuga",
+  "last": "2025-12-16T12:54:31.572-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cms_tortuga.git"
+ },
+ {
+  "id": 41,
+  "path": "locales/Locales",
+  "last": "2026-07-30T13:02:36.287-05:00",
+  "url": "http://gitlab.dev.claroshop.com/locales/Locales.git"
+ },
+ {
+  "id": 40,
+  "path": "claroshop/claroshoptemplate",
+  "last": "2017-12-11T19:00:13.059-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/claroshoptemplate.git"
+ },
+ {
+  "id": 35,
+  "path": "claroshop/admin",
+  "last": "2016-02-09T12:15:07.963-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin.git"
+ },
+ {
+  "id": 30,
+  "path": "claroshop/claroshop-core",
+  "last": "2025-05-27T19:20:45.672-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/claroshop-core.git"
+ },
+ {
+  "id": 28,
+  "path": "claroshop/cron_decompras",
+  "last": "2021-03-02T13:13:25.954-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cron_decompras.git"
+ },
+ {
+  "id": 26,
+  "path": "claroshop/api_plazavip",
+  "last": "2017-04-26T13:04:12.653-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/api_plazavip.git"
+ },
+ {
+  "id": 25,
+  "path": "claroshop/cms_interno",
+  "last": "2016-01-28T10:41:19.408-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/cms_interno.git"
+ },
+ {
+  "id": 24,
+  "path": "claroshop/imgs_claroshop",
+  "last": "2015-09-29T11:47:14.016-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/imgs_claroshop.git"
+ },
+ {
+  "id": 22,
+  "path": "claroshop/admin_axii",
+  "last": "2025-09-02T12:04:03.485-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/admin_axii.git"
+ },
+ {
+  "id": 15,
+  "path": "claroshop/tienda_claroshop",
+  "last": "2021-06-29T16:11:54.429-05:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/tienda_claroshop.git"
+ },
+ {
+  "id": 7,
+  "path": "claroshop/virtual_machine",
+  "last": "2020-02-17T12:45:33.865-06:00",
+  "url": "http://gitlab.dev.claroshop.com/claroshop/virtual_machine.git"
+ }
+]

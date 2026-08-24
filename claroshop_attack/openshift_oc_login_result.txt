@@ -1,0 +1,20 @@
+=== OC CLI CHECK ===
+OC PATH: bash: oc: command not found
+oc not found
+
+
+=== OC LOGIN ATTEMPTS ===
+
+=== REST API OAUTH TOKEN ===
+bash: python3: command not found
+
+
+
+=== CHECK EXISTING KUBE/OC CONFIG ===
+NO CONFIG
+
+
+=== SEARCH SERVICE ACCOUNT TOKENS ===
+
+
+=== FIN OC LOGIN ===

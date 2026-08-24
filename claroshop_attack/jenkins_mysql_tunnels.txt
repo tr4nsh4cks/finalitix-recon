@@ -1,0 +1,14 @@
+﻿py : Traceback (most recent call last):
+En C:\Users\Usuario\AppData\Local\Temp\ps-script-84106aaf-fd4e-4227-84ad-23a9e924218f.ps1: 89 Carácter: 29
++ ... cs\pentagi; py -3.12 claroshop_attack\jenkins_exec.py claroshop_attac ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\xampp\htdocs\pentagi\claroshop_attack\jenkins_exec.py", line 37, in <module>
+    script = open(sys.argv[1]).read()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 6: character maps to <undefined>

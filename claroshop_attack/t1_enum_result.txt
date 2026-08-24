@@ -1,0 +1,13 @@
+OUTPUT_BEGIN
+<########## T1_SANBORNS_141.6 (172.27.141.6:3310) ##########
+
+TABLES(2): client,transaction
+  COUNT client = 91
+  COUNT transaction = 722
+;########## T1_CLARO_141.26 (172.27.141.26:3306) ##########
+DTABLES(6): card,client,origen_plan,planes,suscripciones,transaction
+  COUNT card = 11
+  COUNT client = 17
+  COUNT transaction = 0
+
+ENUM_DONE

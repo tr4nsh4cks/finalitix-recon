@@ -1,0 +1,1524 @@
+
+======================================================================
+R2T1 cat tienda local.php (alfa 420)  (2.0s)
+======================================================================
+<?php
+return [
+
+    'imgs_servicio'   => 'http://imagenes.decompras.com/servicios/',
+    'app_environment' => 'desa',
+    'base_path'       => 'https://alfa.dev.claroshop.com/',
+    'version_js'      => '5.27.35.alfa1',
+    'wsSearsStatus'   => '',
+    'base_pathamp'    => 'https://csapi.dev.claroshop.com/',
+    'tiendaOrigen'    => 2468,
+    'compra_compra'   => [557095,557096,557097,577379,604144,613598],
+    'proxy-imgs'      => 'https://alfa.dev.claroshop.com',
+    'proxy-resources' => 'https://alfa.dev.claroshop.com',
+    'fincado_desde'   => 'web-desarrollo',
+    'tiendaCruzRoja'  => '10112',
+    'visualizarTiendasRelease' => true,
+    'url_facturacion_sears_sanborns' => 'http://facturacionelectronica.claroshop.com/',
+
+
+    // ****************************** DATABASE *****************************
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => [
+                    'host'     => 'masterdb57.dev.claroshop.com',
+                    'user'     => 'dbportalcsa',
+                    'password' => 'VKg{xp9Bpq=ea:H@',
+                    'dbname'   => 'tienda',
+                    'metadata_cache' => 'filesystem',
+                    'query_cache'    => 'filesystem',
+                    'driverOptions'  => [1002=>'SET NAMES utf8'],
+                    'charset' => 'utf8',
+                ]
+            ]
+        ],
+        'configuration' => [
+            'orm_default' => [
+                'proxy_dir' => '/tmp/ProxyORM',
+                'proxy_namespace' => 'DoctrineORMModule\Proxy',
+                'result_cache'      => 'mycache',
+            ],
+        ],
+    ],
+    'bd' => [
+        'servidores' => [
+            [
+                'host' => 'masterdb57.dev.claroshop.com',
+                'peso' => 1
+            ]
+        ],
+        'usuario' => 'dbportalcsa',
+        'contrasena' => 'VKg{xp9Bpq=ea:H@',
+        'basedatos' => 'tienda',
+        'charset' => 'utf8',
+        'auto_cache' => 7200,
+        'depurar'=>false
+    ],
+    // ****************************** ANALITICS *****************************
+    'purchaseEventsMkt' => "Dev",
+    'emarsysTest'       => true,
+    'tagManagerId'      => "GTM-WV2RN2",
+    'GigyaService'=>[
+        'username'  => '3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR',
+        'secret'    => 'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU=',
+        'apiMethod' => 'socialize.notifyLogin'
+    ],
+    'gigya'=> [
+        'key'=>'3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR', // release.claroshop.com
+        'secret'=>'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU='
+    ],
+    'emarsysAPI'=>[
+        'username'      => 'claroshop003',
+        'secret'        => 'sXWa6ly4DNY79T0df7Pl',
+        'endpoint'      => 'https://api.emarsys.net/api/v2/',
+        'listaClientes' => '289458706',
+        'newsletterHombres' => 89534119,
+        'newsletterMujeres' => 89543473,
+        'eventoNewsletter'  =>  10827,
+        'eventoBienvenida'  =>  10828,
+        'curloptions'   => [
+            CURLOPT_RETURNTRANSFER => TRUE,
+            CURLOPT_HEADER         => FALSE,
+            CURLOPT_CONNECTTIMEOUT => 10,
+            CURLINFO_HEADER_OUT    => TRUE
+        ]
+    ],
+    'facebook' => [
+             'appId'     =>'944763055583404',
+             'appSecret' => 'beeece9311f5f3a87f8e5bb87ed08a4b',
+            // 'appId'     =>'156195298184186', //nmt test
+            //'appSecret' => '21dc02da9d8a561954d5f932715a6f42',
+            'purchase' => [
+                'appId' => '439349822923006',
+                'currency' => 'MXN'
+            ],
+            'ambiente' => 'Dev',
+            'origen' => 'web',
+            'version'    => 'v4.0',
+            'urlReturn'  => 'https://alfa.dev.claroshop.com/loginfacebook' ,
+            'ssl' => array(
+                    'verify_peer'      => false,
+                    'verify_peer_name' => false,
+                    'cafile' =>  '/etc/pki/tls/certs/ca-bundle.crt'
+                ),
+            ],
+    'google'=>[
+        'key_shortener'=>'AIzaSyB7PBFhNg6qreditjcaxAoTaSKnuGPj8ek',
+        'adwords' => [
+            'conversion' =>[
+                'id' => 878908847, //Ver cual es el de desarrollo
+                'lenguaje' => 'en', //Ver si es lo correcto el lenguaje
+                'formato' => '3', //Ver que es esto del formato
+                'color' => 'ffffff',
+                'label' => 'rsXsCKiDwGoQr6uMowM',
+                'currency' => 'MXN',
+                'origen' => 'web',
+                'ambiente' => 'Dev'
+            ]
+        ],
+        'GoogleUrlApiService'=>'https://www.googleapis.com/urlshortener/v1/url'
+    ],
+    'recomendations' => [
+        "apiConfig" => [
+            'userApi'       => 'claroShop',
+            'pwdApi'        => 'Cli3nt3ccX@rv1s',
+            'connStringAdd' => 'http://customer-centric.devel.claroshop.tmx-internacional.net:8080/CCAPI_CLAROSHOP/addIndividual',
+            'connStringRec' => 'http://customer-centric.devel.claroshop.tmx-internacional.net:8080/CCAPI_CLAROSHOP/getRecommendations'
+        ],
+        'userObjectEmpty' => ' ',
+        'socialProvider'  => 'facebook',
+        'userIdRec'       => '1048818',
+        'mode'            => 'D',
+    ],
+    'activa_forma_pago' => [
+        4467 => true,
+        4465 => true,
+        3912 => true,
+        4468 => true
+    ],
+
+    'formas_pago' => [
+        'conekta' => 4465,
+        'monedero' => 4466,
+        'tarjetaStratus' => 3912,
+        'tarjetaPagos'   => 4468,
+        'tarjetaAmex' =>344,
+        'tarjetaPagosAmex' => 4467
+    ],
+
+    // ****************************** MICROSERVICES *****************************
+    'categories_micro_service' => [
+        'url' => 'https://csapi.dev.claroshop.com/producto/',
+        'httpOptions' => [
+            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            'persistent'=>false,
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+            'ssl' => [
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ],
+
+        ],
+        'request'  => [
+            'post' => [
+                "categories" =>'https://csapi.dev.claroshop.com/producto/categoria',
+                "seo"        =>'https://csapi.dev.claroshop.com/producto/categoria/seo',
+                "buildtree"  =>'https://csapi.dev.claroshop.com/producto/categoria'
+            ],
+            'put'  => [
+                "categories" =>'https://csapi.dev.claroshop.com/producto/categoria',
+                "seo"        =>'https://csapi.dev.claroshop.com/producto/categoria/seo'
+            ],
+            'get'  => [
+                "breadcrumb" => 'https://csapi.dev.claroshop.com/producto/categoria/breadcrumb',
+                "categories" => 'https://csapi.dev.claroshop.com/producto/categoria',
+                "seo"        => 'https://csapi.dev.claroshop.com/producto/categoria/seo',
+                "sub-arbol"  => 'https://csapi.dev.claroshop.com/producto/categoria/sub-arbol',
+                "arbolmulticategoria"  => 'https://csapi.dev.claroshop.com/producto/categoria/arbol-dado-un-array-ids',
+                "arbolmultidepartamento"  => 'https://csapi.dev.claroshop.com/producto/categoria/arbol-dado-un-array-ids-departamentos'
+            ]
+        ]
+    ],
+    'cart_micro_service' => [
+        'httpOptions' => [
+            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            'persistent'=>false,
+
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+
+            'ssl' => [
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ],
+
+        ],
+        'request' => [
+            'get'    => 'https://csapi.dev.claroshop.com/carrito/view?id=',
+            'post'   => 'https://csapi.dev.claroshop.com/carrito/create',
+            'put'    => 'https://csapi.dev.claroshop.com/carrito/update?id=',
+            'delete' => 'https://csapi.dev.claroshop.com/carrito/delete?id='
+        ]
+    ],
+    'product_micro_service' => [
+        'url' => 'https://csapi.dev.claroshop.com/producto/',
+        'httpOptions' => [
+            'adapter'	   => 'Zend\Http\Client\Adapter\Socket',
+            'persistent'=>false,
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+            'ssl' => array(
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ),
+
+        ],
+        'request'  => [
+            'get'  => 'https://csapi.dev.claroshop.com/producto/',
+        ]
+    ],
+    'mail_micro_service' => [
+        'active' => true,
+        'httpOptions' =>
+            [
+                'adapter'	   => 'Zend\Http\Client\Adapter\Socket',
+                'persistent'=>false,
+
+                'sslverifypeer' => false,
+                'sslallowselfsigned' => true,
+                'sslusecontext'=>true,
+
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'allow_self_signed' => true,
+                    'capture_peer_cert' => true,
+                ),
+            ],
+        'request' => [
+            'get'    => 'https://csapi.dev.claroshop.com/mail/Mail?id=',
+            'post'   => 'https://csapi.dev.claroshop.com/mail/Mail',
+            'put'    => 'https://csapi.dev.claroshop.com/mail/Mail?id=',
+            'delete' => 'https://csapi.dev.claroshop.com/mail/Mail?id='
+        ]
+    ],
+    'pcl_mail_service' => [
+        'httpOptions' => [
+            'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+            'curloptions' => array(
+                CURLOPT_POST => 1,
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+                CURLOPT_USERPWD => 'apps.dev' . ':' . 'VlCQUYB163Z2KWlJ'
+
+            ),
+            'persistent'=>false,
+
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+
+            'ssl' => array(
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ),
+
+        ],
+        'request' => [
+            'get'    => 'http://pcl-admin.dev.claroshop.com/verCorreoCompleto?hs_email=',
+        ]
+    ],
+    'invoice_micro_service' => [
+        'url' => 'https://csapi.dev.claroshop.com/factura',
+        'httpOptions' =>
+            [
+                'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+                'persistent'=>false,
+                'sslverifypeer' => false,
+                'sslallowselfsigned' => true,
+                'sslusecontext'=>true,
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'allow_self_signed' => true,
+                    'capture_peer_cert' => true,
+                ),
+            ],
+        'request'  => array(
+            'post' => array(
+                "invoicing_data" =>'/clientes/datos',
+                "invoices"       =>'/clientes/pedidos/facturas/solicitudes'
+            ),
+            'put'  => array(
+                "invoicing_data" => '/clientes/%s/datos',
+            ),
+            'get'  => array(
+                "invoicing_data" => '/clientes/%s/datos',
+                "order_status" => '/clientes/%s/pedidos/estatus?pedidos=%s',
+                "invoices" => '/clientes/%s/pedidos/%s/facturas',
+            ),
+            'delete'  => array(
+                "invoicing_data" => '/clientes/%s/datos'
+            )
+        )
+    ],
+    'apiTracking' => [
+        'endpoint' => 'https://csapi.dev.claroshop.com/tracking/sold_out',
+        'apiToken' => 'YXBpdHJhY2tpbmd2MSoq',
+        'options'  => [
+            'curloptions' => [
+                CURLOPT_POST              => 1,
+                CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                CURLOPT_RETURNTRANSFER    => 1,
+                CURLOPT_SSL_VERIFYPEER    => FALSE,
+                CURLOPT_SSL_VERIFYHOST    => FALSE,
+            ]
+        ]
+    ],
+    "product_response" => [
+        "get" => "https://csapi.dev.claroshop.com/app/v1/product"
+    ],
+    "app_services" => [
+        'url' => 'https://csapi.dev.claroshop.com/app/v1',
+        'httpOptions' => [
+            'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+            'curloptions' => array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+                CURLOPT_CONNECTTIMEOUT => 4,
+                CURLOPT_TIMEOUT => 4
+            ),
+        ],
+        'request' => [
+            'get' => [
+                'landing' => [
+                    'byId' => '/landing/%s'
+                ],
+            ],
+        ]
+    ],
+    // ****************************** RENDER *****************************
+    'zfctwig' => [
+        'environment_options' => [
+            'cache'         => realpath ( sys_get_temp_dir () ),
+            'debug'         => true,
+            'auto_reload'   => true
+        ],
+    ],
+    'template' => [
+        'cache'         => true,
+        'templates'     => realpath(dirname(__FILE__) . "/../app/Templates/"),
+        'zf2templates'  => realpath(dirname(__FILE__) . "/../module/Application/view/"),
+        'cachePath'     => false,
+        'optimizations' => 1,
+        'modo'          => true
+    ],
+    // ****************************** CACHE *****************************
+    'imgs_cache' => [
+        'servidores' => [
+            [],
+            [],
+        ]
+    ],
+    'cache' => [
+        'consistente' => true,
+        'servidores' => []
+    ],
+    'redis' => [
+        'host'    => 'redis-storage-ng.dev.claroshop-services.io',
+        'prefix'  => 'alfa.dev.claroshop.com',
+        'pass'    => '@st0rAg3K3Y'
+    ],
+    'sessionRedis' => [
+        'redis' => [
+            'host'   => 'redis-storage.dev.claroshop.com',
+            'port'   => 6379,
+            'prefix' => 'client_',
+            'time'   => 1800,
+            'pass'    => '@st0rAg3K3Y'
+        ]
+    ],
+    // ****************************** OTHERS *****************************
+
+    'apiSms' => [
+        'username' => 'claroshop558a1e66fd795a1',
+        'endpoint' => 'http://broadcaster.cm-operations.com/broadcaster/bin/tu_empresa.php'
+    ],
+    'imgs_decompras'         => "http://imgs.dc.devel.decompras.tmx-internacional.net/",
+    'endpoint_telmex'        => "http://200.57.163.19",
+    'endpoint_recibo_telmex' => 'http://200.57.141.31',
+    'recibo_telmex' =>	[
+        "login" => [
+            'endpoint' => "http://200.57.141.31/WSPromo/services/LoginHogar?wsdl",
+            'options'  => []
+        ],
+        "credito" => [
+            'endpoint' => "https://www.serviciosterceros.telmex.com/WSPromo/services/DatosTmx?wsdl",
+            'options'  => []
+        ],
+        "antifraude" => [
+            'endpoint' => "http://200.57.141.31/WSPromo/services/ValidacionAntifraude?wsdl",
+            'options'  => []
+        ],
+        "cuestionario" =>[
+            'endpoint' => "http://200.57.141.31/WSCuestionarioTMX/WSTMXCuestionario?wsdl",
+            'options'  => [
+                "login"        => "TMX_CUESTIONARIO",
+                "password"     => "_TMX_3906",
+                "soap_version" => SOAP_1_1
+            ]
+        ],
+    ],
+    'forma_pago_recibo_telmex'     => '{"1":"4432", "6":"4433", "13": "4434", "18":"4435", "24":"4436", "36":"4437", "48":"4438"}',
+    'categorias_sin_recibo_telmex' => '15026, 15190, 15197',
+    'precioRDD' => 49,
+    'cyber'=> [
+        "TRANSACTION_KEY"   => "E7S25IFpiy/fKWc2LRDdJbxhVlqRRwCxVhzAbBm2n6M/4mENR1PFOIi1fbPO2F3O75kCJAeFvnhBTRwM3q0x9a/Dla5lGh5mOMQNQkoRHzsTzVeHo3NwROlzCMSrDRC5u/VmGPrplgLPgw/502DC8ys81yy5y5F3V7uUGNbsGp8vSr6hh8jZIVlcZz912rjtoZFjuDReBEYorcINxvSrrR17qeMRkjz59k8rS8AykMaaO3la3Sl8+k7xqqGsGmAHV/jQ8ZV1iPQY/eslHHv3HjvbSRuKwSwpThZyHuesr9oe+vFMX3SeUj4J2+WV9rG/0n1q0WMHWKZuBXUmzwuHZg==",
+        "MERCHANT_ID"       => "decompras",
+        "WSDL_URL"          => "https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.127.wsdl" //nueva
+    ],
+    'login_sears' => [
+        'api_endpoit'   => 'http://127.0.0.1',
+        'auth_user'     => 'iliux',
+        'auth_pasword'  => 'IL18xmz1',
+        'semilla'      => 'D3C0MP@52015',
+        'mode'=>'A'
+    ],
+    'captcha'=>[
+        'KEY'=>'6LdXSwsTAAAAAHa8REoxZWKEf0Ym5w01GkDb7E3q',
+        'KEY_SECRET'=>'6LdXSwsTAAAAAMZaWJmUjEbKRk59YXv77F2FU98R',
+        'URL_CAPTCHA'=>'https://www.google.com/recaptcha/api/siteverify'
+    ],
+    'llave_encriptacion_tdc' => 'K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4',
+    'smtp'=> [
+        'notificar' => false,
+        'host'      => 'smtp.claroshop-services.net',
+        'port'      => 25,
+        'auth'      => true,
+        'secc'      => false,
+        'user'      => "smtp_admin@claroshop",
+        'pass'      => "4eJ7G0paawA8R53AQJu15yxd",
+        'connection_class'      => "plain",
+        'base_path' => 'https://alfa.dev.claroshop.com/',
+        'stage' => 'DEV'
+    ],
+    'single'=>[
+        'provider_id' => '43518dec-3a95-4cdb-b22d-e5337e0c07f9',
+        'user'        => 'claroShop',
+        'pass'        => 'C14r0$h0p',
+        'key'         => 'MKY21ASTR45YUPC1',
+        'url'         => 'http://sanborns.com.mx/wsSanbornsAPI/perfiles.asmx?wsdl'
+    ],
+    'endpoint_stock_sears' => [
+        "endpoint" => "http://200.57.173.35/ws_mercaderias",
+        "user"     => "claroshop",
+        "pass"     => "cl4r0sh0p.",
+        "mode"     => "D"
+    ],
+    'logger' => [
+        'stream'            => '/var/log/php-fpm/www-error.log',
+        'priorityFilter'    => 'DEBUG',
+        'gelf' => [
+            'host' => 'graylog-feed.dev.claroshop-services.net',
+            'port' => '6681'
+        ],
+        'flags' => [
+            'project' => "portal_claroshop",
+            'stage'   => "DEV",
+            'server'  => $_SERVER['HTTP_HOST']
+        ]
+    ],
+    'cuenta_claro'=>[
+        'user' => "mC5ubMyZ/AGIW43SQfGBVA==",
+        'pass' => "1CDX04HPxEBS9w/uiFn+Lw==",
+        'empresa' => "073",
+        'tipo' => 1,
+        'endpoint' => "http://140.240.200.34/WSiDocSEARS/ConsultaiDoc.asmx?wsdl",
+        "mode" => "T", /*P - Producción, D - Desarrollo, T - Test*/
+    ],
+    'tagPrepago'=>[
+        "endpointReload" => 'http://200.57.40.42/wsPrepagoRecargas/Service.asmx?WSDL',
+        "idComercio" => "0047",
+        "idGrupo" => "0001",
+        "secretKeyAES" => "xHad5Z?e3_3.45"
+    ],
+    'session' => [
+        'config' => [
+            'class' => 'Zend\Session\Config\SessionConfig',
+        ],
+        'storage'    => 'Zend\Session\Storage\SessionArrayStorage',
+        'validators' => [
+            'Zend\Session\Validator\RemoteAddr',
+            'Zend\Session\Validator\HttpUserAgent',
+        ],
+    ],
+    'puntossinfin'=>array(
+        'opciones' => array(),
+        //'IdFormaPago' => 4453, //desarrollo
+        'IdFormaPago' => 4442, //QA
+        'habilitado'=>true,
+        'endpoint' => 'http://97.74.233.69/wsPuntosSinFinCS/wsPuntosSinFin.asmx'    //desarrollo
+    ),
+    'fedex' => [
+        'prod'           => false,
+        'key'            => 'LgiWacWCmeeZlgQq',
+        'password'       => 'v1KJYPOKhqVcsSOXVJsSbNrDe',
+        'accountNumber'  => '510087763',
+        'meterNumber'    => '118637391',
+        'dropOffType'    => 'REGULAR_PICKUP',
+        'approvedCodes'  => [
+            'FEDEX_EXPRESS_SAVER',  // 1-3 business days
+            'STANDARD_OVERNIGHT',   // overnight
+        ],
+    ],
+    'ElasticSearch' => [
+        'indexName' => 'claroshop_mrio_fase42',
+        'typeName'  => 'producto_mrio_fase42',
+        'endpoint'  => 'http://elasticsearch-ng.dev.claroshop-services.io',
+        'orden'  => 'co', // rl => relevancia; co => coincidencia
+        'options' => [
+            'curloptions' => [
+                CURLOPT_POST              => 1,
+                CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                CURLOPT_RETURNTRANSFER    => 1,
+                CURLOPT_SSL_VERIFYPEER    => FALSE,
+                CURLOPT_SSL_VERIFYHOST    => FALSE,
+            ]
+        ]
+    ],
+    'ApiRestSelfService' => [
+        'url'  => 'http://lince.dev.claroshop.com/ApiRest',
+        'user' => 'apps.dev',
+        'pass' => 'VlCQUYB163Z2KWlJ',
+        'options' => [
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+        ]
+    ],
+    'AxiiPedidosService'=> array(
+        "urlApiAxii" => "https://csapi.dev.claroshop.com/pcl",
+        "UserId"     => "2736",
+        "Api-Token"  => "b968919a40d712a47526320605a5b16a21e68db7e1fc57fbc9fb79f6024ee87e",
+        "AuthMode"   => "D",
+        "AuthUser"   => "apps.dev",
+        "AuthPass"   => "VlCQUYB163Z2KWlJ"
+    ),
+    'thank_you_page' => [
+        'correo_deposito' => 'deposito@claroshop.com',
+        'correo_clientes' => 'clientes@claroshop.com',
+        'correo_datos_personales' => 'datospersonales@claroshop.com',
+        'dias_telmex' => 5
+    ],
+    'sears_tiempo_entrega' => [
+        'stage'    => true,
+        'endpoint' => 'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx?wsdl',
+        'location' => 'http://sandboxws.dev.claroshop.com/ws_mercaderias/ws_mercaderias.asmx',
+        'httpuser' => 'karen.moreno',
+        'httppassword' => '7o0S5Nt8hdahtJ3k',
+        'usuario'      => 'ClaroshoP',
+        'password'     => 'Cl4r0$h0p17',
+        'codEmp'       => '1',
+        'tienda'       => '104',
+        'dias_entrega' => "5",
+        'bandera_big_ticket' => 'S',
+    ],
+    'CR' => [
+        'endPoint' => 'http://sandboxws.dev.claroshop.com/?wsdl',
+        'location' => 'http://sandboxws.dev.claroshop.com/Framework.asmx',//Parametro solo para ambientes locales Reverse proxy
+        'httpUser' => 'pavel.carrillo',//Usuario http Parametro solo para ambientes locales Reverse Proxy
+        'httpPass' => 'ufD0bvFPp6qkE07a',//Contraseña http Parametro solo para ambientes locales Reverse Proxu
+        'options'  => [
+            "cache_wsdl"   => WSDL_CACHE_NONE,
+            "soap_version" => SOAP_1_1
+        ],
+        'max_stock' => 3,
+        'bandera_big_ticket' => 'S',
+        'credencial' => [
+            'usuario'    => 'prueba',
+            'password'   => 'prueba123',
+            'id_empresa' => 1
+        ],
+        'entrada' => [
+            'usuario'  => 'ADMONCLARO',
+            'password' => 'Cl4r0123'
+        ],
+    ],
+    'caja' => [
+        'index'       => 'Caja',
+        'clickRecoge' => 'Caja/click-recoge',
+        'expressCheckout' => 'Caja/express-checkout'
+    ],
+    'googleAmp' => [
+        'private_key'       => 'LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBeTZyQmp1TndSR0UvMHdGekxPczdZTTh2clFvTzBZM2NFb1h3RHc2MEx5aERDYUpwCkVWcGVnc2JIQU40S2xQWlNrV2xYS2tuaE9VczlyU3k1TGdZK2tlYjQ4bithMi9Zcmt4TkNwblJVeTZCWWxLNHIKek9KaUxuWmV0cVN0Mzhyek1jU2pwZzkzc21GMnRsUDY0M3kzd1NXM0xlRmk5TW43c2dYYjR4anp3WWRta2loWQpvUkd4ZnBBY0tTRVBKZFVOZGcyUUdtQlVZVFY3YUduVURQNlBTRlNsZkxoTXNwNWxOam82RlVCeDBJa2NzbkVyCmtudzI3Q2Z1dDFZMTNvRk1IK2JuZ01TOFEzdXZab3J4cGh5bFppck5VNmRuL01zaERyeWlBOWhCOFhRQ3JpUEQKUkVBQkIrV2dMN1RlZktkMWI2RTdxbUZZZlNncW1lRjdRMGdyM3dJREFRQUJBb0lCQUU4eFQyQUxLZDA4M3o5aAo0ZklHYWFsRUJxckhMV25vT2psdG9TR0p1eUJYREhJVGw3MHFvWE5DYmFEMXRiR2tjZ2llcUVrR1B6QXpCSUZ3CjBYU0c4dzl5ZXp4M3g3UmQ3U1djS0o5bXZvNExCRWFUenU0MDNLNXFVbnU4WHV1VkU2azNaOWFyVHdTcWh5bHcKVUM3aWtPVG1rR3FqcUFHOUJFUjlxTG1PTzBIMWZVekFRdzJCSGFEK3ovbUZvdXUyMll6Lys5ZTdPUXJYZnk4RwpDVmpUYitpNGgrR1hUL2Zqb2xQc0s3QXBQeDFJRmRPNEc0V1F1ZzRGdUdtUllaMGR1OExqdGdHYkd6Vi9MQzJ6Cks5MC9SeUExeGtpQlZtellvZXVIalR1SmdpVmRweUpVcVBwczdNQ1FQZk43Z0xaTzg4cVFxNzczQmQxOGE1UmoKU1ZlK1dmRUNnWUVBOHllNlRLTEI2ZWhsd2R4aDNwdlViSGp0QmYyWUx4MjJ1dGlJVFJIL2F5S09BR2Zrd1M4ZAp6OE5TalJKWVpuVEt1d3pDN2JVUkc0cE8vSm9PUTROZU5MenZhc1RrVzk2S3BwZnZIME1pODNOeGpTTW9zWDBvCnFaN2ErcHlrUUovSU1uS0pJSEhRNlZMU0dlRGltWmNSejhPUW9SOFlueFBBbzVLMmVSM1VqYmtDZ1lFQTFtMEUKSFZybk0wbW12ZFRTbUFkT3Mvb2d5RDA5VURXVGZKaWc5VjNId0MzWk5DSkpNblJqSGUva0oxTzUrSlpaZXF4cwpEb2duL25qOFJkcXR3QXFEMy9va21DMFh3R0IvVm9pWVh0TUVHVk5pNjlkVXpWSXZ0RkxkTjB6R1l5aE4yVlduCnVRWEtKYUJGY0FkaFhIVFZKWGlWdjhTUmRWaDIwUkY4aXpFOUVsY0NnWUJTUWo5aFM3SmtTazJhYnM3aE8wQjYKemRJSnM4ZjNNSXN2M0s4SHU2MzM5WUdxbTNzazY2YWZNY25NbGNjNEtneW5pT0tzL2hOaWlNQzk3ZlFqWE43Uwo0cFB3UDltdFJyVUxOTjBkYTEzNGxEWjI4ODBCZG9ENkdSYWxyN1pWY25pTXNIaTVkQ2VqdDNRQ2N6VFZsdWpjCnE2RlRFSzBJcStzQXExSjEyT1NlYVFLQmdGN2ZpMU9GdGdnK1RUVnU1ZUw0VUwxWExZd0xkSVo1dmhFQjR5M04KV2FWUlkrb3FSV0s2bG1SWGtRWkppRjVSLzdORWVPY1JIVWo5dFBrZllZTTM0OU9FOVE0VDNZOXo0c09oMm5FUwpRcDBHQlIyK2Y3bjg1RGlQOVdzVFlDL2RWRnlXQm9qWjQvQXo4cVUzenI4K3ZsUSsvMXNER1N6bmdHTE9ydUZUClh1Y3ZBb0dBTC9ZdytLSVFoWU9JVzZiSzBhc1BtSG5iZmpvT2ZlZHpZaTJLK0pnUzlYR3RvNDBIS0c0anBoN2oKY2gySlMrbFU2d29hNytseEdhZ2daRXlRbzkxR3FKM29VbXprS2o4ejFpL0tSektHeUZnb0lBWmozZnFIMzB1MQpRaGVqZ2VFVEdGR0MwZkVQb2oyMzVDdjBpMDlYMXowVWlMaXBuTnR1Sk9JdjZzRzZaVTQ9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0t',
+        'private_key_path'  => $_SERVER["DOCUMENT_ROOT"].'/../.well-known/amphtml/private-key.pem',
+        'public_key_path'   => $_SERVER["DOCUMENT_ROOT"].'/../.well-known/amphtml/public-key.pem',
+        'amp_base_url'     => 'https://alfa-dev-claroshop-com.cdn.ampproject.org',
+        'update_cache'      => '/update-cache/c/s/',
+        'action'            => '?amp_action=flush&amp_ts='
+    ],
+    /*"aggregateRating"=>[
+        "@type"=> "AggregateRating",
+        "ratingValue"=> "4.5",
+        "reviewCount"=> "200"
+    ],*/
+    'aggregateRating' => 200,
+    'reviewCount' => 4.5,
+    'claroPagos' => [
+        'url' => 'https://api.sandbox.claropagos.com/v1/',
+        'token' => $api_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijc0MGZlYzlmNjFiZjI1Mjk2ZTJhMjEwZmYxNGI5MDdlMDliZDI0N2NhNGM0NWYyZTFlZWU0MWFjOWZmOGY2YzM0ZjNjZTIwODBhNzQ1NmZiIn0.eyJhdWQiOiIyIiwianRpIjoiNzQwZmVjOWY2MWJmMjUyOTZlMmEyMTBmZjE0YjkwN2UwOWJkMjQ3Y2E0YzQ1ZjJlMWVlZTQxYWM5ZmY4ZjZjMzRmM2NlMjA4MGE3NDU2ZmIiLCJpYXQiOjE1NjIyODQ2OTUsIm5iZiI6MTU2MjI4NDY5NSwiZXhwIjoxNjI1NDQzMDk1LCJzdWIiOiI3MiIsInNjb3BlcyI6WyJjbGllbnRlLXRhcmpldGFzIiwiY2xpZW50ZS10cmFuc2FjY2lvbmVzIiwiY2xpZW50ZS1zdXNjcmlwY2lvbmVzIl19.C9C9UPdlUvYt2FgCrBBc38jEBqi-5qMzjV0WG9uHbt9VzU4ev4OXFIZe3pX8F-TrPPw2lrR45ooZbB9XzurVfuhc0devTWfbBc8pbZXdo3PXxqYJEKK_d_6yHysGAk7lwpGeVWdVtReAsBlk4ulft15kUCTxbMvB9Qmt_qbWd12Z5azdt8Lg5JaHsZEiMb-NjrTmdYEyfwwdOje-LWgSIHFv8Uy2TPnVG06GS_QNehKEfsVqJqAZHYNFlTyP5-lEtScmz4UcZR78mS6vluFN5DmxOS0GF4Y7lZNZ85ysdyt58gK8Kj4xBZaXtDBhouxiayqj7tsMHQBbUIh9O611mIAtygQZjo0-Up4hD2cn66rroMiQ1gEaWTShJ0d8aTWqKZ3u1ePl8hTAhO7uWMcdQLqYcRftOZ5Vo2aM_plUyzzFVl8F7HjmObdxpSLpzpNDdXMSIyYOsjyEgpryTRFnOaaDxH_Y830Xg86JYKxTLE73RMNBclB5SzTphvGW-65aRYhabcbzadMM2PCUS5ttDXAf7O02PGBhfPyXS0kwRt-Oz6WTX8q1SKpli-MX7QGm4C206TxE-jbGwWjCSklyubPhhZc7xAaEhdRav7JzelxnRsmMuQ0knXCJy_o4FkhsoI84tumgHCyRRspAbf2rvFKrDGSwyaBiXWKQhP2FDOU',
+        'token_front' => "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjBkNTdkMGM5NDBlYWE2NGY4NWMxNzczMTJhZmZjMjMzY2I0YjZiNzEwNTY5ODQ4NzJjNDdjNmJjYzViYzQxYjZjNDljOTVhOGMxYTE2NTAyIn0.eyJhdWQiOiIyIiwianRpIjoiMGQ1N2QwYzk0MGVhYTY0Zjg1YzE3NzMxMmFmZmMyMzNjYjRiNmI3MTA1Njk4NDg3MmM0N2M2YmNjNWJjNDFiNmM0OWM5NWE4YzFhMTY1MDIiLCJpYXQiOjE1NjIyODQ2NDksIm5iZiI6MTU2MjI4NDY0OSwiZXhwIjoxNjI1NDQzMDQ5LCJzdWIiOiI3MiIsInNjb3BlcyI6WyJjbGllbnRlLXRhcmpldGFzIl19.bIUjTmcRbyw8hsb29Vs77RAP3_0ujYeNg0eiUSm0bL1i6lHHoQwEK2ZFGzXFzvrKyRa8c6HOZp1mNnSx571Mm9zkXdsI5DIZEPR2Hg66SIoF6SohHYRiJFg0522DSLRhzklGwm2Nn5t1nScfz12JfYR5DTQPHQRX1myeSd8KEG4zxdYrP7oYRtd_d8vyZPdYQ1UEN-oCqbUjuNILthaejHKNwzezRGECl_x26ux0nODa9ifuDdLQNUHoJDJgWVRTiCWVwj_dBre4nURyfeMO-CH8jbaVWKDEWlyc6OddYyvZMmsC0mW5h9SQxk_B3-Auocrf5uqLYawwVqP2ZKc0CJ1_abRuUhXPUO1ZwHmN7ChmEV7CNTnfdHFMEGygxo-CWUcIpkMvm5GtbEGwjYl-t4hQBwPFrMsJfxGJWDTgVms-AbEjpocGYPvEyyrT9yobkLZf7Kmu1I_kHt53T7IgnkHaILcdQTkaLGod2a_hYSyFDyRVJkOt3ocqVOWFnMmhpWZqX1fXCoGCsZYL4sTwTPVv58XWFbKJlxVYY92DJqszepSkwMU0bteyNHSLzsCOMR1wisKZZcEYjIVkNdEiIwSQjLbk_JlXcciO7FGqrgQIg6Nquit4q1lIZHmmRiL3HJw-7ZsO4aXgXIVsesk-7Wzbq4ehpVIYrh1Q7f6GmZo",
+        'httpOptions' => [
+            'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+            'curloptions' => array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+            ),
+            'headers' => array(
+                "Accept" => "application/json",
+                "Authorization" => "Bearer " . $api_token,
+                'Content-Type' => 'application/json',
+            )
+        ],
+        'request' => [
+            'get'    => [
+                'client' => 'cliente/',
+                'card' => 'tarjeta/',
+                'external_client' => 'cliente/id_externo/'
+            ],
+            'post' => [
+                'payment' => 'cargo/'
+            ]
+        ]
+    ],
+    'shipping_micro_service' => [
+        'headers' => [
+            'authentication' => [
+                'name' => 'Authentication',
+                'value' => 'LiYpUHBMMmswan1FQg=='
+            ]
+        ],
+        'url' => 'https://csapi.dev.claroshop.com/shipping/v1',
+        'httpOptions' => [
+            'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+            'curloptions' => array(
+                CURLOPT_POST => 1,
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+
+            ),
+            'persistent'=>false,
+
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+
+            'ssl' => array(
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ),
+        ],
+        'request' => [
+            'post' => 'https://csapi.dev.claroshop.com/shipping/v1/delivery',
+            'zonificacion' => 'https://csapi.dev.claroshop.com/shipping/v1/zoning'
+        ]
+    ],
+    'Yotpo' => array(
+        'endpoint' => 'https://api.yotpo.com',
+        'apikey' => 'fVyQB0PKD141XxhrTt79mq4XSBX7MYBgoBw5K3NQ',
+        'stage' => 'Staging.Claroshop.com',
+        'options' => array(
+            'curloptions' => array(
+                CURLOPT_POST => 1,
+                CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+            )
+        )
+    ),
+    'hastaMsi' => 'Hasta <strong>24</strong> meses sin intereses',
+    'payu' => [
+        'urlPayu' => 'https://sandbox.api.payulatam.com/payment$',
+        'key'     => '4Vj8eK4rloUd272L48hsrarnUA',
+        'login'   => 'pRRXKOl8ikMmt9u',
+        'merchantId' => '508029',
+        'accountId'  => '512324',
+        'test'       => false,
+        'tiempoCancelacion' => 3,
+        'diasCancelacion' => 2
+    ],
+    'corners_micro_service' => [
+        "url" => "https://csapi.claroshop.com/app/v1/shop",
+        "method" => "GET"
+    ],
+    'anteater' =>  (object)[
+        'search' => 'https://claroshop.anteater.ai/search',
+        'autocompletar' => 'https://claroshop.anteater.ai/autocompletar?cliente=claro',
+        'cliente' => 'claro_dev',
+        'request'=>[
+            'get'=>[
+                'category'=>'https://claroshop.anteater.ai/search?cliente=claro&proxystylesheet=xml2json&oe=UTF-8&getfields=*&num=48&ds=express%3Afulfillment%3A0%3A0%3A8%3A0%3A1.marcas%3Aattribute_marca%3A0%3A0%3A8%3A0%3A1.sale_precio%3Asale_price%3A1%3A1%3A40.discount%3Adiscount%3A0%3A0%3A1000%3A0%3A1&do=categories%3Acategories%3Aid%2Cname%3A10%3A1&requiredobjects=categories-%3Eid%3A',
+                'store' => 'http://claroshop.anteater.ai/search?cliente=claro&proxystylesheet=xml2json&oe=UTF-8&do=categories%3Acategories%3Aid%2Cname%3A1000%3A1.store%3Astore%3Aid%2Cname%3A1000%3A1&ds=express%3Afulfillment%3A0%3A0%3A8%3A0%3A1.marcas%3Aattribute_marca%3A0%3A0%3A8%3A0%3A1.sale_precio%3Asale_price%3A1%3A1%3A40.discount%3Adiscount%3A0%3A0%3A1000%3A0%3A1&num=48',
+                'cat_stores' => 'https://claroshop.anteater.ai/search?cliente=claro&proxystylesheet=xml2json&oe=UTF-8&getfields=*&num=0&do=tore:store:id,name,logo:1000:1&requiredobjects=&debug=1%27'
+            ]
+        ],
+        'httpOptions'=> []
+    ],
+
+    'envioGratis' => false,
+    "tiendaEnvioGratis"  => "124339",
+    'dashboard' => array(
+        "time_cache" => 3600
+    ),
+    'clickRecogeActivo' => true,
+    'isCompraMayoreo' => false,
+    'api_manager_service' => array(
+        'endpoint' => 'https://csapi.dev.claroshop.com/app/',
+        'options' => array(
+            'curloptions' => array(
+                CURLOPT_POST => 1,
+                CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+            )
+        ),
+        'path' => 'claroshop/dev/comprobantes/',
+        'username' => 'portales',
+        'password' => 'thAvVVbCasLhBUHPndZpV7AgSPBveX7atDH',
+        'publicKey' => 'ab994abe7848c1b07f4a597d5e0565e043b22f620445cf04f89842cf6e370ddd',
+        'reason_delivery' => 7
+    ),
+    'tiendas' => array(
+        'bannerHome' => array(
+            '3509' => '242', //Telmex
+            '2626' => '245', //Telcel
+            '2430' => '246', //Sears
+            '3496' => '244', //Sanborns
+            '3571' => '320', //Samsung
+            '3562' => '365', //BOXBANNER_MABE -PROD
+            '3574' => '366', //BOXBANNER_PHILOSOPHY
+            '3575' => '367', //BOXBANNER_HASBRO
+            '3576' => '368', //BOXBANNER_FLEXI
+            '3577' => '369', //BOXBANNER_ENTIENDAS
+        ),
+        'dbBannerHome' => array(
+            '3509' => '247', //Telmex
+            '2626' => '248', //Telcel
+            '2430' => '249', //Sears
+            '3496' => '250', //Sanborns
+            '3562' => '370', //REC_PRODUCTOS_MABE
+            '3574' => '371', //REC_PRODUCTOS_PHILOSOPHY
+            '3575' => '372', //REC_PRODUCTOS_HASBRO'
+            '3576' => '373', //REC_PRODUCTOS_FLEXI'
+            '3577' => '374', //REC_PRODUCTOS_ENTIENDAS'
+        ),
+        'recomendadosHome' => array(
+            '3509' => '247', //Telmex
+            '2626' => '248', //Telcel
+            '2430' => '249', //Sears
+            '3496' => '250', //Sanborns
+            '3562' => 'RECOMENDADOS_MABE', //mabe
+            '3574' => 'RECOMENDADOS_PHILOSOPHY', //philosophy
+            '3575' => 'RECOMENDADOS_HASBRO', //hasbro
+            '3576' => 'RECOMENDADOS_FLEXI', //flexi
+            '3577' => 'RECOMENDADOS_ENTIENDAS', //entiendas
+        ),
+        'recomendadosProductos' => array(
+            '3509' => '322', //Telmex
+            '2626' => '324', //Telcel
+            '2430' => '325', //Sears
+            '3496' => '323', //Sanborns
+        ),
+        'buscadosProductos' => array(
+            '3509' => '326', //Telmex
+            '2626' => '328', //Telcel
+            '2430' => '329', //Sears
+            '3496' => '327', //Sanborns
+        ),
+        'logosTienda' => array(
+            '3509' => 'telmex', //Telmex
+            '2626' => 'telcel', //Telcel
+            '2430' => 'sears', //Sears
+            '3496' => 'sanborns', //Sanborns
+            '3496' => 'fancy', //Fancy
+            '3571' => 'samsung', //Samsung
+            '3571' => 'samsung', //Samsung
+            '3572' => 'piagui', //piagui
+            '16197' => 'ninewest',
+            '16199' => 'guess',
+            '16200' => 'cat',
+            '16201' => 'anneklein'
+        ),
+        'colorTienda' => array(
+            '3509' => 'menuTiendaTelmex', //Telmex
+            '2626' => 'menuTiendaTelcel', //Telcel
+            '2430' => 'menuTiendaSears', //Sears
+            '3496' => 'menuTiendaSanborns', //Sanborns
+            '3566' => 'menuTiendaFancy', //Fancy
+            '3571' => 'menuTiendaSamsung', //Fancy
+        ),
+        'piagui' => array(
+            array('id' => '16197', 'dep' => 'ninewest'),
+            array('id' => '16199', 'dep' => 'guess'),
+            array('id' => '16200', 'dep' => 'cat'),
+            array('id' => '16201', 'dep' => 'anneklein')
+        ),
+        'artes_laterales' => array(
+            '3562' => '367', //mabe
+            '3574' => '384', //philosophy
+            '3575' => '385', //hasbro
+            '3576' => '386', //flexi
+            '3577' => '387', //entiendas
+        ),
+    ),
+    'descarga_app' => true,
+    'carruselAlsoBought' => true,
+    'token_mi_cuenta' => [
+        'ttl' => 60
+    ],
+    'universal_counter_micro_service' => [
+        'url' => 'https://mrcapi.dev.sears.com.mx/contador-mrc/api/stock',
+        'token' => $api_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYXRjb2RlciIsImV4cCI6MTY0ODk1MDk1Nn0.DmS8qofLxfMmpEK3FET-93OPoryOSF3UaqCYZ3VECHwB0y5RKMQlJMGxaNtK6pKA0wfsbdcXl4ri-_y5eGDzYg',
+        'httpOptions' => [
+            'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+            'curloptions' => array(
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_SSL_VERIFYPEER => FALSE,
+                CURLOPT_SSL_VERIFYHOST => FALSE,
+                CURLOPT_CONNECTTIMEOUT => 4,
+                CURLOPT_TIMEOUT => 29
+            ),
+            'headers' => array(
+                "Accept" => "application/json",
+                "Authorization" => "Bearer " . $api_token,
+                'Content-Type' => 'application/json',
+            )
+        ],
+        'request' => [
+            'get' => [
+                'product' => [
+                    'shop' => [
+                        'sku' => '/product/shop/%d/sku/%s',
+                        'ean' => '/product/shop/%d/ean/%s/',
+                        'sku_detail' => '/product/shop/%d/sku/%s/detail',
+                        'ean_detail' => '/product/shop/%d/ean/%s/detail',
+                    ],
+                    'cyr' => '/subsidiarys/cyr/shop/%d/skus/%d'
+                ],
+            ],
+            'post' => [
+                'product' => [
+                    'set_on_hold' => '/product/set-on-hold',
+                    'confirm' => '/product/confirm',
+                    'cancel' => '/product/cancel',
+                ]
+            ],
+
+        ]
+    ],
+    'limitLanding'=> 600
+];
+
+
+
+
+======================================================================
+R2T2 cat app local.php (QA 31)  (1.9s)
+======================================================================
+<?php
+$basePath   = 'https://app.qa.claroshop.com/';
+$caja_stage = 'https://delta.qa.claroshop.com/Caja/app';
+
+return [
+    //********CONFIGURACION GENERAL **********
+    'caja_url'        => $caja_stage,
+    'cyr_caja'        => $caja_stage."/click-recoge",
+    'tiendaOrigen'    => "69",
+    'app_environment' => 'desa',
+    'base_path'       => $basePath,
+    'tiendaCruzRoja'  => 10112,
+    'visualizarTiendasRelease' => true,
+    'session' => [
+        'config' => [
+            'class' => 'Zend\Session\Config\SessionConfig',
+        ],
+        'storage' => 'Zend\Session\Storage\SessionArrayStorage',
+        'validators' => [
+            'Zend\Session\Validator\RemoteAddr',
+            'Zend\Session\Validator\HttpUserAgent',
+        ],
+    ],
+    'logger'=>[
+        'stream' => '/var/log/php-fpm/www-error.log',
+        'priorityFilter' => 'DEBUG',
+    ],
+
+    //********CONFIGURACION DE RENDER **********
+    'template' => array(
+        'cache'         => true,
+        'templates'     => realpath(dirname(__FILE__) . "/../app/Templates/"),
+        'cachePath'     => realpath(sys_get_temp_dir()),
+        'optimizations' => 1,
+        'modo'          => true
+    ),
+
+    'zfctwig' => array(
+        'environment_options' => array(
+            'cache'         => realpath ( sys_get_temp_dir () ),
+            'debug'         => true,
+            'auto_reload'   => true
+
+        ),
+    ),
+    //********LLAVES DE ENCRIPTACION**************
+    'encrypted_keys' => [
+        'cyr' => 'ZXBWOUQ2QU1xcFpRQUtKaXRBcENDNUxzUUttWWxtSmo='
+    ],
+    
+    //********CONFIGURACION DE IMAGENES **********
+    'imgs_servicio'  => 'http://imagenes.decompras.com/servicios/',
+    'imgs_decompras' => 'http://imgs.dc.devel.decompras.tmx-internacional.net/',
+    'proxy-imgs' => 'https://imagenes.claroshop.com',
+    'imgs_cache' => [
+        //'consistente' => true,
+        'servidores' => [
+            ['192.168.56.10', 11213],
+            ['192.168.56.10', 11213],
+        ]
+    ],
+
+
+    //********SMTP DE CORREO **********
+    'smtp'=> [
+        'notificar' => true,
+        'host'      => 'smtp.claroshop-services.net',
+        'port'      => 25,
+        'auth'      => true,
+        'secc'      => false,
+        'user'      => 'smtp_admin@claroshop',
+        'pass'      => '4eJ7G0paawA8R53AQJu15yxd',
+        'connection_class' => 'plain',
+        'base_path'        => $basePath,
+        'stage'            => 'DEV'
+    ],
+
+    //********CONFIGURACION DE CACHE **********
+    'cache' => [
+        'prefix' => 'app-dev',
+        'servidores' => [
+            //['memcache.claroshop-services.net',11211],
+            //['memcache.claroshop-services.net',11211],
+        ]
+    ],
+
+    //********BASE DE DATOS **********
+    'bd' => [
+        'servidores' => [[
+            'host' => 'masterdb57.qa.claroshop.com',
+            'peso' => 1
+        ]],
+        'usuario'    => 'dbappcsa',
+        'contrasena' => 'Mn8%Sc9o=2s7/4cJ',
+        'basedatos'  => 'tienda',
+        'charset'    => 'UTF-8',
+        'auto_cache' => 7200,
+        'depurar'    => false
+    ],
+
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => [
+                    'host'     => 'masterdb57.qa.claroshop.com',
+                    'port'     => '3306',
+                    'user'     => 'dbappcsa',
+                    'password' => 'Mn8%Sc9o=2s7/4cJ',
+                    'dbname'   => 'tienda',
+                    'charset'  => 'utf8',
+                    'driverOptions' => [
+                        1002 => 'SET NAMES utf8'
+                    ],
+                ]
+            ]
+        ],
+        'configuration' => [
+            'orm_default' => [
+                'proxy_dir' => '/tmp/Proxy',
+                'proxy_namespace' => 'DoctrineORMModule\Proxy',
+                'result_cache'      => 'mycache',
+            ]
+        ]
+    ],
+
+    //********SERVICIOS TELMEX **********
+    'precioRDD'              => 49,
+    'endpoint_telmex'        => 'http://200.57.163.19',
+    'endpoint_recibo_telmex' => 'http://200.57.141.31',
+    'forma_pago_recibo_telmex'     => '{"1":"4432", "6":"4433", "13": "4434", "18":"4435", "24":"4436", "36":"4437", "48":"4438"}',
+    'categorias_sin_recibo_telmex' => '15026, 15190, 15197',
+    'col_lab'=> [
+        'endpoint' => "http://140.240.200.15/claroShop/ClaroShop.asmx?wsdl",
+        "mode" => "D",
+    ],
+    'recibo_telmex' =>  [
+        'login' => [
+            'endpoint' =>"http://200.57.141.31/WSPromo/services/LoginHogar?wsdl",
+            'options' => []
+        ],
+        'credito' => [
+            'endpoint' =>"http://200.57.141.31/WSPromo/services/DatosTmx?wsdl",
+            'options' => []
+        ],
+        'antifraude' => [
+            'endpoint' =>"http://200.57.141.31/WSPromo/services/ValidacionAntifraude?wsdl",
+            'options' => []
+        ],
+        'cuestionario' =>[
+            'endpoint' => 'http://200.57.141.31/WSCuestionarioTMX/WSTMXCuestionario?wsdl',
+            'options'  => [
+                'login'        => 'TMX_CUESTIONARIO',
+                'password'     => '_TMX_3906',
+                'soap_version' => SOAP_1_1
+            ]
+        ],
+    ],
+
+    //********SERVICIOS SEARS **********
+    'login_sears' => [
+        'api_endpoit'   => 'http://www.sears.com.mx/servicio_autenticacion_usuario/servicio.php',//'sears.d.plazavip.com/servicio_autenticacion_usuario/servicio.php',
+        'auth_user'     => 'iliux',
+        'auth_pasword'  => 'IL18xmz1',
+        'semilla'	=> 'D3C0MP@52015',
+        'mode'          => 'A',
+
+    ],
+
+    'endpoint_stock_sears' => [
+        'endpoint' => 'http://200.57.173.35/ws_mercaderias',
+        'user'     => 'claroshop',
+        'pass'     => 'cl4r0sh0p.',
+        'mode'     => 'D'
+    ],
+
+    'sears_tiempo_entrega' => [
+        'stage'    => true,
+        'endpoint' => 'http://sandbox.framework.sears.com.mx/ws_mercaderias/ws_mercaderias.asmx?wsdl',
+        'usuario'      => 'ClaroshoP',
+        'password'     => 'Cl4r0$h0p17',
+        'codEmp' => '1',
+        'tienda' => '104',
+        'bandera_big_ticket' => 'S',
+        'dias_entrega'       => '5'
+    ],
+
+    'CR' => [
+        'endPoint' => 'http://sandbox.framework.sears.com.mx/?wsdl',
+        'options' => [
+            "cache_wsdl" => WSDL_CACHE_NONE,
+            "soap_version" => SOAP_1_1
+        ],
+        'max_stock' => 3,
+        'bandera_big_ticket' => 'S',
+        'credencial' => array(
+            'usuario' => 'Sears',
+            'password' => '$34r5.20015',
+            'id_empresa' => 2
+        ),
+        'entrada' => [
+            'usuario'  => 'ADMONCLARO',
+            'password' => 'Cl4r0123'
+        ],
+    ],
+
+    //********SERVICIOS EMARSYS **********
+    'purchaseEventsMkt' => 'Dev',  //"Dev" desarrollo y qa; "Prod" release y produccion
+    'emarsysTest'	=> true,
+    'emarsysAPI'=> [
+        'username'	=> 'claroshop003',
+        'secret'        => 'sXWa6ly4DNY79T0df7Pl',
+        'endpoint'	=> 'https://api.emarsys.net/api/v2/',
+        'listaClientes' => '289458706',
+        'news_letter'   => 172240721,
+        'sliderApp'        => [
+            'show'           => false, //Para saber si se ejecuta emarsys o no
+            'itemsMarketing' => 4,    //Numero de slides a mostrar de marketing
+            'itemsEmarsys'   => 4,    //Numero de slides a mostrar de emarsys
+            'maxMarketing'   => 7,    //Numero de slides marketing
+            'maxEmarsys'     => 7,    //Numero de slides emarsys
+            'maxSlides'      => 8,    //Numero maximo de sliders
+            'logica'         => 1,    //Logica de slides
+            'proxyImage'     => 'https://imagenes.claroshop.com'
+        ]
+    ],
+
+    //********SERVICIOS GOOGLE **********
+    'tagManagerId'    => 'GTM-MX7ZV2',
+    'tagManagerIdbis' => 'GTM-KDGBG4',//@fixme validar que ya no se usa
+    'google'=> [
+        'key_shortener'=>'AIzaSyB7PBFhNg6qreditjcaxAoTaSKnuGPj8ek',
+        'adwords' => [
+            'conversion' => [
+                'id'	   => 878908847, //Ver cual es el de desarrollo
+                'lenguaje' => 'en', //Ver si es lo correcto el lenguaje
+                'formato'  => '3', //Ver que es esto del formato
+                'color'    => 'ffffff',
+                'label'    => 'rsXsCKiDwGoQr6uMowM',
+                'currency' => 'MXN',
+                'origen'   => 'web',
+                'ambiente' => 'Dev'
+            ]
+        ],
+        'GoogleUrlApiService' => 'https://www.googleapis.com/urlshortener/v1/url',
+        'Analytics' => [
+            'accessType'      => 'online',
+            'applicationName' => 'Analytics',
+            'clientId'        => '108181284093182802900' ,
+            'scope'           => [
+                'https://www.googleapis.com/auth/analytics.readonly'
+            ],
+            'idProfile'       => 110401561
+        ],
+        'configAnalytics' => [
+            "type"                        => "service_account",
+            "project_id"                  => "analytics-163800",
+            "private_key_id"              => "89585c2de057fcff460cc078d990094deda77336",
+            "private_key"                 => "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDG9Ox3cffzJJgo\n13Dr7VqrXoDL8Xc543PB4GSRdOhChiCDzRyY0By5o0XaGYNrDpTtYLAqiZ7Z8o/e\nPQGZ0CYYxC+1tjyaO5YV2u10AEzmRcfhFZAtwwEnA1MHy10XzpFxpH6PV17TA+ir\n5XxeTRPSHL1zl1pOnMAXSFwSkRIEaHm4WS2hboH5rYYPnzKKwUGfo5JJTcwA25JE\niEkG017kDbECykvicsprF66T2KGaNUAjd78gg5O/3dW3NfEaer/b+xRePG6byPbU\n/xCMEny+hZZhqcYJRBqzEqwABWXwgIeopPos05CeHHHHSqsXCDKOczQdcCpYH2g9\nP3fSDGXPAgMBAAECggEAdKHSGbeLBlN2i8K4ZOYw1/M/h88W+K2ZB5fW/NpO6eid\nGQbd88tUe5L2eQOp4dGbhoi+3UDuCZBDvKGA1b2LB8vCuECLyFKUCl3cA7vFWNyh\nbxbn/ZuqikdNnm0eNr2Wz8sBkmBCq2tIM7UFMnb23p6QhTm97AXCKiP2LcAzkrbu\n3kWkySb8pAMR2EthfIcgyl9ExynUeqI2vs/Z1sU/tQioIx+j+8VU8MVWEK3D6bgI\n70m9gEHEed2K79vXOVcJ8bjLDaryRardDCIXStroCPg3CNMMYYIbR5ereEL7N36X\npvwu/4iOyXre5C0VoVS8Ji2VJmLUoU/YnY5f64h4kQKBgQD08pSpQ1uquxSa1h7O\n9DyK+q8iN2PUah5WfClZr+6I5szkPMh7j4HkIKxmdGWENV2kuqknELz9GsT03A0d\nc5qEpjfOIpwFiBIcHTN061CXJddyMSoGAQCwnxUMbgqFQBg78vcPoVd5QVRllRdp\nBqwsJ6YrZ2QgPBSaj11v8SVMyQKBgQDP7xjckmVZF/cNoAromk5HPHPrnNWgUn64\n0GIFuxqNhD5wntrHbqv+3wYQ9OsjXiOjb8W7rWcSIgdQpQ+hy5pG/8VxAji/slyN\n5V8y35yVLVGAIV9kNRPyKNBnwGuxJ/Z9tuSn6AkE9vDWm+UO3BwL+rkMY7btm/7n\nNDQFNrsh1wKBgE0c8WA4LGubaek0744Hpee689e5yFve7J4diIcLs/S1dFuGJzd+\n/k1rW9sFWdA9XLW3bfk2c8ja3JaZkCdtdX+9NGRY0PWM2Oaw6rosOrra1vDEOY6a\nUjVIX8ACBJ3eh8KXwt/Q01EBGCjCvxP5Xcqo0M9pRURApdvitm+/YxbBAoGBAIhc\n0d4dN8/E0qUh1uWSBFHdSFw03zgjwa0sI4yElrZGCrjKxMlTQAKGejD2nZn1K8QM\nEg2xe029+TQe+3Bs2MFFDVO+VD8LFn2L9fGkCckfDjrMKAXMdUczEvFnlHh6r8Dk\nB3JBzmBuHaVwWTh0iwQkKeUBI78RtYokhxUAPprDAoGAWxedmsejgOKPvTYNm6Dl\nmWIhrPu6hfSEXnsmr6vEaOzvcl/MLQOcjr65ajTOoUpDJqnz3G+hIRtOqjFu5t/L\nwkO5VGTLnoPaaLKiF60vnsP7Fo3safrzHokP3chBDWQerFHjEbMmAUmdp8/SmTtA\nC9eiiDaLQekbXS+xcCiB8ow=\n-----END PRIVATE KEY-----\n",
+            "client_email"                =>  "983032769795-compute@developer.gserviceaccount.com",
+            "client_id"                   => "108181284093182802900",
+            "auth_uri"                    => "https://accounts.google.com/o/oauth2/auth",
+            "token_uri"                   => "https://accounts.google.com/o/oauth2/token",
+            "auth_provider_x509_cert_url" => "https://www.googleapis.com/oauth2/v1/certs",
+            "client_x509_cert_url"        => "https://www.googleapis.com/robot/v1/metadata/x509/983032769795-compute%40developer.gserviceaccount.com",
+        ],
+    ],
+    //********SERVICIOS FACEBOOK **********
+    'facebook' => [
+        'appId'     => '944763055583404',//@fixme ver donde se usan y ver si podemos quitarlos
+        'appSecret' => 'beeece9311f5f3a87f8e5bb87ed08a4b',////@fixme ver donde se usan y ver si podemos quitarlos
+        'purchase' => [
+            'appId' => '439349822923006',//Ver cual es el de desarrollo
+            'currency' => 'MXN'
+        ],
+        'ambiente' => 'Dev',//Estas banderas estan por no tener el control en desarrollo
+        'origen' => 'web'
+    ],
+
+    //********SERVICIOS FORMAS DE PAGO **********
+    'boxpay'=> [
+        "TRANSACTION_KEY"   => "da4b9237bacccdf19c0760cab7aec4a8359010b0",  //id_pos
+        "VAK"               => "1c6637a8f2e1f75e06ff9984894d6bd16a3a36a9",
+        "MERCHANT_ID"       => "decompras",
+        "CURL_URL"          => "http://tcdla-dev.plazavip.com/pay"
+    ],
+    'paypal_express' => [
+        'url'               => 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+        'api_user'          => 'vendedor_api1.decompras.com',
+        'api_password'      => '1407340137',
+        'api_signature'     => 'AtjxHXvFOf5tVpsDp33Y6n5F3uSzA2e4T96TbTBPFO0QtxCqUPhyIHou',
+        'api_endpoint'      => 'https://api-3t.sandbox.paypal.com/nvp',
+        'api_version'       => 124,
+        'api_return_url'    => $basePath.'caja/paypal/procesar/',
+        'api_cancel_url'    => $basePath.'caja/forma-pago/'
+    ],
+    '3d_secure' => [
+        'KEY_SECRET' => 'cl40ro78sh3op9414042',
+        'SID'        => '225248',
+        'RETURN_URL' => $basePath.'caja/authsecure/',
+        'CANCEL_URL' => $basePath.'caja/forma-pago/',
+        'TANK_PAGE'  => $basePath.'caja/secure/success/'
+    ],
+    'puntossinfin' => [
+        'opciones'    => [],
+        'habilitado'  => false,
+        'IdFormaPago' => 4453, //desarrollo
+        'endpoint'    => 'http://ksd-dev.cloudapp.net/wsPuntosSinFin/wsPuntosSinFin.asmx?wsdl'    //desarrollo
+        //'IdFormaPago' => 4442, //QA
+        //'IdFormaPago' => 4451, //Produccion
+        //'endpoint' => 'http://www.puntosinfin.com/wsPuntosSinFinCS/wsPuntosSinFin.asmx?wsdl'    //produccion
+    ],
+    'transfer' => [
+        'endpoint'    => 'http://187.200.120.16:8004/OPM/OpenAPI/services?wsdl',
+        'merchantId'  => '400c8a81488520fc01488525948c0000',
+        'opciones'    => [],
+        'IdFormaPago' => 4448,
+    ],
+    'amex' => [
+        'urlWSDL' => 'http://sandbox.framework.sears.com.mx/?wsdl',
+        'credencial' => [
+            'usuario' => 'ClaroShop',
+            'password' => 'Cl4r05h0p.2016',
+            'id_empresa' => 3
+        ],
+        'entrada' => [
+            'usuario'  => 'ADMONCLARO',
+            'password' => 'Cl4r0123'
+        ],
+    ],
+    'payu' => [
+        'urlPayu' => 'https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi',
+        'key'     => '4Vj8eK4rloUd272L48hsrarnUA',
+        'login'   => 'pRRXKOl8ikMmt9u',
+        'merchantId' => '508029',
+        'accountId'  => '512324',
+        'test'       => false
+    ],
+    'wsSearsStatus' => 'http://140.240.200.34/WSiDocSEARS/ConsultaiDoc.asmx?wsdl',//Stratus
+    'mercadoPago' => [
+        'PUBLIC_KEY'   => 'TEST-e1b67b73-03da-4b4d-b489-b3781231b819',
+        'ACCESS_TOKEN' => 'TEST-2391315972382591-111218-2369dc7f86fd409799b6f670b36e634d__LC_LB__-141882905',
+    ],
+    'apiNipTarjeta' => [//Validacion del nip de la tarjeta para departamentales
+        'url' => 'http://10.115.3.162:8080/WebServices2.1/NipValidator?wsdl',
+        'options' => [ 'trace' => 1 ],
+    ],
+    //********INDICES APP **********
+    'mensaje_actualizacion' => [
+        'subtitle' => 'Actualiza tu app ahora!',
+        'title'    => 'Actualizacion disponible',
+        'thanks'   => 'No, gracias',
+        'updateMessageAccepted' => 'Actualizar',
+        'Android' => [ 'url' => 'https://play.google.com/store/apps/details?id=com.americamovil.claroshop'],
+        'iOS'     => [ 'url' => 'https://itunes.apple.com/mx/app/claro-shop/id1057314145']
+    ],
+
+    //******* OTROS ******************
+    'cyber'=> [
+        "TRANSACTION_KEY"   => "E7S25IFpiy/fKWc2LRDdJbxhVlqRRwCxVhzAbBm2n6M/4mENR1PFOIi1fbPO2F3O75kCJAeFvnhBTRwM3q0x9a/Dla5lGh5mOMQNQkoRHzsTzVeHo3NwROlzCMSrDRC5u/VmGPrplgLPgw/502DC8ys81yy5y5F3V7uUGNbsGp8vSr6hh8jZIVlcZz912rjtoZFjuDReBEYorcINxvSrrR17qeMRkjz59k8rS8AykMaaO3la3Sl8+k7xqqGsGmAHV/jQ8ZV1iPQY/eslHHv3HjvbSRuKwSwpThZyHuesr9oe+vFMX3SeUj4J2+WV9rG/0n1q0WMHWKZuBXUmzwuHZg==",
+        "MERCHANT_ID"       => "decompras",
+        "WSDL_URL"          => "https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.127.wsdl",
+        "WSDL_AKAMAI"       => "https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor/CyberSourceTransaction_1.127.wsdl"
+    ],
+    "pagos" => [
+        'netpay'=> [
+            "httpGateway"	=> "http://200.57.87.243:9855",
+            "storeID"           => "1200133",
+            "username"          => "POS",
+            "password"          => "decompras",
+            "mode"              => "A"
+        ],
+    ],
+    'captcha' => [
+        'KEY'=>'6LdXSwsTAAAAAHa8REoxZWKEf0Ym5w01GkDb7E3q',
+        'KEY_SECRET'=>'6LdXSwsTAAAAAMZaWJmUjEbKRk59YXv77F2FU98R',
+        'URL_CAPTCHA'=>'https://www.google.com/recaptcha/api/siteverify'
+    ],
+    'olark' => [
+        'identify'=>'9935-670-10-3951',
+        'system_group' => 'd1c2f8ebb7cb844375c9cf71fb8c822d'
+    ],
+    'llave_encriptacion_tdc' => 'K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4',
+    'tcSears' => [
+        'seed'  => 'SEMILLA',
+        'url'   => 'http://sears.d.plazavip.com/servicio/servicio.php?instancia_produccion=1',
+        'credentials' => [
+            'user' => 'zeke',
+            'pass' => 'zmedina'
+        ],
+        'mode'=>'D'
+    ],
+    'fancy' => [
+        'urlPrecioDolar'=> 'https://api.fancy.com/v1/currencies/rate?token=QE2uJRjjGpjZCrvHTN&currency=MXN',
+        'urlCalculate'  => 'https://api.fancy.com/v1/claroshop/calculate?token=QE2uJRjjGpjZCrvHTN',
+        'urlCheckout'   => 'https://api.fancy.com/v1/claroshop/checkout?token=QE2uJRjjGpjZCrvHTN',
+        'urlStatus'     => 'https://api.fancy.com/v1/orders?token=QE2uJRjjGpjZCrvHTN',
+        'urlCancel'     => 'https://api.fancy.com/v1/claroshop/cancel?token=QE2uJRjjGpjZCrvHTN',
+        'mode'          => 'P'
+    ],
+    'single' => [
+        'provider_id' => '3F1AC44F-125B-4B28-B519-061CBC27A24D',
+        'user'        => 'claroShop',
+        'pass'        => 'C14r0$h0p',
+        'key'         => 'MKY21ASTR45YUPC1',
+        'url'         => 'http://sanborns.com.mx/wsSanbornsAPI/perfiles.asmx?wsdl'
+    ],
+    'cuenta_claro' => [
+        'user'     => 'mC5ubMyZ/AGIW43SQfGBVA==',
+        'pass'     => '1CDX04HPxEBS9w/uiFn+Lw==',
+        'empresa'  => '073',
+        'tipo'     => 1,
+        'endpoint' => 'http://140.240.200.34/WSiDocSEARS/ConsultaiDoc.asmx?wsdl',
+        'mode'     => 'D', /*P - Producción, D - Desarrollo, T - Test*/
+    ],
+    'GigyaService' => [
+        'username'	=> '3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR',
+        'secret'        => 'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU=',
+        'apiMethod'     => 'socialize.notifyLogin'
+    ],
+    'fedex' => [
+        'prod'           => FALSE,
+        'key'            => 'LgiWacWCmeeZlgQq',
+        'password'	 => 'v1KJYPOKhqVcsSOXVJsSbNrDe',
+        'accountNumber'  => '510087763',
+        'meterNumber'    => '118637391',
+        'dropOffType'    => 'REGULAR_PICKUP',
+        'approvedCodes'  => [
+            'FEDEX_EXPRESS_SAVER',  // 1-3 business days
+            'STANDARD_OVERNIGHT',   // overnight
+        ],
+    ],
+    'ElasticSearch' => [
+        'indexName' => 'claroshop',
+        'typeName'  => 'producto',
+        'endpoint'  => 'http://elasticsearch.claroshop-services.net',
+        'options'   => [
+            'curloptions' => [
+                CURLOPT_POST              => 1,
+                CURLOPT_DNS_CACHE_TIMEOUT => -1,
+                CURLOPT_RETURNTRANSFER    => 1,
+                CURLOPT_SSL_VERIFYPEER    => FALSE,
+                CURLOPT_SSL_VERIFYHOST    => FALSE,
+            ]
+        ]
+    ],
+    'ApiRestSelfService' => [
+        'url'  => 'http://lince.dev.claroshop.com/ApiRest',
+        'user' => '',
+        'pass' => '',
+        'options' => [
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+        ]
+    ],
+    'thank_you_page' => [
+        'correo_deposito' => 'deposito@claroshop.com',
+        'correo_clientes' => 'clientes@claroshop.com',
+        'correo_datos_personales' => 'datospersonales@claroshop.com',
+        'dias_telmex' => 5
+    ],
+    'apiSms' => [
+        'endpoint' => 'http://broadcaster.cm-operations.com/broadcaster/bin/tu_empresa.php',
+        'username' => 'claroshop558a1e66fd795a1'
+    ],
+    'microsoft' => [
+        'url'       => 'http://pedro.delacruz:E4ShbyXyEvRwsuO3@intcomex-v2.dev.claroshop.com/v1',
+        'apiKey'    => '4Vj8eK4rloUd272L48hsrarnUA',
+        'accessKey' => 'pRRXKOl8ikMmt9u',
+    ],
+    'gigya'=> [
+        'key'=>'3_stvrhSurOas1DctlVg76xul8UaUpLbxy0Zqv_0fbDIKoZNyICrrPc_nNdspHl-GR', // release.claroshop.com
+        'secret'=>'Wl/jeXkpGG/AelI/q1a1gNRN1JHRq6cs8+oYfqekmHU='
+        //cd  'key'=>'3_i1QeZqrz6xSX5fF_TanfzOBYK_tqHpRtD6ylvBZI5kpyIh7wQBpeYSAMVIPJ7T27' // claroshop.com
+    ],
+    'inbursa'=> [
+        'username' => 'inbursa01',
+        'password' => 'FO7gnoGg9KGqxjNjWkRt',
+        'httpGateway' => 'https://easygetpaid.prosa.com.mx/egpTestR/motorPagos/claro/eCommerce'
+    ],
+    'fincado_desde' => 'app-QA',
+    'socialMedia' => [
+        'facebook' => [
+            'shareUrl' => "https://www.claroshop.com/producto/",
+            'redirectUrl' => $basePath."/redirect-share/"
+        ],
+        'twitter' => [
+            'shareUrl' => "https://www.claroshop.com/producto/"
+        ],
+        'whatsapp' => [
+            'shareUrl' => "https://www.claroshop.com/producto/"
+        ]
+    ],
+    //*****************MICROSERVICIOS*************************
+    'cart_micro_service' => [
+        'httpOptions' => [
+            'adapter'      => 'Zend\Http\Client\Adapter\Socket',
+            'persistent'=>false,
+
+            'sslverifypeer' => false,
+            'sslallowselfsigned' => true,
+            'sslusecontext'=>true,
+
+            'ssl' => array(
+                'verify_peer' => false,
+                'allow_self_signed' => true,
+                'capture_peer_cert' => true,
+            ),
+
+        ],
+        'request' => [
+            'get'    => 'https://carritoms.dev.claroshop.com/v1/cart/view?id=',
+            'post'   => 'https://carritoms.dev.claroshop.com/v1/cart/create',
+            'put'    => 'https://carritoms.dev.claroshop.com/v1/cart/update?id=',
+            'delete' => 'https://carritoms.dev.claroshop.com/v1/cart/delete-cart?id='
+        ]
+    ],
+
+];
+
+
+
+======================================================================
+R2T3 grep encrypt patterns in caja-pagos-api app  (8.4s)
+======================================================================
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/FacebookRedirectLoginHelper.php:256:    if (function_exists('mcrypt_create_iv')) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Facebook/FacebookRedirectLoginHelper.php:257:        $buf = mcrypt_create_iv($bytes, MCRYPT_DEV_URANDOM);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:332:     * Encripta el numero, mes y año de las tarjetas, con la llave que recibe por parámetro
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:355:     * Desencripta por Rc4
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/CardOneclick.php:57:     * Regresa la fecha de expiracion de mes de la tarjeta completo, se usa para devolver la cadena encriptada
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/CardOneclick.php:65:     * Regresa la fecha de expiracion de la tarjeta completo, se usa para devolver la cadena encriptada
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Cybersource.php:228:                $servicio->setKey($config["llave_encriptacion_tdc"]);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:80:     * Guarda datos de una llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:82:     * @param string $llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:87:    public function guardar($llave, &$datos, $expiracion = 0)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:89:        return $this->mc->set($llave, $datos, $expiracion);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:93:     * Obtiene datos de una llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:95:     * @param string $llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:98:    public function obtener($llave)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:101:    		$data = $this->mc->get($llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:119:     * Elimina una llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:121:     * @param string $llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:124:    public function eliminar($llave)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorCache.php:126:        return $this->mc->delete($llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:24:    private $_cache_llave = null;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:172:        foreach ($this->_config['servidores'] as $llave => $valor) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:173:            $pesos[$llave] = $valor['peso'];
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:176:        foreach ($pesos as $llave => $valor) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:177:            $pesos[$llave] = ($valor / $temp) * mt_rand(1, 5);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:185:            $llave = array_shift($pesos);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:187:                $this->_config['servidores'][$llave]['host'],
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:283:     * @param string $campo_llave Campo que desea como llaves de arreglo
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:286:    public function obtener($sql = null, $campo_llave = null)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:296:        $temp = $this->obtenerCache($sql . $campo_llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:318:            if ($campo_llave && isset($fila[$campo_llave])) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:320:                    $final[$fila[$campo_llave]] = $fila;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:350:     * @param string $campo_llave Campo que desea como llaves de arreglo
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:353:    public function obtenerGrupos($sql = null, $campo_grupo, $campo_llave = null)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:363:        $temp = $this->obtenerCache($sql . $campo_grupo . $campo_llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:377:            if ($campo_llave && isset($fila[$campo_llave])) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:379:                    $final[$fila[$campo_grupo]][$fila[$campo_llave]] = $fila;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:448:    public function ejecutar_store($sql, $campo_llave = null)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:459:        $temp = $this->obtenerCache($sql . $campo_llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:586:     * @param string|null $llave
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:589:    public function cache($segundos = null, $llave = null)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:595:        $this->_cache_llave = $llave;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:601:     * Crea una llave de cache basado en un arreglo parametrizado
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:609:        $llave = "";
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:620:            $llave = implode( "_", $datos_arreglo );
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:623:            $llave = "";
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:625:        return $llave;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:639:        $this->_cache_llave = null;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:661:     * @param string $llave_alterna
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:664:    private function obtenerCache($llave_alterna)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:671:            if (empty($this->_cache_llave)) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:672:                $this->_cache_llave = md5($llave_alterna);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:675:                $resultado = $this->gestor_cache->obtener($this->_cache_llave);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:679:                            $this->_cache_llave . '" con expiraci&oacute;n de ' .
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:683:                    $this->_cache_llave = null;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:705:            $this->gestor_cache->guardar($this->_cache_llave, $datos, $this->_cache_tiempo);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:708:                    $this->_cache_llave . '" por ' . $this->_cache_tiempo . ' seg.');
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:714:            $this->gestor_cache->guardar($this->_cache_llave, $datos, $this->_config['auto_cache']);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:717:                    $this->_cache_llave . '" por ' . $this->_config['auto_cache'] . ' seg.');
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/GestorMySQL.php:721:        $this->_cache_llave = null;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Fancy/FancyApi.php:153:        $cache_llave = $bd->crearLlave(array(
+
+
+
+
+======================================================================
+R2T4 grep datostarjeta + encrypt functions in caja archive  (29.2s)
+======================================================================
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/not-use/Datostarjeta.php__
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/tests/config/database/tienda.sql
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Clientes.class.php
+---FUNCS---
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cyber/Service.php:336:    public function encrypt()
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/AesCtr.php:20:    public static function encrypt($plaintext, $password, $nBits)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/AesCtr.php:91:    public static function decrypt($ciphertext, $password, $nBits)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/AESEncrypt.php:9: * AES Cipher function: encrypt 'input' with Rijndael algorithm
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/Aes.php:8:     * AES Cipher function [§5.1]: encrypt 'input' with Rijndael algorithm
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cryptastic.class.php:14:    public function encrypt( $msg, $k, $base64 = false ) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Cryptastic.class.php:48:    public function decrypt( $msg, $k, $base64 = false ) {
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/AES.php:8: * AES Cipher function: encrypt 'input' with Rijndael algorithm
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Login/CryptoAES.php:26:    public function encrypt($xml)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Login/CryptoAES.php:39:    public function decrypt($xml)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Login/LoginSears.php:58:    private function encriptData($usuario,$password)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/CuentaReciboTmx.php:65:    public function encrypt($data)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/CuentaReciboTmx.php:87:    public function decrypt($data)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Paypal.class.php:155:    public function encryptButton($parameters)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/funciones.php:1573:function encryptSecure($data)
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/funciones.php:1592:function encryptResponse($obj,$key) 
+
+
+
+
+======================================================================
+R2T5 explore tienda build job for app php code  (2.7s)
+======================================================================
+2049
+lastFailedBuild
+lastStableBuild
+lastSuccessfulBuild
+lastUnstableBuild
+lastUnsuccessfulBuild
+legacyIds
+permalinks
+---PHP---
+
+
+
+
+======================================================================
+R2T6 scoped key grep in tienda+app config archives  (2.2s)
+======================================================================
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/420/archive/ClaroShop/Desarrollo/alfa/local.php:442:    'llave_encriptacion_tdc' => 'K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4',
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/31/archive/Webapp/QA/local.php:383:    'llave_encriptacion_tdc' => 'K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4',
+
+

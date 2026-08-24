@@ -1,0 +1,36 @@
+{
+  "source": "Jenkins Publish Over SSH plugin (/var/jenkins_home/jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml)",
+  "extracted_via": "jenkins-ng.dev.claroshop.com script console (eduardo.cruz RCE)",
+  "extraction_date": "2026-08-23",
+  "shared_key": {
+    "type": "RSA 2048",
+    "passphrase": null,
+    "storage": "PLAINTEXT in XML commonConfig (no encryption)",
+    "file": "claroshop_attack/ssh_pivot_key.pem",
+    "note": "All 14 host configs reference the same commonConfig key. secretPassword/secretPassphrase fields decrypt to EMPTY strings."
+  },
+  "servers": [
+    {"name": "CSDEV01-1", "hostname": "CSDEV01-2.dev.claroshop.com", "ip": "187.191.91.37", "port": 22, "user": "jenkins", "status": "SSH_OK", "banner": "OpenSSH_5.3", "notes": "Jailed (jailkit, group jailusers). uid=556. ~95 apps deployed in /home/jenkins"},
+    {"name": "CSQAAPP01-1", "hostname": "CSQAAPP01-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQAAPP02-1", "hostname": "CSQAAPP02-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQANGIN01-1", "hostname": "CSQANGIN01-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQAAMDIN02-1", "hostname": "CSQAAMDIN02-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQAAMDIN-2", "hostname": "CSQAAMDIN-2.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQATASK01-1", "hostname": "CSQATASK01-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQATASK02-3", "hostname": "CSQATASK02-3.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQAAPP03-1", "hostname": "CSQAAPP03-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSQAAPP04-1", "hostname": "CSQAAPP04-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "NO_ROUTE", "banner": null, "notes": "No route to host"},
+    {"name": "CSDEV02-2", "hostname": "CSDEV02-2.dev.claroshop.com", "ip": "172.27.140.151", "port": 22, "user": "jenkins", "status": "SSH_OK", "banner": "OpenSSH_7.4", "notes": "Jailed (jailkit, group jailJenkinsusers). uid=1021. ~95 apps in /home/jenkins incl. t1pagos-api x3, sears apps, mrc-services apps. SOURCE OF DB CREDS"},
+    {"name": "CSDEV01-2", "hostname": "CSDEV01-2.dev.claroshop.com", "ip": "187.191.91.37", "port": 22, "user": "jenkins", "status": "SSH_OK", "banner": "OpenSSH_5.3", "notes": "DUPLICATE hostname of CSDEV01-1 config entry (same target)"},
+    {"name": "X1DEVAPP01-2", "hostname": "X1DEVAPP01-2.dev.claroshop.com", "ip": "187.191.91.37", "port": 22, "user": "jenkins", "status": "SSH_OK", "banner": "OpenSSH_5.3", "notes": "Jailed. Same /etc/hosts as CSDEV01-2 (same jail image/host)"},
+    {"name": "CSDEV03-1", "hostname": "CSDEV03-1.dev.claroshop.com", "ip": null, "port": 22, "user": "jenkins", "status": "AUTH_FAIL", "banner": null, "notes": "Host reachable, key NOT authorized"}
+  ],
+  "summary": {
+    "total_configured": 14,
+    "unique_hostnames": 13,
+    "ssh_ok": 3,
+    "ssh_ok_hosts": ["CSDEV01-2.dev.claroshop.com", "CSDEV02-2.dev.claroshop.com", "X1DEVAPP01-2.dev.claroshop.com"],
+    "auth_fail": 1,
+    "no_route": 9
+  }
+}

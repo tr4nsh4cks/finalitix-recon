@@ -1,0 +1,1463 @@
+{
+ "sears/api-sf-productos :: .env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=laravel\nDB_PASSWORD=laravel\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "sears/api-sf-productos :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('USERVAR_DB_DATABASE', 'forge'),\n            'username' => env('USERVAR_DB_USERNAME', 'forge'),\n            'password' => env('USERVAR_DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "            'driver' => 'mysql',\n            'url' => env('DATABASE_URL'),\n            'host' => env('USERVAR_DB_HOST', '127.0.0.1'),\n            'port' => env('USERVAR_DB_PORT', '3306'),\n            'database' => env('USERVAR_DB_DATABASE', 'forge'),\n            'username' => env('USERVAR_DB_USERNAME', 'forge'),\n            'password' => env('USERVAR_DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_claroshop_ms :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=root\nDB_PASSWORD=\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_claroshop_laravel :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=root\nDB_PASSWORD=\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/conciliacion_mesa_sears :: web/config/Mylocal.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "        'host'      => getenv('USERVAR_DB_HOST'),\n        'username'  => getenv('USERVAR_DB_USERNAME'),\n        'password'  => getenv('USERVAR_DB_PASSWORD'),\n        'database'  => getenv('USERVAR_DB_DATABASE'),\n        'port'      => getenv('USERVAR_DB_PORT'),  \n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "    'bd' => array(\n        'driver'    => 'mysql',\n        'host'      => getenv('USERVAR_DB_HOST'),\n        'username'  => getenv('USERVAR_DB_USERNAME'),\n        'password'  => getenv('USERVAR_DB_PASSWORD'),\n        'database'  => getenv('USERVAR_DB_DATABASE'),\n        'port'      => getenv('USERVAR_DB_PORT'),  \n        'charset'   => 'utf8',\n        'collation' => 'utf8_unicode_ci',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/conciliacion_mesa_sears :: web/config/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "        'host'      => getenv('USERVAR_DB_HOST'),\n        'username'  => getenv('USERVAR_DB_USERNAME'),\n        'password'  => getenv('USERVAR_DB_PASSWORD'),\n        'database'  => getenv('USERVAR_DB_DATABASE'),\n        'port'      => getenv('USERVAR_DB_PORT'),  \n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "    'bd' => array(\n        'driver'    => 'mysql',\n        'host'      => getenv('USERVAR_DB_HOST'),\n        'username'  => getenv('USERVAR_DB_USERNAME'),\n        'password'  => getenv('USERVAR_DB_PASSWORD'),\n        'database'  => getenv('USERVAR_DB_DATABASE'),\n        'port'      => getenv('USERVAR_DB_PORT'),  \n        'charset'   => 'utf8',\n        'collation' => 'utf8_unicode_ci',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_geotrack_t1envios- :: composer.lock": [
+  {
+   "term": "3310",
+   "data": "                \"type\": \"git\",\n                \"url\": \"https://github.com/symfony/polyfill-ctype.git\",\n                \"reference\": \"a3cc8b044a6ea513310cbd48ef7333b384945638\"\n            },\n            \"dist\": {\n                \"type\": \"zip\",\n                \"url\": \"https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638\",\n                \"reference\": \"a3cc8b044a6ea513310cbd48ef7333b384945638\",\n                \"shasum\": \"\"\n            },\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_geotrack_t1envios- :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\nSESSION_DRIVER=database\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_geotrack_t1envios- :: config/.env.prod": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\nSESSION_DRIVER=database\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_geotrack_t1envios- :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "      'database' => env('DB_DATABASE', 'laravel'),\n      'username' => env('DB_USERNAME', 'root'),\n      'password' => env('DB_PASSWORD', ''),\n      'unix_socket' => env('DB_SOCKET', ''),\n      'charset' => env('DB_CHARSET', 'utf8mb4'),\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "      'database' => env('DB_DATABASE', 'laravel'),\n      'username' => env('DB_USERNAME', 'root'),\n      'password' => env('DB_PASSWORD', ''),\n      'unix_socket' => env('DB_SOCKET', ''),\n      'charset' => env('DB_CHARSET', 'utf8mb4'),\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "      'database' => env('DB_DATABASE', 'laravel'),\n      'username' => env('DB_USERNAME', 'root'),\n      'password' => env('DB_PASSWORD', ''),\n      'charset' => env('DB_CHARSET', 'utf8'),\n      'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "      'database' => env('DB_DATABASE', 'laravel'),\n      'username' => env('DB_USERNAME', 'root'),\n      'password' => env('DB_PASSWORD', ''),\n      'charset' => env('DB_CHARSET', 'utf8'),\n      'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: app/Mail/SendValidation.php": [
+  {
+   "term": "mrc-services",
+   "data": "            \n            $local = \"/api_fincado_sanborns/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/browserify-sign/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/caniuse-lite/data/agents.js": [
+  {
+   "term": "3310",
+   "data": "module.exports={A:{A:{J:0.0131217,D:0.00621152,E:0.0363648,F:0.0800026,A:0.0145459,B:0.683659,oB:0.009298},B:\"ms\",C:[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oB\",\"J\",\"D\",\"E\",\"F\",\"A\",\"B\",\"\",\"\",\"\"],E:\"IE\",F:{oB:962323200,J:998870400,D:1161129600,E:1237420800,F:1300060800,A:1346716800,B:1381968000}},B:{A:{C:0.008712,K:0.004267,L:0.004356,G:0.004356,M:0.008712,N:0.013068,O:0",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/crypto-browserify/test/public-encrypt.js": [
+  {
+   "term": "3310",
+   "data": "var crypto1 = require('../')\nvar rsa = {\n  'private': '2d2d2d2d2d424547494e205253412050524956415445204b45592d2d2d2d2d0a4d4949456a77494241414b422f6779376d6a615767506546645659445a5752434139424e69763370506230657332372b464b593068737a4c614f7734374578430a744157704473483438545841667948425977424c67756179666b344c4749757078622b43474d62526f337845703043626659314a62793236543976476a5243310a666f484444554a4738347561526279487161663469367a74346756522b786c4145496a6b614641414b38634f6f58415431435671474c4c6c6a554363684c38500a6a61486a2f7972695a2f53377264776c49334c6e41427877776d4c726d522f7637315774706d4f2f614e47384e2",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/crypto-browserify/test/sign.js": [
+  {
+   "term": "3310",
+   "data": "\nvar rsa = {\n  'private': '2d2d2d2d2d424547494e205253412050524956415445204b45592d2d2d2d2d0a4d4949456a77494241414b422f6779376d6a615767506546645659445a5752434139424e69763370506230657332372b464b593068737a4c614f7734374578430a744157704473483438545841667948425977424c67756179666b344c4749757078622b43474d62526f337845703043626659314a62793236543976476a5243310a666f484444554a4738347561526279487161663469367a74346756522b786c4145496a6b614641414b38634f6f58415431435671474c4c6c6a554363684c38500a6a61486a2f7972695a2f53377264776c49334c6e41427877776d4c726d522f7637315774706d4f2f614e47384e2b31706f2b5177616768546b79513",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/es5-ext/string/#/normalize/_data.js": [
+  {
+   "term": "3310",
+   "data": "\t\t13308: [[50, 57, 26085], 256],\n\t\t13309: [[51, 48, 26085], 256],\n\t\t13310: [[51, 49, 26085], 256],\n\t\t13311: [[103, 97, 108], 256]\n\t},\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/hash-base/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/miller-rabin/test/api-test.js": [
+  {
+   "term": "3310",
+   "data": "                   '8b64ebada275cfb18a446a0150e5fdaee246244c5f002ce0' +\n                   'aca97584be1745f2dd1eea2849c52aac8c4b5fb78a1c4da7' +\n                   '052774338d3310a6e020c46168cb1f94014e9312511cc4fb' +\n                   '79d695bb732449f0e015745b86bfa371dc6ca7386e9c7309' +\n                   '5549c2e4b8002873', 16);\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/object.values/CHANGELOG.md": [
+  {
+   "term": "3310",
+   "data": "- Tests [`b02e54e`](https://github.com/ljharb/Object.values/commit/b02e54ef157c56117b390cb1db95f7d48163a838)\n- package.json [`7b84f4e`](https://github.com/ljharb/Object.values/commit/7b84f4e839f75b227a5233325f064900a6032f9a)\n- Read me [`31e115b`](https://github.com/ljharb/Object.values/commit/31e115b31af2eabf4db518343310f2bb42e7fa04)\n- Initial commit [`01271a5`](https://github.com/ljharb/Object.values/commit/01271a51976524c62bac00d8af9af3ede72831dd)\n- Implementation. [`9a0c315`](https://github.com/ljharb/Object.values/commit/9a0c31554899f411d31d3b8343c754eb2c19842e)\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/spdy-transport/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/webpack-log/node_modules/uuid/README.md": [
+  {
+   "term": "3310",
+   "data": "// E.g. the one here was generated using this modules `uuid` CLI.\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n\n```\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=root\nDB_PASSWORD=\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/rsa.1024.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICVAIBAAJ/OwswbFo/uyC8ltGf/yA1A+gV5IGdnAgPbUSI3GzbHCA+x+TLG/tL\nvbRw3r1smppY/jkkpiVW1ErSMuN0uixp5gb78Z9rH1XpWb5WWgp3WaY/9EHMjMdO\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/rsa.1024.pub": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PUBLIC KEY-----\nMIGGAn87CzBsWj+7ILyW0Z//IDUD6BXkgZ2cCA9tRIjcbNscID7H5Msb+0u9tHDe\nvWyamlj+OSSmJVbUStIy43S6LGnmBvvxn2sfVelZvlZaCndZpj/0QcyMx06RD/0t\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/rsa.2028.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIIEjwIBAAKB/gy7mjaWgPeFdVYDZWRCA9BNiv3pPb0es27+FKY0hszLaOw47ExC\ntAWpDsH48TXAfyHBYwBLguayfk4LGIupxb+CGMbRo3xEp0CbfY1Jby26T9vGjRC1\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/rsa.2028.pub": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PUBLIC KEY-----\nMIIBBgKB/gy7mjaWgPeFdVYDZWRCA9BNiv3pPb0es27+FKY0hszLaOw47ExCtAWp\nDsH48TXAfyHBYwBLguayfk4LGIupxb+CGMbRo3xEp0CbfY1Jby26T9vGjRC1foHD\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/rsa.pass.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nProc-Type: 4,ENCRYPTED\nDEK-Info: AES-256-CBC,7A6A055AD675947A657041422F06D439\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/test_key.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQDx3wdzpq2rvwm3Ucun1qAD/ClB+wW+RhR1nVix286QvaNqePAd\nCAwwLL82NqXcVQRbQ4s95splQnwvjgkFdKVXFTjPKKJI5aV3wSRN61EBVPdYpCre\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/test_rsa_privkey.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDCFENGw33yGihy92pDjZQhl0C36rPJj+CvfSC8+q28hxA161QF\nNUd13wuCTUcq0Qd2qsBe/2hFyc2DCJJg0h1L78+6Z4UMR7EOcpfdUE9Hf3m/hs+F\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/test_rsa_privkey_encrypted.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nProc-Type: 4,ENCRYPTED\nDEK-Info: AES-128-CBC,9D916E00476DFF9E70FA4BA9E3A6CB0E\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/selfsigned/README.md": [
+  {
+   "term": "BEGIN RSA",
+   "data": "```js\n{\n  private: '-----BEGIN RSA PRIVATE KEY-----\\r\\nMIICXAIBAAKBgQCBFMXMYS/+RZz6+qzv+xeqXPdjw4YKZC4y3dPhSwgEwkecrCTX\\r\\nsR6boue+1MjIqPqWggXZnotIGldfEN0kn0Jbh2vMTrTx6YwqQ8tceBPoyuuqcYBO\\r\\nOONAcKOB3MLnZbyOgVtbyT3j68JE5V/lx6LhpIKAgY0m5WIuaKrW6mvLXQIDAQAB\\r\\nAoGAU6ODGxAqSecPdayyG/ml9vSwNAuAMgGB0eHcpZG5i2PbhRAh+0TAIXaoFQXJ\\r\\naAPeA2ISqlTJyRmQXYAO2uj61FzeyDzYCf0z3+yZEVz3cO7jB5Pl6iBvzbxWuuuA\\r\\ncbJtWLhWtW5/jioc8F0EAzZ+lkC/XuVJdwKHDmwt2qvJO+ECQQD+dvo1g3Sz9xGw\\r\\n21n+fDG5i4128+Qh+JPgh5AeLuXSofc1HMHaOXcC6Wu/Cloh7QAD934b7W0A7VoD\\r\\ndLd/JLyFAkEAgdwjryyvdhy69e516IrPB3b+m4rggtntBlZREMrk9tOzeIucVO3W\\r\\nt",
+   "ref": "master"
+  },
+  {
+   "term": "BEGIN RSA",
+   "data": "```\n\n> You can avoid key pair generation specifying your own keys (`{ keyPair: { publicKey: '-----BEGIN PUBLIC KEY-----...', privateKey: '-----BEGIN RSA PRIVATE KEY-----...' }`)\n\n### Generate Client Certificates\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sanborns :: node_modules/public-encrypt/test/1024.priv": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKulUTZ8B1qccZ8c\nDXRGSY08gW8KvLlcxxxGC4gZHNT3CBUF8n5R4KE30aZyYZ/rtsQZu05juZJxaJ0q\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_notificaciones_claro :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=root\nDB_PASSWORD=123\n\nDB_CONNECTION=mysql\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE_TIENDA=tienda\nDB_USERNAME=root\nDB_PASSWORD=123\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_notificaciones_claro :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_claroshop_alibaba :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=root\nDB_PASSWORD=\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_claroshop_alibaba :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=tienda\nDB_USERNAME=dbapiclaroshopalibaba\nDB_PASSWORD=Rzg$P6b)rBlW=rJB\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_claroshop_alibaba :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'tienda'),\n            'username' => env('DB_USERNAME', 'dbapiclaroshopalibaba'),\n            'password' => env('DB_PASSWORD', 'Rzg$P6b)rBlW=rJB'),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_sears_alibaba :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=laravel\nDB_USERNAME=root\nDB_PASSWORD=\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_sears_alibaba :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'tienda'),\n            'username' => env('DB_USERNAME', 'dbapialibaba'),\n            'password' => env('DB_PASSWORD', 'ZfK\"\\%CfA\\ke@kQ:'),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plataforma_claro_alibaba :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=root\nDB_PASSWORD=123\n\nDB_CONNECTION=mysql\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE_TIENDA=tienda\nDB_USERNAME=root\nDB_PASSWORD=123\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plataforma_claro_alibaba :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=api_alibaba\nDB_USERNAME=dbapiplataformaalibaba\nDB_PASSWORD=3$O59uVin2Z$wsACcL\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plataforma_claro_alibaba :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plataforma_claro_alibaba :: config/oauth-private.key": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIIJKgIBAAKCAgEAvROlVQdx0bKgdTMZ1zBqVk9gxyQriJMMuBYg4AoSha0UdohW\nP5vy6D/PT6hMxcHfnUFCQGkm7axt+DHnFCIy+D88y07v/MrPRGhGg5uf/5fU9riR\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: config/database.php": [
+  {
+   "term": "dbasears",
+   "data": "    $port = \"3308\";\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_DEV) !== false) {\n    //$host = 'dbasears.dev.mrc-services.io';\n    $host = '172.27.141.6';\n    $username = \"dbpetapimkp\";\n",
+   "ref": "master"
+  },
+  {
+   "term": "dbasears",
+   "data": "    $port = \"3308\";\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_QA) !== false) {\n    $host = 'dbasears.qa.mrc-services.io';\n    $username = '';\n    $password = '';\n    $port = \"\";\n} else if ((strpos(dirname(__DIR__) . \"/\", $PATH_REL) !== false) || (strpos(dirname(__DIR__) . \"/\", $PATH_PROD) !== false)) {\n    $host = 'dbasears.mrc-services.io';\n    $username = '';\n    $password = '';\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "\n$PATH_LOCAL = \"/api_marketplace_sears/\";\n$PATH_DEV = \"/marketplace-pse-admin-api.dev.mrc-services.io/\";\n$PATH_QA = \"/marketplace-pse-admin-api.qa.mrc-services.io/\";\n$PATH_REL = \"/marketplace-pse-admin-api.release.mrc-services.io/\";\n$PATH_PROD = \"/marketplace-pse-admin-api.mrc-services.io/\";\n\nif (strpos(dirname(__DIR__) . \"/\", $PATH_LOCAL) !== false) {\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "    $port = \"3308\";\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_DEV) !== false) {\n    //$host = 'dbasears.dev.mrc-services.io';\n    $host = '172.27.141.6';\n    $username = \"dbpetapimkp\";\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "    $port = \"3308\";\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_QA) !== false) {\n    $host = 'dbasears.qa.mrc-services.io';\n    $username = '';\n    $password = '';\n    $port = \"\";\n} else if ((strpos(dirname(__DIR__) . \"/\", $PATH_REL) !== false) || (strpos(dirname(__DIR__) . \"/\", $PATH_PROD) !== false)) {\n    $host = 'dbasears.mrc-services.io';\n    $username = '';\n    $password = '';\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: app/Mail/SendValidation.php": [
+  {
+   "term": "mrc-services",
+   "data": "            \n            $local = \"/api_fincado_sears/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/browserify-sign/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/caniuse-lite/data/agents.js": [
+  {
+   "term": "3310",
+   "data": "module.exports={A:{A:{J:0.0131217,D:0.00621152,E:0.0363648,F:0.0800026,A:0.0145459,B:0.683659,oB:0.009298},B:\"ms\",C:[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oB\",\"J\",\"D\",\"E\",\"F\",\"A\",\"B\",\"\",\"\",\"\"],E:\"IE\",F:{oB:962323200,J:998870400,D:1161129600,E:1237420800,F:1300060800,A:1346716800,B:1381968000}},B:{A:{C:0.008712,K:0.004267,L:0.004356,G:0.004356,M:0.008712,N:0.013068,O:0",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/crypto-browserify/test/public-encrypt.js": [
+  {
+   "term": "3310",
+   "data": "var crypto1 = require('../')\nvar rsa = {\n  'private': '2d2d2d2d2d424547494e205253412050524956415445204b45592d2d2d2d2d0a4d4949456a77494241414b422f6779376d6a615767506546645659445a5752434139424e69763370506230657332372b464b593068737a4c614f7734374578430a744157704473483438545841667948425977424c67756179666b344c4749757078622b43474d62526f337845703043626659314a62793236543976476a5243310a666f484444554a4738347561526279487161663469367a74346756522b786c4145496a6b614641414b38634f6f58415431435671474c4c6c6a554363684c38500a6a61486a2f7972695a2f53377264776c49334c6e41427877776d4c726d522f7637315774706d4f2f614e47384e2",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/crypto-browserify/test/sign.js": [
+  {
+   "term": "3310",
+   "data": "\nvar rsa = {\n  'private': '2d2d2d2d2d424547494e205253412050524956415445204b45592d2d2d2d2d0a4d4949456a77494241414b422f6779376d6a615767506546645659445a5752434139424e69763370506230657332372b464b593068737a4c614f7734374578430a744157704473483438545841667948425977424c67756179666b344c4749757078622b43474d62526f337845703043626659314a62793236543976476a5243310a666f484444554a4738347561526279487161663469367a74346756522b786c4145496a6b614641414b38634f6f58415431435671474c4c6c6a554363684c38500a6a61486a2f7972695a2f53377264776c49334c6e41427877776d4c726d522f7637315774706d4f2f614e47384e2b31706f2b5177616768546b79513",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/es5-ext/string/#/normalize/_data.js": [
+  {
+   "term": "3310",
+   "data": "\t\t13308: [[50, 57, 26085], 256],\n\t\t13309: [[51, 48, 26085], 256],\n\t\t13310: [[51, 49, 26085], 256],\n\t\t13311: [[103, 97, 108], 256]\n\t},\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/hash-base/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/miller-rabin/test/api-test.js": [
+  {
+   "term": "3310",
+   "data": "                   '8b64ebada275cfb18a446a0150e5fdaee246244c5f002ce0' +\n                   'aca97584be1745f2dd1eea2849c52aac8c4b5fb78a1c4da7' +\n                   '052774338d3310a6e020c46168cb1f94014e9312511cc4fb' +\n                   '79d695bb732449f0e015745b86bfa371dc6ca7386e9c7309' +\n                   '5549c2e4b8002873', 16);\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/object.values/CHANGELOG.md": [
+  {
+   "term": "3310",
+   "data": "- Tests [`b02e54e`](https://github.com/ljharb/Object.values/commit/b02e54ef157c56117b390cb1db95f7d48163a838)\n- package.json [`7b84f4e`](https://github.com/ljharb/Object.values/commit/7b84f4e839f75b227a5233325f064900a6032f9a)\n- Read me [`31e115b`](https://github.com/ljharb/Object.values/commit/31e115b31af2eabf4db518343310f2bb42e7fa04)\n- Initial commit [`01271a5`](https://github.com/ljharb/Object.values/commit/01271a51976524c62bac00d8af9af3ede72831dd)\n- Implementation. [`9a0c315`](https://github.com/ljharb/Object.values/commit/9a0c31554899f411d31d3b8343c754eb2c19842e)\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/spdy-transport/node_modules/readable-stream/README.md": [
+  {
+   "term": "3310",
+   "data": "v3.x.x of `readable-stream` is a cut from Node 10. This version supports Node 6, 8, and 10, as well as evergreen browsers, IE 11 and latest Safari. The breaking changes introduced by v3 are composed by the combined breaking changes in [Node v9](https://nodejs.org/en/blog/release/v9.0.0/) and [Node v10](https://nodejs.org/en/blog/release/v10.0.0/), as follows:\n\n1. Error codes: https://github.com/nodejs/node/pull/13310,\n   https://github.com/nodejs/node/pull/13291,\n   https://github.com/nodejs/node/pull/16589,\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/webpack-log/node_modules/uuid/README.md": [
+  {
+   "term": "3310",
+   "data": "// E.g. the one here was generated using this modules `uuid` CLI.\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n\n```\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/rsa.1024.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICVAIBAAJ/OwswbFo/uyC8ltGf/yA1A+gV5IGdnAgPbUSI3GzbHCA+x+TLG/tL\nvbRw3r1smppY/jkkpiVW1ErSMuN0uixp5gb78Z9rH1XpWb5WWgp3WaY/9EHMjMdO\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/rsa.1024.pub": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PUBLIC KEY-----\nMIGGAn87CzBsWj+7ILyW0Z//IDUD6BXkgZ2cCA9tRIjcbNscID7H5Msb+0u9tHDe\nvWyamlj+OSSmJVbUStIy43S6LGnmBvvxn2sfVelZvlZaCndZpj/0QcyMx06RD/0t\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/rsa.2028.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIIEjwIBAAKB/gy7mjaWgPeFdVYDZWRCA9BNiv3pPb0es27+FKY0hszLaOw47ExC\ntAWpDsH48TXAfyHBYwBLguayfk4LGIupxb+CGMbRo3xEp0CbfY1Jby26T9vGjRC1\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/rsa.2028.pub": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PUBLIC KEY-----\nMIIBBgKB/gy7mjaWgPeFdVYDZWRCA9BNiv3pPb0es27+FKY0hszLaOw47ExCtAWp\nDsH48TXAfyHBYwBLguayfk4LGIupxb+CGMbRo3xEp0CbfY1Jby26T9vGjRC1foHD\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/rsa.pass.priv": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nProc-Type: 4,ENCRYPTED\nDEK-Info: AES-256-CBC,7A6A055AD675947A657041422F06D439\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/test_key.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQDx3wdzpq2rvwm3Ucun1qAD/ClB+wW+RhR1nVix286QvaNqePAd\nCAwwLL82NqXcVQRbQ4s95splQnwvjgkFdKVXFTjPKKJI5aV3wSRN61EBVPdYpCre\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/test_rsa_privkey.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDCFENGw33yGihy92pDjZQhl0C36rPJj+CvfSC8+q28hxA161QF\nNUd13wuCTUcq0Qd2qsBe/2hFyc2DCJJg0h1L78+6Z4UMR7EOcpfdUE9Hf3m/hs+F\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/test_rsa_privkey_encrypted.pem": [
+  {
+   "term": "BEGIN RSA",
+   "data": "-----BEGIN RSA PRIVATE KEY-----\nProc-Type: 4,ENCRYPTED\nDEK-Info: AES-128-CBC,9D916E00476DFF9E70FA4BA9E3A6CB0E\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/selfsigned/README.md": [
+  {
+   "term": "BEGIN RSA",
+   "data": "```js\n{\n  private: '-----BEGIN RSA PRIVATE KEY-----\\r\\nMIICXAIBAAKBgQCBFMXMYS/+RZz6+qzv+xeqXPdjw4YKZC4y3dPhSwgEwkecrCTX\\r\\nsR6boue+1MjIqPqWggXZnotIGldfEN0kn0Jbh2vMTrTx6YwqQ8tceBPoyuuqcYBO\\r\\nOONAcKOB3MLnZbyOgVtbyT3j68JE5V/lx6LhpIKAgY0m5WIuaKrW6mvLXQIDAQAB\\r\\nAoGAU6ODGxAqSecPdayyG/ml9vSwNAuAMgGB0eHcpZG5i2PbhRAh+0TAIXaoFQXJ\\r\\naAPeA2ISqlTJyRmQXYAO2uj61FzeyDzYCf0z3+yZEVz3cO7jB5Pl6iBvzbxWuuuA\\r\\ncbJtWLhWtW5/jioc8F0EAzZ+lkC/XuVJdwKHDmwt2qvJO+ECQQD+dvo1g3Sz9xGw\\r\\n21n+fDG5i4128+Qh+JPgh5AeLuXSofc1HMHaOXcC6Wu/Cloh7QAD934b7W0A7VoD\\r\\ndLd/JLyFAkEAgdwjryyvdhy69e516IrPB3b+m4rggtntBlZREMrk9tOzeIucVO3W\\r\\nt",
+   "ref": "master"
+  },
+  {
+   "term": "BEGIN RSA",
+   "data": "```\n\n> You can avoid key pair generation specifying your own keys (`{ keyPair: { publicKey: '-----BEGIN PUBLIC KEY-----...', privateKey: '-----BEGIN RSA PRIVATE KEY-----...' }`)\n\n### Generate Client Certificates\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_marketplace_sears :: node_modules/public-encrypt/test/1024.priv": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "-----BEGIN PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKulUTZ8B1qccZ8c\nDXRGSY08gW8KvLlcxxxGC4gZHNT3CBUF8n5R4KE30aZyYZ/rtsQZu05juZJxaJ0q\n",
+   "ref": "master"
+  }
+ ],
+ "caja/payment-claropay :: config/autoload/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "    'database' => 'payment_claropay',\n    'username' => getenv(\"USERVAR_DB_USERNAME\"),\n    'password' => getenv(\"USERVAR_DB_PASSWORD\"),\n    'hostname' => getenv(\"USERVAR_DB_HOST\"),\n    'options' => array('buffer_results' => true)\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "$dbParams = array(\n    'database' => 'payment_claropay',\n    'username' => getenv(\"USERVAR_DB_USERNAME\"),\n    'password' => getenv(\"USERVAR_DB_PASSWORD\"),\n    'hostname' => getenv(\"USERVAR_DB_HOST\"),\n    'options' => array('buffer_results' => true)\n);\n",
+   "ref": "master"
+  }
+ ],
+ "caja/payment-t1 :: config/autoload/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "                    'dbname' => 'payment_t1',\n                    'user' => getenv('USERVAR_DB_USERNAME'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'host' => getenv('USERVAR_DB_HOST'),\n                    'port' => getenv('USERVAR_DB_PORT'),\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "                'params' => [\n                    'dbname' => 'payment_t1',\n                    'user' => getenv('USERVAR_DB_USERNAME'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'host' => getenv('USERVAR_DB_HOST'),\n                    'port' => getenv('USERVAR_DB_PORT'),\n                    'driver' => 'pdo_mysql',\n                    'charset' => 'utf8',\n",
+   "ref": "master"
+  }
+ ],
+ "caja/payment-paypal :: config/autoload/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "    'database' => 'payment_paypal',\n    'username' => getenv(\"USERVAR_DB_USERNAME\"),\n    'password' => getenv(\"USERVAR_DB_PASSWORD\"),\n    'hostname' => getenv(\"USERVAR_DB_HOST\"),\n    'port' => getenv(\"USERVAR_DB_PORT\"),\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "  $dbParams = array(\n    'database' => 'payment_paypal',\n    'username' => getenv(\"USERVAR_DB_USERNAME\"),\n    'password' => getenv(\"USERVAR_DB_PASSWORD\"),\n    'hostname' => getenv(\"USERVAR_DB_HOST\"),\n    'port' => getenv(\"USERVAR_DB_PORT\"),\n    'options' => array('buffer_results' => true)\n);\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_sistemas_claro :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=root\nDB_PASSWORD=123\n\nDB_CONNECTION=mysql\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE_TIENDA=tienda\nDB_USERNAME=root\nDB_PASSWORD=123\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_sistemas_claro :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api-shipping :: config/autoload/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "    'database' => getenv('USERVAR_DB_NAME'),\n    'username' => getenv('USERVAR_DB_USERNAME'),\n    'password' => getenv('USERVAR_DB_PASSWORD'),\n    'hostname' => getenv('USERVAR_DB_HOST'),\n    'port' => getenv('USERVAR_DB_PORT') ? getenv('USERVAR_DB_PORT') : '3306',\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "\n$dbParams = array(\n    'database' => getenv('USERVAR_DB_NAME'),\n    'username' => getenv('USERVAR_DB_USERNAME'),\n    'password' => getenv('USERVAR_DB_PASSWORD'),\n    'hostname' => getenv('USERVAR_DB_HOST'),\n    'port' => getenv('USERVAR_DB_PORT') ? getenv('USERVAR_DB_PORT') : '3306',\n    'options'  => array('buffer_results' => true)\n);\n",
+   "ref": "master"
+  }
+ ],
+ "sears-ia-backend/crones/cron-conciliacion-pagos :: app/Config/config_dai.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "    define('BD_PORT', $configParams['DB']['mysql']['DB_PORT']);\n    define('BD_USER', $configParams['DB']['mysql']['DB_USERNAME']);\n    define('BD_PW', $configParams['DB']['mysql']['DB_PASSWORD']);\n    define('BD_NAME', $configParams['DB']['mysql']['DB_DATABASE']);\n} else {\n",
+   "ref": "master"
+  }
+ ],
+ "sears-ia-backend/crones/cron-conciliacion-pagos :: config/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'DB_DATABASE' => 'app_sears',\n            'DB_USERNAME' => 'federico.michell',\n            'DB_PASSWORD' => 'Ay)f=Zm9mY6x[e5]'\n        )\n    ),\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: resources/assets/themes/Stellar-master/js/mapeal_example_2.js": [
+  {
+   "term": "3310",
+   "data": "          }\n        },\n        \"town-03310\": {\n          value: \"25235\",\n          latitude: 46.126944444444,\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "          href: \"#\",\n          tooltip: {\n            content: \"<span style=\\\"font-weight:bold;\\\">Vichy (03310)</span><br />Population : 25235\"\n          }\n        },\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: resources/assets/themes/Stellar-master/js/mapiel.js": [
+  {
+   "term": "3310",
+   "data": "                }\n            },\n            \"town-03310\": {\n                value: \"25235\",\n                latitude: 46.126944444444,\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                href: \"#\",\n                tooltip: {\n                    content: \"<span style=\\\"font-weight:bold;\\\">Vichy (03310)</span><br />Population : 25235\"\n                }\n            },\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: resources/css/fontawesome-5.8.2/webfonts/fa-brands-400.svg": [
+  {
+   "term": "3310",
+   "data": "c10.6299 18.9502 27.2295 25.5195 45.7598 28.1494z\" />\n    <glyph glyph-name=\"hornbill\" unicode=\"&#xf592;\" horiz-adv-x=\"512\" \nd=\"M76.3799 77.7002c0.182617 -1.37207 0.331055 -3.6084 0.331055 -4.99219c0 -20.8662 -16.9346 -37.8008 -37.7998 -37.8008s-37.7998 16.9346 -37.7998 37.8008c0 20.8652 16.9346 37.7998 37.7998 37.7998c1.49805 0 3.91602 -0.173828 5.39844 -0.387695\nc-78.2793 111.35 52 190.53 52 190.53c-5.85938 -43 -8.23926 -91.1602 -8.23926 -91.1602c-67.3105 -41.4902 0.929688 -64.0605 39.8096 -72.8701c18.6445 -50.7129 77.6279 -91.9023 131.66 -91.9404c1.91992 0 3.76953 0.209961 5.66992 0.280273l",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "c0.912109 -1.0918 1.77246 -3.12598 1.9209 -4.54004c0 -1.94043 -1.25 -3.48047 -2.48047 -4.79004c-19.9805 -20.54 -26.3701 -53.1699 -18.8398 -80.3701c0.768555 -2.76562 2.35938 -7.12891 3.5498 -9.74023c17.7002 -41.2598 72.4902 -60.4795 126 -43\nc5.81152 1.89844 14.9238 5.74219 20.3398 8.58008c9.78906 4.8418 23.7441 15.2852 31.1504 23.3096c14.2002 14.8408 22.6396 30.9707 25.9297 50.8408c2.81055 18.6191 -7.78027 18.7598 -11.4395 18.0996c-1.13477 6.94531 -4.32422 17.8223 -7.12012 24.2803\nc-15.6299 -12.3506 -35.71 -20.9707 -51 -25.3506c-69.4004 -19.9102 -90.1904 6.35059 -96.4004 -13.8096c33.7705 -12.37",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: resources/css/fontawesome-5.8.2/webfonts/fa-regular-400.svg": [
+  {
+   "term": "3310",
+   "data": "l-144 144v-104.09c-110.86 -0.90332 -240 -10.5166 -240 -119.851c0 -52.1396 32.79 -85.6094 62.3096 -104.06c-39.8174 120.65 48.999 141.918 177.69 143.84v-103.84zM408.74 27.5068c6.14844 1.75684 15.5449 5.92383 20.9736 9.30273\nc7.97656 4.95215 18.2861 -0.825195 18.2861 -10.2139v-42.5957c0 -26.5098 -21.4902 -48 -48 -48h-352c-26.5098 0 -48 21.4902 -48 48v352c0 26.5098 21.4902 48 48 48h132c6.62695 0 12 -5.37305 12 -12v-4.48633c0 -4.91699 -2.9873 -9.36914 -7.56934 -11.1514\nc-13.7021 -5.33105 -26.3955 -11.5371 -38.0498 -18.585c-1.59668 -0.974609 -4.41016 -1.77051 -6.28027 -1.77734h-86.1006c-3.31152 0 -6",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: resources/css/fontawesome-5.8.2/webfonts/fa-solid-900.svg": [
+  {
+   "term": "3310",
+   "data": "c4.66699 -4.70508 12.2656 -4.73535 16.9707 -0.0673828l142.952 141.805c4.70508 4.66699 4.73633 12.2646 0.0683594 16.9697z\" />\n    <glyph glyph-name=\"industry\" unicode=\"&#xf275;\" \nd=\"M475.115 284.219c15.9541 10.1514 36.8848 -1.33105 36.8848 -20.248v-271.971c0 -13.2549 -10.7451 -24 -24 -24h-464c-13.2549 0 -24 10.7451 -24 24v400c0 13.2549 10.7451 24 24 24h112c13.2549 0 24 -10.7451 24 -24v-196.309l139.115 88.5273\nc15.9541 10.1514 36.8848 -1.33203 36.8848 -20.248v-68.2793z\" />\n    <glyph glyph-name=\"map-pin\" unicode=\"&#xf276;\" horiz-adv-x=\"288\" \n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: web/assets/admin/webfonts/fa-brands-400.svg": [
+  {
+   "term": "3310",
+   "data": "c10.6299 18.9502 27.2295 25.5195 45.7598 28.1494z\" />\n    <glyph glyph-name=\"hornbill\" unicode=\"&#xf592;\" horiz-adv-x=\"512\" \nd=\"M76.3799 77.7002c0.182617 -1.37207 0.331055 -3.6084 0.331055 -4.99219c0 -20.8662 -16.9346 -37.8008 -37.7998 -37.8008s-37.7998 16.9346 -37.7998 37.8008c0 20.8652 16.9346 37.7998 37.7998 37.7998c1.49805 0 3.91602 -0.173828 5.39844 -0.387695\nc-78.2793 111.35 52 190.53 52 190.53c-5.85938 -43 -8.23926 -91.1602 -8.23926 -91.1602c-67.3105 -41.4902 0.929688 -64.0605 39.8096 -72.8701c18.6445 -50.7129 77.6279 -91.9023 131.66 -91.9404c1.91992 0 3.76953 0.209961 5.66992 0.280273l",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "c0.912109 -1.0918 1.77246 -3.12598 1.9209 -4.54004c0 -1.94043 -1.25 -3.48047 -2.48047 -4.79004c-19.9805 -20.54 -26.3701 -53.1699 -18.8398 -80.3701c0.768555 -2.76562 2.35938 -7.12891 3.5498 -9.74023c17.7002 -41.2598 72.4902 -60.4795 126 -43\nc5.81152 1.89844 14.9238 5.74219 20.3398 8.58008c9.78906 4.8418 23.7441 15.2852 31.1504 23.3096c14.2002 14.8408 22.6396 30.9707 25.9297 50.8408c2.81055 18.6191 -7.78027 18.7598 -11.4395 18.0996c-1.13477 6.94531 -4.32422 17.8223 -7.12012 24.2803\nc-15.6299 -12.3506 -35.71 -20.9707 -51 -25.3506c-69.4004 -19.9102 -90.1904 6.35059 -96.4004 -13.8096c33.7705 -12.37",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: .env.dev": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=root\nDB_PASSWORD=123\n\nDB_CONNECTION=mysql\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE_TIENDA=tienda\nDB_USERNAME=root\nDB_PASSWORD=123\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: .env.qa": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=appclaroenvios\nDB_PASSWORD=Za85.ry/ffLS*e73k\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\nDB_MDEM_CONNEC=mongodb\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_t1pagos :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/monedero-api :: config/autoload/db.global.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "        'host'   => getenv('USERVAR_DB_HOST'),\n        'username' => getenv('USERVAR_DB_USER'),\n        'password' => getenv('USERVAR_DB_PASSWORD'),\n        'dbname' => getenv('USERVAR_DB_NAME')\n    ],\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "    'db' => [\n        'driver' => 'PDO_MYSQL',\n        'host'   => getenv('USERVAR_DB_HOST'),\n        'username' => getenv('USERVAR_DB_USER'),\n        'password' => getenv('USERVAR_DB_PASSWORD'),\n        'dbname' => getenv('USERVAR_DB_NAME')\n    ],\n];\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/monedero-api :: data/oauth2/private.key": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDSq+f5oYehA7Aj\nKskK1kgRrc4+hE0ugl61L6lDraCHo5u2T4ywo9BAlpFpZPwykaITuy8rKYkANdgE\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_landings :: composer.lock": [
+  {
+   "term": "3310",
+   "data": "                \"type\": \"git\",\n                \"url\": \"https://github.com/zendframework/zend-stdlib.git\",\n                \"reference\": \"66536006722aff9e62d1b331025089b7ec71c065\"\n            },\n            \"dist\": {\n                \"type\": \"zip\",\n                \"url\": \"https://api.github.com/repos/zendframework/zend-stdlib/zipball/66536006722aff9e62d1b331025089b7ec71c065\",\n                \"reference\": \"66536006722aff9e62d1b331025089b7ec71c065\",\n                \"shasum\": \"\"\n            },\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: app/ClaroEnvios/Tarifas/ComercioTarifas.php": [
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"Dareka Wood\",\n                \"nivel\"=> \"2\",\n                \"idTienda\"=> \"33106\",\n                \"correo\"=> \"opif2mgs4@gmail.com\",\n                \"ID\"=> \"737dfd59-7bdc-455f-971a-f7133af26595\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"idTienda\"=> \"20441\",\n                \"correo\"=> \"ivettpaola78@gmail.com\",\n                \"ID\"=> \"536bd2f3-b6c2-4822-a005-3310a6178479\",\n                \"Fedex\"=> \"50%\",\n                \"Dhl\"=> \"65%\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"JBSUNGLASSES\",\n                \"nivel\"=> \"1\",\n                \"idTienda\"=> \"33310\",\n                \"correo\"=> \"carlos.alberto.avalos@gmail.com\",\n                \"ID\"=> \"7d46b536-2e9d-4642-b883-a58d756bb762\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"EreyUsa\",\n                \"nivel\"=> \"1\",\n                \"idTienda\"=> \"33107\",\n                \"correo\"=> \"ereyro83@gmail.com\",\n                \"ID\"=> \"2faeee42-0c17-43b5-8272-a28d958c14ff\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"Innova Market\",\n                \"nivel\"=> \"1\",\n                \"idTienda\"=> \"33102\",\n                \"correo\"=> \"atencion@innovamarket.com.mx\",\n                \"ID\"=> \"441e687d-ff8e-48b0-84a3-7c02aa0ff975\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"Yako shop\",\n                \"nivel\"=> \"1\",\n                \"idTienda\"=> \"33101\",\n                \"correo\"=> \"contacto@yakoshop.com.mx\",\n                \"ID\"=> \"88ce43cc-234a-4c88-8947-c41c087df0c0\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                \"Tienda\"=> \"Free The Rabbit\",\n                \"nivel\"=> \"1\",\n                \"idTienda\"=> \"33108\",\n                \"correo\"=> \"marketplace@azkami.mx\",\n                \"ID\"=> \"3af153bc-f546-474f-86b7-16daac7ec626\",\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: web/json/tarifas.json": [
+  {
+   "term": "3310",
+   "data": "        \"Tienda\": \"Dareka Wood\",\n        \"nivel\": \"2\",\n        \"idTienda\": \"33106\",\n        \"correo\": \"opif2mgs4@gmail.com\",\n        \"ID\": \"737dfd59-7bdc-455f-971a-f7133af26595\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "        \"idTienda\": \"20441\",\n        \"correo\": \"ivettpaola78@gmail.com\",\n        \"ID\": \"536bd2f3-b6c2-4822-a005-3310a6178479\",\n        \"Fedex\": \"50%\",\n        \"Dhl\": \"65%\",\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "        \"Tienda\": \"JBSUNGLASSES\",\n        \"nivel\": \"1\",\n        \"idTienda\": \"33310\",\n        \"correo\": \"carlos.alberto.avalos@gmail.com\",\n        \"ID\": \"7d46b536-2e9d-4642-b883-a58d756bb762\",\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: .env.dev": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=root\nDB_PASSWORD=123\n\nDB_CONNECTION=mysql\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE_TIENDA=tienda\nDB_USERNAME=root\nDB_PASSWORD=123\n\n\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: .env.qa": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=appclaroenvios\nDB_PASSWORD=Za85.ry/ffLS*e73k\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: config/.env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=claro_envios\nDB_USERNAME=dbclaroe\nDB_PASSWORD=NHygr43Dr*Enq[JYq5\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/core_claroenvios :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: bower_components/jquery/test/unit/css.js": [
+  {
+   "term": "3310",
+   "data": "});\n\nasyncTest( \"Make sure initialized display value for disconnected nodes is correct (#13310)\", 4, function() {\n\tvar display = jQuery(\"#display\").css(\"display\"),\n\t\tdiv = jQuery(\"<div/>\");\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: public/assets/js/base.js": [
+  {
+   "term": "3310",
+   "data": "        //Flot Multiple Axes Line Chart\n        var oilpricesFull = [ [1167692400000, 61.05], [1167778800000, 58.32], [1167865200000, 57.35], [1167951600000, 56.31], [1168210800000, 55.55], [1168297200000, 55.64], [1168383600000, 54.02], [1168470000000, 51.88], [1168556400000, 52.99], [1168815600000, 52.99], [1168902000000, 51.21], [1168988400000, 52.24], [1169074800000, 50.48], [1169161200000, 51.99], [1169420400000, 51.13], [1169506800000, 55.04], [1169593200000, 55.37], [1169679600000, 54.23], [1169766000000, 55.42], [1170025200000, 54.01], [1170111600000, 56.97], [1170198000000, 58.14], [1",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: resources/assets/themes/modular-admin/js/app.js": [
+  {
+   "term": "3310",
+   "data": "        //Flot Multiple Axes Line Chart\n        var oilpricesFull = [ [1167692400000, 61.05], [1167778800000, 58.32], [1167865200000, 57.35], [1167951600000, 56.31], [1168210800000, 55.55], [1168297200000, 55.64], [1168383600000, 54.02], [1168470000000, 51.88], [1168556400000, 52.99], [1168815600000, 52.99], [1168902000000, 51.21], [1168988400000, 52.24], [1169074800000, 50.48], [1169161200000, 51.99], [1169420400000, 51.13], [1169506800000, 55.04], [1169593200000, 55.37], [1169679600000, 54.23], [1169766000000, 55.42], [1170025200000, 54.01], [1170111600000, 56.97], [1170198000000, 58.14], [1",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: .env.development": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=panel_tiendas\nDB_USERNAME=dbportaloperaciones\nDB_PASSWORD=\"\\4BeF4QFI:p^Xy0g\"\n\n# BROADCAST_DRIVER=pusher\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: .env.production": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=panel_tiendas\nDB_USERNAME=dbportaloperaciones\nDB_PASSWORD=\"4sUm$dR3.ZT8s{xH\"\n\n# BROADCAST_DRIVER=pusher\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: .env.qa": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=panel_tiendas\nDB_USERNAME=dbportaloperaciones\nDB_PASSWORD=\"M4L8vC_#gR3XVvU4\"\n\n# BROADCAST_DRIVER=pusher\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: .env.release": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=panel_tiendas\nDB_USERNAME=dbportaloperaciones\nDB_PASSWORD=\"4sUm$dR3.ZT8s{xH\"\n\n# BROADCAST_DRIVER=pusher\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: .env.testing": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=panel_tiendas\nDB_USERNAME=dbportaloperaciones\nDB_PASSWORD=\"\\4BeF4QFI:p^Xy0g\"\n\n# BROADCAST_DRIVER=pusher\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/panel_operativo_tiendas :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'unix_socket' => env('DB_SOCKET', ''),\n            'charset' => 'utf8mb4',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_mails :: config/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "    'database' => getenv('USERVAR_DB_NAME'),\n    'username' => getenv('USERVAR_DB_USERNAME'),\n    'password' => getenv('USERVAR_DB_PASSWORD'),\n    'hostname' => getenv('USERVAR_DB_HOST'),\n    'options'  => array('buffer_results' => true)\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "<?php\n$dbParams = array(\n    'database' => getenv('USERVAR_DB_NAME'),\n    'username' => getenv('USERVAR_DB_USERNAME'),\n    'password' => getenv('USERVAR_DB_PASSWORD'),\n    'hostname' => getenv('USERVAR_DB_HOST'),\n    'options'  => array('buffer_results' => true)\n);\n",
+   "ref": "master"
+  }
+ ],
+ "sears/api_credito_sears :: config/autoload/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "                    'port'     => getenv('USERVAR_DB_PORT'),\n                    'user'     => getenv('USERVAR_DB_USER'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'dbname'   => getenv('USERVAR_DB_NAME'),\n                    'charset' => 'utf8',\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "                'driverClass' => 'Doctrine\\DBAL\\Driver\\PDOMySql\\Driver',\n                'params' => array(\n                    'host'     => getenv('USERVAR_DB_HOST'),\n                    'port'     => getenv('USERVAR_DB_PORT'),\n                    'user'     => getenv('USERVAR_DB_USER'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'dbname'   => getenv('USERVAR_DB_NAME'),\n                    'charset' => 'utf8',\n                    'driverOptions' => array(1002=>'SET NAMES utf8')\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/caja-pagos-api :: config/local.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "        ),\n        'usuario' => getenv('USERVAR_DB_USERNAME'),\n        'contrasena' => getenv('USERVAR_DB_PASSWORD'),\n        'basedatos' => 'tienda',\n        'charset' => 'UTF-8',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "                    'port'     => getenv('USERVAR_DB_PORT'),\n                    'user'     => getenv('USERVAR_DB_USERNAME'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'dbname'   => 'tienda',\n                    'charset' => 'utf8',\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "        'servidores' => array(\n            array(\n                'host' => getenv('USERVAR_DB_HOST'),\n                'peso' => 1\n            )\n        ),\n        'usuario' => getenv('USERVAR_DB_USERNAME'),\n        'contrasena' => getenv('USERVAR_DB_PASSWORD'),\n        'basedatos' => 'tienda',\n        'charset' => 'UTF-8',\n        'auto_cache' => 7200,\n        'depurar'=> false,\n        'port' => getenv('USERVAR_DB_PORT')\n    ),\n\n",
+   "ref": "master"
+  },
+  {
+   "term": "USERVAR_DB",
+   "data": "                'driverClass' => 'Doctrine\\DBAL\\Driver\\PDOMySql\\Driver',\n                'params' => array(\n                    'host'     => getenv('USERVAR_DB_HOST'),\n                    'port'     => getenv('USERVAR_DB_PORT'),\n                    'user'     => getenv('USERVAR_DB_USERNAME'),\n                    'password' => getenv('USERVAR_DB_PASSWORD'),\n                    'dbname'   => 'tienda',\n                    'charset' => 'utf8',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/caja-pagos-api :: config/local.php.dist": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "                    \"project_id\"                  => \"analytics-163800\",\n                    \"private_key_id\"              => \"89585c2de057fcff460cc078d990094deda77336\",\n                    \"private_key\"                 => \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDG9Ox3cffzJJgo\\n13Dr7VqrXoDL8Xc543PB4GSRdOhChiCDzRyY0By5o0XaGYNrDpTtYLAqiZ7Z8o/e\\nPQGZ0CYYxC+1tjyaO5YV2u10AEzmRcfhFZAtwwEnA1MHy10XzpFxpH6PV17TA+ir\\n5XxeTRPSHL1zl1pOnMAXSFwSkRIEaHm4WS2hboH5rYYPnzKKwUGfo5JJTcwA25JE\\niEkG017kDbECykvicsprF66T2KGaNUAjd78gg5O/3dW3NfEaer/b+xRePG6byPbU\\n/xCMEny+hZZhqcYJR",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_pedidos_claroshop :: .env": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_HOST_LOCAL = 172.27.140.151\nDB_USERNAME_LOCAL = dbapipedidoscsb\nDB_PASSWORD_LOCAL = YF8v{%dvupN3V1%T\n\nDB_HOST2_LOCAL = 172.27.140.151\nDB_USERNAME2_LOCAL = dbapipedidoscsb\nDB_PASSWORD2_LOCAL = YF8v{%dvupN3V1%T\n\n#Los usuarios de LOCAL y DEV son diferentes, ya que se encuentran en diferentes cajas, las pruebas que hagas con tu desarrollo (en tu maquina), entonces para que funcione en el servidor de desarrollo se deben de replicar los Grant en ambos stage.\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_HOST_DEV = masterdb57.dev.claroshop.com\nDB_USERNAME_DEV = dbapipedidoscsb\nDB_PASSWORD_DEV = YF8v{%dvupN3V1%T\n\nDB_HOST2_DEV = masterdb57.dev.claroshop.com\nDB_USERNAME2_DEV = dbapipedidoscsb\nDB_PASSWORD2_DEV = YF8v{%dvupN3V1%T\n\n#----------QA----------\nDB_HOST_QA = masterdb57.qa.claroshop.com\nDB_USERNAME_QA = dbapipedidoscsb\nDB_PASSWORD_QA = YF8v{%dvupN3V1%T\n\nDB_HOST2_QA = masterdb57.qa.claroshop.com\nDB_USERNAME2_QA = dbapipedidoscsb\nDB_PASSWORD2_QA = YF8v{%dvupN3V1%T\n\n#----------PROD----------\nDB_HOST_PROD = masterdb57.claroshop.com\nDB_USERNAME_PROD = dbapipedidoscsb\nDB_PASSWORD_PROD = YF8v{%",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/test/testElastic.php": [
+  {
+   "term": "mrc-services",
+   "data": "    //$url=\"http://sn-elasticsearch.claroshop-services.net/\".$peticion;    \n\n    $url=\"http://elasticsearch.mrc-services.io/\".$peticion;    \n\n    if($stage==\"Dev\"){\n",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: src/jade/preguntasFrecuentes.jade": [
+  {
+   "term": "3310",
+   "data": "\t\t\t\t\t\t\tli: a(href=\"tel:01 800 4726267\") 01 800 4726267 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 7262676\") 01 800 7262676 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 8493310\") 01 800 8493310 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 55 26 52 97 33 \") (01 55) 26 52 97 33 \n\t\t\t\t\t\t\tli Número Internacional \n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "\t\t\t\t\t\t\tli: a(href=\"tel:01 800 4726267 \") 01 800 4726267 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 7262676\") 01 800 7262676 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 8493310\") 01 800 8493310 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 55 26 52 97 33 \") (01 55) 26 52 97 33 \n\t\t\t\t\t\t\tli Número Internacional \n",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/css/vector/ico-creditcard-red.svg": [
+  {
+   "term": "3310",
+   "data": "                        </mask>\n                        <g id=\"Clip-2\"></g>\n                        <path d=\"M118.695056,20.3175184 L12.328792,54.2764609 L8.55485331,42.5172405 C8.40945327,42.0647768 8.48215329,41.6071569 8.78103114,41.1443807 C9.08023209,40.6812823 9.50609264,40.3651378 10.0624901,40.1875684 L112.337197,7.53477631 C112.892302,7.35752916 113.424466,7.36784172 113.933689,7.57312615 C114.446467,7.77679924 114.775717,8.1058344 114.921117,8.55829803 L118.695056,20.3175184 Z M135.407012,72.3891859 C135.552089,72.8416496 135.475512,73.3002363 135.176634,73.7633347 C134.88131,74.2248",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/css/vector/ico-pago-contra-entrega-blue.svg": [
+  {
+   "term": "3310",
+   "data": "                    </mask>\n                    <g id=\"Clip-2\"></g>\n                    <path d=\"M43.6083014,0.0175203221 L43.6082221,0.0175203221 C42.8010188,0.0174406118 42.0582521,0.247723645 41.5167307,0.665963546 C41.3041375,0.830166747 40.9332303,1.07328314 40.5405797,1.33074738 C38.7300065,2.51763362 37.5204713,3.38137435 37.2159052,4.52697066 C37.1728152,4.68902168 37.1401207,4.84166689 37.1132986,4.98004396 C36.0791388,5.11300072 34.3952169,5.5519653 33.5183395,6.69078624 C33.0131629,7.34656281 32.8473894,8.14231065 33.0514122,8.93136283 C33.40502,10.2993509 34.4857614,11.1491423 35.8",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/img/css/express.svg": [
+  {
+   "term": "3310",
+   "data": "        <g id=\"Group-Copy\" transform=\"translate(-210.000000, -260.000000)\" fill=\"#009966\" fill-rule=\"nonzero\">\n            <g id=\"Express_label-2\" transform=\"translate(210.000000, 260.000000)\">\n                <path d=\"M27,12.9010989 L27,4.0989011 L32.5405904,4.0989011 L32.5405904,5.13736264 L28.2232472,5.13736264 L28.2232472,7.90659341 L32.300738,7.90659341 L32.300738,8.94505495 L28.2232472,8.94505495 L28.2232472,11.8626374 L32.5405904,11.8626374 L32.5405904,12.9010989 L27,12.9010989 Z M37.7573801,8.41346154 L41.0073801,12.9010989 L39.5442804,12.9010989 L37.0498155,9.36538462 L34.5553506,12.9",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/img/newHome/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/img/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/sitemap-libros.xml": [
+  {
+   "term": "3310",
+   "data": "                <priority>0.80</priority>\n              </url><url>\n                <loc>https://www.sanborns.com.mx/producto/13310/bitters-and-shrub-syrup-cocktails/</loc>\n                <lastmod>2018-05-08T18:09:08+00:00</lastmod>\n                <priority>0.80</priority>\n",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: web/sitemap-productos.xml": [
+  {
+   "term": "3310",
+   "data": "                <priority>0.80</priority>\n              </url><url>\n                <loc>https://www.sanborns.com.mx/producto/23310/gel-de-ducha-cuerpo-y-cabello-500-ml/</loc>\n                <lastmod>2018-05-08T18:09:08+00:00</lastmod>\n                <priority>0.80</priority>\n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "                <priority>0.80</priority>\n              </url><url>\n                <loc>https://www.sanborns.com.mx/producto/3310/reloj-timex-tw2r45800/</loc>\n                <lastmod>2018-05-08T18:09:08+00:00</lastmod>\n                <priority>0.80</priority>\n",
+   "ref": "master"
+  }
+ ],
+ "sears/tienda :: config/local.php.dist": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "                      \"project_id\": \"analytics-sears\",\n                      \"private_key_id\": \"e609141a6babea5f39c135e314e279f1f5e17656\",\n                      \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCSoYrPb8wu3k20\\n7TlZjnmfGkFqQRVGt5YW1WBuY4cys+fsum3QXxir7sEggr9thcaTElXbfApcH6UV\\niRDwa/GSdxs21lesCkFlppWRDlipQI+BFov+crv1uEHk+Y0Tch05GcyfuAWRAXeW\\nRhvRmEBGM4zaDFTLiYViknQSOC/lwxPiv1WBm7ucKdvKNXiWBazuAqUsPqIho5eT\\nCnAlQ4/6W4XAg+WuLwCebZSfrxrUxO8oNeANtbC5JCtyCeGToE/SEPkMsY9I6cRW\\nXsHhM8OQoTHoPdhNU93S8iGSYad/MG15iTo+og4NU8ucAxTqegzf9sFIvVPqyfBP",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: src/jade/preguntasFrecuentes.jade": [
+  {
+   "term": "3310",
+   "data": "\t\t\t\t\t\t\tli: a(href=\"tel:01 800 4726267\") 01 800 4726267 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 7262676\") 01 800 7262676 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 8493310\") 01 800 8493310 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 55 26 52 97 33 \") (01 55) 26 52 97 33 \n\t\t\t\t\t\t\tli Número Internacional \n",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "\t\t\t\t\t\t\tli: a(href=\"tel:01 800 4726267 \") 01 800 4726267 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 7262676\") 01 800 7262676 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 800 8493310\") 01 800 8493310 \n\t\t\t\t\t\t\tli: a(href=\"tel:01 55 26 52 97 33 \") (01 55) 26 52 97 33 \n\t\t\t\t\t\t\tli Número Internacional \n",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: web/css/vector/ico-creditcard-red.svg": [
+  {
+   "term": "3310",
+   "data": "                        </mask>\n                        <g id=\"Clip-2\"></g>\n                        <path d=\"M118.695056,20.3175184 L12.328792,54.2764609 L8.55485331,42.5172405 C8.40945327,42.0647768 8.48215329,41.6071569 8.78103114,41.1443807 C9.08023209,40.6812823 9.50609264,40.3651378 10.0624901,40.1875684 L112.337197,7.53477631 C112.892302,7.35752916 113.424466,7.36784172 113.933689,7.57312615 C114.446467,7.77679924 114.775717,8.1058344 114.921117,8.55829803 L118.695056,20.3175184 Z M135.407012,72.3891859 C135.552089,72.8416496 135.475512,73.3002363 135.176634,73.7633347 C134.88131,74.2248",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: web/css/vector/ico-pago-contra-entrega-blue.svg": [
+  {
+   "term": "3310",
+   "data": "                    </mask>\n                    <g id=\"Clip-2\"></g>\n                    <path d=\"M43.6083014,0.0175203221 L43.6082221,0.0175203221 C42.8010188,0.0174406118 42.0582521,0.247723645 41.5167307,0.665963546 C41.3041375,0.830166747 40.9332303,1.07328314 40.5405797,1.33074738 C38.7300065,2.51763362 37.5204713,3.38137435 37.2159052,4.52697066 C37.1728152,4.68902168 37.1401207,4.84166689 37.1132986,4.98004396 C36.0791388,5.11300072 34.3952169,5.5519653 33.5183395,6.69078624 C33.0131629,7.34656281 32.8473894,8.14231065 33.0514122,8.93136283 C33.40502,10.2993509 34.4857614,11.1491423 35.8",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: web/img/newHome/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: web/img/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "sanborns/tienda :: config/local.php.dist": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "                    \"project_id\"                  => \"analytics-163800\",\n                    \"private_key_id\"              => \"89585c2de057fcff460cc078d990094deda77336\",\n                    \"private_key\"                 => \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDG9Ox3cffzJJgo\\n13Dr7VqrXoDL8Xc543PB4GSRdOhChiCDzRyY0By5o0XaGYNrDpTtYLAqiZ7Z8o/e\\nPQGZ0CYYxC+1tjyaO5YV2u10AEzmRcfhFZAtwwEnA1MHy10XzpFxpH6PV17TA+ir\\n5XxeTRPSHL1zl1pOnMAXSFwSkRIEaHm4WS2hboH5rYYPnzKKwUGfo5JJTcwA25JE\\niEkG017kDbECykvicsprF66T2KGaNUAjd78gg5O/3dW3NfEaer/b+xRePG6byPbU\\n/xCMEny+hZZhqcYJR",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: config/database.php": [
+  {
+   "term": "dbasears",
+   "data": "    $config['connections']['sears2']['host'] = $config['connections']['sears']['host'] = '172.27.141.6';\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_DEV) !== false) {\n    $config['connections']['sears2']['host'] = $config['connections']['sears']['host'] = 'dbasears.dev.mrc-services.io';\n} else if (strpos(dirname(__DIR__) . \"/\", $PATH_QA) !== false) {\n    $config['connections']['sears2']['host'] = $config['connections']['sears']['host'] = 'dbasears.qa.mrc-services.io';\n    $config['connections']['sears2']['username'] = $config['connections']['sears']['username'] = 'apifincadoa';\n    $config",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: app/Http/Controllers/CorreoNotificacionController.php": [
+  {
+   "term": "mrc-services",
+   "data": "        //var_dump(Config::get('filesystems.disks.img_notificacion_img'));\n        $local = \"/api_fincado_sears/\";\n        $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n        $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n        $rel = \"/pse-release.adm-api.mrc-services.io/\";\n        $prod = \"/pse.adm-api.mrc-services.io/\";\n\n        if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "\n            $local = \"/api_fincado_sears/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "                if ($this->datosRecibidos['link_pedido'] == \"\" || $this->datosRecibidos['link_pedido'] == null) {\n                    $local = \"/api_fincado_sears/\";\n                    $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n                    $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n                    $rel = \"/pse-release.adm-api.mrc-services.io/\";\n                    $prod = \"/pse.adm-api.mrc-services.io/\";\n\n                    \n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "            if (array_key_exists(\"codigo_barras\", $this->datosRecibidos)) {\n                $local = \"/api_fincado_sears/\";\n                $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n                $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n                $rel = \"/pse-release.adm-api.mrc-services.io/\";\n                $prod = \"/pse.adm-api.mrc-services.io/\";\n\n                if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: app/Http/Controllers/FullFilmentController.php": [
+  {
+   "term": "mrc-services",
+   "data": "\n\t\t$local = \"/api_fincado_sears/\";\n        $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n        $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n        $rel = \"/pse-release.adm-api.mrc-services.io/\";\n        $prod = \"/pse.adm-api.mrc-services.io/\";\n\n        if (strpos(dirname(__DIR__) . \"/\", $local) !== false || strpos(dirname(__DIR__) . \"/\", $dev) !== false || strpos(dirname(__DIR__) . \"/\", $qa) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: app/Http/Controllers/VerCorreoController.php": [
+  {
+   "term": "mrc-services",
+   "data": "            if(array_key_exists(\"hs_email\", $dataAll)){\n                $local = \"/api_fincado_sears/\";\n                $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n                $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n                $rel = \"/pse-release.adm-api.mrc-services.io/\";\n                $prod = \"/pse.adm-api.mrc-services.io/\";\n                \n                $liga_ambiente = \"\";\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "\n            $local = \"/api_fincado_sears/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: app/Mail/NotificaCliente.php": [
+  {
+   "term": "mrc-services",
+   "data": "\n        $local = \"/api_fincado_sears/\";\n        $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n        $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n        $rel = \"/pse-release.adm-api.mrc-services.io/\";\n        $prod = \"/pse.adm-api.mrc-services.io/\";\n\n        $link_rel_portal = \"https://beta.dev.sears.com.mx\";\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_sears :: app/Mail/SendValidation.php": [
+  {
+   "term": "mrc-services",
+   "data": "        }if ($data[\"id_email\"] == \"venta_seller\" ||$data[\"id_email\"] == \"guia_seller\") {\n            $local = \"/api_fincado_sears/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "            //var_dump(dirname(__DIR__));\n            $local = \"/api_fincado_sears/\";\n            $dev = \"/pse-admin-api.dev.mrc-services.io/\";\n            $qa = \"/pse-admin-api.qa.mrc-services.io/\";\n            $rel = \"/pse-release.adm-api.mrc-services.io/\";\n            $prod = \"/pse.adm-api.mrc-services.io/\";\n\n            if (strpos(dirname(__DIR__) . \"/\", $local) !== false) {\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/new_axii_v2 :: public/bower_components/Flot/examples/axes-multiple/index.html": [
+  {
+   "term": "3310",
+   "data": "\t\tvar oilprices = [[1167692400000,61.05], [1167778800000,58.32], [1167865200000,57.35], [1167951600000,56.31], [1168210800000,55.55], [1168297200000,55.64], [1168383600000,54.02], [1168470000000,51.88], [1168556400000,52.99], [1168815600000,52.99], [1168902000000,51.21], [1168988400000,52.24], [1169074800000,50.48], [1169161200000,51.99], [1169420400000,51.13], [1169506800000,55.04], [1169593200000,55.37], [1169679600000,54.23], [1169766000000,55.42], [1170025200000,54.01], [1170111600000,56.97], [1170198000000,58.14], [1170284400000,58.14], [1170370800000,59.02], [1170630000000,58.74], [11707",
+   "ref": "master"
+  }
+ ],
+ "claroshop/new_axii_v2 :: public/bower_components/Flot/examples/axes-time-zones/tz/australasia": [
+  {
+   "term": "3310",
+   "data": "#\n# Official source:\n# <a href=\"http://www.fiji.gov.fj/index.php?option=com_content&view=article&id=1096:3310-cabinet-approves-change-in-daylight-savings-dates&catid=49:cabinet-releases&Itemid=166\">\n# http://www.fiji.gov.fj/index.php?option=com_content&view=article&id=1096:3310-cabinet-approves-change-in-daylight-savings-dates&catid=49:cabinet-releases&Itemid=166\n# </a>\n#\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/new_axii_v2 :: public/bower_components/Flot/examples/canvas/index.html": [
+  {
+   "term": "3310",
+   "data": "\t\tvar oilPrices = [[1167692400000,61.05], [1167778800000,58.32], [1167865200000,57.35], [1167951600000,56.31], [1168210800000,55.55], [1168297200000,55.64], [1168383600000,54.02], [1168470000000,51.88], [1168556400000,52.99], [1168815600000,52.99], [1168902000000,51.21], [1168988400000,52.24], [1169074800000,50.48], [1169161200000,51.99], [1169420400000,51.13], [1169506800000,55.04], [1169593200000,55.37], [1169679600000,54.23], [1169766000000,55.42], [1170025200000,54.01], [1170111600000,56.97], [1170198000000,58.14], [1170284400000,58.14], [1170370800000,59.02], [1170630000000,58.74], [11707",
+   "ref": "master"
+  }
+ ],
+ "claroshop/new_axii_v2 :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=biace\nDB_USERNAME=root\nDB_PASSWORD=microsoft\n\nBROADCAST_DRIVER=log\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/new_axii_v2 :: config/database.php": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  },
+  {
+   "term": "DB_PASSWORD",
+   "data": "            'database' => env('DB_DATABASE', 'forge'),\n            'username' => env('DB_USERNAME', 'forge'),\n            'password' => env('DB_PASSWORD', ''),\n            'charset' => 'utf8',\n            'prefix' => '',\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_pedidos :: resources/views/DocFincadoV2.php": [
+  {
+   "term": "mrc-services",
+   "data": "    $api_token = \"\";\n    $user_id = \"\";\n    if ($_SERVER[\"SERVER_NAME\"] == \"psa.adm-api.mrc-services.io\") {\n        #produccion-pendiente\n        $server_name = \"https://snapi.sanborns.com.mx/psa\";\n        $url_base = \"snapi.sanborns.com.mx/psa\";\n    } else if ($_SERVER[\"SERVER_NAME\"] == \"psa-release.adm-api.mrc-services.io\") {\n        #release-pendiente\n        $server_name = \"https://snapi.release.sanborns.com.mx/psa\";\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_pedidos :: resources/views/DocFincadoV2Tienda.php": [
+  {
+   "term": "mrc-services",
+   "data": "    $api_token = \"\";\n    $user_id = \"\";\n    if ($_SERVER[\"SERVER_NAME\"] == \"psa.adm-api.mrc-services.io\") {\n        #produccion-pendiente\n        $server_name = \"https://snapi.sanborns.com.mx/psa\";\n        $url_base = \"snapi.sanborns.com.mx/psa\";\n    } else if ($_SERVER[\"SERVER_NAME\"] == \"psa-release.adm-api.mrc-services.io\") {\n        #release-pendiente\n        $server_name = \"https://snapi.release.sanborns.com.mx/psa\";\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_fincado_pedidos :: .env.example": [
+  {
+   "term": "DB_PASSWORD",
+   "data": "DB_DATABASE=homestead\nDB_USERNAME=homestead\nDB_PASSWORD=secret\n\nCACHE_DRIVER=file\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_axii_sears :: web/reporte_pedidos_api/config.php": [
+  {
+   "term": "dbasears",
+   "data": "\nif($_SERVER['HTTP_HOST'] == \"axii.qa.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.qa.mrc-services.io');\n\tdefine('PASSDB', '72nsY[qu6Aud=Y)D3');\n\tdefine('PERMITEHORARIO', true);\n}elseif($_SERVER['HTTP_HOST'] == \"axii.admin.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.mrc-services.io');\n\tdefine('PASSDB', 'Mh54/dPK-aZ469mbR');\n\tdefine('PERMITEHORARIO', false);\n}elseif($_SERVER['HTTP_HOST'] == \"axii.release.admin.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.mrc-services.io');\n\tdefine('PASSDB', 'Mh54/dPK-aZ469mbR');\n\tdefine('PERMITEHORARIO', true);\n}else{\n\tdefine('HOSTDB', 'dbasears.dev.mrc-services.",
+   "ref": "master"
+  },
+  {
+   "term": "dbasears",
+   "data": "define('PUERTO', '3308');\n\n/*define('HOSTDB', 'dbasears.claroshop-services.net');\ndefine('USERDB', 'adaxsedb');\ndefine('PASSDB', 'f9uPLFEIicN2cKJA');\n",
+   "ref": "master"
+  },
+  {
+   "term": "mrc-services",
+   "data": "\nif($_SERVER['HTTP_HOST'] == \"axii.qa.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.qa.mrc-services.io');\n\tdefine('PASSDB', '72nsY[qu6Aud=Y)D3');\n\tdefine('PERMITEHORARIO', true);\n}elseif($_SERVER['HTTP_HOST'] == \"axii.admin.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.mrc-services.io');\n\tdefine('PASSDB', 'Mh54/dPK-aZ469mbR');\n\tdefine('PERMITEHORARIO', false);\n}elseif($_SERVER['HTTP_HOST'] == \"axii.release.admin.sears.com.mx\"){\n\tdefine('HOSTDB', 'dbasears.mrc-services.io');\n\tdefine('PASSDB', 'Mh54/dPK-aZ469mbR');\n\tdefine('PERMITEHORARIO', true);\n}else{\n\tdefine('HOSTDB', 'dbasears.dev.mrc-services.",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_axii_sears :: app/clases/safetypay/SafetyPaySha256.inc.php": [
+  {
+   "term": "3310",
+   "data": "                  958139571,        1322822218,        1537002063,        1747873779,\n                  1955562222,        2024104815,        -2067236844,    -1933114872,\n                  -1866530822,    -1538233109,    -1090935817,    -965641998,\n                  );\n          }\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_axii_sears :: web/reporte_pedidos_api/vendor/symfony/polyfill/tests/Intl/Normalizer/NormalizationTest.txt": [
+  {
+   "term": "3310",
+   "data": "330E;330E;330E;30AC 30ED 30F3;30AB 3099 30ED 30F3; # (㌎; ㌎; ㌎; ガロン; カ◌゙ロン; ) SQUARE GARON\n330F;330F;330F;30AC 30F3 30DE;30AB 3099 30F3 30DE; # (㌏; ㌏; ㌏; ガンマ; カ◌゙ンマ; ) SQUARE GANMA\n3310;3310;3310;30AE 30AC;30AD 3099 30AB 3099; # (㌐; ㌐; ㌐; ギガ; キ◌゙カ◌゙; ) SQUARE GIGA\n3311;3311;3311;30AE 30CB 30FC;30AD 3099 30CB 30FC; # (㌑; ㌑; ㌑; ギニー; キ◌゙ニー; ) SQUARE GINII\n3312;3312;3312;30AD 30E5 30EA 30FC;30AD 30E5 30EA 30FC; # (㌒; ㌒; ㌒; キュリー; キュリー; ) SQUARE KYURII\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_axii_sanborns :: web/reporte_pedidos_api/vendor/symfony/polyfill/tests/Intl/Normalizer/NormalizationTest.txt": [
+  {
+   "term": "3310",
+   "data": "330E;330E;330E;30AC 30ED 30F3;30AB 3099 30ED 30F3; # (㌎; ㌎; ㌎; ガロン; カ◌゙ロン; ) SQUARE GARON\n330F;330F;330F;30AC 30F3 30DE;30AB 3099 30F3 30DE; # (㌏; ㌏; ㌏; ガンマ; カ◌゙ンマ; ) SQUARE GANMA\n3310;3310;3310;30AE 30AC;30AD 3099 30AB 3099; # (㌐; ㌐; ㌐; ギガ; キ◌゙カ◌゙; ) SQUARE GIGA\n3311;3311;3311;30AE 30CB 30FC;30AD 3099 30CB 30FC; # (㌑; ㌑; ㌑; ギニー; キ◌゙ニー; ) SQUARE GINII\n3312;3312;3312;30AD 30E5 30EA 30FC;30AD 30E5 30EA 30FC; # (㌒; ㌒; ㌒; キュリー; キュリー; ) SQUARE KYURII\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/conciliacion_recibo_telmex :: app/Librerias/PRUEBA.txt": [
+  {
+   "term": "3310",
+   "data": "002000034968133312562480001054246MICHELLE                      DAMUS                                                       SUBALTERNO 18                 HACIENDA DEL TEPEYAC          ZAPOPAN             JA45053ZAPOPAN             000002015120420151204        B 0004800000CLL SUBALTERNO 18 HACIENDA DEL TEPEYAC ZAPOPAN ZAPOPAN ZAPOPAN JA CP 45053                          M.JOURDIN81@GMAIL.COM                             3331256248          MICHELLE                      DAMUS                                                       0000000022990000000000010000000010484120                             ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "002000034171855260291490001042326ARTURO                        ORTIZ                         RUBALCABA                     CALLE TORRE NAVAL MZ 130 LT 2 SANTA MARIA GUADALUPE LAS TORRCUAUTITLAN IZCALLI  EM54743CUAUTITLAN IZCALLI  000002015111320151114        B 0006000000TORRE NAVAL MZ 131 LT 2 54701 CUAUTITLAN IZCALLI CUAUTITLAN IZCALLI EM CP: 54743                    S_K_8ARTURO@HOTMAIL.COM                           5526029149          ARTURO                        ORTIZ                         RUBALCABA                     0000000040780000000000009900000010134120                             ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "002000034051586262100710001041698FELIX                         RODRIGUEZ                     RODRIGUEZ                     PONCIANO ARRIAGA              ALLENDE CENTRO                ALLENDE             CU26530ALLENDE             000002015111020151118        E 0004400000PONCIANO ARRIAGA 410 PTE INTER COL CENTRO ALLENDE ALLENDE COAH. CU CP 26530                         FELIXRODRIGUEZ855@GMAIL.COM                       8626210071          FELIX                         RODRIGUEZ                     RODRIGUEZ                     0000000036580000000000009900000010484120                             ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "0030000350292442215448900010519980000000531577CONSOLA PS4 BLANCA TAKEN KING 0000100000000749900013000000903496                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "002000034933248810800140001053967ANSELMA                       ORTIZ                         ROSALES                       NINOS HEROES 27               TLAXCALA                      MOCTEZUMA           NL78900MOCTEZUMA           0000020151202                B 0003360000CLL BENITO JUAREZ 108  LOS MEDINA DOCTOR ARROYO NL CP 78700                                         ANGELLARA_MIGUE10@HOTMAIL.COM                     4881080014          ANSELMA                       ORTIZ                         ROSALES                       0000000024140000000000007500000010488888                             ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "002000034424455556951450001043260SANDRA ELENA                  VAZQUEZ                       LOPEZ                         TOLTECAS# 201 INT. 1          SANTA CLARA COATITLA          ECATEPEC DE MORELOS EM55540ECATEPEC DE MORELOS 0000020151116                R 0006000000CALLE TOLTECAS COLONIA SANTA CLARA ECATEPEC ECATEPEC EM CP: 55540                                   SANDRAVAZQUEZ3234@GMAIL.COM                       5555695145          SANDRA ELENA                  VAZQUEZ                       LOPEZ                         0000000002390000000000000000000010068888                             ",
+   "ref": "master"
+  },
+  {
+   "term": "3310",
+   "data": "0030000343785833216362200010036650000000317089ESCURRIDOR DE PLATOS REGAL CRO0000100000000084900024000000602430                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plazavip :: app/Zend/Measure/Weight.php": [
+  {
+   "term": "3310",
+   "data": "        'SACK'                  => array('165.10762268',   'sack'),\n        'SCRUPLE'               => array(array('' => '65.31730128', '/' => '50400'), 's'),\n        'SEER'                  => array('0.933105',       'seer'),\n        'SEER_PAKISTAN'         => array('1',              'seer'),\n        'SHEKEL'                => array('0.01142',        'shekel'),\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/api_plazavip :: web/v2/ApiV2.php": [
+  {
+   "term": "3310",
+   "data": "                                            '383280', '383281', '383282', '383284', '383285', '383286', '383287', '383288', '383289', '383290');        //Costo envio 150\n                                            \n        $promociones3 = array ('383318', '383319', '383320', '383299', '383300', '383301', '383303', '383310', '383311', '383312', '383313', '383314', '383315', \n                                            '383316', '383317');        //Costo envio 250\n                                            \n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/admin_axii :: app/clases/safetypay/SafetyPaySha256.inc.php": [
+  {
+   "term": "3310",
+   "data": "                  958139571,        1322822218,        1537002063,        1747873779,\n                  1955562222,        2024104815,        -2067236844,    -1933114872,\n                  -1866530822,    -1538233109,    -1090935817,    -965641998,\n                  );\n          }\n",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: web/css/vector/ico-creditcard-red.svg": [
+  {
+   "term": "3310",
+   "data": "                        </mask>\n                        <g id=\"Clip-2\"></g>\n                        <path d=\"M118.695056,20.3175184 L12.328792,54.2764609 L8.55485331,42.5172405 C8.40945327,42.0647768 8.48215329,41.6071569 8.78103114,41.1443807 C9.08023209,40.6812823 9.50609264,40.3651378 10.0624901,40.1875684 L112.337197,7.53477631 C112.892302,7.35752916 113.424466,7.36784172 113.933689,7.57312615 C114.446467,7.77679924 114.775717,8.1058344 114.921117,8.55829803 L118.695056,20.3175184 Z M135.407012,72.3891859 C135.552089,72.8416496 135.475512,73.3002363 135.176634,73.7633347 C134.88131,74.2248",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: web/css/vector/ico-pago-contra-entrega-blue.svg": [
+  {
+   "term": "3310",
+   "data": "                    </mask>\n                    <g id=\"Clip-2\"></g>\n                    <path d=\"M43.6083014,0.0175203221 L43.6082221,0.0175203221 C42.8010188,0.0174406118 42.0582521,0.247723645 41.5167307,0.665963546 C41.3041375,0.830166747 40.9332303,1.07328314 40.5405797,1.33074738 C38.7300065,2.51763362 37.5204713,3.38137435 37.2159052,4.52697066 C37.1728152,4.68902168 37.1401207,4.84166689 37.1132986,4.98004396 C36.0791388,5.11300072 34.3952169,5.5519653 33.5183395,6.69078624 C33.0131629,7.34656281 32.8473894,8.14231065 33.0514122,8.93136283 C33.40502,10.2993509 34.4857614,11.1491423 35.8",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: web/css/vector/warning.svg": [
+  {
+   "term": "3310",
+   "data": "            <g id=\"warning\" transform=\"translate(21.000000, 232.000000)\">\n                <circle id=\"Oval-4\" fill=\"#F5A623\" fill-rule=\"nonzero\" cx=\"10\" cy=\"10\" r=\"10\"></circle>\n                <path d=\"M9.03027344,11.4189453 L8.74902344,7.20898438 C8.6962888,6.38866777 8.66992188,5.79980647 8.66992188,5.44238281 C8.66992188,4.95605226 8.79736201,4.57666152 9.05224609,4.30419922 C9.30713018,4.03173692 9.64257604,3.89550781 10.0585938,3.89550781 C10.5625025,3.89550781 10.8994132,4.06982248 11.0693359,4.41845703 C11.2392587,4.76709159 11.3242188,5.26952797 11.3242188,5.92578125 C11.3242188,6.312",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: web/img/newHome/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: web/img/newHome/windows.svg": [
+  {
+   "term": "3310",
+   "data": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"186\" height=\"41\" viewBox=\"0 0 186 41\">\n  <g fill=\"none\" fill-rule=\"evenodd\">\n    <path fill=\"#FFFFFF\" d=\"M29.0074315,8.12844172 L-0.000208988764,13.9479701 L-0.000208988764,35.1087478 L29.0074315,40.9282762 L34.8047798,38.8151333 L34.8047798,10.2457773 L29.0074315,8.12844172 Z M12.6728697,30.7315234 L6.23601573,29.8237943 L6.23601573,24.4612751 L12.6728697,24.4612751 L12.6728697,30.7315234 Z M12.6728697,23.6499791 L6.23601573,23.6499791 L6.23601573,18.7214088 L12.6728697,17.8073907 L12.6728697,23.6499791 Z M21.5966899,31.9704791 L13.4816562,30.783",
+   "ref": "master"
+  }
+ ],
+ "claroshop/tienda_claroshop :: config/local.php.dist": [
+  {
+   "term": "BEGIN PRIVATE",
+   "data": "                    \"project_id\"                  => \"analytics-163800\",\n                    \"private_key_id\"              => \"89585c2de057fcff460cc078d990094deda77336\",\n                    \"private_key\"                 => \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDG9Ox3cffzJJgo\\n13Dr7VqrXoDL8Xc543PB4GSRdOhChiCDzRyY0By5o0XaGYNrDpTtYLAqiZ7Z8o/e\\nPQGZ0CYYxC+1tjyaO5YV2u10AEzmRcfhFZAtwwEnA1MHy10XzpFxpH6PV17TA+ir\\n5XxeTRPSHL1zl1pOnMAXSFwSkRIEaHm4WS2hboH5rYYPnzKKwUGfo5JJTcwA25JE\\niEkG017kDbECykvicsprF66T2KGaNUAjd78gg5O/3dW3NfEaer/b+xRePG6byPbU\\n/xCMEny+hZZhqcYJR",
+   "ref": "master"
+  }
+ ]
+}

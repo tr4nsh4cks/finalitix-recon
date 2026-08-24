@@ -1,0 +1,30 @@
+﻿=== DOCKER: Python2.7 MySQL ├óÔÇáÔÇÖ PROD Sears 172.27.141.24:3308 ===
+
+--- dbcronproductos@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- dbsmartinsight@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- adaxxidb@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- root@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- root@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- root@172.27.141.24:3308 ---
+STATUS: CONN_ERR: [Errno 113] No route to host
+
+--- app_t1@172.27.141.4:3306 ---
+Traceback (most recent call last):
+  File "/tmp/_mysql_probe.py", line 153, in <module>
+    s, status = mysql_auth(h, p, u, pw)
+  File "/tmp/_mysql_probe.py", line 50, in mysql_auth
+    token = bytes([h1[j] ^ h3[j] for j in range(20)])
+TypeError: unsupported operand type(s) for ^: 'str' and 'str'
+
+=== FIN DOCKER PY MYSQL ===
+

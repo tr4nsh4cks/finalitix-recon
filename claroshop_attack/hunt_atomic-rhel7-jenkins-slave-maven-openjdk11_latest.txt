@@ -1,0 +1,210 @@
+
+
+=== ID ===
+'uid=1000(jenkins) gid=1000 groups=1000
+=== HOME_LS ===
+/home:
+total 4
+3drwxr-xr-x.  4 root    root      32 Jun 26  2020 .
+4dr-xr-xr-x. 20 root    root    4096 Aug 24 03:55 ..
+9drwxr-xr-x.  5 jenkins jenkins   48 Sep 21  2020 jenkins
+5drwxr-xr-x.  2 root    root       6 May 28  2020 jvm
+
+/home/jenkins:
+total 0
+0drwxr-xr-x. 5 jenkins jenkins 48 Sep 21  2020 .
+1drwxr-xr-x. 4 root    root    32 Jun 26  2020 ..
+5drwxr-xr-x. 2 jenkins jenkins  6 Jun 26  2020 .agent
+7drwxr-xr-x. 2 root    root     6 Aug 24 03:55 .jenkins
+3drwxr-----. 3 root    root    19 Jun 26  2020 .pki
+
+
+/home/jvm:
+total 0
+*drwxr-xr-x. 2 root root  6 May 28  2020 .
++drwxr-xr-x. 4 root root 32 Jun 26  2020 ..
+
+/opt:
+total 4
+-drwxr-xr-x.  5 root root  121 Sep 21  2020 .
+.dr-xr-xr-x. 20 root root 4096 Aug 24 03:55 ..
+Slrwxrwxrwx.  1 root root   23 Sep 21  2020 apache-maven -> /opt/apache-maven-3.6.3
+>drwxr-xr-x.  6 root root   99 Nov  7  2019 apache-maven-3.6.3
+.drwxr-xr-x.  3 root root   26 May 28  2020 rh
+`lrwxrwxrwx.  1 root root   35 Sep 21  2020 sonar-scanner -> /opt/sonar-scanner-4.3.0.2102-linux
+Jdrwxr-xr-x.  5 root root   88 Sep 21  2020 sonar-scanner-4.3.0.2102-linux
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 May  7  2018 .
+-drwxr-xr-x. 13 root root 155 May  7  2018 ..
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 May  7  2018 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+E--- /opt/apache-maven-3.6.3/conf/logging/simplelogger.properties ---
+># Licensed to the Apache Software Foundation (ASF) under one
+@# or more contributor license agreements.  See the NOTICE file
+9# distributed with this work for additional information
+># regarding copyright ownership.  The ASF licenses this file
+5# to you under the Apache License, Version 2.0 (the
+># "License"); you may not use this file except in compliance
+># with the License.  You may obtain a copy of the License at
+#
+0#   http://www.apache.org/licenses/LICENSE-2.0
+#
+># Unless required by applicable law or agreed to in writing,
+?# software distributed under the License is distributed on an
+:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+=# KIND, either express or implied.  See the License for the
+;# specific language governing permissions and limitations
+# under the License.
+
+-org.slf4j.simpleLogger.defaultLogLevel=info
++org.slf4j.simpleLogger.showDateTime=false
+-org.slf4j.simpleLogger.showThreadName=false
+*org.slf4j.simpleLogger.showLogName=false
++org.slf4j.simpleLogger.logFile=System.out
+/org.slf4j.simpleLogger.cacheOutputStream=true
+-org.slf4j.simpleLogger.levelInBrackets=true
+&org.slf4j.simpleLogger.log.Sisu=info
+0org.slf4j.simpleLogger.warnLevelString=WARNING
+
+B# MNG-6181: mvn -X also prints all debug logging from HttpClient
+.# Be aware that the shaded packages are used
+G# org.apache.http -> org.apache.maven.wagon.providers.http.httpclient
+Qorg.slf4j.simpleLogger.log.org.apache.maven.wagon.providers.http.httpclient=off
+Vorg.slf4j.simpleLogger.log.org.apache.maven.wagon.providers.http.httpclient.wire=off
+
+2--- /opt/apache-maven-3.6.3/conf/settings.xml ---
+(<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+<Licensed to the Apache Software Foundation (ASF) under one
+>or more contributor license agreements.  See the NOTICE file
+7distributed with this work for additional information
+<regarding copyright ownership.  The ASF licenses this file
+3to you under the Apache License, Version 2.0 (the
+<"License"); you may not use this file except in compliance
+<with the License.  You may obtain a copy of the License at
+
+0    http://www.apache.org/licenses/LICENSE-2.0
+
+<Unless required by applicable law or agreed to in writing,
+=software distributed under the License is distributed on an
+8"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+;KIND, either express or implied.  See the License for the
+9specific language governing permissions and limitations
+under the License.
+-->
+
+<!--
+Q | This is the configuration file for Maven. It can be specified at two levels:
+ |
+U |  1. User Level. This settings.xml file provides configuration for a single user,
+O |                 and is normally provided in ${user.home}/.m2/settings.xml.
+ |
+O |                 NOTE: This location can be overridden with the CLI option:
+ |
+2 |                 -s /path/to/user/settings.xml
+ |
+R |  2. Global Level. This settings.xml file provides configuration for all Maven
+R |                 users on a machine (assuming they're all using the same Maven
+= |                 installation). It's normally provided in
+0 |                 ${maven.conf}/settings.xml.
+ |
+O |                 NOTE: This location can be overridden with the CLI option:
+ |
+5 |                 -gs /path/to/global/settings.xml
+ |
+Q | The sections in this sample file are intended to give you a running start at
+T | getting the most out of your Maven installation. Where appropriate, the default
+I | values (values used when the setting is not specified) are provided.
+ |
+ |-->
+:<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+A          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+w          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!-- localRepository
+J   | The path to the local repository maven will use to store artifacts.
+   |
++   | Default: ${user.home}/.m2/repository
+:  <localRepository>/path/to/local/repo</localRepository>
+  -->
+
+  <!-- interactiveMode
+Z   | This will determine whether maven prompts you when it needs input. If set to false,
+X   | maven will use a sensible default value, perhaps based on some other setting, for
+!   | the parameter in question.
+   |
+   | Default: true
++  <interactiveMode>true</interactiveMode>
+  -->
+
+  <!-- offline
+`   | Determines whether maven should attempt to connect to the network when executing a build.
+W   | This will have an effect on artifact downloads, artifact deployment, and others.
+   |
+   | Default: false
+
+  <offline>false</offline>
+  -->
+
+  <!-- pluginGroups
+x   | This is a list of additional group identifiers that will be searched when resolving plugins by their prefix, i.e.
+n   | when invoking a command line like "mvn prefix:goal". Maven will automatically add the group identifiers
+i   | "org.apache.maven.plugins" and "org.codehaus.mojo" if these are not already contained in the list.
+	   |-->
+  <pluginGroups>
+    <!-- pluginGroup
+G     | Specifies a further group identifier to use for plugin lookup.
+1    <pluginGroup>com.your.plugins</pluginGroup>
+	    -->
+  </pluginGroups>
+
+  <!-- proxies
+]   | This is a list of proxies which can be used on this machine to connect to the network.
+^   | Unless otherwise specified (by system property or command-line switch), the first proxy
+@   | specification in this list marked as active will be used.
+	   |-->
+
+  <proxies>
+    <!-- proxy
+N     | Specification for one proxy, to be used in connecting to the network.
+     |
+
+    <proxy>
+      <id>optional</id>
+
+      <active>true</active>
+!      <protocol>http</protocol>
+!      <username>proxyuser</usern
+J--- /opt/sonar-scanner-4.3.0.2102-linux/conf/sonar-scanner.properties ---
+s#Configure here general information about the environment, such as SonarQube server connection details for example
+:#No information about specific project should appear here
+
+ #----- Default SonarQube server
+&#sonar.host.url=http://localhost:9000
+
+$#----- Default source code encoding
+
+#sonar.sourceEncoding=UTF-8
+
+
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+*/opt/apache-maven-3.6.3/conf/settings.xml
+=== HUNT_DONE ===

@@ -1,0 +1,299 @@
+
+======================================================================
+R4T1 FULL AesCtr.php  (1.9s)
+======================================================================
+<?php
+namespace tienda\Librerias\Encrypt;
+
+use tienda\Librerias\Encrypt\Aes;
+
+Class AesCtr extends Aes
+{
+
+    /**
+     * Encrypt a text using AES encryption in Counter mode of operation
+     *  - see http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf
+     *
+     * Unicode multi-byte character safe
+     *
+     * @param plaintext source text to be encrypted
+     * @param password  the password to use to generate a key
+     * @param nBits     number of bits to be used in the key (128, 192, or 256)
+     * @return          encrypted text
+     */
+    public static function encrypt($plaintext, $password, $nBits)
+    {
+        $blockSize = 16; // block size fixed at 16 bytes / 128 bits (Nb=4) for AES
+        if (!($nBits == 128 || $nBits == 192 || $nBits == 256)) return ''; // standard allows 128/192/256 bit keys
+        // note PHP (5) gives us plaintext and password in UTF8 encoding!
+
+        // use AES itself to encrypt password to get cipher key (using plain password as source for
+        // key expansion) - gives us well encrypted key
+        $nBytes = $nBits / 8; // no bytes in key
+        $pwBytes = array();
+        for ($i = 0; $i < $nBytes; $i++) $pwBytes[$i] = ord(substr($password, $i, 1)) & 0xff;
+        $key = Aes::cipher($pwBytes, Aes::keyExpansion($pwBytes));
+        $key = array_merge($key, array_slice($key, 0, $nBytes - 16)); // expand key to 16/24/32 bytes long
+
+        // initialise 1st 8 bytes of counter block with nonce (NIST SP800-38A §B.2): [0-1] = millisec,
+        // [2-3] = random, [4-7] = seconds, giving guaranteed sub-ms uniqueness up to Feb 2106
+        $counterBlock = array();
+        $nonce = floor(microtime(true) * 1000); // timestamp: milliseconds since 1-Jan-1970
+        $nonceMs = $nonce % 1000;
+        $nonceSec = floor($nonce / 1000);
+        $nonceRnd = floor(rand(0, 0xffff));
+
+        for ($i = 0; $i < 2; $i++) $counterBlock[$i] = self::urs($nonceMs, $i * 8) & 0xff;
+        for ($i = 0; $i < 2; $i++) $counterBlock[$i + 2] = self::urs($nonceRnd, $i * 8) & 0xff;
+        for ($i = 0; $i < 4; $i++) $counterBlock[$i + 4] = self::urs($nonceSec, $i * 8) & 0xff;
+
+        // and convert it to a string to go on the front of the ciphertext
+        $ctrTxt = '';
+        for ($i = 0; $i < 8; $i++) $ctrTxt .= chr($counterBlock[$i]);
+
+        // generate key schedule - an expansion of the key into distinct Key Rounds for each round
+        $keySchedule = Aes::keyExpansion($key);
+        //print_r($keySchedule);
+
+        $blockCount = ceil(strlen($plaintext) / $blockSize);
+        $ciphertxt = array(); // ciphertext as array of strings
+
+        for ($b = 0; $b < $blockCount; $b++) {
+            // set counter (block #) in last 8 bytes of counter block (leaving nonce in 1st 8 bytes)
+            // done in two stages for 32-bit ops: using two words allows us to go past 2^32 blocks (68GB)
+            for ($c = 0; $c < 4; $c++) $counterBlock[15 - $c] = self::urs($b, $c * 8) & 0xff;
+            for ($c = 0; $c < 4; $c++) $counterBlock[15 - $c - 4] = self::urs($b / 0x100000000, $c * 8);
+
+            $cipherCntr = Aes::cipher($counterBlock, $keySchedule); // -- encrypt counter block --
+
+            // block size is reduced on final block
+            $blockLength = $b < $blockCount - 1 ? $blockSize : (strlen($plaintext) - 1) % $blockSize + 1;
+            $cipherByte = array();
+
+            for ($i = 0; $i < $blockLength; $i++) { // -- xor plaintext with ciphered counter byte-by-byte --
+                $cipherByte[$i] = $cipherCntr[$i] ^ ord(substr($plaintext, $b * $blockSize + $i, 1));
+                $cipherByte[$i] = chr($cipherByte[$i]);
+            }
+            $ciphertxt[$b] = implode('', $cipherByte); // escape troublesome characters in ciphertext
+        }
+
+        // implode is more efficient than repeated string concatenation
+        $ciphertext = $ctrTxt . implode('', $ciphertxt);
+        $ciphertext = base64_encode($ciphertext);
+        return $ciphertext;
+    }
+
+
+    /**
+     * Decrypt a text encrypted by AES in counter mode of operation
+     *
+     * @param ciphertext source text to be decrypted
+     * @param password   the password to use to generate a key
+     * @param nBits      number of bits to be used in the key (128, 192, or 256)
+     * @return           decrypted text
+     */
+    public static function decrypt($ciphertext, $password, $nBits)
+    {
+        $blockSize = 16; // block size fixed at 16 bytes / 128 bits (Nb=4) for AES
+        if (!($nBits == 128 || $nBits == 192 || $nBits == 256)) return ''; // standard allows 128/192/256 bit keys
+        $ciphertext = base64_decode($ciphertext);
+
+        // use AES to encrypt password (mirroring encrypt routine)
+        $nBytes = $nBits / 8; // no bytes in key
+        $pwBytes = array();
+        for ($i = 0; $i < $nBytes; $i++) $pwBytes[$i] = ord(substr($password, $i, 1)) & 0xff;
+        $key = Aes::cipher($pwBytes, Aes::keyExpansion($pwBytes));
+        $key = array_merge($key, array_slice($key, 0, $nBytes - 16)); // expand key to 16/24/32 bytes long
+
+        // recover nonce from 1st element of ciphertext
+        $counterBlock = array();
+        $ctrTxt = substr($ciphertext, 0, 8);
+        for ($i = 0; $i < 8; $i++) $counterBlock[$i] = ord(substr($ctrTxt, $i, 1));
+
+        // generate key schedule
+        $keySchedule = Aes::keyExpansion($key);
+
+        // separate ciphertext into blocks (skipping past initial 8 bytes)
+        $nBlocks = ceil((strlen($ciphertext) - 8) / $blockSize);
+        $ct = array();
+        for ($b = 0; $b < $nBlocks; $b++) $ct[$b] = substr($ciphertext, 8 + $b * $blockSize, 16);
+        $ciphertext = $ct; // ciphertext is now array of block-length strings
+
+        // plaintext will get generated block-by-block into array of block-length strings
+        $plaintxt = array();
+
+        for ($b = 0; $b < $nBlocks; $b++) {
+            // set counter (block #) in last 8 bytes of counter block (leaving nonce in 1st 8 bytes)
+            for ($c = 0; $c < 4; $c++) $counterBlock[15 - $c] = self::urs($b, $c * 8) & 0xff;
+            for ($c = 0; $c < 4; $c++) $counterBlock[15 - $c - 4] = self::urs(($b + 1) / 0x100000000 - 1, $c * 8) & 0xff;
+
+            $cipherCntr = Aes::cipher($counterBlock, $keySchedule); // encrypt counter block
+
+            $plaintxtByte = array();
+            for ($i = 0; $i < strlen($ciphertext[$b]); $i++) {
+                // -- xor plaintext with ciphered counter byte-by-byte --
+                $plaintxtByte[$i] = $cipherCntr[$i] ^ ord(substr($ciphertext[$b], $i, 1));
+                $plaintxtByte[$i] = chr($plaintxtByte[$i]);
+
+            }
+            $plaintxt[$b] = implode('', $plaintxtByte);
+        }
+
+        // join array of blocks into single plaintext string
+        $plaintext = implode('', $plaintxt);
+
+        return $plaintext;
+    }
+
+
+    /*
+     * Unsigned right shift function, since PHP has neither >>> operator nor unsigned ints
+     *
+     * @param a  number to be shifted (32-bit integer)
+     * @param b  number of bits to shift a to the right (0..31)
+     * @return   a right-shifted and zero-filled by b bits
+     */
+    private static function urs($a, $b)
+    {
+        $a &= 0xffffffff;
+        $b &= 0x1f; // (bounds check)
+        if ($a & 0x80000000 && $b > 0) { // if left-most bit set
+            $a = ($a >> 1) & 0x7fffffff; //   right-shift one bit & clear left-most bit
+            $a = $a >> ($b - 1); //   remaining right-shifts
+        } else { // otherwise
+            $a = ($a >> $b); //   use normal right-shift
+        }
+        return $a;
+    }
+
+}
+
+
+
+======================================================================
+R4T2 find all AesCtr/Rc4 copies + cat Rc4.php  (4.4s)
+======================================================================
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/AesCtr.php
+---
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/phpseclib/phpseclib/phpseclib/Crypt/RC4.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Rc4.php
+---RC4---
+<?php
+namespace tienda\Librerias;
+
+/**
+ * Clase RC4 para el encriptadp
+ * 
+ * @package ApiRest
+ * @version 1.0
+ * @author  Ricardo Jesus Ruiz Cruz <ricardo.cruz@decomrpas.com>
+ * @description Clase para los encriptados
+ * @coments  Ejemplo de como utilizarlo
+ *           $rc4crypt = new Rc4();
+ *           $string = "hola";
+ *           $encryptedstring = $rc4crypt->StringToHexString($rc4crypt->Salaa($string,'SEMILLA'));
+ *           Decryp
+ *           $encryptedstring = "ABCDEF123456789ABCDEF";
+ *           $string = $rc4crypt->Salaa($rc4crypt->HexStringToString($HTTP_POST_VARS[respuesta]),'SEMILLA');
+ * 
+ */
+class Rc4
+{
+    var $sTempUN = "";
+    var $sTempPW = "";
+    var $sbox = array();
+    var $KEY = array();
+    var $sUser = "";
+    var $sPassw = "";
+    
+    public function RC4Initialize($strPwd)
+    {
+        $tempSwap = 0;
+        $i = 0;
+        $b = 0;
+        $intLength = 0;
+        $intLength = strlen($strPwd);
+        for($i = 0; $i <= 255; $i++){
+            $this->KEY[$i] = ord(substr($strPwd,$i%$intLength,1));
+            $this->sbox[$i] = $i;
+        }
+        $b = 0;
+        for ($i = 0; $i <= 255; $i++) {
+            // For a = 0 To 255
+            $b = ($b + $this->sbox[$i] + $this->KEY[$i])%256;
+            $tempSwap = $this->sbox[$i];
+            $this->sbox[$i] = $this->sbox[$b];
+            $this->sbox[$b] = $tempSwap;
+        }
+    }
+    public function Salaa($plaintxt, $key)
+    {
+        $this->RC4Initialize($key);
+        $temp = 0;
+        $a = 0;
+        $i = 0;
+        $j = 0;
+        $k;
+        $cipherby = 0;
+        $cipher = "";
+        for ($a = 0; $a < strlen($plaintxt); $a++) {
+            $i = ($i + 1)%256;
+            $j = ($j + $this->sbox[$i])%256;
+            $temp = $this->sbox[$i];
+            $this->sbox[$i] = $this->sbox[$j];
+            $this->sbox[$j] = $temp;
+            $k = $this->sbox[($this->sbox[$i] + $this->sbox[$j])%256];
+            $cipherby = ord(substr($plaintxt,$a,1)) ^ $k;
+            $cipher = $cipher.chr($cipherby);
+        }
+        return $cipher;
+    }
+    public function StringToHexString($b)
+    {
+        $sb="";
+        for ($i = 0; $i < strlen($b); $i++) {
+            $tmpb = $b;
+            $v = ord(substr($tmpb, $i, 1)) & 0xFF;
+            if ($v < 16) {
+                $sb = $sb.'0';
+            }
+            $sb = $sb.dechex($v);
+
+
+
+
+======================================================================
+R4T3 all AesCtr usages across app+vendor  (11.6s)
+======================================================================
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Librerias/Encrypt/AesCtr.php:6:Class AesCtr extends Aes
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Services/RecuperaContrasena.php:6:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Services/RecuperaContrasena.php:48:            $mailCryp= AesCtr::encrypt($this->email,  "K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4", 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Controller/MiCuentaController.php:17:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Controller/MiCuentaController.php:627:        $mailCryp = AesCtr::decrypt($email_get, "K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4", 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:14:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:292:        //return AesCtr::decrypt($this->numero, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:301:        //$this->numero = AesCtr::encrypt($numero, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:310:        //return AesCtr::decrypt($this->mes, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:319:        //$this->mes = AesCtr::encrypt($mes, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:328:        //return AesCtr::decrypt($this->anio, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/DatosFacturacion.php:337:        //$this->anio = AesCtr::encrypt($anio, DatosFacturacion::key, 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/Oneclick.php:7:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/Oneclick.php:308:            'numero'=>AesCtr::decrypt($aa->getNumero(), $key, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Entity/Store/Oneclick.php:310:            'mes'=>AesCtr::decrypt($aa->getMes(), $key, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Dao/DatosFacturacionDAO.php:13:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Dao/DatosFacturacionDAO.php:56:            'numero'   => AesCtr::encrypt($card->getAccountNumber(), $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Dao/DatosFacturacionDAO.php:57:            'mes'      => AesCtr::encrypt($card->getExpirationMonth(), $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Dao/DatosFacturacionDAO.php:58:            'anio'     => AesCtr::encrypt($card->getExpirationYear(), $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/CorreoService.php:21:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/CorreoService.php:158:                $mailCryp= AesCtr::encrypt($data['email'], "K0SUH7I1yDR616H8LrP0XuhURcCN5uRY4", 256);
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:13:use tienda\Librerias\Encrypt\AesCtr;
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:89:            'digitos'  => $this->getCard4(AesCtr::decrypt($objOne->getNumero(), $this->keyDecript, 256)),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:90:            'numero'   => AesCtr::decrypt($objOne->getNumero(), $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:92:            'mes'      => AesCtr::decrypt($objOne->getMes(), $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:94:            'flag'     => ($this->creditCardCompany(AesCtr::decrypt($objOne->getNumero(), $this->keyDecript, 256))!='error')?true:false,
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:95:            'tipo'     => $this->creditCardCompany(AesCtr::decrypt($objOne->getNumero(), $this->keyDecript, 256)),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:97:            'bm'       => $this->getbm(AesCtr::decrypt($objOne->getNumero(), $this->keyDecript, 256))
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:109:            'numero'   => AesCtr::encrypt($arrdata['numero'], $this->keyDecript, 256),
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/Claroshop/Core/src/Service/OneClickService.php:110:            'mes'      => AesCtr::encrypt($arrdata['mes-tarjeta'], $this->keyDecript, 256),
+
+

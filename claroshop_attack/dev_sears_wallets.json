@@ -1,0 +1,1474 @@
+{
+  "databases": [
+    "admonplaza",
+    "contadores_pot",
+    "reporte_directivo",
+    "reps_mesa_regalo",
+    "test",
+    "tienda",
+    "tienda_nueva"
+  ],
+  "wallet_tables_found": [
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "control_creditienda_facturacion",
+      "TABLE_ROWS": "7",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "creditienda_track",
+      "TABLE_ROWS": "50",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "cupones",
+      "TABLE_ROWS": "0",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "cupones_promocion",
+      "TABLE_ROWS": "0",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "detalle_cupon",
+      "TABLE_ROWS": "0",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "log_mod_puntos_sinfin",
+      "TABLE_ROWS": "0",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    },
+    {
+      "TABLE_SCHEMA": "tienda",
+      "TABLE_NAME": "rel_cupon_cliente",
+      "TABLE_ROWS": "0",
+      "CREATE_TIME": "2026-03-23 11:56:45"
+    }
+  ],
+  "table_details": [
+    {
+      "schema": "tienda",
+      "table": "control_creditienda_facturacion",
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "fecha",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "importe",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "no_cia",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "no_reg",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "no_tda",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "no_trx",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "pedido",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "token",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "xml_request",
+          "Type": "longtext",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "xml_response",
+          "Type": "longtext",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "respuesta",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_envio",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_creacion",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_modificacion",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0000-00-00 00:00:00",
+          "Extra": "on update CURRENT_TIMESTAMP"
+        }
+      ],
+      "count": "7",
+      "date_range": {
+        "col": "fecha",
+        "min": "2022-05-17 13:09:04",
+        "max": "2022-05-17 13:12:44"
+      },
+      "sample_50": [
+        {
+          "id": "29",
+          "fecha": "2022-05-17 13:12:44",
+          "importe": "2250",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "101",
+          "no_trx": "458",
+          "pedido": "31000023",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>VJs7tFqY2i7O4ArNdr0VRCWlaVsv+BWuBdolzvARUfV2KXwPmcky+fVi32btM+4/</wcf:Fecha>\n               <wcf:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>a++sMV4NBDUDSwxNiTzIiI6AULhQkgO9+6VjSgxmTzM=</wcf:NoTda>\n               <wcf:NoTrx>CWyUa94aqdP5vDc0z9JShFGU6JcsMrQ9SjsZTo2oWLo=</wcf:NoTrx>\n               <wcf:Pedido>O3njDq+bm8ZMCL+GOk35E8xlJAFX5ZkuRkW3ttO81Vc=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>VJs7tFqY2i7O4ArNdr0VRCWlaVsv+BWuBdolzvARUfV2KXwPmcky+fVi32btM+4/</a:Fecha><a:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>a++sMV4NBDUDSwxNiTzIiI6AULhQkgO9+6VjSgxmTzM=</a:NoTda><a:NoTrx>CWyUa94aqdP5vDc0z9JShFGU6JcsMrQ9SjsZTo2oWLo=</a:NoTrx><a:Pedido>O3njDq+bm8ZMCL+GOk35E8xlJAFX5ZkuRkW3ttO81Vc=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-12 01:35:45",
+          "fecha_creacion": "2022-07-06 19:35:45",
+          "fecha_modificacion": "2022-07-12 12:07:46"
+        },
+        {
+          "id": "28",
+          "fecha": "2022-05-17 13:10:50",
+          "importe": "1379",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "111",
+          "no_trx": "522",
+          "pedido": "31000044",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>5ZRjvkpkxETY1Vat1lW8x99UK537+4kRHqZa/mGAojN5KQpeo2txC0obbDGrwqOq</wcf:Fecha>\n               <wcf:Importe>dWmzx6dthjSRnrIhxQ7VppLDEx7xrHNQT0VxIUb0cIs=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>AZbQQaJ0LEqyZn/zY+izARKi/L19RK+C8eYii9KKbos=</wcf:NoTda>\n               <wcf:NoTrx>TPJUR1k+URrg72rw6GDr2op6KGRQAYWP5XZwzbgBM4k=</wcf:NoTrx>\n               <wcf:Pedido>ESeMInCv5CT1Xh2QChW4pa0CmiQl73JMjnGkRnQ67wQ=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>5ZRjvkpkxETY1Vat1lW8x99UK537+4kRHqZa/mGAojN5KQpeo2txC0obbDGrwqOq</a:Fecha><a:Importe>dWmzx6dthjSRnrIhxQ7VppLDEx7xrHNQT0VxIUb0cIs=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>AZbQQaJ0LEqyZn/zY+izARKi/L19RK+C8eYii9KKbos=</a:NoTda><a:NoTrx>TPJUR1k+URrg72rw6GDr2op6KGRQAYWP5XZwzbgBM4k=</a:NoTrx><a:Pedido>ESeMInCv5CT1Xh2QChW4pa0CmiQl73JMjnGkRnQ67wQ=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:43",
+          "fecha_creacion": "2022-07-06 19:35:43",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "27",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "223",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:41",
+          "fecha_creacion": "2022-07-06 19:35:41",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "26",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "223",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:34",
+          "fecha_creacion": "2022-07-06 19:35:34",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "25",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "212",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:31",
+          "fecha_creacion": "2022-07-06 19:35:31",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "24",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "212",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:28",
+          "fecha_creacion": "2022-07-06 19:35:28",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "23",
+          "fecha": "2022-05-17 13:09:04",
+          "importe": "2250",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "104",
+          "no_trx": "459",
+          "pedido": "31000022",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7McdsLw7grNCgvfCaPp+uymQk41JFC1kBSQKDwE9j8v2KN</wcf:Fecha>\n               <wcf:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>JoNC/AImoHDMKZUDuUd4VK8kq8gBS8CUwO3QPMYXv7k=</wcf:NoTda>\n               <wcf:NoTrx>VKmku9xSQuaNM7t59LTVhrzCVFjIupPCifTKLMK5AuA=</wcf:NoTrx>\n               <wcf:Pedido>Ryk8kTsUAsnI4AAWkPsp68fKMwkDnVHHsweaqugFjSU=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7McdsLw7grNCgvfCaPp+uymQk41JFC1kBSQKDwE9j8v2KN</a:Fecha><a:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>JoNC/AImoHDMKZUDuUd4VK8kq8gBS8CUwO3QPMYXv7k=</a:NoTda><a:NoTrx>VKmku9xSQuaNM7t59LTVhrzCVFjIupPCifTKLMK5AuA=</a:NoTrx><a:Pedido>Ryk8kTsUAsnI4AAWkPsp68fKMwkDnVHHsweaqugFjSU=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:25",
+          "fecha_creacion": "2022-07-06 19:35:25",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        }
+      ],
+      "saldo_positivo": {
+        "column": "importe",
+        "count_gt0": "7",
+        "total": "41879"
+      },
+      "full_dump_saldo_gt0": [
+        {
+          "id": "24",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "212",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:28",
+          "fecha_creacion": "2022-07-06 19:35:28",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "25",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "212",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>h6KK6BgdLi6qkJLby7srM3YFyKKbgsQYWARuOrGHcKE=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:31",
+          "fecha_creacion": "2022-07-06 19:35:31",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "26",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "223",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:34",
+          "fecha_creacion": "2022-07-06 19:35:34",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "27",
+          "fecha": "2022-05-17 13:09:30",
+          "importe": "9000",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "223",
+          "no_trx": "506",
+          "pedido": "31000028",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</wcf:Fecha>\n               <wcf:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</wcf:NoTda>\n               <wcf:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</wcf:NoTrx>\n               <wcf:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7Mce0Sby76qvxy2DjMRQo7OL1NBoQUiF4SWqgxNPVEc0MG</a:Fecha><a:Importe>zO0YrV57sDGA2g/Bs1hDy+nRKP95sG+500fFsN4yajk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>pK8iuS922w07BryHHz1EzW3XKxX55OoCaVqKtKfLCTM=</a:NoTda><a:NoTrx>7CDRTg7Elr7LniP5Ph47GS9SVxL2/FEtztO07yGfvEg=</a:NoTrx><a:Pedido>vErNeood66BimEIG4gCXePjPrxvBzsmBFQ8va+hNpOM=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:41",
+          "fecha_creacion": "2022-07-06 19:35:41",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "23",
+          "fecha": "2022-05-17 13:09:04",
+          "importe": "2250",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "104",
+          "no_trx": "459",
+          "pedido": "31000022",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>svD0HGmRNktzXADnxl7McdsLw7grNCgvfCaPp+uymQk41JFC1kBSQKDwE9j8v2KN</wcf:Fecha>\n               <wcf:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>JoNC/AImoHDMKZUDuUd4VK8kq8gBS8CUwO3QPMYXv7k=</wcf:NoTda>\n               <wcf:NoTrx>VKmku9xSQuaNM7t59LTVhrzCVFjIupPCifTKLMK5AuA=</wcf:NoTrx>\n               <wcf:Pedido>Ryk8kTsUAsnI4AAWkPsp68fKMwkDnVHHsweaqugFjSU=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>svD0HGmRNktzXADnxl7McdsLw7grNCgvfCaPp+uymQk41JFC1kBSQKDwE9j8v2KN</a:Fecha><a:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>JoNC/AImoHDMKZUDuUd4VK8kq8gBS8CUwO3QPMYXv7k=</a:NoTda><a:NoTrx>VKmku9xSQuaNM7t59LTVhrzCVFjIupPCifTKLMK5AuA=</a:NoTrx><a:Pedido>Ryk8kTsUAsnI4AAWkPsp68fKMwkDnVHHsweaqugFjSU=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:25",
+          "fecha_creacion": "2022-07-06 19:35:25",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        },
+        {
+          "id": "29",
+          "fecha": "2022-05-17 13:12:44",
+          "importe": "2250",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "101",
+          "no_trx": "458",
+          "pedido": "31000023",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>VJs7tFqY2i7O4ArNdr0VRCWlaVsv+BWuBdolzvARUfV2KXwPmcky+fVi32btM+4/</wcf:Fecha>\n               <wcf:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>a++sMV4NBDUDSwxNiTzIiI6AULhQkgO9+6VjSgxmTzM=</wcf:NoTda>\n               <wcf:NoTrx>CWyUa94aqdP5vDc0z9JShFGU6JcsMrQ9SjsZTo2oWLo=</wcf:NoTrx>\n               <wcf:Pedido>O3njDq+bm8ZMCL+GOk35E8xlJAFX5ZkuRkW3ttO81Vc=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>VJs7tFqY2i7O4ArNdr0VRCWlaVsv+BWuBdolzvARUfV2KXwPmcky+fVi32btM+4/</a:Fecha><a:Importe>8jWPoiK/KWSkujml9UpSBnl0fgVmXzN0mzixzLbFyLk=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>a++sMV4NBDUDSwxNiTzIiI6AULhQkgO9+6VjSgxmTzM=</a:NoTda><a:NoTrx>CWyUa94aqdP5vDc0z9JShFGU6JcsMrQ9SjsZTo2oWLo=</a:NoTrx><a:Pedido>O3njDq+bm8ZMCL+GOk35E8xlJAFX5ZkuRkW3ttO81Vc=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-12 01:35:45",
+          "fecha_creacion": "2022-07-06 19:35:45",
+          "fecha_modificacion": "2022-07-12 12:07:46"
+        },
+        {
+          "id": "28",
+          "fecha": "2022-05-17 13:10:50",
+          "importe": "1379",
+          "no_cia": "394",
+          "no_reg": "2140",
+          "no_tda": "111",
+          "no_trx": "522",
+          "pedido": "31000044",
+          "token": "T1C0m3nvp465u506202207",
+          "xml_request": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\" xmlns:wcf=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <tem:TrxPedido>\n         <tem:token>T1C0m3nvp465u5</tem:token>\n         <tem:Datos>\n            <wcf:eTrxPedidoEnt>\n               <wcf:Fecha>5ZRjvkpkxETY1Vat1lW8x99UK537+4kRHqZa/mGAojN5KQpeo2txC0obbDGrwqOq</wcf:Fecha>\n               <wcf:Importe>dWmzx6dthjSRnrIhxQ7VppLDEx7xrHNQT0VxIUb0cIs=</wcf:Importe>\n               <wcf:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</wcf:NoCia>\n               <wcf:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</wcf:NoReg>\n               <wcf:NoTda>AZbQQaJ0LEqyZn/zY+izARKi/L19RK+C8eYii9KKbos=</wcf:NoTda>\n               <wcf:NoTrx>TPJUR1k+URrg72rw6GDr2op6KGRQAYWP5XZwzbgBM4k=</wcf:NoTrx>\n               <wcf:Pedido>ESeMInCv5CT1Xh2QChW4pa0CmiQl73JMjnGkRnQ67wQ=</wcf:Pedido>\n            </wcf:eTrxPedidoEnt>\n         </tem:Datos>\n      </tem:TrxPedido>\n   </soapenv:Body>\n</soapenv:Envelope>",
+          "xml_response": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><TrxPedidoResponse xmlns=\"http://tempuri.org/\"><TrxPedidoResult xmlns:a=\"http://schemas.datacontract.org/2004/07/WcfT1Comercio\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:eTrxPedidoSal><a:Fecha>5ZRjvkpkxETY1Vat1lW8x99UK537+4kRHqZa/mGAojN5KQpeo2txC0obbDGrwqOq</a:Fecha><a:Importe>dWmzx6dthjSRnrIhxQ7VppLDEx7xrHNQT0VxIUb0cIs=</a:Importe><a:Mensaje>iQzL3Dx8Cb1gzMWWIdbpaVV+QrkqsvisIZkNZRjFO/1BROBLF9JIFhAmcRkWBve2vNfCSrcIy7KRhrmwIR74Nib2UaouS9PCOmvTg58k+t9D5YJo+rA+v9PpRcKXkgsH+CtqBVZsJvy4KxVWm0im3EsKTJUsHa3SjEVVIP1GNT4C9tJRf6AshqyYiH6dQzub</a:Mensaje><a:NoCia>cuCzgbkg8ZI6aqEPyj1tbusC0r/p7QMRm/cfbZzesOc=</a:NoCia><a:NoReg>cb5MkhelO5jrtaFi217TjeKyjXRffww8ciNc4lFNM/k=</a:NoReg><a:NoTda>AZbQQaJ0LEqyZn/zY+izARKi/L19RK+C8eYii9KKbos=</a:NoTda><a:NoTrx>TPJUR1k+URrg72rw6GDr2op6KGRQAYWP5XZwzbgBM4k=</a:NoTrx><a:Pedido>ESeMInCv5CT1Xh2QChW4pa0CmiQl73JMjnGkRnQ67wQ=</a:Pedido></a:eTrxPedidoSal></TrxPedidoResult></TrxPedidoResponse></s:Body></s:Envelope>",
+          "respuesta": "{\"success\":\"true\",\"encrypt\":[{\"success\":\"true\",\"codigo\":\"200\",\"array\":{\"Mensaje\":\"0 - Proceso Completado con Exito!!!\"}}]}",
+          "fecha_envio": "2022-07-06 19:35:43",
+          "fecha_creacion": "2022-07-06 19:35:43",
+          "fecha_modificacion": "0000-00-00 00:00:00"
+        }
+      ]
+    },
+    {
+      "schema": "tienda",
+      "table": "creditienda_track",
+      "columns": [
+        {
+          "Field": "id_creditienda_track",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "num_pedido",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "id_relacion",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "estatus_pedido",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "respuesta",
+          "Type": "varchar(200)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "envio",
+          "Type": "tinyint(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_registro",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": ""
+        }
+      ],
+      "count": "58",
+      "date_range": {
+        "col": "fecha_registro",
+        "min": "2022-07-13 17:27:42",
+        "max": "2023-08-23 20:09:43"
+      },
+      "sample_50": [
+        {
+          "id_creditienda_track": "89",
+          "num_pedido": "800030",
+          "id_relacion": "3916500",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-08-23 20:09:43"
+        },
+        {
+          "id_creditienda_track": "88",
+          "num_pedido": "300000006",
+          "id_relacion": "3916868",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-03-21 12:54:11"
+        },
+        {
+          "id_creditienda_track": "87",
+          "num_pedido": "300000002",
+          "id_relacion": "3917001",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-03-21 12:50:16"
+        },
+        {
+          "id_creditienda_track": "86",
+          "num_pedido": "300000001",
+          "id_relacion": "3916518",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-03-21 12:41:55"
+        },
+        {
+          "id_creditienda_track": "85",
+          "num_pedido": "39006640",
+          "id_relacion": "3924519",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-02-24 17:58:06"
+        },
+        {
+          "id_creditienda_track": "84",
+          "num_pedido": "39006636",
+          "id_relacion": "3924087",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-02-01 12:08:49"
+        },
+        {
+          "id_creditienda_track": "83",
+          "num_pedido": "31903574",
+          "id_relacion": "3923984",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-01-23 18:42:57"
+        },
+        {
+          "id_creditienda_track": "82",
+          "num_pedido": "31000101",
+          "id_relacion": "3917735",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2023-01-13 19:04:02"
+        },
+        {
+          "id_creditienda_track": "81",
+          "num_pedido": "31000098",
+          "id_relacion": "3917732",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 15:04:10"
+        },
+        {
+          "id_creditienda_track": "80",
+          "num_pedido": "31000097",
+          "id_relacion": "3917731",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 14:42:52"
+        },
+        {
+          "id_creditienda_track": "79",
+          "num_pedido": "31000096",
+          "id_relacion": "3917730",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 14:35:04"
+        },
+        {
+          "id_creditienda_track": "78",
+          "num_pedido": "31000094",
+          "id_relacion": "3917728",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 14:12:23"
+        },
+        {
+          "id_creditienda_track": "77",
+          "num_pedido": "31000093",
+          "id_relacion": "3917727",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 14:06:18"
+        },
+        {
+          "id_creditienda_track": "76",
+          "num_pedido": "31000089",
+          "id_relacion": "3917723",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 13:10:37"
+        },
+        {
+          "id_creditienda_track": "75",
+          "num_pedido": "31000088",
+          "id_relacion": "3917720",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 13:04:54"
+        },
+        {
+          "id_creditienda_track": "74",
+          "num_pedido": "31000087",
+          "id_relacion": "3917719",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 12:56:03"
+        },
+        {
+          "id_creditienda_track": "72",
+          "num_pedido": "31000086",
+          "id_relacion": "3917718",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 12:40:59"
+        },
+        {
+          "id_creditienda_track": "71",
+          "num_pedido": "31000086",
+          "id_relacion": "3917717",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-12-21 12:40:59"
+        },
+        {
+          "id_creditienda_track": "70",
+          "num_pedido": "31008758",
+          "id_relacion": "3923208",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:58:50"
+        },
+        {
+          "id_creditienda_track": "69",
+          "num_pedido": "31003598",
+          "id_relacion": "3923209",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:58:50"
+        },
+        {
+          "id_creditienda_track": "68",
+          "num_pedido": "31003572",
+          "id_relacion": "3923212",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:58:49"
+        },
+        {
+          "id_creditienda_track": "67",
+          "num_pedido": "31002272",
+          "id_relacion": "3923210",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:58:49"
+        },
+        {
+          "id_creditienda_track": "66",
+          "num_pedido": "31001071",
+          "id_relacion": "3923211",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:58:49"
+        },
+        {
+          "id_creditienda_track": "65",
+          "num_pedido": "31006636",
+          "id_relacion": "3923207",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-23 18:45:07"
+        },
+        {
+          "id_creditienda_track": "64",
+          "num_pedido": "31003583",
+          "id_relacion": "3923186",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 20:06:53"
+        },
+        {
+          "id_creditienda_track": "63",
+          "num_pedido": "31000243",
+          "id_relacion": "3923184",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 20:06:53"
+        },
+        {
+          "id_creditienda_track": "62",
+          "num_pedido": "31000228",
+          "id_relacion": "3923185",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 20:06:52"
+        },
+        {
+          "id_creditienda_track": "61",
+          "num_pedido": "31000017",
+          "id_relacion": "3917355",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:59:26"
+        },
+        {
+          "id_creditienda_track": "60",
+          "num_pedido": "31010935",
+          "id_relacion": "3923180",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:49:27"
+        },
+        {
+          "id_creditienda_track": "59",
+          "num_pedido": "31008746",
+          "id_relacion": "3923181",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:49:27"
+        },
+        {
+          "id_creditienda_track": "58",
+          "num_pedido": "31006614",
+          "id_relacion": "3923182",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:49:27"
+        },
+        {
+          "id_creditienda_track": "57",
+          "num_pedido": "31002294",
+          "id_relacion": "3923183",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:49:26"
+        },
+        {
+          "id_creditienda_track": "56",
+          "num_pedido": "31006642",
+          "id_relacion": "3923178",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:32:53"
+        },
+        {
+          "id_creditienda_track": "55",
+          "num_pedido": "31002302",
+          "id_relacion": "3923177",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:32:53"
+        },
+        {
+          "id_creditienda_track": "54",
+          "num_pedido": "31001079",
+          "id_relacion": "3923179",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:32:53"
+        },
+        {
+          "id_creditienda_track": "53",
+          "num_pedido": "31000019",
+          "id_relacion": "3917375",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 19:15:48"
+        },
+        {
+          "id_creditienda_track": "52",
+          "num_pedido": "31011910",
+          "id_relacion": "3923173",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-11-18 18:20:27"
+        },
+        {
+          "id_creditienda_track": "51",
+          "num_pedido": "31000029",
+          "id_relacion": "3917440",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 16:18:22"
+        },
+        {
+          "id_creditienda_track": "50",
+          "num_pedido": "31000029",
+          "id_relacion": "3917439",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 16:18:22"
+        },
+        {
+          "id_creditienda_track": "49",
+          "num_pedido": "31000029",
+          "id_relacion": "3917438",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 16:18:22"
+        },
+        {
+          "id_creditienda_track": "48",
+          "num_pedido": "31000029",
+          "id_relacion": "3917437",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 16:18:22"
+        },
+        {
+          "id_creditienda_track": "47",
+          "num_pedido": "7002237",
+          "id_relacion": "468288",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 11:06:17"
+        },
+        {
+          "id_creditienda_track": "46",
+          "num_pedido": "7002237",
+          "id_relacion": "468287",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 11:06:17"
+        },
+        {
+          "id_creditienda_track": "45",
+          "num_pedido": "7002237",
+          "id_relacion": "468286",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-20 11:06:17"
+        },
+        {
+          "id_creditienda_track": "44",
+          "num_pedido": "13000233",
+          "id_relacion": "3919683",
+          "estatus_pedido": "4",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-19 18:01:20"
+        },
+        {
+          "id_creditienda_track": "43",
+          "num_pedido": "13000235",
+          "id_relacion": "3919685",
+          "estatus_pedido": "7",
+          "status": null,
+          "respuesta": null,
+          "envio": "0",
+          "fecha_registro": "2022-07-19 18:00:43"
+        },
+        {
+          "id_creditienda_track": "42",
+          "num_pedido": "31000001",
+          "id_relacion": "3917276",
+          "estatus_pedido": "0",
+          "status": "201",
+          "respuesta": "No se pudo procesar la solicitud",
+          "envio": "0",
+          "fecha_registro": "2022-07-13 18:39:54"
+        },
+        {
+          "id_creditienda_track": "41",
+          "num_pedido": "31000001",
+          "id_relacion": "3917275",
+          "estatus_pedido": "0",
+          "status": "201",
+          "respuesta": "No se pudo procesar la solicitud",
+          "envio": "0",
+          "fecha_registro": "2022-07-13 18:39:54"
+        },
+        {
+          "id_creditienda_track": "40",
+          "num_pedido": "31000001",
+          "id_relacion": "3917274",
+          "estatus_pedido": "0",
+          "status": "201",
+          "respuesta": "No se pudo procesar la solicitud",
+          "envio": "0",
+          "fecha_registro": "2022-07-13 18:39:54"
+        },
+        {
+          "id_creditienda_track": "39",
+          "num_pedido": "31000001",
+          "id_relacion": "3917273",
+          "estatus_pedido": "0",
+          "status": "201",
+          "respuesta": "No se pudo procesar la solicitud",
+          "envio": "0",
+          "fecha_registro": "2022-07-13 18:39:53"
+        }
+      ]
+    },
+    {
+      "schema": "tienda",
+      "table": "cupones",
+      "columns": [
+        {
+          "Field": "Id_Cupon",
+          "Type": "varchar(13)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Codigo",
+          "Type": "varchar(20)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Nombre",
+          "Type": "varchar(250)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Descripcion",
+          "Type": "mediumtext",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Cantidad",
+          "Type": "float",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Porcentaje",
+          "Type": "float",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Compra_Minima",
+          "Type": "float",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Tipo",
+          "Type": "int(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "Unico",
+          "Type": "int(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "Activo",
+          "Type": "int(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "Inicia",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Vence",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Asignado_a",
+          "Type": "varchar(250)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "Fecha_Creacion",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "portal",
+          "Type": "int(5)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "promocion",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "usuario",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "enviado",
+          "Type": "int(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ],
+      "count": "0",
+      "date_range": {
+        "col": "Fecha_Creacion",
+        "min": null,
+        "max": null
+      },
+      "sample_50": []
+    },
+    {
+      "schema": "tienda",
+      "table": "cupones_promocion",
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "promocion",
+          "Type": "varchar(70)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "inicio",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "finaliza",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "portal",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "activado",
+          "Type": "int(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notificable",
+          "Type": "int(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        }
+      ],
+      "count": "0",
+      "date_range": {
+        "col": "fecha",
+        "min": null,
+        "max": null
+      },
+      "sample_50": []
+    },
+    {
+      "schema": "tienda",
+      "table": "detalle_cupon",
+      "columns": [
+        {
+          "Field": "id_detalle_cupon",
+          "Type": "bigint(20)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "id_cupon",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "id_servicio",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "id_estatus_cupon",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "email",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "token",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_alta",
+          "Type": "datetime",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_modifica",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_baja",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "usuario_alta",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "usuario_modifica",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "usuario_baja",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ],
+      "count": "0",
+      "date_range": {
+        "col": "fecha_alta",
+        "min": null,
+        "max": null
+      },
+      "sample_50": []
+    },
+    {
+      "schema": "tienda",
+      "table": "log_mod_puntos_sinfin",
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "usuario",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "tipo_accion",
+          "Type": "int(11)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "datos",
+          "Type": "mediumtext",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_accion",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ],
+      "count": "0",
+      "date_range": {
+        "col": "fecha_accion",
+        "min": null,
+        "max": null
+      },
+      "sample_50": []
+    },
+    {
+      "schema": "tienda",
+      "table": "rel_cupon_cliente",
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int(10) unsigned",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "Id_Cupon",
+          "Type": "varchar(13)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": "",
+          "Extra": ""
+        },
+        {
+          "Field": "cliente",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "pedido",
+          "Type": "int(11)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "fecha_creacion",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ],
+      "count": "0",
+      "date_range": {
+        "col": "fecha_creacion",
+        "min": null,
+        "max": null
+      },
+      "sample_50": []
+    }
+  ],
+  "tienda_nueva_wallet_tables": [],
+  "saldo_summary": [
+    {
+      "table": "tienda.control_creditienda_facturacion",
+      "col": "importe",
+      "rows_gt0": "7",
+      "total": "41879"
+    }
+  ],
+  "total_saldo_combinado": 41879,
+  "ts": "2026-08-23 22:48:41"
+}

@@ -1,0 +1,41 @@
+﻿
+=== COUNT pedidos ===
+
+=== COUNT clientes ===
+
+=== COUNT clientescontrasena ===
+
+=== COUNT datostarjeta ===
+
+=== COUNT cybersource_sears ===
+
+=== COUNT cybersource_transacciones ===
+
+=== COUNT conciliacion_sears ===
+
+=== COUNT datos_pedido ===
+
+=== COUNT pedidos_facturacion ===
+
+=== DESCRIBE pedidos ===
+
+=== DESCRIBE datostarjeta ===
+
+=== DESCRIBE clientescontrasena ===
+
+=== DESCRIBE clientes ===
+
+=== SAMPLE pedidos TOP 10 ===
+
+=== SAMPLE clientescontrasena ===
+
+=== SAMPLE clientes ===
+
+=== SAMPLE datostarjeta ===
+
+=== SAMPLE cybersource_sears ===
+
+=== SAMPLE datos_pedido ===
+
+=== FIN EXTRACCION TIENDA ===
+

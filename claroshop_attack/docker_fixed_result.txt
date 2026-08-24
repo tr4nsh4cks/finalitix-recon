@@ -1,0 +1,56 @@
+﻿=== DOCKER EXEC ├óÔÇáÔÇÖ PHP MySQL PROD Sears (FIXED) ===
+PHP Notice:  Undefined variable: b63A in /tmp/_p.php on line 3
+=== SOURCE IP OF CONTAINER ===
+
+
+--- dbcronproductos@172.27.141.24:3308 [tienda] ---
+FAIL: No route to host
+
+--- dbsmartinsight@172.27.141.24:3308 [tienda] ---
+FAIL: No route to host
+
+--- app_t1@172.27.141.24:3308 [payment_t1] ---
+FAIL: No route to host
+
+--- adaxxidb@172.27.141.24:3308 [tienda] ---
+FAIL: No route to host
+
+--- root@172.27.141.24:3308 [mysql] ---
+FAIL: No route to host
+
+--- root@172.27.141.24:3308 [mysql] ---
+FAIL: No route to host
+
+--- root@172.27.141.24:3308 [mysql] ---
+FAIL: No route to host
+
+--- app_t1@172.27.141.4:3310 [payment_t1] ---
+FAIL: Connection refused
+
+--- app_t1@172.27.141.4:3310 [payment_t1] ---
+FAIL: Connection refused
+
+--- root@172.27.141.4:3310 [mysql] ---
+FAIL: Connection refused
+
+--- root@172.27.141.4:3310 [mysql] ---
+FAIL: Connection refused
+
+--- root@172.27.141.4:3306 [mysql] ---
+FAIL: Access denied for user 'root'@'172.27.141.23' (using password: YES)
+
+DONE
+
+
+=== NETWORK PROBE FROM CONTAINER ===
+=== TCP PROBE FROM CONTAINER ===
+CLOSED|172.27.141.24:3308
+OPEN|172.27.141.24:22
+CLOSED|172.27.141.4:3310
+OPEN|172.27.141.4:3306
+OPEN|172.27.140.151:3306
+/bin/bash: line 6: hostname: command not found
+CONTAINER_IPs: 
+
+=== FIN DOCKER FIXED ===
+

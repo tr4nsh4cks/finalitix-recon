@@ -1,0 +1,91 @@
+﻿=== PROD SEARS MYSQL AUTH MATRIX ===
+
+--- TARGET: SSH_TUNNEL_127:13308├óÔÇáÔÇÖdbasears:3308 ---
+  dbcronproductos@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  dbsmartinsight@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  adaxxidb@127.0.0.1:13308 ├óÔÇáÔÇÖ CONNECT_ERR: null
+
+--- TARGET: SSH_TUNNEL_127:13307├óÔÇáÔÇÖ3307 ---
+  dbcronproductos@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  dbsmartinsight@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  adaxxidb@127.0.0.1:13307 ├óÔÇáÔÇÖ CONNECT_ERR: null
+
+--- TARGET: SSH_TUNNEL_127:13306├óÔÇáÔÇÖ3306 ---
+  dbcronproductos@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  dbsmartinsight@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  app_t1@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  root@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+  adaxxidb@127.0.0.1:13306 ├óÔÇáÔÇÖ CONNECT_ERR: null
+
+--- TARGET: CLUSTER_NODE1_172.27.141.6:3308 ---
+  dbcronproductos@172.27.141.6:3308 ├óÔÇáÔÇÖ AUTH_ERR_1045: #28000Access denied for user 'dbcronproductos'@'172.27.141.21' (using password: YES)
+  dbsmartinsight@172.27.141.6:3308 ├óÔÇáÔÇÖ AUTH_OK:MySQL_5.7.29-enterprise-commercial-advanced-log
+
+  *** AUTH SUCCESS! Dumping databases... ***
+  DATABASES: COLS[Database]
+  ROW[information_schema]
+  ROW[tienda]
+  GRANTS: COLS[Grants for dbsmartinsight@%]
+  ROW[GRANT USAGE ON *.* TO 'dbsmartinsight'@'%']
+  ROW[GRANT SELECT ON `tienda`.`v_ventas_dia` TO 'dbsmartinsight'@'%']
+
+  === DB: tienda ===
+  COLS[Tables_in_tienda]
+  ROW[v_ventas_dia]
+
+--- TARGET: CLUSTER_NODE2_172.27.140.143:3308 ---
+  dbcronproductos@172.27.140.143:3308 ├óÔÇáÔÇÖ AUTH_ERR_1045: #28000Access denied for user 'dbcronproductos'@'172.27.140.150' (using password: YES)
+  dbsmartinsight@172.27.140.143:3308 ├óÔÇáÔÇÖ AUTH_OK:MySQL_5.7.29-enterprise-commercial-advanced-log
+
+  *** AUTH SUCCESS! Dumping databases... ***
+  DATABASES: COLS[Database]
+  ROW[information_schema]
+  ROW[tienda]
+  GRANTS: COLS[Grants for dbsmartinsight@%]
+  ROW[GRANT USAGE ON *.* TO 'dbsmartinsight'@'%']
+  ROW[GRANT SELECT ON `tienda`.`v_ventas_dia` TO 'dbsmartinsight'@'%']
+
+  === DB: tienda ===
+  COLS[Tables_in_tienda]
+  ROW[v_ventas_dia]
+
+--- TARGET: CLUSTER_NODE1_172.27.141.6:3306 ---
+  dbcronproductos@172.27.141.6:3306 ├óÔÇáÔÇÖ AUTH_ERR_1045: #28000Access denied for user 'dbcronproductos'@'172.27.141.21' (using password: YES)
+  dbsmartinsight@172.27.141.6:3306 ├óÔÇáÔÇÖ AUTH_OK:MySQL_5.7.29-enterprise-commercial-advanced-log
+
+  *** AUTH SUCCESS! Dumping databases... ***
+  DATABASES: COLS[Database]
+  ROW[information_schema]
+  ROW[tienda]
+  GRANTS: COLS[Grants for dbsmartinsight@%]
+  ROW[GRANT USAGE ON *.* TO 'dbsmartinsight'@'%']
+  ROW[GRANT SELECT ON `tienda`.`v_ventas_dia` TO 'dbsmartinsight'@'%']
+
+  === DB: tienda ===
+  COLS[Tables_in_tienda]
+  ROW[v_ventas_dia]
+
+
+=== SUMMARY ===
+SUCCESS on:
+  dbsmartinsight@172.27.141.6:3308
+  dbsmartinsight@172.27.140.143:3308
+  dbsmartinsight@172.27.141.6:3306
+=== FIN ===
+

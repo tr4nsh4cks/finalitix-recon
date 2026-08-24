@@ -1,0 +1,1118 @@
+﻿=== T1PAGOS / T1ENVIOS GROOVY SCRIPTS ===
+
+======================================================================
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/caja/payment-t1.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+t1pagos-api.dev.claroshop-services.io --&gt; t1pagos-api.qa.claroshop-services.io --&gt; t1pagos-release.api.claroshop-services.io --&gt; t1pagos.api.claroshop-services.io&#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n php 7.2</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.43">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>t1pagos-api.dev.claroshop-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.80">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api-config
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa. &#xd;
+Url Git: http://gitlab.dev.claroshop.com/locales/Locales.git&#xd;
+Rama: Master&#xd;
+&#xd;
+Directorio de proyectos:&#xd;
+&#xd;
+Proyecto: t1pagos-api.dev.claroshop-services.io&#xd;
+Origen Git:  Microservicios/Box/t1/Dev/config/*&#xd;
+Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.claroshop-services.io/config/&#xd;
+&#xd;
+Proyecto: t1pagos-api.qa.claroshop-services.io&#xd;
+Origen Git:  &#xd;
+Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.claroshop-services.io/config/</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.43">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Proyecto destino Desarrollo.</description>
+          <choices>
+            <string>t1pagos-api.dev.claroshop-services.io</string>
+            <string>t1pagos-api.qa.claroshop-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.80">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: se_new_front/se_new_pipe_build_t1pagos-api
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/caja/payment-t1.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+t1pagos-api.dev.mrc-services.io --&gt; t1pagos-api.qa.mrc-services.io --&gt; t1pagos-release.api.mrc-services.io --&gt; t1pagos.api.mrc-services.io&#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n php 7.2</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.43">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>t1pagos-api.dev.mrc-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.80">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: se_new_front/se_new_pipe_build_t1pagos-api-config
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+Url Git: http://gitlab.dev.claroshop.com/locales/Locales.git&#xd;
+Rama: Master&#xd;
+&#xd;
+Directorio de proyectos:&#xd;
+&#xd;
+Proyecto: t1pagos-api.dev.mrc-services.io&#xd;
+Origen Git:  sears/Microservicios/Box/t1/Dev/config/*&#xd;
+Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.mrc-services.io/config/&#xd;
+&#xd;
+Proyecto: t1pagos-api.qa.mrc-services.io&#xd;
+Origen Git:  sears/Microservicios/Box/t1/QA/config/*&#xd;
+Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.mrc-services.io/config/</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.43">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Proyecto destino Desarrollo.</description>
+          <choices>
+            <string>t1pagos-api.dev.mrc-services.io</string>
+            <string>t1pagos-api.qa.mrc-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.80">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: sn_new_front/sn_new_pipe_build_t1pagos-api
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.21">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/caja/payment-t1.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+t1pagos-api.dev.sn-services.io --&gt; t1pagos-api.qa.sn-services.io --&gt; t1pagos-release.api.sn-services.io --&gt; t1pagos.api.sn-services.io&#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n php 7.2</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.43">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>t1pagos-api.dev.sn-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.80">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.1">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: sn_new_front/sn_new_pipe_build_t1pagos-api-config
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.22">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa. &#xd;
+Url Git: http://gitlab.dev.claroshop.com/locales/Locales.git&#xd;
+Rama: Master&#xd;
+&#xd;
+Directorio de proyectos:&#xd;
+&#xd;
+Proyecto: t1pagos-api.dev.sn-services.io&#xd;
+Origen Git:  sanborns/MicroServicios/Box/t1/Dev/config/*&#xd;
+Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.sn-services.io/config/&#xd;
+&#xd;
+Proyecto: t1pagos-api.qa.sn-services.io&#xd;
+Origen Git:  sanborns/MicroServicios/Box/t1/qa/config/*&#xd;
+Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.sn-services.io/config/</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.45">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Proyecto destino Desarrollo.</description>
+          <choices>
+            <string>t1pagos-api.dev.sn-services.io</string>
+            <string>t1pagos-api.qa.sn-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.87">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.4.5">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.22">
+      <jobPropertyDescriptors>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto admin.plataforma-claro.com para Backend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/claroshop/admin_sistemas_claro.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+pc-admin.dev.plataforma-claro.com --&gt; pc.release.admin.plataforma-claro.com --&gt; pc.admin.plataforma-claro.com&#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n php 7.2</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.45">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>pc-admin.dev.plataforma-claro.com</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.87">
+    <script>// #############################################################
+// #              O                                            #
+// #       /~~~|#|]|=\|---\__                                  #
+// #     |-=_____________  |\\ ,             O       O         #
+// #    I|_/,-.-.-.-.-,-.\_|=&apos;(             T/\     /\=,---.   #
+// #       ( o )( o )( o )     \            U /\   /\   `O&apos;    #
+// #        `-&apos;-&apos;-&apos;-&apos;-`-&apos;                                      #
+// #                                                           #
+// #                                                           #
+// #              Pipeline under construction  v0.9            #
+// #                                                           #
+// #                                                           #
+// #############################################################
+
+def sendStageMailNotification(String artifactObject, Map authzObject, String mailRcpts){
+
+    env.requestExecJob = &quot;pc_legacy_back/pipe_pc-plataforma-claro&quot;
+    env.build_number = &quot;${BUILD_NUMBER}&quot;
+    env.artifact = &quot;${artifactObject}&quot;
+    env.target = &quot;${authzObject.Target_environment}&quot;
+    env.approver = &quot;${authzObject.CHANGE_APPROVER}&quot;
+      
+    emailext body: &apos;&apos;&apos;${JELLY_SCRIPT,template=&quot;deploy-request&quot;}&apos;&apos;&apos;,
+        mimeType: &apos;text/html&apos;, 
+        recipientProviders: [developers()], 
+        replyTo: &apos;jenkins-ng@dev.claroshop.com&apos;, 
+        subject: &quot;Promotion request: pc_legacy_back/pipe_pc-plataforma-claro:${artifactObject}:${BUILD_NUMBER}&quot;, 
+        to: &quot;${mailRcpts}&quot;
+}
+
+def nexusArtifactLifeCycleManager(String nexusRepoURI, String nexusManagedArtifactName) {
+    
+    KEEP_N_ARTIFACTS=&quot;5&quot;
+    withCredentials([usernameColonPassword(credentialsId: &apos;nexus&apos;, variable: &apos;NX_PWD1&apos;)]) {
+        sh &quot;&quot;&quot;#!/bin/bash +x 
+                curl 2&gt;/dev/null -f -u ${NX_PWD1} ${NEXUS_REPO_URI}/${JOB_NAME}/deployed.txt -o deployed.txt || true
+                curl -s -f -u ${NX_PWD1} --upload-file ${nexusManagedArtifactName}.tar.gz ${NEXUS_REPO_URI}/${JOB_NAME}/${BUILD_NUMBER}/${nexusManagedArtifactName}.tar.gz &amp;&amp; 
+                echo ${BUILD_NUMBER}/${nexusManagedArtifactName}.tar.gz &gt;&gt; deployed.txt &amp;&amp;
+                echo &quot;Mark files for removal...&quot;
+                egrep &quot;[0-9]+/${nexusManagedArtifactName}&quot; deployed.txt | grep -v permanent | head -n-${KEEP_N_ARTIFACTS} &gt; mark4delete.txt || true
+                cat mark4delete.txt
+                echo &quot;Index preserved files...&quot;
+                egrep -v &quot;[0-9]+/${nexusManagedArtifactName}&quot; deployed.txt  &gt; preserved.txt || true
+                egrep &quot;[0-9]+/${nexusManagedArtifactName}&quot; deployed.txt | grep -v permanent | tail -n${KEEP_N_ARTIFACTS} &gt;&gt; preserved.txt || true 
+                cat preserved.txt
+                cat mark4delete.txt | while read file; do 
+                    echo &quot;Delete \$file&quot;
+                    curl -s -u ${NX_PWD1} -X DELETE ${NEXUS_REPO_URI}/${JOB_NAME}/\$file
+                done
+                echo &quot;Upload files index&quot;
+                curl -s -f -u ${NX_PWD1} --upload-file preserved.txt ${NEXUS_REPO_URI}/${JOB_NAME}/deployed.txt
+                &quot;&quot;&quot;            
+    }
+
+}
+/* ==============================  END GENERAL FUNCTIONS ============================== */
+
+// INPUTS:
+//
+// USERPARAM_DEPLOY_ENVIRONMENT 
+// USERPARAM_GIT_BRANCH
+// SONAR_TAG
+
+// AUTO-SET:
+// 1.1
+// USERPARAM_DEPLOY_ENVIRONMENT_QA
+// USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS
+
+// 2DO: Enforce target environments
+
+// Pipeline params:
+
+SONAR_TAG=&quot;pc-plataforma-claro.back.pc.legacy&quot;
+GIT_PROJECT=&apos;http://gitlab.dev.claroshop.com/claroshop/admin_sistemas_claro.git&apos;
+RELEASE_AUTHZ_APROUVERS=&apos;isnardo.lugardo,pavel.carrillo,patricio.dorantes,roman.guevara,daniel.garcia,eduardo.cruz&apos;
+EMAIL_RCPTS=&apos;isnardo.lugardo@claroshop.com daniel.garcia@claroshop.com patricio.dorantes@americamovil.com pavel.carrillo@claroshop.com amx-cs@otrs.amxdigital.net eduardo.cruz@claroshop.com&apos;
+STASH_NAME=&quot;sierra-t1envios&quot;
+// 2DO:
+// PROD_ARRAY=========&gt;
+
+properties( [gitLabConnection(&apos;&apos;), 
+	[$class: &apos;GitlabLogoProperty&apos;, repositoryName: &apos;&apos;], 
+    parameters([
+        string(defaultValue: &apos;master&apos;, description: &apos;Indicar la rama con la que se compilarß el proyecto.&apos;, name: &apos;USERPARAM_GIT_BRANCH&apos;, trim: false), 
+		choice(choices: [&apos;pc-admin.dev.plataforma-claro.com&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+	])
+])
+                                    
+// AUTO-SET 1.1
+switch(USERPARAM_DEPLOY_ENVIRONMENT) {
+    case &apos;pc-admin.dev.plataforma-claro.com&apos;:
+    	USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;pc-admin.qa.plataforma-claro.com&quot;
+        USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;pc.release.admin.plataforma-claro.com&apos;]
+    break
+    default:
+    	currentBuild.result = &apos;ABORTED&apos;
+    	error(&quot;${USERPARAM_DEPLOY_ENVIRONMENT} is not available on QA!&quot;)
+    break;
+}
+
+node(&apos;docker-jnlp-slave-php72-src-sonar-ii&apos;) {
+	step([$class: &apos;WsCleanup&apos;])
+	stage(&apos;Pull git code&apos;) {
+    	git branch: &quot;${USERPARAM_GIT_BRANCH}&quot;, credentialsId: &apos;jenkis&apos;, url: &quot;${GIT_PROJECT}&quot;
+	echo &quot;Dominio Despliegue: ${USERPARAM_DEPLOY_ENVIRONMENT}&quot;
+    	echo &quot;Rama Elegida: ${USERPARAM_GIT_BRANCH}&quot;
+    }
+    stage(&apos;Ant tasks&apos;){
+    	// npm is used for gulp
+    	sh &apos;npm config set registry http://nexus.dev.claroshop.com:8081/repository/npm-registry&apos;
+    	withAnt {
+        	sh &quot;cat build.xml&quot;
+    		sh &quot;ant&quot;
+    	}
+    }
+    stage(&quot;Clean dev server document root on project&quot;){
+	[&apos;CSDEV01-2&apos;, &apos;CSDEV02-2&apos;].each { DEPLOY_SERVER_NAME -&gt;
+            sshPublisher failOnError: true, 
+            publishers: [sshPublisherDesc(configName: &quot;${DEPLOY_SERVER_NAME}&quot;,
+            transfers: [sshTransfer(
+        	excludes: &apos;&apos;,
+                execCommand: &quot;mkdir -p /var/www/sites/\${USERPARAM_DEPLOY_ENVIRONMENT}/ &amp;&amp; cd /var/www/sites/\${USERPARAM_DEPLOY_ENVIRONMENT}/ &amp;&amp; rm -rf \$(ls -A -I config) &amp;&amp; pwd &amp;&amp; ls -latrh &amp;&amp; exit 0&quot;,
+                execTimeout: 360000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: &apos; ]+&apos;,
+                remoteDirectory: &apos;&apos;, remoteDirectorySDF: false, removePrefix: &apos;&apos;, sourceFiles: &apos;&apos;)],
+            usePromotionTimestamp: false,
+            useWorkspaceInPromotion: false, verbose: false)]
+	    }
+	}
+
+	stage(&apos;Deploy to dev server&apos;){
+        [&apos;CSDEV01-2&apos;, &apos;CSDEV02-2&apos;].each { DEPLOY_SERVER_NAME -&gt;
+            sshPublisher failOnError: true, 
+            publishers: [sshPublisherDesc(configName: &quot;${DEPLOY_SERVER_NAME}&quot;,
+            transfers: [sshTransfer(
+                excludes: &apos;config/,**/*.git*,**/*bower*,**/*sass*,**/tests,**/node_modules/&apos;,
+                execCommand: &apos;&apos;,
+                execTimeout: 360000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: &apos;[,]+&apos;,
+                remoteDirectory: &quot;${USERPARAM_DEPLOY_ENVIRONMENT}/&quot;, remoteDirectorySDF: false, removePrefix: &apos;&apos;, sourceFiles: &apos;**/*&apos;)],
+            usePromotionTimestamp: false,
+            useWorkspaceInPromotion: false, verbose: false)]
+	    }        
+	}
+	
+	stage(&apos;Display dev server document root on project&apos;){
+        [&apos;CSDEV01-2&apos;, &apos;CSDEV02-2&apos;].each { DEPLOY_SERVER_NAME -&gt;
+            sshPublisher failOnError: true, 
+            publishers: [sshPublisherDesc(configName: &quot;${DEPLOY_SERVER_NAME}&quot;,
+            transfers: [sshTransfer(
+                excludes: &apos;&apos;,
+                execCommand: &quot;ls -latrh /var/www/sites/\${USERPARAM_DEPLOY_ENVIRONMENT}/ &amp;&amp; exit 0&quot;,
+                execTimeout: 360000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: &apos; ]+&apos;,
+                remoteDirectory: &apos;&apos;, remoteDirectorySDF: false, removePrefix: &apos;&apos;, sourceFiles: &apos;&apos;)],
+            usePromotionTimestamp: false,
+            useWorkspaceInPromotion: false, verbose: false)]
+    	}
+	}
+        
+    stage(&apos;Remove twig cache&apos;){
+		[&apos;CSDEV02-2&apos;].each { DEPLOY_SERVER_NAME -&gt;
+			sshPublisher failOnError: true, 
+			publishers: [sshPublisherDesc(configName: &quot;${DEPLOY_SERVER_NAME}&quot;, 
+			transfers: [sshTransfer(
+			    excludes: &apos;&apos;, 
+		        execCommand: &quot;&quot;&quot;
+					ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/
+		        &quot;&quot;&quot;, 
+		        execTimeout: 360000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: &apos; ]+&apos;, 
+		        remoteDirectory: &apos;&apos;, remoteDirectorySDF: false, removePrefix: &apos;&apos;, sourceFiles: &apos;&apos;)], 
+		    usePromotionTimestamp: false, 
+		    useWorkspaceInPromotion: false, verbose: false)]
+		}		
+	}
+        
+	stage(&apos;Sonar Qube automated Testing&apos;){
+    	withSonarQubeEnv(&apos;devqa.cs.msa&apos;) {
+    		withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.140.148,172.27.141.25&apos;, &apos;random_var=true&apos;]) {
+            	try{
+                    //sh &apos;env&apos;                   
+                	sh &quot;/opt/sonar-scanner-3.2.0.1227/bin/sonar-scanner -X -Dsonar.projectKey=${SONAR_TAG} -Dsonar.sources=$WORKSPACE -Dsonar.ce.javaOpts=&apos;-Xmx4096m -XX:MaxPermSize=1024m&apos; -Dsonar.web.javaOpts=&apos;-Xmx4096m -XX:MaxPermSize=1560m&apos; -Dsonar.runner.javaOpts=&apos;-Xmx4096m -XX:MaxPermSize=2048m&apos; -Dsonar.projectVersion=${BUILD_NUMBER} -Dsonar.exclusions=&apos;web/bower/moment/min/tests.js&apos;&quot;
+            	}
+            	catch(all){
+                	println(&quot;Catching the exception&quot;);
+            	}
+        	}
+        }
+    }
+    stage(&apos;Stash artifacts&apos;){
+        stash includes: &apos;**/*&apos;, name: &quot;${STASH_NAME}&quot;, excludes: &apos;config/*,.scannerwork/*&apos;
+    }
+}
+
+stage(&apos;QA deploy and test from future import cs.qa-team&apos;){
+    //From future import cs.qa-team
+}
+
+def autzQAPromotion=&quot;&quot;
+stage(&apos;QA testing&apos;){
+    autzQAPromotion=input(
+        message: &apos;┐Pack project and request change to Ops team?&apos;, 
+        ok: &apos;Yes we are ready 2 go production!&apos;, 
+        parameters: [choice(choices: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS, 
+            description: &apos;&apos;, 
+            name: &apos;Target_environment&apos;)], 
+        submitter: &quot;${RELEASE_AUTHZ_APROUVERS}&quot;,
+    submitterParameter: &apos;CHANGE_APPROVER&apos;)
+}
+
+node(&apos;docker-rh7-lnx-jnlp-slave&apos;) {
+    stage(&apos;QA pack&apos;){
+        step([$class: &apos;WsCleanup&apos;])
+        unstash &quot;${STASH_NAME}&quot;
+        sh &quot;tar czf ${USERPARAM_DEPLOY_ENVIRONMENT_QA}.tar.gz \$(ls -A -I config -I .scannerwork)&quot;
+    }
+    stage(&apos;Pack publish&apos;){
+        NEXUS_REPO_URI=&quot;http://nexus.dev.claroshop.com:8081/repository/claroshop-releases&quot;
+        nexusArtifactLifeCycleManager(&quot;${NEXUS_REPO_URI}&quot;,&quot;${USERPARAM_DEPLOY_ENVIRONMENT_QA}&quot;)
+        sendStageMailNotification(&quot;${USERPARAM_DEPLOY_ENVIRONMENT_QA}&quot;, autzQAPromotion, &quot;${EMAIL_RCPTS}&quot;)       
+    }    
+    //2Do: Make a ticket
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: t1e_new_back/t1e_new_back_crones/t1e_new_pipe_build_contadores-reps-admin-cron
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.22">
+      <jobPropertyDescriptors>
+        <string>org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty</string>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+        <string>jenkins.model.BuildDiscarderProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto contadores-reps.adm-cron.t1envios-services.io para Backend Desarrollo.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/crones/contadores_reps_t1.git&#xd;
+&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+contadores-reps-admin-cron.dev.t1envios-services.io ---&gt; contadores-reps-release.adm-cron.t1envios-services.io --&gt; contadores-reps.adm-cron.t1envios-services.io &#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n Java 11</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.45">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_JVM_JAR_ARGS</name>
+          <description>Indicar parßmtros con los que se ejecutarß el cron.</description>
+          <defaultValue>manual 2022-05-01 2022-05-31</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>contadores-reps-admin-cron.dev.t1envios-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.87">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.4.5">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/t1e_new_back/t1e_new_back_crones/t1e_new_pipe_build_contadores-reps-admin-cron.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: t1e_new_back/t1e_new_pipe_build_fullfilment-admin-api
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.22">
+      <jobPropertyDescriptors>
+        <string>org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty</string>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+        <string>jenkins.model.BuildDiscarderProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto fullfilment.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/claroshop/api_fullfilment_t1.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+fullfilment-admin-api.dev.t1envios-services.io ---&gt; fullfilment-release.adm-api.t1envios-services.io --&gt; fullfilment.adm-api.t1envios-services.io &#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n Java 11</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.45">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>fullfilment-admin-api.dev.t1envios-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.87">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.4.5">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/t1e_new_back/t1e_new_pipe_build_fullfilment-admin-api.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+======================================================================
+JOB: t1e_new_back/t1e_new_pipe_build_t1mw-bussiness-admin-api
+======================================================================
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@2.22">
+      <jobPropertyDescriptors>
+        <string>org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty</string>
+        <string>hudson.model.ParametersDefinitionProperty</string>
+        <string>com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</string>
+        <string>org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty</string>
+        <string>jenkins.model.BuildDiscarderProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>Tarea que ejecutarß el deploy del proyecto t1mw-bussiness.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;
+Origen:&#xd;
+http://gitlab.dev.claroshop.com/claroshop/t1mw_bussiness_adm.git&#xd;
+Se deberß especificar:&#xd;
+1.- Rama.&#xd;
+2.- Nombre del Dominio.&#xd;
+&#xd;
+Flujo:&#xd;
+t1mw-bussiness-admin-api.dev.t1envios-services.io ---&gt; t1mw-bussiness-release.adm-api.t1envios-services.io --&gt; t1mw-bussiness.adm-api.t1envios-services.io &#xd;
+&#xd;
+La tarea ejecuta la compilaci¾n y despliegue del proyecto en versi¾n Java 11</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.45">
+      <uid></uid>
+      <namespace></namespace>
+      <name></name>
+      <resourceVersion></resourceVersion>
+    </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.13">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty plugin="gitlab-logo@1.0.5">
+      <repositoryName></repositoryName>
+    </org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>USERPARAM_GIT_BRANCH</name>
+          <description>Indicar la rama con la que se compilarß el proyecto.</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>USERPARAM_DEPLOY_ENVIRONMENT</name>
+          <description>Elegir el proyecto que se desplegarß.</description>
+          <choices>
+            <string>t1mw-bussiness-admin-api.dev.t1envios-services.io</string>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.87">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.4.5">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://infracode.amxdigital.net/infraestructure-as-code/jenkins-pipelines.git</url>
+          <credentialsId>cc-infracode-sophia-mrk-i</credentialsId>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
+    <scriptPath>gs/dev/t1e_new_back/t1e_new_pipe_build_t1mw-bussiness-admin-api.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
+
+=== SEARCHING ALL JOBS FOR DB VARS ===
+
+JOB WITH DB VARS: cs_new_front/cs_new_pipe_build_orders-consumer-api
+  LINE: -e DB_HOST=&quot;masterdb57.dev.claroshop-services.io&quot; \
+  LINE: -e DB_PASSWORD=&quot;X.bceuN%Spa9:uX&quot; \
+
+JOB WITH DB VARS: t1c_new_back/t1c_new_pipe_build_concentrador-pedidos-api
+  LINE: -e MYSQL_HOST=&quot;dbat1comercios.dev.t1comercios-services.io&quot; \
+Result: [com.cloudbees.hudson.plugins.folder.Folder@2e7dd810[_trash], com.cloudbees.hudson.plugins.folder.Folder@7c310e73[_trash/amp_hackathon], org.jenkinsci.plugins.workflow.job.WorkflowJob@1d286a5b[_trash/amp_hackathon/cs_amp], org.jenkinsci.plugins.workflow.job.WorkflowJob@13ed7491[_trash/amp_hackathon/sn_amp], hudson.model.FreeStyleProject@6a0eada3[_trash/claroshop_build_carritoms.dev.claroshop.com], org.jenkinsci.plugins.workflow.job.WorkflowJob@a701ccd[_trash/connect_docker_2_api_tlsauth], org.jenkinsci.plugins.workflow.job.WorkflowJob@54d4c56a[_trash/cs_local_test], com.cloudbees.hudson.plugins.folder.Folder@9b114c5[_trash/cs_msa_back], com.cloudbees.hudson.plugins.folder.Folder@11e98ece[_trash/cs_msa_front], org.jenkinsci.plugins.workflow.job.WorkflowJob@2ce57a9d[_trash/cs_msa_front/cs_msa_pipe_caja-pagos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3319a917[_trash/cs_msa_front/cs_msa_pipe_caja-pagos-front], org.jenkinsci.plugins.workflow.job.WorkflowJob@39855dcd[_trash/cs_msa_pipe_caja-pagos-api-test], org.jenkinsci.plugins.workflow.job.WorkflowJob@4b882002[_trash/cs_test_remote_exec_rm], org.jenkinsci.plugins.workflow.job.WorkflowJob@4cbe8a7c[_trash/follow_up], hudson.model.FreeStyleProject@3291c3ed[_trash/fsp], org.jenkinsci.plugins.workflow.job.WorkflowJob@21699b47[_trash/function_array], hudson.matrix.MatrixProject@2beb3758[_trash/mcp], hudson.matrix.MatrixConfiguration@32d0293d[_trash/mcp/default], org.jenkinsci.plugins.workflow.job.WorkflowJob@13bea533[_trash/nexus_files_lifecycle_test], org.jenkinsci.plugins.workflow.job.WorkflowJob@2f8c8202[_trash/owsp_tst1], org.jenkinsci.plugins.workflow.job.WorkflowJob@42d28717[_trash/owsp_tst2], org.jenkinsci.plugins.workflow.job.WorkflowJob@307129e2[_trash/pip], org.jenkinsci.plugins.workflow.job.WorkflowJob@560095e2[_trash/pipe_test], org.jenkinsci.plugins.workflow.job.WorkflowJob@1d5791b2[_trash/test], org.jenkinsci.plugins.workflow.job.WorkflowJob@4b6b5730[_trash/test-ignores-complete], org.jenkinsci.plugins.workflow.job.WorkflowJob@726c5986[_trash/test_ignores], org.jenkinsci.plugins.workflow.job.WorkflowJob@20917dac[_trash/test_new_slave_2020_06], org.jenkinsci.plugins.workflow.job.WorkflowJob@16aa20d[_trash/test_node_docker-jnlp-slave-php54-src-sonar], hudson.model.FreeStyleProject@32ca5a9d[_trash/Test_slaves], org.jenkinsci.plugins.workflow.job.WorkflowJob@10a9a7c7[_trash/test_task], org.jenkinsci.plugins.workflow.job.WorkflowJob@196c3d[_trash/test_webhook_notify], org.jenkinsci.plugins.workflow.job.WorkflowJob@2bce0d8f[_trash/testmail], org.jenkinsci.plugins.workflow.job.WorkflowJob@7fe0a831[_trash/text_ZAP], org.jenkinsci.plugins.workflow.job.WorkflowJob@222abf95[_trash/var_scope-test], hudson.model.FreeStyleProject@69995769[_trash/vvvv], com.cloudbees.hudson.plugins.folder.Folder@11e89880[amx_operaciones], com.cloudbees.hudson.plugins.folder.Folder@2a18c54b[automated-qa], org.jenkinsci.plugins.workflow.job.WorkflowJob@7009930b[automated-qa/db_health_check_1787438133345], org.jenkinsci.plugins.workflow.job.WorkflowJob@7bf1a240[automated-qa/newman-test], com.cloudbees.hudson.plugins.folder.Folder@695bf532[cs_legacy_back], com.cloudbees.hudson.plugins.folder.Folder@6126ebd5[cs_legacy_back/cs_legacy_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@32e08da0[cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54], org.jenkinsci.plugins.workflow.job.WorkflowJob@48bb1aed[cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@3f9ad278[cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@1c1bf8fd[cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5152e1ad[cs_legacy_back/cs_legacy_pipe_build_alfaapicomerciopedidos], org.jenkinsci.plugins.workflow.job.WorkflowJob@4a679f8a[cs_legacy_back/cs_legacy_pipe_build_ats], org.jenkinsci.plugins.workflow.job.WorkflowJob@7daec76c[cs_legacy_back/cs_legacy_pipe_build_ats-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2b00e34f[cs_legacy_back/cs_legacy_pipe_build_axii-claroshop], org.jenkinsci.plugins.workflow.job.WorkflowJob@6d19300b[cs_legacy_back/cs_legacy_pipe_build_axii-claroshop-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1bf469ed[cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@10ea5858[cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@3cdccb91[cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@18e12d69[cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@20e29499[cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@38d2ffd6[cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@294917c0[cs_legacy_back/cs_legacy_pipe_build_pot], org.jenkinsci.plugins.workflow.job.WorkflowJob@1dbb082c[cs_legacy_back/cs_legacy_pipe_build_reps-claroshop], org.jenkinsci.plugins.workflow.job.WorkflowJob@3e1289c6[cs_legacy_back/cs_legacy_pipe_build_reps-claroshop-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1191fd9d[cs_legacy_back/cs_legacy_pipe_build_selfservice], org.jenkinsci.plugins.workflow.job.WorkflowJob@70071f78[cs_legacy_back/cs_legacy_pipe_build_selfservice-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@35b8833c[cs_legacy_back/cs_legacy_pipe_build_t1-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@1fce60f4[cs_legacy_back/cs_legacy_pipe_build_t1-admin-api-config], com.cloudbees.hudson.plugins.folder.Folder@2c83341b[cs_legacy_front], org.jenkinsci.plugins.workflow.job.WorkflowJob@5ff3c1cc[cs_legacy_front/cs_legacy_build_app], org.jenkinsci.plugins.workflow.job.WorkflowJob@58051f80[cs_legacy_front/cs_legacy_build_app-config], com.cloudbees.hudson.plugins.folder.Folder@e78f0d7[cs_legacy_front/cs_legacy_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@2a20fb53[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54], org.jenkinsci.plugins.workflow.job.WorkflowJob@3adcf088[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@53bcecb9[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@10a32a23[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@3df4a107[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@60714e81[cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@72b49634[cs_legacy_front/cs_legacy_pipe_build_app-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3388d40f[cs_legacy_front/cs_legacy_pipe_build_app-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@430134e1[cs_legacy_front/cs_legacy_pipe_build_authms-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@a368a1e[cs_legacy_front/cs_legacy_pipe_build_authms-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5c65a85a[cs_legacy_front/cs_legacy_pipe_build_caja-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@29383775[cs_legacy_front/cs_legacy_pipe_build_caja-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@63d4b88f[cs_legacy_front/cs_legacy_pipe_build_caja-front], org.jenkinsci.plugins.workflow.job.WorkflowJob@5d8cb891[cs_legacy_front/cs_legacy_pipe_build_caja-front-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2c5afc02[cs_legacy_front/cs_legacy_pipe_build_carrito], org.jenkinsci.plugins.workflow.job.WorkflowJob@44b1e563[cs_legacy_front/cs_legacy_pipe_build_carrito-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2e73dba[cs_legacy_front/cs_legacy_pipe_build_cart-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3a174547[cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@415604eb[cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@a076b5f[cs_legacy_front/cs_legacy_pipe_build_facturams-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@31369d48[cs_legacy_front/cs_legacy_pipe_build_facturams-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@310bcb54[cs_legacy_front/cs_legacy_pipe_build_landing-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@408bf0c2[cs_legacy_front/cs_legacy_pipe_build_landing-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@7167361f[cs_legacy_front/cs_legacy_pipe_build_mail-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@74be29a6[cs_legacy_front/cs_legacy_pipe_build_mail-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1b000d0e[cs_legacy_front/cs_legacy_pipe_build_monedero-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@412e34c[cs_legacy_front/cs_legacy_pipe_build_monedero-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@4c0dfa1f[cs_legacy_front/cs_legacy_pipe_build_producto-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@49fb0921[cs_legacy_front/cs_legacy_pipe_build_producto-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5288056d[cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop], org.jenkinsci.plugins.workflow.job.WorkflowJob@411394f3[cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@626d43cc[cs_legacy_front/cs_legacy_pipe_build_searchengine-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@73ceeca1[cs_legacy_front/cs_legacy_pipe_build_searchengine-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@61ff3cd8[cs_legacy_front/cs_legacy_pipe_build_shipping-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3c968818[cs_legacy_front/cs_legacy_pipe_build_shipping-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@346dcf65[cs_legacy_front/cs_legacy_pipe_build_tienda], org.jenkinsci.plugins.workflow.job.WorkflowJob@304286ad[cs_legacy_front/cs_legacy_pipe_build_tienda-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@28c37581[cs_legacy_front/cs_legacy_pipe_build_tracking-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@201deec9[cs_legacy_front/cs_legacy_pipe_build_tracking-api-config], com.cloudbees.hudson.plugins.folder.Folder@8bafd56[cs_new_back], com.cloudbees.hudson.plugins.folder.Folder@4b6a1b5d[cs_new_back/cs_new_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@541caf12[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php54], org.jenkinsci.plugins.workflow.job.WorkflowJob@5d676580[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php54-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@45031bb2[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@2f6c50d5[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1eb90e15[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@78143327[cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2597691c[cs_new_back/cs_new_pipe_build_alibaba-pcl-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@68307f83[cs_new_back/cs_new_pipe_build_axii-claroshop], org.jenkinsci.plugins.workflow.job.WorkflowJob@3eaf1d36[cs_new_back/cs_new_pipe_build_axii-claroshop-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@67fb9ccf[cs_new_back/cs_new_pipe_build_comercio-pedidos-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@79bad6a5[cs_new_back/cs_new_pipe_build_comercio-pedidos-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@129d7276[cs_new_back/cs_new_pipe_build_zpl-admin-api], com.cloudbees.hudson.plugins.folder.Folder@1a2a3bd6[cs_new_front], com.cloudbees.hudson.plugins.folder.Folder@74b6394f[cs_new_front/cs_new_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@549d8bbe[cs_new_front/cs_new_front_crones/cs_new_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@6fbb6806[cs_new_front/cs_new_front_crones/cs_new_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@401b84aa[cs_new_front/cs_new_front_crones/cs_new_pipe_build_front_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@396c401d[cs_new_front/cs_new_front_crones/cs_new_pipe_build_front_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@194fcf5[cs_new_front/cs_new_pipe_build_claropay-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@355b5f99[cs_new_front/cs_new_pipe_build_claropay-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@29f9b34c[cs_new_front/cs_new_pipe_build_claropay-rfs], org.jenkinsci.plugins.workflow.job.WorkflowJob@72ce62c6[cs_new_front/cs_new_pipe_build_content-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@541b5b3e[cs_new_front/cs_new_pipe_build_content-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@3b5361b3[cs_new_front/cs_new_pipe_build_manager-content-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5f54c646[cs_new_front/cs_new_pipe_build_manager-content-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5e0d5738[cs_new_front/cs_new_pipe_build_merchant-center-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5041356c[cs_new_front/cs_new_pipe_build_merchant-center-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@703f882e[cs_new_front/cs_new_pipe_build_mi-cuenta-rfs], org.jenkinsci.plugins.workflow.job.WorkflowJob@9200699[cs_new_front/cs_new_pipe_build_ms-account-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3da03412[cs_new_front/cs_new_pipe_build_ms-account-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@64939c9f[cs_new_front/cs_new_pipe_build_ms-client-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@68e116db[cs_new_front/cs_new_pipe_build_ms-client-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@617cc190[cs_new_front/cs_new_pipe_build_orders-consumer-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5dc07909[cs_new_front/cs_new_pipe_build_orders-producer-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@254f614a[cs_new_front/cs_new_pipe_build_payment-bank-deposit-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@4578ecf6[cs_new_front/cs_new_pipe_build_paypal-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@420fc588[cs_new_front/cs_new_pipe_build_paypal-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1c59e4f1[cs_new_front/cs_new_pipe_build_pwa-front], org.jenkinsci.plugins.workflow.job.WorkflowJob@42c28301[cs_new_front/cs_new_pipe_build_stock-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@40dfc8f3[cs_new_front/cs_new_pipe_build_stock-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@7c4066e5[cs_new_front/cs_new_pipe_build_t1pagos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@2f6d6bf0[cs_new_front/cs_new_pipe_build_t1pagos-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@79e12f97[cs_new_front/cs_new_pipe_build_telmex-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@47c7f808[cs_new_front/cs_new_pipe_build_telmex-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@384fc95b[cs_new_front/cs_new_pipe_build_tickets-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@7cb90749[cs_new_front/cs_new_pipe_build_tickets-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@cd402de[cs_new_front/cs_new_pipe_build_wish-list-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@74abacf4[cs_new_front/cs_new_pipe_build_wish-list-api-config], com.cloudbees.hudson.plugins.folder.Folder@49dfea5f[pc_legacy_back], org.jenkinsci.plugins.workflow.job.WorkflowJob@3268a62b[pc_legacy_back/pc_legacy_pipe_build_pc-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@65f6c60[pc_legacy_back/pc_legacy_pipe_build_pc-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2ab14c87[pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro], org.jenkinsci.plugins.workflow.job.WorkflowJob@3d49929[pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro-config], com.cloudbees.hudson.plugins.folder.Folder@412d1a2a[pc_new_back], org.jenkinsci.plugins.workflow.job.WorkflowJob@74fa3e86[pc_new_back/pc_new_pipe_build_alibaba-plataforma-claro], org.jenkinsci.plugins.workflow.job.WorkflowJob@9bb6015[pc_new_back/pc_new_pipe_build_alibaba-plataforma-claro-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@294ec0d1[pc_new_back/pc_new_pipe_build_alibaba-ppc-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@ef40900[pc_new_back/pc_new_pipe_build_not-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@2b5f1856[pc_new_back/pc_new_pipe_build_not-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@79366ee0[pc_new_back/pc_new_pipe_build_not-plataforma-claro], org.jenkinsci.plugins.workflow.job.WorkflowJob@2621715f[pc_new_back/pc_new_pipe_build_not-plataforma-claro-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@8b3d092[pc_new_back/pc_new_pipe_build_pc-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5bfdf47a[pc_new_back/pc_new_pipe_build_pc-admin-api-config], com.cloudbees.hudson.plugins.folder.Folder@16322226[pc_new_front], com.cloudbees.hudson.plugins.folder.Folder@4ba001b4[pc_new_front/pc_new_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@11f6d08b[pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8], org.jenkinsci.plugins.workflow.job.WorkflowJob@3cf0f063[pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2ad1902f[pc_new_front/pc_new_pipe_build_andijan-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@1e3bff2b[pc_new_front/pc_new_pipe_build_contador-mrc-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@39ee06ef[pc_new_front/pc_new_pipe_build_contador-mrc-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2a68a59[pc_new_front/pc_new_pipe_build_navoiy-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@24d022ca[pc_new_front/pc_new_pipe_build_samarcanda-dmn], com.cloudbees.hudson.plugins.folder.Folder@2bae589a[se_legacy_back], com.cloudbees.hudson.plugins.folder.Folder@342c90a6[se_legacy_back/se_legacy_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@65d353dc[se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@2cc3f8f7[se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@4c460805[se_legacy_back/se_legacy_pipe_build_ats], org.jenkinsci.plugins.workflow.job.WorkflowJob@12aba56c[se_legacy_back/se_legacy_pipe_build_ats-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@4436debe[se_legacy_back/se_legacy_pipe_build_axii-sears], org.jenkinsci.plugins.workflow.job.WorkflowJob@14cfdf3e[se_legacy_back/se_legacy_pipe_build_axii-sears-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@6835fb82[se_legacy_back/se_legacy_pipe_build_pse-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5be295d[se_legacy_back/se_legacy_pipe_build_pse-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@e37819[se_legacy_back/se_legacy_pipe_build_reps-sears], org.jenkinsci.plugins.workflow.job.WorkflowJob@328b6630[se_legacy_back/se_legacy_pipe_build_reps-sears-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@7fb26f9a[se_legacy_back/test_sonar], com.cloudbees.hudson.plugins.folder.Folder@791945e9[se_legacy_front], com.cloudbees.hudson.plugins.folder.Folder@ea6b9fb[se_legacy_front/se_legacy_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@1a815b74[se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@3f62ec9c[se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@40d0151f[se_legacy_front/se_legacy_pipe_build_credito-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@736749b2[se_legacy_front/se_legacy_pipe_build_credito-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@632de651[se_legacy_front/se_legacy_pipe_build_mail-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@4b03e0a4[se_legacy_front/se_legacy_pipe_build_mail-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@b3b7c36[se_legacy_front/se_legacy_pipe_build_products-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@42588e3a[se_legacy_front/se_legacy_pipe_build_products-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@4e4bf74e[se_legacy_front/se_legacy_pipe_build_searchengine-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@1a1938e3[se_legacy_front/se_legacy_pipe_build_searchengine-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@4a132d5a[se_legacy_front/se_legacy_pipe_build_shipping-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@4cbc437c[se_legacy_front/se_legacy_pipe_build_shipping-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5d5c3c22[se_legacy_front/se_legacy_pipe_build_tienda], org.jenkinsci.plugins.workflow.job.WorkflowJob@e51c94a[se_legacy_front/se_legacy_pipe_build_tienda-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5d7b5c27[se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos], org.jenkinsci.plugins.workflow.job.WorkflowJob@73724357[se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos-config], com.cloudbees.hudson.plugins.folder.Folder@3f6ef993[se_msa_front], org.jenkinsci.plugins.workflow.job.WorkflowJob@4f73dc37[se_msa_front/pipe_mesaregalos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@4f68470a[se_msa_front/se_msa_pipe_build_beta-mesa-regalos], com.cloudbees.hudson.plugins.folder.Folder@5f4ac2f5[se_new_back], com.cloudbees.hudson.plugins.folder.Folder@1ca234e9[se_new_back/se_new_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@5fb15a8e[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php54], org.jenkinsci.plugins.workflow.job.WorkflowJob@61c2c609[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php54-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@215813b6[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@56d1c3e[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@7664172f[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@1e16564[se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@48f5a0a4[se_new_back/se_new_pipe_build_alibaba-pse-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@297c2a16[se_new_back/se_new_pipe_build_marketplace-pse-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@78bfd96a[se_new_back/se_new_pipe_build_marketplace-pse-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@75629160[se_new_back/testphp70], com.cloudbees.hudson.plugins.folder.Folder@44e499b8[se_new_front], com.cloudbees.hudson.plugins.folder.Folder@e883c0d[se_new_front/se_new_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@10f7ffe8[se_new_front/se_new_front_crones/se_new_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@58135b7a[se_new_front/se_new_front_crones/se_new_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5ee1ad9b[se_new_front/se_new_front_crones/se_new_pipe_build_front_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@3fe9ceb6[se_new_front/se_new_pipe_build_manager-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@10ce7e1c[se_new_front/se_new_pipe_build_marketplace-products-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@52c43ff4[se_new_front/se_new_pipe_build_marketplace-products-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@19add42[se_new_front/se_new_pipe_build_paypal-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@70773fb9[se_new_front/se_new_pipe_build_paypal-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@132a9135[se_new_front/se_new_pipe_build_t1pagos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@60e2373b[se_new_front/se_new_pipe_build_t1pagos-api-config], com.cloudbees.hudson.plugins.folder.Folder@597ce0fa[sears-ia-backend], com.cloudbees.hudson.plugins.folder.Folder@7b8bef40[sears-ia-backend/sears-ia-backend_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@374596a8[sears-ia-backend/sears-ia-backend_crones/sears-ia_pipe_build_backend_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@7e06ed0e[sears-ia-backend/sears-ia_pipe_build_app-api-ia], org.jenkinsci.plugins.workflow.job.WorkflowJob@39e268c2[sears-ia-backend/sears-ia_pipe_build_app-cms-ia], org.jenkinsci.plugins.workflow.job.WorkflowJob@4848cb2a[sears-ia-backend/sears-ia_pipe_build_app-credito-ia], com.cloudbees.hudson.plugins.folder.Folder@6f1e8e70[sn_legacy_back], com.cloudbees.hudson.plugins.folder.Folder@78943ecf[sn_legacy_back/sn_legacy_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@53a3e45d[sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@1a041dba[sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@300ad240[sn_legacy_back/sn_legacy_pipe_build_ats-sanborns], org.jenkinsci.plugins.workflow.job.WorkflowJob@3e155ef0[sn_legacy_back/sn_legacy_pipe_build_ats-sanborns-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@72d8d463[sn_legacy_back/sn_legacy_pipe_build_axii-sanborns], org.jenkinsci.plugins.workflow.job.WorkflowJob@488bfe4f[sn_legacy_back/sn_legacy_pipe_build_axii-sanborns-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@2e75adcc[sn_legacy_back/sn_legacy_pipe_build_psa-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@3a03842c[sn_legacy_back/sn_legacy_pipe_build_psa-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@ecc34c3[sn_legacy_back/sn_legacy_pipe_build_reps-sanborns], org.jenkinsci.plugins.workflow.job.WorkflowJob@1922dad3[sn_legacy_back/sn_legacy_pipe_build_reps-sanborns-config], com.cloudbees.hudson.plugins.folder.Folder@58f0ece4[sn_legacy_front], com.cloudbees.hudson.plugins.folder.Folder@60077541[sn_legacy_front/sn_legacy_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@1a3a0ff6[sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@3c3eca79[sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@53bb8b11[sn_legacy_front/sn_legacy_pipe_build_api-soap], org.jenkinsci.plugins.workflow.job.WorkflowJob@5c4027f7[sn_legacy_front/sn_legacy_pipe_build_delivery-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@16cfc636[sn_legacy_front/sn_legacy_pipe_build_delivery-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@5c68ab94[sn_legacy_front/sn_legacy_pipe_build_libranda-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5384500b[sn_legacy_front/sn_legacy_pipe_build_libranda-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@e26aa13[sn_legacy_front/sn_legacy_pipe_build_producto-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@66b02397[sn_legacy_front/sn_legacy_pipe_build_producto-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@7f1d10de[sn_legacy_front/sn_legacy_pipe_build_shipping-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@ee8033e[sn_legacy_front/sn_legacy_pipe_build_shipping-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@35a546c2[sn_legacy_front/sn_legacy_pipe_build_tienda], org.jenkinsci.plugins.workflow.job.WorkflowJob@52ee777a[sn_legacy_front/sn_legacy_pipe_build_tienda-config], com.cloudbees.hudson.plugins.folder.Folder@824cf90[sn_msa_back], com.cloudbees.hudson.plugins.folder.Folder@1284971c[sn_msa_front], com.cloudbees.hudson.plugins.folder.Folder@5b85673d[sn_new_back], com.cloudbees.hudson.plugins.folder.Folder@1d83784e[sn_new_back/sn_new_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@8f7245d[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php54], org.jenkinsci.plugins.workflow.job.WorkflowJob@1e7f903c[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php54-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@49e4355a[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@67272a33[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@56c32f46[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@34dfbbd2[sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@735c88b1[sn_new_back/sn_new_pipe_build_axii-sanborns], org.jenkinsci.plugins.workflow.job.WorkflowJob@1c34603a[sn_new_back/sn_new_pipe_build_marketplace-psa-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@17bfc29d[sn_new_back/sn_new_pipe_build_marketplace-psa-admin-api-config], com.cloudbees.hudson.plugins.folder.Folder@caed53b[sn_new_front], com.cloudbees.hudson.plugins.folder.Folder@4442748a[sn_new_front/sn_new_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@45621619[sn_new_front/sn_new_front_crones/sn_new_pipe_build_front_crones_php70], org.jenkinsci.plugins.workflow.job.WorkflowJob@bdd0c78[sn_new_front/sn_new_front_crones/sn_new_pipe_build_front_crones_php70-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@1451d897[sn_new_front/sn_new_front_crones/sn_new_pipe_build_front_crones_php72], org.jenkinsci.plugins.workflow.job.WorkflowJob@35a538c0[sn_new_front/sn_new_front_crones/sn_new_pipe_build_front_crones_php72-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@60a232b3[sn_new_front/sn_new_pipe_build_paypal-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@37f5c13[sn_new_front/sn_new_pipe_build_paypal-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@19f0b98b[sn_new_front/sn_new_pipe_build_t1pagos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@58ff14d[sn_new_front/sn_new_pipe_build_t1pagos-api-config], com.cloudbees.hudson.plugins.folder.Folder@6ff7b2fc[t1c_new_back], org.jenkinsci.plugins.workflow.job.WorkflowJob@74497ce5[t1c_new_back/t1c_new_pipe_build_concentrador-pedidos-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@daf29bb[t1c_new_back/t1c_new_pipe_build_milan-brands-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@118ff564[t1c_new_back/t1c_new_pipe_build_phoenix-batch-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@6b706b81[t1c_new_back/t1c_new_pipe_build_venecia-channel-api], com.cloudbees.hudson.plugins.folder.Folder@59fdf469[t1c_new_front], org.jenkinsci.plugins.workflow.job.WorkflowJob@54e18c5e[t1c_new_front/t1c_new_pipe_build_cm-orders-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@20778588[t1c_new_front/t1c_new_pipe_build_commerce-api], com.cloudbees.hudson.plugins.folder.Folder@4f9f367b[t1comercios], com.cloudbees.hudson.plugins.folder.Folder@2e9627e4[t1comercios/reporteria], org.jenkinsci.plugins.workflow.job.WorkflowJob@4e3d6037[t1comercios/reporteria/jafari], org.jenkinsci.plugins.workflow.job.WorkflowJob@26793612[t1comercios/reporteria/jepri], org.jenkinsci.plugins.workflow.job.WorkflowJob@7e22ddff[t1comercios/reporteria/kebehsenuf], org.jenkinsci.plugins.workflow.job.WorkflowJob@62654c76[t1comercios/reporteria/keops], org.jenkinsci.plugins.workflow.job.WorkflowJob@477ca4d5[t1comercios/reporteria/kianggeh], com.cloudbees.hudson.plugins.folder.Folder@4232275b[t1d_legacy_front], org.jenkinsci.plugins.workflow.job.WorkflowJob@2e65ce41[t1d_legacy_front/t1d_legacy_pipe_build_contador-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@19ff4c4b[t1d_legacy_front/t1d_legacy_pipe_build_contador-api-config], com.cloudbees.hudson.plugins.folder.Folder@5c996831[t1d_new_front], com.cloudbees.hudson.plugins.folder.Folder@68a8bfd7[t1d_new_front/t1d_new_front_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@28dac38e[t1d_new_front/t1d_new_front_crones/t1d_new_pipe_build_front_crones_java8], org.jenkinsci.plugins.workflow.job.WorkflowJob@407f2e4f[t1d_new_front/t1d_new_front_crones/t1d_new_pipe_build_front_crones_java8-config], com.cloudbees.hudson.plugins.folder.Folder@389c15fd[t1e_legacy_back], org.jenkinsci.plugins.workflow.job.WorkflowJob@76ba23b9[t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios], org.jenkinsci.plugins.workflow.job.WorkflowJob@4d687093[t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@71289bb5[t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@7fca81eb[t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@763604b1[t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-dead], com.cloudbees.hudson.plugins.folder.Folder@2502faea[t1e_new_back], com.cloudbees.hudson.plugins.folder.Folder@62bab081[t1e_new_back/t1e_new_back_crones], org.jenkinsci.plugins.workflow.job.WorkflowJob@831dcca[t1e_new_back/t1e_new_back_crones/t1e_new_pipe_build_contadores-reps-admin-cron], org.jenkinsci.plugins.workflow.job.WorkflowJob@2ac98b15[t1e_new_back/t1e_new_pipe_build_99minutos-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@54f1eb71[t1e_new_back/t1e_new_pipe_build_ampm-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@6d45baf6[t1e_new_back/t1e_new_pipe_build_dhl-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@6b14fc18[t1e_new_back/t1e_new_pipe_build_dhl-track-claroshop-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@d63434c[t1e_new_back/t1e_new_pipe_build_dhl-track-sanborns-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@56129bf2[t1e_new_back/t1e_new_pipe_build_dhl-track-sears-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@164009cc[t1e_new_back/t1e_new_pipe_build_fedex-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@5a78d320[t1e_new_back/t1e_new_pipe_build_fedex-track-claroshop-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@4d968200[t1e_new_back/t1e_new_pipe_build_fedex-track-sanborns-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@f995d4b[t1e_new_back/t1e_new_pipe_build_fedex-track-sears-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@19013b1d[t1e_new_back/t1e_new_pipe_build_finanzas-sif-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@57c1ace[t1e_new_back/t1e_new_pipe_build_fullfilment-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@7c831ee3[t1e_new_back/t1e_new_pipe_build_geotrack-admin], org.jenkinsci.plugins.workflow.job.WorkflowJob@3935673d[t1e_new_back/t1e_new_pipe_build_geotrack-admin-config], org.jenkinsci.plugins.workflow.job.WorkflowJob@297c7ad5[t1e_new_back/t1e_new_pipe_build_guias-masivas-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@4c33bf5e[t1e_new_back/t1e_new_pipe_build_lusail-template-processor-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@2823d43d[t1e_new_back/t1e_new_pipe_build_qualitypost-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@3a3d428b[t1e_new_back/t1e_new_pipe_build_redpack-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@705d2dcb[t1e_new_back/t1e_new_pipe_build_reps-admin], org.jenkinsci.plugins.workflow.job.WorkflowJob@21c5a5d1[t1e_new_back/t1e_new_pipe_build_sif-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@17f11fe8[t1e_new_back/t1e_new_pipe_build_sistema-financiero-interno-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@47883e87[t1e_new_back/t1e_new_pipe_build_t1mw-bussiness-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@5e2260c8[t1e_new_back/t1e_new_pipe_build_tookan-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@52c5adf0[t1e_new_back/t1e_new_pipe_build_tookan-track-claroshop-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@4dd4f61f[t1e_new_back/t1e_new_pipe_build_tookan-track-sanborns-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@4b2e8524[t1e_new_back/t1e_new_pipe_build_tookan-track-sears-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@64798a9[t1e_new_back/t1e_new_pipe_build_track-fallidos-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@79920fbc[t1e_new_back/t1e_new_pipe_build_ups-track-admin-dmn], org.jenkinsci.plugins.workflow.job.WorkflowJob@131c7a9f[t1e_new_back/t1e_new_pipe_build_webhook-maestro-admin-api], org.jenkinsci.plugins.workflow.job.WorkflowJob@2ca4da7d[t1e_new_back/t1e_new_pipe_build_zpl-admin-api]]
+

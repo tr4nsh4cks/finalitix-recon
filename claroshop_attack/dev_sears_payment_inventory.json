@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "timestamp": "2026-08-23 21:40:00",
+    "target": "172.27.141.6:3308",
+    "user": "apifincadodev",
+    "via": "Jenkins RCE → Docker API 172.27.140.148:4243 → container PHP 5b32e909c295 → MySQL"
+  },
+  "summary": {
+    "total_pedidos": 15362,
+    "pedidos_agosto_2026": 78,
+    "monto_agosto_2026_mxn": 1294729.63,
+    "ultima_fecha_pedido": "2026-08-21 16:30:47",
+    "transacciones_tarjeta_total": 10750,
+    "control_transacciones_sears": 12184,
+    "order_payment_method": 1604,
+    "tokens_t1envio_activos": 23,
+    "tablas_pago_encontradas": 52,
+    "metodos_pago_catalogados": 23
+  },
+  "pedidos_agosto_2026_por_forma_pago": [
+    {"forma_pago_id": 4465, "nombre": "Oxxo Pay", "pedidos": 60, "monto_total": 1219323.03, "promedio": 20322.05},
+    {"forma_pago_id": 3364, "nombre": "Crédito Sears", "pedidos": 14, "monto_total": 33472.60, "promedio": 2390.90},
+    {"forma_pago_id": 4456, "nombre": "Pago en Tienda", "pedidos": 2, "monto_total": 40038.00, "promedio": 20019.00},
+    {"forma_pago_id": 4468, "nombre": "T1Pagos", "pedidos": 2, "monto_total": 1896.00, "promedio": 948.00}
+  ],
+  "catalogo_metodos_pago": [
+    {"id": 1, "titulo": "Visa", "desc": "Visa Credito"},
+    {"id": 2, "titulo": "MasterCard", "desc": "MasterCard Credito"},
+    {"id": 4, "titulo": "Deposito", "desc": "Deposito"},
+    {"id": 5, "titulo": "PayPal", "desc": "PayPal"},
+    {"id": 13, "titulo": "Mesa Regalo POS", "desc": "Mesa Regalo POS"},
+    {"id": 14, "titulo": "PRUEBA Mesa Regalo POS", "desc": "PRUEBA Mesa Regalo POS"},
+    {"id": 46, "titulo": "Pase", "desc": "Pase"},
+    {"id": 79, "titulo": "CrediTienda", "desc": "CrediTienda"},
+    {"id": 344, "titulo": "Amex", "desc": "Amex"},
+    {"id": 3360, "titulo": "Monedero Sears", "desc": "Monedero Sears"},
+    {"id": 3361, "titulo": "Puntos Sears", "desc": "Puntos Sears"},
+    {"id": 3362, "titulo": "Certificado Sears", "desc": "Certificado Sears"},
+    {"id": 3364, "titulo": "Credito Sears", "desc": "Credito Sears"},
+    {"id": 3442, "titulo": "Sears Meses Sin Intereses", "desc": "Sears MSI"},
+    {"id": 3452, "titulo": "Credito Revolvente Sears", "desc": "Credito Revolvente Sears"},
+    {"id": 4196, "titulo": "PayPal Meses", "desc": "PayPal Meses"},
+    {"id": 4384, "titulo": "Mejor Plan Sears", "desc": "Meses con intereses sears"},
+    {"id": 4446, "titulo": "MasterCard Debito", "desc": "MasterCard Debito"},
+    {"id": 4455, "titulo": "Visa Debito", "desc": "Visa Debito"},
+    {"id": 4456, "titulo": "Pago en Tienda", "desc": "Pago en Tienda"},
+    {"id": 4465, "titulo": "Oxxo Pay", "desc": "Pago en efectivo oxxo"},
+    {"id": 4467, "titulo": "T1Pagos AMEX", "desc": "T1Pagos AMEX"},
+    {"id": 4468, "titulo": "T1Pagos", "desc": "T1Pagos"}
+  ],
+  "tablas_pago": {
+    "tienda": {
+      "pagos_core": [
+        "catalogo_forma_pago_pos", "formas_pago_factura", "historial_pagos_imr",
+        "historial_pagos_imr_devolucion", "log_pagos_servicios", "logs_respuesta_pagos_oxxo",
+        "logs_respuesta_pagos_t1pagos", "metodos_de_pago", "pedidos_pago_tienda_conciliados",
+        "relacion_formas_pago_cs_sat", "transaccion_pagobancos"
+      ],
+      "transacciones": [
+        "control_transacciones_sears", "control_transacciones_sears_b", "control_transacciones_sears_tmp",
+        "cybersource_transacciones", "netpay_transacciones", "transaccion_pagobancos",
+        "transaccion_paypal_express", "transaccion_paypalexpress_log", "transacciones_netpay",
+        "transacciones_tarjeta"
+      ],
+      "conciliacion": [
+        "bitacora_concilia", "conciliacargos", "conciliacion_amex", "conciliacion_sears",
+        "conciliacion_sears_control", "mails_concilia", "pedidos_pago_tienda_conciliados"
+      ],
+      "order_payment": ["order_payment_method"],
+      "psp_t1": [
+        "fallaguiat1enviov2", "guiat1enviov2", "logs_respuesta_pagos_t1pagos",
+        "reembolso_t1_api", "tokent1envio"
+      ],
+      "psp_payu": ["log_estatus_pedido_payu"],
+      "psp_cybersource": ["control_cybersource", "cybersource_transacciones", "intentos_cybersource"],
+      "psp_netpay": ["netpay_transacciones", "transacciones_netpay"],
+      "tokens": ["oauth_access_tokens", "oauth_refresh_tokens", "tokens", "tokent1envio"],
+      "tarjetas": ["transacciones_tarjeta"]
+    },
+    "tienda_nueva": {
+      "pagos": ["catalogo_formas_pago"]
+    }
+  },
+  "conteos": {
+    "pedidos": 15362,
+    "transacciones_tarjeta": 10750,
+    "control_transacciones_sears": 12184,
+    "order_payment_method": 1604,
+    "tokent1envio": 23,
+    "logs_respuesta_pagos_t1pagos": 11,
+    "cybersource_transacciones": 0,
+    "netpay_transacciones": 0,
+    "transaccion_paypal_express": 0,
+    "transaccion_pagobancos": 0,
+    "conciliacion_sears": 0
+  },
+  "hallazgos_criticos": {
+    "tokens_jwt_activos": {
+      "tabla": "tokent1envio",
+      "keycloak": "keycloak.dev.plataformat1.com/realms/claroshop-sapi-sa-cv",
+      "client": "t1envios",
+      "usuario": "Vicente Avila (avavila@sears.com.mx)",
+      "telefono": "5555021612",
+      "tienda": "1286138877",
+      "token_mas_reciente": "2026-07-14",
+      "nota": "Token id=22 expira 2027-04-06 - POSIBLEMENTE AÚN VÁLIDO. Refresh tokens con TTL 1 año.",
+      "total_tokens": 23
+    },
+    "tarjetas_numeros_completos": {
+      "tabla": "transacciones_tarjeta",
+      "total": 10750,
+      "sample_numeros": [
+        "481515******4726 (visa, masked)",
+        "961704380016 (12 dig SIN MASK - cuenta Crédito Sears)",
+        "137858847643 (12 dig SIN MASK)",
+        "516936677694 (12 dig SIN MASK)",
+        "706928279712 (12 dig SIN MASK)",
+        "411111******1111 (visa TEST CARD)",
+        "520021******5104 (mastercard, masked)",
+        "481516******0312 (visa, masked)"
+      ],
+      "pii_expuesto": ["Jessica Reyes gonzalez", "Eva Carolina flores garcia", "Martina Laura martinez ramirez", "Jose"],
+      "nota": "Los números de 12 dígitos sin mask son cuentas Crédito Sears (no PANs bancarios convencionales)"
+    },
+    "pedidos_con_datos_tarjeta": {
+      "tabla": "pedidos",
+      "columnas_sensibles": ["nombre (titular)", "numero (tarjeta cifrada)", "mes (exp)", "ao (exp)", "seguridad (CVV)"],
+      "nota": "En pedidos Oxxo Pay/Crédito Sears estos campos están NULL. Pedidos con TDC (Visa/MC/Amex) tendrían datos cifrados aquí.",
+      "ip_cliente_visible": true
+    }
+  },
+  "estructura_pedidos": {
+    "columnas": [
+      "Id (PK auto)", "Cliente (FK)", "Tipo", "Fecha_Inicio (datetime)", "Estatus",
+      "Tienda", "Urgencia", "Forma_de_pago (FK)", "Num_pedido (UNI)", "Pedido_Normalizado",
+      "stratus_mensaje", "stratus_codigo", "nombre (titular TDC)", "numero (num TDC cifrado)",
+      "mes (exp)", "ao (exp)", "seguridad (CVV cifrado)", "anterior", "subtotal",
+      "subtotal_venta", "total_envio", "descuento", "total", "total_venta",
+      "tienda_origen", "extra (mediumtext)", "modalidad", "tarjeta_puntos", "meses",
+      "interes", "telefono_telmex", "num_externo", "evento", "campana",
+      "ip (IP cliente)", "tipo_entrega", "id_portal", "registradora", "transaccion",
+      "tipo_descuento", "orderSummaryId"
+    ]
+  },
+  "sample_pedidos_ago2026": [
+    {"Id": "11857255", "Cliente": "2959447", "Forma_de_pago": "4465", "Num_pedido": "994958", "Fecha_Inicio": "2026-08-21 16:30:47", "Estatus": "16", "total": "29169"},
+    {"Id": "11857252", "Cliente": "2959447", "Forma_de_pago": "4465", "Num_pedido": "994905", "Fecha_Inicio": "2026-08-20 15:51:00", "Estatus": "19", "total": "29169"},
+    {"Id": "11857216", "Cliente": "2959446", "Forma_de_pago": "3364", "Num_pedido": "1187553035", "Fecha_Inicio": "2026-08-12 17:12:58", "Estatus": "40", "total": "482.65", "ip": "189.229.181.34"},
+    {"Id": "11857200", "Cliente": "2959441", "Forma_de_pago": "4456", "Num_pedido": "000000", "Fecha_Inicio": "2026-08-06", "Estatus": "16", "total": "~20019"}
+  ]
+}

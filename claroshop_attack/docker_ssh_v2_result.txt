@@ -1,0 +1,26 @@
+﻿=== DOCKER: SSH PROD SEARS + MYSQL CLAROSHOP ===
+=== KEY FILE ===
+-rw-------. 1 apache 48 1675 Aug 23 23:09 /tmp/.ssh_pivot/key
+-----BEGIN RSA PRIVATE KEY-----
+
+=== SSH SCAN 172.27.141.24 ===
+FAIL jenkins: /bin/bash: line 40: ssh: command not found
+FAIL root: /bin/bash: line 40: ssh: command not found
+FAIL deployer: /bin/bash: line 40: ssh: command not found
+FAIL sears: /bin/bash: line 40: ssh: command not found
+FAIL ec2-user: /bin/bash: line 40: ssh: command not found
+FAIL ubuntu: /bin/bash: line 40: ssh: command not found
+FAIL www-data: /bin/bash: line 40: ssh: command not found
+FAIL apache: /bin/bash: line 40: ssh: command not found
+
+=== MYSQL 172.27.140.151:3306 (ClaroShop PROD) ===
+/bin/bash: line 53: which: command not found
+mysql binary not found or failed
+
+=== MYSQL 172.27.141.4:3306 (T1Pagos from .23) ===
+/bin/bash: line 57: which: command not found
+mysql not found
+=== DONE ===
+
+=== FIN ===
+

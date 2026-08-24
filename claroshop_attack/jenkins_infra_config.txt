@@ -1,0 +1,178 @@
+﻿=== OPENSHIFT PLUGIN CONFIG ===
+<?xml version='1.1' encoding='UTF-8'?>
+<com.openshift.jenkins.plugins.OpenShift_-DescriptorImpl plugin="openshift-client@1.0.34">
+  <configVersion>1</configVersion>
+  <clusterConfigs>
+    <com.openshift.jenkins.plugins.ClusterConfig>
+      <name>dev-amxnova</name>
+      <serverUrl>https://console.dev.amxnova.net:8443</serverUrl>
+      <serverCertificateAuthority>-----BEGIN CERTIFICATE-----
+MIIC6jCCAdKgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtvcGVu
+c2hpZnQtc2lnbmVyQDE1NDYwMjExODAwHhcNMTgxMjI4MTgxOTM5WhcNMjMxMjI3
+MTgxOTQwWjAmMSQwIgYDVQQDDBtvcGVuc2hpZnQtc2lnbmVyQDE1NDYwMjExODAw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGwQdPNbnRLE4B85YEgLi+
+Cwh3wRxvYQkMGrp3r9vK1pC2nNMgF+hLKmIT2PUldpeb8qOjSKUeAe2D2EPTyiyI
+evKNb+Ubl/mlNk2dapRiTEAABLLU6HuNln6rs+nrVsFW/u6N6w3eNwQ/v6XC5db4
+ggDppbB0vGHfPNeitBxStkfhp/AFhNL/R9tARW/n82aeF5PGP3CH8D30gtZMvYUz
+D5numZj5ma4+Qzyvw2bWRwD6EML8YZfZg6khIiNH1mZ1I3e52oyNFXJQU4I9lNs2
+QA3NaDJX/N5nMA5e8JLuuRdTohMnLT825vUU0Jb370KNsWIZZ6FtoqkATYRFJrdX
+AgMBAAGjIzAhMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MA0GCSqG
+SIb3DQEBCwUAA4IBAQBGdm6CZx4WzFDUbv6t7Otoe8PYJlYktceoKdzHjYZEO6p1
+Dtkm73fu9v8vOjF/RK7xdevC2bW0Ii2zCyGVJbD/bzdMzxbSwgqq98ZY/KVyetuk
+utavRQ/eiCuLDTqP3tZ6DhR7OVWsIYLGqVcbfyURdWYsBG8jt2zQ8pw8HgkcozJr
+Pbte8AVj6Tlbkvm5Xoreolcrbz6Chf59FUlr9Lem8Rc1sH3e2GgGu5cyOEZQf8X4
+JR1fYs9BG66elWePQOFZA3ogvxVL/jtjzucXCc3muj2MJYcL4U05TshBb7HsxgAl
+80p3fHkWYEdNn3FO5akAHD3kAYQtb03JMmRZGoOv
+-----END CERTIFICATE-----</serverCertificateAuthority>
+      <skipTlsVerify>true</skipTlsVerify>
+      <defaultProject>mrc-cs-tienda-0001</defaultProject>
+    </com.openshift.jenkins.plugins.ClusterConfig>
+  </clusterConfigs>
+  <ocTool>oc</ocTool>
+</com.openshift.jenkins.plugins.OpenShift_-DescriptorImpl>
+
+=== PROXY CONFIG ===
+<?xml version='1.1' encoding='UTF-8'?>
+<proxy>
+  <name>172.27.141.25</name>
+  <port>8080</port>
+  <noProxyHost>*.claroshop.com
+*.tmx-internacional.net
+*.sanborns.com.mx</noProxyHost>
+  <secretPassword>{AQAAABAAAAAQD+o5px9pIjkI3VYOmKvYVG3rsuuIrdR9USpaEcc1fGs=}</secretPassword>
+  <testUrl>http://www.google.com</testUrl>
+</proxy>
+
+=== GLOBAL JENKINS CONFIG (config.xml) excerpts ===
+--- Agents/Slaves section ---
+--- Clouds section ---
+<
+
+=== OPENSHIFTSYNC GLOBAL PLUGIN CONFIG ===
+<?xml version='1.1' encoding='UTF-8'?>
+<io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration plugin="openshift-sync@1.0.45">
+  <enabled>true</enabled>
+  <foldersEnabled>true</foldersEnabled>
+  <server></server>
+  <namespaces>
+    <string>default</string>
+  </namespaces>
+  <jobNamePattern></jobNamePattern>
+  <skipOrganizationPrefix></skipOrganizationPrefix>
+  <skipBranchSuffix></skipBranchSuffix>
+  <buildListInterval>300</buildListInterval>
+  <buildConfigListInterval>300</buildConfigListInterval>
+  <secretListInterval>300</secretListInterval>
+  <configMapListInterval>300</configMapListInterval>
+  <imageStreamListInterval>300</imageStreamListInterval>
+</io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration>
+
+=== OPENSHIFT DEPLOY APPLICATION ===
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.openshift.DeployApplication_-DeployApplicationDescriptor plugin="openshift-deployer@1.2.0">
+  <DEFAULT__PUBLICKEY__PATH>/var/jenkins_home/.ssh/id_rsa.pub</DEFAULT__PUBLICKEY__PATH>
+  <servers>
+    <org.jenkinsci.plugins.openshift.Server>
+      <name>dev-amxnova</name>
+      <brokerAddress>https://console.dev.amxnova.net:8443</brokerAddress>
+      <username>cs-jenkins-deployer</username>
+      <password>{AQAAABAAAAAQuKnIu3k7NxL5rmREoi/L0Uv3HEllPiDpc4R2D5YQmHI=}</password>
+      <secret>{AQAAABAAAAAQuKnIu3k7NxL5rmREoi/L0Uv3HEllPiDpc4R2D5YQmHI=}</secret>
+    </org.jenkinsci.plugins.openshift.Server>
+  </servers>
+  <publicKeyPath>/var/jenkins_home/.ssh/id_rsa.pub</publicKeyPath>
+</org.jenkinsci.plugins.openshift.DeployApplication_-DeployApplicationDescriptor>
+
+=== GITLAB CONNECTION CONFIG ===
+<?xml version='1.1' encoding='UTF-8'?>
+<com.dabsquared.gitlabjenkins.connection.GitLabConnectionConfig plugin="gitlab-plugin@1.5.13">
+  <useAuthenticatedEndpoint>true</useAuthenticatedEndpoint>
+  <connections>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnection>
+      <name></name>
+      <url></url>
+      <apiTokenId></apiTokenId>
+      <clientBuilder class="com.dabsquared.gitlabjenkins.gitlab.api.impl.AutodetectGitLabClientBuilder">
+        <id>autodetect</id>
+        <ordinal>0</ordinal>
+      </clientBuilder>
+      <ignoreCertificateErrors>false</ignoreCertificateErrors>
+      <connectionTimeout>10</connectionTimeout>
+      <readTimeout>10</readTimeout>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnection>
+  </connections>
+</com.dabsquared.gitlabjenkins.connection.GitLabConnectionConfig>
+
+=== GLOBAL LIBRARIES ===
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.libs.GlobalLibraries plugin="workflow-cps-global-lib@2.17">
+  <libraries class="empty-list"/>
+</org.jenkinsci.plugins.workflow.libs.GlobalLibraries>
+
+=== SSH BUILD WRAPPER ===
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl plugin="ssh@2.6.1">
+  <sites/>
+</org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl>
+
+=== AUDIT TRAIL (recent commands) ===
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.audit__trail.AuditTrailPlugin plugin="audit-trail@3.8">
+  <logBuildCause>true</logBuildCause>
+  <loggers>
+    <hudson.plugins.audit__trail.SyslogAuditLogger>
+      <syslogServerHostname>172.27.140.162</syslogServerHostname>
+      <syslogServerPort>6690</syslogServerPort>
+      <appName>jenkins-app</appName>
+      <messageHostname>CSDEVJNKS01-3.jenkins</messageHostname>
+      <facility>USER</facility>
+      <messageFormat>RFC_5424</messageFormat>
+    </hudson.plugins.audit__trail.SyslogAuditLogger>
+  </loggers>
+  <pattern>.*/(?:configSubmit|doDelete|postBuildResult|enable|disable|cancelQueue|stop|toggleLogKeep|doWipeOutWorkspace|createItem|createView|toggleOffline|cancelQuietDown|quietDown|restart|exit|safeExit)/?.*</pattern>
+</hudson.plugins.audit__trail.AuditTrailPlugin>
+
+=== AUDIT LOGS ===
+LOG: jenkins.branch.MultiBranchProject.log (1102 bytes)
+[Sat Mar 28 13:56:25 CST 2026] Received jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sat Mar 28 13:56:25 CST 2026
+[Sat Mar 28 13:56:25 CST 2026] Finished processing jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sat Mar 28 13:56:25 CST 2026. Matched 0.
+[Sun Mar 29 11:03:37 CST 2026] Received jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sun Mar 29 11:03:37 CST 2026
+[Sun Mar 29 11:03:37 CST 2026] Finished processing jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sun Mar 29 11:03:37 CST 2026. Matched 0.
+
+LOG: jenkins.branch.OrganizationFolder.log (1102 bytes)
+[Sat Mar 28 13:56:25 CST 2026] Received jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sat Mar 28 13:56:25 CST 2026
+[Sat Mar 28 13:56:25 CST 2026] Finished processing jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sat Mar 28 13:56:25 CST 2026. Matched 0.
+[Sun Mar 29 11:03:37 CST 2026] Received jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sun Mar 29 11:03:37 CST 2026
+[Sun Mar 29 11:03:37 CST 2026] Finished processing jenkins.plugins.git.GitSCMSource$ListenerImpl$1 UPDATED event from 77.110.125.222 ÔåÆ 172.26.84.4 ÔåÆ 77.110.125.222 ÔçÆ https://jenkins-ng.dev.claroshop.com:8080/git/notifyCommit with timestamp Sun Mar 29 11:03:37 CST 2026. Matched 0.
+
+
+=== KNOWN HOSTS / SSH CONFIGS ===
+=== /var/jenkins_home/.ssh/known_hosts ===
+|1|GbkXUJnNZzVrq3dnhJV+Wpp0qlE=|SFwfiny8crIXmwctIbhaXIt8LSk= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5dXLBYxXT6x+R9Qop6t0D2dsXuI9ii4S7cRYM4RYbgYrRwk2krX/5pwqciC9g/RamSyU8LwQk3Zqc+PPm6vkx3CRkx+FmoHHgQNl7wHineCI2Lpot1RRvGQOAGe+jx9/GmTmww1uylOGR8w0IHUFvcGtigT0F8JsWAtGfUDDOtcrBJP2nxgTpH1oYI5L7ojTODdHVyS/na75DCr6P2nW5knyyUdaEpVIxbqZifZnfPtkzlBXOs/yuZL207QBE5mzP5APget08LSF7RGRvU+b/bjsTdUagtu+joUye21B1iy4rClDKg9uwXp6WzhrKZw+NlkSVw1RR6lUvGRJhxHqJQ==
+|1|5o3TRCcqngKdRDO6s6x9xsqis74=|aEqa0Hb7Jq3A9YuFas27CQNVdlY= ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBACtrwxiCijHjlnMVTnVnnPJBQbrXNUM7UEAOzf2s7oOiD0jzZxuTGlQ8c9j9mpYd476e03sSmhA0itCngSzOnNokwADtoxlV6PzsDB8rlZDg9Guvx0LAx9DlAW/xzQPC1YqiVwngJuuzjoyAbF+FBu9fUr1Xq71SmldX0BSIbLgNF2/kg==
+|1|QlC9nLaA3Thd4ygF/4IQZsOiCYA=|d369O96wEqL0OBUTiK0PTpsB8W8= ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBACtrwxiCijHjlnMVTnVnnPJBQbrXNUM7UEAOzf2s7oOiD0jzZxuTGlQ8c9j9mpYd476e03sSmhA0itCngSzOnNokwADtoxlV6PzsDB8rlZDg9Guvx0LAx9DlAW/xzQPC1YqiVwngJuuzjoyAbF+FBu9fUr1Xq71SmldX0BSIbLgNF2/kg==
+|1|dl5RFMJSDpskyaVSUHrdrTCY9b4=|535b5YoAtFv/+QFETDLh/NvytS8= ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBACtrwxiCijHjlnMVTnVnnPJBQbrXNUM7UEAOzf2s7oOiD0jzZxuTGlQ8c9j9mpYd476e03sSmhA0itCngSzOnNokwADtoxlV6PzsDB8rlZDg9Guvx0LAx9DlAW/xzQPC1YqiVwngJuuzjoyAbF+FBu9fUr1Xq71SmldX0BSIbLgNF2/kg==
+|1|bIKLIN7bqlLT6bthrvlhMjNj8js=|ANYzxup2ZpWtVKflD0llI+z3FJc= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA0IV0HddGdBrmhaPmNRayj8xL7y3Wyv4+oSOZaBjHrVGt3hyH0RzUBSlWGrWXPyCIXSZbkSkU/t/E75iMB8uSg=
+|1|g5+R2YO00dhUkQMNSzjxiYQ6g2g=|9ZZz22U3cI9e2tBAcrVg66qnCbA= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuv482Qmi7YpxJEuxUsivisKWKAFwbtV0Wl35ok8DsUL2Mk+TTdzded/IIbwu6pCKx14q26DvWeenjunOwuZqiw2RuvdkFYVcXwykSfj1TI6jNaxUGM1W6Cf4bix4SqiXpG125lN9ETa37NwCC/9B02lkx12QX2bQgpQbeB66oV3HsoGCswhJDdFwWE0NubogtBLpsOE8rO5DzAXVYMuMWn1/3Jxum0SjMkdztXPQ3Tn9Yf46HnctEstCY4EdZt75xZk7g5ocZAKQRzdxtp8LAtApiXxMdzTNPWdfz3H4cdKGNmdtO0w3kMLKbWp/bbaN1+Zft/AP04H1IydaVBCINw==
+|1|8SjLq4XEPyJpRsPjHuCPeLHSshE=|I2M3yQ0vmTUGL/NOOUW7M5DvGyc= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuv482Qmi7YpxJEuxUsivisKWKAFwbtV0Wl35ok8DsUL2Mk+TTdzded/IIbwu6pCKx14q26DvWeenjunOwuZqiw2RuvdkFYVcXwykSfj1TI6jNaxUGM1W6Cf4bix4SqiXpG125lN9ETa37NwCC/9B02lkx12QX2bQgpQbeB66oV3HsoGCswhJDdFwWE0NubogtBLpsOE8rO5DzAXVYMuMWn1/3Jxum0SjMkdztXPQ3Tn9Yf46HnctEstCY4EdZt75xZk7g5ocZAKQRzdxtp8LAtApiXxMdzTNPWdfz3H4cdKGNmdtO0w3kMLKbWp/bbaN1+Zft/AP04H1IydaVBCINw==
+|1|A08qxkEx+X6QiNQwBx0UeubIEzg=|k46ciTf2MaWDKmhK2KdO7kq+nMM= ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuv482Qmi7YpxJEuxUsivisKWKAFwbtV0Wl35ok8DsUL2Mk+TTdzded/IIbwu6pCKx14q26DvWeenjunOwuZqiw2RuvdkFYVcXwykSfj1TI6jNaxUGM1W6Cf4bix4SqiXpG125lN9ETa37NwCC/9B02lkx12QX2bQgpQbeB66oV3HsoGCswhJDdFwWE0NubogtBLpsOE8rO5DzAXVYMuMWn1/3Jxum0SjMkdztXPQ3Tn9Yf46HnctEstCY4EdZt75xZk7g5ocZAKQRzdxtp8LAtApiXxMdzTNPWdfz3H4cdKGNmdtO0w3kMLKbWp/bbaN1+Zft/AP04H1IydaVBCINw==
+|1|N/khmY2YawCkV3nUVZviKC0AExs=|ShNcttHgstdHl6BPwLtx6R53nFo= ssh-rsa
+
+=== NETWORK - HOSTS FILE ===
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+172.27.140.134	gitlab.dev.claroshop.com
+172.27.141.5	gitlab.claroshop.tmx-internacional.net
+172.27.140.148	CSDEVBLD01-1
+172.17.0.2	CSDEVJNKS01-3.jenkins
+
+
+=== RESOLV.CONF ===
+search cloud.triara.local backup.triara.local localdomain
+nameserver 172.27.141.12
+
+

@@ -1,0 +1,68 @@
+OUTPUT_BEGIN
+--- SCHEMA payment_t1.card ---
+???  COL id_card int(11)
+  COL id_client varchar(45)
+  COL token varchar(45)
+  COL pan varchar(45)
+  COL termination varchar(11)
+  COL name varchar(60)
+???  COL month varchar(11)
+  COL year varchar(11)
+  COL iin varchar(11)
+  COL brand varchar(45)
+  COL isDefault tinyint(1)
+  COL creation_date timestamp
+  COL modification_date timestamp
+--- DATA payment_t1.card (limit 15) ---
+???  ROW: id_card=154 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=ca5c0698-4301-48a6-86f1-ce10c51e1371 | pan=370773*****1060 | termination=1060 | name=Azucena Amex | month=8 | year=2027 | iin=370773 | brand=amex | isDefault=1 | creation_date=2020-07-20 16:10:47 | modification_date=2020-07-20 16:10:47
+  ROW: id_card=155 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=9b367e6e-7506-43ac-9ece-4a8acee14d03 | pan=411111******1111 | termination=1111 | name=Azucena Rosales | month=4 | year=2023 | iin=411111 | brand=visa | isDefault=0 | creation_date=2020-07-20 16:10:48 | modification_date=2020-07-20 16:10:48
+  ROW: id_card=156 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=05272eca-aed6-40f1-b8bd-2dbd51ae62ff | pan=636318******1114 | termination=1114 | name=Azu T1 | month=5 | year=2024 | iin=636318 | brand=maestro | isDefault=0 | creation_date=2020-07-20 16:10:48 | modification_date=2020-07-20 16:10:48
+  ROW: id_card=157 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=2bf9065b-b632-4093-813b-80cc2c11c08a | pan=345678*****6785 | termination=6785 | name=Azu Random | month=5 | year=2022 | iin=345678 | brand=amex | isDefault=0 | creation_date=2020-07-20 16:10:48 | modification_date=2020-07-20 16:10:48
+???  ROW: id_card=158 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=73632c75-da86-4dc7-ad88-315cd3a0ebda | pan=340000*****0009 | termination=9 | name=Declinada | month=3 | year=2023 | iin=340000 | brand=amex | isDefault=0 | creation_date=2020-07-20 16:10:48 | modification_date=2020-07-20 16:10:48
+  ROW: id_card=159 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=278c397d-93c6-4b38-bf16-abc6d13b59e0 | pan=555555******4444 | termination=4444 | name=Azu tres de | month=9 | year=2025 | iin=555555 | brand=mastercard | isDefault=0 | creation_date=2020-07-20 16:10:48 | modification_date=2020-07-20 16:10:48
+  ROW: id_card=160 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=24ab5faa-dde1-42ef-8791-6b9ee2a127e0 | pan=431307******9966 | termination=9966 | name=Guzi Garcia Martinez | month=4 | year=2025 | iin=431307 | brand=visa | isDefault=0 | creation_date=2020-07-20 16:10:49 | modification_date=2020-07-20 16:10:49
+  ROW: id_card=161 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=74a51be6-8bc2-469b-9524-89fd143a77d6 | pan=491089******4153 | termination=4153 | name=Eduardo  Jimenez flores | month=11 | year=2030 | iin=491089 | brand=visa | isDefault=0 | creation_date=2020-07-20 16:10:49 | modification_date=2020-07-20 16:10:49
+  ROW: id_card=162 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=03147378-55ee-4fb3-b33f-93a3b766949d | pan=547096******9386 | termination=9386 | name=Pilar Del valle | month=11 | year=2030 | iin=547096 | brand=mastercard | isDefault=0 | creation_date=2020-07-20 16:10:49 | modification_date=2020-07-20 16:10:49
+  ROW: id_card=163 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=c527fd18-c564-4e40-89a7-a20dc1308e98 | pan=491284******7077 | termination=7077 | name=Eduardo  Jimenez f | month=5 | year=2030 | iin=491284 | brand=visa | isDefault=0 | creation_date=2020-07-20 16:10:49 | modification_date=2020-07-20 16:10:49
+  ROW: id_card=164 | id_client=c8e08685-a2c1-45e3-a061-b6186ba35edf | token=084df918-c8a2-46bc-9219-c097a8858ee1 | pan=528074******2305 | termination=2305 | name=Bob  Patino | month=5 | year=2030 | iin=528074 | brand=mastercard | isDefault=0 | creation_date=2020-07-20 16:10:49 | modification_date=2020-07-20 16:10:49
+--- SCHEMA payment_t1.client ---
+???  COL id_client int(11)
+  COL id_external varchar(45)
+  COL id_internal int(11)
+  COL creation_date timestamp
+  COL modification_date timestamp
+--- DATA payment_t1.client (limit 5) ---
+1  ROW: id_client=1 | id_external=22bbc279-b8ac-4d69-9c68-aa3866bc3840 | id_internal=7 | creation_date=2020-07-16 10:50:22 | modification_date=2020-07-16 10:50:22
+  ROW: id_client=2 | id_external=0e0707a6-936f-4396-95bc-56ab4d85367b | id_internal=10 | creation_date=2020-07-20 12:30:34 | modification_date=2020-07-20 12:30:34
+  ROW: id_client=3 | id_external=0e0707a6-936f-4396-95bc-56ab4d85367b | id_internal=10 | creation_date=2020-07-21 11:52:01 | modification_date=2020-07-21 11:52:01
+  ROW: id_client=4 | id_external=0e0707a6-936f-4396-95bc-56ab4d85367b | id_internal=10 | creation_date=2020-07-21 11:53:07 | modification_date=2020-07-21 11:53:07
+  ROW: id_client=5 | id_external=7430d4a7-00b4-4a52-b14d-4662ca4a1d1b | id_internal=22216 | creation_date=2020-07-21 13:12:39 | modification_date=2020-07-21 13:12:39
+!--- SCHEMA payment_t1.client ---
+???  COL id_client int(11)
+  COL id_external varchar(45)
+  COL id_internal int(11)
+  COL creation_date timestamp
+  COL modification_date timestamp
+--- DATA payment_t1.client (limit 5) ---
+Y  ROW: id_client=14 | id_external=190ebd3d-c6af-4448-9296-5c9804d47763 | id_internal=21998 | creation_date=2020-07-23 10:16:11 | modification_date=2020-07-23 10:16:11
+  ROW: id_client=15 | id_external=349562bd-cf0d-45b8-8b5a-3cb15bc5140b | id_internal=4 | creation_date=2020-07-23 10:37:32 | modification_date=2020-07-23 10:37:32
+  ROW: id_client=16 | id_external=3ddfd918-44ef-49f7-9e98-54aaad22473f | id_internal=1 | creation_date=2020-07-23 10:55:04 | modification_date=2020-07-23 10:55:04
+  ROW: id_client=17 | id_external=de7eaa9c-a266-4242-8208-0c97a1232917 | id_internal=2 | creation_date=2020-07-23 10:56:01 | modification_date=2020-07-23 10:56:01
+  ROW: id_client=18 | id_external=307f4c23-e13c-49b4-88ca-889707419b0c | id_internal=8 | creation_date=2020-07-23 11:01:22 | modification_date=2020-07-23 11:01:22
+--- SCHEMA payment_t1.transaction ---
+  COL id_transaction int(11)
+  COL id_authorization varchar(45)
+  COL id_order varchar(45)
+  COL status varchar(45)
+  COL code varchar(45)
+  COL decision varchar(45)
+  COL creation_date timestamp
+  COL response text
+--- DATA payment_t1.transaction (limit 5) ---
+  ROW: id_transaction=1 | id_authorization=527428 | id_order=1218821 | status=completada | code=cargo_exitoso | decision=aceptar | creation_date=2020-08-06 15:16:02 | response={"monto":510,"descripcion":"El cargo fue exitoso.","incluir_riesgo":true,"metodo
+  ROW: id_transaction=2 | id_authorization=909558 | id_order=1218821 | status=completada | code=cargo_exitoso | decision=aceptar | creation_date=2020-08-06 15:18:27 | response={"monto":510,"descripcion":"El cargo fue exitoso.","incluir_riesgo":true,"metodo
+  ROW: id_transaction=3 | id_authorization=279094 | id_order=1218821 | status=completada | code=cargo_exitoso | decision=aceptar | creation_date=2020-08-06 15:49:18 | response={"monto":510,"descripcion":"El cargo fue exitoso.","incluir_riesgo":true,"metodo
+  ROW: id_transaction=4 | id_authorization=647646 | id_order=22314 | status=completada | code=cargo_exitoso | decision=aceptar | creation_date=2020-08-19 19:41:45 | response={"monto":2399,"descripcion":"El cargo fue exitoso.","incluir_riesgo":true,"metod
+  ROW: id_transaction=5 | id_authorization=849489 | id_order=22314 | status=completada | code=cargo_exitoso | decision=aceptar | creation_date=2020-08-19 19:48:27 | response={"monto":2399,"descripcion":"El cargo fue exitoso.","incluir_riesgo":true,"metod
+
+DUMP_DONE

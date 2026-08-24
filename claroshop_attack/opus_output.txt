@@ -1,0 +1,99 @@
+﻿======================================================================
+BINARY STRUCTURE ANALYSIS
+======================================================================
+
+David Asenjo Reyes: 20 bytes
+  Full hex: 2fb9d255d1d1d1d17f54b956f720a0042f5264e4
+  [0:4] header: 2fb9d255
+  [4:8] repeat: d1d1d1d1 (byte=0xd1)
+  [8:]  cipher: 7f54b956f720a0042f5264e4 (12 bytes)
+
+ALEJANDRA MAYA PARRILLA: 23 bytes
+  Full hex: 78b3d255a3a3a3a3646388f2f8d69f7a9733d89832a520
+  [0:4] header: 78b3d255
+  [4:8] repeat: a3a3a3a3 (byte=0xa3)
+  [8:]  cipher: 646388f2f8d69f7a9733d89832a520 (15 bytes)
+
+alejandro cruz: 20 bytes
+  Full hex: 4faad25556565656b0f46ea6a2199be6af44dc79
+  [0:4] header: 4faad255
+  [4:8] repeat: 56565656 (byte=0x56)
+  [8:]  cipher: b0f46ea6a2199be6af44dc79 (12 bytes)
+
+MISAEL ESLI ALMAZAN NEVAREZ: 20 bytes
+  Full hex: d7add255dadadadab80c5d030543cc230fbc5a7b
+  [0:4] header: d7add255
+  [4:8] repeat: dadadada (byte=0xda)
+  [8:]  cipher: b80c5d030543cc230fbc5a7b (12 bytes)
+
+
+======================================================================
+APPROACH 1: MySQL AES_ENCRYPT ÔÇö AES-128-ECB with XOR-folded key
+======================================================================
+
+  KEY1 folded to AES key: 33420365104221642b27117804431a61
+  [KEY1] David Asenjo Reyes bytes[4:20]: b'\xc81\xe2\xb4\xae\xa3k+\xdaz\xed\x83+\xfdn\xc0' (not card)
+  [KEY1] ALEJANDRA MAYA PARRILLA bytes[4:20]: b'nY4\x14\x86\xde\xf6c\x86\xa2UD\xbev\xb9|' (not card)
+  [KEY1] alejandro cruz bytes[4:20]: b'\xdd.hm\xea\x97\xde\xd5\xe5\xb1T6\xff\xe1]\xf9' (not card)
+  [KEY1] MISAEL ESLI ALMAZAN NEVAREZ bytes[4:20]: b'y\xc2\xb5y]\xcf\xf6F\xa2\xfb|>\x14\xf1\xdb4' (not card)
+
+  KEY2 folded to AES key: 0f0e5c202b02461c247d03500b2d1e43
+  [KEY2] David Asenjo Reyes bytes[4:20]: b'7\xa2\xe7\x93\xc9\xc7\x07B\x10\r\\\x06\x89\x9a\x9d\xf9' (not card)
+  [KEY2] ALEJANDRA MAYA PARRILLA bytes[4:20]: b'[\xca\x89\xabP\xf2\xe86\xb6\\;\x98\xb4\xb2=,' (not card)
+  [KEY2] alejandro cruz bytes[4:20]: b'\x1bK\x04\xd4\xb8\x0b7C\xbau\xc3\xaa4\xad\xf7\xd4' (not card)
+  [KEY2] MISAEL ESLI ALMAZAN NEVAREZ bytes[4:20]: b'g\x97p\r~\xf4c\x16\x988X-\xae\xb0G\xe4' (not card)
+
+
+======================================================================
+APPROACH 2: AES-128-ECB with various key derivations
+======================================================================
+
+
+======================================================================
+APPROACH 3: AES-128-CBC with IV from header bytes
+======================================================================
+
+
+======================================================================
+APPROACH 4: Blowfish ECB with various keys
+======================================================================
+
+
+======================================================================
+APPROACH 5: 3DES ECB
+======================================================================
+
+
+======================================================================
+APPROACH 6: RC4 stream cipher
+======================================================================
+
+
+======================================================================
+APPROACH 7: Rotating XOR with key
+======================================================================
+
+
+======================================================================
+APPROACH 8: XOR with hash of key
+======================================================================
+
+
+======================================================================
+APPROACH 9: Single-byte XOR (repeated byte as key)
+======================================================================
+
+
+======================================================================
+APPROACH 10: mcrypt Rijndael-128 ECB (PHP style, zero-pad)
+======================================================================
+(This is same as approach 1/2 but emphasizing the header is NOT cipher)
+
+
+======================================================================
+SUMMARY: If no hits above, need to find actual PHP source code
+======================================================================
+Next steps:
+  1. Search Jenkins builds for PHP source with encryption logic
+  2. Try openssl dec on Jenkins directly
+  3. Query MySQL for stored procedures / functions

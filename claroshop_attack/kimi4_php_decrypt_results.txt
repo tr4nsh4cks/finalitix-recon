@@ -1,0 +1,74 @@
+
+======================================================================
+TASK1 find php encrypt in workspace  (3.4s)
+======================================================================
+
+
+
+
+======================================================================
+TASK2 find php encrypt in archives  (0.9s)
+======================================================================
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/31/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/22/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/23/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/24/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/25/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/26/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/28/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_build_app-config/builds/29/archive/Webapp/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/420/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/422/archive/ClaroShop/Desarrollo/beta/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/414/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/417/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/421/archive/ClaroShop/Desarrollo/delta/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/418/archive/ClaroShop/Desarrollo/beta/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/413/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/416/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_tienda-config/builds/419/archive/ClaroShop/Desarrollo/alfa/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_recargas-claroshop-config/builds/3/archive/VTA/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_caja-api-config/builds/2/archive/Microservicios/Caja/QA/local.php
+/var/jenkins_home/jobs/cs_legacy_front/jobs/cs_legacy_pipe_build_caja-api-config/builds/3/archive/Microservicios/Caja/QA/local.php
+
+
+
+
+======================================================================
+TASK3 cat encrypt functions from found files  (3.6s)
+======================================================================
+
+
+
+
+======================================================================
+TASK4 grep hardcoded key usage  (60.4s)
+======================================================================
+[ERROR] HTTPError: HTTP Error 504: Gateway Time-out
+
+
+======================================================================
+TASK5 find Model/Service php with card+encrypt  (17.5s)
+======================================================================
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Services.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Boletin.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/CardOneclick.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Categorias.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Sepomex.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Productos.class.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/PromocionEntity.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Promocionespagos.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/Cliente.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/app/Modelos/ClienteSears.class.php
+---
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/AndroidManagement/DeviceSettings.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/AndroidManagement/Policy.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/AdvertiserLandingPages.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/Campaigns.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/DirectorySites.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/FloodlightActivities.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/Subaccounts.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/AccountUserProfiles.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/Sites.php
+/var/jenkins_home/jobs/_trash/jobs/cs_msa_front/jobs/cs_msa_pipe_caja-pagos-api/builds/2/archive/vendor/google/apiclient-services/src/Google/Service/Dfareporting/Resource/CreativeFieldValues.php
+
+

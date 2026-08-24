@@ -1,0 +1,37 @@
+﻿=== SSH ATTEMPT TO PROD SERVERS ===
+Key written to: /tmp/jenkins_key6303272498256011786.pem
+
+--- SSH to 172.27.141.24 (PROD Sears (dbasears)) as jenkins ---
+CMD [id] EXCEPTION: Stream closed
+CMD [hostname] EXCEPTION: Stream closed
+CMD [ip addr show] EXCEPTION: Stream closed
+CMD [cat /etc/hosts] EXCEPTION: Stream closed
+CMD [ls /var/www/sites/] EXCEPTION: Stream closed
+CMD [mysql --version] EXCEPTION: Stream closed
+CMD [netstat -tuln | grep 330] EXCEPTION: Stream closed
+
+--- SSH to 172.27.141.4 (CSDEV01-2 / T1Pagos) as jenkins ---
+CMD [id] EXCEPTION: Stream closed
+CMD [hostname] EXCEPTION: Stream closed
+CMD [ip addr show] EXCEPTION: Stream closed
+CMD [cat /etc/hosts] EXCEPTION: Stream closed
+CMD [ls /var/www/sites/] EXCEPTION: Stream closed
+CMD [mysql --version] EXCEPTION: Stream closed
+CMD [netstat -tuln | grep 330] EXCEPTION: Stream closed
+
+--- SSH to 172.27.140.148 (CSDEVBLD01-1) as jenkins ---
+CMD [id] EXCEPTION: Stream closed
+CMD [hostname] EXCEPTION: Stream closed
+CMD [ip addr show] EXCEPTION: Stream closed
+CMD [cat /etc/hosts] EXCEPTION: Stream closed
+CMD [ls /var/www/sites/] EXCEPTION: Stream closed
+CMD [mysql --version] EXCEPTION: Stream closed
+CMD [netstat -tuln | grep 330] EXCEPTION: Stream closed
+
+=== USING PUBLISH-OVER-SSH PLUGIN ===
+Plugin: hudson.Plugin$DummyImpl
+Plugin access error: No signature of method: hudson.Plugin$DummyImpl.getDescriptor() is applicable for argument types: () values: []
+
+=== TRYING nc/ncat TO CHECK MySQL 172.27.141.4:3306 ===
+MySQL banner (109 bytes): i....5.6.25-enterprise-commercial-advanced....._Sbq3JX]...................K=0u$L6f!k|M.mysql_native_password.
+

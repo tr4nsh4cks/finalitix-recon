@@ -1,0 +1,48 @@
+
+
+=== ID ===
+?uid=10000(jre-user) gid=10000(jre-user) groups=10000(jre-user)
+=== HOME_LS ===
+/home:
+total 0
+4drwxr-xr-x.  3 root     root      22 Feb  1  2023 .
+5drwxr-xr-x. 17 root     root     242 Aug 23 21:57 ..
+;drwx------.  2 jre-user jre-user  62 Feb  1  2023 jre-user
+
+/home/jre-user:
+	total 12
+3drwx------. 2 jre-user jre-user  62 Feb  1  2023 .
+4drwxr-xr-x. 3 root     root      22 Feb  1  2023 ..
+>-rw-r--r--. 1 jre-user jre-user  18 Aug  2  2022 .bash_logout
+?-rw-r--r--. 1 jre-user jre-user 207 Feb  1  2023 .bash_profile
+9-rw-r--r--. 1 jre-user jre-user 442 Feb  1  2023 .bashrc
+
+/opt:
+total 0
+,drwxr-xr-x.  2 root root   6 Oct  9  2021 .
+-drwxr-xr-x. 17 root root 242 Aug 23 21:57 ..
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 Jan 24  2023 .
+-drwxr-xr-x. 12 root root 144 Jan 24  2023 ..
+.drwxr-xr-x.  2 root root   6 Oct  9  2021 bin
+.drwxr-xr-x.  2 root root   6 Oct  9  2021 etc
+0drwxr-xr-x.  2 root root   6 Oct  9  2021 games
+2drwxr-xr-x.  2 root root   6 Oct  9  2021 include
+.drwxr-xr-x.  2 root root   6 Oct  9  2021 lib
+0drwxr-xr-x.  3 root root  17 Jan 24  2023 lib64
+2drwxr-xr-x.  2 root root   6 Oct  9  2021 libexec
+/drwxr-xr-x.  2 root root   6 Oct  9  2021 sbin
+0drwxr-xr-x.  5 root root  49 Jan 24  2023 share
+.drwxr-xr-x.  2 root root   6 Oct  9  2021 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+=== HUNT_DONE ===

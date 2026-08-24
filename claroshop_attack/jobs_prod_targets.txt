@@ -1,0 +1,133 @@
+﻿
+=== JOB: cs_new_front/cs_new_pipe_build_ms-account-api ===
+  ENV_HOST: SERVER_NAME -&gt;
+	    	        withDockerServer([uri: &quot;${DEPLOY_SERVER_NAME}.dev.claroshop.com:4243&quot;]) {
+    
+  L: -e APP_ACCOUNT_URLS_APITOSUBSIDIARY=&quot;https://mrcapi.dev.sears.com.mx/contador-mrc/api/stock/shop/&quot; \
+
+=== JOB: se_legacy_back/se_legacy_pipe_build_axii-sears ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto axii.admin.sears.com.mx para Backend Desarrollo y Qa.&#xd;
+  L: <string>axii.dev.sears.com.mx</string>
+  L: choice(choices: ['axii.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'axii.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;axii.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['axii.release.admin.sears.com.mx']
+
+=== JOB: se_legacy_back/se_legacy_pipe_build_reps-sears ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto reps.admin.sears.com.mx para Backend Desarrollo y Qa.&#xd;
+  L: <string>reps.dev.sears.com.mx</string>
+  L: choice(choices: ['reps.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'reps.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;reps.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['reps.release.admin.sears.com.mx']
+
+=== JOB: se_legacy_back/test_sonar ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto axii.admin.sears.com.mx para Backend Desarrollo y Qa.&#xd;
+  L: <string>axii.dev.sears.com.mx</string>
+  L: choice(choices: ['axii.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'axii.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;axii.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['axii.release.admin.sears.com.mx']
+
+=== JOB: se_legacy_front/se_legacy_pipe_build_tienda ===
+  L: <string>alpha.dev.sears.com.mx</string>
+  L: <string>beta.dev.sears.com.mx</string>
+  L: choice(choices: ['alpha.dev.sears.com.mx', 'beta.dev.sears.com.mx' ],
+  L: if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;alpha.dev.sears.com.mx&quot; && USERPARAM_GIT_BRANCH != &quot;master&quot; ) {
+  L: case 'alpha.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;alpha.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['rc1.sears.com.mx', 'release.sears.com.mx', 'uat.sears.com.mx']
+  L: case 'beta.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['uat.sears.com.mx']
+
+=== JOB: se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos ===
+  ENV_HOST: SERVER_NAME -&gt;
+                    sshPublisher failOnError: true, 
+                    publishers: [sshPublisherDesc
+  L: <description>Tarea que ejecutar├í el deploy del proyecto wap-mesa-regalos.sears.com.mx para Frontend Desarrollo y Qa.&#xd;
+  L: <string>wap-mesa-regalos.dev.sears.com.mx</string>
+  L: <string>beta-wap-mesa-regalos.dev.sears.com.mx</string>
+  L: choice(choices: ['wap-mesa-regalos.dev.sears.com.mx', 'beta-wap-mesa-regalos.dev.sears.com.mx'],
+  L: if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;wap-mesa-regalos.dev.sears.com.mx&quot; && USERPARAM_GIT_BRANCH != &quot;master&quot; ) {
+  L: case 'wap-mesa-regalos.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;wap-mesa-regalos.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['wap-mesa-regalos.release.sears.com.mx']
+  L: case 'beta-wap-mesa-regalos.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-wap-mesa-regalos.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['wap-mesa-regalos.uat.sears.com.mx']
+
+=== JOB: sears-ia-backend/sears-ia_pipe_build_app-api-ia ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto app-api-ia.dev.sears.com.mx para Frontend Desarrollo y Qa.&#xd;
+  L: <string>app-api-ia.dev.sears.com.mx</string>
+  L: choice(choices: ['app-api-ia.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'app-api-ia.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;app-api-ia.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['app-api-ia.release.sears.com.mx']
+
+=== JOB: sears-ia-backend/sears-ia_pipe_build_app-cms-ia ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto app-cms-ia.dev.sears.com.mx para Frontend Desarrollo y Qa.&#xd;
+  L: <string>app-cms-ia.dev.sears.com.mx</string>
+  L: choice(choices: ['app-cms-ia.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'app-cms-ia.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;app-cms-ia.qa.sears.com.mx&quot;
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['app-cms-ia.release.sears.com.mx']
+
+=== JOB: sears-ia-backend/sears-ia_pipe_build_app-credito-ia ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto app-credito-ia.dev.sears.com.mx para Frontend Desarrollo y Qa.&#xd;
+  L: <string>app-credito-ia.dev.sears.com.mx</string>
+  L: choice(choices: ['app-credito-ia.dev.sears.com.mx'], description: 'Elegir el proyecto que se desplegar├í.', name: 'USERPARAM_DEPLOY_ENVIRONMENT')
+  L: case 'app-credito-ia.dev.sears.com.mx':
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['app-credito-ia.release.sears.com.mx']
+
+=== JOB: sn_legacy_front/sn_legacy_pipe_build_tienda ===
+  L: if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;alpha.dev.sears.com.mx&quot; && USERPARAM_GIT_BRANCH != &quot;master&quot; ) {
+
+=== JOB: t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios ===
+  ENV_HOST: SERVERS&quot;
+    env.build_number =
+  L: <description>Tarea que ejecutar├í el deploy del proyecto admin.t1envios.com para Backend Desarrollo y Qa.&#xd;
+  L: sierra-admin.dev.t1envios.com --= release.admin.t1envios.com --= admin.t1envios.com&#xd;
+  L: env.requestExecJob = &quot;t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS&quot;
+  L: subject: &quot;Promotion request: t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+  L: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = ['release.admin.t1envios.com']
+
+=== JOB: t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api ===
+  ENV_HOST: SERVERS&quot;
+    env.build_number =
+  L: env.requestExecJob = &quot;t1e_legacy_back/pipe_t1-admin-api AWS SERVERS&quot;
+  L: subject: &quot;Promotion request: t1e_legacy_back/pipe_t1-admin-api AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+
+=== JOB: t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-dead ===
+  ENV_HOST: SERVERS&quot;
+    env.build_number =
+  L: env.requestExecJob = &quot;t1e_legacy_back/pipe_t1-admin-api AWS SERVERS&quot;
+  L: subject: &quot;Promotion request: t1e_legacy_back/pipe_t1-admin-api AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+
+=== JOB: t1e_new_back/t1e_new_pipe_build_finanzas-sif-admin-dmn ===
+  ENV_HOST: SERVERS&quot;
+    env.build_number =
+  ENV_HOST: HOST=smtp.claroshop-services.net \
+  L: env.requestExecJob = &quot;t1e_new_back/pipe_finanzas-sif-admin-dmn AWS SERVERS&quot;
+  L: subject: &quot;Promotion request: t1e_new_back/pipe_finanzas-sif-admin-dmn AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+  L: -e URL_API_WCF=&quot;http://admin.sears.com.mx/WcfT1Comercio/Servicios.svc/WcfT1Comercio.Servicios&quot; \
+
+=== JOB: t1e_new_back/t1e_new_pipe_build_geotrack-admin ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto geotrack.admin.t1envios.com para Backend Desarrollo.&#xd;
+  L: geotrack-admin.dev.t1envios.com --= geotrack.release.admin.t1envios.com --= geotrack.admin.t1envios.com&#xd;
+
+=== JOB: t1e_new_back/t1e_new_pipe_build_geotrack-admin-config ===
+  L: <description>Actualizaci├│n de archivos de configuraci├│n para el proyecto geotrack.admin.t1envios.com para Frontend Desarrollo y Qa. &#xd;
+
+=== JOB: t1e_new_back/t1e_new_pipe_build_reps-admin ===
+  L: <description>Tarea que ejecutar├í el deploy del proyecto reps.admin.t1envios.com para Backend Desarrollo.&#xd;
+  L: reps-admin.dev.t1envios.com --= reps.release.admin.t1envios.com --= reps.admin.t1envios.com&#xd;
+
+=== JOB: t1e_new_back/t1e_new_pipe_build_webhook-maestro-admin-api ===
+  ENV_HOST: SERVERS&quot;
+    env.build_number =
+  L: env.requestExecJob = &quot;t1e_new_back/pipe_webhook-maestro-admin-api AWS SERVERS&quot;
+  L: subject: &quot;Promotion request: t1e_new_back/pipe_webhook-maestro-admin-api AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+
+=== FIN ===
+

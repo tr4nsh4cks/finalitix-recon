@@ -1,0 +1,139 @@
+﻿=== COUNT KEY TABLES (tienda) ===
+pedidos:         COLS[COUNT(*)]
+ROW[7948]
+
+clientes:        COLS[COUNT(*)]
+ROW[5187]
+
+clientescont:    COLS[COUNT(*)]
+ROW[241]
+
+datostarjeta:    COLS[COUNT(*)]
+ROW[0]
+
+cybersource_sears: COLS[COUNT(*)]
+ROW[0]
+
+cybersource_trans: COLS[COUNT(*)]
+ROW[1674]
+
+conciliacion_sears: COLS[COUNT(*)]
+ROW[33]
+
+datos_pedido:    COLS[COUNT(*)]
+ROW[8500]
+
+datos_facturacion: COLS[COUNT(*)]
+ROW[2617]
+
+bines:           COLS[COUNT(*)]
+ROW[0]
+
+
+=== SCHEMA pedidos ===
+COLS[COLUMN_NAME|COLUMN_TYPE]
+ROW[Id|int(11)]
+ROW[Cliente|int(11)]
+ROW[Tipo|int(11)]
+ROW[Fecha_Inicio|datetime]
+ROW[Estatus|int(11)]
+ROW[Tienda|int(11)]
+ROW[Urgencia|int(11)]
+ROW[Forma_de_pago|int(11)]
+ROW[Num_pedido|int(11)]
+ROW[Pedido_Normalizado|varchar(100)]
+ROW[tipotarjeta|varchar(45)]
+ROW[nip|varchar(6)]
+ROW[nombre|varchar(255)]
+ROW[numero|varchar(255)]
+ROW[mes|varchar(45)]
+ROW[ao|varchar(45)]
+ROW[seguridad|varchar(255)]
+ROW[anterior|int(10) unsigned]
+ROW[subtotal|double unsigned]
+ROW[subtotal_venta|double unsigned]
+ROW[total_envio|double unsigned]
+ROW[descuento|double unsigned]
+ROW[total|double unsigned]
+ROW[total_venta|double unsigned]
+ROW[tienda_origen|int(11)]
+ROW[extra|mediumtext]
+ROW[modalidad|tinyint(2) unsigned]
+ROW[tarjeta_puntos|double(10,2) unsigned]
+ROW[meses|tinyint(2) unsigned]
+ROW[interes|int(1) unsigned]
+ROW[telefono_telmex|varchar(20)]
+ROW[num_externo|int(9)]
+ROW[evento|varchar(30)]
+ROW[campana|int(10) unsigned]
+ROW[ip|varchar(20)]
+ROW[tipo_entrega|tinyint(1)]
+ROW[pedido_externo|int(11)]
+ROW[fincado_desde|enum('desconocido','web-desarrollo','web-uat','web-release','web-w3','web-produccion','app-desarrollo','app-uat','app-release','app-produccion')]
+ROW[conciliar|tinyint(1)]
+ROW[cupon_primera_compra|varchar(25)]
+
+
+=== SCHEMA datostarjeta ===
+COLS[COLUMN_NAME|COLUMN_TYPE]
+ROW[id|int(10) unsigned]
+ROW[idCliente|int(10) unsigned]
+ROW[tipo|varchar(45)]
+ROW[numero|varchar(45)]
+ROW[nombre|varchar(45)]
+ROW[mes|varchar(45)]
+ROW[ao|varchar(45)]
+ROW[seguridad|varchar(45)]
+ROW[tipo_id|int(11)]
+ROW[fechaCreacion|timestamp]
+ROW[banco_emisor|varchar(80)]
+ROW[numero_cliente|varchar(45)]
+ROW[telefono|varchar(45)]
+ROW[remember|tinyint(1)]
+ROW[cycle|varchar(9)]
+ROW[account|varchar(30)]
+
+
+=== SCHEMA clientescontrasena ===
+COLS[COLUMN_NAME|COLUMN_TYPE]
+ROW[id|int(11)]
+ROW[cliente|int(11)]
+ROW[contrasena|varchar(100)]
+ROW[fecha|datetime]
+ROW[fechaActualizacion|datetime]
+
+
+=== SAMPLE pedidos (tarjetas) ===
+ERR_1054: #42S22Unknown column 'idpedido' in 'field list'
+
+=== SAMPLE clientescontrasena ===
+ERR_1054: #42S22Unknown column 'idcliente' in 'field list'
+
+=== SAMPLE clientes ===
+ERR_1054: #42S22Unknown column 'idcliente' in 'field list'
+
+=== SAMPLE datostarjeta ===
+COLS[id|idCliente|tipo|numero|nombre|mes|ao|seguridad|tipo_id|fechaCreacion|banco_emisor|numero_cliente|telefono|remember|cycle|account]
+
+
+=== SAMPLE cybersource_sears ===
+COLS[id|pedido|tipo_transaccion|estatus|datos|reference_code]
+
+
+=== SAMPLE datos_pedido (direcciones) ===
+ERR_1054: #42S22Unknown column 'idpedido' in 'order clause'
+
+=== SAMPLE datos_facturacion ===
+ERR_1054: #42S22Unknown column 'id' in 'order clause'
+
+=== RECENT SEARS CONCILIATION ===
+COLS[id|num_pedido|estatus|fecha|num_tarjeta|importe|referencia|completa|ventas|pp|sec|nombre|formaPago]
+ROW[2214|7000270|1|2018-09-04 18:17:44|411111111111|224|256487|1|0|0|0|NULL|4375]
+ROW[2213|7000268|1|2018-09-04 13:28:39|411111111111|50606|256487|1|0|0|0|NULL|4375]
+ROW[2212|7000267|1|2018-09-04 13:27:02|411111111111|50606|256487|1|0|0|0|NULL|4375]
+ROW[2211|7000240|1|2018-08-28 17:35:24|411111111111|1659|256487|1|0|84|170|Carlos Cuvillos ruiz|4384]
+ROW[2210|7000239|1|2018-08-28 16:15:58|411111111111|1659|256487|1|0|56|170|Carlos Cruz cuvillos|4384]
+
+
+=== DONE ===
+

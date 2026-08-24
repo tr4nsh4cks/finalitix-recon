@@ -1,0 +1,5 @@
+﻿=== CONTAINER EXEC: SSH TO PROD SEARS + CLAROSHOP PROD MYSQL ===
+PHP Parse error:  syntax error, unexpected 'SHOW' (T_STRING) in /tmp/_ps.php on line 11
+
+=== FIN DOCKER SSH PROD ===
+

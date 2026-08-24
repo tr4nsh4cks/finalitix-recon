@@ -1,0 +1,244 @@
+﻿=== WORKSPACE CONTENT SCAN ===
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/Claroshop/Core/config/module.config.php ===
+  'Claroshop\Core\Dao\SearsTallaColorDAO'                      => 'Claroshop\Core\Factory\SearsTallaColorDAOFactory',
+  'Claroshop\Core\ServiceExternal\SearsStatus\WsSearsStatusService' => 'Claroshop\Core\Factory\WsSearsStatusServiceFactory',
+  'Claroshop\Core\Dao\MensualidadesSearsDAO'                   => 'Claroshop\Core\Factory\MensualidadesSearsFactory',
+  'Claroshop\Core\ServiceExternal\LoginSearsService'           => 'Claroshop\Core\Factory\LoginSearsServiceFactory',
+  'Claroshop\Core\Dao\ConciliacionSearsDAO'                    => 'Claroshop\Core\Factory\ConciliacionSearsDAOFactory',
+  'Claroshop\Core\Service\ConciliacionSearsService'            => 'Claroshop\Core\Factory\ConciliacionSearsServiceFactory',
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/Claroshop/Core/tests/src/Dao/LandingHtmlConfigDAOTest.php ===
+  $config['db']['password']);
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/Claroshop/Core/tests/src/Utils/Database.php ===
+  private $password;
+  * @param String $password Contrase├▒a de la Base de Datos
+  public function __construct($host,$database,$user,$password) {
+  $this->password = $password;
+  ';dbname='.$this->database, $this->user, $this->password);
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/doctrine/doctrine-orm-module/config/module.config.php ===
+  'password' => 'password',
+  //'credentialProperty' => 'password'
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/doctrine/doctrine-orm-module/docs/configuration.md ===
+  'password' => 'root',
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/doctrine/orm/docs/en/reference/configuration.rst ===
+  'password' => '',
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/BigQueryDataTransfer/Resource/ProjectsLocationsTransferConfigs.php ===
+  * with this transfer configuration. This is required if new credentials are
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/BigQueryDataTransfer/Resource/ProjectsTransferConfigs.php ===
+  * with this transfer configuration. This is required if new credentials are
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/IdentityToolkit/IdentitytoolkitRelyingpartyGetProjectConfigResponse.php ===
+  public $allowPasswordUser;
+  protected $legacyResetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
+  protected $legacyResetPasswordTemplateDataType = '';
+  protected $resetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
+  protected $resetPasswordTemplateDataType = '';
+  public function setAllowPasswordUser($allowPasswordUser)
+  $this->allowPasswordUser = $allowPasswordUser;
+  public function getAllowPasswordUser()
+  return $this->allowPasswordUser;
+  public function setLegacyResetPasswordTemplate(Google_Service_IdentityToolkit_EmailTemplate $legacyResetPasswordTemplate)
+  $this->legacyResetPasswordTemplate = $legacyResetPasswordTemplate;
+  public function getLegacyResetPasswordTemplate()
+  return $this->legacyResetPasswordTemplate;
+  public function setResetPasswordTemplate(Google_Service_IdentityToolkit_EmailTemplate $resetPasswordTemplate)
+  $this->resetPasswordTemplate = $resetPasswordTemplate;
+  public function getResetPasswordTemplate()
+  return $this->resetPasswordTemplate;
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/IdentityToolkit/IdentitytoolkitRelyingpartySetProjectConfigRequest.php ===
+  public $allowPasswordUser;
+  protected $legacyResetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
+  protected $legacyResetPasswordTemplateDataType = '';
+  protected $resetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
+  protected $resetPasswordTemplateDataType = '';
+  public function setAllowPasswordUser($allowPasswordUser)
+  $this->allowPasswordUser = $allowPasswordUser;
+  public function getAllowPasswordUser()
+  return $this->allowPasswordUser;
+  public function setLegacyResetPasswordTemplate(Google_Service_IdentityToolkit_EmailTemplate $legacyResetPasswordTemplate)
+  $this->legacyResetPasswordTemplate = $legacyResetPasswordTemplate;
+  public function getLegacyResetPasswordTemplate()
+  return $this->legacyResetPasswordTemplate;
+  public function setResetPasswordTemplate(Google_Service_IdentityToolkit_EmailTemplate $resetPasswordTemplate)
+  $this->resetPasswordTemplate = $resetPasswordTemplate;
+  public function getResetPasswordTemplate()
+  return $this->resetPasswordTemplate;
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/IdentityToolkit/IdpConfig.php ===
+  public $secret;
+  public function setSecret($secret)
+  $this->secret = $secret;
+  public function getSecret()
+  return $this->secret;
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/SQLAdmin/DemoteMasterMySqlReplicaConfiguration.php ===
+  public $password;
+  public function setPassword($password)
+  $this->password = $password;
+  public function getPassword()
+  return $this->password;
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/google/apiclient-services/src/Google/Service/SQLAdmin/MySqlReplicaConfiguration.php ===
+  public $password;
+  public function setPassword($password)
+  $this->password = $password;
+  public function getPassword()
+  return $this->password;
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/zendframework/zendframework/library/Zend/Form/View/HelperConfig.php ===
+  'formpassword'            => 'Zend\Form\View\Helper\FormPassword',
+
+=== FILE: /var/jenkins_home/workspace/cs_msa_front/cs_msa_build_caja-pagos-api-deploy2dev/vendor/zf-commons/zfc-user/config/module.config.php ===
+  'changepassword' => array(
+  'route' => '/change-password',
+  'action'     => 'changepassword',
+
+=== FILE: /var/jenkins_home/workspace/_trash/name_it/Crones/carga_masiva_ss/QA_V1/config.php ===
+  define("PASSWORD","Gh4fD7lK93bxZN0");
+  #define("PASSWORD","BNuK2uy7x1qQhc");
+  define("PASSWORD","password");*/
+  define("PASSWORDPCL", "");
+
+=== FILE: /var/jenkins_home/workspace/_trash/name_it/crones-sanborns/productos/produccion/config.ini ===
+  mail.password = UxS7Vc8jU2UPqLErN4Uz1hQGo
+
+=== FILE: /var/jenkins_home/workspace/test_task/Crones/carga_masiva_ss/QA_V1/config.php ===
+  define("PASSWORD","Gh4fD7lK93bxZN0");
+  #define("PASSWORD","BNuK2uy7x1qQhc");
+  define("PASSWORD","password");*/
+  define("PASSWORDPCL", "");
+
+=== FILE: /var/jenkins_home/workspace/test_task/crones-sanborns/productos/produccion/config.ini ===
+  mail.password = UxS7Vc8jU2UPqLErN4Uz1hQGo
+
+=== BUILD LOGS SCAN (last 5 builds per job with SSH) ===
+
+JOB: _trash/claroshop_build_carritoms.dev.claroshop.com
+  Build #2 (FAILURE)
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #1 (ABORTED)
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api
+  Build #2 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: Picked up JAVA_TOOL_OPTIONS: -Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.140.1
+  Build #1 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api-config
+  Build #2 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #1 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro
+  Build #76 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #75 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #74 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro-config
+  Build #9 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #8 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #7 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: pc_new_back/pc_new_pipe_build_alibaba-plataforma-claro
+  Build #111 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #110 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #109 (FAILURE)
+
+JOB: pc_new_back/pc_new_pipe_build_alibaba-plataforma-claro-config
+  Build #16 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #15 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #14 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: pc_new_back/pc_new_pipe_build_not-plataforma-claro
+  Build #12 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #11 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #10 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: pc_new_back/pc_new_pipe_build_not-plataforma-claro-config
+  Build #4 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #3 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+  Build #2 (SUCCESS)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+JOB: se_new_front/se_new_pipe_build_t1pagos-api
+  Build #1 (ABORTED)
+    LOG: using credential jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+    LOG: using GIT_ASKPASS to set credentials jenkis
+
+=== SSH PUBLISHER PLUGIN - DECRYPT PASSWORDS ===
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+DECRYPTED SSH password: 
+
+=== OPENSHIFT DEPLOYER PASSWORD ===
+OpenShift password: auroraboreal00
+
+=== PROXY PASSWORD ===
+Proxy password: 
+Result: java.util.regex.Matcher[pattern=<secretPassword>\{([^}]+)\}</secretPassword> region=0,328 lastmatch=]
+

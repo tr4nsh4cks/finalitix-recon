@@ -1,0 +1,72 @@
+{
+  "scan_date": "2026-08-23",
+  "jenkins_url": "https://jenkins-ng.dev.claroshop.com",
+  "summary": {
+    "total_interesting_jobs": 215,
+    "jobs_with_ssh": 143,
+    "jobs_with_target_ips": 153,
+    "jobs_with_t1envios": 6,
+    "jobs_with_dbasears": 0
+  },
+  "ssh_publisher_plugin_hosts": [
+    {"name": "CSDEV01-1",     "hostname": "CSDEV01-2.dev.claroshop.com",   "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSDEV01-2",     "hostname": "CSDEV01-2.dev.claroshop.com",   "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSDEV02-2",     "hostname": "CSDEV02-2.dev.claroshop.com",   "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSDEV03-1",     "hostname": "CSDEV03-1.dev.claroshop.com",   "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAPP01-1",   "hostname": "CSQAAPP01-1.dev.claroshop.com", "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAPP02-1",   "hostname": "CSQAAPP02-1.dev.claroshop.com", "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAPP03-1",   "hostname": "CSQAAPP03-1.dev.claroshop.com", "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAPP04-1",   "hostname": "CSQAAPP04-1.dev.claroshop.com", "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQANGIN01-1",  "hostname": "CSQANGIN01-1.dev.claroshop.com","user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAMDIN02-1", "hostname": "CSQAAMDIN02-1.dev.claroshop.com","user": "jenkins","port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQAAMDIN-2",   "hostname": "CSQAAMDIN-2.dev.claroshop.com", "user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQATASK01-1",  "hostname": "CSQATASK01-1.dev.claroshop.com","user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "CSQATASK02-3",  "hostname": "CSQATASK02-3.dev.claroshop.com","user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"},
+    {"name": "X1DEVAPP01-2",  "hostname": "X1DEVAPP01-2.dev.claroshop.com","user": "jenkins", "port": 22, "key": "jenkins_deploy_rsa"}
+  ],
+  "credentials": [
+    {"id": "AMX Docker API CA client",              "type": "DockerServerCredentials", "notes": "Docker client TLS cert for AMX Docker API"},
+    {"id": "0d8e0f66-71a2-43f5-8bd5-1be22a53c656", "type": "UsernamePassword", "user": "jenkins_legacy",                  "pass": "JenkisLegasy25",            "desc": "GitLab de claroshop"},
+    {"id": "cs-dev-gitlab-jenkins",                 "type": "UsernamePassword", "user": "jenkins",                          "pass": "e6LBqIkOI$PR1XX2oia",       "desc": "GitLab jenkins user"},
+    {"id": "GitLabClaro",                           "type": "UsernamePassword", "user": "Jenkins",                          "pass": "JenkisLegasy25",            "desc": "GitLabClaro"},
+    {"id": "jenkis",                                "type": "UsernamePassword", "user": "jenkins",                          "pass": "e6LBqIkOI$PR1XX2oia",       "desc": "Jenkins GitLab"},
+    {"id": "gitlabClaroshop",                       "type": "UsernamePassword", "user": "jenkins.legacy.sn.se@gmail.com",  "pass": "JenkisLegasy25",            "desc": "Gitlab Claro Shop"},
+    {"id": "cf2c59c4-620e-46fa-83bf-331106553d8b", "type": "UsernamePassword", "user": "jenkins-ng.dev.claroshop.com",    "pass": "dtvV50vwfGq5CO9",           "desc": "Docker registry"},
+    {"id": "nexus",                                 "type": "UsernamePassword", "user": "jenkins-ng.dev.claroshop.com",    "pass": "dtvV50vwfGq5CO9",           "desc": "nexus.dev.claroshop.com"},
+    {"id": "5bc27f9c-6ced-4b66-b71a-a53a90169f40", "type": "SecretText",       "secret": "6c75f3c846ea459e659e761238d6f12f4e27a53d",                           "desc": "SonarQube token (migrated)"},
+    {"id": "sonarqube.dev.sia.gsanborns.com.mx",   "type": "SecretText",       "secret": "squ_547fa54c6926c2f6b9bf14eb980942eabdd96686",                       "desc": "SonarQube token gsanborns"},
+    {"id": "cc-infracode-sophia-mrk-i",             "type": "UsernamePassword", "user": "sophia-mrk-i",                    "pass": "plug*spoke!MosqueCloud3col", "desc": "infracode user"}
+  ],
+  "jobs_with_t1envios_target": [
+    {"job": "cs_legacy_back/crones/cron_cs_track_t1envios",     "deploy_target": "CSDEV01-2",   "remote_dir": "/var/www/sites/crones.dev.claroshop.com/web/cron_cs_track_t1envios/config/"},
+    {"job": "se_legacy_back/crones/cron_se_track_t1envios",     "deploy_target": "CSDEV01-2",   "remote_dir": "/var/www/sites/crones-axii-dev.sears.com.mx/web/cron_se_track_t1envios/config/"},
+    {"job": "sn_legacy_back/crones/cron_sn_track_t1envios",     "deploy_target": "CSDEV01-2",   "remote_dir": "/var/www/sites/crones-axii-dev.sanborns.com.mx/web/cron_sn_track_t1envios/config/"},
+    {"job": "t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios", "deploy_target": "AWS_PROD", "remote_dir": "sierra-admin.dev.t1envios.com + release + admin.t1envios.com", "notes": "Pipeline with AWS SERVERS promotion"},
+    {"job": "t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios-config", "deploy_target": "CSDEV01-2 + CSDEV02-2", "remote_dir": "/var/www/sites/sierra-admin.dev.t1envios.com/config/"}
+  ],
+  "jobs_deploying_to_prod": [
+    {"job_pattern": "*/pipe_*_sierra-t1envios AWS SERVERS", "target": "AWS PROD", "trigger": "requestExecJob=t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS"},
+    {"job_pattern": "cs_legacy_back/cs_legacy_pipe_build_*", "target": "172.27.141.25 (proxy) → CSDEV/CSQA app servers", "notes": "All jobs use proxy 172.27.141.25:8080"}
+  ],
+  "network_topology_extracted": {
+    "proxy_server": "172.27.141.25:8080",
+    "no_proxy_hosts": ["172.27.140.150", "172.27.140.134", "172.27.140.148", "172.27.141.5"],
+    "docker_api_unauthenticated": "172.27.140.148:4243",
+    "gitlab_internal": "gitlab.dev.claroshop.com",
+    "nexus_internal": "nexus.dev.claroshop.com",
+    "sonarqube_internal": "sonarqube.dev.sia.gsanborns.com.mx",
+    "prod_sears_db": "dbasears.mrc-services.io:3308 / 172.27.141.24:3308 (NOT REACHED)",
+    "t1pagos_db": "172.27.141.4:3310 (NOT REACHED)",
+    "compromised_dbs": [
+      "172.27.141.6:3312 (tienda + payment_t1) - dbcronproductos AUTH_OK",
+      "172.27.140.143:3312 (tienda_nueva) - dbcronproductos AUTH_OK",
+      "172.27.141.4:3306 (root) - AUTH_OK (limited shell via SSH)"
+    ]
+  },
+  "pivot_path_to_prod_sears": {
+    "best_vector": "Docker API (172.27.140.148:4243) - unauthenticated exec inside container 5b32e909c295",
+    "container_advantages": "Multi-homed container reaches 172.27.141.24 (different source IP = different MySQL ACLs)",
+    "ssh_key_for_dev_servers": "jenkins_deploy_rsa (RSA 2048) → CSDEV01-2, CSDEV02-2, CSQAAPP01-4 etc.",
+    "status": "PENDING - docker exec via PHP script was prepared but needs Groovy fix (declare vars with def)"
+  }
+}

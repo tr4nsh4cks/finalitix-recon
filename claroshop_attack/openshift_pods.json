@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-23T21:33:00-06:00",
+  "note": "OpenShift cluster inaccesible directamente desde Jenkins. Documentamos la red interna alcanzada.",
+  "network_reachable_from_jenkins": [
+    {"host": "172.27.141.4", "port": 3306, "status": "OPEN", "banner": "MySQL 5.6.25-enterprise-commercial-advanced"},
+    {"host": "172.27.141.4", "port": 22, "status": "OPEN", "banner": "SSH-2.0-OpenSSH"},
+    {"host": "172.27.141.26", "port": 3306, "status": "OPEN", "banner": "MySQL 5.7.22-enterprise-commercial-advanced-log"},
+    {"host": "172.27.141.26", "port": 22, "status": "OPEN", "banner": "SSH-2.0-OpenSSH_7.4"},
+    {"host": "172.27.141.24", "port": 22, "status": "OPEN_from_jail", "note": "SSH abierto desde jail T1Pagos"},
+    {"host": "dbpsears.claroshop-services.net", "port": 3312, "status": "OPEN", "banner": "MySQL 5.7.29-enterprise-commercial-advanced-log"}
+  ],
+  "network_not_reachable": [
+    {"host": "172.27.141.24", "port": 3308, "status": "CLOSED (No route to host)"},
+    {"host": "172.27.141.24", "port": 3306, "status": "CLOSED (No route to host)"},
+    {"host": "172.27.141.26", "port": 3310, "status": "CLOSED"},
+    {"host": "console.dev.amxnova.net", "port": 8443, "status": "CLOSED (timeout)"}
+  ],
+  "databases_confirmed": [
+    {
+      "host": "172.27.141.26",
+      "port": 3306,
+      "version": "MySQL 5.7.22-enterprise-commercial-advanced-log",
+      "label": "T1Pagos DB (DEV)",
+      "credentials": {
+        "user": "app_t1",
+        "password": "pySY8}7>ftpPz9S",
+        "database": "payment_t1",
+        "source": "t1pagos-api.dev.claroshop-services.io/config/autoload/local.php"
+      },
+      "tables": ["card", "client", "origen_plan", "planes", "suscripciones", "transaction"],
+      "stats": {
+        "card_count": "154+",
+        "client_count": 17,
+        "transaction_count": 0,
+        "note": "Dev/sandbox DB - datos de prueba"
+      },
+      "sample_data": "Tarjetas tokenizadas (PANs masked: 370773*****1060, tokens UUID)"
+    },
+    {
+      "host": "dbpsears.claroshop-services.net",
+      "port": 3312,
+      "version": "MySQL 5.7.29-enterprise-commercial-advanced-log",
+      "label": "PROD SEARS",
+      "credentials": {
+        "user": "apsearsats",
+        "password": "7g4kktCAEuOV9CX",
+        "database": "tienda",
+        "source": "ats.dev.sears.com.mx/config/autoload/local.php"
+      },
+      "databases_visible": ["information_schema", "autonums", "ayuda", "cron", "tienda", "tienda_nueva"],
+      "stats": {
+        "clientes_count": 5187,
+        "pedidos_count": 7948,
+        "revenue_total_mxn": 69560720.36,
+        "pedidos_date_range": "0000-00-00 to 2023-05-11",
+        "tienda_nueva_tables": 44
+      },
+      "pii_confirmed": {
+        "clientes_fields": ["Id", "Nombre", "Apellido_Paterno", "Email", "contrasena_2 (SHA-256)", "rfc", "fecha_nacimiento", "num_celular"],
+        "password_format": "SHA-256 hex (64 chars) en campo contrasena_2",
+        "emails_today": "Registros activos hasta 2026-08-23"
+      },
+      "other_credentials_from_config": {
+        "user2": "dbcruzp",
+        "pass2": "PKjl421hg3L14tR",
+        "host2": "172.27.140.134:3306",
+        "db2": "tienda"
+      }
+    }
+  ],
+  "additional_credentials_found": {
+    "aws_keys": {
+      "access_key": "AKIA4QYKCQNRYQAVV5AH",
+      "secret_key": "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",
+      "s3_buckets": ["medios.plazavip.com", "axii-pedidos"],
+      "region": "us-east-1",
+      "source": "multiple PHP configs (apicredito + ats.dev.sears)"
+    },
+    "redis": {
+      "host": "redis-storage.dev.claroshop.com",
+      "port": 6379,
+      "password": "@st0rAg3K3Y",
+      "key": "t1_dev"
+    },
+    "ftp": {
+      "host": "187.191.74.134",
+      "user": "claroshopprueba",
+      "pass": "clsh01"
+    },
+    "selfservice_api": {
+      "url": "https://selfservice.dev.claroshop.com/ApiRest",
+      "user": "apps.dev",
+      "pass": "VlCQUYB163Z2KWlJ"
+    },
+    "smtp": {
+      "host": "smtp.claroshop-services.net",
+      "port": 25,
+      "user": "smtp_admin@claroshop",
+      "pass": "4eJ7G0paawA8R53AQJu15yxd"
+    },
+    "dev_db_sears": {
+      "host": "masterdb57.dev.claroshop.com",
+      "port": 3306,
+      "user": "dbatscs",
+      "pass": "f]e&Q8zs[qkmbz_U",
+      "db": "tienda",
+      "source": "apicredito.dev.sears.com.mx/config/autoload/local.php"
+    }
+  }
+}

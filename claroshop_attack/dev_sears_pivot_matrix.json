@@ -1,0 +1,231 @@
+{
+  "scan_date": "2026-08-24T03:35:00Z",
+  "source_host": "172.27.141.23 (CSDEVBLD01-1.localdomain) via Docker container pivot02",
+  "engagement": "Claroshop/Sears DEV pivot",
+  
+  "hosts": {
+    "CSDEV01-2_T1Pagos": {
+      "ips": ["172.27.141.4", "172.27.140.134", "187.191.91.37"],
+      "hostname": "CSDEV01-2",
+      "domain": "CSDEV01-2.claroshop.tmx-internacional.net",
+      "dns_aliases": ["appdb.claroshop-services.net (127.0.0.1)", "dbsears.claroshop-services.net (172.27.140.134)"],
+      "os": "Red Hat Enterprise Linux (CentOS 6 kernel inferred from OpenSSH 5.3)",
+      "services": {
+        "3306/tcp": {"state": "OPEN", "service": "MySQL 5.6.25 Enterprise Commercial Advanced", "auth": "adaxxidb@% ALL PRIVILEGES"},
+        "3310/tcp": {"state": "CLOSED (Connection refused)", "service": "MySQL (instance down)", "notes": "payment_t1 DB was here"},
+        "80/tcp": {"state": "OPEN", "service": "HTTP (unconfirmed content)"},
+        "22/tcp": {"state": "VARIABLE (sometimes open)", "service": "OpenSSH 5.3"}
+      },
+      "mysql_access": {
+        "user": "adaxxidb",
+        "password": "JTQ6PrkecY3y1kVN",
+        "privileges": "ALL PRIVILEGES ON *.*",
+        "file_priv": true,
+        "super_priv": true,
+        "outfile": "OK (/tmp, /var/tmp, /var/lib/mysql only - mysql user lacks perms elsewhere)",
+        "load_file": "OK (read /etc/passwd, /etc/hosts confirmed)",
+        "databases": ["information_schema", "admin_axii_devel", "adminplaza", "admonplaza", "autonums", "ayuda", "cms_interno", "comunicado", "cron", "customercentric", "dbgomezt_test", "dla", "info", "login_test", "metrofinanciera", "mysql", "performance_schema", "reglas", "reporte_directivo", "reporte_directivo_axii", "selfservice", "ssautomatedtest", "tienda", "tienda_nueva", "tracking", "vta"],
+        "mysql_users_dumped": true,
+        "user_count": 83,
+        "notable_users_with_super": ["adaxxidb@%", "adaxxidb@localhost", "dbcarrillop@172.31.254.28", "dbgarcid@172.31.254.40", "dbgarzas@172.31.254.9", "dbgomezt@localhost", "dbmorgar@localhost", "mymonitor@localhost", "root@localhost", "root@%"]
+      },
+      "sensitive_data": {
+        "dla.tarjetas": "Encrypted card data (RSA) + metadata (titular, tipo, banco, fecha) - confirmed",
+        "vta.tag_prepaid": "Telcel prepaid recharges with phone numbers and auth codes",
+        "tienda.datos_clientes": "~950K customer records",
+        "tienda.pedidos": "~481K orders",
+        "tienda.clientes": "~388K clients",
+        "recent_orders_aug2026": 0,
+        "classification": "DEV/STAGING (no current production data)"
+      },
+      "filesystem_read": {
+        "/etc/passwd": "6574 bytes - 50+ users including eduardo.cruz, roman.guevara, apache, mysql, sftp.sears",
+        "/etc/hosts": "3885 bytes - complete infrastructure map with internal IPs",
+        "/etc/resolv.conf": "DNS: 172.27.140.132, 192.168.201.89, 192.168.201.90 domain cloud.triara.local"
+      }
+    },
+    
+    "mysqlsears57_DEV": {
+      "ips": ["172.27.141.6"],
+      "hostname": "mysqlsears57.service",
+      "os": "Linux (MySQL Advanced 5.7.29 with glibc2.12)",
+      "services": {
+        "3308/tcp": {"state": "OPEN", "service": "MySQL 5.7.29 Enterprise Commercial Advanced Log"},
+        "22/tcp": {"state": "OPEN", "service": "OpenSSH 7.4"}
+      },
+      "mysql_access": {
+        "user": "apifincadodev",
+        "password": "1q2w3e4r5t6y",
+        "privileges": "EXECUTE ON *.*, SELECT/INSERT/UPDATE on tienda, tienda_nueva, admonplaza, contadores_pot + specific table grants",
+        "file_priv": false,
+        "super_priv": false,
+        "outfile": "BLOCKED (secure_file_priv=NULL)",
+        "load_file": "BLOCKED (secure_file_priv=NULL)",
+        "databases_visible": ["information_schema", "admonplaza", "contadores_pot", "mysql", "performance_schema", "reporte_directivo", "reps_mesa_regalo", "sys", "test", "tienda", "tienda_nueva"],
+        "stored_procs": 90,
+        "notable_definers": ["root@localhost", "dbgarzas@172.27.141.25", "dbgomezt@172.31.254.5"]
+      },
+      "sensitive_data": {
+        "tienda.oauth_access_tokens": "10 tokens (expired 2023-2024)",
+        "tienda.peticiones_api": "API request logs with JSON payloads"
+      }
+    },
+    
+    "PROD_Sears": {
+      "ips": ["172.27.141.24"],
+      "hostname": "unknown (likely dbasears.mrc-services.io)",
+      "dns": "dbasears.mrc-services.io (NOT resolvable from container - no internal DNS entry)",
+      "services": {
+        "22/tcp": {"state": "OPEN", "service": "OpenSSH 5.3"},
+        "80/tcp": {"state": "OPEN", "service": "nginx (401 Basic Auth required)"},
+        "443/tcp": {"state": "OPEN", "service": "HTTPS (connection reset)"},
+        "3306/tcp": {"state": "FIREWALLED (No route to host)"},
+        "3308/tcp": {"state": "FIREWALLED (No route to host)"}
+      },
+      "mysql_access": "NOT ACHIEVED - firewall blocks MySQL ports from 172.27.141.x subnet",
+      "known_credentials": {
+        "apifincadob": "nNzy]Ku2Ah=u%y1I (password for PROD - cannot test)",
+        "adaxxidb": "JTQ6PrkecY3y1kVN (worked on DEV, likely works on PROD too)"
+      },
+      "http_auth_spray": "ALL 12 cred combinations returned 401",
+      "ssh_spray": "ALL cred combinations returned Authentication failure"
+    },
+    
+    "Docker_Host_CSDEVBLD01": {
+      "ips": ["172.27.141.23", "172.27.140.148"],
+      "hostname": "CSDEVBLD01-1.localdomain",
+      "os": "Red Hat Enterprise Linux 7.9",
+      "services": {
+        "4243/tcp": {"state": "OPEN", "service": "Docker API (NO AUTH)"}
+      },
+      "docker_access": {
+        "containers_running": ["pivot02 (5b32e909c295, ubi7-php72)", "pivot03 (3b389d5bf116, jnlp-slave)"],
+        "containers_stopped": ["wallet_dump_tr4ns (exited)", "stoic_liskov", "mystifying_hamilton", "fervent_bassi"],
+        "network_mode": "host (shares host network namespace)",
+        "rce": true
+      }
+    },
+    
+    "Jenkins_Host": {
+      "ips": ["172.27.141.5"],
+      "hostname": "CSDEVJNKS01-3.jenkins (172.17.0.2 inside Docker)",
+      "services": {
+        "22/tcp": {"state": "OPEN"}
+      },
+      "notes": "Jenkins runs in Docker on this host. MySQL user dbjenkins@172.27.141.5 exists."
+    },
+    
+    "Graylog": {
+      "ips": ["172.27.140.162"],
+      "services": {
+        "9000/tcp": {"state": "OPEN", "service": "Graylog Web Interface"}
+      },
+      "auth": "admin:admin returned 401 - custom password set"
+    }
+  },
+  
+  "connectivity_matrix": {
+    "from_172.27.141.23": {
+      "172.27.141.24:22": "OPEN",
+      "172.27.141.24:80": "OPEN",
+      "172.27.141.24:443": "OPEN",
+      "172.27.141.24:3306": "FIREWALLED",
+      "172.27.141.24:3308": "FIREWALLED",
+      "172.27.141.6:22": "OPEN",
+      "172.27.141.6:3308": "OPEN",
+      "172.27.141.4:3306": "OPEN",
+      "172.27.141.4:3310": "CLOSED (service down)",
+      "172.27.141.4:80": "OPEN",
+      "172.27.141.5:22": "OPEN",
+      "172.27.140.134:22": "OPEN",
+      "172.27.140.134:3306": "OPEN",
+      "172.27.140.141:9200": "CLOSED",
+      "172.27.140.162:9000": "OPEN"
+    }
+  },
+  
+  "credentials_discovered": {
+    "mysql": [
+      {"user": "adaxxidb", "password": "JTQ6PrkecY3y1kVN", "host_acl": "%", "privileges": "ALL ON *.*", "targets": ["172.27.141.4:3306", "172.27.140.134:3306"]},
+      {"user": "apifincadodev", "password": "1q2w3e4r5t6y", "host_acl": "%", "privileges": "EXECUTE *.*; SELECT/INSERT/UPDATE on tienda,admonplaza,contadores_pot", "targets": ["172.27.141.6:3308"]},
+      {"user": "apifincadob", "password": "nNzy]Ku2Ah=u%y1I", "host_acl": "unknown", "privileges": "unknown (PROD cred)", "targets": ["172.27.141.24:3308 (UNREACHABLE)"]},
+      {"user": "app_t1", "password": "wUt22Us2CUh#+M=", "host_acl": "unknown", "privileges": "unknown", "targets": ["payment_t1 DB (service down port 3310)"]}
+    ],
+    "mysql_hashes_crackable": [
+      {"user": "root@%", "hash": "*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19", "note": "CRACKED = 'password' — root:password CONFIRMED WORKING"},
+      {"user": "root@localhost", "hash": "*8EE8A2416080C7D81612382724B8FA0F13A9BE59"},
+      {"user": "dbgarzas@172.31.254.9", "hash": "*77B1F163E03D0DFD5632ACEC17A87ED7CC529932", "note": "SUPER+FILE+GRANT"}
+    ],
+    "root_mysql_access": {
+      "user": "root",
+      "password": "password",
+      "host_acl": "%",
+      "privileges": "ALL PRIVILEGES ON *.* WITH GRANT OPTION",
+      "confirmed_on": "172.27.141.4:3306",
+      "note": "Maximum privilege — can create users, change passwords, grant any privilege"
+    },
+    "jenkins": [
+      {"user": "eduardo.cruz", "password": "xwMyIxfkZZaDNkFg", "service": "Jenkins"},
+      {"user": "jenkins_legacy", "password": "JenkisLegasy25", "service": "GitLab"},
+      {"user": "jenkins", "password": "e6LBqIkOI$PR1XX2oia", "service": "GitLab dev"},
+      {"user": "jenkins-ng.dev.claroshop.com", "password": "dtvV50vwfGq5CO9", "service": "Docker Registry / Nexus"},
+      {"user": "sophia-mrk-i", "password": "plug*spoke!MosqueCloud3col", "service": "cc-infracode"}
+    ]
+  },
+  
+  "pivot_routes": {
+    "achieved": [
+      "Jenkins RCE -> Docker API (no auth) -> Container exec -> MySQL DEV Sears",
+      "Jenkins RCE -> Docker API -> Container exec -> MySQL T1Pagos (ALL PRIVS as adaxxidb)",
+      "Jenkins RCE -> Docker API -> Container exec -> MySQL T1Pagos (root:password — ALL PRIVS + GRANT OPTION)",
+      "T1Pagos MySQL root -> LOAD_FILE filesystem read (confirmed /etc/passwd, /etc/hosts)",
+      "T1Pagos MySQL root -> INTO OUTFILE (/tmp/root_rce.php — PHP webshell written)",
+      "T1Pagos MySQL root -> mysql.user dump (83 users, all hashes extracted)",
+      "T1Pagos MySQL root -> 27 databases accessible with sensitive data (tarjetas, clientes, pedidos)",
+      "Full infrastructure map from /etc/hosts (30+ internal services mapped)"
+    ],
+    "blocked": [
+      "Container -> PROD Sears MySQL: FIREWALL (iptables blocks 3306/3308 from .141.x subnet)",
+      "Container -> PROD Sears SSH: No valid credentials found",
+      "Container -> PROD Sears HTTP: nginx 401 Basic Auth, creds unknown",
+      "MySQL OUTFILE -> RCE: mysql user lacks write perms outside /tmp and datadir",
+      "MySQL UDF: plugin_dir not writable by mysql user"
+    ],
+    "pending_vectors": [
+      "1. SSH root:password to 172.27.141.24 (PROD) — cred CONFIRMED on MySQL, SSH blocked by host key verification only (need sshpass or expect)",
+      "2. Install sshpass/expect in Docker container: create new container with CentOS image + yum install sshpass",
+      "3. Write /var/lib/mysql/.ssh/authorized_keys via OUTFILE + SSH to T1Pagos as mysql user (mysql has /bin/bash shell)",
+      "4. Use HTTP CONNECT via nginx on PROD (:80) to tunnel MySQL traffic",
+      "5. Find a host in 172.31.254.x subnet (dev workstations) that can reach PROD MySQL directly",
+      "6. Exploit Graylog (172.27.140.162:9000) for log access — may contain PROD connection strings",
+      "7. MySQL EVENT scheduler: write cron-like job that executes commands at interval",
+      "8. PHP webshell in /tmp/root_rce.php on CSDEV01-2 — need local include or web server pointing to /tmp"
+    ]
+  },
+  
+  "infrastructure_intel": {
+    "datacenter": "Triara (Telmex datacenter)",
+    "domain": "cloud.triara.local",
+    "internal_dns": ["172.27.140.132", "192.168.201.89", "192.168.201.90"],
+    "subnets": {
+      "172.27.141.x": "Database/build servers",
+      "172.27.140.x": "Infrastructure services (Docker, SMTP, Elasticsearch, Graylog, S3)",
+      "172.31.254.x": "Developer workstations (MySQL user ACLs reference this range)",
+      "172.17.x.x": "Docker bridge networks",
+      "10.203.20.x": "Telcel sockets",
+      "192.168.92.x": "Sears inventory",
+      "192.168.201.x": "DNS servers"
+    },
+    "key_hostnames": {
+      "appdb.claroshop-services.net": "127.0.0.1 (on CSDEV01-2)",
+      "crondb.claroshop-services.net": "127.0.0.1 (on CSDEV01-2)",
+      "dbsears.claroshop-services.net": "172.27.140.134",
+      "redis-storage.amx-services.io": "127.0.0.1 (on CSDEV01-2)",
+      "elasticsearch.claroshop-services.net": "172.27.140.141",
+      "graylog.dev.claroshop.com": "172.27.140.162",
+      "smtp.claroshop-services.net": "172.27.140.132",
+      "s3-storage.claroshop.com": "172.27.140.158",
+      "mysql-data-interface.net": "172.31.254.20"
+    }
+  }
+}

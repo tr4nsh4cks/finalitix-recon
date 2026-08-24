@@ -1,0 +1,152 @@
+﻿=== COUNTS tienda PROD ClaroShop ===
+  pedidos: COLS[COUNT(*)]
+ROW[889297]
+
+  clientes: COLS[COUNT(*)]
+ROW[393862]
+
+  clientescontrasena: COLS[COUNT(*)]
+ROW[71204]
+
+  datostarjeta: COLS[COUNT(*)]
+ROW[388571]
+
+  cybersource_transacciones: COLS[COUNT(*)]
+ROW[134283]
+
+  pedidos_datos_pago: COLS[COUNT(*)]
+ROW[1421]
+
+  datos_pedido: COLS[COUNT(*)]
+ROW[871573]
+
+  datos_clientes: COLS[COUNT(*)]
+ROW[1009258]
+
+  payment_claropay: ERR_1146: #42S02Table 'tienda.payment_claropay' doesn't exist
+  usuarios: COLS[COUNT(*)]
+ROW[4499]
+
+
+=== SCHEMA tienda.pedidos (cols con tarjeta) ===
+COLS[COLUMN_NAME|COLUMN_TYPE]
+ROW[tipotarjeta|varchar(45)]
+ROW[numero|varchar(255)]
+ROW[mes|varchar(45)]
+ROW[ao|varchar(45)]
+ROW[seguridad|varchar(255)]
+ROW[tarjeta_puntos|double(10,2) unsigned]
+ROW[meses|tinyint(2) unsigned]
+
+
+=== SAMPLE pedidos PROD (├║ltimos 5) ===
+COLS[Id|Cliente|Fecha_Inicio|tipotarjeta|nombre|numero|mes|ao|seguridad|total|ip]
+ROW[10034678|2566723|2026-02-08 14:10:09|NULL|NULL|NULL|NULL|NULL|NULL|7499|]
+ROW[10034677|2566723|2026-02-08 13:59:42|NULL|NULL|NULL|NULL|NULL|NULL|7499|]
+ROW[10034676|2566723|2026-02-08 13:58:28|NULL|NULL|NULL|NULL|NULL|NULL|7499|]
+ROW[10034675|2566722|2026-02-06 12:58:58|NULL|NULL|NULL|NULL|NULL|NULL|5579|]
+ROW[10034674|2566675|2026-01-27 19:43:07|NULL|NULL|NULL|NULL|NULL|NULL|12299|]
+
+
+=== COUNT pedidos CON tarjeta ===
+COLS[COUNT(*)]
+ROW[126129]
+
+
+=== SAMPLE clientes PROD (├║ltimos 5) ===
+COLS[Id|Nombre|Apellido_Paterno|Email|Password|num_celular|fecha_creacion]
+ROW[2566723|Juan|Perez|stg-account+client16@homein.cl||NULL|NULL]
+ROW[2566722|Juan|Perez|dev-account+client27@homein.cl||NULL|NULL]
+ROW[2566721|Prueba|Veinte|dev-account+client20@homein.cl||NULL|NULL]
+ROW[2566720|Ursula Selene |Ahumada |usaclove@gmail.com||NULL|NULL]
+ROW[2566719|Leidi Yannet |Ojeda|sanchezleidi686@gmail.com||NULL|NULL]
+
+
+=== payment_t1 TABLES/COUNTS ===
+COLS[TABLE_NAME|TABLE_ROWS]
+ROW[client|16]
+ROW[planes|16]
+ROW[card|11]
+ROW[origen_plan|6]
+ROW[transaction|0]
+ROW[suscripciones|0]
+
+
+=== SCHEMA pedidos_datos_pago ===
+COLS[COLUMN_NAME|COLUMN_TYPE]
+ROW[id|int(11)]
+ROW[num_pedido|int(11)]
+ROW[forma_pago|int(11)]
+ROW[referencia|text]
+ROW[monto_a_pagar|double]
+ROW[fecha_limite|date]
+ROW[hora_limite|time]
+ROW[tipo_envio|varchar(50)]
+ROW[codigo_barras|text]
+ROW[barras_numerico|text]
+ROW[fecha_registro|datetime]
+ROW[fecha_modificacion|datetime]
+ROW[banco|varchar(50)]
+
+
+=== SAMPLE pedidos_datos_pago ===
+COLS[id|num_pedido|forma_pago|referencia|monto_a_pagar|fecha_limite|hora_limite|tipo_envio|codigo_barras|barras_numerico|fecha_registro|fecha_modificacion|banco]
+ROW[1459|9011943|4||1109|0000-00-00|00:00:00||||2024-10-21 17:11:53|0000-00-00 00:00:00|banamex]
+ROW[1458|9011942|4||1109|0000-00-00|00:00:00||||2024-10-21 17:10:39|0000-00-00 00:00:00|santander]
+ROW[1457|9011937|4||1109|0000-00-00|00:00:00||||2024-10-21 16:54:40|0000-00-00 00:00:00|bancomer]
+ROW[1456|9011934|4||2218|0000-00-00|00:00:00||||2024-09-19 17:00:54|0000-00-00 00:00:00|santander]
+ROW[1455|9011933|4||5380|0000-00-00|00:00:00||||2024-09-13 13:33:11|0000-00-00 00:00:00|bancomer]
+
+
+=== COUNT cybersource_transacciones ===
+COLS[COUNT(*)]
+ROW[134283]
+
+
+=== SAMPLE cybersource_transacciones (├║ltimas) ===
+COLS[request_id|id_pedido|tipo_targeta|targeta_numero|total|decision|fecha]
+ROW[6310603399586947403000|90000199|debit|sgEib3YBOGHcs+6sM+GU+gfnY|888|ACCEPT|2021-09-08 20:00:48]
+ROW[6310603399586947403007|1226967|debit|4111111111111111|888|ACCEPT|2021-09-08 10:19:31]
+ROW[6310606421876880803012|1226969|debit|HgC/06QCOGHCEx6qKhiirwb7T|212|REVIEW|2021-09-08 10:19:30]
+ROW[6310609214946316703011|1226970|debit|1QKyZrsDOGEnV2Er1c5wxnJTZ|2789|ACCEPT|2021-09-08 10:19:29]
+ROW[6305334934356179203011|1226908|debit|1wOQ+3n3L2HgUAk3VbVU6LYM3|1437|ACCEPT|2021-09-01 16:58:38]
+ROW[6305128171046347504012|1226893|debit|twOwfrOmL2FyRQiXBbXbI10K4|1714|ACCEPT|2021-09-01 11:13:47]
+ROW[6300813739866108503007|1226865|debit|2wDxHmARKWFwTri+RkSJvPHh9|348|ACCEPT|2021-08-27 11:23:08]
+ROW[6294988867746098703010|1226791|debit|rQDETgguIGG9zz+TJQBVKYN/y|552|ACCEPT|2021-08-20 17:35:04]
+ROW[6294901420856762803012|1226790|debit|1111|879|ACCEPT|2021-08-20 15:09:34]
+ROW[6294896927866639303009|1226789|debit|1111|879|ACCEPT|2021-08-20 15:01:55]
+
+
+=== selfservice KEY TABLES ===
+COLS[TABLE_NAME|TABLE_ROWS]
+ROW[fotos|2003368]
+ROW[rel_producto_foto|1911144]
+ROW[productos|1712740]
+ROW[proceso_imagen_producto|1394166]
+ROW[mensajesselfservice|1176804]
+ROW[closuredepartamento|958152]
+ROW[tagseoproducto|563655]
+ROW[tallacolor|373559]
+ROW[departamentos|334549]
+ROW[logs_sp_productos_sincronizar|309811]
+ROW[productodepartamento|242757]
+ROW[evidencia_proveedor|239021]
+ROW[categorias_productos|231498]
+ROW[comprobante|182497]
+ROW[productocolor|176856]
+ROW[bitacora_evt|162477]
+ROW[relacion_filtros_productos|109060]
+ROW[proveedor_imr_pago|106289]
+ROW[cargamasiva|15510]
+ROW[products_channel|12803]
+
+
+=== monedero TABLES ===
+COLS[TABLE_NAME|TABLE_ROWS]
+ROW[pedido|17]
+ROW[cliente|15]
+ROW[monedero|14]
+ROW[cat_estatus_monedero|6]
+
+=== FIN CLAROSHOP PROD EXTRACT ===
+

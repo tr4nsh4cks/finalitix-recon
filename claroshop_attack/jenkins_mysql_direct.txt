@@ -1,0 +1,29 @@
+﻿py : Traceback (most recent call last):
+En C:\Users\Usuario\AppData\Local\Temp\ps-script-eee8decd-14b5-4198-b2a2-3995c6185675.ps1: 89 Carácter: 29
++ ... cs\pentagi; py -3.12 claroshop_attack\jenkins_exec.py claroshop_attac ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\xampp\htdocs\pentagi\claroshop_attack\jenkins_exec.py", line 41, in <module>
+    result = jenkins_exec(script)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\pentagi\claroshop_attack\jenkins_exec.py", line 32, in jenkins_exec
+    r2 = opener.open(req2, timeout=300)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 639, in 
+http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 504: Gateway Time-out

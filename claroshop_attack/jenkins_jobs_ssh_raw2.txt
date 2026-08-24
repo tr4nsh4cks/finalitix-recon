@@ -1,0 +1,1486 @@
+﻿======================================================================
+TOTAL INTERESTING JOBS: 215
+WITH SSH: 143
+WITH TARGET IPs: 153
+======================================================================
+
+JOB: _trash/amp_hackathon/cs_amp
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: _trash/connect_docker_2_api_tlsauth
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: _trash/cs_msa_front/cs_msa_pipe_caja-pagos-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: _trash/cs_msa_front/cs_msa_pipe_caja-pagos-front
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: _trash/cs_msa_pipe_caja-pagos-api-test
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: _trash/cs_test_remote_exec_rm
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: _trash/test-ignores-complete
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: _trash/test_ignores
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: _trash/test_task
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: _trash/var_scope-test
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: automated-qa/newman-test
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: //#http_proxy=http://172.27.141.25:8080
+  >> TARGET: //#https_proxy=http://172.27.141.25:8080
+  >> TARGET: //#no_proxy=172.27.140.150,172.27.140.134,172.27.140.148,gitlab.dev.claroshop.com,172.27.141.5,nexus.dev.claroshop.com,*.dev.claroshop.com,*.qa.claroshop.com
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_alfaapicomerciopedidos
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_ats
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_ats-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_axii-claroshop
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_axii-claroshop-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_pot
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_reps-claroshop
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_reps-claroshop-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_selfservice
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_selfservice-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_t1-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_back/cs_legacy_pipe_build_t1-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_build_app
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_build_app-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_app-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_app-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_authms-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_authms-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_caja-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_caja-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_caja-front
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_caja-front-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_carrito
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_carrito-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_cart-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_facturams-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_facturams-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_landing-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_landing-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_mail-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_mail-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_monedero-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_monedero-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_producto-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_producto-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_searchengine-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_searchengine-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_shipping-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_shipping-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_tienda
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_tienda-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_tracking-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_legacy_front/cs_legacy_pipe_build_tracking-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: cron_cs_track_t1envios&#xd;
+  >> TARGET: <string>cron_cs_track_t1envios</string>
+--------------------------------------------------
+
+JOB: cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: Cron: cron_cs_track_t1envios&#xd;
+  >> TARGET: Origen Git: Crones/cron_cs_track_t1envios/dev/*&#xd;
+  >> TARGET: Destino CSDEV01-2:  /var/www/sites/crones.dev.claroshop.com/web/cron_cs_track_t1envios/config/&#xd;
+  >> TARGET: <string>cron_cs_track_t1envios</string>
+--------------------------------------------------
+
+JOB: cs_new_back/cs_new_pipe_build_alibaba-pcl-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_merchant-center-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_merchant-center-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_ms-account-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_ms-account-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_ms-client-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_ms-client-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_orders-consumer-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+  >> TARGET: --dns=172.27.141.12 \
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_orders-producer-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+  >> TARGET: --dns=172.27.141.12 \
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: t1pagos-api.dev.claroshop-services.io --&gt; t1pagos-api.qa.claroshop-services.io --&gt; t1pagos-release.api.claroshop-services.io --&gt; t1pagos.api.claroshop-services.io&#xd;
+  >> TARGET: <string>t1pagos-api.dev.claroshop-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: cs_new_front/cs_new_pipe_build_t1pagos-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: t1pagos-api.dev.claroshop-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.claroshop-services.io/config/&#xd;
+  >> TARGET: Proyecto: t1pagos-api.qa.claroshop-services.io&#xd;
+  >> TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.claroshop-services.io/config/</description>
+  >> TARGET: <string>t1pagos-api.dev.claroshop-services.io</string>
+  >> TARGET: <string>t1pagos-api.qa.claroshop-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: STASH_NAME=&quot;sierra-t1envios&quot;
+  >> TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: pc_new_front/pc_new_pipe_build_contador-mrc-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: pc_new_front/pc_new_pipe_build_contador-mrc-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_ats
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_ats-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_axii-sears
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_axii-sears-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_pse-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto pse.adm-api.mrc-services.io para Backend Desarrollo y Qa.&#xd;
+  >> TARGET: <string>pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: <string>beta-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: <string>gamma-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;pse-admin-api.dev.mrc-services.io&apos;, &apos;beta-pse-admin-api.dev.mrc-services.io&apos;, &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el p
+  >> TARGET: case &apos;pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;pse-release.adm-api.mrc-services.io&apos;]
+  >> TARGET: case &apos;beta-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;pse-uat.adm-api.mrc-services.io&apos;]
+  >> TARGET: case &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;gamma-pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_pse-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto pse.adm-api.mrc-services.io backend en Dev.&#xd;
+  >> TARGET: Proyecto: pse-admin-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/pse-admin-api.dev.mrc-services.io/web/config/&#xd;
+  >> TARGET: Proyecto: beta-pse-admin-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/beta-pse-admin-api.dev.mrc-services.io/web/config/&#xd;
+  >> TARGET: Proyecto: gamma-pse-admin-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/gamma-pse-admin-api.dev.mrc-services.io/web/config/</description>
+  >> TARGET: <string>pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: <string>beta-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: <string>gamma-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;pse-admin-api.dev.mrc-services.io&apos;, &apos;beta-pse-admin-api.dev.mrc-services.io&apos;, &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Proyecto de
+  >> TARGET: case &apos;pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;pse-admin-api.dev.mrc-services.io/web/config/&quot;
+  >> TARGET: case &apos;beta-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;beta-pse-admin-api.dev.mrc-services.io/web/config/&quot;
+  >> TARGET: case &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;gamma-pse-admin-api.dev.mrc-services.io/web/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_reps-sears
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_back/se_legacy_pipe_build_reps-sears-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_back/test_sonar
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_credito-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto credito.api.mrc-services.io de Sears Frontend Desarrollo/Qa.&#xd;
+  >> TARGET: <string>credito-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;credito-api.dev.mrc-services.io&apos;],
+  >> TARGET: if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;credito-api.dev.mrc-services.io&quot; &amp;&amp; USERPARAM_GIT_BRANCH != &quot;master&quot; ) {
+  >> TARGET: case &apos;credito-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;credito-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;credito-release.api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_credito-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto credito.api.mrc-services.io Frontend en Dev/QA.&#xd;
+  >> TARGET: Proyecto: credito-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/credito-api.qa.mrc-services.io/config/&#xd;
+  >> TARGET: <string>credito-api.qa.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;credito-api.qa.mrc-services.io&apos;], description: &apos;Proyecto destino QA.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;credito-api.qa.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;credito-api.qa.mrc-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_mail-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto mail.api.mrc-services.io de Sears Frontend Desarrollo/Qa.&#xd;
+  >> TARGET: mail-api.dev.mrc-services.io --&gt; mail-api.qa.mrc-services.io --&gt; mail-release.api.mrc-services.io --&gt; mail.api.mrc-services.io&#xd;
+  >> TARGET: <string>mail-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;mail-api.dev.mrc-services.io&apos;],
+  >> TARGET: /*if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;mail-api.dev.mrc-services.io&quot; &amp;&amp; USERPARAM_GIT_BRANCH != &quot;master&quot; ) {
+  >> TARGET: case &apos;mail-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;mail-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;mail-release.api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_mail-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto mail.api.mrc-services.io Frontend en Dev/QA.&#xd;
+  >> TARGET: Proyecto: mail-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/mail-api.qa.mrc-services.io/config/&#xd;
+  >> TARGET: <string>mail-api.qa.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;mail-api.qa.mrc-services.io&apos;], description: &apos;Proyecto destino QA.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;mail-api.qa.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;mail-api.qa.mrc-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_products-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto products.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: products-api.dev.mrc-services.io --&gt; products-api.qa.mrc-services.io --&gt; products-release.api.mrc-services.io --&gt; products.api.mrc-services.io &#xd;
+  >> TARGET: <string>products-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;products-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;products-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;products-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;products-release.api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_products-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto products.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: products-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/products-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: products-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/products-api.qa.mrc-services.io/config/&#xd;
+  >> TARGET: <string>products-api.dev.mrc-services.io</string>
+  >> TARGET: <string>products-api.qa.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;products-api.dev.mrc-services.io&apos;, &apos;products-api.qa.mrc-services.io&apos;],
+  >> TARGET: case &apos;products-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;products-api.dev.mrc-services.io/config/&quot;
+  >> TARGET: case &apos;products-api.qa.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;products-api.qa.mrc-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_searchengine-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto searchengine.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: searchengine-api.dev.mrc-services.io --&gt; searchengine-api.qa.mrc-services.io --&gt; searchengine-release.api.mrc-services.io --&gt; searchengine.api.mrc-services.io&#xd;
+  >> TARGET: <string>searchengine-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;searchengine-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;searchengine-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;searchengine-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;searchengine-release.api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_searchengine-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto searchengine.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: searchengine-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/searchengine-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: searchengine-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/searchengine-api.qa.mrc-services.io/config/&#xd;
+  >> TARGET: <string>searchengine-api.dev.mrc-services.io</string>
+  >> TARGET: <string>searchengine-api.qa.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;searchengine-api.dev.mrc-services.io&apos;, &apos;searchengine-api.qa.mrc-services.io&apos;],
+  >> TARGET: case &apos;searchengine-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;searchengine-api.dev.mrc-services.io/config/&quot;
+  >> TARGET: case &apos;searchengine-api.qa.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;searchengine-api.qa.mrc-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_shipping-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto shipping.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: shipping-api.dev.mrc-services.io --&gt; shipping-api.qa.mrc-services.io --&gt; shipping-release.api.mrc-services.io --&gt; shipping.api.mrc-services.io &#xd;
+  >> TARGET: <string>shipping-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;shipping-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;shipping-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;shipping-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;shipping-release.api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_shipping-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto shipping.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: shipping-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/shipping-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: shipping-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/shipping-api.qa.mrc-services.io/config/&#xd;
+  >> TARGET: <string>shipping-api.dev.mrc-services.io</string>
+  >> TARGET: <string>shipping-api.qa.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;shipping-api.dev.mrc-services.io&apos;, &apos;shipping-api.qa.mrc-services.io&apos;],
+  >> TARGET: case &apos;shipping-api.dev.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;shipping-api.dev.mrc-services.io/config/&quot;
+  >> TARGET: case &apos;shipping-api.qa.mrc-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;shipping-api.qa.mrc-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_tienda
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_tienda-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_msa_front/pipe_mesaregalos-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_msa_front/se_msa_pipe_build_beta-mesa-regalos
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto beta-mesa-regalos.api.mrc-services.io para backend en desarrollo y qa.&#xd;
+  >> TARGET: <string>beta-mesa-regalos-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;beta-mesa-regalos-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)])
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+  >> TARGET: remoteDirectory: &quot;beta-mesa-regalos-api.dev.mrc-services.io/&quot;,
+--------------------------------------------------
+
+JOB: se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: cron_se_track_t1envios&#xd;
+  >> TARGET: <string>cron_se_track_t1envios</string>
+--------------------------------------------------
+
+JOB: se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: Cron: cron_se_track_t1envios&#xd;
+  >> TARGET: Origen Git: crones-sears/crones-sears/cron_se_track_t1envios/dev/*&#xd;
+  >> TARGET: Destino CSDEV01-2:  /var/www/sites/crones-axii-dev.sears.com.mx/web/cron_se_track_t1envios/config/&#xd;
+  >> TARGET: <string>cron_se_track_t1envios</string>
+--------------------------------------------------
+
+JOB: se_new_back/se_new_pipe_build_alibaba-pse-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: Tarea que ejecutarß el deploy del proyecto alibaba-pse.adm-api.mrc-services.io para Frontend Desarrollo.&#xd;
+  >> TARGET: alibaba-pse-admin-api.dev.mrc-services.io --&gt; alibaba-pse-release.adm-api.mrc-services.io --&gt; alibaba-pse.adm-api.mrc-services.io&#xd;
+  >> TARGET: <string>alibaba-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;alibaba-pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;alibaba-pse-release.adm-api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_new_back/se_new_pipe_build_marketplace-pse-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto marketplace-pse.adm-api.mrc-services.io para Frontend Desarrollo.&#xd;
+  >> TARGET: marketplace-pse-admin-api.dev.mrc-services.io --&gt; marketplace-pse-release.adm-api.mrc-services.io --&gt; marketplace-pse.adm-api.mrc-services.io&#xd;
+  >> TARGET: <string>marketplace-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;marketplace-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;marketplace-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;marketplace-pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;marketplace-pse-release.adm-api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_new_back/se_new_pipe_build_marketplace-pse-admin-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto marketplace-pse-admin.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: marketplace-pse-admin-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV02-2: /var/www/sites/marketplace-pse-admin-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: marketplace-pse-admin-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino: CSQAAMDIN02-1: /var/www/sites/marketplace-pse-admin-api.qa.mrc-services.io/config/</description>
+  >> TARGET: <string>marketplace-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: <string>marketplace-pse-admin-api.qa.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_back/testphp70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: Tarea que ejecutarß el deploy del proyecto alibaba-pse.adm-api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: alibaba-pse-admin-api.dev.mrc-services.io --&gt; alibaba-pse-admin-api.qa.mrc-services.io --&gt; alibaba-pse-release.adm-api.mrc-services.io --&gt; alibaba-pse.adm-api.mrc-services.io&#xd;
+  >> TARGET: <string>alibaba-pse-admin-api.dev.mrc-services.io</string>
+  >> TARGET: choice(choices: [&apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;alibaba-pse-admin-api.qa.mrc-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;alibaba-pse-release.adm-api.mrc-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_manager-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto manager.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: manager-api.dev.mrc-services.io --&gt; manager-api.qa.mrc-services.io --&gt; manager-release.api.mrc-services.io --&gt; manager.api.mrc-services.io&#xd;
+  >> TARGET: <string>manager-api.dev.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_marketplace-products-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto marketplace-products.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: marketplace-products-api.dev.mrc-services.io --&gt; marketplace-products-api.qa.mrc-services.io --&gt; marketplace-products-release.api.mrc-services.io --&gt; marketplace-products.api.mrc-services.io&
+  >> TARGET: <string>marketplace-products-api.dev.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_marketplace-products-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto marketplace-products.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: marketplace-products-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/marketplace-products-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: marketplace-products-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/marketplace-products-api.qa.mrc-services.io/config/</description>
+  >> TARGET: <string>marketplace-products-api.dev.mrc-services.io</string>
+  >> TARGET: <string>marketplace-products-api.qa.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_paypal-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto paypal.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: paypal-api.dev.mrc-services.io --&gt; paypal-api.qa.mrc-services.io --&gt; paypal-release.api.mrc-services.io --&gt; paypal.api.mrc-services.io&#xd;
+  >> TARGET: <string>paypal-api.dev.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_paypal-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto paypal.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: paypal-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/paypal-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: paypal-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/paypal-api.qa.mrc-services.io/config/</description>
+  >> TARGET: <string>paypal-api.dev.mrc-services.io</string>
+  >> TARGET: <string>paypal-api.qa.mrc-services.io</string>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_t1pagos-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: t1pagos-api.dev.mrc-services.io --&gt; t1pagos-api.qa.mrc-services.io --&gt; t1pagos-release.api.mrc-services.io --&gt; t1pagos.api.mrc-services.io&#xd;
+  >> TARGET: <string>t1pagos-api.dev.mrc-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: se_new_front/se_new_pipe_build_t1pagos-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: t1pagos-api.dev.mrc-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.mrc-services.io/config/&#xd;
+  >> TARGET: Proyecto: t1pagos-api.qa.mrc-services.io&#xd;
+  >> TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.mrc-services.io/config/</description>
+  >> TARGET: <string>t1pagos-api.dev.mrc-services.io</string>
+  >> TARGET: <string>t1pagos-api.qa.mrc-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: sears-ia-backend/sears-ia-backend_crones/sears-ia_pipe_build_backend_crones_php72
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sears-ia-backend/sears-ia_pipe_build_app-api-ia
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sears-ia-backend/sears-ia_pipe_build_app-cms-ia
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sears-ia-backend/sears-ia_pipe_build_app-credito-ia
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_ats-sanborns
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_ats-sanborns-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_axii-sanborns
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_axii-sanborns-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_psa-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_psa-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_reps-sanborns
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_back/sn_legacy_pipe_build_reps-sanborns-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_api-soap
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_delivery-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_delivery-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_libranda-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_libranda-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_producto-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_producto-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_shipping-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_shipping-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_tienda
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_legacy_front/sn_legacy_pipe_build_tienda-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: cron_sn_track_t1envios&#xd;
+  >> TARGET: <string>cron_sn_track_t1envios</string>
+--------------------------------------------------
+
+JOB: sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: Cron: cron_sn_track_t1envios&#xd;
+  >> TARGET: Origen Git: crones-sanborns/cron_sn_track_t1envios/dev/*&#xd;
+  >> TARGET: Destino CSDEV01-2:  /var/www/sites/crones-axii-dev.sanborns.com.mx/web/cron_sn_track_t1envios/config/&#xd;
+  >> TARGET: <string>cron_sn_track_t1envios</string>
+--------------------------------------------------
+
+JOB: sn_new_back/sn_new_pipe_build_axii-sanborns
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: sn_new_front/sn_new_pipe_build_t1pagos-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: t1pagos-api.dev.sn-services.io --&gt; t1pagos-api.qa.sn-services.io --&gt; t1pagos-release.api.sn-services.io --&gt; t1pagos.api.sn-services.io&#xd;
+  >> TARGET: <string>t1pagos-api.dev.sn-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: sn_new_front/sn_new_pipe_build_t1pagos-api-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: t1pagos-api.dev.sn-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.sn-services.io/config/&#xd;
+  >> TARGET: Proyecto: t1pagos-api.qa.sn-services.io&#xd;
+  >> TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.sn-services.io/config/</description>
+  >> TARGET: <string>t1pagos-api.dev.sn-services.io</string>
+  >> TARGET: <string>t1pagos-api.qa.sn-services.io</string>
+  >> TARGET: <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api-config.groovy</scriptPath>
+--------------------------------------------------
+
+JOB: t1c_new_back/t1c_new_pipe_build_concentrador-pedidos-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1c_new_back/t1c_new_pipe_build_milan-brands-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1c_new_back/t1c_new_pipe_build_phoenix-batch-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1c_new_back/t1c_new_pipe_build_venecia-channel-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1c_new_front/t1c_new_pipe_build_commerce-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1d_legacy_front/t1d_legacy_pipe_build_contador-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1d_legacy_front/t1d_legacy_pipe_build_contador-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: false
+--------------------------------------------------
+
+JOB: t1d_new_front/t1d_new_front_crones/t1d_new_pipe_build_front_crones_java8
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto admin.t1envios.com para Backend Desarrollo y Qa.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/admin_t1pagos.git&#xd;
+  >> TARGET: sierra-admin.dev.t1envios.com --&gt; release.admin.t1envios.com --&gt; admin.t1envios.com&#xd;
+  >> TARGET: <string>sierra-admin.dev.t1envios.com</string>
+  >> TARGET: env.requestExecJob = &quot;t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS&quot;
+  >> TARGET: subject: &quot;Promotion request: t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,
+  >> TARGET: SONAR_TAG=&quot;sierra-t1envios.back.t1e.legacy&quot;
+  >> TARGET: GIT_PROJECT=&apos;http://gitlab.dev.claroshop.com/claroshop/admin_t1pagos.git&apos;
+  >> TARGET: STASH_NAME=&quot;sierra-t1envios&quot;
+  >> TARGET: choice(choices: [&apos;sierra-admin.dev.t1envios.com&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;sierra-admin.dev.t1envios.com&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;sierra-admin.qa.t1envios.com&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;release.admin.t1envios.com&apos;]
+  >> TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto sierra-admin.dev.t1envios.com backend en Desarrollo.&#xd;
+  >> TARGET: Proyecto: sierra-admin.dev.t1envios.com&#xd;
+  >> TARGET: Origen Git:  admint1pagos/desarrollo/config/*&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/sierra-admin.dev.t1envios.com/config/&#xd;
+  >> TARGET: Proyecto: sierra-admin.qa.t1envios.com&#xd;
+  >> TARGET: Origen Git:  admint1pagos/qa/config/*&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/sierra-admin.qa.t1envios.com/config/&#xd;
+  >> TARGET: <string>sierra-admin.dev.t1envios.com</string>
+  >> TARGET: choice(choices: [&apos;sierra-admin.dev.t1envios.com&apos;, &apos;sierra-admin.dev.t1envios.com&apos;],
+  >> TARGET: case &apos;sierra-admin.dev.t1envios.com&apos;:
+  >> TARGET: LOCAL_DIR=&quot;admint1pagos/desarrollo/config/&quot;
+  >> TARGET: REMOTE_DIR=&quot;sierra-admin.dev.t1envios.com/config/&quot;
+  >> TARGET: case &apos;sierra-admin.qa.t1envios.com&apos;:
+  >> TARGET: LOCAL_DIR=&quot;admint1pagos/qa/config/&quot;
+  >> TARGET: REMOTE_DIR=&quot;sierra-admin.qa.t1envios.com/config/&quot;
+--------------------------------------------------
+
+JOB: t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;
+  >> TARGET: t1-admin-api.dev.t1envios-services.io --&gt; t1-release.adm-api.t1envios-services.io --&gt; t1.adm-api.t1envios-services.io&#xd;
+  >> TARGET: beta-t1-admin-api.dev.t1envios-services.io --&gt; t1-uat.adm-api.t1envios-services.io&#xd;
+  >> TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: <string>beta-t1-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos
+  >> TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;t1-admin-api.qa.t1envios-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-release.adm-api.t1envios-services.io&apos;]
+  >> TARGET: case &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-t1-admin-api.qa.t1envios-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-uat.adm-api.t1envios-services.io&apos;]
+  >> TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-config
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1.adm-api.t1envios-services.io backend en Desarrollo.&#xd;
+  >> TARGET: Proyecto: t1-admin-api.dev.t1envios-services.io&#xd;
+  >> TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1-admin-api.dev.t1envios-services.io/config/&#xd;
+  >> TARGET: Proyecto: t1-admin-api.qa.t1envios-services.io&#xd;
+  >> TARGET: Destino CSQAAMDIN02-1: /var/www/sites/t1-admin-api.qa.t1envios-services.io/config/&#xd;
+  >> TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: <string>t1-admin-api.qa.t1envios-services.io</string>
+  >> TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;t1-admin-api.qa.t1envios-services.io&apos;],
+  >> TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;t1-admin-api.dev.t1envios-services.io/config/&quot;
+  >> TARGET: case &apos;t1-admin-api.qa.t1envios-services.io&apos;:
+  >> TARGET: REMOTE_DIR=&quot;t1-admin-api.qa.t1envios-services.io/config/&quot;
+--------------------------------------------------
+
+JOB: t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-dead
+Type: WorkflowJob | SSH: true | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;
+  >> TARGET: t1-admin-api.dev.t1envios-services.io --&gt; t1-release.adm-api.t1envios-services.io --&gt; t1.adm-api.t1envios-services.io&#xd;
+  >> TARGET: beta-t1-admin-api.dev.t1envios-services.io --&gt; t1-uat.adm-api.t1envios-services.io&#xd;
+  >> TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: <string>beta-t1-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos
+  >> TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;t1-admin-api.qa.t1envios-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-release.adm-api.t1envios-services.io&apos;]
+  >> TARGET: case &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-t1-admin-api.qa.t1envios-services.io&quot;
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-uat.adm-api.t1envios-services.io&apos;]
+  >> TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_back_crones/t1e_new_pipe_build_contadores-reps-admin-cron
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto contadores-reps.adm-cron.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: contadores-reps-admin-cron.dev.t1envios-services.io ---&gt; contadores-reps-release.adm-cron.t1envios-services.io --&gt; contadores-reps.adm-cron.t1envios-services.io &#xd;
+  >> TARGET: <string>contadores-reps-admin-cron.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_99minutos-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto 99minutos-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: 99minutos-track-admin-dmn.dev.t1envios-services.io ---&gt; 99minutos-track.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>99minutos-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_ampm-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto ampm-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_ampm_track.git&#xd;
+  >> TARGET: ampm-track-admin-dmn.dev.t1envios-services.io ---&gt; ampm-track.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>ampm-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_dhl-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: dhl-admin-dmn.dev.t1envios-services.io ---&gt; dhl-release.adm-dmn.t1envios-services.io --&gt; dhl.adm-dmn.t1envios-services.io &#xd;
+  >> TARGET: <string>dhl-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_dhl-track-claroshop-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_claroshop.git&#xd;
+  >> TARGET: dhl-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-claroshop.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>dhl-track-claroshop-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_dhl-track-sanborns-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_sanborns.git&#xd;
+  >> TARGET: dhl-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-sanborns.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>dhl-track-sanborns-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_dhl-track-sears-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_claroshop.git&#xd;
+  >> TARGET: dhl-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-sears.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>dhl-track-sears-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_fedex-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: fedex-admin-dmn.dev.t1envios-services.io ---&gt; fedex-release.adm-dmn.t1envios-services.io --&gt; fedex.adm-dmn.t1envios-services.io &#xd;
+  >> TARGET: <string>fedex-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_fedex-track-claroshop-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_claroshop.git&#xd;
+  >> TARGET: fedex-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; -fedex-track-claroshop.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>fedex-track-claroshop-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_fedex-track-sanborns-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sanborns.git&#xd;
+  >> TARGET: fedex-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; fedex-track-sanborns.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>fedex-track-sanborns-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_fedex-track-sears-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sears.git&#xd;
+  >> TARGET: fedex-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; fedex-track-sears.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>fedex-track-sears-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_finanzas-sif-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto finanzas-sif.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: finanzas-sif-admin-dmn.dev.t1envios-services.io ---&gt; finanzas-sif-release.adm-dmn.t1envios-services.io --&gt; finanzas-sif.adm-dmn.t1envios-services.io &#xd;
+  >> TARGET: <string>finanzas-sif-admin-dmn.dev.t1envios-services.io</string>
+  >> TARGET: PROJECT=&quot;t1envios&quot;
+  >> TARGET: choice(choices: [&apos;finanzas-sif-admin-dmn.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;finanzas-sif-admin-dmn.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;finanzas-sif-release.adm-dmn.t1envios-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+  >> TARGET: -e MONGO_HOST_API_SIF=&quot;172.26.84.132&quot; \
+  >> TARGET: -e MONGO_URI_API_SIF=&quot;172.26.84.132:27020,172.26.84.132:27021&quot; \
+  >> TARGET: -e DB_MYSQL_T1ENVIOS_HOST=&quot;dbst1envios.dev.t1envios-services.io&quot; \
+  >> TARGET: -e DB_MYSQL_T1ENVIOS_USER=&quot;cront1envios&quot; \
+  >> TARGET: -e DB_MYSQL_T1ENVIOS_PASS=&quot;Cr0nT1EnvI0]&quot; \
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_fullfilment-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto fullfilment.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: fullfilment-admin-api.dev.t1envios-services.io ---&gt; fullfilment-release.adm-api.t1envios-services.io --&gt; fullfilment.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>fullfilment-admin-api.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_geotrack-admin
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto geotrack.admin.t1envios.com para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/admin_geotrack_t1envios-.git&#xd;
+  >> TARGET: geotrack-admin.dev.t1envios.com --&gt; geotrack.release.admin.t1envios.com --&gt; geotrack.admin.t1envios.com&#xd;
+  >> TARGET: <string>geotrack-admin.dev.t1envios.com</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_geotrack-admin-config
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto geotrack.admin.t1envios.com para Frontend Desarrollo y Qa. &#xd;
+  >> TARGET: Proyecto: geotrack-admin.dev.t1envios.com&#xd;
+  >> TARGET: Origen Git:  AdminGeotrackT1envios/desarollo/config/*&#xd;
+  >> TARGET: Destino CSDEV02-2: /var/www/sites/geotrack-admin.dev.t1envios.com/config/</description>
+  >> TARGET: <string>geotrack-admin.dev.t1envios.com</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_guias-masivas-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto guias-masivas.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/guias_masivas_t1envios.git&#xd;
+  >> TARGET: guias-masivas-admin-api.dev.t1envios-services.io ---&gt; guias-masivas-release.adm-api.t1envios-services.io --&gt; guias-masivas.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>guias-masivas-admin-api.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_lusail-template-processor-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto lusail-template-processor.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: lusail-template-processor-admin-dmn.dev.t1envios-services.io ---&gt; lusail-template-processor.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>lusail-template-processor-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_qualitypost-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto qualitypost-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: qualitypost-track-admin-dmn.dev.t1envios-services.io ---&gt; qualitypost-track-release.adm-dmn.t1envios-services.io --&gt; qualitypost-track.adm-dmn.t1envios-services.io &#xd;
+  >> TARGET: <string>qualitypost-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_redpack-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto redpack-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: redpack-track-admin-dmn.dev.t1envios-services.io ---&gt; redpack-track.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>redpack-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_reps-admin
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto reps.admin.t1envios.com para Backend Desarrollo.&#xd;
+  >> TARGET: reps-admin.dev.t1envios.com --&gt; reps.release.admin.t1envios.com --&gt; reps.admin.t1envios.com&#xd;
+  >> TARGET: <string>reps-admin.dev.t1envios.com</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_sif-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto sif.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: sif-admin-api.dev.t1envios-services.io ---&gt; sif-release.adm-api.t1envios-services.io --&gt; sif.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>sif-admin-api.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_sistema-financiero-interno-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto sistema-financiero-interno.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: sistema-financiero-interno-admin-dmn.dev.t1envios-services.io ---&gt; sistema-financiero-interno.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>sistema-financiero-interno-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_t1mw-bussiness-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1mw-bussiness.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;
+  >> TARGET: t1mw-bussiness-admin-api.dev.t1envios-services.io ---&gt; t1mw-bussiness-release.adm-api.t1envios-services.io --&gt; t1mw-bussiness.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>t1mw-bussiness-admin-api.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_tookan-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: tookan-track-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-release.adm-dmn.t1envios-services.io --&gt; tookan-track.adm-dmn.t1envios-services.io &#xd;
+  >> TARGET: <string>tookan-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_tookan-track-claroshop-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_claroshop.git&#xd;
+  >> TARGET: tookan-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-claroshop.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>tookan-track-claroshop-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_tookan-track-sanborns-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sanborns.git&#xd;
+  >> TARGET: tookan-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-sanborns.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>tookan-track-sanborns-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_tookan-track-sears-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sears.git&#xd;
+  >> TARGET: tookan-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-sears.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>tookan-track-sears-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_track-fallidos-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto track-fallidos.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_track_fallidos.git&#xd;
+  >> TARGET: track-fallidos-admin-dmn.dev.t1envios-services.io ---&gt; track-fallidos.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>track-fallidos-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_ups-track-admin-dmn
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto ups-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/crones/demonio_t1envios_ups_track.git&#xd;
+  >> TARGET: ups-track-admin-dmn.dev.t1envios-services.io ---&gt; ups-track.adm-dmn.t1envios-services.io&#xd;
+  >> TARGET: <string>ups-track-admin-dmn.dev.t1envios-services.io</string>
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_webhook-maestro-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto webhook-maestro.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: http://gitlab.dev.claroshop.com/claroshop/webhook_maestro_t1envios.git&#xd;
+  >> TARGET: webhook-maestro-admin-api.dev.t1envios-services.io ---&gt; webhook-maestro-release.adm-api.t1envios-services.io --&gt; webhook-maestro.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>webhook-maestro-admin-api.dev.t1envios-services.io</string>
+  >> TARGET: GIT_URL=&quot;http://gitlab.dev.claroshop.com/claroshop/webhook_maestro_t1envios.git&quot;
+  >> TARGET: PROJECT=&quot;t1envios&quot;
+  >> TARGET: choice(choices: [&apos;webhook-maestro-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)
+  >> TARGET: case &apos;webhook-maestro-admin-api.dev.t1envios-services.io&apos;:
+  >> TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;webhook-maestro-release.adm-api.t1envios-services.io&apos;]
+  >> TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1
+  >> TARGET: -e MONGO_URI_ATLAS=&quot;mongodb://apit1envios:wrUnb2mRCplsv7CC8dHm@shipping-hub-shard-00-00.yrwn7.mongodb.net:27017,shipping-hub-shard-00-01.yrwn7.mongodb.net:27017,shipping-hub-shard-00-02.yrwn7.mon
+  >> TARGET: -e MONGO_HOST_T1WH=&quot;172.26.84.132&quot; \
+--------------------------------------------------
+
+JOB: t1e_new_back/t1e_new_pipe_build_zpl-admin-api
+Type: WorkflowJob | SSH: false | TargetIPs: true
+  >> CRED_ID: cc-infracode-sophia-mrk-i
+  >> CONFIG_VER: 2
+  >> TARGET: <description>Tarea que ejecutarß el deploy del proyecto zpl.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;
+  >> TARGET: zpl-admin-api.dev.t1envios-services.io ---&gt; zpl-release.adm-api.t1envios-services.io --&gt; zpl.adm-api.t1envios-services.io &#xd;
+  >> TARGET: <string>zpl-admin-api.dev.t1envios-services.io</string>
+--------------------------------------------------
+Result: [{job=_trash/amp_hackathon/cs_amp, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=_trash/connect_docker_2_api_tlsauth, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=_trash/cs_msa_front/cs_msa_pipe_caja-pagos-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=_trash/cs_msa_front/cs_msa_pipe_caja-pagos-front, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=_trash/cs_msa_pipe_caja-pagos-api-test, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=_trash/cs_test_remote_exec_rm, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=_trash/test-ignores-complete, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=_trash/test_ignores, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=_trash/test_task, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=_trash/var_scope-test, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=automated-qa/newman-test, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: //#http_proxy=http://172.27.141.25:8080, TARGET: //#https_proxy=http://172.27.141.25:8080, TARGET: //#no_proxy=172.27.140.150,172.27.140.134,172.27.140.148,gitlab.dev.claroshop.com,172.27.141.5,nexus.dev.claroshop.com,*.dev.claroshop.com,*.qa.claroshop.com]}, {job=cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php54-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_back_crones/cs_legacy_pipe_build_back_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_alfaapicomerciopedidos, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_ats, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_ats-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_axii-claroshop, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_axii-claroshop-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_comerciopedidos-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_comerciosselfservice-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_pcl-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_pot, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_reps-claroshop, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_reps-claroshop-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_selfservice, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_selfservice-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_back/cs_legacy_pipe_build_t1-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_back/cs_legacy_pipe_build_t1-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_build_app, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_build_app-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php54-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_front_crones/cs_legacy_pipe_build_front_crones_php72-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_app-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_app-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_authms-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_authms-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_caja-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_caja-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_caja-front, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_caja-front-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_carrito, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_carrito-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_cart-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_claroshop-v1-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_facturams-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_facturams-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_landing-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_landing-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_mail-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_mail-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_monedero-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_monedero-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_producto-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_producto-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_recargas-claroshop-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_searchengine-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_searchengine-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_shipping-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_shipping-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_tienda, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_tienda-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_legacy_front/cs_legacy_pipe_build_tracking-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_legacy_front/cs_legacy_pipe_build_tracking-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: cron_cs_track_t1envios&#xd;, TARGET: <string>cron_cs_track_t1envios</string>]}, {job=cs_new_back/cs_new_back_crones/cs_new_pipe_build_back_crones_php72-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: Cron: cron_cs_track_t1envios&#xd;, TARGET: Origen Git: Crones/cron_cs_track_t1envios/dev/*&#xd;, TARGET: Destino CSDEV01-2:  /var/www/sites/crones.dev.claroshop.com/web/cron_cs_track_t1envios/config/&#xd;, TARGET: <string>cron_cs_track_t1envios</string>]}, {job=cs_new_back/cs_new_pipe_build_alibaba-pcl-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_new_front/cs_new_pipe_build_merchant-center-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_new_front/cs_new_pipe_build_merchant-center-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_new_front/cs_new_pipe_build_ms-account-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_new_front/cs_new_pipe_build_ms-account-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_new_front/cs_new_pipe_build_ms-client-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=cs_new_front/cs_new_pipe_build_ms-client-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=cs_new_front/cs_new_pipe_build_orders-consumer-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1, TARGET: --dns=172.27.141.12 \]}, {job=cs_new_front/cs_new_pipe_build_orders-producer-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1, TARGET: --dns=172.27.141.12 \]}, {job=cs_new_front/cs_new_pipe_build_t1pagos-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: t1pagos-api.dev.claroshop-services.io --&gt; t1pagos-api.qa.claroshop-services.io --&gt; t1pagos-release.api.claroshop-services.io --&gt; t1pagos.api.claroshop-services.io&#xd;, TARGET: <string>t1pagos-api.dev.claroshop-services.io</string>, TARGET: <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api.groovy</scriptPath>]}, {job=cs_new_front/cs_new_pipe_build_t1pagos-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.claroshop-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: t1pagos-api.dev.claroshop-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.claroshop-services.io/config/&#xd;, TARGET: Proyecto: t1pagos-api.qa.claroshop-services.io&#xd;, TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.claroshop-services.io/config/</description>, TARGET: <string>t1pagos-api.dev.claroshop-services.io</string>, TARGET: <string>t1pagos-api.qa.claroshop-services.io</string>, TARGET: <scriptPath>gs/dev/cs_new_front/cs_new_pipe_build_t1pagos-api-config.groovy</scriptPath>]}, {job=pc_legacy_back/pc_legacy_pipe_build_pc-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=pc_legacy_back/pc_legacy_pipe_build_pc-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: STASH_NAME=&quot;sierra-t1envios&quot;, TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=pc_legacy_back/pc_legacy_pipe_build_pc-plataforma-claro-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=pc_new_front/pc_new_front_crones/pc_new_pipe_build_front_crones_java8-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=pc_new_front/pc_new_pipe_build_contador-mrc-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=pc_new_front/pc_new_pipe_build_contador-mrc-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_back/se_legacy_back_crones/se_legacy_pipe_build_back_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_back/se_legacy_pipe_build_ats, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_back/se_legacy_pipe_build_ats-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_back/se_legacy_pipe_build_axii-sears, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_back/se_legacy_pipe_build_axii-sears-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_back/se_legacy_pipe_build_pse-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto pse.adm-api.mrc-services.io para Backend Desarrollo y Qa.&#xd;, TARGET: <string>pse-admin-api.dev.mrc-services.io</string>, TARGET: <string>beta-pse-admin-api.dev.mrc-services.io</string>, TARGET: <string>gamma-pse-admin-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;pse-admin-api.dev.mrc-services.io&apos;, &apos;beta-pse-admin-api.dev.mrc-services.io&apos;, &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el p, TARGET: case &apos;pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;pse-admin-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;pse-release.adm-api.mrc-services.io&apos;], TARGET: case &apos;beta-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-pse-admin-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;pse-uat.adm-api.mrc-services.io&apos;], TARGET: case &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;gamma-pse-admin-api.qa.mrc-services.io&quot;, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_back/se_legacy_pipe_build_pse-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto pse.adm-api.mrc-services.io backend en Dev.&#xd;, TARGET: Proyecto: pse-admin-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/pse-admin-api.dev.mrc-services.io/web/config/&#xd;, TARGET: Proyecto: beta-pse-admin-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/beta-pse-admin-api.dev.mrc-services.io/web/config/&#xd;, TARGET: Proyecto: gamma-pse-admin-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2:  /var/www/sites/gamma-pse-admin-api.dev.mrc-services.io/web/config/</description>, TARGET: <string>pse-admin-api.dev.mrc-services.io</string>, TARGET: <string>beta-pse-admin-api.dev.mrc-services.io</string>, TARGET: <string>gamma-pse-admin-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;pse-admin-api.dev.mrc-services.io&apos;, &apos;beta-pse-admin-api.dev.mrc-services.io&apos;, &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Proyecto de, TARGET: case &apos;pse-admin-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;pse-admin-api.dev.mrc-services.io/web/config/&quot;, TARGET: case &apos;beta-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;beta-pse-admin-api.dev.mrc-services.io/web/config/&quot;, TARGET: case &apos;gamma-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;gamma-pse-admin-api.dev.mrc-services.io/web/config/&quot;]}, {job=se_legacy_back/se_legacy_pipe_build_reps-sears, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_back/se_legacy_pipe_build_reps-sears-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_back/test_sonar, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_front_crones/se_legacy_pipe_build_front_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_front/se_legacy_pipe_build_credito-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto credito.api.mrc-services.io de Sears Frontend Desarrollo/Qa.&#xd;, TARGET: <string>credito-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;credito-api.dev.mrc-services.io&apos;],, TARGET: if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;credito-api.dev.mrc-services.io&quot; &amp;&amp; USERPARAM_GIT_BRANCH != &quot;master&quot; ) {, TARGET: case &apos;credito-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;credito-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;credito-release.api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_credito-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto credito.api.mrc-services.io Frontend en Dev/QA.&#xd;, TARGET: Proyecto: credito-api.qa.mrc-services.io&#xd;, TARGET: Destino CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/credito-api.qa.mrc-services.io/config/&#xd;, TARGET: <string>credito-api.qa.mrc-services.io</string>, TARGET: choice(choices: [&apos;credito-api.qa.mrc-services.io&apos;], description: &apos;Proyecto destino QA.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;credito-api.qa.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;credito-api.qa.mrc-services.io/config/&quot;]}, {job=se_legacy_front/se_legacy_pipe_build_mail-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto mail.api.mrc-services.io de Sears Frontend Desarrollo/Qa.&#xd;, TARGET: mail-api.dev.mrc-services.io --&gt; mail-api.qa.mrc-services.io --&gt; mail-release.api.mrc-services.io --&gt; mail.api.mrc-services.io&#xd;, TARGET: <string>mail-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;mail-api.dev.mrc-services.io&apos;],, TARGET: /*if (USERPARAM_DEPLOY_ENVIRONMENT == &quot;mail-api.dev.mrc-services.io&quot; &amp;&amp; USERPARAM_GIT_BRANCH != &quot;master&quot; ) {, TARGET: case &apos;mail-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;mail-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;mail-release.api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_mail-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto mail.api.mrc-services.io Frontend en Dev/QA.&#xd;, TARGET: Proyecto: mail-api.qa.mrc-services.io&#xd;, TARGET: Destino CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/mail-api.qa.mrc-services.io/config/&#xd;, TARGET: <string>mail-api.qa.mrc-services.io</string>, TARGET: choice(choices: [&apos;mail-api.qa.mrc-services.io&apos;], description: &apos;Proyecto destino QA.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;mail-api.qa.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;mail-api.qa.mrc-services.io/config/&quot;]}, {job=se_legacy_front/se_legacy_pipe_build_products-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto products.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: products-api.dev.mrc-services.io --&gt; products-api.qa.mrc-services.io --&gt; products-release.api.mrc-services.io --&gt; products.api.mrc-services.io &#xd;, TARGET: <string>products-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;products-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;products-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;products-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;products-release.api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_products-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto products.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: products-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/products-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: products-api.qa.mrc-services.io&#xd;, TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/products-api.qa.mrc-services.io/config/&#xd;, TARGET: <string>products-api.dev.mrc-services.io</string>, TARGET: <string>products-api.qa.mrc-services.io</string>, TARGET: choice(choices: [&apos;products-api.dev.mrc-services.io&apos;, &apos;products-api.qa.mrc-services.io&apos;],, TARGET: case &apos;products-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;products-api.dev.mrc-services.io/config/&quot;, TARGET: case &apos;products-api.qa.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;products-api.qa.mrc-services.io/config/&quot;]}, {job=se_legacy_front/se_legacy_pipe_build_searchengine-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto searchengine.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: searchengine-api.dev.mrc-services.io --&gt; searchengine-api.qa.mrc-services.io --&gt; searchengine-release.api.mrc-services.io --&gt; searchengine.api.mrc-services.io&#xd;, TARGET: <string>searchengine-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;searchengine-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;searchengine-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;searchengine-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;searchengine-release.api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_searchengine-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto searchengine.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: searchengine-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/searchengine-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: searchengine-api.qa.mrc-services.io&#xd;, TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/searchengine-api.qa.mrc-services.io/config/&#xd;, TARGET: <string>searchengine-api.dev.mrc-services.io</string>, TARGET: <string>searchengine-api.qa.mrc-services.io</string>, TARGET: choice(choices: [&apos;searchengine-api.dev.mrc-services.io&apos;, &apos;searchengine-api.qa.mrc-services.io&apos;],, TARGET: case &apos;searchengine-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;searchengine-api.dev.mrc-services.io/config/&quot;, TARGET: case &apos;searchengine-api.qa.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;searchengine-api.qa.mrc-services.io/config/&quot;]}, {job=se_legacy_front/se_legacy_pipe_build_shipping-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto shipping.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: shipping-api.dev.mrc-services.io --&gt; shipping-api.qa.mrc-services.io --&gt; shipping-release.api.mrc-services.io --&gt; shipping.api.mrc-services.io &#xd;, TARGET: <string>shipping-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;shipping-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;shipping-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;shipping-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;shipping-release.api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_shipping-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto shipping.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: shipping-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/shipping-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: shipping-api.qa.mrc-services.io&#xd;, TARGET: Destino CSQAAPP03-1, CSQAAPP04-1: /var/www/sites/shipping-api.qa.mrc-services.io/config/&#xd;, TARGET: <string>shipping-api.dev.mrc-services.io</string>, TARGET: <string>shipping-api.qa.mrc-services.io</string>, TARGET: choice(choices: [&apos;shipping-api.dev.mrc-services.io&apos;, &apos;shipping-api.qa.mrc-services.io&apos;],, TARGET: case &apos;shipping-api.dev.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;shipping-api.dev.mrc-services.io/config/&quot;, TARGET: case &apos;shipping-api.qa.mrc-services.io&apos;:, TARGET: REMOTE_DIR=&quot;shipping-api.qa.mrc-services.io/config/&quot;]}, {job=se_legacy_front/se_legacy_pipe_build_tienda, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_tienda-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_legacy_front/se_legacy_pipe_build_wap-mesa-regalos-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_msa_front/pipe_mesaregalos-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_msa_front/se_msa_pipe_build_beta-mesa-regalos, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto beta-mesa-regalos.api.mrc-services.io para backend en desarrollo y qa.&#xd;, TARGET: <string>beta-mesa-regalos-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;beta-mesa-regalos-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;)]), TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1, TARGET: remoteDirectory: &quot;beta-mesa-regalos-api.dev.mrc-services.io/&quot;,]}, {job=se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: cron_se_track_t1envios&#xd;, TARGET: <string>cron_se_track_t1envios</string>]}, {job=se_new_back/se_new_back_crones/se_new_pipe_build_back_crones_php72-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: Cron: cron_se_track_t1envios&#xd;, TARGET: Origen Git: crones-sears/crones-sears/cron_se_track_t1envios/dev/*&#xd;, TARGET: Destino CSDEV01-2:  /var/www/sites/crones-axii-dev.sears.com.mx/web/cron_se_track_t1envios/config/&#xd;, TARGET: <string>cron_se_track_t1envios</string>]}, {job=se_new_back/se_new_pipe_build_alibaba-pse-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: Tarea que ejecutarß el deploy del proyecto alibaba-pse.adm-api.mrc-services.io para Frontend Desarrollo.&#xd;, TARGET: alibaba-pse-admin-api.dev.mrc-services.io --&gt; alibaba-pse-release.adm-api.mrc-services.io --&gt; alibaba-pse.adm-api.mrc-services.io&#xd;, TARGET: <string>alibaba-pse-admin-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;alibaba-pse-admin-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;alibaba-pse-release.adm-api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_new_back/se_new_pipe_build_marketplace-pse-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto marketplace-pse.adm-api.mrc-services.io para Frontend Desarrollo.&#xd;, TARGET: marketplace-pse-admin-api.dev.mrc-services.io --&gt; marketplace-pse-release.adm-api.mrc-services.io --&gt; marketplace-pse.adm-api.mrc-services.io&#xd;, TARGET: <string>marketplace-pse-admin-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;marketplace-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;marketplace-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;marketplace-pse-admin-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;marketplace-pse-release.adm-api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_new_back/se_new_pipe_build_marketplace-pse-admin-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto marketplace-pse-admin.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: marketplace-pse-admin-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV02-2: /var/www/sites/marketplace-pse-admin-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: marketplace-pse-admin-api.qa.mrc-services.io&#xd;, TARGET: Destino: CSQAAMDIN02-1: /var/www/sites/marketplace-pse-admin-api.qa.mrc-services.io/config/</description>, TARGET: <string>marketplace-pse-admin-api.dev.mrc-services.io</string>, TARGET: <string>marketplace-pse-admin-api.qa.mrc-services.io</string>]}, {job=se_new_back/testphp70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: Tarea que ejecutarß el deploy del proyecto alibaba-pse.adm-api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: alibaba-pse-admin-api.dev.mrc-services.io --&gt; alibaba-pse-admin-api.qa.mrc-services.io --&gt; alibaba-pse-release.adm-api.mrc-services.io --&gt; alibaba-pse.adm-api.mrc-services.io&#xd;, TARGET: <string>alibaba-pse-admin-api.dev.mrc-services.io</string>, TARGET: choice(choices: [&apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;alibaba-pse-admin-api.dev.mrc-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;alibaba-pse-admin-api.qa.mrc-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;alibaba-pse-release.adm-api.mrc-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=se_new_front/se_new_pipe_build_manager-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto manager.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: manager-api.dev.mrc-services.io --&gt; manager-api.qa.mrc-services.io --&gt; manager-release.api.mrc-services.io --&gt; manager.api.mrc-services.io&#xd;, TARGET: <string>manager-api.dev.mrc-services.io</string>]}, {job=se_new_front/se_new_pipe_build_marketplace-products-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto marketplace-products.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: marketplace-products-api.dev.mrc-services.io --&gt; marketplace-products-api.qa.mrc-services.io --&gt; marketplace-products-release.api.mrc-services.io --&gt; marketplace-products.api.mrc-services.io&, TARGET: <string>marketplace-products-api.dev.mrc-services.io</string>]}, {job=se_new_front/se_new_pipe_build_marketplace-products-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto marketplace-products.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: marketplace-products-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/marketplace-products-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: marketplace-products-api.qa.mrc-services.io&#xd;, TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/marketplace-products-api.qa.mrc-services.io/config/</description>, TARGET: <string>marketplace-products-api.dev.mrc-services.io</string>, TARGET: <string>marketplace-products-api.qa.mrc-services.io</string>]}, {job=se_new_front/se_new_pipe_build_paypal-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto paypal.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: paypal-api.dev.mrc-services.io --&gt; paypal-api.qa.mrc-services.io --&gt; paypal-release.api.mrc-services.io --&gt; paypal.api.mrc-services.io&#xd;, TARGET: <string>paypal-api.dev.mrc-services.io</string>]}, {job=se_new_front/se_new_pipe_build_paypal-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto paypal.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: paypal-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/paypal-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: paypal-api.qa.mrc-services.io&#xd;, TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/paypal-api.qa.mrc-services.io/config/</description>, TARGET: <string>paypal-api.dev.mrc-services.io</string>, TARGET: <string>paypal-api.qa.mrc-services.io</string>]}, {job=se_new_front/se_new_pipe_build_t1pagos-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: t1pagos-api.dev.mrc-services.io --&gt; t1pagos-api.qa.mrc-services.io --&gt; t1pagos-release.api.mrc-services.io --&gt; t1pagos.api.mrc-services.io&#xd;, TARGET: <string>t1pagos-api.dev.mrc-services.io</string>, TARGET: <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api.groovy</scriptPath>]}, {job=se_new_front/se_new_pipe_build_t1pagos-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.mrc-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: t1pagos-api.dev.mrc-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.mrc-services.io/config/&#xd;, TARGET: Proyecto: t1pagos-api.qa.mrc-services.io&#xd;, TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.mrc-services.io/config/</description>, TARGET: <string>t1pagos-api.dev.mrc-services.io</string>, TARGET: <string>t1pagos-api.qa.mrc-services.io</string>, TARGET: <scriptPath>gs/dev/se_new_front/se_new_pipe_build_t1pagos-api-config.groovy</scriptPath>]}, {job=sears-ia-backend/sears-ia-backend_crones/sears-ia_pipe_build_backend_crones_php72, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sears-ia-backend/sears-ia_pipe_build_app-api-ia, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sears-ia-backend/sears-ia_pipe_build_app-cms-ia, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sears-ia-backend/sears-ia_pipe_build_app-credito-ia, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_back_crones/sn_legacy_pipe_build_back_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_back/sn_legacy_pipe_build_ats-sanborns, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_pipe_build_ats-sanborns-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_back/sn_legacy_pipe_build_axii-sanborns, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_pipe_build_axii-sanborns-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_back/sn_legacy_pipe_build_psa-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_pipe_build_psa-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_back/sn_legacy_pipe_build_reps-sanborns, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_back/sn_legacy_pipe_build_reps-sanborns-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_front_crones/sn_legacy_pipe_build_front_crones_php70-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_pipe_build_api-soap, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_delivery-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_delivery-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_pipe_build_libranda-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_libranda-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_pipe_build_producto-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_producto-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_pipe_build_shipping-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_shipping-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_legacy_front/sn_legacy_pipe_build_tienda, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_legacy_front/sn_legacy_pipe_build_tienda-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: cron_sn_track_t1envios&#xd;, TARGET: <string>cron_sn_track_t1envios</string>]}, {job=sn_new_back/sn_new_back_crones/sn_new_pipe_build_back_crones_php72-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: Cron: cron_sn_track_t1envios&#xd;, TARGET: Origen Git: crones-sanborns/cron_sn_track_t1envios/dev/*&#xd;, TARGET: Destino CSDEV01-2:  /var/www/sites/crones-axii-dev.sanborns.com.mx/web/cron_sn_track_t1envios/config/&#xd;, TARGET: <string>cron_sn_track_t1envios</string>]}, {job=sn_new_back/sn_new_pipe_build_axii-sanborns, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=sn_new_front/sn_new_pipe_build_t1pagos-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: t1pagos-api.dev.sn-services.io --&gt; t1pagos-api.qa.sn-services.io --&gt; t1pagos-release.api.sn-services.io --&gt; t1pagos.api.sn-services.io&#xd;, TARGET: <string>t1pagos-api.dev.sn-services.io</string>, TARGET: <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api.groovy</scriptPath>]}, {job=sn_new_front/sn_new_pipe_build_t1pagos-api-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1pagos.api.sn-services.io para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: t1pagos-api.dev.sn-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1pagos-api.dev.sn-services.io/config/&#xd;, TARGET: Proyecto: t1pagos-api.qa.sn-services.io&#xd;, TARGET: Destino: CSQAAPP03-1 CSQAAPP04-1: /var/www/sites/t1pagos-api.qa.sn-services.io/config/</description>, TARGET: <string>t1pagos-api.dev.sn-services.io</string>, TARGET: <string>t1pagos-api.qa.sn-services.io</string>, TARGET: <scriptPath>gs/dev/sn_new_front/sn_new_pipe_build_t1pagos-api-config.groovy</scriptPath>]}, {job=t1c_new_back/t1c_new_pipe_build_concentrador-pedidos-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1c_new_back/t1c_new_pipe_build_milan-brands-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1c_new_back/t1c_new_pipe_build_phoenix-batch-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1c_new_back/t1c_new_pipe_build_venecia-channel-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1c_new_front/t1c_new_pipe_build_commerce-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1d_legacy_front/t1d_legacy_pipe_build_contador-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1d_legacy_front/t1d_legacy_pipe_build_contador-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=false, matches=[]}, {job=t1d_new_front/t1d_new_front_crones/t1d_new_pipe_build_front_crones_java8, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: //withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto admin.t1envios.com para Backend Desarrollo y Qa.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/admin_t1pagos.git&#xd;, TARGET: sierra-admin.dev.t1envios.com --&gt; release.admin.t1envios.com --&gt; admin.t1envios.com&#xd;, TARGET: <string>sierra-admin.dev.t1envios.com</string>, TARGET: env.requestExecJob = &quot;t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS&quot;, TARGET: subject: &quot;Promotion request: t1e_legacy_back/pipe_sierra-t1envios AWS SERVERS:${artifactObject}:${BUILD_NUMBER}&quot;,, TARGET: SONAR_TAG=&quot;sierra-t1envios.back.t1e.legacy&quot;, TARGET: GIT_PROJECT=&apos;http://gitlab.dev.claroshop.com/claroshop/admin_t1pagos.git&apos;, TARGET: STASH_NAME=&quot;sierra-t1envios&quot;, TARGET: choice(choices: [&apos;sierra-admin.dev.t1envios.com&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;sierra-admin.dev.t1envios.com&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;sierra-admin.qa.t1envios.com&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;release.admin.t1envios.com&apos;], TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1e_legacy_back/t1e_legacy_pipe_build_sierra-t1envios-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto sierra-admin.dev.t1envios.com backend en Desarrollo.&#xd;, TARGET: Proyecto: sierra-admin.dev.t1envios.com&#xd;, TARGET: Origen Git:  admint1pagos/desarrollo/config/*&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/sierra-admin.dev.t1envios.com/config/&#xd;, TARGET: Proyecto: sierra-admin.qa.t1envios.com&#xd;, TARGET: Origen Git:  admint1pagos/qa/config/*&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/sierra-admin.qa.t1envios.com/config/&#xd;, TARGET: <string>sierra-admin.dev.t1envios.com</string>, TARGET: choice(choices: [&apos;sierra-admin.dev.t1envios.com&apos;, &apos;sierra-admin.dev.t1envios.com&apos;],, TARGET: case &apos;sierra-admin.dev.t1envios.com&apos;:, TARGET: LOCAL_DIR=&quot;admint1pagos/desarrollo/config/&quot;, TARGET: REMOTE_DIR=&quot;sierra-admin.dev.t1envios.com/config/&quot;, TARGET: case &apos;sierra-admin.qa.t1envios.com&apos;:, TARGET: LOCAL_DIR=&quot;admint1pagos/qa/config/&quot;, TARGET: REMOTE_DIR=&quot;sierra-admin.qa.t1envios.com/config/&quot;]}, {job=t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;, TARGET: t1-admin-api.dev.t1envios-services.io --&gt; t1-release.adm-api.t1envios-services.io --&gt; t1.adm-api.t1envios-services.io&#xd;, TARGET: beta-t1-admin-api.dev.t1envios-services.io --&gt; t1-uat.adm-api.t1envios-services.io&#xd;, TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>, TARGET: <string>beta-t1-admin-api.dev.t1envios-services.io</string>, TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos, TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;t1-admin-api.qa.t1envios-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-release.adm-api.t1envios-services.io&apos;], TARGET: case &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-t1-admin-api.qa.t1envios-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-uat.adm-api.t1envios-services.io&apos;], TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-config, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto t1.adm-api.t1envios-services.io backend en Desarrollo.&#xd;, TARGET: Proyecto: t1-admin-api.dev.t1envios-services.io&#xd;, TARGET: Destino CSDEV01-2 CSDEV02-2: /var/www/sites/t1-admin-api.dev.t1envios-services.io/config/&#xd;, TARGET: Proyecto: t1-admin-api.qa.t1envios-services.io&#xd;, TARGET: Destino CSQAAMDIN02-1: /var/www/sites/t1-admin-api.qa.t1envios-services.io/config/&#xd;, TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>, TARGET: <string>t1-admin-api.qa.t1envios-services.io</string>, TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;t1-admin-api.qa.t1envios-services.io&apos;],, TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:, TARGET: REMOTE_DIR=&quot;t1-admin-api.dev.t1envios-services.io/config/&quot;, TARGET: case &apos;t1-admin-api.qa.t1envios-services.io&apos;:, TARGET: REMOTE_DIR=&quot;t1-admin-api.qa.t1envios-services.io/config/&quot;]}, {job=t1e_legacy_back/t1e_legacy_pipe_build_t1-admin-api-dead, type=WorkflowJob, hasSSH=true, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;, TARGET: t1-admin-api.dev.t1envios-services.io --&gt; t1-release.adm-api.t1envios-services.io --&gt; t1.adm-api.t1envios-services.io&#xd;, TARGET: beta-t1-admin-api.dev.t1envios-services.io --&gt; t1-uat.adm-api.t1envios-services.io&#xd;, TARGET: <string>t1-admin-api.dev.t1envios-services.io</string>, TARGET: <string>beta-t1-admin-api.dev.t1envios-services.io</string>, TARGET: choice(choices: [&apos;t1-admin-api.dev.t1envios-services.io&apos;, &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos, TARGET: case &apos;t1-admin-api.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;t1-admin-api.qa.t1envios-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-release.adm-api.t1envios-services.io&apos;], TARGET: case &apos;beta-t1-admin-api.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_QA = &quot;beta-t1-admin-api.qa.t1envios-services.io&quot;, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;t1-uat.adm-api.t1envios-services.io&apos;], TARGET: ls -latrh /var/cache/containers/php72-rc1/php-fpm/admint1envios/bootstrap/cache/ /var/cache/containers/php72-rc1/php-fpm/t1envios/bootstrap/cache/ &amp;&amp; remove.twig.cache &amp;&amp; ls -latrh /va, TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1]}, {job=t1e_new_back/t1e_new_back_crones/t1e_new_pipe_build_contadores-reps-admin-cron, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto contadores-reps.adm-cron.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: contadores-reps-admin-cron.dev.t1envios-services.io ---&gt; contadores-reps-release.adm-cron.t1envios-services.io --&gt; contadores-reps.adm-cron.t1envios-services.io &#xd;, TARGET: <string>contadores-reps-admin-cron.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_99minutos-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto 99minutos-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: 99minutos-track-admin-dmn.dev.t1envios-services.io ---&gt; 99minutos-track.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>99minutos-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_ampm-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto ampm-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_ampm_track.git&#xd;, TARGET: ampm-track-admin-dmn.dev.t1envios-services.io ---&gt; ampm-track.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>ampm-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_dhl-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: dhl-admin-dmn.dev.t1envios-services.io ---&gt; dhl-release.adm-dmn.t1envios-services.io --&gt; dhl.adm-dmn.t1envios-services.io &#xd;, TARGET: <string>dhl-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_dhl-track-claroshop-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_claroshop.git&#xd;, TARGET: dhl-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-claroshop.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>dhl-track-claroshop-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_dhl-track-sanborns-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_sanborns.git&#xd;, TARGET: dhl-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-sanborns.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>dhl-track-sanborns-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_dhl-track-sears-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto dhl-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_dhl_track_claroshop.git&#xd;, TARGET: dhl-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; dhl-track-sears.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>dhl-track-sears-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_fedex-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: fedex-admin-dmn.dev.t1envios-services.io ---&gt; fedex-release.adm-dmn.t1envios-services.io --&gt; fedex.adm-dmn.t1envios-services.io &#xd;, TARGET: <string>fedex-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_fedex-track-claroshop-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_claroshop.git&#xd;, TARGET: fedex-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; -fedex-track-claroshop.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>fedex-track-claroshop-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_fedex-track-sanborns-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sanborns.git&#xd;, TARGET: fedex-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; fedex-track-sanborns.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>fedex-track-sanborns-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_fedex-track-sears-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto fedex-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_fedex_track_sears.git&#xd;, TARGET: fedex-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; fedex-track-sears.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>fedex-track-sears-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_finanzas-sif-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto finanzas-sif.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: finanzas-sif-admin-dmn.dev.t1envios-services.io ---&gt; finanzas-sif-release.adm-dmn.t1envios-services.io --&gt; finanzas-sif.adm-dmn.t1envios-services.io &#xd;, TARGET: <string>finanzas-sif-admin-dmn.dev.t1envios-services.io</string>, TARGET: PROJECT=&quot;t1envios&quot;, TARGET: choice(choices: [&apos;finanzas-sif-admin-dmn.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;finanzas-sif-admin-dmn.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;finanzas-sif-release.adm-dmn.t1envios-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1, TARGET: -e MONGO_HOST_API_SIF=&quot;172.26.84.132&quot; \, TARGET: -e MONGO_URI_API_SIF=&quot;172.26.84.132:27020,172.26.84.132:27021&quot; \, TARGET: -e DB_MYSQL_T1ENVIOS_HOST=&quot;dbst1envios.dev.t1envios-services.io&quot; \, TARGET: -e DB_MYSQL_T1ENVIOS_USER=&quot;cront1envios&quot; \, TARGET: -e DB_MYSQL_T1ENVIOS_PASS=&quot;Cr0nT1EnvI0]&quot; \]}, {job=t1e_new_back/t1e_new_pipe_build_fullfilment-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto fullfilment.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: fullfilment-admin-api.dev.t1envios-services.io ---&gt; fullfilment-release.adm-api.t1envios-services.io --&gt; fullfilment.adm-api.t1envios-services.io &#xd;, TARGET: <string>fullfilment-admin-api.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_geotrack-admin, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto geotrack.admin.t1envios.com para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/admin_geotrack_t1envios-.git&#xd;, TARGET: geotrack-admin.dev.t1envios.com --&gt; geotrack.release.admin.t1envios.com --&gt; geotrack.admin.t1envios.com&#xd;, TARGET: <string>geotrack-admin.dev.t1envios.com</string>]}, {job=t1e_new_back/t1e_new_pipe_build_geotrack-admin-config, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Actualizaci¾n de archivos de configuraci¾n para el proyecto geotrack.admin.t1envios.com para Frontend Desarrollo y Qa. &#xd;, TARGET: Proyecto: geotrack-admin.dev.t1envios.com&#xd;, TARGET: Origen Git:  AdminGeotrackT1envios/desarollo/config/*&#xd;, TARGET: Destino CSDEV02-2: /var/www/sites/geotrack-admin.dev.t1envios.com/config/</description>, TARGET: <string>geotrack-admin.dev.t1envios.com</string>]}, {job=t1e_new_back/t1e_new_pipe_build_guias-masivas-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto guias-masivas.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/guias_masivas_t1envios.git&#xd;, TARGET: guias-masivas-admin-api.dev.t1envios-services.io ---&gt; guias-masivas-release.adm-api.t1envios-services.io --&gt; guias-masivas.adm-api.t1envios-services.io &#xd;, TARGET: <string>guias-masivas-admin-api.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_lusail-template-processor-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto lusail-template-processor.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: lusail-template-processor-admin-dmn.dev.t1envios-services.io ---&gt; lusail-template-processor.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>lusail-template-processor-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_qualitypost-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto qualitypost-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: qualitypost-track-admin-dmn.dev.t1envios-services.io ---&gt; qualitypost-track-release.adm-dmn.t1envios-services.io --&gt; qualitypost-track.adm-dmn.t1envios-services.io &#xd;, TARGET: <string>qualitypost-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_redpack-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto redpack-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: redpack-track-admin-dmn.dev.t1envios-services.io ---&gt; redpack-track.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>redpack-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_reps-admin, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto reps.admin.t1envios.com para Backend Desarrollo.&#xd;, TARGET: reps-admin.dev.t1envios.com --&gt; reps.release.admin.t1envios.com --&gt; reps.admin.t1envios.com&#xd;, TARGET: <string>reps-admin.dev.t1envios.com</string>]}, {job=t1e_new_back/t1e_new_pipe_build_sif-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto sif.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: sif-admin-api.dev.t1envios-services.io ---&gt; sif-release.adm-api.t1envios-services.io --&gt; sif.adm-api.t1envios-services.io &#xd;, TARGET: <string>sif-admin-api.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_sistema-financiero-interno-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto sistema-financiero-interno.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: sistema-financiero-interno-admin-dmn.dev.t1envios-services.io ---&gt; sistema-financiero-interno.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>sistema-financiero-interno-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_t1mw-bussiness-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto t1mw-bussiness.adm-api.t1envios-services.io para Backend Desarrollo y Qa.&#xd;, TARGET: t1mw-bussiness-admin-api.dev.t1envios-services.io ---&gt; t1mw-bussiness-release.adm-api.t1envios-services.io --&gt; t1mw-bussiness.adm-api.t1envios-services.io &#xd;, TARGET: <string>t1mw-bussiness-admin-api.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_tookan-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: tookan-track-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-release.adm-dmn.t1envios-services.io --&gt; tookan-track.adm-dmn.t1envios-services.io &#xd;, TARGET: <string>tookan-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_tookan-track-claroshop-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-claroshop.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_claroshop.git&#xd;, TARGET: tookan-track-claroshop-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-claroshop.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>tookan-track-claroshop-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_tookan-track-sanborns-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-sanborns.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sanborns.git&#xd;, TARGET: tookan-track-sanborns-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-sanborns.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>tookan-track-sanborns-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_tookan-track-sears-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto tookan-track-sears.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_tookan_track_sears.git&#xd;, TARGET: tookan-track-sears-admin-dmn.dev.t1envios-services.io ---&gt; tookan-track-sears.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>tookan-track-sears-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_track-fallidos-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto track-fallidos.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/demonio_t1envios_track_fallidos.git&#xd;, TARGET: track-fallidos-admin-dmn.dev.t1envios-services.io ---&gt; track-fallidos.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>track-fallidos-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_ups-track-admin-dmn, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto ups-track.adm-dmn.t1envios-services.io para Backend Desarrollo.&#xd;, TARGET: http://gitlab.dev.claroshop.com/crones/demonio_t1envios_ups_track.git&#xd;, TARGET: ups-track-admin-dmn.dev.t1envios-services.io ---&gt; ups-track.adm-dmn.t1envios-services.io&#xd;, TARGET: <string>ups-track-admin-dmn.dev.t1envios-services.io</string>]}, {job=t1e_new_back/t1e_new_pipe_build_webhook-maestro-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[TARGET: <description>Tarea que ejecutarß el deploy del proyecto webhook-maestro.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: http://gitlab.dev.claroshop.com/claroshop/webhook_maestro_t1envios.git&#xd;, TARGET: webhook-maestro-admin-api.dev.t1envios-services.io ---&gt; webhook-maestro-release.adm-api.t1envios-services.io --&gt; webhook-maestro.adm-api.t1envios-services.io &#xd;, TARGET: <string>webhook-maestro-admin-api.dev.t1envios-services.io</string>, TARGET: GIT_URL=&quot;http://gitlab.dev.claroshop.com/claroshop/webhook_maestro_t1envios.git&quot;, TARGET: PROJECT=&quot;t1envios&quot;, TARGET: choice(choices: [&apos;webhook-maestro-admin-api.dev.t1envios-services.io&apos;], description: &apos;Elegir el proyecto que se desplegarß.&apos;, name: &apos;USERPARAM_DEPLOY_ENVIRONMENT&apos;), TARGET: case &apos;webhook-maestro-admin-api.dev.t1envios-services.io&apos;:, TARGET: USERPARAM_DEPLOY_ENVIRONMENT_OPTIONS = [&apos;webhook-maestro-release.adm-api.t1envios-services.io&apos;], TARGET: withEnv([&apos;JAVA_TOOL_OPTIONS=-Dhttps.proxyHost=172.27.141.25 -Dhttps.proxyPort=8080 -Dhttp.proxyPort=8080 -Dhttp.proxyHost=172.27.141.25 -Dhttp.nonProxyHosts=172.27.140.150,172.27.140.134,172.27.1, TARGET: -e MONGO_URI_ATLAS=&quot;mongodb://apit1envios:wrUnb2mRCplsv7CC8dHm@shipping-hub-shard-00-00.yrwn7.mongodb.net:27017,shipping-hub-shard-00-01.yrwn7.mongodb.net:27017,shipping-hub-shard-00-02.yrwn7.mon, TARGET: -e MONGO_HOST_T1WH=&quot;172.26.84.132&quot; \]}, {job=t1e_new_back/t1e_new_pipe_build_zpl-admin-api, type=WorkflowJob, hasSSH=false, hasTargetIPs=true, matches=[CRED_ID: cc-infracode-sophia-mrk-i, CONFIG_VER: 2, TARGET: <description>Tarea que ejecutarß el deploy del proyecto zpl.adm-api.t1envios-services.io para Frontend Desarrollo y Qa.&#xd;, TARGET: zpl-admin-api.dev.t1envios-services.io ---&gt; zpl-release.adm-api.t1envios-services.io --&gt; zpl.adm-api.t1envios-services.io &#xd;, TARGET: <string>zpl-admin-api.dev.t1envios-services.io</string>]}]
+

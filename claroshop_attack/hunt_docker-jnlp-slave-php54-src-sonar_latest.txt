@@ -1,0 +1,198 @@
+
+
+=== ID ===
+<uid=10000(jenkins) gid=10000(jenkins) groups=10000(jenkins)
+=== HOME_LS ===
+/deployments:
+	total 24
+.drwxr-xr-x.  2 root root    25 Jun 19  2018 .
+/dr-xr-xr-x. 20 root root  4096 Aug 24 03:55 ..
+8-rwxr-xr-x.  1 root root 18574 Mar 13  2018 run-java.sh
+
+/home:
+total 4
+3drwxr-xr-x.  3 root    root      21 Jun 19  2018 .
+4dr-xr-xr-x. 20 root    root    4096 Aug 24 03:55 ..
+9drwx------.  5 jenkins jenkins  103 Jun 19  2018 jenkins
+
+/home/jenkins:
+	total 12
+1drwx------. 5 jenkins jenkins 103 Jun 19  2018 .
+2drwxr-xr-x. 3 root    root     21 Jun 19  2018 ..
+<-rw-r--r--. 1 jenkins jenkins  18 Sep 26  2017 .bash_logout
+=-rw-r--r--. 1 jenkins jenkins 193 Sep 26  2017 .bash_profile
+7-rw-r--r--. 1 jenkins jenkins 231 Sep 26  2017 .bashrc
+8drwxr-xr-x. 2 jenkins jenkins   6 Aug 24 03:55 .jenkins
+4drwxr-----. 3 root    root     19 Jun 19  2018 .pki
+5drwxr-xr-x. 2 jenkins jenkins   6 Aug 24 03:55 agent
+
+/opt:
+total 8
+-drwxr-xr-x.  5 root root   90 Jul  8  2018 .
+.dr-xr-xr-x. 20 root root 4096 Aug 24 03:55 ..
+6drwxr-xr-x.  2 root root   59 Jun 19  2018 agent-bond
+.drwxr-xr-x.  6 root root   74 Jul  8  2018 rh
+<-rwxr-xr-x.  1 root root 4035 Mar 13  2018 run-java-options
+Ddrwxr-xr-x.  5 root root   40 May 23  2018 sonar-scanner-3.2.0.1227
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 May  7  2018 .
+-drwxr-xr-x. 13 root root 155 May  7  2018 ..
+.drwxr-xr-x.  2 root root  27 Jun 19  2018 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 May  7  2018 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+D--- /opt/sonar-scanner-3.2.0.1227/conf/sonar-scanner.properties ---
+t#Configure here general information about the environment, such as SonarQube server connection details for example
+;#No information about specific project should appear here
+
+!#----- Default SonarQube server
+'#sonar.host.url=http://localhost:9000
+
+%#----- Default source code encoding
+
+#sonar.sourceEncoding=UTF-8
+
+
+=== DEPLOY_SCRIPTS ===
+!--- /deployments/run-java.sh ---
+
+#!/bin/sh
+V# ===================================================================================
+F# Generic startup script for running arbitrary Java applications with
+,# being optimized for running in containers
+#
+	# Usage:
+#    # Execute a Java app:
+-#    ./run-java.sh <args given to Java code>
+#
+R#    # Get options which can be used for invoking Java apps like Maven or Tomcate
+"#    ./run-java.sh options [....]
+#
+#
+K# This script will pick up either a 'fat' jar which can be run with "-jar"
+(# or you can sepcify a JAVA_MAIN_CLASS.
+#
+(# Source and Documentation can be found
+5# at https://github.com/fabric8io-images/run-java-sh
+#
+*# Env-variables evaluated in this script:
+#
+0# JAVA_OPTIONS: Checked for already set options
+S# JAVA_MAX_MEM_RATIO: Ratio use to calculate a default maximum Memory, in percent.
+I#                     E.g. the "50" value implies that 50% of the Memory
+U#                     given to the container is used as the maximum heap memory with
+
+#                     '-Xmx'.
+V#                     It defaults to "25" when the maximum amount of memory available
+R#                     to the container is below 300M, otherwise defaults to "50".
+Q#                     It is a heuristic and should be better backed up with real
+4#                     experiments and measurements.
+Q#                     For a good overviews what tuning options are available -->
+;#                             https://youtu.be/Vt4G-pHXfs4
+J#                             https://www.youtube.com/watch?v=w1rZOY5gbvk
+N#                             https://vimeo.com/album/4133413/video/181900266
+Y# Also note that heap is only a small portion of the memory used by a JVM. There are lot
+W# of other memory areas (metadata, thread, code cache, ...) which addes to the overall
+P# size. When your container gets killed because of an OOM, then you should tune
+# the absolute values.
+X# JAVA_INIT_MEM_RATIO: Ratio use to calculate a default intial heap memory, in percent.
+9#                      By default this value is not set.
+#
+@# The following variables are exposed to your Java application:
+#
+U# CONTAINER_MAX_MEMORY: Max memory for the container (if running within a container)
+^# MAX_CORE_LIMIT: Number of cores available for the container (if running within a container)
+
+
+=# ==========================================================
+
+?# Fail on a single failed command in a pipeline (if supported)
+/(set -o | grep -q pipefail) && set -o pipefail
+
+## Fail on error and undefined vars
+set -eu
+
+# Save global script args
+
+ARGS="$@"
+
++# ksh is different for defining local vars
+#if [ -n "${KSH_VERSION:-}" ]; then
+  alias local=typeset
+fi
+
+7# Error is indicated with a prefix in the return value
+check_error() {
+  local error_msg="$1"
+3  if echo "${error_msg}" | grep -q "^ERROR:"; then
+    echo "${error_msg}"
+
+    exit 1
+  fi
+}
+
+?# The full qualified directory where this script is located in
+script_dir() {
+!  # Default is current directory
+
+  local dir=$(dirname "$0")
+'  local full_dir=$(cd "${dir}" && pwd)
+  echo ${full_dir}
+}
+=== GREP_CREDS ===
+/opt/run-java-options
+!/opt/rh/php54/root/etc/pear.conf
+/opt/rh/php54/root/etc/php.ini
+>/opt/rh/php54/root/usr/share/doc/php54-php-common-5.4.40/NEWS
+L/opt/rh/php54/root/usr/share/doc/php54-php-common-5.4.40/README.REDIST.BINS
+M/opt/rh/php54/root/usr/share/doc/php54-php-common-5.4.40/php.ini-development
+L/opt/rh/php54/root/usr/share/doc/php54-php-common-5.4.40/php.ini-production
+L/opt/rh/php54/root/usr/share/doc/php54-php-pecl-memcache-3.0.8/memcache.php
+8/opt/rh/php54/root/usr/share/pear/PEAR/Command/Auth.php
+8/opt/rh/php54/root/usr/share/pear/PEAR/Command/Auth.xml
+</opt/rh/php54/root/usr/share/pear/PEAR/Command/Channels.php
+</opt/rh/php54/root/usr/share/pear/PEAR/Command/Channels.xml
+:/opt/rh/php54/root/usr/share/pear/PEAR/Command/Config.php
+;/opt/rh/php54/root/usr/share/pear/PEAR/Command/Package.php
+2/opt/rh/php54/root/usr/share/pear/PEAR/Config.php
+6/opt/rh/php54/root/usr/share/pear/PEAR/Downloader.php
+4/opt/rh/php54/root/usr/share/pear/PEAR/Frontend.php
+0/opt/rh/php54/root/usr/share/pear/PEAR/REST.php
+F/opt/rh/rh-ruby25/root/usr/local/share/gems/gems/sass-3.4.25/Rakefile
+W/opt/rh/rh-ruby25/root/usr/local/share/gems/gems/sass-3.4.25/vendor/listen/Vagrantfile
+^/opt/rh/rh-ruby25/root/usr/share/gems/gems/did_you_mean-1.2.0/evaluation/incorrect_words.yaml
+h/opt/rh/rh-ruby25/root/usr/share/gems/gems/rdoc-6.0.1/lib/rdoc/generator/template/darkfish/js/jquery.js
+S/opt/rh/rh-ruby25/root/usr/share/gems/specifications/default/webrick-1.4.2.gemspec
+2/opt/rh/rh-ruby25/root/usr/share/ruby/cgi/html.rb
+1/opt/rh/rh-ruby25/root/usr/share/ruby/net/ftp.rb
+9/opt/rh/rh-ruby25/root/usr/share/ruby/net/http/header.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/net/http.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/net/imap.rb
+1/opt/rh/rh-ruby25/root/usr/share/ruby/net/pop.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/net/smtp.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/open-uri.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/pathname.rb
+1/opt/rh/rh-ruby25/root/usr/share/ruby/uri/ftp.rb
+5/opt/rh/rh-ruby25/root/usr/share/ruby/uri/generic.rb
+2/opt/rh/rh-ruby25/root/usr/share/ruby/uri/http.rb
+D/opt/rh/rh-ruby25/root/usr/share/ruby/webrick/httpauth/basicauth.rb
+E/opt/rh/rh-ruby25/root/usr/share/ruby/webrick/httpauth/digestauth.rb
+C/opt/rh/rh-ruby25/root/usr/share/ruby/webrick/httpauth/htdigest.rb
+B/opt/rh/rh-ruby25/root/usr/share/ruby/webrick/httpauth/htgroup.rb
+C/opt/rh/rh-ruby25/root/usr/share/ruby/webrick/httpauth/htpasswd.rb
+=== HUNT_DONE ===

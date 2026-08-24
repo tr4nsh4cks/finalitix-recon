@@ -1,0 +1,46 @@
+
+
+=== ID ===
+(uid=1000(jre-user) gid=1000 groups=1000
+=== HOME_LS ===
+/home:
+total 0
+,drwxr-xr-x.  3 root root  22 Feb 12  2021 .
+-dr-xr-xr-x. 17 root root 278 Aug 23 22:57 ..
+3drwxr-xr-x.  2 root root   6 Feb 12  2021 jre-user
+
+/home/jre-user:
+total 0
+*drwxr-xr-x. 2 root root  6 Feb 12  2021 .
++drwxr-xr-x. 3 root root 22 Feb 12  2021 ..
+
+/opt:
+total 0
+,drwxr-xr-x.  3 root root  16 Dec 13  2020 .
+-dr-xr-xr-x. 17 root root 278 Aug 23 22:57 ..
+-drwxr-xr-x.  3 root root  26 Dec 13  2020 rh
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 Aug  3  2020 .
+-drwxr-xr-x. 13 root root 155 Aug  3  2020 ..
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 Aug  3  2020 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+=== HUNT_DONE ===

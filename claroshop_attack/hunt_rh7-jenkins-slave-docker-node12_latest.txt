@@ -1,0 +1,1461 @@
+
+
+=== ID ===
+'uid=0(root) gid=0(root) groups=0(root)
+=== HOME_LS ===
+/home:
+total 0
+,drwxr-xr-x.  3 root root  21 May 21  2019 .
+-dr-xr-xr-x. 17 root root 242 Aug 24 03:56 ..
+2drwxrwxr-x.  3 1001 root  18 Jun 26  2020 jenkins
+
+/home/jenkins:
+total 0
+*drwxrwxr-x. 3 1001 root 18 Jun 26  2020 .
++drwxr-xr-x. 3 root root 21 May 21  2019 ..
+-drwxr-----. 3 root root 19 Jun 26  2020 .pki
+
+/opt:
+total 0
+,drwxr-xr-x.  4 root root  75 Jun 26  2020 .
+-dr-xr-xr-x. 17 root root 242 Aug 24 03:56 ..
+-drwxr-xr-x.  3 root root  25 Jun 26  2020 rh
+Zlrwxrwxrwx.  1 root root  30 Jun 26  2020 sonar-scanner -> sonar-scanner-3.3.0.1492-linux
+Idrwxr-xr-x.  6 root root  51 Jan  8  2019 sonar-scanner-3.3.0.1492-linux
+
+/root:
+	total 52
+.dr-xr-x---.  3 root root   154 Apr 15  2019 .
+/dr-xr-xr-x. 17 root root   242 Aug 24 03:56 ..
+9-rw-r--r--.  1 root root    18 Dec 29  2013 .bash_logout
+:-rw-r--r--.  1 root root   176 Dec 29  2013 .bash_profile
+4-rw-r--r--.  1 root root   176 Dec 29  2013 .bashrc
+3-rw-r--r--.  1 root root   100 Dec 29  2013 .cshrc
+4-rw-r--r--.  1 root root   129 Dec 29  2013 .tcshrc
+<-rw-------.  1 root root 16005 Apr 15  2019 anaconda-ks.cfg
+6drwxr-xr-x.  2 root root    37 Apr 15  2019 buildinfo
+<-rw-------.  1 root root 15227 Apr 15  2019 original-ks.cfg
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 Apr 15  2019 .
+-drwxr-xr-x. 13 root root 155 Apr 15  2019 ..
+.drwxr-xr-x.  2 root root 106 May 21  2019 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 Apr 15  2019 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+J--- /opt/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties ---
+s#Configure here general information about the environment, such as SonarQube server connection details for example
+:#No information about specific project should appear here
+
+ #----- Default SonarQube server
+&#sonar.host.url=http://localhost:9000
+
+$#----- Default source code encoding
+
+#sonar.sourceEncoding=UTF-8
+
+
+I--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/calendars.properties ---
+O# Copyright (c) 2005, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+#
+
+# Japanese imperial calendar
+#
+<#   Meiji  since 1868-01-01 00:00:00 local time (Gregorian)
+<#   Taisho since 1912-07-30 00:00:00 local time (Gregorian)
+<#   Showa  since 1926-12-25 00:00:00 local time (Gregorian)
+<#   Heisei since 1989-01-08 00:00:00 local time (Gregorian)
+/calendar.japanese.type: LocalGregorianCalendar
+calendar.japanese.eras: \
+,	name=Meiji,abbr=M,since=-3218832000000;  \
+,	name=Taisho,abbr=T,since=-1812153600000; \
+,	name=Showa,abbr=S,since=-1357603200000;  \
+'	name=Heisei,abbr=H,since=600220800000
+
+#
+# Taiwanese calendar
+<#   Minguo since 1911-01-01 00:00:00 local time (Gregorian)
+0calendar.taiwanese.type: LocalGregorianCalendar
+calendar.taiwanese.eras: \
+"	name=MinGuo,since=-1830384000000
+
+#
+# Thai Buddhist calendar
+B#   Buddhist Era since -542-01-01 00:00:00 local time (Gregorian)
+4calendar.thai-buddhist.type: LocalGregorianCalendar
+calendar.thai-buddhist.eras: \
+2	name=BuddhistEra,abbr=B.E.,since=-79302585600000
+(calendar.thai-buddhist.year-boundary: \
+#	day1=4-1,since=-79302585600000; \
+
+	day1=1-1,since=-915148800000
+
+#
+# Hijrah calendars
+#
+Ccalendar.hijrah.Hijrah-umalqura: hijrah-config-umalqura.properties
+7calendar.hijrah.Hijrah-umalqura.type: islamic-umalqura
+
+M--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/content-types.properties ---
+&#sun.net.www MIME content-types table
+#
+# Property fields:
+#
+=#   <description> ::= 'description' '=' <descriptive string>
+P#    <extensions> ::= 'file_extensions' '=' <comma-delimited list, include '.'>
+:#         <image> ::= 'icon' '=' <filename of icon image>
+E#        <action> ::= 'browser' | 'application' | 'save' | 'unknown'
+@#   <application> ::= 'application' '=' <command line template>
+#
+
+#
+8# The "we don't know anything about this data" type(s).
+.# Used internally to mark unrecognized types.
+#
+-content/unknown: description=Unknown Content
+/unknown/unknown: description=Unknown Data Type
+
+#
+O# The template we should use for temporary files when launching an application
+$# to view a document of given type.
+#
+
+temp.file.template: /tmp/%s
+
+#
+# The "real" types.
+#
+
+application/octet-stream: \
+%	description=Generic Binary Stream;\
+@	file_extensions=.saveme,.dump,.hqx,.arc,.o,.a,.bin,.exe,.z,.gz
+
+application/oda: \
+
+	description=ODA Document;\
+	file_extensions=.oda
+
+application/pdf: \
+ 	description=Adobe PDF Format;\
+	file_extensions=.pdf
+
+application/postscript: \
+	description=Postscript File;\
+ 	file_extensions=.eps,.ai,.ps;\
+
+	icon=ps;\
+	action=application;\
+	application=imagetool %s
+
+application/x-dvi: \
+
+	description=TeX DVI File;\
+	file_extensions=.dvi;\
+	action=application;\
+	application=xdvi %s
+
+application/x-hdf: \
+(	description=Hierarchical Data Format;\
+	file_extensions=.hdf;\
+
+	action=save
+
+application/x-latex: \
+
+	description=LaTeX Source;\
+	file_extensions=.latex
+
+application/x-netcdf: \
+*	description=Unidata netCDF Data Format;\
+
+	file_extensions=.nc,.cdf;\
+
+	action=save
+
+application/x-tex: \
+	description=TeX Source;\
+	file_extensions=.tex
+
+application/x-texinfo: \
+	description=Gnu Texinfo;\
+ 	file_extensions=.texinfo,.texi
+
+application/x-troff: \
+
+	description=Troff Source;\
+ 	file_extensions=.t,.tr,.roff;\
+	action=application;\
+F	application=xterm -title troff -e sh -c \"nroff %s | col | more -w\"
+
+application/x-troff-man: \
+$	description=Troff Manpage Source;\
+	file_extensions=.man;\
+	action=application;\
+K	application=xterm -title troff -e sh -c \"nroff -man %s | col | more -w\"
+
+application/x-troff-me: \
+	description=Troff ME Macros;\
+	file_extensions=.me;\
+	action=application;\
+J	application=xterm -title troff -e sh -c \"nroff -me %s | col | more -w\"
+
+application/x-troff-ms: \
+	description=Troff MS Macros;\
+	file_extensions=.ms;\
+	action=application;\
+J	application=xterm -title troff -e sh -c \"nroff -ms %s | col | more -w\"
+
+
+application/x-wais-source: \
+	description=Wais Source;\
+
+	file_extensions=.src,.wsrc
+
+application/zip: \
+	description=Zip File;\
+	file_extensions=.zip;\
+
+	icon=zip;\
+
+	action=save
+
+application/x-bcpio: \
+'	description=Old Binary CPIO Archive;\
+%	file_extensions=.bcpio; action=save
+
+application/x-cpio: \
+!	description=Unix CPIO Archive;\
+$	file_extensions=.cpio; action=save
+
+application/x-gtar: \
+	description=Gnu Tar Archive;\
+	file_extensions=.gtar;\
+
+	icon=tar;\
+
+	action=save
+
+application/x-shar: \
+
+	description=Shell Archive;\
+
+	file_extensions=.sh,.shar;\
+
+	action=save
+
+application/x-sv4cpio: \
+!	description=SVR4 CPIO Archive;\
+'	file_extensions=.sv4cpio; action=save
+
+application/x-sv4crc: \
+"	description=SVR4 CPIO with CRC;\
+&	file_extensions=.sv4crc; action=save
+
+application/x-tar: \
+	description=Tar Archive;\
+	file_extensions=.tar;\
+
+	icon=tar;\
+
+	action=save
+
+application/x-ustar: \
+
+	description=US Tar Archive;\
+	file_extensions=.ustar;\
+
+	action=save
+
+audio/basic: \
+	description=Basic Audio;\
+
+	file_extensions=.snd,.au;\
+	icon=audio;\
+	action=application;\
+	application=audiotool %s
+
+audio/x-aiff: \
+-	description=Audio Interchange Format File;\
+$	file_extensions=.aifc,.aif,.aiff;\
+
+	icon=aiff
+
+audio/x-wav: \
+	description=Wav Audio;\
+	file_extensions=.wav;\
+
+	icon=wav
+
+
+image/gif: \
+	description=GIF Image;\
+	file_extensions=.gif;\
+
+	icon=gif;\
+	action=browser
+
+
+image/ief: \
+%	description=Image Exchange Format;\
+	file_extensions=.ief
+
+image/jpeg: \
+	description=JPEG Image;\
+4	file_extensions=.jfif,.jfif-tbnl,.jpe,.jpg,.jpeg;\
+
+	icon=jpeg;\
+
+O--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages.properties ---
+#
+O# Copyright (c) 2004, 2011, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+6error.internal.badmsg=internal error, unknown message
+Ierror.badinst.nojre=Bad installation. No JRE found in configuration file
+Kerror.launch.execv=Error encountered while invoking Java Web Start (execv)
+Perror.launch.sysexec=Error encountered while invoking Java Web Start (SysExec) 
+=error.listener.failed=Splash: sysCreateListenerSocket failed
+*error.accept.failed=Splash: accept failed
+&error.recv.failed=Splash: recv failed
+6error.invalid.port=Splash: didn't revive a valid port
+#error.read=Read past end of buffer
+>error.xmlparsing=XML Parsing error: wrong kind of token found
+Gerror.splash.exit=Java Web Start splash screen process exiting .....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+%error.winsock=\tLast WinSock Error: 
+-error.winsock.load=Couldn't load winsock.dll
+&error.winsock.start=WSAStartup failed
+<error.badinst.nohome=Bad installation: JAVAWS_HOME not set 
+?error.splash.noimage=Splash: couldn't load splash screen image
+1error.splash.socket=Splash: server socket failed
+/error.splash.cmnd=Splash: unrecognized command
+-error.splash.port=Splash: port not specified
+&error.splash.send=Splash: send failed
+:error.splash.timer=Splash: couldn't create shutdown timer
+5error.splash.x11.open=Splash: Can't open X11 display
+7error.splash.x11.connect=Splash: X11 connection failed
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+message.javaws.usage=\n\
+-Usage:\tjavaws [run-options] <jnlp-file>	\n\
+&      \tjavaws [control-options]		\n\
+
+						\n\
+!where run-options include:			\n\
+1  -verbose       \tdisplay additional output	\n\
+;  -offline       \trun the application in offline mode	\n\
+E  -system        \trun the application from the system cache only\n\
+;  -Xnosplash     \trun without showing a splash screen	\n\
+/  -J<option>     \tsupply option to the vm	\n\
+@  -wait          \tstart java process and wait for its exit	\n\
+	\n\
+
+control-options include:	\n\
+F  -viewer        \tshow the cache viewer in the java control panel\n\
+K  -clearcache    \tremove all non-installed applications from the cache\n\
+=  -uninstall     \tremove all applications from the cache\n\
+R  -uninstall <jnlp-file>              \tremove the application from the cache	\n\
+Q  -import [import-options] <jnlp-file>\timport the application to the cache		\n\
+
+									\n\
+!import-options include:						\n\
+@  -silent        \timport silently (with no user interface)	\n\
+@  -system        \timport application into the system cache	\n\
+B  -codebase <url>\tretrieve resources from the given codebase	\n\
+C  -shortcut      \tinstall shortcuts as if user allowed prompt	\n\
+F  -association   \tinstall associations as if user allowed prompt	\n\
+\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_de.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+:error.internal.badmsg=interner Fehler, unbekannte Meldung
+[error.badinst.nojre=Ung\u00FCltige Installation. Keine JRE in Konfigurationsdatei gefunden
+Oerror.launch.execv=Fehler beim Aufrufen von Java Web Start (execv) aufgetreten
+Serror.launch.sysexec=Fehler beim Aufrufen von Java Web Start (SysExec) aufgetreten
+Qerror.listener.failed=Startbildschirm: sysCreateListenerSocket nicht erfolgreich
+>error.accept.failed=Startbildschirm: accept nicht erfolgreich
+:error.recv.failed=Startbildschirm: recv nicht erfolgreich
+_error.invalid.port=Startbildschirm: Reaktivierung eines g\u00FCltigen Ports nicht m\u00F6glich
+/error.read=\u00DCber Pufferende hinaus gelesen
+=error.xmlparsing=XML-Parsefehler: Falscher Tokentyp gefunden
+Zerror.splash.exit=Prozess f\u00FCr Startbildschirm von Java Web Start wird beendet.....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+)error.winsock=\tLetzter WinSock-Fehler: 
+;error.winsock.load=winsock.dll konnte nicht geladen werden
+1error.winsock.start=WSAStartup nicht erfolgreich
+Perror.badinst.nohome=Ung\u00FCltige Installation: JAVAWS_HOME nicht festgelegt 
+Verror.splash.noimage=Startbildschirm: Startbildschirmbild konnte nicht geladen werden
+Eerror.splash.socket=Startbildschirm: Server-Socket nicht erfolgreich
+6error.splash.cmnd=Startbildschirm: Unbekannter Befehl
+8error.splash.port=Startbildschirm: Port nicht angegeben
+:error.splash.send=Startbildschirm: send nicht erfolgreich
+cerror.splash.timer=Startbildschirm: Timer f\u00FCr das Herunterfahren konnte nicht erstellt werden
+Serror.splash.x11.open=Startbildschirm: X11-Anzeige kann nicht ge\u00F6ffnet werden
+Kerror.splash.x11.connect=Startbildschirm: X11-Verbindung nicht erfolgreich
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+Bmessage.javaws.usage=\nVerwendung:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\nwobei run-options Folgendes umfasst:\t\t\t\n-verbose       \tZus\u00E4tzliche Ausgabe anzeigen\t\n-offline       \tAnwendung im Offlinemodus ausf\u00FChren\t\n-system        \tAnwendung nur aus Systemcache ausf\u00FChren\n-Xnosplash     \tOhne Anzeige eines Startbildschirms ausf\u00FChren\t\n-J<option>     \tOption f\u00FCr VM angeben\t\n-wait          \tJava-Prozess starten und auf dessen Beendigung warten\t\n\ncontrol-options umfassen:\t\n-viewer        \tCache-Viewer in Java-Systemsteuerung anzeigen\n-clearcache    \tAlle nicht installierten Anwendungen aus dem Cache entfernen\n-uninstall     \tAlle Anwendungen aus dem Cache entfernen\n-uninstall <jnlp-file>              \tAnwendung aus dem Cache entfernen\t\n-import [import-options] <jnlp-file>\tAnwendung in Cache importieren\t\t\n\nimport-options umfassen:\t\t\t\t\t\t\n-silent        \tVollautomatisch importieren (ohne Benutzeroberfl\u00E4che)\t\n-system        \tAnwendung in Systemcache importieren\t\n-codebase <url>\tRessourcen aus angegebener Codebase abrufen\t\n-shortcut      \tShortcuts so installieren, als w\u00FCrde der Benutzer einen Prompt zulassen\t\n-association   \tVerkn\u00FCpfungen so installieren, als w\u00FCrde der Benutzer einen Prompt zulassen\n\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_es.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+9error.internal.badmsg=Error interno, mensaje desconocido
+merror.badinst.nojre=Instalaci\u00F3n incorrecta. No se ha encontrado JRE en el archivo de configuraci\u00F3n
+Perror.launch.execv=Se ha encontrado un error al llamar a Java Web Start (execv)
+Uerror.launch.sysexec=Se ha encontrado un error al llamar a Java Web Start (SysExec) 
+Verror.listener.failed=Pantalla de Presentaci\u00F3n: fallo de sysCreateListenerSocket
+Cerror.accept.failed=Pantalla de Presentaci\u00F3n: fallo de accept
+?error.recv.failed=Pantalla de Presentaci\u00F3n: fallo de recv
+Zerror.invalid.port=Pantalla de Presentaci\u00F3n: no se ha activado un puerto v\u00E1lido
+;error.read=Lectura m\u00E1s all\u00E1 del final del buffer
+aerror.xmlparsing=Error de an\u00E1lisis de XML: se ha encontrado un tipo de token no v\u00E1lido
+berror.splash.exit=Saliendo del proceso de la pantalla de presentaci\u00F3n de Java Web Start...\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+/error.winsock=\t\u00DAltimo Error de WinSock: 
+6error.winsock.load=No se ha podido cargar winsock.dll
+(error.winsock.start=Fallo de WSAStartup
+Kerror.badinst.nohome=Instalaci\u00F3n incorrecta: JAVAWS_HOME no definido 
+merror.splash.noimage=Presentaci\u00F3n: no se ha podido cargar la imagen de la pantalla de presentaci\u00F3n
+Serror.splash.socket=Pantalla de Presentaci\u00F3n: fallo en el socket del servidor
+Gerror.splash.cmnd=Pantalla de Presentaci\u00F3n: comando no reconocido
+Herror.splash.port=Pantalla de Presentaci\u00F3n: puerto no especificado
+?error.splash.send=Pantalla de Presentaci\u00F3n: fallo de send
+cerror.splash.timer=Pantalla de Presentaci\u00F3n: no se ha podido crear el temporizador de apagado
+[error.splash.x11.open=Pantalla de Presentaci\u00F3n: no se ha podido abrir la pantalla X11
+Serror.splash.x11.connect=Pantalla de Presentaci\u00F3n: fallo de conexi\u00F3n X11
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+�message.javaws.usage=\nSintaxis:\tjavaws [run-options] <archivo-jnlp>\t\n\tjavaws [control-options]\t\t\n\ndonde run-options incluye:\t\t\t\n-verbose       \tmostrar salida adicional\t\n-offline       \tejecutar la aplicaci\u00F3n en el modo fuera de l\u00EDnea\t\n-system        \tejecutar la aplicaci\u00F3n \u00FAnicamente desde la cach\u00E9 del sistema\n-Xnosplash     \tejecutar sin mostrar ninguna pantalla de presentaci\u00F3n\t\n-J<opci\u00F3n>     \tproporcione una opci\u00F3n a la VM\t\n-wait          \tiniciar un proceso java y esperar a que se cierre\t\n\ncontrol-options incluye:\t\n-viewer        \tmostrar el visor de la cach\u00E9 en el panel de control java\n-clearcache    \teliminar todas las aplicaciones no instaladas desde la cach\u00E9\n-uninstall     \teliminar todas las aplicaciones de la cach\u00E9\n-uninstall <archivo-jnlp>              \teliminar la aplicaci\u00F3n de la cach\u00E9\t\n-import [import-options] <archivo-jnlp>\timportar la aplicaci\u00F3n a la cach\u00E9\t\t\n\nimport-options incluye:\t\t\t\t\t\t\n-silent        \timportar de forma silenciosa (sin interfaz de usuario)\t\n-system        \timportar la aplicaci\u00F3n a la cach\u00E9 del sistema\t\n-codebase <url>\trecuperar los recursos del codebase correspondiente\t\n-shortcut      \tinstalar los accesos directos como si el usuario hubiera aceptado la petici\u00F3n\t\n-association   \tinstalar las asociaciones como si el usuario hubiera aceptado la petici\u00F3n\t\n\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_fr.properties ---
+#
+O# Copyright (c) 2004, 2011, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+6error.internal.badmsg=erreur interne, message inconnu
+^error.badinst.nojre=Installation incorrecte. JRE introuvable dans le fichier de configuration
+Derror.launch.execv=Erreur lors de l'appel de Java Web Start (execv)
+Ierror.launch.sysexec=Erreur lors de l'appel de Java Web Start (SysExec) 
+Ferror.listener.failed=Accueil : \u00E9chec de sysCreateListenerSocket
+2error.accept.failed=Accueil : \u00E9chec d'accept
+/error.recv.failed=Accueil : \u00E9chec de recv
+Ierror.invalid.port=Accueil : impossible de r\u00E9activer un port valide
+/error.read=Lecture apr\u00E8s la fin de tampon
+@error.xmlparsing=Erreur d'analyse XML : type incorrect de jeton
+verror.splash.exit=Le processus d'affichage de l'\u00E9cran d'accueil de Java Web Start est en cours de fermeture...\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+0error.winsock=\tDerni\u00E8re erreur WinSock : 
+5error.winsock.load=Impossible de charger winsock.dll
+(error.winsock.start=Echec de WSAStartup
+Lerror.badinst.nohome=Installation incorrecte : JAVAWS_HOME non d\u00E9fini 
+Werror.splash.noimage=Accueil : impossible de charger l'image de l'\u00E9cran d'accueil
+>error.splash.socket=Accueil : \u00E9chec du socket de serveur
+.error.splash.cmnd=Accueil : commande inconnue
+8error.splash.port=Accueil : port non sp\u00E9cifi\u00E9
+2error.splash.send=Accueil : \u00E9chec de l'envoi
+Merror.splash.timer=Accueil : impossible de cr\u00E9er l'horloge d'arr\u00EAt
+Derror.splash.x11.open=Accueil : impossible d'ouvrir l'affichage X11
+Berror.splash.x11.connect=Accueil : \u00E9chec de la connexion X11
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+(message.javaws.usage=\nSyntaxe :\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\no\u00F9 les options d'ex\u00E9cution sont :\t\t\t\n-verbose       \taffichage de texte de sortie suppl\u00E9mentaire\t\n-offline       \tex\u00E9cution de l'application en mode hors ligne\t\n-system        \tex\u00E9cution de l'application \u00E0 partir du cache syst\u00E8me uniquement\n-Xnosplash     \tex\u00E9cution sans affichage de l'\u00E9cran d'accueil\t\n-J<option>     \tsp\u00E9cification d'une option \u00E0 la machine virtuelle\t\n-wait          \tlancement du processus Java et attente de sa fermeture\t\n\nles options de contr\u00F4le sont :\t\n-viewer        \taffichage du visionneur du cache dans le panneau de configuration Java\n-clearcache    \tsuppression de toutes les applications non install\u00E9es du cache\n-uninstall     \tsuppression de toutes les applications du cache\n-uninstall <jnlp-file>              \td\u00E9sinstallation de l'application dans le cache\t\n-import [import-options] <jnlp-file>\timport de l'application dans le cache\t\t\n\nles options d'import sont :\t\t\t\t\t\t\n-silent        \timport silencieux (sans interface utilisateur)\t\n-system        \timport de l'application dans le cache syst\u00E8me\t\n-codebase <url>\textraction des ressources \u00E0 partir d'une base de code sp\u00E9cifique\t\n-shortcut      \tinstallation des raccourcis comme si l'utilisateur avait autoris\u00E9 l'op\u00E9ration\t\n-association   \tinstallation des associations comme si l'utilisateur avait autoris\u00E9 l'op\u00E9ration\t\n\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_it.properties ---
+#
+O# Copyright (c) 2004, 2011, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+<error.internal.badmsg=errore interno, messaggio sconosciuto
+`error.badinst.nojre=Installazione errata. Impossibile trovare il JRE nel file di configurazione
+Herror.launch.execv=Errore durante la chiamata di Java Web Start (execv)
+Merror.launch.sysexec=Errore durante la chiamata di Java Web Start (SysExec) 
+Eerror.listener.failed=Apertura: sysCreateListenerSocket non riuscito
+2error.accept.failed=Apertura: accept non riuscito
+.error.recv.failed=Apertura: recv non riuscito
+Gerror.invalid.port=Apertura: impossibile identificare una porta valida
+8error.read=Tentativo di lettura dopo la fine del buffer
+Oerror.xmlparsing=Errore durante l'analisi XML: trovato un tipo di token errato
+\error.splash.exit=Uscita dal processo di schermata iniziale di Java Web Start in corso...\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+3error.winsock=\tErrore ultima operazione WinSock: 
+4error.winsock.load=Impossibile caricare winsock.dll
+,error.winsock.start=WSAStartup non riuscito
+Ferror.badinst.nohome=Installazione errata: JAVAWS_HOME non impostato 
+Xerror.splash.noimage=Apertura: impossibile caricare l'immagine della schermata iniziale
+=error.splash.socket=Apertura: socket del server non riuscita
+5error.splash.cmnd=Apertura: comando non riconosciuto
+2error.splash.port=Apertura: porta non specificata
+.error.splash.send=Apertura: send non riuscito
+Gerror.splash.timer=Apertura: impossibile creare il timer per l'arresto
+Berror.splash.x11.open=Apertura: impossibile aprire il display X11
+@error.splash.x11.connect=Apertura: connessione X11 non riuscita
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+qmessage.javaws.usage=\nUso:\tjavaws [opzioni di esecuzione] <file jnlp>\t\n\tjavaws [opzioni di controllo]\t\t\n\ndove le opzioni di esecuzione sono:\t\t\t\n-verbose       \tvisualizza output aggiuntivo\t\n-offline       \tesegue l'applicazione in modalit\u00E0 non in linea\t\n-system        \tesegue l'applicazione solo dalla cache del sistema\n-Xnosplash     \tesegue l'applicazione senza visualizzare la schermata iniziale\t\n-J<opzione>     \tfornisce l'opzione alla VM\t\n-wait          \tavvia il processo Java e ne attende il completamento\t\n\nle opzioni di controllo sono:\t\n-viewer        \tmostra il visualizzatore cache nel pannello di controllo Java\n-clearcache    \trimuove tutte le applicazioni non installate dalla cache\n-uninstall     \trimuove tutte le applicazioni dalla cache\n-uninstall <file jnlp>              \trimuove l'applicazione dalla cache\t\n-import [opzioni di importazione] <file jnlp>\timporta l'applicazione nella cache\t\t\n\nle opzioni di importazione sono:\t\t\t\t\t\t\n-silent        \tesegue l'installazione in background (senza un'interfaccia utente)\t\n-system        \timporta l'applicazione nella cache del sistema\t\n-codebase <url>\trecupera le risorse dal codebase specificato\t\n-shortcut      \tinstalla i collegamenti senza chiedere conferma all'utente\t\n-association   \tinstalla le associazioni senza chiedere conferma all'utente\t\n\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_ja.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+kerror.internal.badmsg=\u5185\u90E8\u30A8\u30E9\u30FC\u3001\u4E0D\u660E\u306A\u30E1\u30C3\u30BB\u30FC\u30B8
+�error.badinst.nojre=\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u304C\u6B63\u3057\u304F\u3042\u308A\u307E\u305B\u3093\u3002\u69CB\u6210\u30D5\u30A1\u30A4\u30EB\u5185\u306BJRE\u304C\u3042\u308A\u307E\u305B\u3093
+�error.launch.execv=Java Web Start\u306E\u547C\u51FA\u3057\u4E2D\u306B\u30A8\u30E9\u30FC\u304C\u767A\u751F\u3057\u307E\u3057\u305F(execv)
+�error.launch.sysexec=Java Web Start\u306E\u547C\u51FA\u3057\u4E2D\u306B\u30A8\u30E9\u30FC\u304C\u767A\u751F\u3057\u307E\u3057\u305F(SysExec) 
+~error.listener.failed=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: sysCreateListenerSocket\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+kerror.accept.failed=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: accept\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+gerror.recv.failed=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: recv\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+�error.invalid.port=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u6709\u52B9\u306A\u30DD\u30FC\u30C8\u3092\u5FA9\u6D3B\u3055\u305B\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F
+xerror.read=\u524D\u306E\u30D0\u30C3\u30D5\u30A1\u306E\u7D42\u308F\u308A\u3092\u8AAD\u307F\u8FBC\u307F\u307E\u3057\u305F
+�error.xmlparsing=XML\u89E3\u6790\u30A8\u30E9\u30FC: \u8AA4\u3063\u305F\u30C8\u30FC\u30AF\u30F3\u304C\u691C\u51FA\u3055\u308C\u307E\u3057\u305F
+�error.splash.exit=Java Web Start\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5\u753B\u9762\u51E6\u7406\u3092\u7D42\u4E86\u3057\u307E\u3059.....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+>error.winsock=\t\u6700\u5F8C\u306EWinSock\u30A8\u30E9\u30FC: 
+Uerror.winsock.load=winsock.dll\u3092\u30ED\u30FC\u30C9\u3067\u304D\u307E\u305B\u3093
+Ierror.winsock.start=WSAStartup\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+�error.badinst.nohome=\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u304C\u6B63\u3057\u304F\u3042\u308A\u307E\u305B\u3093: JAVAWS_HOME\u304C\u8A2D\u5B9A\u3055\u308C\u3066\u3044\u307E\u305B\u3093 
+�error.splash.noimage=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u30B9\u30D7\u30E9\u30C3\u30B7\u30E5\u753B\u9762\u306E\u753B\u50CF\u3092\u30ED\u30FC\u30C9\u3067\u304D\u307E\u305B\u3093
+�error.splash.socket=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u30B5\u30FC\u30D0\u30FC\u30FB\u30BD\u30B1\u30C3\u30C8\u306B\u969C\u5BB3\u304C\u767A\u751F\u3057\u307E\u3057\u305F
+uerror.splash.cmnd=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u8A8D\u8B58\u3055\u308C\u306A\u3044\u30B3\u30DE\u30F3\u30C9
+�error.splash.port=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u30DD\u30FC\u30C8\u304C\u6307\u5B9A\u3055\u308C\u3066\u3044\u307E\u305B\u3093
+oerror.splash.send=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u9001\u4FE1\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+�error.splash.timer=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: \u30B7\u30E3\u30C3\u30C8\u30C0\u30A6\u30F3\u30FB\u30BF\u30A4\u30DE\u30FC\u3092\u4F5C\u6210\u3067\u304D\u307E\u305B\u3093
+�error.splash.x11.open=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: X11\u30C7\u30A3\u30B9\u30D7\u30EC\u30A4\u3092\u958B\u3051\u307E\u305B\u3093
+yerror.splash.x11.connect=\u30B9\u30D7\u30E9\u30C3\u30B7\u30E5: X11\u63A5\u7D9A\u306B\u5931\u6557\u3057\u307E\u3057\u305F
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+Amessage.javaws.usage=\n\u4F7F\u7528\u65B9\u6CD5:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\nrun-options\u306B\u306F\u6B21\u306E\u3082\u306E\u304C\u3042\u308A\u307E\u3059\u3002\t\t\t\n-verbose       \t\u8FFD\u52A0\u306E\u51FA\u529B\u3092\u8868\u793A\t\n-offline       \t\u30A2\u30D7\u30EA\u30B1\u30FC\u30B7\u30E7\u30F3\u3092\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u30E2\u30FC\u30C9\u3067\u5B9F\u884C\t\n-system        \t\u30A2\u30D7\u30EA\u30B1\u30FC\u30B7\u30E7\u30F3\u3092\u30B7\u30B9\u30C6\u30E0\u30FB\u30AD\u30E3\u30C3\u30B7\u30E5\u306E\u307F\u304B
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_ko.properties ---
+#
+O# Copyright (c) 2004, 2016, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+�error.internal.badmsg=\uB0B4\uBD80 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4. \uC54C \uC218 \uC5C6\uB294 \uBA54\uC2DC\uC9C0\uC785\uB2C8\uB2E4.
+�error.badinst.nojre=\uC124\uCE58\uAC00 \uC798\uBABB\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uAD6C\uC131 \uD30C\uC77C\uC5D0\uC11C JRE\uB97C \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+�error.launch.execv=Java Web Start(execv)\uB97C \uD638\uCD9C\uD558\uB294 \uC911 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4.
+�error.launch.sysexec=Java Web Start(SysExec)\uB97C \uD638\uCD9C\uD558\uB294 \uC911 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4. 
+terror.listener.failed=\uC2A4\uD50C\uB798\uC2DC: sysCreateListenerSocket\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+gerror.accept.failed=\uC2A4\uD50C\uB798\uC2DC: \uC2B9\uC778\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+]error.recv.failed=\uC2A4\uD50C\uB798\uC2DC: recv\uB97C \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+�error.invalid.port=\uC2A4\uD50C\uB798\uC2DC: \uC801\uD569\uD55C \uD3EC\uD2B8\uB97C \uBCF5\uC6D0\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.
+Xerror.read=\uBC84\uD37C \uB05D\uC744 \uC9C0\uB098\uC11C \uC77D\uC5C8\uC2B5\uB2C8\uB2E4.
+�error.xmlparsing=XML \uAD6C\uBB38 \uBD84\uC11D \uC624\uB958: \uC798\uBABB\uB41C \uD1A0\uD070 \uC720\uD615\uC774 \uBC1C\uACAC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+error.splash.exit=Java Web Start \uC2A4\uD50C\uB798\uC2DC \uD654\uBA74 \uCC98\uB9AC\uB97C \uC885\uB8CC\uD558\uB294 \uC911...\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+:error.winsock=\t\uB9C8\uC9C0\uB9C9 WinSock \uC624\uB958: 
+Yerror.winsock.load=winsock.dll\uC744 \uB85C\uB4DC\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+Kerror.winsock.start=WSAStartup\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+�error.badinst.nohome=\uC798\uBABB\uB41C \uC124\uCE58: JAVAWS_HOME\uC774 \uC124\uC815\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4. 
+�error.splash.noimage=\uC2A4\uD50C\uB798\uC2DC: \uC2A4\uD50C\uB798\uC2DC \uD654\uBA74 \uC774\uBBF8\uC9C0\uB97C \uB85C\uB4DC\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+terror.splash.socket=\uC2A4\uD50C\uB798\uC2DC: \uC11C\uBC84 \uC18C\uCF13\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+gerror.splash.cmnd=\uC2A4\uD50C\uB798\uC2DC: \uC54C \uC218 \uC5C6\uB294 \uBA85\uB839\uC785\uB2C8\uB2E4.
+xerror.splash.port=\uC2A4\uD50C\uB798\uC2DC: \uD3EC\uD2B8\uAC00 \uC9C0\uC815\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.
+eerror.splash.send=\uC2A4\uD50C\uB798\uC2DC: \uC804\uC1A1\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+�error.splash.timer=\uC2A4\uD50C\uB798\uC2DC: \uC885\uB8CC \uD0C0\uC774\uBA38\uB97C \uC0DD\uC131\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+�error.splash.x11.open=\uC2A4\uD50C\uB798\uC2DC: X11 \uB514\uC2A4\uD50C\uB808\uC774\uB97C \uC5F4 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+perror.splash.x11.connect=\uC2A4\uD50C\uB798\uC2DC: X11 \uC811\uC18D\uC744 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+{message.javaws.usage=\n\uC0AC\uC6A9\uBC95:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\n\uC5EC\uAE30\uC11C run-options\uB294 \uB2E4\uC74C\uACFC \uAC19\uC2B5\uB2C8\uB2E4.\t\t\t\n-verbose       \t\uCD94\uAC00 \uCD9C\uB825\uC744 \uD45C\uC2DC\uD569\uB2C8\uB2E4.\t\n-offline       \t\uC624\uD504\uB77C\uC778 \uBAA8\uB4DC\uB85C \uC560\uD50C\uB9AC\uCF00\uC774\uC158\uC744 \uC2E4\uD589\uD569\uB2C8\uB2E4.\t\n-system        \t\uC2DC\uC2A4\uD15C \uCE90\uC2DC\uC5D0\uC11C\uB9CC \uC560\uD50C\uB9AC\uCF00\uC774\uC158\uC744 \uC2E4\uD589\uD569\uB2C8\uB2E4.\n-Xnosplash     \t\uC2A4\uD50C\uB798\uC2DC \uD654\uBA74\uC744 \uD45C\uC2DC\uD558\uC9C0 \uC54A\uACE0 \uC2E4\uD589\uD569\uB2C8\uB2E4.\t\n-J<option>     \tvm\uC5D0 \uC635\uC158\uC744 \uC81C\uACF5\uD569\uB2C8\uB2E4.\t\n-wait          \tJava \uD504\uB85C\uC138\uC2A4\uB97C \uC2DC\uC791\uD558\uACE0 \uC885\uB8CC\uB420 \uB54C\uAE
+U--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_pt_BR.properties ---
+#
+O# Copyright (c) 2004, 2016, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+:error.internal.badmsg=erro interno, mensagem desconhecida
+oerror.badinst.nojre=Instala\u00E7\u00E3o incorreta. Nenhum JRE encontrado no arquivo de configura\u00E7\u00E3o
+Derror.launch.execv=Erro encontrado ao chamar Java Web Start (execv)
+Ierror.launch.sysexec=Erro encontrado ao chamar Java Web Start (SysExec) 
+Eerror.listener.failed=Tela Inicial: falha em sysCreateListenerSocket
+Cerror.accept.failed=Tela Inicial: falha na fun\u00E7\u00E3o accept
+?error.recv.failed=Tela Inicial: falha na fun\u00E7\u00E3o recv
+Ierror.invalid.port=Tela Inicial: n\u00E3o reativou uma porta v\u00E1lida
++error.read=Ler ap\u00F3s o final do buffer
+Serror.xmlparsing=Erro durante o parsing de XML: tipo incorreto de token encontrado
+Nerror.splash.exit=Saindo do processamento da tela inicial do Java Web .....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+.error.winsock=\t\u00DAltimo Erro de WinSock: 
+Cerror.winsock.load=N\u00E3o foi poss\u00EDvel carregar winsock.dll
+(error.winsock.start=Falha em WSAStartup
+Terror.badinst.nohome=Instala\u00E7\u00E3o incorreta: JAVAWS_HOME n\u00E3o definido 
+`error.splash.noimage=Tela Inicial: n\u00E3o foi poss\u00EDvel carregar a imagem da tela inicial
+?error.splash.socket=Tela Inicial: falha no soquete do servidor
+=error.splash.cmnd=Tela Inicial: comando n\u00E3o reconhecido
+<error.splash.port=Tela Inicial: porta n\u00E3o especificada
+?error.splash.send=Tela Inicial: falha na fun\u00E7\u00E3o send
+[error.splash.timer=Tela Inicial: n\u00E3o foi poss\u00EDvel criar temporizador de shutdown
+aerror.splash.x11.open=Tela Inicial: N\u00E3o \u00E9 poss\u00EDvel abrir a exibi\u00E7\u00E3o X11
+Aerror.splash.x11.connect=Tela Inicial: falha na conex\u00E3o X11
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+(message.javaws.usage=\nUso:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\nem que run-options inclui:\t\t\t\n-verbose       \texibe a sa\u00EDda adicional\t\n-offline       \texecuta o aplicativo no modo off-line\t\n-system        \texecuta o aplicativo somente pelo cache do sistema\n-Xnosplash     \texecuta sem mostrar uma tela de abertura\t\n-J<option>     \tenvia a op\u00E7\u00E3o \u00E0 vm\t\n-wait          \tinicia o processo java e aguarda sua sa\u00EDda\t\n\ncontrol-options inclui:\t\n-viewer        \tmostra o visualizador do cache no painel de controle java\n-clearcache    \tremove do cache todos os aplicativos n\u00E3o instalados\n-uninstall     \tremove do cache todos os aplicativos\n-uninstall <jnlp-file>              \tremove o aplicativo do cache\t\n-import [import-options] <jnlp-file>\timporta o aplicativo para o cache\t\t\n\nimport-options inclui:\t\t\t\t\t\t\n-silent        \timporta silenciosamente (sem interface do usu\u00E1rio)\t\n-system        \timporta o aplicativo para o cache do sistema\t\n-codebase <url>\trecupera recursos da base de c\u00F3digo especificada\t\n-shortcut      \tinstala atalhos como se fosse um prompt permitido pelo usu\u00E1rio\t\n-association   \tinstala associa\u00E7\u00F5es como se fosse um prompt permitido pelo usu\u00E1rio\t\n\n
+
+R--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_sv.properties ---
+#
+O# Copyright (c) 2004, 2011, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+9error.internal.badmsg=internt fel, ok\u00E4nt meddelande
+Werror.badinst.nojre=Felaktig installation. Ingen JRE har hittats i konfigurationsfilen
+Serror.launch.execv=Ett fel intr\u00E4ffade under starten av Java Web Start (execv)
+Xerror.launch.sysexec=Ett fel intr\u00E4ffade under starten av Java Web Start (SysExec) 
+Zerror.listener.failed=V\u00E4lkomstsk\u00E4rm: sysCreateListenerSocket utf\u00F6rdes inte
+Cerror.accept.failed=V\u00E4lkomstsk\u00E4rm: kunde inte accepteras
+>error.recv.failed=V\u00E4lkomstsk\u00E4rm: kunde inte mottaga
+Qerror.invalid.port=V\u00E4lkomstsk\u00E4rm: \u00E5terskapade inte en giltig port
+5error.read=L\u00E4ste f\u00F6rbi slutet av bufferten
+Oerror.xmlparsing=XML-tolkningsfel: fel typ av igenk\u00E4nningstecken hittades
+Nerror.splash.exit=Java Web Start - v\u00E4lkomstsk\u00E4rmen avslutas .....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+&error.winsock=\tSenaste WinSock-fel: 
+0error.winsock.load=Kunde inte ladda winsock.dll
+2error.winsock.start=WSAStartup utf\u00F6rdes inte
+Rerror.badinst.nohome=Felaktig installation: JAVAWS_HOME har inte st\u00E4llts in 
+ierror.splash.noimage=V\u00E4lkomstsk\u00E4rm: kunde inte ladda bilden f\u00F6r v\u00E4lkomstsk\u00E4rmen
+Merror.splash.socket=V\u00E4lkomstsk\u00E4rm: serversocket utf\u00F6rdes inte
+?error.splash.cmnd=V\u00E4lkomstsk\u00E4rm: ok\u00E4nt kommando
+>error.splash.port=V\u00E4lkomstsk\u00E4rm: porten angavs inte
+=error.splash.send=V\u00E4lkomstsk\u00E4rm: kunde inte skicka
+aerror.splash.timer=V\u00E4lkomstsk\u00E4rm: kunde inte skapa tidtagare f\u00F6r avst\u00E4ngning
+Qerror.splash.x11.open=V\u00E4lkomstsk\u00E4rm: kan inte \u00F6ppna X11-visningen
+Werror.splash.x11.connect=V\u00E4lkomstsk\u00E4rm: X11-anslutning uppr\u00E4ttades inte
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+kmessage.javaws.usage=\nSyntax:\tjavaws [k\u00F6ralternativ] <jnlp-fil>\t\n\tjavaws [k\u00F6ralternativ]\t\t\n\nd\u00E4r k\u00F6ralternativen omfattar:\t\t\t\n-verbose       \tvisa ytterligare utdata\t\n-offline       \tk\u00F6r applikationen i offlinel\u00E4ge\t\n-system        \tk\u00F6r applikationen endast fr\u00E5n systemcachen\n-Xnosplash     \tk\u00F6r utan att visa v\u00E4lkomstsk\u00E4rmen\t\n-J<alternativ>     \tange alternativ f\u00F6r VM\t\n-wait          \tstarta javaprocessen och v\u00E4nta tills den har slutf\u00F6rts\t\n\nkontrollalternativen omfattar:\t\n-viewer        \tvisa cachel\u00E4saren i kontrollpanelen f\u00F6r java\n-clearcache    \tta bort alla icke installerade applikationer fr\u00E5n cachen\n-uninstall     \tta bort alla applikationer fr\u00E5n cachen\n-uninstall <jnlp-fil>              \tta bort applikationen fr\u00E5n cachen\t\n-import [importalternativ] <jnlp-fil>\timportera applikationen till cachen\t\t\n\nimportalternativen omfattar:\t\t\t\t\t\t\n-silent        \timportera o\u00F6vervakat (utan anv\u00E4ndargr\u00E4nssnitt)\t\n-system        \timportera applikationen till systemcachen\t\n-codebase <url>\th\u00E4mta resurserna fr\u00E5n den angivna kodbasen\t\n-shortcut      \tinstallera genv\u00E4gar som om anv\u00E4ndaren till\u00E5tit det\t\n-association   \tinstallera associationer som om anv\u00E4ndaren till\u00E5tit det\t\n\n
+
+U--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_zh_CN.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+Ierror.internal.badmsg=\u5185\u90E8\u9519\u8BEF, \u672A\u77E5\u6D88\u606F
+gerror.badinst.nojre=\u9519\u8BEF\u5B89\u88C5\u3002\u914D\u7F6E\u6587\u4EF6\u4E2D\u627E\u4E0D\u5230 JRE
+Verror.launch.execv=\u8C03\u7528 Java Web Start (execv) \u65F6\u9047\u5230\u9519\u8BEF
+Zerror.launch.sysexec=\u8C03\u7528 Java Web Start (SysExec) \u65F6\u9047\u5230\u9519\u8BEF
+Uerror.listener.failed=\u542F\u52A8\u5C4F\u5E55: sysCreateListenerSocket \u5931\u8D25
+Gerror.accept.failed=\u542F\u52A8\u5C4F\u5E55: \u63A5\u53D7\u5931\u8D25
+>error.recv.failed=\u542F\u52A8\u5C4F\u5E55: recv \u5931\u8D25
+Xerror.invalid.port=\u542F\u52A8\u5C4F\u5E55: \u672A\u6062\u590D\u6709\u6548\u7AEF\u53E3
+Berror.read=\u8BFB\u53D6\u8D85\u51FA\u7F13\u51B2\u533A\u7ED3\u5C3E
+ferror.xmlparsing=XML \u89E3\u6790\u9519\u8BEF: \u53D1\u73B0\u9519\u8BEF\u7684\u6807\u8BB0\u7C7B\u578B
+eerror.splash.exit=Java Web Start \u542F\u52A8\u5C4F\u5E55\u8FDB\u7A0B\u6B63\u5728\u9000\u51FA.....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+:error.winsock=\t\u4E0A\u4E00\u4E2A WinSock \u9519\u8BEF: 
+8error.winsock.load=\u65E0\u6CD5\u52A0\u8F7D winsock.dll
+,error.winsock.start=WSAStartup \u5931\u8D25
+Oerror.badinst.nohome=\u9519\u8BEF\u5B89\u88C5: JAVAWS_HOME \u672A\u8BBE\u7F6E 
+lerror.splash.noimage=\u542F\u52A8\u5C4F\u5E55: \u65E0\u6CD5\u52A0\u8F7D\u542F\u52A8\u5C4F\u5E55\u56FE\u50CF
+_error.splash.socket=\u542F\u52A8\u5C4F\u5E55: \u670D\u52A1\u5668\u5957\u63A5\u5B57\u5931\u8D25
+Werror.splash.cmnd=\u542F\u52A8\u5C4F\u5E55: \u65E0\u6CD5\u8BC6\u522B\u7684\u547D\u4EE4
+Kerror.splash.port=\u542F\u52A8\u5C4F\u5E55: \u672A\u6307\u5B9A\u7AEF\u53E3
+Eerror.splash.send=\u542F\u52A8\u5C4F\u5E55: \u53D1\u9001\u5931\u8D25
+derror.splash.timer=\u542F\u52A8\u5C4F\u5E55: \u65E0\u6CD5\u521B\u5EFA\u5173\u673A\u8BA1\u65F6\u5668
+Zerror.splash.x11.open=\u542F\u52A8\u5C4F\u5E55: \u65E0\u6CD5\u6253\u5F00 X11 \u663E\u793A
+Perror.splash.x11.connect=\u542F\u52A8\u5C4F\u5E55: X11 \u8FDE\u63A5\u5931\u8D25
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+�message.javaws.usage=\n\u7528\u6CD5:\tjavaws [\u8FD0\u884C\u9009\u9879] <jnlp-file>\t\n\tjavaws [\u63A7\u5236\u9009\u9879]\t\t\n\n\u5176\u4E2D\u8FD0\u884C\u9009\u9879\u5305\u62EC:\t\t\t\n-verbose       \t\u663E\u793A\u5176\u4ED6\u8F93\u51FA\u5185\u5BB9\t\n-offline       \t\u4EE5\u8131\u673A\u6A21\u5F0F\u8FD0\u884C\u5E94\u7528\u7A0B\u5E8F\t\n-system        \t\u4EC5\u4ECE\u7CFB\u7EDF\u9AD8\u901F\u7F13\u5B58\u8FD0\u884C\u5E94\u7528\u7A0B\u5E8F\n-Xnosplash     \t\u8FD0\u884C\u65F6\u4E0D\u663E\u793A\u542F\u52A8\u5C4F\u5E55\t\n-J<\u9009\u9879>     \t\u4E3A vm \u63D0\u4F9B\u9009\u9879\t\n-wait          \t\u542F\u52A8 Java \u8FDB\u7A0B\u5E76\u7B49\u5F85\u5176\u9000\u51FA\t\n\n\u63A7\u5236\u9009\u9879\u5305\u62EC:\t\n-viewer        \t\u5728 Java \u63A7\u5236\u9762\u677F\u4E2D\u663E\u793A\u9AD8\u901F\u7F13\u5B58\u67E5\u770B\u5668\n-clearcache    \t\u4ECE\u9AD8\u901F\u7F13\u5B58\u5220\u9664\u6240\u6709\u672A\u5B89\u88C5\u7684\u5E94\u7528\u7A0B\u5E8F\n-uninstall     \t\u4ECE\u9AD8\u901F\u7F13\u5B58\u5220\u9664\u6240\u6709\u5E94\u7528\u7A0B\u5E8F\n-uninstall <jnlp-file>              \t\u4ECE\u9AD8\u901F\u7F13\u5B58\u5220\u9664\u5E94\u7528\u7A0B\u5E8F\t\n-import [\u5BFC\u5165\u9009\u9879] <jnlp-file>\t\u5C06\u5E94\u7528\u7A0B\u5E8F\u5BFC\u5165\u9AD8\u901F\u7F13\u5B58\t\t\n\n\u5BFC\u5165\u9009\u9879\u5305\u62EC:\t\t\t\t\t\t\n-silent        \t\u4EE5\u65E0\u63D0\u793A\u6A21\u5F0F (\u4E0D\u51FA\u73B0\u7528\u6237\u754C\u9762) \u5BFC\u5165\t\n-system        \t\u5C06\u5E94\u7528\u7A0B\u5E8F\u5BFC\u5165\u7CFB\u7EDF\u9AD8\u901F\u7F13\u5B58\t\n-codebase <url>\t\u4ECE\u7ED9\u5B9A\u7684\u4EE3\u7801\u5E93\u68C0\u7D22\u8D44\u6E90\t\n-shortcut      \t\u4EE5\u7528\u6237\u63A5\u53D7\u63D0\u793A\u7684\u65B9\u5F0F\u5B89\u88C5\u5FEB\u6377\u65B9\u5F0F\t\n-association   \t\u4EE5\u7528\u6237\
+U--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_zh_HK.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+Serror.internal.badmsg=\u5167\u90E8\u932F\u8AA4\uFF0C\u4E0D\u660E\u7684\u8A0A\u606F
+gerror.badinst.nojre=\u5B89\u88DD\u932F\u8AA4\u3002\u5728\u7D44\u614B\u6A94\u4E2D\u627E\u4E0D\u5230 JRE
+Verror.launch.execv=\u547C\u53EB Java Web Start (execv) \u6642\u9047\u5230\u932F\u8AA4
+Zerror.launch.sysexec=\u547C\u53EB Java Web Start (SysExec) \u6642\u9047\u5230\u932F\u8AA4
+Cerror.listener.failed=Splash: sysCreateListenerSocket \u5931\u6557
+5error.accept.failed=Splash: \u63A5\u53D7\u5931\u6557
+,error.recv.failed=Splash: recv \u5931\u6557
+Xerror.invalid.port=Splash: \u6709\u6548\u7684\u9023\u63A5\u57E0\u5C1A\u672A\u56DE\u5FA9
+Berror.read=\u8B80\u53D6\u8D85\u51FA\u7DE9\u885D\u5340\u7D50\u5C3E
+ferror.xmlparsing=XML \u5256\u6790\u932F\u8AA4: \u627E\u5230\u932F\u8AA4\u7684\u8A18\u865F\u7A2E\u985E
+_error.splash.exit=Java Web Start \u9583\u73FE\u87A2\u5E55\u8655\u7406\u7D50\u675F\u4E2D.....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+:error.winsock=\t\u4E0A\u4E00\u6B21 WinSock \u932F\u8AA4: 
+8error.winsock.load=\u7121\u6CD5\u8F09\u5165 winsock.dll
+,error.winsock.start=WSAStartup \u5931\u6557
+Oerror.badinst.nohome=\u5B89\u88DD\u932F\u8AA4: \u672A\u8A2D\u5B9A JAVAWS_HOME 
+Zerror.splash.noimage=Splash: \u7121\u6CD5\u8F09\u5165\u9583\u73FE\u87A2\u5E55\u5F71\u50CF
+Cerror.splash.socket=Splash: \u4F3A\u670D\u5668 socket \u5931\u6557
+?error.splash.cmnd=Splash: \u7121\u6CD5\u8FA8\u8B58\u547D\u4EE4
+?error.splash.port=Splash: \u672A\u6307\u5B9A\u9023\u63A5\u57E0
+3error.splash.send=Splash: \u50B3\u9001\u5931\u6557
+Rerror.splash.timer=Splash: \u7121\u6CD5\u5EFA\u7ACB\u95DC\u6A5F\u8A08\u6642\u5668
+Terror.splash.x11.open=Splash: \u7121\u6CD5\u958B\u555F X11 \u986F\u793A\u756B\u9762
+>error.splash.x11.connect=Splash: X11 \u9023\u7DDA\u5931\u6557
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+�message.javaws.usage=\n\u7528\u6CD5:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\n\u5176\u4E2D\uFF0Crun-options \u5305\u62EC:\t\t\t\n-verbose       \t\u986F\u793A\u66F4\u8A73\u7D30\u7684\u8F38\u51FA\t\n-offline       \t\u5728\u96E2\u7DDA\u6A21\u5F0F\u4E0B\u57F7\u884C\u61C9\u7528\u7A0B\u5F0F\t\n-system        \t\u50C5\u5F9E\u7CFB\u7D71\u5FEB\u53D6\u57F7\u884C\u61C9\u7528\u7A0B\u5F0F\n-Xnosplash     \t\u57F7\u884C\u6642\u4E0D\u986F\u793A\u8EDF\u9AD4\u8CC7\u8A0A\u756B\u9762\t\n-J<option>     \t\u70BA vm \u63D0\u4F9B\u9078\u9805\t\n-wait          \t\u555F\u52D5 Java \u8655\u7406\u4E26\u7B49\u5F85\u5176\u7D50\u675F\t\n\ncontrol-options \u5305\u62EC:\t\n-viewer        \t\u5728 Java \u63A7\u5236\u9762\u677F\u4E2D\u986F\u793A\u5FEB\u53D6\u6AA2\u8996\u5668\n-clearcache    \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u6240\u6709\u975E\u5B89\u88DD\u61C9\u7528\u7A0B\u5F0F\n-uninstall     \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u6240\u6709\u61C9\u7528\u7A0B\u5F0F\n-uninstall <jnlp-file>              \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u61C9\u7528\u7A0B\u5F0F\t\n-import [import-options] <jnlp-file>\t\u5C07\u61C9\u7528\u7A0B\u5F0F\u532F\u5165\u5FEB\u53D6\t\t\n\nimport-options \u5305\u62EC:\t\t\t\t\t\t\n-silent        \t\u4EE5\u7121\u63D0\u793A\u6A21\u5F0F\u532F\u5165 (\u7121\u4F7F\u7528\u8005\u4ECB\u9762)\t\n-system        \t\u5C07\u61C9\u7528\u7A0B\u5F0F\u532F\u5165\u7CFB\u7D71\u5FEB\u53D6\t\n-codebase <url>\t\u5F9E\u6307\u5B9A\u7684\u4EE3\u78BC\u5EAB\u64F7\u53D6\u8CC7\u6E90\t\n-shortcut      \t\u5B89\u88DD\u6377\u5F91 (\u7336\u5982\u4F7F\u7528\u8005\u5DF2\u5141\u8A31\u63D0\u793A)\t\n-association   \t\u5B89\u88DD\u95DC\u806F (\u7336\u5982\u4F7F\u7528\u8005\u5DF2\u5141\u8A31\u63D0\u793A)\t\n\n
+
+U--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/deploy/messages_zh_TW.properties ---
+#
+O# Copyright (c) 2004, 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+
+Serror.internal.badmsg=\u5167\u90E8\u932F\u8AA4\uFF0C\u4E0D\u660E\u7684\u8A0A\u606F
+gerror.badinst.nojre=\u5B89\u88DD\u932F\u8AA4\u3002\u5728\u7D44\u614B\u6A94\u4E2D\u627E\u4E0D\u5230 JRE
+Verror.launch.execv=\u547C\u53EB Java Web Start (execv) \u6642\u9047\u5230\u932F\u8AA4
+Zerror.launch.sysexec=\u547C\u53EB Java Web Start (SysExec) \u6642\u9047\u5230\u932F\u8AA4
+Cerror.listener.failed=Splash: sysCreateListenerSocket \u5931\u6557
+5error.accept.failed=Splash: \u63A5\u53D7\u5931\u6557
+,error.recv.failed=Splash: recv \u5931\u6557
+Xerror.invalid.port=Splash: \u6709\u6548\u7684\u9023\u63A5\u57E0\u5C1A\u672A\u56DE\u5FA9
+Berror.read=\u8B80\u53D6\u8D85\u51FA\u7DE9\u885D\u5340\u7D50\u5C3E
+ferror.xmlparsing=XML \u5256\u6790\u932F\u8AA4: \u627E\u5230\u932F\u8AA4\u7684\u8A18\u865F\u7A2E\u985E
+_error.splash.exit=Java Web Start \u9583\u73FE\u87A2\u5E55\u8655\u7406\u7D50\u675F\u4E2D.....\n
+S# "Last WinSock Error" means the error message for the last operation that failed.
+:error.winsock=\t\u4E0A\u4E00\u6B21 WinSock \u932F\u8AA4: 
+8error.winsock.load=\u7121\u6CD5\u8F09\u5165 winsock.dll
+,error.winsock.start=WSAStartup \u5931\u6557
+Oerror.badinst.nohome=\u5B89\u88DD\u932F\u8AA4: \u672A\u8A2D\u5B9A JAVAWS_HOME 
+Zerror.splash.noimage=Splash: \u7121\u6CD5\u8F09\u5165\u9583\u73FE\u87A2\u5E55\u5F71\u50CF
+Cerror.splash.socket=Splash: \u4F3A\u670D\u5668 socket \u5931\u6557
+?error.splash.cmnd=Splash: \u7121\u6CD5\u8FA8\u8B58\u547D\u4EE4
+?error.splash.port=Splash: \u672A\u6307\u5B9A\u9023\u63A5\u57E0
+3error.splash.send=Splash: \u50B3\u9001\u5931\u6557
+Rerror.splash.timer=Splash: \u7121\u6CD5\u5EFA\u7ACB\u95DC\u6A5F\u8A08\u6642\u5668
+Terror.splash.x11.open=Splash: \u7121\u6CD5\u958B\u555F X11 \u986F\u793A\u756B\u9762
+>error.splash.x11.connect=Splash: X11 \u9023\u7DDA\u5931\u6557
+O# Javaws usage: '\' is a joining of two sentence,which are connected including
+ # the invisible character '\n'.
+�message.javaws.usage=\n\u7528\u6CD5:\tjavaws [run-options] <jnlp-file>\t\n\tjavaws [control-options]\t\t\n\n\u5176\u4E2D\uFF0Crun-options \u5305\u62EC:\t\t\t\n-verbose       \t\u986F\u793A\u66F4\u8A73\u7D30\u7684\u8F38\u51FA\t\n-offline       \t\u5728\u96E2\u7DDA\u6A21\u5F0F\u4E0B\u57F7\u884C\u61C9\u7528\u7A0B\u5F0F\t\n-system        \t\u50C5\u5F9E\u7CFB\u7D71\u5FEB\u53D6\u57F7\u884C\u61C9\u7528\u7A0B\u5F0F\n-Xnosplash     \t\u57F7\u884C\u6642\u4E0D\u986F\u793A\u8EDF\u9AD4\u8CC7\u8A0A\u756B\u9762\t\n-J<option>     \t\u70BA vm \u63D0\u4F9B\u9078\u9805\t\n-wait          \t\u555F\u52D5 Java \u8655\u7406\u4E26\u7B49\u5F85\u5176\u7D50\u675F\t\n\ncontrol-options \u5305\u62EC:\t\n-viewer        \t\u5728 Java \u63A7\u5236\u9762\u677F\u4E2D\u986F\u793A\u5FEB\u53D6\u6AA2\u8996\u5668\n-clearcache    \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u6240\u6709\u975E\u5B89\u88DD\u61C9\u7528\u7A0B\u5F0F\n-uninstall     \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u6240\u6709\u61C9\u7528\u7A0B\u5F0F\n-uninstall <jnlp-file>              \t\u5F9E\u5FEB\u53D6\u4E2D\u79FB\u9664\u61C9\u7528\u7A0B\u5F0F\t\n-import [import-options] <jnlp-file>\t\u5C07\u61C9\u7528\u7A0B\u5F0F\u532F\u5165\u5FEB\u53D6\t\t\n\nimport-options \u5305\u62EC:\t\t\t\t\t\t\n-silent        \t\u4EE5\u7121\u63D0\u793A\u6A21\u5F0F\u532F\u5165 (\u7121\u4F7F\u7528\u8005\u4ECB\u9762)\t\n-system        \t\u5C07\u61C9\u7528\u7A0B\u5F0F\u532F\u5165\u7CFB\u7D71\u5FEB\u53D6\t\n-codebase <url>\t\u5F9E\u6307\u5B9A\u7684\u4EE3\u78BC\u5EAB\u64F7\u53D6\u8CC7\u6E90\t\n-shortcut      \t\u5B89\u88DD\u6377\u5F91 (\u7336\u5982\u4F7F\u7528\u8005\u5DF2\u5141\u8A31\u63D0\u793A)\t\n-association   \t\u5B89\u88DD\u95DC\u806F (\u7336\u5982\u4F7F\u7528\u8005\u5DF2\u5141\u8A31\u63D0\u793A)\t\n\n
+
+I--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/flavormap.properties ---
+#
+9# This properties file is used to initialize the default
+P# java.awt.datatransfer.SystemFlavorMap. It contains the X11 platform-specific,
+O# default mappings between common X11 selection atoms and platform-independent
+2# MIME type strings, which will be converted into
+%# java.awt.datatransfer.DataFlavors.
+#
+<# These default mappings may be augmented by specifying the
+#
+"#       AWT.DnD.flavorMapFileURL 
+#
+P# property in the appropriate awt.properties file. The specified properties URL
++# will be loaded into the SystemFlavorMap.
+#
+# The standard format is:
+#
+# <native>=<MIME type>
+#
+G# <native> should be a string identifier that the native platform will
+K# recognize as a valid data format. <MIME type> should specify both a MIME
+P# primary type and a MIME subtype separated by a '/'. The MIME type may include
+M# parameters, where each parameter is a key/value pair separated by '=', and
+?# where each parameter to the MIME type is separated by a ';'.
+#
+I# Because SystemFlavorMap implements FlavorTable, developers are free to
+L# duplicate both native keys and DataFlavor values. If a mapping contains a
+L# duplicate key or value, earlier mappings which included this key or value
+# will be preferred.
+#
+G# Mappings whose values specify DataFlavors with primary MIME types of
+L# "text", and which support the charset parameter, should specify the exact
+F# format in which the native platform expects the data. The "charset"
+F# parameter specifies the char to byte encoding, the "eoln" parameter
+N# specifies the end-of-line marker, and the "terminators" parameter specifies
+J# the number of terminating NUL bytes. Note that "eoln" and "terminators"
+L# are not standardized MIME type parameters. They are specific to this file
+N# format ONLY. They will not appear in any of the DataFlavors returned by the
+%# SystemFlavorMap at the Java level.
+#
+J# If the "charset" parameter is omitted, or has zero length, the platform
+J# default encoding is assumed. If the "eoln" parameter is omitted, or has
+K# zero length, "\n" is assumed. If the "terminators" parameter is omitted,
+2# or has a value less than zero, zero is assumed.
+#
+M# Upon initialization, the data transfer subsystem will record the specified
+J# details of the native text format, but the default SystemFlavorMap will
+D# present a large set of synthesized DataFlavors which map, in both
+N# directions, to the native. After receiving data from the application in one
+K# of the synthetic DataFlavors, the data transfer subsystem will transform
+L# the data stream into the format specified in this file before passing the
++# transformed stream to the native system.
+#
+G# Mappings whose values specify DataFlavors with primary MIME types of
+M# "text", but which do not support the charset parameter, will be treated as
+L# opaque, 8-bit data. They will not undergo any transformation process, and
+L# any "charset", "eoln", or "terminators" parameters specified in this file
+# will be ignored.
+#
+J# See java.awt.datatransfer.DataFlavor.selectBestTextFlavor for a list of
+4# text flavors which support the charset parameter.
+
+=UTF8_STRING=text/plain;charset=UTF-8;eoln="\n";terminators=0
+
+K# The COMPOUND_TEXT support for inter-client text transfer is disabled by 
+P# default. The reason is that many native applications prefer this format over 
+P# other native text formats, but are unable to decode the textual data in this 
+J# format properly. This results in java-to-native text transfer failures.
+K# To enable the COMPOUND_TEXT support for this JRE installation uncomment 
+# the line below.
+
+K# COMPOUND_TEXT=text/plain;charset=x-compound-text;eoln="\n";terminators=0
+
+(TEXT=text/plain;eoln="\n";terminators=0
+<STRING=text/plain;charset=iso8859-1;eoln="\n";terminators=0
+<FILE_NAME=application/x-java-file-list;class=java.util.List
+@text/uri-list=application/x-java-file-list;class=java.util.List
+,PNG=image/x-java-image;class=java.awt.Image
+-JFIF=image/x-java-image;class=java.awt.Image
+
+V--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/hijrah-config-umalqura.properties ---
+I# Copyright (c) 2013, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+:# This properties file defines a Hijrah calendar variant.
+#
+
+# Fields:
+#
+5#       <version> ::= 'version' '=' <version string>
++#            <id> ::= 'id' '=' <id string>
+/#          <type> ::= 'type' '=' <type string>
+G#     <iso-start> ::= 'iso-start' '=' <start date in the ISO calendar>
+G#          <year> ::= <yyyy> '=' <nn nn nn nn nn nn nn nn nn nn nn nn>
+#
+# version ... (Required)
+#
+# id ... (Required)
+$#    Identifies the Java Chronology
+#
+# type ... (Required)
+H#    Identifies the type of calendar in the standard calendar ID scheme
+# iso-start ... (Required)
+B#    Specifies the corresponding ISO date to the first Hijrah day
+##    in the defined range of dates
+#
+# year ... (Required)
+4#    Number of days for each month of a Hijrah year
+D#    * Each line defines a year. The years must be in chronological
+$#      order and no gap is allowed.
+M#    * Each line is in the form indicated above. <yyyy> is a Hijrah year and
+O#      nn is the number of days for a month listed in the order of the months.
+&#    * Each year must have 12 months.
+0#    * Each month should be 29 or 30 days long.
+F#    * There must be one or more space characters between the months.
+#
+
+
+# Version of this definition
+version=1.8.0_1
+
+# Java chronology ID
+id=Hijrah-umalqura
+
+'# Standard calendar type specification
+type=islamic-umalqura
+
+A# defines the corresponding ISO date to the earliest Hijrah date
+iso-start=1882-11-12
+
+)#     1  2  3  4  5  6  7  8  9 10 11 12
+)1300=30 29 30 29 30 29 30 29 30 29 30 29
+)1301=30 30 29 30 29 30 29 30 29 30 29 29
+)1302=30 30 30 29 30 30 29 29 30 29 29 30
+)1303=29 30 30 29 30 30 29 30 29 30 29 29
+)1304=29 30 30 29 30 30 30 29 30 29 30 29
+)1305=29 29 30 30 29 30 30 29 30 30 29 29
+)1306=30 29 30 29 30 29 30 29 30 30 29 30
+)1307=29 30 29 30 29 30 29 30 29 30 29 30
+)1308=29 30 30 29 30 29 30 29 30 29 29 30
+)1309=29 30 30 30 30 29 29 30 29 29 30 29
+)1310=30 29 30 30 30 29 30 29 30 29 29 30
+)1311=29 30 29 30 30 30 29 30 29 30 29 29
+)1312=30 29 30 29 30 30 29 30 30 29 30 29
+)1313=29 30 29 30 29 30 29 30 30 30 29 29
+)1314=30 30 29 30 29 29 30 29 30 30 29 30
+)1315=29 30 30 29 30 29 29 30 29 30 29 30
+)1316=29 30 30 30 29 30 29 29 30 29 30 29
+)1317=30 29 30 30 29 30 29 30 29 30 29 29
+)1318=30 29 30 30 29 30 30 29 30 29 30 29
+)1319=29 30 29 30 30 29 30 29 30 30 29 30
+)1320=29 30 29 29 30 29 30 29 30 30 30 29
+)1321=30 29 30 29 29 30 29 29 30 30 30 30
+)1322=29 30 29 30 29 29 29 30 29 30 30 30
+)1323=29 30 30 29 30 29 29 29 30 29 30 30
+)1324=29 30 30 29 30 29 30 29 29 30 29 30
+)1325=30 29 30 29 30 30 29 30 29 30 29 30
+)1326=29 29 30 29 30 30 29 30 29 30 30 29
+)1327=30 29 29 30 29 30 29 30 30 29 30 30
+)1328=29 30 29 29 30 29 29 30 30 30 29 30
+)1329=30 29 30 29 29 30 29 29 30 30 29 30
+)1330=30 30 29 30 29 29 30 29 29 30 30 29
+)1331=30 30 29 30 30 29 29 30 29 30 29 30
+)1332=29 30 29 30 30 29 30 29 30 30 29 29
+)1333=30 29 29 30 30 29 30 30 29 30 30 29
+)1334=29 29 30 29 30 29 30 30 30 29 30 29
+)1335=30 29 30 29 29 30 29 30 30 29 30 30
+)1336=29 30 29 30 29 29 30 29 30 29 30 30
+)1337=30 29 30 29 30 29 29 30 29 30 29 30
+)1338=29 30 30 29 30 30 29 29 30 29 30 29
+)1339=30 29 30 29 30 30 30 29 30 29 29 30
+)1340=29 29 30 29 30 30 30 30 29 30 29 29
+)1341=30 29 29 30 29 30 30 30 29 30 30 29
+)1342=29 29 30 29 30 29 30 30 29 30 30 29
+)1343=30 29 29 30 29 30 29 30 29 30 30 29
+)1344=30 29 30 29 30 30 29 29 30 29 30 29
+)1345=30 29 30 30 30 29 30 29 29 30 29 29
+)1346=30 29 30 30 30 30 29 30 29 29 30 29
+)1347=29 30 29 30 30 30 29 30 30 29 29 30
+)1348=29 29 30 29 30 30 29 30 30 30 29 29
+)1349=30 29 29 30 29 30 30 29 30 30 29 30
+)1350=29 30 29 30 29 30 29 29 30 30 29 30
+)1351=30 29 30 29 30 29 30 29 29 30 29 30
+)1352=30 29 30 30 29 30 29 30 29 29 30 29
+)1353=30 29 30 30 30 29 30 29 29 30 29 30
+)1354=29 30 29 30 30 29 30 30 29 30 29 29
+)1355=30 29 29 30 30 29 30 30 29 30 30 29
+)1356=29 30 29 30 29 30 29 30 29 30 30 30
+)1357=29 29 30 29 30 29 29 30 29 30 30 30
+1
+F--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/javafx.properties ---
+javafx.runtime.version=8.0.121
+javafx.runtime.build=b13
+
+G--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/logging.properties ---
+=############################################################
+'#  	Default Logging Configuration File
+#
+8# You can use a different file by specifying a filename
+<# with the java.util.logging.config.file system property.  
+:# For example java -Djava.util.logging.config.file=myfile
+=############################################################
+
+=############################################################
+#  	Global properties
+=############################################################
+
+># "handlers" specifies a comma separated list of log Handler 
+@# classes.  These handlers will be installed during VM startup.
+;# Note that these classes must be on the system classpath.
+A# By default we only configure a ConsoleHandler, which will only
+.# show messages at the INFO and above levels.
++handlers= java.util.logging.ConsoleHandler
+
+?# To also add the FileHandler, use the following line instead.
+K#handlers= java.util.logging.FileHandler, java.util.logging.ConsoleHandler
+
+ # Default global logging level.
+9# This specifies which kinds of events are logged across
+9# all loggers.  For any given facility this global level
+0# can be overriden by a facility specific level
+9# Note that the ConsoleHandler also has a separate level
+4# setting to limit messages printed to the console.
+
+.level= INFO
+
+=############################################################
+# Handler specific properties.
+6# Describes specific configuration info for Handlers.
+=############################################################
+
+3# default file output is in user's home directory.
+6java.util.logging.FileHandler.pattern = %h/java%u.log
+,java.util.logging.FileHandler.limit = 50000
+(java.util.logging.FileHandler.count = 1
+Ijava.util.logging.FileHandler.formatter = java.util.logging.XMLFormatter
+
+G# Limit the message that are printed on the console to INFO and above.
+.java.util.logging.ConsoleHandler.level = INFO
+Ojava.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+
+:# Example to customize the SimpleFormatter output format 
++# to print one-line log message like this:
++#     <level>: <log message> [<date/time>]
+#
+@# java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
+
+=############################################################
+ # Facility specific properties.
+*# Provides extra control for each logger.
+=############################################################
+
+=# For example, set the com.xyz.foo logger to only log SEVERE
+
+# messages:
+com.xyz.foo.level = SEVERE
+
+U--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/management/management.properties ---
+F#####################################################################
+:#	Default Configuration File for Java Platform Management
+F#####################################################################
+#
+E# The Management Configuration file (in java.util.Properties format)
+A# will be read if one of the following system properties is set:
+7#    -Dcom.sun.management.jmxremote.port=<port-number>
+2# or -Dcom.sun.management.snmp.port=<port-number>
+2# or -Dcom.sun.management.config.file=<this-file>
+#
+0# The default Management Configuration file is:
+#
+2#       $JRE/lib/management/management.properties
+#
+J# Another location for the Management Configuration File can be specified
+6# by the following property on the Java command line:
+#
+2#    -Dcom.sun.management.config.file=<this-file>
+#
+C# If -Dcom.sun.management.config.file=<this-file> is set, the port
+F# number for the management agent can be specified in the config file
+
+# using the following lines:
+#
+C# ################ Management Agent Port #########################
+#
+<# For setting the JMX RMI agent port use the following line
+2# com.sun.management.jmxremote.port=<port-number>
+#
+9# For setting the SNMP agent port use the following line
+-# com.sun.management.snmp.port=<port-number>
+
+F#####################################################################
+-#                   Optional Instrumentation
+F#####################################################################
+#
+E# By default only the basic instrumentation with low overhead is on.
+A# The following properties allow to selectively turn on optional
+=# instrumentation which are off by default and may have some
+# additional overhead.
+#
+6# com.sun.management.enableThreadContentionMonitoring
+#
+?#      This option enables thread contention monitoring if the
+;#      Java virtual machine supports such instrumentation.
+K#      Refer to the specification for the java.lang.management.ThreadMBean
+G#      interface - see isThreadContentionMonitoringSupported() method.
+#
+
+G# To enable thread contention monitoring, uncomment the following line
+6# com.sun.management.enableThreadContentionMonitoring
+
+F#####################################################################
+#			SNMP Management Properties
+F#####################################################################
+#
+F# If the system property -Dcom.sun.management.snmp.port=<port-number>
+# is set then
+B#	- The SNMP agent (with the Java virtual machine MIB) is started
+C#	  that listens on the specified port for incoming SNMP requests.
+;#	- the following properties for read for SNMP management.
+#
+;# The configuration can be specified only at startup time.
+Q# Later changes to the above system property (e.g. via setProperty method), this
+H# config file, or the ACL file has no effect to the running SNMP agent.
+#
+
+#
+A# ##################### SNMP Trap Port #########################
+#
+># com.sun.management.snmp.trap=<trap-destination-port-number>
+G#      Specifies the remote port number at which managers are expected
+B#      to listen for trap. For each host defined in the ACL file,
+O#      the SNMP agent will send traps at <host>:<trap-destination-port-number>
+)#      Default for this property is 162.
+#
+
+K# To set port for sending traps to a different port use the following line
+># com.sun.management.snmp.trap=<trap-destination-port-number>
+
+#
+C# ################ SNMP listen interface #########################
+#
+2# com.sun.management.snmp.interface=<InetAddress>
+H#      Specifies the local interface on which the SNMP agent will bind.
+B#      This is useful when running on machines which have several
+H#      interfaces defined. It makes it possible to listen to a specific
+1#      subnet accessible through that interface.
+1#      Default for this property is "localhost".
+#
+H#      The format of the value for that property is any string accepted
+2#      by java.net.InetAddress.getByName(String).
+#
+
+N# For restricting the port on which SNMP agent listens use the following line
+2# com.sun.management.snmp.interface=<InetAddress>
+
+#
+ # #################### SNMP ACL
+C--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/net.properties ---
+=############################################################
+*#  	Default Networking Configuration File
+#
+M# This file may contain default values for the networking system properties.
+J# These values are only used when the system properties are not specified
+.# on the command line or set programatically.
+C# For now, only the various proxy settings can be configured here.
+=############################################################
+
+G# Whether or not the DefaultProxySelector will default to System Proxy
+# settings when they do exist.
+A# Set it to 'true' to enable this feature and check for platform
+# specific proxy settings
+B# Note that the system properties that do explicitely set proxies
+D# (like http.proxyHost) do take precedence over the system settings
+4# even if java.net.useSystemProxies is set to true.
+ 
+ java.net.useSystemProxies=false
+
+J#------------------------------------------------------------------------
+9# Proxy configuration for the various protocol handlers.
+I# DO NOT uncomment these lines if you have set java.net.useSystemProxies
+H# to true as the protocol specific properties will take precedence over
+# system settings.
+J#------------------------------------------------------------------------
+
+A# HTTP Proxy settings. proxyHost is the name of the proxy server
+J# (e.g. proxy.mydomain.com), proxyPort is the port number to use (default
+L# value is 80) and nonProxyHosts is a '|' separated list of hostnames which
+K# should be accessed directly, ignoring the proxy server (default value is
+# localhost & 127.0.0.1).
+#
+# http.proxyHost=
+# http.proxyPort=80
+)http.nonProxyHosts=localhost|127.*|[::1]
+#
+B# HTTPS Proxy Settings. proxyHost is the name of the proxy server
+J# (e.g. proxy.mydomain.com), proxyPort is the port number to use (default
+O# value is 443). The HTTPS protocol handlers uses the http nonProxyHosts list.
+#
+# https.proxyHost=
+# https.proxyPort=443
+#
+@# FTP Proxy settings. proxyHost is the name of the proxy server
+J# (e.g. proxy.mydomain.com), proxyPort is the port number to use (default
+L# value is 80) and nonProxyHosts is a '|' separated list of hostnames which
+K# should be accessed directly, ignoring the proxy server (default value is
+# localhost & 127.0.0.1).
+#
+# ftp.proxyHost=
+# ftp.proxyPort=80
+(ftp.nonProxyHosts=localhost|127.*|[::1]
+#
+C# Gopher Proxy settings. proxyHost is the name of the proxy server
+J# (e.g. proxy.mydomain.com), proxyPort is the port number to use (default
+# value is 80)
+#
+# gopher.proxyHost=
+# gopher.proxyPort=80
+#
+G# Socks proxy settings. socksProxyHost is the name of the proxy server
+D# (e.g. socks.domain.com), socksProxyPort is the port number to use
+# (default value is 1080)
+#
+# socksProxyHost=
+# socksProxyPort=1080
+#
+H# HTTP Keep Alive settings. remainingData is the maximum amount of data
+J# in kilobytes that will be cleaned off the underlying socket so that it 
+K# can be reused (default value is 512K), queuedConnections is the maximum 
+L# number of Keep Alive connections to be on the queue for clean up (default
+# value is 10).
+## http.KeepAlive.remainingData=512
+&# http.KeepAlive.queuedConnections=10
+
+9# Authentication Scheme restrictions for HTTP and HTTPS.
+#
+I# In some environments certain authentication schemes may be undesirable
+P# when proxying HTTP or HTTPS.  For example, "Basic" results in effectively the
+K# cleartext transmission of the user's password over the physical network.
+L# This section describes the mechanism for disabling authentication schemes
+P# based on the scheme name. Disabled schemes will be treated as if they are not
+## supported by the implementation.
+#
+R# The 'jdk.http.auth.tunneling.disabledSchemes' property lists the authentication
+Q# schemes that will be disabled when tunneling HTTPS over a proxy, HTTP CONNECT.
+Q# The 'jdk.http.auth.proxying.disabledSchemes' property lists the authentication
+4# schemes that will be disabled when proxying HTTP.
+#
+M# In both cases the property is a comma-separated list of, case-insensitive,
+E# authentication scheme names, as defined by their relevant RFCs. An
+# imp
+I--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/psfontj2d.properties ---
+#
+#
+I# Copyright (c) 1999, Oracle and/or its affiliates. All rights reserved.
+D# ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+#
+9#	PostScript printer property file for Java 2D printing.
+#
+G# WARNING: This is an internal implementation file, not a public file.
+F# Any customisation or reliance on the existence of this file and its
+5# contents or syntax is discouraged and unsupported.
+@# It may be incompatibly changed or removed without any notice.
+#
+#
+
+font.num=35
+#
+G# Legacy logical font family names and logical font aliases should all
+)# map to the primary logical font names.
+#
+
+serif=serif
+
+times=serif
+timesroman=serif
+sansserif=sansserif
+helvetica=sansserif
+dialog=sansserif
+dialoginput=monospaced
+monospaced=monospaced
+courier=monospaced
+#
+O# Next, physical fonts which can be safely mapped to standard postscript fonts
+G# These keys generally map to a value which is the same as the key, so
+=# the key/value is just a way to say the font has a mapping.
+J# Sometimes however we map more than one screen font to the same PS font.
+#
+avantgarde=avantgarde_book
+ avantgarde_book=avantgarde_book
+ avantgarde_demi=avantgarde_demi
+0avantgarde_book_oblique=avantgarde_book_oblique
+0avantgarde_demi_oblique=avantgarde_demi_oblique
+#
+
+itcavantgarde=avantgarde_book
+
+itcavantgarde=avantgarde_book
+#itcavantgarde_demi=avantgarde_demi
+.itcavantgarde_oblique=avantgarde_book_oblique
+3itcavantgarde_demi_oblique=avantgarde_demi_oblique
+#
+bookman=bookman_light
+
+bookman_light=bookman_light
+bookman_demi=bookman_demi
+*bookman_light_italic=bookman_light_italic
+(bookman_demi_italic=bookman_demi_italic
+#
+L# Exclude "helvetica" on its own as that's a legacy name for a logical font
+
+helvetica_bold=helvetica_bold
+$helvetica_oblique=helvetica_oblique
+.helvetica_bold_oblique=helvetica_bold_oblique
+#
+itcbookman_light=bookman_light
+
+itcbookman_demi=bookman_demi
+-itcbookman_light_italic=bookman_light_italic
++itcbookman_demi_italic=bookman_demi_italic
+#
+J# Exclude "courier" on its own as that's a legacy name for a logical font
+courier_bold=courier_bold
+ courier_oblique=courier_oblique
+*courier_bold_oblique=courier_bold_oblique
+#
+courier_new=courier
+
+courier_new_bold=courier_bold
+#
+1monotype_century_schoolbook=newcenturyschoolbook
+;monotype_century_schoolbook_bold=newcenturyschoolbook_bold
+?monotype_century_schoolbook_italic=newcenturyschoolbook_italic
+Imonotype_century_schoolbook_bold_italic=newcenturyschoolbook_bold_italic
+#
+*newcenturyschoolbook=newcenturyschoolbook
+4newcenturyschoolbook_bold=newcenturyschoolbook_bold
+8newcenturyschoolbook_italic=newcenturyschoolbook_italic
+Bnewcenturyschoolbook_bold_italic=newcenturyschoolbook_bold_italic
+#
+palatino=palatino
+
+palatino_bold=palatino_bold
+ palatino_italic=palatino_italic
+*palatino_bold_italic=palatino_bold_italic
+#
+H# Exclude "times" on its own as that's a legacy name for a logical font
+
+times_bold=times_roman_bold
+ times_italic=times_roman_italic
+*times_bold_italic=times_roman_bold_italic
+#
+times_roman=times_roman
+"times_roman_bold=times_roman_bold
+&times_roman_italic=times_roman_italic
+0times_roman_bold_italic=times_roman_bold_italic
+#
+
+times_new_roman=times_roman
+&times_new_roman_bold=times_roman_bold
+*times_new_roman_italic=times_roman_italic
+4times_new_roman_bold_italic=times_roman_bold_italic
+#
+(zapfchancery_italic=zapfchancery_italic
++itczapfchancery_italic=zapfchancery_italic
+#
+N# Next the mapping of the font name + charset + style to Postscript font name
+# for the logical fonts.
+#
+serif.latin1.plain=Times-Roman
+
+serif.latin1.bold=Times-Bold
+!serif.latin1.italic=Times-Italic
+)serif.latin1.bolditalic=Times-BoldItalic
+serif.symbol.plain=Symbol
+"serif.dingbats.plain=ZapfDingbats
+serif.symbol.bold=Symbol
+!serif.dingbats.bold=ZapfDingbats
+serif.symbol.italic=Symbol
+#serif.dingbats.italic=ZapfDingbats
+serif.symbol.bolditalic=Symbol
+'serif.dingbats.bolditalic=ZapfDingbats
+#
+!sansserif.latin1.plain=Helvetica
+%sansserif.latin1.bold=Helvetica-Bold
+*sansserif.latin1.italic=Helvetica-Oblique
+,sansserif.latin1.bolditalic=Helvetica-BoldO
+E--- /opt/sonar-scanner-3.3.0.1492-linux/jre/lib/sound.properties ---
+=############################################################
+)#               Sound Configuration File
+=############################################################
+#
+:# This properties file is used to specify default service
+0# providers for javax.sound.midi.MidiSystem and
+## javax.sound.sampled.AudioSystem.
+#
+;# The following keys are recognized by MidiSystem methods:
+#
+
+# javax.sound.midi.Receiver
+
+# javax.sound.midi.Sequencer
+# javax.sound.midi.Synthesizer
+# javax.sound.midi.Transmitter
+#
+<# The following keys are recognized by AudioSystem methods:
+#
+# javax.sound.sampled.Clip
+# javax.sound.sampled.Port
+%# javax.sound.sampled.SourceDataLine
+%# javax.sound.sampled.TargetDataLine
+#
+8# The values specify the full class name of the service
+ # provider, or the device name.
+#
+*# See the class descriptions for details.
+#
+
+# Example 1:
+7# Use MyDeviceProvider as default for SourceDataLines:
+># javax.sound.sampled.SourceDataLine=com.xyz.MyDeviceProvider
+#
+
+# Example 2:
+?# Specify the default Synthesizer by its name "InternalSynth".
+.# javax.sound.midi.Synthesizer=#InternalSynth
+#
+
+# Example 3:
+5# Specify the default Receiver by provider and name:
+F# javax.sound.midi.Receiver=com.sun.media.sound.MidiProvider#SunMIDI1
+#
+
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+K/opt/sonar-scanner-3.3.0.1492-linux/jre/THIRDPARTYLICENSEREADME-JAVAFX.txt
+D/opt/sonar-scanner-3.3.0.1492-linux/jre/THIRDPARTYLICENSEREADME.txt
+H/opt/sonar-scanner-3.3.0.1492-linux/jre/lib/management/jmxremote.access
+S/opt/sonar-scanner-3.3.0.1492-linux/jre/lib/management/jmxremote.password.template
+M/opt/sonar-scanner-3.3.0.1492-linux/jre/lib/management/management.properties
+;/opt/sonar-scanner-3.3.0.1492-linux/jre/lib/net.properties
+/root/original-ks.cfg
+/root/anaconda-ks.cfg
+=== HUNT_DONE ===

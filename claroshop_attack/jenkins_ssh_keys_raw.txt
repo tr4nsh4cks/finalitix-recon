@@ -1,0 +1,167 @@
+﻿=== SSH PRIVATE KEYS ===
+SSH Key creds found: 0
+
+=== ALL CREDENTIALS (any type) ===
+Total creds: 11
+---
+ID: AMX Docker API CA client | Type: DockerServerCredentials | Desc: 
+---
+ID: 0d8e0f66-71a2-43f5-8bd5-1be22a53c656 | Type: UsernamePasswordCredentialsImpl | Desc: gitlab de claroshop
+  [UP] User: jenkins_legacy | Pass: JenkisLegasy25
+---
+ID: cs-dev-gitlab-jenkins | Type: UsernamePasswordCredentialsImpl | Desc: 
+  [UP] User: jenkins | Pass: e6LBqIkOI$PR1XX2oia
+---
+ID: GitLabClaro | Type: UsernamePasswordCredentialsImpl | Desc: GitLabClaro
+  [UP] User: Jenkins | Pass: JenkisLegasy25
+---
+ID: jenkis | Type: UsernamePasswordCredentialsImpl | Desc: jenkis
+  [UP] User: jenkins | Pass: e6LBqIkOI$PR1XX2oia
+---
+ID: gitlabClaroshop | Type: UsernamePasswordCredentialsImpl | Desc: Gitlab Claro Shop
+  [UP] User: jenkins.legacy.sn.se@gmail.com | Pass: JenkisLegasy25
+---
+ID: cf2c59c4-620e-46fa-83bf-331106553d8b | Type: UsernamePasswordCredentialsImpl | Desc: jenkins registry credentials
+  [UP] User: jenkins-ng.dev.claroshop.com | Pass: dtvV50vwfGq5CO9
+---
+ID: nexus | Type: UsernamePasswordCredentialsImpl | Desc: nexus.dev.claroshop.com password
+  [UP] User: jenkins-ng.dev.claroshop.com | Pass: dtvV50vwfGq5CO9
+---
+ID: 5bc27f9c-6ced-4b66-b71a-a53a90169f40 | Type: StringCredentialsImpl | Desc: Migrated SonarQube authentication token
+  [STR] Secret: 6c75f3c846ea459e659e761238d6f12f4e27a53d
+---
+ID: sonarqube.dev.sia.gsanborns.com.mx | Type: StringCredentialsImpl | Desc: sonarqube.dev.sia.gsanborns.com.mx
+  [STR] Secret: squ_547fa54c6926c2f6b9bf14eb980942eabdd96686
+---
+ID: cc-infracode-sophia-mrk-i | Type: UsernamePasswordCredentialsImpl | Desc: 
+  [UP] User: sophia-mrk-i | Pass: plug*spoke!MosqueCloud3col
+
+=== CREDENTIALS.XML RAW DUMP ===
+<?xml version='1.1' encoding='UTF-8'?>
+<com.cloudbees.plugins.credentials.SystemCredentialsProvider plugin="credentials@2.3.11">
+  <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+    <entry>
+      <com.cloudbees.plugins.credentials.domains.Domain>
+        <specifications/>
+      </com.cloudbees.plugins.credentials.domains.Domain>
+      <java.util.concurrent.CopyOnWriteArrayList>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>jenkis</id>
+          <description>jenkis</description>
+          <username>jenkins</username>
+          <password>{AQAAABAAAAAgVmnxwyIQaK07YEfmA/b02ZLH7I1dRafFZnywRTRL2A1/aBnVO+3L+NbFwMLg7hHU}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>cs-dev-gitlab-jenkins</id>
+          <description></description>
+          <username>jenkins</username>
+          <password>{AQAAABAAAAAgd7Hzy3sn+4iZTRUjmJ7qTJcut7gjLBSYv7aPYaa1uDdhia4TUUZwpPj2QZ13i4pb}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>nexus</id>
+          <description>nexus.dev.claroshop.com password</description>
+          <username>jenkins-ng.dev.claroshop.com</username>
+          <password>{AQAAABAAAAAQKNPBm/vYHIaQNthMZalG2NEdWNgIpXoYFucFuUxQof4=}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <org.jenkinsci.plugins.docker.commons.credentials.DockerServerCredentials plugin="docker-commons@1.16">
+          <scope>GLOBAL</scope>
+          <id>AMX Docker API CA client</id>
+          <description></description>
+          <clientKey>{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}</clientKey>
+          <clientCertificate>-----BEGIN CERTIFICATE-----
+MIIDbDCCAlSgAwIBAgIRAKrUoD5qE53aBBE/RujiT84wDQYJKoZIhvcNAQELBQAw
+HDEaMBgGA1UEAwwRQU1YIERvY2tlciBBUEkgQ0EwHhcNMTgwNzI3MTYwMjIwWhcN
+MjgwNzI0MTYwMjIwWjAnMSUwIwYDVQQDDBxqZW5raW5zLW5nLmRldi5jbGFyb3No
+b3AuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwMTwcp1u/2c6
+rwUy4QJJn9iGjaZnknRNUj8ROYiJsWyml976WeLlWeOEV5FdnhoD9ko1O44K/bMU
+JXHThOKIRf5Na9L1i3FSwejQIkb4KqmpJ43dIS838c6oqUPUNKWVh45NvAWX4Xa7
+DPeevilnoFKana/AHHNdrQ9bWH4JqZzhp7xt8DYmBIAjW894mUofZ0dIUkxMt0et
+NZP7/v8Z3ArrJc7V9ZsdTxz0KG85Xn4ao0mwuICs/YJWh3yDrK+8NAte6jlmc/qJ
+ncuu4XZZGspm0/ho/8X3ZC8RvcIsdUpycTSar40qOE63ruI/we66i6ZjGZcGNuU6
+58Fh0n/fuQIDAQABo4GdMIGaMAkGA1UdEwQCMAAwHQYDVR0OBBYEFH9PGLIT6O9n
+XiFr7W3yJrDvgwSzMEwGA1UdIwRFMEOAFHyNNPPE+2oD9vX/L8SzkD3kkyKSoSCk
+HjAcMRowGAYDVQQDDBFBTVggRG9ja2VyIEFQSSBDQYIJAOdyHs3Mx8KNMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEA
+vMz98ykB4XoErs4TA4L6g5Ox7ul73jiFh2hCOicwuNvdrFdTRgORVkvxa1X90z9x
+kl5u2Gang1jt5gYdErEYKtwLORPYNhymjuhLrZjKPsmRUtgaEZnqlATFCEm0haao
+wvvkzqAHYEJO8YaarKNbzEFc9wIFlRdAT2vxkHazS7xY7YWUfJR153m2PBGW2Cmq
+VOblG3UT+znGs7k+qoR3edebfv/7F/aGAKpv6+/Gj+O9aJhgiblYvDL4ufOtrDyd
+j3qTmX2GHLvDHkOIkZFnQ9Buh9MfSOg9CLZRoyrfH+hG06dzElC+5GacUQKp57Xw
+i1DwHmHQ/ZZzBtKiyBmh7g==
+-----END CERTIFICATE-----</clientCertificate>
+          <serverCaCertificate>-----BEGIN CERTIFICATE-----
+MIIDRzCCAi+gAwIBAgIJAOdyHs3Mx8KNMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
+BAMMEUFNWCBEb2NrZXIgQVBJIENBMB4XDTE4MDcyNzE1NTM0MVoXDTI4MDcyNDE1
+NTM0MVowHDEaMBgGA1UEAwwRQU1YIERvY2tlciBBUEkgQ0EwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDs7wjsirUyLXamVQGnOcnV29fbs0LV55cUUBzq
+JzWNtoyyDjmwCeSegIi42+gipS6QT1s+0YcRrVZGpi0wko/p+7PXvrixRYEq9ehB
+vTnUoayvA0KGQhdtEeSSMYgoyNDZkwtOOaAAbN7sjnpGmuszfzVtISD78f2xUImU
+xp+WsJ9qNR0afMnER1uZdg4vn5kgLHr30MwAQcIKLBvBlHtkR19mCmKmMucNHlwQ
+3U6Lfj9ApocHw/oYnFEBPSRrWFSN7GK6tLYm5ihPnf+sGWh9MdXeI6cu6BGCQ7uP
+mnxA7lNgWD9rl1o0n1vvt/lom17NzZCoNuH5DDnil4eZkZh7AgMBAAGjgYswgYgw
+HQYDVR0OBBYEFHyNNPPE+2oD9vX/L8SzkD3kkyKSMEwGA1UdIwRFMEOAFHyNNPPE
++2oD9vX/L8SzkD3kkyKSoSCkHjAcMRowGAYDVQQDDBFBTVggRG9ja2VyIEFQSSBD
+QYIJAOdyHs3Mx8KNMAwGA1UdEwQFMAMBAf8wCwYDVR0PBAQDAgEGMA0GCSqGSIb3
+DQEBCwUAA4IBAQAPkyYDbFeSi/AZPBYVCqwxRC0ghHy7pGKQE/F+p/xILn8B9Hyd
+Iibt1QTCvTWHsstxBcBy+hTkk5oCjcghP160igJHqFRFgKels747mKNHlgB3nOi8
+hdIyZIgbWqK1KGwg/0twcYfYFg4J7j30N7t+I/a+pIy0F0h18DduWnlDFoQtVTlg
+/1+b5LzqatpltAzrHBUq3G7RwmrAI4AkD+zP/EDSECne0GNu7hD67Yz4+5th9Tkd
+I98CI8wDQCvQtgujDEncOHrzuoncQe/U6grKp/R11gG9rYmySG8iXyJnSxTUot/9
+sDXLBTZUVGsuLakIwf/N6WDS1XnjbKOgODbf
+-----END CERTIFICATE-----</serverCaCertificate>
+        </org.jenkinsci.plugins.docker.commons.credentials.DockerServerCredentials>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>cf2c59c4-620e-46fa-83bf-331106553d8b</id>
+          <description>jenkins registry credentials</description>
+          <username>jenkins-ng.dev.claroshop.com</username>
+          <password>{AQAAABAAAAAQ9452cJnraFrLAfJV9kn5QC3nQd+zuutFOfxslMVzkek=}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl plugin="plain-credentials@1.7">
+          <scope>GLOBAL</scope>
+          <id>5bc27f9c-6ced-4b66-b71a-a53a90169f40</id>
+          <description>Migrated SonarQube authentication token</description>
+          <secret>{AQAAABAAAAAwnuFSunS5LhSh2iFHGL/iD+kPmmvC3OksByzGfXdKNCe4rj25H8owiUoMmLnXJ/JL6BI+jGs0n7iPd6karcIz7Q==}</secret>
+        </org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>cc-infracode-sophia-mrk-i</id>
+          <description></description>
+          <username>sophia-mrk-i</username>
+          <password>{AQAAABAAAAAgh/THGY6+GcJCGIPljbO/WOCY1RGTUQEnT0ziskERAmTk6NEYEi53S0S2nm+M8vZo}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>0d8e0f66-71a2-43f5-8bd5-1be22a53c656</id>
+          <description>gitlab de claroshop</description>
+          <username>jenkins_legacy</username>
+          <password>{AQAAABAAAAAQeRu2Vn2RVgFjYfW8tvGkYKj6andZsKVAcUEL0mVwuYc=}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>gitlabClaroshop</id>
+          <description>Gitlab Claro Shop</description>
+          <username>jenkins.legacy.sn.se@gmail.com</username>
+          <password>{AQAAABAAAAAQj/Ej+K0aA0UyMF6EkLZ/DnFGgU0N7ipDmHsA/rRWZWU=}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          <scope>GLOBAL</scope>
+          <id>GitLabClaro</id>
+          <description>GitLabClaro</description>
+          <username>Jenkins</username>
+          <password>{AQAAABAAAAAQb7mQq2kW+zLq8gQajTTbMEGrleM9zxTZeZDYuxiDaGA=}</password>
+        </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+        <org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl plugin="plain-credentials@1.7">
+          <scope>GLOBAL</scope>
+          <id>sonarqube.dev.sia.gsanborns.com.mx</id>
+          <description>sonarqube.dev.sia.gsanborns.com.mx</description>
+          <secret>{AQAAABAAAAAwGfhCBiqSioVfRUy0Jjtc6avSTVG7Saw/x3Ianltbp1hM+Axorp9teC+WrRGHYVtihJMJ0TrmrIdSe4VkSrerLg==}</secret>
+        </org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl>
+      </java.util.concurrent.CopyOnWriteArrayList>
+    </entry>
+  </domainCredentialsMap>
+</com.cloudbees.plugins.credentials.SystemCredentialsProvider>
+

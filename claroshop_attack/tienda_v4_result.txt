@@ -1,0 +1,115 @@
+﻿=== cybersource_transacciones SAMPLE (by fecha) ===
+COLS[request_id|id_pedido|id_cliente|tipo_targeta|targeta_numero|fecha|decision|reason_code|card_scheme|card_issuer|total]
+ROW[6838591859416559303009|9007827|1212926|debit|5992|2023-05-11 21:39:48|ACCEPT|100|NULL|NULL|2774.25]
+ROW[6509961589066704803012|9007826|1212796|debit|6211|2022-04-26 13:02:41|ACCEPT|100|NULL|NULL|2599]
+ROW[6367637619646193703007|9007532|1212739|debit|0625|2021-11-12 18:36:04|ACCEPT|100|NULL|NULL|36878]
+ROW[6367502690666459503009|9007528|1212739|debit|0625|2021-11-12 14:51:11|ACCEPT|100|NULL|NULL|839]
+ROW[6367479003686695703011|9007526|1212739|debit|0625|2021-11-12 14:11:43|ACCEPT|100|NULL|NULL|776]
+ROW[6364780183506016603008|9007488|1212739|debit|0625|2021-11-09 11:13:40|ACCEPT|100|NULL|NULL|359]
+ROW[6364691431156016503012|9007485|1212739|debit|0625|2021-11-09 08:45:45|ACCEPT|100|NULL|NULL|473]
+ROW[6364676193036186603010|9007483|1212739|debit|0625|2021-11-09 08:20:21|ACCEPT|100|NULL|NULL|389]
+ROW[6361592069176894103012|9007477|1212739|debit|0625|2021-11-05 18:40:08|ACCEPT|100|NULL|NULL|34999]
+ROW[6361583956036769103008|9007476|1212739|debit|0625|2021-11-05 18:26:37|ACCEPT|100|NULL|NULL|2190]
+ROW[6361576059706094803007|9007475|1212739|debit|0625|2021-11-05 18:13:27|ACCEPT|100|NULL|NULL|2190]
+ROW[6361567842866319303008|9007474|1212739|debit|0625|2021-11-05 17:59:46|ACCEPT|100|NULL|NULL|2190]
+ROW[6361332122746287403010|9007469|1212739|debit|0625|2021-11-05 11:26:54|ACCEPT|100|NULL|NULL|359]
+ROW[6361332038786813103008|9007468|1212739|debit|0625|2021-11-05 11:26:45|ACCEPT|100|NULL|NULL|359]
+ROW[6361330466636727103012|9007467|1212739|debit|0625|2021-11-05 11:24:08|ACCEPT|100|NULL|NULL|399]
+ROW[6361327943226757903008|9007466|1212739|debit|0625|2021-11-05 11:19:56|ACCEPT|100|NULL|NULL|399]
+ROW[6361324594756656303012|9007465|1212739|debit|2660|2021-11-05 11:14:21|ACCEPT|100|NULL|NULL|399]
+ROW[6360740676716935303008|9007462|1212739|debit|0625|2021-11-04 19:01:09|ACCEPT|100|NULL|NULL|2190]
+ROW[6360739739476907403008|9007461|1212739|debit|0625|2021-11-04 18:59:35|ACCEPT|100|NULL|NULL|2190]
+ROW[6360728376416189103007|9007460|1212739|debit|0625|2021-11-04 18:40:39|ACCEPT|100|NULL|NULL|2190]
+
+
+=== clientes SAMPLE (Email, Password, contrasena_2, contrasena_3, celular) ===
+COLS[Id|Nombre|Apellido_Paterno|Email|Password|contrasena_2|contrasena_3|num_celular|sears|fecha_creacion]
+ROW[1217782|Alberto|Tinoco|carla.gutierrez0204@gmail.com| |622519a3b2c65319637d22f0882a14461595cc99f7cf34b031a1cd4c69ea43e7|NULL|7225851242|NULL|2026-08-23 16:21:40]
+ROW[1217781|Daniela michelle|Gonzalez|glzdani2@gmail.com| |a0be7a36c1c8c6c5e40f26f58d94f3e6644b71e4a69d0e1a06c4e6dfa2417994|NULL|4495487254|NULL|2026-08-23 13:31:40]
+ROW[1217780|Ana karen|Castillo|anakarencastillotrasvina39@gmail.com| |1b72b17456a359153c4f78dac1573f7eb353f7c1a1862df512d410bdf386fdfd|NULL|6121270622|NULL|2026-08-23 10:21:29]
+ROW[1217779|david|ramos|ramosdavid73@hotmail.com| |22d7e32265177b72ec9a971fa3cc542e113325c2b362a1f12e9aef01eb398476|NULL|3310467466|NULL|2026-08-22 19:07:05]
+ROW[1217778|Diana Elizabeth|Gonzalez|yuxihy99@gmail.com| |72e135d9d3f598feb0472697fcc025ddda27dd66f5dd8e51c08d64c08e7daf6a|NULL|4401057705|NULL|2026-08-22 16:45:42]
+ROW[1217777|Sebasti├ín |Alvarez|alvaareezebas@gmail.com| |7cd750681021c0983f830dfe548c4b3b362e6724363fb4dbcb4db5417bb0405b|NULL|7227593792|NULL|2026-08-22 16:03:25]
+ROW[1217776|Laura Leticia |Hernandez|laura.2714@hotmail.com| |5d11abd125a1620e45799d297e0c4e643463f6baf34b5121fae6591e8f5da333|NULL|5617462814|NULL|2026-08-22 10:34:57]
+ROW[1217775|Aaron Yael |Rodriguez|aaron.rodriguez00@icloud.com| |73f7ba9913aa988181e64c01f34784d313b802452f27424df7425183fba5e58c|NULL|7772504406|NULL|2026-08-21 18:43:02]
+ROW[1217774|Anabel|Lazcano|anabel_05@hotmail.com| |15a5ed974b52ebadc1609208e40e154ee2b58f571e50ea00d699897f60a45e9a|NULL|2223229340|NULL|2026-08-21 18:31:08]
+ROW[1217773|David|Beltran|dagadaru@hotmail.con| |7d83254c0b332c0bd8c499b301f81c5f600fcb5d8ac0cd87bb6cbb5591de0d9e|NULL|4621563851|NULL|2026-08-21 16:12:41]
+ROW[1217772|Mar├¡a del Rosario |Jacintos|rosariojacintox@gmail.com| |2cdf14dafe0a9ad58e6b9bd04edae74df1a75856e55c3cf1a926c0e275dc38d1|NULL||NULL|2026-08-21 01:10:58]
+ROW[1217771|Rafael|V├ízquez|rafaelvm1910@gmail.com| |a21afe19adb286dd45ebfb3f5b0ce1c9ab3b611e6b521e43702fe381443b0ac5|NULL|2221195501|NULL|2026-08-20 19:16:57]
+ROW[1217770|Jose|quintal|jnqs2007@hotmail.com| |1d1dd35705fb68a5e447548928eeec90b4ee027b66fef03234c8ded4a81faef4|NULL|9999700910|NULL|2026-08-20 18:04:55]
+ROW[1217769|Carlos|ramirez de arellano|carnena11@hotmail.com| |c732cb0a6231faf5bcfd9e540c886bfd615ef95c2115d11df2ff2cb9f8720c0e|NULL||NULL|2026-08-20 17:29:13]
+ROW[1217768|eric|zavala|lunasuccesa@gmail.com| |07c7921ba70f4a43e8dc9f81505d3cc64a3a97a043f6a6bda2a568abc19120fd|NULL|4772854400|NULL|2026-08-20 16:44:47]
+ROW[1217767|Juan ramon|Rodriguez|nfl.gdl@hotmail.com| |db4fdd5184ecf8cc0924befbe702816544348f936dc9245de294040ca2670254|NULL|3326652109|NULL|2026-08-20 15:44:55]
+ROW[1217766|Samantha|Orosco|oroscosam@gmail.com| |0487be43dcd91dc3630607c04f52dc2b7044e8e84558e2905e4ea27ba784b55f|NULL|2227306360|NULL|2026-08-20 14:30:08]
+ROW[1217765|Jose|quintal|ingenieroq@prodigy.net.mx| |c131deb2d0479d9153920d16ac38f2fbec1154db8645eb08ed446aadac44a8a7|NULL|9999700910|NULL|2026-08-20 12:42:28]
+ROW[1217764|Gabriela |Gandara|gandarag150@gmail.com| |11b863dddfa5cccb2bf664f5167928d35afb3d97d002145d92dff2387b2f6668|NULL|2288522049|NULL|2026-08-20 12:17:55]
+ROW[1217763|Gloria ofelia|Natividad|naty1617@hotmail.com||5c0a85f738c898fab26520662a708ed731e604b016332d7676435531a2168c86|NULL|8443626123|NULL|2026-08-20 02:25:51]
+ROW[1217762|RODOLFO|MORALES|rmorales.dr@gmail.com| |5334b74cdb84ed5256cf6822311a87c327d2b6616fd615633561651a4c2b3f20|NULL|8116543223|NULL|2026-08-19 22:53:14]
+ROW[1217761|Sol|Saavedra|snsaag@gmail.com| |d99a3307279eca922dbaf33723c065404984cce4ac1d2611c57deb4f178eb382|NULL|8180178740|NULL|2026-08-19 20:25:28]
+ROW[1217760|Noelly Karla|SARRACINO|nolysarr@hotmail.com| |f6627da7a47386b75c59405d8e10425263c6d2dc6a07f7d4ab04129d23a79dd5|NULL|7291117279|NULL|2026-08-19 18:30:04]
+ROW[1217759|Cecilia |Sandoval|ceciliazavala598@gmail.com| |4bcd23d141df8e2dc344750ae4526390ae310907cb879bbbf2efab8d87c1535e|NULL|4291107888|NULL|2026-08-19 14:08:38]
+ROW[1217758|Lorena|Gomez|lorenag872@gmail.com| |9712fe2bcedb0d5d611bed5b9ccbd3a89333ad214433f224a591a5aa6cd0e005|NULL|9611132581|NULL|2026-08-19 09:57:07]
+ROW[1217757|leonardo josue |meirno|sekojossmendez@gmail.com| |6a4a6bb3026d85c7950c2bf0b9fa051ad82edd2f5b12c6ab7ca99972f8cb4fd9|NULL|5537545266|NULL|2026-08-19 04:02:47]
+ROW[1217756|Mauricio|Cabello|velkamiklo15@gmail.com| |f2814aa007a5fef7942cfecd46c105eec18f6173e94ecf718269510fa435fb65|NULL|2213764544|NULL|2026-08-18 23:54:27]
+ROW[1217755|Victor Isaac|Gonzalez|isaacgzw2198@gmail.com| |1aeb842f2d52df869686985b286fa39d16d04e0f1303506a13b1ecfa76329a3c|NULL|5562053495|NULL|2026-08-18 19:45:37]
+ROW[1217754|ARTURO|ALVAREZ|alvalararturo@gmail.com| |83dfbd575048da4da175649bfa0f16aba3b76ebe1b0d80ef035904f2abfce963|NULL|5523129417|NULL|2026-08-18 19:37:20]
+ROW[1217753|Hannah|Ortiz|xim.neor@gmail.com| |b91eebeb9e011b1f735fed89fd63badeec6c1ba91204fc522a81d9b1ac4110e3|NULL|7775721102|NULL|2026-08-18 17:47:01]
+
+
+=== datos_pedido SAMPLE (Pedido, Entregar, Direccion, Ciudad, Estado, Telefono, celular) ===
+COLS[Pedido|Entregar|Direccion|Colonia|Ciudad|Estado|CP|Lada|Telefono|celular|apellido_paterno|apellido_materno]
+ROW[661302|ANA|MIGUEL HIDALGO|Lomas de San Lorenzo|Ciudad Adolfo L├│pez Mateos|M├®xico|52975|NULL|5513191376|5513191376|JIMENEZ|SOLIS]
+ROW[661301|EDWING|Avenida del Delf├¡n|Marina Mazatl├ín|Mazatl├ín|Sinaloa|82100|NULL|915 57 80|NULL|VALADEZ|NULL]
+ROW[661300|ROBERTO|tiresia|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|8685756898|8685756898|oyoii|tsr]
+ROW[661299|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661298|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661297|ROBERTO|tiresia|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|8685756898|8685756898|oyoii|tsr]
+ROW[661296|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661295|ROBERTO|tiresia|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|8685756898|8685756898|oyoii|tsr]
+ROW[661294|norte|dinamarca|Baburia|cd|Sinaloa|81900|NULL|5464657522|5464657522|dwd|tut]
+ROW[661293|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661292|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661291|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661290|Javier|CP 74000|Centro|San Mart├¡n Texmelucan de Labastida|Puebla|74000|NULL|5555555555|5555555555|Prueba|Pruebla]
+ROW[661289|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661288|Javier|Uni├│n|La Cruz|Ciudad de M├®xico|Ciudad de M├®xico|08310|NULL|5597852598|5597852598|Hern├índez|R├¡os]
+ROW[661287|Javier StFrnExt|CP 68300|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|5555555555|5555555555|hernandez|rios]
+ROW[661286|Javier StFrnExt|CP 68300|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|5555555555|5555555555|hernandez|rios]
+ROW[661285|Javier|CP 81900|Baburia|Sinaloa|Sinaloa|81900|NULL|5529547410|5529547410|Hernandez|Rios]
+ROW[661284|Javier|CP 81900|Baburia|Sinaloa|Sinaloa|81900|NULL|5529547410|5529547410|Hernandez|Rios]
+ROW[661283|Javier StFrnExt|CP 68300|Tuxtepec Centro|San Juan Bautista Tuxtepec|Oaxaca|68300|NULL|5555555555|5555555555|hernandez|rios]
+
+
+=== pedidos SAMPLE ALL COLS ===
+COLS[Id|Cliente|Tipo|Fecha_Inicio|Estatus|Tienda|Urgencia|Forma_de_pago|Num_pedido|Pedido_Normalizado|tipotarjeta|nip|nombre|numero|mes|ao|seguridad|anterior|subtotal|subtotal_venta|total_envio|descuento|total|total_venta|tienda_origen|extra|modalidad|tarjeta_puntos|meses|interes|telefono_telmex|num_externo|evento|campana|ip|tipo_entrega|pedido_externo|fincado_desde|conciliar|cupon_primera_compra]
+ROW[661302|1212926|1|2023-05-11 21:39:42|9|69|1|3912|9007827|9007827-69-2738|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|2774.25|2774.25|0|0|2774.25|2774.25|2468|{"fpago":{"tienda":0,"cupon":0,"fpago":0}}|1|NULL|1|0|NULL|NULL|NULL|NULL|200.68.159.12|NULL|NULL|desconocido|1|NULL]
+ROW[661301|1212796|1|2022-04-26 13:02:36|9|69|1|3912|9007826|9007826-69-2738|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|2599|2599|0|0|2599|2599|2468|{"fpago":{"tienda":0,"cupon":0,"fpago":0}}|1|NULL|1|0|NULL|NULL|NULL|NULL|187.188.212.172|NULL|NULL|desconocido|1|NULL]
+ROW[661300|1212784|1|2022-03-30 15:30:32|0|69|1|4|9007825|9007825-69-2738|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|60458|60458|0|0|60458|60458|2468|{"total":"60458","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}|1|NULL|1|0|NULL|NULL|NULL|NULL|189.216.115.103|NULL|NULL|desconocido|4|NULL]
+ROW[661299|1212785|1|2022-03-30 15:28:18|0|69|1|4|9007824|9007824-69-2738|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|517|517|0|0|517|517|2468|{"total":"517","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}|1|NULL|1|0|NULL|NULL|NULL|NULL|189.242.89.140|NULL|NULL|desconocido|4|NULL]
+ROW[661298|1212785|1|2022-03-30 15:00:50|0|69|1|4|9007823|9007823-69-2738|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|517|517|0|0|517|517|2468|{"total":"517","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}|1|NULL|1|0|NULL|NULL|NULL|NULL|189.242.89.140|NULL|NULL|desconocido|4|NULL]
+
+
+=== tienda_nueva TABLES count ===
+COLS[COUNT(*)]
+ROW[44]
+
+
+=== tienda_nueva KEY TABLES ===
+COLS[TABLE_NAME|TABLE_ROWS]
+
+
+=== pedidos extra field sample ===
+COLS[Id|Fecha_Inicio|total|extra]
+ROW[661302|2023-05-11 21:39:42|2774.25|{"fpago":{"tienda":0,"cupon":0,"fpago":0}}]
+ROW[661301|2022-04-26 13:02:36|2599|{"fpago":{"tienda":0,"cupon":0,"fpago":0}}]
+ROW[661300|2022-03-30 15:30:32|60458|{"total":"60458","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}]
+ROW[661299|2022-03-30 15:28:18|517|{"total":"517","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}]
+ROW[661298|2022-03-30 15:00:50|517|{"total":"517","dscap":{"tienda":0,"cupon":0,"fpago":0},"fpago":{"tienda":0,"cupon":0,"fpago":0}}]
+
+
+=== payment_t1 TABLES ===
+COLS[TABLE_NAME|TABLE_ROWS]
+
+
+=== FIN v4 ===
+

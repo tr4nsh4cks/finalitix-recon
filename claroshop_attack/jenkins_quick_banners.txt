@@ -1,0 +1,24 @@
+﻿=== LOCAL PORT BANNERS 13306/13307/13308 ===
+
+=== /proc/net/tcp entries (local listening) ===
+
+=== ESTABLISHED CONNECTIONS ===
+  ESTAB: local:38906 -> 172.27.140.134:443
+
+=== WORKSPACE LISTING ===
+  WS: _trash
+  WS: claroshop_build_carritoms.dev.claroshop.com
+  WS: claroshop_build_carritoms.dev.claroshop.com@tmp
+  WS: cs_msa_build_caja-ng
+  WS: cs_msa_build_caja-ng@tmp
+  WS: cs_msa_front
+  WS: test_task
+  WS: test_task@tmp
+
+=== BUILD ENV VARS FROM LAST BUILDS ===
+JOB: _trash/amp_hackathon/cs_amp - Build #21
+JOB: _trash/amp_hackathon/sn_amp - Build #13
+JOB: _trash/claroshop_build_carritoms.dev.claroshop.com - Build #2
+JOB: _trash/connect_docker_2_api_tlsauth - Build #22
+Result: [org.jenkinsci.plugins.workflow.job.WorkflowJob@1d286a5b[_trash/amp_hackathon/cs_amp], org.jenkinsci.plugins.workflow.job.WorkflowJob@13ed7491[_trash/amp_hackathon/sn_amp], hudson.model.FreeStyleProject@6a0eada3[_trash/claroshop_build_carritoms.dev.claroshop.com], org.jenkinsci.plugins.workflow.job.WorkflowJob@a701ccd[_trash/connect_docker_2_api_tlsauth], org.jenkinsci.plugins.workflow.job.WorkflowJob@54d4c56a[_trash/cs_local_test]]
+

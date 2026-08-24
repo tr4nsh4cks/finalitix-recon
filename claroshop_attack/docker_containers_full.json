@@ -1,0 +1,124 @@
+{
+  "engagement": "Sears/Claroshop - Docker host enumeration",
+  "timestamp": "2026-08-23T21:45:00-06:00",
+  "docker_host": {
+    "api": "http://172.27.140.148:4243",
+    "api_version": "1.26",
+    "docker_version": "1.13.1",
+    "hostname": "CSDEVBLD01-1.localdomain",
+    "os": "RHEL7 (kernel 3.10.0-1127.18.2.el7)",
+    "driver": "devicemapper",
+    "ipv4_forwarding": true,
+    "network_plugins": ["bridge", "host", "macvlan", "null", "overlay"],
+    "auth": "NONE (unauthenticated Docker API)",
+    "interfaces": {
+      "ens161": {"subnet": "10.252.0.0/23", "ip": "10.252.1.64", "note": "ruta a 10.252.0.0/16"},
+      "ens192": {"subnet": "172.27.140.128/25", "ip": "172.27.140.148", "note": "interfaz principal"},
+      "ens224": {"subnet": "172.27.141.0/25", "ip": "172.27.141.23", "note": "L2 DIRECTO a subnet DBs (confirmado por error MySQL 'app_t1'@'172.27.141.23')"},
+      "ens256": {"subnet": "10.242.0.0/23", "ip": "10.242.1.69", "note": "rutas /32 a 192.168.x.x via 10.242.0.1"},
+      "docker0": {"subnet": "172.17.0.0/16", "ip": "172.17.0.1", "note": "Jenkins master corre AQUI como container 172.17.0.2 (CSDEVJNKS01-3)"}
+    },
+    "dns": {"nameserver": "172.27.140.132", "search": "cloud.triara.local backup.triara.local localdomain"},
+    "default_gateway": "172.27.141.19 (ens224)",
+    "etc_hosts_notables": {
+      "docker-registry.nexus.dev.claroshop.com": "172.27.141.25",
+      "amx-rh-cds1-pr.cloudtelmex.local": "192.168.201.120",
+      "amx-rh-lb3-01.cloudtelmex.local": "192.168.201.188"
+    }
+  },
+  "docker_networks": [
+    {"name": "host", "driver": "host", "containers": ["pivot02", "pivot03", "pivot04"]},
+    {"name": "bridge", "driver": "bridge", "subnet": "172.17.0.0/16", "gateway": "172.17.0.1", "containers": []},
+    {"name": "none", "driver": "null", "containers": []}
+  ],
+  "containers": [
+    {
+      "id": "ddde6ed3694d496179f5a1c932cc860bf44189e18c0cd6197cbb9292858fc303",
+      "short_id": "ddde6ed3694d",
+      "name": "pivot04",
+      "image": "docker-registry.nexus.dev.claroshop.com/ubi7-php72:latest",
+      "state": "running",
+      "network_mode": "host",
+      "created_by": "Tr4nsHack (este run)",
+      "tools": ["php7.2", "pdo_mysql", "bash"],
+      "note": "Entrypoint override /bin/bash -c (imagen tiene entrypoint php). Verificado: auth MySQL a 172.27.141.6:3310 OK"
+    },
+    {
+      "id": "3b389d5bf116386c53b77bdc29cca7414e7d1e93f645060af95cba5c7eab506d",
+      "short_id": "3b389d5bf116",
+      "name": "pivot03",
+      "image": "docker-registry.nexus.dev.claroshop.com/docker-rh7-lnx-jnlp-slave:latest",
+      "state": "running",
+      "network_mode": "host",
+      "created_by": "Tr4nsHack (previo)",
+      "mounts": ["/workspace (vol 57d6453b...)", "/home/jenkins/.jenkins (vol c9471d7d...)"],
+      "note": "Volumenes vacios (frescos)"
+    },
+    {
+      "id": "5b32e909c2957f348c213d8122f33b11ab54e68d4579d77c2c16eb3a3f1c3444",
+      "short_id": "5b32e909c295",
+      "name": "pivot02",
+      "image": "docker-registry.nexus.dev.claroshop.com/ubi7-php72:latest",
+      "state": "running",
+      "network_mode": "host",
+      "created_by": "Tr4nsHack (previo)",
+      "tools": ["php7.2", "pdo_mysql", "redis", "bash"],
+      "note": "Container principal de ejecucion PHP"
+    },
+    {
+      "id": "855125b7d374f428bc0680c9a281994835f9a61cc569556591ad90b018d9bb59",
+      "short_id": "855125b7d374",
+      "name": "stoic_liskov",
+      "image": "docker-registry.nexus.dev.claroshop.com/docker-jnlp-slave-php71-src-sonar",
+      "state": "exited (0) hace 25h",
+      "network_mode": "host",
+      "created_by": "Jenkins (job legitimo)",
+      "mounts": ["/home/jenkins/.jenkins (vol 844dea4b...)", "/home/jenkins/agent (vol 5fb853ed...)"]
+    },
+    {
+      "id": "6b290bd06d9353595458c921cb05885782ed127ae6c2a939bf18773359e4a871",
+      "short_id": "6b290bd06d93",
+      "name": "mystifying_hamilton",
+      "image": "docker-registry.nexus.dev.claroshop.com/docker-jnlp-slave-php71-src-sonar",
+      "state": "created (nunca iniciado)",
+      "network_mode": "host",
+      "created_by": "Jenkins (job legitimo)",
+      "mounts": ["/home/jenkins/.jenkins (vol 01562b63...)", "/home/jenkins/agent (vol d77449d3...)"]
+    },
+    {
+      "id": "8bc75a73e7296255c1e53a80cbd8ba285301a340180c8e25e26dae143130a271",
+      "short_id": "8bc75a73e729",
+      "name": "fervent_bassi",
+      "image": "docker-registry.nexus.dev.claroshop.com/docker-jnlp-slave-php71-src-sonar",
+      "state": "exited (0) hace 28h",
+      "network_mode": "host",
+      "created_by": "Jenkins (job legitimo)",
+      "mounts": ["/home/jenkins/.jenkins (vol 1d19685c...)", "/home/jenkins/agent (vol 1a75ff43...)"]
+    }
+  ],
+  "images_available": 27,
+  "images_notables": [
+    "ubi7-php72 (php pdo_mysql)",
+    "ubi7-php72-fpm-ngx",
+    "docker-jnlp-slave-php70/71/72-src-sonar (variantes)",
+    "ol8-jre-17", "openjdk-jre11/8-jar-run", "oracle-jre8-jar-run",
+    "atomic-rhel7-nginx-php-fpm70/72",
+    "atomic-rhel7-jenkins-slave-maven-openjdk8/11",
+    "t1envios/fedex-admin-dmn-java:130 (imagen T1 ENVIOS/FedEx!)",
+    "rh7-jenkins-slave-docker-node12"
+  ],
+  "live_hosts_172_27_141_x_arp": {
+    "172.27.141.1": "00:00:0c:9f:f8:41 (Cisco - gateway)",
+    "172.27.141.2": "40:55:39:07:53:c3",
+    "172.27.141.3": "40:55:39:07:55:c3",
+    "172.27.141.4": "00:50:56:a4:29:3c (VMware) - T1Pagos doc, MySQL 3306 OPEN",
+    "172.27.141.5": "00:50:56:a4:4e:6a",
+    "172.27.141.6": "00:50:56:a4:4a:15 - MySQL 3306/3308/3310 OPEN (3310 = payment_t1 REAL)",
+    "172.27.141.12": "00:50:56:a4:3f:01",
+    "172.27.141.19": "00:50:56:a4:43:34 (default GW del host)",
+    "172.27.141.21": "00:50:56:a4:49:82",
+    "172.27.141.24": "00:50:56:a4:21:5f - PROD Sears (dbasears.mrc-services.io), 22/80/443 OPEN, MySQL FILTRADO",
+    "172.27.141.25": "00:50:56:a4:20:6e - docker-registry.nexus.dev.claroshop.com",
+    "172.27.141.26": "00:50:56:a4:6a:71 - MySQL 3306 OPEN"
+  }
+}

@@ -1,0 +1,56 @@
+
+
+=== ID ===
+ uid=48(apache) gid=48 groups=48
+=== HOME_LS ===
+/home:
+total 0
+,drwxr-xr-x.  2 root root   6 Aug 24  2021 .
+-dr-xr-xr-x. 17 root root 262 Aug 23 22:54 ..
+
+/opt:
+total 0
+,drwxr-xr-x.  3 root root  16 Oct 22  2021 .
+-dr-xr-xr-x. 17 root root 262 Aug 23 22:54 ..
+-drwxr-xr-x.  4 root root  42 Oct 22  2021 rh
+
+
+/usr/local:
+total 0
+,drwxr-xr-x. 12 root root 131 Aug 24  2021 .
+-drwxr-xr-x. 13 root root 155 Aug 24  2021 ..
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 bin
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 etc
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 games
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 include
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 lib
+0drwxr-xr-x.  2 root root   6 Dec 14  2017 lib64
+2drwxr-xr-x.  2 root root   6 Dec 14  2017 libexec
+/drwxr-xr-x.  2 root root   6 Dec 14  2017 sbin
+0drwxr-xr-x.  5 root root  49 Aug 24  2021 share
+.drwxr-xr-x.  2 root root   6 Dec 14  2017 src
+=== DOCKER_CONFIGS ===
+=== M2_SETTINGS ===
+=== NPM_GRADLE_GIT ===
+=== SSH_KEYS ===
+=== ENV_FILES ===
+=== APP_CONFIGS ===
+=== DEPLOY_SCRIPTS ===
+=== GREP_CREDS ===
+@/opt/rh/rh-php72/register.content/etc/opt/rh/rh-php72/pear.conf
+>/opt/rh/rh-php72/register.content/etc/opt/rh/rh-php72/php.ini
+D/opt/rh/rh-php72/root/usr/share/doc/rh-php72-php-common-7.2.24/NEWS
+R/opt/rh/rh-php72/root/usr/share/doc/rh-php72-php-common-7.2.24/README.REDIST.BINS
+S/opt/rh/rh-php72/root/usr/share/doc/rh-php72-php-common-7.2.24/php.ini-development
+R/opt/rh/rh-php72/root/usr/share/doc/rh-php72-php-common-7.2.24/php.ini-production
+;/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Auth.php
+;/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Auth.xml
+?/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Channels.php
+?/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Channels.xml
+=/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Config.php
+>/opt/rh/rh-php72/root/usr/share/pear/PEAR/Command/Package.php
+5/opt/rh/rh-php72/root/usr/share/pear/PEAR/Config.php
+9/opt/rh/rh-php72/root/usr/share/pear/PEAR/Downloader.php
+7/opt/rh/rh-php72/root/usr/share/pear/PEAR/Frontend.php
+3/opt/rh/rh-php72/root/usr/share/pear/PEAR/REST.php
+=== HUNT_DONE ===

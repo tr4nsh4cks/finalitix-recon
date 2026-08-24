@@ -1,0 +1,66 @@
+=== JENKINS CREDENTIALS DUMP ===
+Total: 11
+============================================================
+ID: AMX Docker API CA client
+  Type: DockerServerCredentials
+  Desc: 
+------------------------------------------------------------
+ID: 0d8e0f66-71a2-43f5-8bd5-1be22a53c656
+  Type: UsernamePasswordCredentialsImpl
+  Desc: gitlab de claroshop
+  User: jenkins_legacy
+  Pass: JenkisLegasy25
+------------------------------------------------------------
+ID: cs-dev-gitlab-jenkins
+  Type: UsernamePasswordCredentialsImpl
+  Desc: 
+  User: jenkins
+  Pass: e6LBqIkOI$PR1XX2oia
+------------------------------------------------------------
+ID: GitLabClaro
+  Type: UsernamePasswordCredentialsImpl
+  Desc: GitLabClaro
+  User: Jenkins
+  Pass: JenkisLegasy25
+------------------------------------------------------------
+ID: jenkis
+  Type: UsernamePasswordCredentialsImpl
+  Desc: jenkis
+  User: jenkins
+  Pass: e6LBqIkOI$PR1XX2oia
+------------------------------------------------------------
+ID: gitlabClaroshop
+  Type: UsernamePasswordCredentialsImpl
+  Desc: Gitlab Claro Shop
+  User: jenkins.legacy.sn.se@gmail.com
+  Pass: JenkisLegasy25
+------------------------------------------------------------
+ID: cf2c59c4-620e-46fa-83bf-331106553d8b
+  Type: UsernamePasswordCredentialsImpl
+  Desc: jenkins registry credentials
+  User: jenkins-ng.dev.claroshop.com
+  Pass: dtvV50vwfGq5CO9
+------------------------------------------------------------
+ID: nexus
+  Type: UsernamePasswordCredentialsImpl
+  Desc: nexus.dev.claroshop.com password
+  User: jenkins-ng.dev.claroshop.com
+  Pass: dtvV50vwfGq5CO9
+------------------------------------------------------------
+ID: 5bc27f9c-6ced-4b66-b71a-a53a90169f40
+  Type: StringCredentialsImpl
+  Desc: Migrated SonarQube authentication token
+  Secret: 6c75f3c846ea459e659e761238d6f12f4e27a53d
+------------------------------------------------------------
+ID: sonarqube.dev.sia.gsanborns.com.mx
+  Type: StringCredentialsImpl
+  Desc: sonarqube.dev.sia.gsanborns.com.mx
+  Secret: squ_547fa54c6926c2f6b9bf14eb980942eabdd96686
+------------------------------------------------------------
+ID: cc-infracode-sophia-mrk-i
+  Type: UsernamePasswordCredentialsImpl
+  Desc: 
+  User: sophia-mrk-i
+  Pass: plug*spoke!MosqueCloud3col
+------------------------------------------------------------
+Result: [org.jenkinsci.plugins.docker.commons.credentials.DockerServerCredentials@3ac7133b, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@9bf69a7e, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@a419fe99, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@39c2b19a, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@baa49762, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@81542390, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@10042f17, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@63dd3ff, org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl@1b4d0e39, org.jenkinsci.plugins.plaincredentials.impl.StringCredentialsImpl@e4352135, com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl@ccdf9c3e]

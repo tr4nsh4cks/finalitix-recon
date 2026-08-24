@@ -1,0 +1,68 @@
+﻿=== NETWORK CONNECTIVITY TEST FROM JENKINS ===
+Jenkins hostname: CSDEVJNKS01-3.jenkins
+Jenkins IP: 172.17.0.2
+Time: Sun Aug 23 22:39:32 CDT 2026
+
+--- ICMP Reachability Test ---
+172.27.141.24 (dbasears.mrc-services.io (PROD Sears DB)): NOT REACHABLE
+172.27.141.4 (T1Pagos DB): REACHABLE
+172.27.141.5 (GitLab TMX): NOT REACHABLE
+172.27.141.25 (Proxy server): NOT REACHABLE
+172.27.141.12 (DNS server): NOT REACHABLE
+172.27.140.134 (GitLab dev (claroshop)): REACHABLE
+172.27.140.148 (CSDEVBLD01-1): NOT REACHABLE
+172.27.140.162 (Syslog server): REACHABLE
+
+--- TCP Port Test ---
+CLOSED/FILTERED: 172.27.141.24:3308 (dbasears MySQL) - NoRouteToHostException
+OPEN: 172.27.141.24:22 (dbasears SSH)
+CLOSED/FILTERED: 172.27.141.24:3306 (dbasears MySQL alt) - NoRouteToHostException
+CLOSED/FILTERED: 172.27.141.4:3310 (T1Pagos DB port) - ConnectException
+OPEN: 172.27.141.4:3306 (T1Pagos MySQL)
+OPEN: 172.27.141.4:22 (T1Pagos SSH)
+CLOSED/FILTERED: 172.27.141.25:8080 (Proxy) - NoRouteToHostException
+OPEN: 172.27.141.12:53 (DNS)
+OPEN: 172.27.140.134:22 (GitLab SSH)
+OPEN: 172.27.140.134:80 (GitLab HTTP)
+OPEN: 172.27.140.148:22 (CSDEVBLD01 SSH)
+
+--- DNS Resolution ---
+RESOLVED: CSDEV01-2.dev.claroshop.com -> 172.27.141.4
+RESOLVED: CSDEV02-2.dev.claroshop.com -> 172.27.141.26
+RESOLVED: CSQAAPP01-1.dev.claroshop.com -> 172.27.141.13
+RESOLVED: CSQAAPP03-1.dev.claroshop.com -> 172.27.141.30
+RESOLVED: dbasears.mrc-services.io -> 172.27.141.24
+RESOLVED: t1pagos.api.claroshop-services.io -> 172.27.141.24
+RESOLVED: t1pagos.api.mrc-services.io -> 172.27.141.24
+
+=== RUNNING 'ss -tuln' TO SEE LOCAL PORTS ===
+Netid  State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+udp    UNCONN     0      0        :::41145                :::*                  
+tcp    LISTEN     0      50     ::ffff:127.0.0.1:23456                :::*                  
+tcp    LISTEN     0      50       :::50000                :::*                  
+tcp    LISTEN     0      50       :::8080                 :::*                  
+tcp    LISTEN     0      50     ::ffff:127.0.0.1:13306                :::*                  
+tcp    LISTEN     0      50     ::ffff:127.0.0.1:13307                :::*                  
+tcp    LISTEN     0      50     ::ffff:127.0.0.1:13308                :::*                  
+
+
+=== IP ROUTE ===
+default via 172.17.0.1 dev eth0 
+172.17.0.0/16 dev eth0 proto kernel scope link src 172.17.0.2 
+
+
+=== IP ADDR ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+31: eth0@if32: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.17.0.2/16 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:acff:fe11:2/64 scope link 
+       valid_lft forever preferred_lft forever
+
+
