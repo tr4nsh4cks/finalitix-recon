@@ -1,24 +1,22 @@
-import urllib.request, ssl, re, socket
-ctx = ssl.create_default_context(); ctx.check_hostname=False; ctx.verify_mode=ssl.CERT_NONE
+import requests, urllib3, time
+urllib3.disable_warnings()
 
-host = 'www.afirmeeninternet.com'
-print('IP:', socket.gethostbyname(host))
+s = requests.Session()
+s.verify = False
+s.proxies = {"http": "socks5h://127.0.0.1:1081", "https": "socks5h://127.0.0.1:1081"}
+s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-def get(url):
-    req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+tests = [
+    "https://159.60.138.202/.magnolia/admincentral",
+    "https://159.60.138.202/",
+    "https://159.60.138.202/.rest/nodes/v1/website/?depth=0",
+    "http://159.60.138.202/.magnolia/admincentral",
+]
+for u in tests:
     try:
-        r = urllib.request.urlopen(req, context=ctx, timeout=12)
-        return r.status, dict(r.headers), r.read().decode('utf-8','replace')
-    except urllib.error.HTTPError as e:
-        return e.code, dict(e.headers), e.read().decode('utf-8','replace')
+        r = s.get(u, timeout=30, allow_redirects=False)
+        rej = "rejected" in r.text.lower()
+        print(f"{u:52s} {r.status_code} len={len(r.text):6d} rejected={rej} srv={r.headers.get('Server','')[:30]}", flush=True)
     except Exception as e:
-        return None, {}, str(e)
-
-for path in ['/AfirmeNetP/login/contrato.htm', '/AfirmeNetP/', '/AfirmeNetE/', '/AfirmeNetE/login/contrato.htm']:
-    st, h, body = get('https://'+host+path)
-    print('===', path, '=>', st, '| server:', h.get('Server'), '| len:', len(body))
-    if st == 200:
-        setc = h.get('Set-Cookie','')
-        if setc: print('  Set-Cookie:', setc[:150])
-        for m in re.findall(r'(?:src|href|action)="([^"]{5,120})"', body)[:15]:
-            print('  ', m)
+        print(f"{u:52s} ERR {str(e)[:70]}", flush=True)
+    time.sleep(0.5)
