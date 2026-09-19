@@ -1,0 +1,12 @@
+﻿{
+  "mission": "HEXAGON Sonnet - disperso.com/tuxpan.cl",
+  "timestamp": "2026-09-19T09:45:00Z",
+  "status": "IN_PROGRESS_RL_COOLDOWN",
+  "osint_hits": {
+    "employees": ["Patricia Erazo (CEO)", "Sandra Ulloa (Comercial)", "Christian Ramirez (SOPORTE DEV)", "Jonathan Hernandez (SW Eng)", "Willians Briones (DevOps)", "Esteban Conejeros (Arch)"],
+    "pattern": "[inicial][apellido]@tuxpan.cl confirmado por IntelX",
+    "intelx_tuxpan": ["smacias","mnavea","choecker","jquiroga","fmendez","gtorres","cmaron","fpallauta"]
+  },
+  "spray_status": "PAUSED_GLOBAL_RL",
+  "hits": []
+}

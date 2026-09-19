@@ -1,0 +1,266 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/consolidation",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/consolidation-detail",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/get-transaction-summary",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/get-transaction-summary-status",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/get-transaction-summary-status-detail",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/users",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-order/users-report",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "Si"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/access-token",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/client-account/access-token",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/access-token",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/access-token/list-actions",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/frontend-cognito",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/client-account/frontend-cognito",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/frontend-cognito",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/frontend-cognito/change-enable",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/max-transfer",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/max-transfer",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/min-amount",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/min-amount",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/transfer-account",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/v1/client-account/transfer-account",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "pi"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/get-all",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "GP"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/client-account/get-all?clientAccountId=test",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "GP"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user/me",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "auth"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "notif"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/ip-valid",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "ip"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/ip-valid?ip=127.0.0.1",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "ip"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/ip-valid",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "ip"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/bank?countryCode=CL",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "bank"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/bank?countryCode=PE",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "bank"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/bank?countryCode=MX",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "bank"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/bank?countryCode=CO",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "bank"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/bank?countryCode=AR",
+    "status": 401,
+    "length": 26,
+    "body": "{\"message\":\"Unauthorized\"}",
+    "label": "bank"
+  }
+]

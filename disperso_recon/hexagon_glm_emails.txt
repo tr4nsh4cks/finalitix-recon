@@ -1,0 +1,68 @@
+﻿=== ALL TUXPAN.CL EMAILS (100 selectors) ===
+
+Total emails: 100
+Real (named) emails: 10
+Anonymized emails: 90
+
+=== REAL EMAILS (usable for spray) ===
+  casep@tuxpan.cl
+  fcatrin@tuxpan.cl
+  garate@tuxpan.cl
+  maureira@tuxpan.cl
+  maurro@tuxpan.cl
+  mfiguerc@tuxpan.cl
+  mmoossen@tuxpan.cl
+  mnavea@tuxpan.cl
+  smacias@tuxpan.cl
+  tuxpan@tuxpan.cl
+
+=== ANONYMIZED EMAILS (hashed - not directly usable) ===
+  399c1515.5d3bdd19@tuxpan.cl
+  39d2095a.c33eb565@tuxpan.cl
+  3a1b18df.d6797c5c@tuxpan.cl
+  3a2572c1.9f44ed79@tuxpan.cl
+  3a268771.2228e173@tuxpan.cl
+  3a2e2e88.21d1f473@tuxpan.cl
+  3a2e7c5c.ac4e0a81@tuxpan.cl
+  3a2fa778.60c8119e@tuxpan.cl
+  3a363350.cf19e8c3@tuxpan.cl
+  3a38bff4.5f1aabab@tuxpan.cl
+  3a3e7edf.5a7d742a@tuxpan.cl
+  3a3e855e.24d5d6f6@tuxpan.cl
+  3a3f56b4.18649cf0@tuxpan.cl
+  3a3f5aa7.e4be4acb@tuxpan.cl
+  3a3f9a37.26425fab@tuxpan.cl
+  3a40a93b.24549f4f@tuxpan.cl
+  3a40ab2a.d325182d@tuxpan.cl
+  3a40c785.7691b203@tuxpan.cl
+  3a40f1f1.d699bd23@tuxpan.cl
+  3a423626.b46aaa66@tuxpan.cl
+  ... and 70 more
+
+=== DISPERSO.COM EMAILS ===
+  sales@disperso.com
+
+=== POSSIBLE DISPERSO EMAILS (inferred from Tuxpan naming) ===
+  Generated 20 inferred emails from 10 base names
+  casep@disperso.com
+  ccasep@disperso.com
+  fcatrin@disperso.com
+  ffcatrin@disperso.com
+  garate@disperso.com
+  ggarate@disperso.com
+  maureira@disperso.com
+  mmaureira@disperso.com
+  maurro@disperso.com
+  mmaurro@disperso.com
+  mfiguerc@disperso.com
+  mmfiguerc@disperso.com
+  mmoossen@disperso.com
+  mmmoossen@disperso.com
+  mnavea@disperso.com
+  mmnavea@disperso.com
+  smacias@disperso.com
+  ssmacias@disperso.com
+  tuxpan@disperso.com
+  ttuxpan@disperso.com
+
+Saved to hexagon_glm_emails_consolidated.json

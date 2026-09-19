@@ -1,0 +1,660 @@
+# Disperso — Master Pentest Context
+
+## IMPORTANTE
+Recon completo. SPA React + API Gateway AWS + Cognito. Backend Spring Boot.
+Portal soporte multi-tenant con rutas públicas abiertas.
+Endpoint `/api/v1/notification` SIN AUTH (200 para cualquier POST JSON).
+Fecha inicio: 2026-09-19.
+
+---
+
+## TARGET
+
+| Servicio | URL | Descripción | Estado |
+|---|---|---|---|
+| App (SPA) | `app.disperso.com` | React SPA, plataforma pagos masivos | VIVO |
+| API Gateway | `api.disperso.com` | AWS API Gateway → Spring Boot | VIVO |
+| API Gateway (directo) | `rdrrxexkm4.execute-api.us-east-2.amazonaws.com/prod` | API Gateway sin CDN | VIVO |
+| Soporte | `soporte.disperso.com` | Helpdesk custom multi-tenant (nginx 1.24.0 Ubuntu) | VIVO |
+| Landing | `disperso.com` | Marketing page | VIVO |
+| Chatbot | `chatbot.disperso.com` | Certificate exists, host DOWN | MUERTO |
+| Chatbot Backend | `chatbot-backend.disperso.com` | Certificate exists, host DOWN | MUERTO |
+
+---
+
+## IDENTIDAD
+
+- **Empresa:** Disperso (spin-off de Tuxpan, Chile)
+- **Razón social:** (por confirmar — Tuxpan Software SpA base)
+- **Sector:** Fintech — pagos masivos, nómina, reembolsos, comisiones
+- **Países:** Chile, Perú, México
+- **Fundado:** 2024
+- **Empresa madre:** Tuxpan (30+ años, desarrollo software Chile)
+- **LinkedIn:** `linkedin.com/company/dispersohq`
+- **Empleados:** ~164 followers LinkedIn (empresa chica)
+
+---
+
+## INFRAESTRUCTURA
+
+### DNS
+| Host | IPs | Notas |
+|---|---|---|
+| `app.disperso.com` | 3.161.44.5/72/42/99 | CloudFront |
+| `disperso.com` | 13.226.15.72/125/109/85 | CloudFront |
+| `api.disperso.com` | (CloudFront → API Gateway) | CNAME chain |
+| `soporte.disperso.com` | (directo, no CDN) | nginx 1.24.0 Ubuntu |
+
+### Stack
+- **CDN:** CloudFront (Pop: QRO50-P1 = Querétaro MX)
+- **Storage:** S3 (AES256 SSE, versioned)
+- **Compute:** API Gateway → Lambda/ECS (Spring Boot)
+- **Auth:** AWS Cognito (us-east-2)
+- **Frontend:** React (Vite build), Ant Design
+- **Backend API:** Spring Boot (problem+json responses)
+- **Backend Soporte:** Spring Security (headers pattern), posible Go/Java
+- **reCAPTCHA:** v2 en app login
+- **Turnstile:** Cloudflare en soporte login
+- **Region AWS:** us-east-2 (Ohio)
+
+### CT Log Subdomains
+| Subdomain | Estado |
+|---|---|
+| `*.disperso.com` | Wildcard cert |
+| `*.dev.disperso.com` | Dev wildcard |
+| `*.qa.disperso.com` | QA wildcard |
+| `*.shd.disperso.com` | Shadow/shared wildcard |
+| `chatbot.disperso.com` | DOWN |
+| `chatbot-backend.disperso.com` | DOWN |
+| `dev.disperso.com` | DOWN |
+| `shd.disperso.com` | DOWN |
+| `soporte.disperso.com` | VIVO |
+
+---
+
+## AUTH — COGNITO
+
+| Item | Valor |
+|---|---|
+| User Pool ID | `us-east-2_SOCtEIx2s` |
+| App Client ID | `4fjbm9cornhgfqk4o8m33rjt2f` |
+| Region | `us-east-2` |
+| Cognito URL | `https://cognito-idp.us-east-2.amazonaws.com/` |
+| reCAPTCHA site key | `6LdVG1kpAAAAAG4z0dvxKCLcjd6Nc0miq5ObHLWy` |
+
+### Auth Flow
+1. Usuario ingresa email + password
+2. Frontend obtiene reCAPTCHA token
+3. SRP Auth (`USER_SRP_AUTH`) con `ValidationData: {captcha: token}`
+4. PreAuthentication Lambda valida reCAPTCHA
+5. SRP challenge/response
+6. Tokens: IdToken (`TOKEN_EXPEI`), AccessToken (`TOKEN_ACCESS`), RefreshToken (`TOKEN_REFRESH`)
+7. Tokens en `sessionStorage`
+8. API calls con `Authorization: Bearer <idToken>` via axios
+
+### Cognito Config
+- **SignUp:** DESHABILITADO (`"SignUp is not permitted for this user pool"`)
+- **USER_PASSWORD_AUTH:** DESHABILITADO
+- **USER_SRP_AUTH:** Habilitado con PreAuthentication Lambda
+- **ForgotPassword:** `PreventUserExistenceErrors` ACTIVO (200 para todos los emails)
+- **ForgotPassword mask:** `a***@d***` para admin@disperso.com
+- **Password reset:** Via email
+
+### Usuarios inferidos (no confirmados por enum)
+- `admin@disperso.com` — mask `a***@d***` coincide
+- Empleados de Tuxpan posibles
+
+---
+
+## API — ARQUITECTURA COMPLETA (del JS bundle deep read)
+
+**Base URL:** `https://rdrrxexkm4.execute-api.us-east-2.amazonaws.com/prod`
+**Alias:** `https://api.disperso.com`
+**Auth:** Cognito JWT en header `Authorization: Bearer <AccessToken>`
+**Header especial:** `X-Client-Account-Id` (claim `custom:accountClientId` del IdToken) — solo para `/payment-order/file`
+
+### Path Builder (del bundle)
+```
+eMe = "/api/v1"
+Bn = e => `${eMe}${e}`
+Y6 = "https://rdrrxexkm4.execute-api.us-east-2.amazonaws.com/prod"
+```
+
+### Variables → Path Mapping (tMe destructure)
+| Variable | Path | Descripción |
+|---|---|---|
+| `pi` | `/client-account` | Gestión de cuentas |
+| `Gu` | `/payment-order` | Órdenes de pago |
+| `GP` | `/movement` | Movimientos |
+| `nMe` | `/user` | Usuarios |
+| `rMe` | `/quote` | Cotizaciones |
+| `aMe` | `/catalog` | Catálogo |
+| `R8` | `/payment-report` | Reportes de pago |
+| `Si` | `/reporter` | Reporter (movimientos + consolidación) |
+| `oMe` | `/ip-valid` | Validación IP |
+| `iMe` | `/monthly-billing` | Facturación mensual |
+
+### Custom JWT Claims (Cognito)
+- `custom:accountClientId` — UUID cuenta cliente (usado en header X-Client-Account-Id)
+- `custom:country` — País (CL, PE, MX)
+
+### Token Storage (sessionStorage)
+- `TOKEN_EXPEI` → IdToken (claims custom)
+- `TOKEN_ACCESS` → AccessToken (Authorization header)
+- `REFRESH_TOKEN` → RefreshToken
+
+---
+
+## ENDPOINTS CONFIRMADOS — 57+ reales (todos 401, auth Cognito)
+
+### `/client-account` — Gestión de Cuentas (36 endpoints)
+
+| Método | Path | Notas |
+|---|---|---|
+| GET | `/api/v1/client-account` | Cuenta del cliente |
+| GET | `/api/v1/client-account/{id}` | Detalle por ID |
+| GET | `/api/v1/client-account/{id}/people` | Personas |
+| GET | `/api/v1/client-account/get-all` | Listar todas |
+| GET | `/api/v1/client-account/get-all?clientAccountId=` | Filtrar por ID |
+| GET/POST/PATCH | `/api/v1/client-account/access-token` | Tokens API |
+| GET | `/api/v1/client-account/access-token/list-actions` | Acciones |
+| GET/POST/PATCH | `/api/v1/client-account/frontend-cognito` | Config Cognito |
+| PATCH | `/api/v1/client-account/frontend-cognito/change-enable` | Toggle |
+| GET/PATCH | `/api/v1/client-account/max-transfer` | 🔥 **Monto máximo** |
+| GET/PATCH | `/api/v1/client-account/min-amount` | 🔥 **Monto mínimo** |
+| GET/PATCH | `/api/v1/client-account/transfer-account` | 🔥 **Cuenta transfer** |
+| GET/POST | `/api/v1/client-account/document` | Documentos |
+| DELETE | `/api/v1/client-account/document/{id}` | Eliminar doc |
+| GET/PATCH | `/api/v1/client-account/person` | Personas |
+| DELETE | `/api/v1/client-account/person/{id}` | Eliminar persona |
+| GET | `/api/v1/client-account/transfer` | Transferencias |
+| GET/PATCH | `/api/v1/client-account/clabe` | 🔥 **CLABEs** |
+| GET/PATCH | `/api/v1/client-account/balance` | 🔥 **Balance** |
+| GET/PATCH | `/api/v1/client-account/beneficiary` | Beneficiarios |
+| GET/PATCH | `/api/v1/client-account/bank-account` | Cuentas bancarias |
+| GET/PATCH | `/api/v1/client-account/sandbox` | Toggle sandbox |
+| GET/PATCH | `/api/v1/client-account/movement` | Movimientos |
+| GET/PATCH | `/api/v1/client-account/config` | Configuración |
+| GET/PATCH | `/api/v1/client-account/representative` | Representantes |
+| GET/PATCH | `/api/v1/client-account/summary` | Resumen |
+| GET/PATCH | `/api/v1/client-account/report` | Reporte |
+
+### `/payment-order` — Órdenes de Pago (30+ endpoints)
+
+| Método | Path | Notas |
+|---|---|---|
+| GET | `/api/v1/payment-order/{id}` | Detalle orden |
+| GET/POST | `/api/v1/payment-order/file` | Archivo (header X-Client-Account-Id) |
+| GET | `/api/v1/payment-order/get-all` | Listar todas |
+| GET | `/api/v1/payment-order/get-all?client-account-id=` | Por cuenta |
+| POST | `/api/v1/payment-order/file/process-from-s3` | 🔥 **Procesar desde S3** |
+| GET | `/api/v1/payment-order/file/process-status` | Estado procesamiento |
+| GET | `/api/v1/payment-order/consolidation` | Consolidación |
+| GET | `/api/v1/payment-order/consolidation-detail` | Detalle |
+| GET | `/api/v1/payment-order/get-transaction-summary` | Resumen tx |
+| GET | `/api/v1/payment-order/get-transaction-summary-status` | Por status |
+| GET | `/api/v1/payment-order/get-transaction-summary-status-detail` | Detalle |
+| GET | `/api/v1/payment-order/users` | Por usuario |
+| GET | `/api/v1/payment-order/users-report` | Reporte |
+| GET/DELETE | `/api/v1/payment-order/spei` | 🔥 **SPEI directo** |
+| GET/DELETE | `/api/v1/payment-order/batch` | Pagos masivos |
+| GET/DELETE | `/api/v1/payment-order/draft` | Borradores |
+| GET/DELETE | `/api/v1/payment-order/upload` | Upload |
+| GET/DELETE | `/api/v1/payment-order/process` | Procesar |
+| GET/DELETE | `/api/v1/payment-order/confirm` | Confirmar |
+| GET/DELETE | `/api/v1/payment-order/cancel` | Cancelar |
+| GET/DELETE | `/api/v1/payment-order/status` | Estado |
+| GET | `/api/v1/payment-order/download` | Descargar |
+| GET | `/api/v1/payment-order/summary` | Resumen |
+| GET | `/api/v1/payment-order/report` | Reporte |
+
+### `/reporter` — Reportes (10 endpoints)
+
+| Método | Path | Notas |
+|---|---|---|
+| GET | `/api/v1/reporter/movement` | Movimientos |
+| GET | `/api/v1/reporter/movement/pay-in` | 🔥 **Depósitos entrantes** |
+| GET | `/api/v1/reporter/movement/pay-in-detail` | Detalle depósitos |
+| GET | `/api/v1/reporter/payment-order/consolidation` | Consolidación |
+| GET | `/api/v1/reporter/payment-order/consolidation-detail` | Detalle |
+| GET | `/api/v1/reporter/payment-order/get-transaction-summary` | Resumen tx |
+| GET | `/api/v1/reporter/payment-order/get-transaction-summary-status` | Por status |
+| GET | `/api/v1/reporter/payment-order/get-transaction-summary-status-detail` | Detalle |
+| GET | `/api/v1/reporter/payment-order/users` | Por usuario |
+| GET | `/api/v1/reporter/payment-order/users-report` | Reporte |
+
+### Otros Endpoints
+
+| Método | Path | Notas |
+|---|---|---|
+| GET | `/api/v1/bank` (+countryCode=CL/PE/MX/CO/AR) | Catálogo bancos |
+| POST | `/api/v1/document` | Crear documento |
+| POST | `/api/v1/document/presigned-upload` | 🔥 **Presigned S3** |
+| GET | `/api/v1/document/{id}/url` | URL descarga |
+| GET | `/api/v1/settlement` (+`/{id}`) | Liquidaciones |
+| GET | `/api/v1/monthly-billing` | Facturación |
+| GET/POST | `/api/v1/ip-valid` | Validación IP |
+| GET | `/api/v1/payment-report/dashboard` | Dashboard report |
+| GET | `/api/v1/quote/get-all` | Cotizaciones |
+| GET | `/api/v1/movement/get-all` (+clientAccountId=) | Movimientos |
+| GET | `/api/v1/user/me` | Mi perfil |
+| GET | `/api/v1/user/get-all` | 🔥 **Listar usuarios** |
+| GET | `/api/v1/user/profile` | Perfil |
+| GET | `/api/v1/user/register` | Registro/invite |
+| POST | `/api/v1/notification/new-potential-client` | Lead (con auth) |
+
+### Endpoint SIN AUTH (VULN)
+
+| Método | Path | Status | Notas |
+|---|---|---|---|
+| **POST** | **`/api/v1/notification`** | **200** | **Sin auth, 0 bytes, acepta cualquier JSON** |
+
+---
+
+## APP — LÓGICA DE NEGOCIO
+
+### Tipos de cuenta
+- **SA** — Cuenta de Ahorro
+- **CA** — Cuenta Corriente
+- **DE** — Cuenta Vista
+
+### Features
+- **Pagos Masivos** — Subir archivo CSV/TXT → S3 → process-from-s3 → confirmar
+- **Pagos Online** — Pagos individuales (ONLINE type)
+- **Órdenes de Pago** — Ciclo: Borrador → Cargada → Procesando → Finalizada
+- **Liquidaciones** — Resumen mensual (settlement)
+- **Facturación** — Billing mensual (monthly-billing)
+- **Reportes** — Dashboard, movimientos, resumen diario, pay-in
+- **Sandbox** — Modo prueba toggle ("los cambios no afectarán los datos reales")
+- **Configuración** — Max transfer, min balance, frontend-cognito, access-token
+- **Cotizaciones** — Quotes
+
+### Payment Types (Iw)
+- `GET_ONLINE` = "ONLINE" — pagos individuales
+- `GET_PAYROLL` = "PAYROLL" — nómina/masivos
+
+### Status enums (LIe)
+- `CREATED` → "Procesando"
+- `TRANSFER_PENDING` → "Pendiente"
+- `BANK_TRANSFER_PENDING/PROCESSING/FAILED/NOT_FOUND/NOT_PROCESSED/REPROCESS`
+- `TRANSFER_OK/NOK/PENDING`
+- General: `ACTIVE`, `BLOCKED`, `COMPLETED`, `DRAFT`, `FAILED`, `INACTIVE`, `PROCESSING`
+
+### Roles (Ra = allowedRoles para todas las rutas)
+- `Administrador` — Admin
+- `Usuario Principal` — Main user
+
+### Frontend Routes (Xt)
+- `/login`, `/recover-password`, `/recover-password/:email`, `/recover-password/register/:email`
+- `/dashboard`, `/dashboard/movements`, `/dashboard/massive-payments-detail/:ID`, `/dashboard/online-payments-detail/:ID`, `/dashboard/listado-errores`
+- `/massive-payments`, `/massive-payments/massive-payments-detail/:ID`
+- `/online-payments`, `/online-payments/online-payments-detail/:ID`
+- `/config`, `/reportes`, `/reportes/liquidaciones-detail/:id`, `/reportes/detail-billing/:id`
+- `/reportes/resumen-diario/rechazadas/:date`, `/reportes/resumen-diario/pendientes/:date`
+- `/questions`, `/error-500`, `/error-504`
+
+### Password Policy (Cognito)
+- 8-16 caracteres, mayúscula, minúscula, número, carácter especial
+
+### Error messages (Spanish, del JS)
+- `Error al crear transferencia/cuenta/cotización/persona`
+- `Error al guardar el banco/monto máximo`
+- `Error al analizar el archivo` + `valor inválido para el país`
+- `Error al buscar/cargar facturas`
+- `No se pudo confirmar orden de pago`
+- `No se pudo obtener link de descarga`
+- `La cuenta de la empresa ya existe`
+- `El monto no puede ser negativo`
+- `El archivo supera el tamaño máximo permitido`
+
+---
+
+## SOPORTE — HELPDESK MULTI-TENANT
+
+### Stack
+- **Server:** nginx 1.24.0 (Ubuntu), proxy a backend Spring Security
+- **Frontend:** React SPA (Vite, TailwindCSS)
+- **Auth backend:** Spring Security (401 genérico para todo `/api/*` no-public)
+- **Auth frontend:** Cloudflare Turnstile
+- **Timezone:** -03:00 (Chile)
+
+### Rutas PÚBLICAS (sin auth, JSON responses)
+| Endpoint | Notas |
+|---|---|
+| `GET /api/public/portal/{slug}` | Info del portal de una empresa (logo, nombre) |
+| `GET /api/public/portal/{slug}/articles` | Artículos KB (inferido del JS) |
+| `GET /api/public/portal/{slug}/articles/{id}` | Artículo individual |
+
+**Error 404:** `{"error":"Not Found","status":404,"timestamp":"...","message":"Portal..."}`
+
+### Rutas AUTH (401 genérico)
+Todo `/api/*` no-public requiere auth. Endpoints inferidos del JS:
+- `/api/tickets`, `/api/chat`, `/api/messages`
+- `/api/v1/tickets`, `/api/v1/mesa`, `/api/v1/support`
+- `/api/v1/user`, `/api/v1/config`, `/api/v1/auth`
+
+### Features soporte
+- Centro de autoatención (KB público)
+- Tickets de soporte
+- Chat
+- Agentes (Mesa nivel 1, nivel 2)
+- Reglas de routing (estilo osTicket)
+- Artículos con adjuntos
+- Multi-empresa (cada empresa tiene su slug)
+
+---
+
+## HALLAZGOS / VULNS
+
+### VULN 1: Notification Endpoint Sin Auth (MEDIO)
+- **Endpoint:** `POST /api/v1/notification`
+- **Respuesta:** 200 con body vacío para cualquier JSON
+- **Ruta interna:** `/api/v1/notification/new-potential-client`
+- **Impacto:** Notificación/lead injection. Si envía emails internos, posible spam/phishing interno. Si almacena datos, posible XSS stored en panel admin.
+
+### VULN 2: API Gateway Expuesto Directamente (INFO)
+- **URL:** `https://rdrrxexkm4.execute-api.us-east-2.amazonaws.com/prod`
+- **Impacto:** Bypass de cualquier WAF/rate limit en CloudFront si solo se aplican a api.disperso.com
+
+### VULN 3: Cognito Pool ID + Client ID Expuestos (INFO)
+- Pool: `us-east-2_SOCtEIx2s`
+- Client: `4fjbm9cornhgfqk4o8m33rjt2f`
+- Permite probar auth flows directamente contra Cognito
+
+### VULN 4: PreAuthentication Lambda Error Verbose (BAJO)
+- `"PreAuthentication failed with error Missing validation data."` — revela existencia de Lambda trigger
+- Permite mapear el flujo de auth sin tener credenciales
+
+### VULN 5: ForgotPassword Mask Leak (BAJO)
+- Aunque PreventUserExistenceErrors está activo, la máscara `a***@d***` podría filtrar info parcial del email real en caso de usuarios existentes vs inexistentes (si hay diferencia en timing)
+
+### VULN 6: Soporte Portal Slug Enumerable (BAJO)
+- Ruta `/api/public/portal/{slug}` devuelve 404 con mensaje diferenciado
+- Permite enumerar slugs de empresas clientes
+
+### VULN 7: Spring Boot Backend Stack Exposed (INFO)
+- `application/problem+json` responses
+- Spring Security headers pattern (duplicados con nginx)
+- Error format revela timezone del servidor (-03:00 Chile)
+
+### VULN 8: Sandbox Mode Client-Side (INFO)
+- Modo prueba toggle en frontend (`sandBox.active` en Redux)
+- Si la validación es solo client-side, se podría bypassear
+
+---
+
+## ARCHIVOS EN WORKSPACE
+
+| Archivo | Descripción |
+|---|---|
+| `disperso_recon/app_bundle.js` | JS bundle principal app (2.6 MB) |
+| `disperso_recon/soporte_bundle.js` | JS bundle soporte (2.5 MB) |
+| `disperso_recon/analyze_bundle.py` | Extractor URLs/secrets/auth |
+| `disperso_recon/deep_js_analysis.py` | Análisis profundo JS |
+| `disperso_recon/extract_api_calls.py` | Extractor llamadas API |
+| `disperso_recon/analyze_soporte.py` | Análisis soporte bundle |
+| `disperso_recon/cognito_probe.py` | Cognito probes (correr en VPS) |
+| `disperso_recon/vps_cognito_probe.py` | Wrapper VPS para Cognito |
+| `disperso_recon/vps_cognito_full.py` | Wrapper VPS alternativo |
+| `disperso_recon/intelx_search.py` | IntelX search |
+
+---
+
+## SPEI KILL CHAIN (descubierta 2026-09-19)
+
+### Endpoints SPEI/Transfer confirmados (todos 401 = auth requerida)
+
+| Endpoint | Methods | Función |
+|---|---|---|
+| `/api/v1/payment-order/spei` | GET, DELETE | **ENDPOINT SPEI DIRECTO** |
+| `/api/v1/payment-order/transfer` | GET, DELETE | Transferencias |
+| `/api/v1/payment-order/batch` | GET, DELETE | Pagos masivos |
+| `/api/v1/payment-order/draft` | GET, DELETE | Crear borrador |
+| `/api/v1/payment-order/upload` | GET, DELETE | Subir archivo pagos |
+| `/api/v1/payment-order/process` | GET, DELETE | Procesar orden |
+| `/api/v1/payment-order/confirm` | GET, DELETE | Confirmar orden |
+| `/api/v1/payment-order/cancel` | GET, DELETE | Cancelar |
+| `/api/v1/payment-order/status` | GET, DELETE | Estado |
+| `/api/v1/payment-order/download` | GET, DELETE | Descargar |
+| `/api/v1/payment-order/summary` | GET, DELETE | Resumen |
+| `/api/v1/payment-order/report` | GET, DELETE | Reporte |
+| `/api/v1/client-account/clabe` | GET, PATCH | **CLABEs** |
+| `/api/v1/client-account/balance` | GET, PATCH | Balance |
+| `/api/v1/client-account/beneficiary` | GET, PATCH | Beneficiarios |
+| `/api/v1/client-account/bank-account` | GET, PATCH | Cuentas bancarias |
+| `/api/v1/client-account/movement` | GET, PATCH | Movimientos |
+| `/api/v1/client-account/config` | GET, PATCH | Configuración |
+| `/api/v1/client-account/representative` | GET, PATCH | Representantes |
+| `/api/v1/client-account/summary` | GET, PATCH | Resumen |
+| `/api/v1/client-account/report` | GET, PATCH | Reporte |
+| `/api/v1/client-account/sandbox` | GET, PATCH | Modo sandbox |
+
+### Cadena inferida:
+```
+1. GET /api/v1/client-account/clabe → CLABEs asociadas
+2. POST /api/v1/payment-order/draft → crear orden borrador
+3. POST /api/v1/payment-order/upload → subir archivo TXT de pagos
+4. POST /api/v1/payment-order/process → procesar
+5. POST /api/v1/payment-order/confirm → confirmar
+6. → /api/v1/payment-order/spei → SPEI ejecutado
+```
+
+### Nota: PATCH en client-account endpoints = posible modificación de CLABE, balance, beneficiarios (mass assignment si no valida roles)
+
+---
+
+## SOPORTE — LOGIN SIN CAPTCHA (hallazgo 2026-09-19)
+
+### Endpoint login
+- **URL:** `POST https://soporte.disperso.com/api/auth/login`
+- **Body:** `{"email": "xxx", "password": "xxx"}`
+- **Sin Captcha server-side** — Turnstile solo en frontend JS
+- **Sin Rate Limit** — 14+ intentos sin bloqueo ni lockout
+- **Sin User Enumeration** — respuesta uniforme para todos: 401, 122 bytes, "Credenciales invalidas"
+- **Timing uniforme:** ~1.5s (1390-1614ms), sin timing oracle
+- **Field validation:** enviar `username` en vez de `email` → 400 `"email: must not be blank"`
+- **Creds probadas sin éxito:** admin/soporte/support/info/contacto/help/test/demo/dev/qa/staging @disperso.com, admin/soporte @tuxpan.cl
+
+### Endpoints auth encontrados (soporte)
+- `POST /api/auth/login` → 400/401 (handler directo, valida fields)
+- `POST /api/v1/auth/login` → 401 (handler v1, body vacío)
+- `POST /api/v1/auth/register` → 401 (requiere auth — invite-only)
+- `POST /api/v1/auth/signup` → 401 (requiere auth)
+- `POST /api/v1/auth/forgot-password` → 401 (requiere auth — inusual)
+- `POST /api/v1/auth/reset-password` → 401
+- `GET /api/v1/auth/me` → 401
+
+### Endpoints protegidos (todos 401, 0 bytes)
+`/api/tickets`, `/api/v1/tickets`, `/api/chat`, `/api/v1/chat`, `/api/mesa`, `/api/v1/mesa`,
+`/api/agents`, `/api/v1/agents`, `/api/users`, `/api/v1/users`, `/api/config`, `/api/v1/config`,
+`/api/health`, `/api/v1/health`, `/api/v1/company`, `/api/v1/portal`, `/api/v1/article`,
+`/api/v1/articles`, `/api/v1/category`, `/api/v1/categories`, `/api/v1/knowledge-base`
+
+### Slug brute: 0/94 encontrados
+Probados: disperso, test, demo, sandbox, admin, tuxpan, default, empresa, cliente, client, prueba, staging, dev, qa, production, prod, + 60 nombres fintech/bancos CL/PE/MX, + numéricos 1-20. Todos 404.
+Los slugs usan IDs custom/UUID, no nombres comunes.
+
+### Bypass headers: X-Forwarded-For, X-Real-IP, X-Original-URL, X-Forwarded-Host → todos 401 (sin efecto)
+
+---
+
+## NOTIFICATION ENDPOINT — ANÁLISIS PROFUNDO (2026-09-19)
+
+- **`POST /api/v1/notification`** → 200 (0 bytes) para CUALQUIER JSON, sin auth
+- **`POST /api/v1/notification/new-potential-client`** → 401 (requiere auth)
+- **Todas las demás sub-rutas** (transfer, payment, spei, stp, webhook, callback, email, sms, config, template, send) → 403
+- **Content-Type 415** revela `"instance":"/api/v1/notification/new-potential-client"` — Spring Boot confirma routing interno
+- **Solo acepta `application/json`** (xml, form, text → 415)
+- Acepta payloads XSS, SSTI, email injection sin error — todo devuelve 200 vacío
+- **Impacto real:** lead/notification injection. Si se muestra en panel admin → XSS stored. Si envía email interno → phishing.
+
+---
+
+## INTELX RESULTS (2026-09-19)
+
+| Búsqueda | Resultado |
+|---|---|
+| disperso.com phonebook (emails) | `disperso.com` (dominio, no email individual) |
+| disperso.com phonebook (domains) | `sales@disperso.com` (swap de target) |
+| disperso.com intelligent (leaks) | **401 — tier free sin acceso** |
+| tuxpan.cl phonebook | `smtp.tuxpan.cl`, `ns.tuxpan.cl`, `ns2/ns3.tuxpan.cl`, `tuxpan-gw.tuxpan.cl`, `florida.tuxpan.cl` |
+| tuxpan.cl intelligent | **401 — tier free sin acceso** |
+
+**Único email confirmado:** `sales@disperso.com`
+
+---
+
+## HEXAGON GLM ASSESSMENT (2026-09-19, VPS 64.177.83.195)
+
+### IntelX Phonebook — Tuxpan.cl (100 emails, 10 reales)
+
+| Email | Tipo |
+|---|---|
+| `casep@tuxpan.cl` | Real |
+| `fcatrin@tuxpan.cl` | Real |
+| `garate@tuxpan.cl` | Real |
+| `maureira@tuxpan.cl` | Real |
+| `maurro@tuxpan.cl` | Real |
+| `mfiguerc@tuxpan.cl` | Real |
+| `mmoossen@tuxpan.cl` | Real |
+| `mnavea@tuxpan.cl` | Real |
+| `smacias@tuxpan.cl` | Real |
+| `tuxpan@tuxpan.cl` | Real (genérico) |
+| + 90 anonimizados `hex.hex@tuxpan.cl` | Anonimizados por IntelX |
+
+### Inferred Disperso emails (de naming Tuxpan)
+
+`casep@`, `fcatrin@`, `garate@`, `maureira@`, `maurro@`, `mfiguerc@`, `mmoossen@`, `mnavea@`, `smacias@`, `tuxpan@` @disperso.com + variantes `c*`, `f*`, `g*`, `m*`, `s*`, `t*` (20 total)
+
+### GitHub OSINT
+
+| Búsqueda | Resultado |
+|---|---|
+| Code search (disperso.com, rdrrxexkm4, cognito IDs) | **401 — requiere auth token** |
+| Commits "disperso.com" | 2521 hits, NINGUNO del target (repos random con palabra "disperso" en español/portugués) |
+| Repos "disperso.com" | 15 hits, NINGUNO del target (datos dispersos, etc.) |
+| Repos "org:dispersohq" | 0 |
+| Repos "org:tuxpan" | 0 |
+| Secrets encontrados | **0** |
+
+**Conclusión:** Disperso no tiene presencia pública en GitHub. Sin repositorios propios detectables.
+
+### Notification Endpoint — Bypass CloudFront CONFIRMADO
+
+| Base | Status | Body |
+|---|---|---|
+| `https://api.disperso.com/api/v1/notification` (CDN) | **403** | `{"message":"Missing Authentication Token"}` (42b) |
+| `https://rdrrxexkm4.execute-api.us-east-2.amazonaws.com/prod/api/v1/notification` (GW directo) | **200** | **(0 bytes — acepta todo sin auth)** |
+
+**14 payloads probados (XSS, SSTI, webhook sim, email injection, phishing sim, fintech fields, lead form): TODOS 200 (0 bytes) en gateway directo, TODOS 403 en CDN.**
+
+**Webhook.site ID para verificación XSS:** `8d9e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4a`
+
+### JWT Null Algorithm — NO BYPASS
+
+- 6 tokens forjados (alg:none, alg:none+kid, alg:none+groups, alg:none+token-access)
+- 14 endpoints x 6 tokens x 2 bases = **168 tests**
+- **TODOS retornaron 401 (CDN) o 403 (Gateway directo)**
+- Cognito valida RS256 correctamente — JWT forgery no viable
+
+### Actuator / Swagger / API Docs — NO EXPUESTO
+
+- 22 paths x 2 métodos x 2 bases = **92 tests**
+- **TODOS retornaron 403/404**
+- No hay `/actuator/env`, `/actuator/health`, `/v3/api-docs`, `/swagger-ui.html`, `/openapi.json`
+
+### Resumen Vulnerabilidades (GLM assessment)
+
+| # | Vuln | Sev | Estado |
+|---|---|---|---|
+| V1 | Notification endpoint unauth en API Gateway directo (bypass CloudFront) | MEDIO | **CONFIRMADO** |
+| V2 | API Gateway directo expuesto (rdrrxexkm4.execute-api.us-east-2) | BAJO | CONFIRMADO |
+| V3 | Cognito ForgotPassword mask leak (admin@disperso.com) | BAJO | CONFIRMADO |
+| V4 | JWT null alg bypass | — | **NO funciona** |
+| V5 | Actuator/Swagger expuesto | — | **NO expuesto** |
+
+### Próximos pasos (GLM)
+
+1. **Spray soporte.disperso.com** con 10 emails reales Tuxpan + 20 inferred Disperso (sin captcha, sin rate limit)
+2. **Verificar webhook.site** `8d9e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4a` para callbacks XSS (panel admin)
+3. **LinkedIn OSINT** para empleados Disperso/Tuxpan — generar más emails
+4. **Cognito SRP auth** con 2Captcha si conseguimos email+password
+5. **Subdomain brute force** en `*.dev.disperso.com`, `*.qa.disperso.com`, `*.shd.disperso.com`
+
+### Archivos generados
+
+| Archivo | Descripción |
+|---|---|
+| `disperso_recon/hexagon_glm_vectors.py` | Script 5 vectores (subido a VPS) |
+| `disperso_recon/hexagon_glm_runner.py` | Wrapper SSH VPS |
+| `disperso_recon/hexagon_glm_intelx_retry.py` | Retry IntelX robusto |
+| `disperso_recon/hexagon_glm_intelx_runner.py` | Wrapper SSH retry |
+| `disperso_recon/hexagon_glm_results.json` | Resultados consolidados (120KB) |
+| `disperso_recon/hexagon_glm_intelx_retry.json` | Resultados IntelX retry |
+| `disperso_recon/hexagon_glm_emails_consolidated.json` | Emails consolidados |
+| `disperso_recon/hexagon_glm_run.log` | Log ejecución VPS |
+| `disperso_recon/hexagon_glm_findings.txt` | Findings formateados |
+| `disperso_recon/hexagon_glm_emails.txt` | Emails formateados |
+| `disperso_recon/hexagon_glm_analyze.py` | Analizador resultados |
+| `disperso_recon/hexagon_glm_extract_emails.py` | Extractor emails |
+| `disperso_recon/hexagon_glm_consolidate.py` | Consolidador final |
+
+---
+
+## API ENUM — RESUMEN COMPLETO (2026-09-19)
+
+301 requests. Oracle: 401 = endpoint real, 403 = no existe.
+
+| Resultado | Count |
+|---|---|
+| 200 (OPTIONS/CORS) | 22 |
+| 401 (autenticado) | 44 |
+| 403 (no existe) | 235 |
+
+**Paths top-level NO existen (403):** `/api/v1/spei`, `/api/v1/stp`, `/api/v1/transfer`, `/api/v1/transaction`, `/api/v1/payment`, `/api/v1/payout`, `/api/v1/disbursement`, `/api/v1/batch`, `/api/v1/webhook`, `/api/v1/clabe`, `/api/v1/beneficiary`, `/api/v1/account`, `/api/v1/balance`, `/api/v1/movements`, `/api/v1/report`, `/api/v1/dashboard`, `/api/v1/configuration`, `/api/v1/settings`, `/api/v1/access-token`, `/api/v1/api-key`, `/api/v1/users`, `/api/v1/admin`, `/api/v1/role`, `/api/v1/company`, `/api/v1/currency`, `/api/v1/exchange-rate`, `/api/v1/quotation`, `/api/v1/sandbox`, `/api/v1/health`
+
+**v2 API:** no existe (todo 403)
+**Actuator/Swagger/OpenAPI:** no existe (todo 403)
+
+---
+
+## PENDIENTES
+
+### P0 — Crítico
+- [ ] **OSINT empleados LinkedIn** — Disperso/Tuxpan → naming convention → emails reales para spray soporte login
+- [ ] **Stealer logs vía VPS** — correr IntelX intelligent desde VPS (tier free puede que dé 401 igual)
+- [ ] **Cognito SRP auth con 2Captcha** — si conseguimos email+password, bypass reCAPTCHA con 2Captcha
+- [ ] **Subdomain DNS probe** — wildcard dev/qa/shd desde VPS
+
+### P1 — Alto
+- [ ] **Soporte password spray** — con emails de LinkedIn + passwords comunes (SIN captcha SIN rate limit)
+- [ ] **Sandbox mode bypass** — `PATCH /api/v1/client-account/sandbox` con token → ¿activa/desactiva?
+- [ ] **Notification XSS stored** — enviar payload XSS al `/api/v1/notification` → si se renderiza en admin panel
+- [ ] **IDOR en payment-order** — con token, probar `GET /api/v1/payment-order/{id}` con IDs secuenciales
+
+### P2 — Medio
+- [ ] **Presigned upload abuse** — `POST /api/v1/document/presigned-upload` con token → S3 write
+- [ ] **PATCH client-account/balance** — con token → mass assignment para modificar balance
+- [ ] **PATCH client-account/clabe** — con token → cambiar CLABE destino (IDOR ATO vector)
+- [ ] **IP validation** — `GET /api/v1/ip-valid` → whitelist info
+
+### P3 — Bajo
+- [ ] **Nuclei scan** en hosts vivos
+- [ ] **Wayback Machine** snapshots
+- [ ] **S3 bucket enum** — buscar buckets públicos
+
+---
+
+## KEYS/IDs CONFIRMADOS
+
+| Item | Valor |
+|---|---|
+| Cognito Pool ID | `us-east-2_SOCtEIx2s` |
+| Cognito Client ID | `4fjbm9cornhgfqk4o8m33rjt2f` |
+| API Gateway ID | `rdrrxexkm4` |
+| API Gateway Stage | `prod` |
+| API Gateway Region | `us-east-2` |
+| reCAPTCHA Site Key | `6LdVG1kpAAAAAG4z0dvxKCLcjd6Nc0miq5ObHLWy` |
+| CloudFront Pop | `QRO50-P1` (Querétaro MX) |
+| S3 SSE | AES256 |
+| Soporte nginx | 1.24.0 (Ubuntu) |

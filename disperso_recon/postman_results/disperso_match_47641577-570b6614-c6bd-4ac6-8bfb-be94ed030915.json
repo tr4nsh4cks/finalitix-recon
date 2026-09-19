@@ -1,0 +1,624 @@
+{
+  "info": {
+    "_postman_id": "570b6614-c6bd-4ac6-8bfb-be94ed030915",
+    "name": "Telcoin QA v0.0.2 (Documented)",
+    "description": "Colecci\u00f3n documentada a partir del c\u00f3digo del proyecto. Incluye campos obligatorios/opcionales y notas de autenticaci\u00f3n (JWT + HMAC).\n\nAutenticaci\u00f3n\n- Header Authorization: token devuelto por /auth (normalmente 'Bearer <token>').\n- Header X-Signature: firma HMAC SHA256 Base64 calculada en el prerequest de la colecci\u00f3n con HMAC_KEY.\n\nNota: Solo documenta endpoints incluidos en esta colecci\u00f3n.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-02-25T01:15:51.000Z",
+    "updatedAt": "2026-02-25T02:03:44.000Z",
+    "lastUpdatedBy": "47641577",
+    "uid": "47641577-570b6614-c6bd-4ac6-8bfb-be94ed030915"
+  },
+  "item": [
+    {
+      "name": "Catalogs",
+      "item": [
+        {
+          "name": "Retrieve catalog bank keys",
+          "id": "ec601d5c-bc3d-4bd5-808f-1785fab16997",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT) obtenido en /auth.",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC de la petici\u00f3n (ver prerequest de la colecci\u00f3n).",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/catalogs/stp/banks",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "catalogs",
+                "stp",
+                "banks"
+              ]
+            },
+            "description": "Obtiene el cat\u00e1logo de bancos/keys STP.\n\nAuth: JWT + HMAC.\nBody: no aplica.\nC\u00f3digo: GET /catalogs/stp/banks en api/v1/endpoints/catalogs.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-ec601d5c-bc3d-4bd5-808f-1785fab16997"
+        }
+      ],
+      "id": "15393330-162b-477e-b746-bc1562904d92",
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T01:15:51.000Z",
+      "uid": "47641577-15393330-162b-477e-b746-bc1562904d92"
+    },
+    {
+      "name": "Accounts",
+      "item": [
+        {
+          "name": "balance",
+          "item": [
+            {
+              "name": "Balance account Telcoin",
+              "id": "7327d105-da43-40ca-ad89-afe0ad6519fe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{ACCESS_TOKEN}}",
+                    "description": "(Obligatorio) Token de acceso (JWT).",
+                    "type": "text"
+                  },
+                  {
+                    "key": "X-Signature",
+                    "value": "{{HMAC_SIGNATURE}}",
+                    "description": "(Obligatorio) Firma HMAC.",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{BASE_URL}}/account/balance",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "account",
+                    "balance"
+                  ]
+                },
+                "description": "Obtiene el balance de la cuenta del usuario autenticado (master).\n\nAuth: JWT + HMAC.\nBody: no aplica.\nC\u00f3digo: GET /account/balance en api/v1/endpoints/account.py"
+              },
+              "response": [],
+              "createdAt": "2026-02-25T01:15:51.000Z",
+              "updatedAt": "2026-02-25T01:15:51.000Z",
+              "uid": "47641577-7327d105-da43-40ca-ad89-afe0ad6519fe"
+            }
+          ],
+          "id": "e051381e-acff-40ab-9315-852a78bf627a",
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-e051381e-acff-40ab-9315-852a78bf627a"
+        },
+        {
+          "name": "Add account",
+          "id": "c53a82b7-00d6-423e-8122-1332996c1fda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"stp_institutions_id\":90646,\n    \"name_beneficiary\": \"Adam  Samuels\",\n    \"account_beneficiary\":\"646180191200003524\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/account/spei-out/add",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "account",
+                "spei-out",
+                "add"
+              ]
+            },
+            "description": "Registra una cuenta beneficiaria frecuente para SPEI Out.\n\nAuth: JWT + HMAC.\n\nBody (JSON) SchFrequentTransaction (schemas/movements_schema.py):\n- stp_institutions_id (int) obligatorio\n- name_beneficiary (string) obligatorio\n- account_beneficiary (string, max 300) obligatorio\n- user_id (int) opcional\n- legal_entity_id (int) opcional\n\nC\u00f3digo: POST /account/spei-out/add en api/v1/endpoints/account.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-c53a82b7-00d6-423e-8122-1332996c1fda"
+        },
+        {
+          "name": "Accounts for cash out",
+          "id": "93168752-5a16-47d7-a103-192d0fbe2bd9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/account/spei-out/list",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "account",
+                "spei-out",
+                "list"
+              ]
+            },
+            "description": "Lista las cuentas beneficiarias frecuentes SPEI Out del usuario/entidad legal.\n\nAuth: JWT + HMAC.\nBody: no aplica.\nC\u00f3digo: GET /account/spei-out/list en api/v1/endpoints/account.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-93168752-5a16-47d7-a103-192d0fbe2bd9"
+        }
+      ],
+      "id": "47dfce3c-ea92-41ac-b87a-986e299e9777",
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzE5ODI2OTcsImV4cCI6MTc3MTk4MzI5Nywic3ViIjoiMTkwIiwianRpIjoiNGQyZDNkZjUtMDllMi00YTQ1LWIxODMtZGFhZWU2NWUwMWIzIiwidHlwZSI6ImFjY2VzcyJ9.AwWxy5ur4I5-oJnVr4vKe99N32KF0-pykzoetaxILov3X-yNtXAVTPagK3by3ZDzNiZaN88_RJnR7sGo0VVYWtZET-aPLwBNRByjIxI3yvqlkOdK9-Jg5aOsNglX2IhmT3dcTi6pDougNcwLNLp7GOBVVOH0L7TNYeFQRRbuqxL3FyJUddXSBm8tYiWuaIh36ubbY_OAVoqPKI0v7o2VJ2ipYKo9Bz5LyAur6mbCRuW_Gpm-UKElM-sLxpwfgLalCxqFZz3nQ13btVN7XRJukOzD_3JAiEu-qfo-JAV4VAIy5UKork1riDZVdFwwFAmuxMekN5I7trIERchqz1POEw",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "61ef4fa8-bbc1-4673-8e09-76de7b141f64",
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "11e135db-6be6-4bc1-9681-471ef9d81e1f",
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T01:29:26.000Z",
+      "uid": "47641577-47dfce3c-ea92-41ac-b87a-986e299e9777"
+    },
+    {
+      "name": "Movements",
+      "item": [
+        {
+          "name": "Movements",
+          "id": "5d7fa254-e6fe-4131-95eb-174ac464e3a2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/movement/list",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movement",
+                "list"
+              ]
+            },
+            "description": "Lista movimientos del usuario autenticado.\n\nAuth: JWT + HMAC.\n\nQuery params (opcionales): amount, from, to, description, trace_id, transaction_type_id, skip (default 0), limit (default 50, 1..500), order_by (default movement_date), order_dir (asc|desc), batch_id, transfer_mode.\n\nRespuesta: MovementsResponse (schemas/movements_schema.py).\nC\u00f3digo: GET /movement/list en api/v1/endpoints/movements.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-5d7fa254-e6fe-4131-95eb-174ac464e3a2"
+        },
+        {
+          "name": "Search  movement",
+          "id": "6c0d9ccb-6713-41a5-b289-9ccbebf94b47",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tracking_key\": \"c6f5b476eeb611f0890602cc14f8ef85\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/movement/search",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movement",
+                "search"
+              ]
+            },
+            "description": "Busca un movimiento por tracking_key.\n\nAuth: JWT + HMAC.\n\nBody (JSON) SearchMovementSchema: tracking_key (string) obligatorio.\nC\u00f3digo: POST /movement/search en api/v1/endpoints/movements.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-6c0d9ccb-6713-41a5-b289-9ccbebf94b47"
+        },
+        {
+          "name": "Reconciliation",
+          "id": "d3c0c3b7-b22b-4c79-bbb0-44070fafeda2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/movement/reconciliation?from=2026-01-10&to=2026-01-24&page=1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movement",
+                "reconciliation"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "2026-01-10"
+                },
+                {
+                  "key": "to",
+                  "value": "2026-01-24"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Listado paginado de movimientos para conciliaci\u00f3n.\n\nAuth: JWT + HMAC.\n\nQuery params (opcionales salvo validaciones): amount, from, to, description, trace_id, transaction_type_id, page (default 1, min 1), limit (default 50, 1..500), order_by, order_dir (asc|desc), batch_id, transfer_mode.\n\nRespuesta: PaginatedMovementsResponse (schemas/movements_schema.py).\nC\u00f3digo: GET /movement/reconciliation en api/v1/endpoints/movements.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-d3c0c3b7-b22b-4c79-bbb0-44070fafeda2"
+        }
+      ],
+      "id": "f921ed72-f69c-4373-afca-362de31892a8",
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T01:15:51.000Z",
+      "uid": "47641577-f921ed72-f69c-4373-afca-362de31892a8"
+    },
+    {
+      "name": "Spei",
+      "item": [
+        {
+          "name": "Send spei",
+          "id": "1e3f1140-34f6-48fd-b2ba-09dfe688a377",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{ACCESS_TOKEN}}",
+                "description": "(Obligatorio) Token de acceso (JWT).",
+                "type": "text"
+              },
+              {
+                "key": "X-Signature",
+                "value": "{{HMAC_SIGNATURE}}",
+                "description": "(Obligatorio) Firma HMAC.",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id_frequent\": null,\n    \"beneficiary_account\": \"646180191200005946\",\n    \"beneficiary_name\": \"Zyntek\",\n    \"amount\": 15,\n    \"concept\": \"TRX Zyntek 001\",\n    \"rfc_curp\": \"RVF621207IB6\",\n    \"reference\": \"120594\",\n    \"institution\": 90646,\n    \"latitude\": \"45.8439491\",\n    \"longitude\": \"-119.1091762\",\n    \"type_send\": 1,\n    \"user_id\": 190\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/movement/send_spei",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movement",
+                "send_spei"
+              ]
+            },
+            "description": "Env\u00eda una SPEI Out.\n\nAuth: JWT + HMAC.\n\nBody (JSON) SpeiOut (schemas/movements_schema.py):\n- beneficiary_account (string) obligatorio\n- beneficiary_name (string) obligatorio\n- amount (float) obligatorio\n- concept (string) obligatorio\n- reference (string) obligatorio\n- institution (int) obligatorio\n- latitude (string) obligatorio\n- longitude (string) obligatorio\n- user_id (int) obligatorio (seg\u00fan schema)\n- rfc_curp (string) obligatorio\n- id_frequent (int|null) opcional\n\nNota: el ejemplo incluye type_send pero el schema no lo define.\nC\u00f3digo: POST /movement/send_spei en api/v1/endpoints/movements.py"
+          },
+          "response": [],
+          "createdAt": "2026-02-25T01:15:51.000Z",
+          "updatedAt": "2026-02-25T01:15:51.000Z",
+          "uid": "47641577-1e3f1140-34f6-48fd-b2ba-09dfe688a377"
+        }
+      ],
+      "id": "2ed9e977-7504-47df-b904-88550cfab9eb",
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T01:15:51.000Z",
+      "uid": "47641577-2ed9e977-7504-47df-b904-88550cfab9eb"
+    },
+    {
+      "name": "Webhooks",
+      "item": [],
+      "id": "0904b532-ae46-4df3-ba3c-5dc7f46cd51f",
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T02:03:44.000Z",
+      "uid": "47641577-0904b532-ae46-4df3-ba3c-5dc7f46cd51f"
+    },
+    {
+      "name": "Notification transaction",
+      "id": "b664b2cd-7d48-40f4-8957-af8988c4b63e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{ACCESS_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"user.transaction\",\n  \"data\": {\n    \"concept\": \"Charge to User 1\",\n    \"providerId\": \"83f250a2-1d4b-44a1-be69-3b3f95377c73\",\n    \"amount\": 10.25,\n    \"date\": \"2021-01-01T10:25:03\",\n    \"type\": \"debit\",\n    \"subtype\": \"transfer\",\n    \"additionalData\": {\n      \"id\": 1441563682,\n      \"fechaOperacion\": 20250109,\n      \"institucionOrdenante\": 40014,\n      \"institucionBeneficiaria\": 90646,\n      \"claveRastreo\": \"test\",\n      \"monto\": 1,\n      \"nombreOrdenante\": \"TEST\",\n      \"tipoCuentaOrdenante\": 40,\n      \"cuentaOrdenante\": \"000000000000000000\",\n      \"rfcCurpOrdenante\": \"AAAA010101AAA\",\n      \"nombreBeneficiario\": \"TEST TEST\",\n      \"tipoCuentaBeneficiario\": 40,\n      \"cuentaBeneficiario\": \"000000000000000000\",\n      \"nombreBeneficiario2\": null,\n      \"tipoCuentaBeneficiario2\": 0,\n      \"cuentaBeneficiario2\": null,\n      \"rfcCurpBeneficiario\": \"ND\",\n      \"conceptoPago\": \"TEST\",\n      \"referenciaNumerica\": 7826557,\n      \"empresa\": \"MEDA\",\n      \"tipoPago\": 1,\n      \"tsLiquidacion\": \"1736382577518\",\n      \"folioCodi\": null\n    },\n    \"status\": \"success\"\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{CLIENT_URL_NOTIFICATION}}",
+          "host": [
+            "{{CLIENT_URL_NOTIFICATION}}"
+          ]
+        },
+        "description": "Webhook del cliente (externo al API Telcoin). Se usa para probar el payload de notificaciones de transacci\u00f3n.\n\nNo hay implementaci\u00f3n en este repo para CLIENT_URL_NOTIFICATION."
+      },
+      "response": [],
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T02:03:44.000Z",
+      "uid": "47641577-b664b2cd-7d48-40f4-8957-af8988c4b63e"
+    },
+    {
+      "name": "Auth",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var json = JSON.parse(responseBody);",
+              "var response = pm.response.json()",
+              "",
+              "if(response){",
+              "    pm.collectionVariables.set(\"ACCESS_TOKEN\", response.access_token);    ",
+              "}",
+              "",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "id": "48e90be0-4fd6-4410-ad0e-a01b3feaf35b"
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "id": "3c4ea36e-6094-4abc-8c7b-5de74b6d615e"
+          }
+        }
+      ],
+      "id": "46156136-942e-4005-86cc-b677c6303876",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n  \"username\": \"api.test@telcoin.com\",\n  \"password\": \"Telcoin2025@\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/auth",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "auth"
+          ]
+        },
+        "description": "Autenticaci\u00f3n del API.\n\nBody (JSON) AuthUser (schemas/telcoin/user_schema.py): username (string) obligatorio, password (string) obligatorio.\n\nRespuesta: access_token + metadata (ver api/v1/endpoints/auth.py)."
+      },
+      "response": [],
+      "createdAt": "2026-02-25T01:15:51.000Z",
+      "updatedAt": "2026-02-25T01:15:51.000Z",
+      "uid": "47641577-46156136-942e-4005-86cc-b677c6303876"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "let arrayData = [",
+          "    '|',",
+          "    request.method, ",
+          "    request.url.replace('{{BASE_URL}}','').replace('{{USER_ID}}', pm.variables.get('USER_ID')),",
+          "    (pm.request.headers.has('Authorization') ? pm.variables.get('ACCESS_TOKEN') ?? '' : '').replace('Bearer ', ''), ",
+          "   pm.request.body.raw ? Buffer.from(JSON.stringify(JSON.parse(pm.request.body.raw ?? ''))).toString('Base64'):'',",
+          "   '|'",
+          "];",
+          "let stringData = arrayData.join('|');",
+          "let signature = CryptoJS.HmacSHA256(",
+          "        stringData, ",
+          "        CryptoJS.SHA256(pm.variables.get(\"HMAC_KEY\")).toString()",
+          ").toString(CryptoJS.enc.Base64);",
+          "",
+          "pm.variables.set(",
+          "    \"HMAC_SIGNATURE\", ",
+          "    signature",
+          ");"
+        ],
+        "id": "8a2b1bf9-b6de-4174-ab5a-d7cb5b145091"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ],
+        "id": "12a841b0-e99a-4f48-8c22-f8e5aeb90f9f"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://uxmal-qa.meda.team"
+    },
+    {
+      "key": "ACCESS_TOKEN",
+      "value": ""
+    },
+    {
+      "key": "HMAC_KEY",
+      "value": "uTAhhAerNGigWbSBSFAsiOyXtAKLkE"
+    }
+  ]
+}

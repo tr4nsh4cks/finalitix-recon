@@ -1,0 +1,568 @@
+{
+  "info": {
+    "_postman_id": "d15022a5-c60d-47ed-9524-3b76111d179b",
+    "name": "Operator Middleware",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-02-25T02:03:03.000Z",
+    "updatedAt": "2026-02-25T02:03:03.000Z",
+    "lastUpdatedBy": "47641577",
+    "uid": "47641577-d15022a5-c60d-47ed-9524-3b76111d179b"
+  },
+  "item": [
+    {
+      "name": "Send Spei",
+      "id": "69586d8e-874b-4c18-b253-f23c6f3b07e1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"providerId\":\"T-0000101\",\n    \"concept\": \"Envio SPEI\",\n    \"amount\": 1,\n    \"membershipAmount\": 0,\n    \"numericReference\": 1,\n    \"latitude\": \"19.324013\",\n    \"longitude\": \"-99.771406\",\n    \"accountId\": \"f8e2f570-45ae-4c25-afc6-92e55303d1d8\",\n    \"beneficiaryName\": \"test\",\n    \"beneficiaryBank\": \"90646\",\n    \"beneficiaryAccountNumber\":\"646180191200000035\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/users/{{USER_ID}}/transactions/spei/send",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "users",
+            "{{USER_ID}}",
+            "transactions",
+            "spei",
+            "send"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-69586d8e-874b-4c18-b253-f23c6f3b07e1"
+    },
+    {
+      "name": "Auth",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.collectionVariables.set('ACCESS_TOKEN', 'Bearer ' + pm.response.json().access_token)"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "id": "37eb95b0-f140-43b6-aa2f-8a1f1f7eba74"
+          }
+        }
+      ],
+      "id": "95c1e04a-ab2c-474e-a2b6-891876a8b328",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"11111111111\",\n    \"password\": \"test\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/auth",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "auth"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-95c1e04a-ab2c-474e-a2b6-891876a8b328"
+    },
+    {
+      "name": "Reconciliacion - All",
+      "id": "ec7d696b-1e78-4e28-9661-83038f972f9b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/reconciliation/transactions",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "reconciliation",
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "searchBy",
+              "value": "providerId",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "D-123509",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-ec7d696b-1e78-4e28-9661-83038f972f9b"
+    },
+    {
+      "name": "Reconciliacion - By User",
+      "id": "0ab91de1-7811-4f3e-b241-e5087e4cf5bf",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/reconciliation/users/{{USER_ID}}/transactions",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "reconciliation",
+            "users",
+            "{{USER_ID}}",
+            "transactions"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-0ab91de1-7811-4f3e-b241-e5087e4cf5bf"
+    },
+    {
+      "name": "Balance",
+      "id": "1aed1b84-465a-471c-862f-3e4dba8b93b7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/users/{{USER_ID}}/account/balance",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "users",
+            "{{USER_ID}}",
+            "account",
+            "balance"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-1aed1b84-465a-471c-862f-3e4dba8b93b7"
+    },
+    {
+      "name": "STP Accounts",
+      "id": "889a3d44-cdd0-4652-8cae-7971f2c79e70",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/users/{{USER_ID}}/accounts/spei",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "users",
+            "{{USER_ID}}",
+            "accounts",
+            "spei"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-889a3d44-cdd0-4652-8cae-7971f2c79e70"
+    },
+    {
+      "name": "Banks List",
+      "id": "39256860-a401-42e6-81c8-a0d4b47492c2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/catalogs/stp/banks",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "catalogs",
+            "stp",
+            "banks"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-39256860-a401-42e6-81c8-a0d4b47492c2"
+    },
+    {
+      "name": "User to User transfer",
+      "id": "bb518ddc-f07d-4c48-b87a-49eb29b68f10",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"amount\": 0.01,\n    \"providerId\": \"C-123474\",\n    \"destinyUserId\": \"f8c89c5b-6dc1-4072-af72-08729f169449\",\n    \"latitude\": \"19.324013\",\n    \"longitude\": \"-99.771406\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/users/{{USER_ID}}/transactions/transfer/to-user",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "users",
+            "{{USER_ID}}",
+            "transactions",
+            "transfer",
+            "to-user"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-bb518ddc-f07d-4c48-b87a-49eb29b68f10"
+    },
+    {
+      "name": "Add STP account",
+      "id": "f1f232c0-4a97-4114-b470-83a0d30b9ff6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"latitude\": \"19.324013\",\n    \"longitude\": \"-99.771406\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/users/{{USER_ID}}/accounts/spei/add",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "users",
+            "{{USER_ID}}",
+            "accounts",
+            "spei",
+            "add"
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-f1f232c0-4a97-4114-b470-83a0d30b9ff6"
+    },
+    {
+      "name": "Reconciliacion - By providerId",
+      "id": "3ad319e9-a48f-4e7a-ab88-a9de9e7ec927",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{ACCESS_TOKEN}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Signature",
+            "value": "{{HMAC_SIGNATURE}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URI_BASE}}/reconciliation/transactions",
+          "host": [
+            "{{URI_BASE}}"
+          ],
+          "path": [
+            "reconciliation",
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "searchBy",
+              "value": "providerId",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "T-000020",
+              "disabled": true
+            },
+            {
+              "key": "searchBy",
+              "value": "id",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "d2ae09b9-5bb1-4765-9758-7ce56599e79e",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [],
+      "createdAt": "2026-02-25T02:03:03.000Z",
+      "updatedAt": "2026-02-25T02:03:03.000Z",
+      "uid": "47641577-3ad319e9-a48f-4e7a-ab88-a9de9e7ec927"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "let arrayData = [",
+          "    '|',",
+          "    request.method, ",
+          "    request.url.replace('{{URI_BASE}}','').replace('{{USER_ID}}', pm.variables.get('USER_ID')),",
+          "    (pm.request.headers.has('Authorization') ? pm.variables.get('ACCESS_TOKEN') ?? '' : '').replace('Bearer ', ''), ",
+          "   pm.request.body.raw ? Buffer.from(pm.request.body.raw ?? '').toString('Base64'):'',",
+          "   '|'",
+          "];",
+          "//console.log(JSON.stringify(JSON.parse(pm.request.body.raw ?? '')),Buffer.from(JSON.stringify(JSON.parse(pm.request.body.raw ?? ''))).toString('Base64'));",
+          "let stringData = arrayData.join('|');",
+          "console.log(stringData, CryptoJS.SHA256(pm.variables.get(\"HMAC_KEY\")).toString());",
+          "let signature = CryptoJS.HmacSHA256(",
+          "        stringData, ",
+          "        CryptoJS.SHA256(pm.variables.get(\"HMAC_KEY\")).toString()",
+          ").toString(CryptoJS.enc.Base64);",
+          "pm.variables.set(",
+          "    \"HMAC_SIGNATURE\", ",
+          "    signature",
+          ");"
+        ],
+        "id": "d92021e1-0acb-4ab2-bbb6-49494a22942c"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ],
+        "id": "54bbb9a9-10fd-4cad-a0f5-25f702d11f5d"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "ACCESS_TOKEN",
+      "value": ""
+    }
+  ]
+}

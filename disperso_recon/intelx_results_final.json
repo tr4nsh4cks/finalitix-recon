@@ -1,0 +1,19 @@
+{
+  "disperso_emails": [
+    "disperso.com"
+  ],
+  "disperso_domains": [
+    "sales@disperso.com"
+  ],
+  "disperso_leaks_count": 0,
+  "tuxpan_emails": [
+    "tuxpan.cl",
+    "smtp.tuxpan.cl",
+    "ns.tuxpan.cl",
+    "ns2.tuxpan.cl",
+    "ns3.tuxpan.cl",
+    "tuxpan-gw.tuxpan.cl",
+    "florida.tuxpan.cl"
+  ],
+  "tuxpan_leaks_count": 0
+}

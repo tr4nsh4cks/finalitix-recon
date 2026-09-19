@@ -1,0 +1,808 @@
+{
+  "slugs": [
+    {
+      "slug": "disperso",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "test",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "demo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "sandbox",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "admin",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "tuxpan",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "default",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "empresa",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "cliente",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "client",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "prueba",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "staging",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "dev",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "qa",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "production",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "prod",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "main",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "root",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "support",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "help",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "helpdesk",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "soporte",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "ejemplo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "example",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "company",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "company1",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "empresa1",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "test1",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "test2",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "demo1",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "internal",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "public",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "kubo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "albo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "clip",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "rappi",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "mercadolibre",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "oxxo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "coppel",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "walmart",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "banorte",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "bbva",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "hsbc",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "santander",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "scotiabank",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "banamex",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "inbursa",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "stp",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "spei",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "falabella",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "ripley",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "lider",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "mercadopago",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "tenpo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "mach",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "fintual",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "bci",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "banco-estado",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "banco-chile",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "itau",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "bice",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "transbank",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "webpay",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "kushki",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "flow",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "khipu",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "fpay",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "bcp",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "interbank",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "yape",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "plin",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "niubiz",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "izipay",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "api",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "app",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "portal",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "panel",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "dashboard",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "backoffice",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "payments",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "pagos",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "transfer",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "transferencias",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "nomina",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "payroll",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "billing",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "facturacion",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "reembolso",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "refund",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "disperso-test",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "disperso-demo",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "disperso-sandbox",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "tuxpan-software",
+      "status": 404,
+      "length": 117
+    },
+    {
+      "slug": "tuxpan-chile",
+      "status": 404,
+      "length": 117
+    }
+  ],
+  "found": [],
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/tickets",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tickets",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/tickets",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tickets",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/chat",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/chat",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/mesa",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/mesa",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/agents",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/agents",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/users",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/config",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/config",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 400,
+      "length": 126,
+      "body": "{\"error\":\"Bad Request\",\"status\":400,\"timestamp\":\"2026-09-19T05:32:09.449664270-03:00\",\"message\":\"password: must not be blank\"}"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/public",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/health",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/config",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "GET",
+      "path": "/api/public/version",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "GET",
+      "path": "/actuator",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/actuator/health",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/actuator/env",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/actuator/info",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/actuator/mappings",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/.env",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/robots.txt",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/.git/config",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/server-status",
+      "status": 200,
+      "length": 1002,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon-disperso.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <!-- Sin t\u00c3\u00adtulo por defecto a prop\u00c3\u00b3sito: la app fija document.title con "
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/company",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/portal",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/article",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/articles",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/category",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/categories",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/knowledge-base",
+      "status": 401,
+      "length": 0,
+      "body": ""
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/ticket",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/tickets",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/contact",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/message",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/chat",
+      "status": 404,
+      "length": 118
+    },
+    {
+      "method": "POST",
+      "path": "/api/public/feedback",
+      "status": 404,
+      "length": 118
+    }
+  ]
+}

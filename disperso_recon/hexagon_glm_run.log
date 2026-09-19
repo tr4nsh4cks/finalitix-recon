@@ -1,0 +1,369 @@
+[*] HEXAGON GLM - Disperso assessment - 2026-09-19T09:13:37.993933
+[*] VPS: 64.177.83.195
+[*] === VECTOR 1: IntelX from VPS ===
+[*]   PB: disperso.com t=1 (emails)
+[*]   PB: disperso.com t=2 (domains)
+[*]   PB: tuxpan.cl t=1 (emails)
+[*]   PB: tuxpan.cl t=2 (domains)
+[*]   PB: disperso t=1 (partial)
+[*]   PB: dispersohq t=1 (linkedin)
+[*]   PB: @disperso.com t=1 (explicit)
+[*]   PB: @tuxpan.cl t=1 (tuxpan-explicit)
+[*]   INT: disperso.com password (pw-leak)
+[*] V1 EXCEPTION: 'NoneType' object is not subscriptable
+[*] === VECTOR 2: GitHub OSINT ===
+[*]   GH code: disperso.com
+[*]     status=401
+[*]   GH code: dispersohq
+[*]     status=401
+[*]   GH code: rdrrxexkm4
+[*]     status=401
+[*]   GH code: us-east-2_SOCtEIx2s
+[*]     status=401
+[*]   GH code: 4fjbm9cornhgfqk4o8m33rjt2f
+[*]     status=401
+[*]   GH commits: disperso.com
+[*]     status=200
+[*]     total=2521 items=30
+[*]   GH commits: dispersohq
+[*]     status=200
+[*]     total=0 items=0
+[*]   GH repos: disperso.com
+[*]     status=200
+[*]     total=15 items=15
+[*]   GH repos: dispersohq
+[*]     status=200
+[*]     total=0 items=0
+[*]   GH code: disperso cognito
+[*]     status=401
+[*]   GH code: disperso api_key
+[*]     status=401
+[*]   GH code: disperso secret
+[*]     status=401
+[*]   GH code: disperso password
+[*]     status=401
+[*]   GH repos: tuxpan disperso
+[*]     status=200
+[*]     total=0 items=0
+[*]   GH repos: org:dispersohq
+[*]     status=422
+[*]   GH repos: org:tuxpan
+[*]     status=200
+[*]     total=0 items=0
+[*]   V2 DONE. Code: 9, Commits: 2, Repos: 5, Secrets: 0
+[*] === VECTOR 3: Notification XSS/SSTI ===
+[*]   [api.disperso.com] xss-script-name: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] xss-script-name: 200 (0b)
+[*]   [api.disperso.com] xss-img-name: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] xss-img-name: 200 (0b)
+[*]   [api.disperso.com] xss-message: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] xss-message: 200 (0b)
+[*]   [api.disperso.com] xss-company: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] xss-company: 200 (0b)
+[*]   [api.disperso.com] xss-phone: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] xss-phone: 200 (0b)
+[*]   [api.disperso.com] ssti-jinja: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] ssti-jinja: 200 (0b)
+[*]   [api.disperso.com] ssti-other: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] ssti-other: 200 (0b)
+[*]   [api.disperso.com] ssti-jinja2: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] ssti-jinja2: 200 (0b)
+[*]   [api.disperso.com] email-injection: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] email-injection: 200 (0b)
+[*]   [api.disperso.com] phishing-sim: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] phishing-sim: 200 (0b)
+[*]   [api.disperso.com] webhook-payment: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] webhook-payment: 200 (0b)
+[*]   [api.disperso.com] webhook-transfer: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] webhook-transfer: 200 (0b)
+[*]   [api.disperso.com] fintech-fields: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] fintech-fields: 200 (0b)
+[*]   [api.disperso.com] lead-form: 403 (42b)
+[*]     Body: {"message":"Missing Authentication Token"}
+[*]   ***[rdrrxexkm4.execute-api.us-east] lead-form: 200 (0b)
+[*]   V3 DONE. CDN probes: 14, GW probes: 14
+[*] === VECTOR 4: JWT null alg / forged token ===
+[*]   Forged: alg-none -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRt...
+[*]   Forged: alg-none-kid-test -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIiwgImtpZCI6ICJ0ZXN0In0.eyJzdWIiOiAiYWRtaW4i...
+[*]   Forged: alg-none-kid-rs1 -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIiwgImtpZCI6ICJyczEifQ.eyJzdWIiOiAiYWRtaW4iL...
+[*]   Forged: alg-none-username-admin -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRt...
+[*]   Forged: alg-none-token-access -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRt...
+[*]   Forged: alg-none-with-groups -> eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRt...
+[*]   /api/v1/payment-order/spei [alg-none] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/spei [alg-none-kid-test] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/spei [alg-none-kid-rs1] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/spei [alg-none-username-admin] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/spei [alg-none-token-access] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/spei [alg-none-with-groups] api.disperso.com: 401
+[*]   /api/v1/payment-order/spei [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none-kid-test] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none-kid-rs1] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none-username-admin] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none-token-access] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/transfer [alg-none-with-groups] api.disperso.com: 401
+[*]   /api/v1/payment-order/transfer [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none-kid-test] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none-kid-rs1] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none-username-admin] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none-token-access] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/batch [alg-none-with-groups] api.disperso.com: 401
+[*]   /api/v1/payment-order/batch [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none-kid-test] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none-kid-rs1] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none-username-admin] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none-token-access] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/draft [alg-none-with-groups] api.disperso.com: 401
+[*]   /api/v1/payment-order/draft [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none-kid-test] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none-kid-rs1] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none-username-admin] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none-token-access] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/payment-order/get-all [alg-none-with-groups] api.disperso.com: 401
+[*]   /api/v1/payment-order/get-all [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/balance [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/client-account/balance [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/clabe [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/client-account/clabe [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/client-account/get-all [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/client-account/get-all [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/me [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/user/me [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/get-all [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/user/get-all [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/user/profile [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/user/profile [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/movement/get-all [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/movement/get-all [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/reporter/movement/pay-in [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-kid-test] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-kid-test] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-kid-rs1] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-kid-rs1] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-username-admin] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-username-admin] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-token-access] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-token-access] rdrrxexkm4.execute-a: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-with-groups] api.disperso.com: 403
+[*]   /api/v1/notification/new-potential-client [alg-none-with-groups] rdrrxexkm4.execute-a: 403
+[*]   V4 DONE. Tokens: 6, Endpoint tests: 168
+[*] === VECTOR 5: Actuator on API Gateway direct ===
+[*]   [rdrrxexkm4.execute-a] GET /actuator: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/env: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/env: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/health: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/health: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/mappings: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/mappings: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/beans: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/beans: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/configprops: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/configprops: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/info: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/info: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/loggers: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/loggers: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/metrics: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/metrics: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/threaddump: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/threaddump: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/heapdump: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/heapdump: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/scheduledtasks: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/scheduledtasks: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/sessions: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/sessions: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/shutdown: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/shutdown: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/prometheus: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/prometheus: 403
+[*]   [rdrrxexkm4.execute-a] GET /actuator/auditevents: 403
+[*]   [rdrrxexkm4.execute-a] POST /actuator/auditevents: 403
+[*]   [rdrrxexkm4.execute-a] GET /v3/api-docs: 403
+[*]   [rdrrxexkm4.execute-a] POST /v3/api-docs: 403
+[*]   [rdrrxexkm4.execute-a] GET /v3/api-docs/swagger-config: 403
+[*]   [rdrrxexkm4.execute-a] POST /v3/api-docs/swagger-config: 403
+[*]   [rdrrxexkm4.execute-a] GET /swagger-ui.html: 403
+[*]   [rdrrxexkm4.execute-a] POST /swagger-ui.html: 403
+[*]   [rdrrxexkm4.execute-a] GET /swagger-ui/index.html: 403
+[*]   [rdrrxexkm4.execute-a] POST /swagger-ui/index.html: 403
+[*]   [rdrrxexkm4.execute-a] GET /api-docs: 403
+[*]   [rdrrxexkm4.execute-a] POST /api-docs: 403
+[*]   [rdrrxexkm4.execute-a] GET /openapi.json: 403
+[*]   [rdrrxexkm4.execute-a] POST /openapi.json: 403
+[*]   [rdrrxexkm4.execute-a] GET /openapi.yaml: 403
+[*]   [rdrrxexkm4.execute-a] POST /openapi.yaml: 403
+[*]   [api.disperso.com] GET /actuator: 403
+[*]   [api.disperso.com] POST /actuator: 403
+[*]   [api.disperso.com] GET /actuator/env: 403
+[*]   [api.disperso.com] POST /actuator/env: 403
+[*]   [api.disperso.com] GET /actuator/health: 403
+[*]   [api.disperso.com] POST /actuator/health: 403
+[*]   [api.disperso.com] GET /actuator/mappings: 403
+[*]   [api.disperso.com] POST /actuator/mappings: 403
+[*]   [api.disperso.com] GET /actuator/beans: 403
+[*]   [api.disperso.com] POST /actuator/beans: 403
+[*]   [api.disperso.com] GET /actuator/configprops: 403
+[*]   [api.disperso.com] POST /actuator/configprops: 403
+[*]   [api.disperso.com] GET /actuator/info: 403
+[*]   [api.disperso.com] POST /actuator/info: 403
+[*]   [api.disperso.com] GET /actuator/loggers: 403
+[*]   [api.disperso.com] POST /actuator/loggers: 403
+[*]   [api.disperso.com] GET /actuator/metrics: 403
+[*]   [api.disperso.com] POST /actuator/metrics: 403
+[*]   [api.disperso.com] GET /actuator/threaddump: 403
+[*]   [api.disperso.com] POST /actuator/threaddump: 403
+[*]   [api.disperso.com] GET /actuator/heapdump: 403
+[*]   [api.disperso.com] POST /actuator/heapdump: 403
+[*]   [api.disperso.com] GET /actuator/scheduledtasks: 403
+[*]   [api.disperso.com] POST /actuator/scheduledtasks: 403
+[*]   [api.disperso.com] GET /actuator/sessions: 403
+[*]   [api.disperso.com] POST /actuator/sessions: 403
+[*]   [api.disperso.com] GET /actuator/shutdown: 403
+[*]   [api.disperso.com] POST /actuator/shutdown: 403
+[*]   [api.disperso.com] GET /actuator/prometheus: 403
+[*]   [api.disperso.com] POST /actuator/prometheus: 403
+[*]   [api.disperso.com] GET /actuator/auditevents: 403
+[*]   [api.disperso.com] POST /actuator/auditevents: 403
+[*]   [api.disperso.com] GET /v3/api-docs: 403
+[*]   [api.disperso.com] POST /v3/api-docs: 403
+[*]   [api.disperso.com] GET /v3/api-docs/swagger-config: 403
+[*]   [api.disperso.com] POST /v3/api-docs/swagger-config: 403
+[*]   [api.disperso.com] GET /swagger-ui.html: 403
+[*]   [api.disperso.com] POST /swagger-ui.html: 403
+[*]   [api.disperso.com] GET /swagger-ui/index.html: 403
+[*]   [api.disperso.com] POST /swagger-ui/index.html: 403
+[*]   [api.disperso.com] GET /api-docs: 403
+[*]   [api.disperso.com] POST /api-docs: 403
+[*]   [api.disperso.com] GET /openapi.json: 403
+[*]   [api.disperso.com] POST /openapi.json: 403
+[*]   [api.disperso.com] GET /openapi.yaml: 403
+[*]   [api.disperso.com] POST /openapi.yaml: 403
+[*]   V5 DONE. Endpoint tests: 92
+[*] 
+=== RESULTS SAVED to /tmp/hexagon_glm_results.json ===

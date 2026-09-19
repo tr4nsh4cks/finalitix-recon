@@ -1,0 +1,57 @@
+============================================================
+1. QA COGNITO SIGNUP ATTEMPT
+============================================================
+  SignUp basic: 400 {"__type":"NotAuthorizedException","message":"SignUp is not permitted for this user pool"}
+  SignUp no attrs: 400 {"__type":"NotAuthorizedException","message":"SignUp is not permitted for this user pool"}
+
+============================================================
+2. QA COGNITO INITIATEAUTH
+============================================================
+   USER_PASSWORD_AUTH: 400 {"__type":"InvalidParameterException","message":"USER_PASSWORD_AUTH flow not enabled for this client"}
+   CUSTOM_AUTH: 400 {"__type":"InvalidParameterException","message":"CUSTOM_AUTH is not enabled for the client."}
+   USER_SRP_AUTH: 400 {"__type":"InvalidParameterException","message":"Missing required parameter SRP_A"}
+
+============================================================
+3. QA FORGOT PASSWORD
+============================================================
+  !!! admin@disperso.com: 200 {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"a***@d***"}}
+  !!! qatest@yopmail.com: 200 {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"q***@y***"}}
+
+============================================================
+4. QA RESEND + CONFIRM (if signup worked)
+============================================================
+  Resend qatest@yopmail: 200 {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"q***@y***"}}
+  Confirm qatest@yopmail: 400 {"__type":"CodeMismatchException","message":"Invalid verification code provided, please try again."}
+
+============================================================
+5. QA DESCRIBE (what we can learn)
+============================================================
+  DescribeUserPoolClient: 400 {"__type":"MissingAuthenticationTokenException","message":"Missing Authentication Token"}
+  ListUsers: 400 {"__type":"MissingAuthenticationTokenException","message":"Missing Authentication Token"}
+  GetUserPoolMfaConfig: 400 {"__type":"MissingAuthenticationTokenException","message":"Missing Authentication Token"}
+
+============================================================
+6. QA COMMON PASSWORDS (admin@disperso.com)
+============================================================
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  400 {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing val
+  USER_PASSWORD_AUTH not enabled on QA client
+
+============================================================
+QA COGNITO PROBE DONE
+============================================================

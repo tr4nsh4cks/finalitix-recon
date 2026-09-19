@@ -1,0 +1,159 @@
+﻿======================================================================
+HEXAGON GLM - DISPERSO ASSESSMENT - FINDINGS SUMMARY
+======================================================================
+Target: disperso.com
+Run at: 2026-09-19T09:13:37.993900
+VPS: 64.177.83.195
+
+======================================================================
+VECTOR: vector_1_intelx
+======================================================================
+  ERROR: 'NoneType' object is not subscriptable
+
+======================================================================
+VECTOR: vector_2_github
+======================================================================
+
+--- Code searches (401 = unauth) ---
+  disperso.com: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  dispersohq: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  rdrrxexkm4: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  us-east-2_SOCtEIx2s: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  4fjbm9cornhgfqk4o8m33rjt2f: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  disperso cognito: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  disperso api_key: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  disperso secret: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+  disperso password: status=401 data={'message': 'Requires authentication', 'documentation_url': 'https://docs.github.com/rest', 'status': '401'}
+
+--- Commits ---
+  Query: disperso.com | total=2521
+    thesaddestlandscape/polymarket-research | vps-bot | bot@polymarket-vps | tune(gate): sube UMBRAL_CONCENTRACION_MAX de 30% a 40% (bot_wallets)
+
+Decisi¾n e
+    KarlaSalazar-t1/T1landing | Karla Salazar | karla.salazar@t1.com | tienda: Vende donde... arranca el timer al llegar el scroll, marketplaces con lo
+    jebermudezg/dq4value | Javier Bermudez | javierbermudez@MacBook-Pro-de-Javier.local | Fix score 100 falso en grupos dispersos, mÚtricas crudas y calibraci¾n por F1
+
+C
+    cristianoribeiromed-afk/resumos-clinicus | Cristiano Ribeiro da Silva | cristiano@clinicusmed.com.br | feat(biofisica): novo Cap.3 - Sistemas Dispersos, completa o P1 de Biofisica (3 
+    abbyom4AV/sistema-liquidaciones-tdv | Abigail Andrea Obando Mora | aobando@frutaint.local | Unifica el criterio visual disperso entre las pantallas
+
+Co-authored-by: Cursor 
+    bussoladotempoadmin-eng/bussoladotempo | Lucas | lucasctgasilveira@gmail.com | feat(swipe): Etapa 12 - Swipe rapido (registrar realizado)
+
+- PATCH /api/blocos/
+    nicolas-ricc/map | nicolas-ricc | 70240781+nicolas-ricc@users.noreply.github.com | fix(scenes): triHash uniforme sobre la grilla: destellos dispersos, no franjas
+
+
+    vinisisantos/virtuosa | vinisisantos | viniciussantos@gmail.com | feat(inbox): contexto interno ficava disperso -> adicionar notas com menþ§es
+    cerramaximiliano/law-analytics-admin | Maximiliano | cerramaximiliano@gmail.com | feat(plazos): secci¾n Revisi¾n en tab Dataset ù verificar casos dispersos
+
+Cola 
+    cerramaximiliano/pjn-api | Maximiliano Cerra | cerramaximiliano@gmail.com | feat(plazos): cola de revisi¾n del dataset ù dispersos + revisar ejemplo
+
+- GET 
+    eXEletric/gestao-projetos-campo | eX Eletric | exautomacao.web@gmail.com | Mockup: cabecalho compacto da proposta (opcao A faixa executiva / B cartao divid
+    marioblades-cmyk/tienda | marioblades-cmyk | marioblades@gmail.com | @
+Fix: usar Array.from para evitar huecos en array disperso de xlsx
+
+r.map() pre
+    legio-e/BasicPlus | legio-e | edu_del_molino@yahoo.es | H3.3 (parcial): workload supervivientes dispersos + cuaderno de mediciones
+
+Cara
+    lauraviolinista-bot/ipad-notes- | Claude | noreply@anthropic.com | A±adir plantilla de pßgina "Corazones"
+
+Nuevo fondo de pßgina con corazoncitos p
+    finance-a11y/aprendoclub- | Juan Angulo | 68631508+Sve-nnN@users.noreply.github.com | docs(26-03): completa plan copy disperso + globals
+
+Co-Authored-By: Claude Sonne
+  Query: dispersohq | total=0
+
+--- Repos ---
+  Query: disperso.com | total=15
+    LuanRamalho/Dados-Dispersos-com-Tamanhos-e-Cores-Variaveis | stars=0 | 
+    SainthixOli/modula | stars=3 | M¾dula Ú uma plataforma de gestÒo para clÝnicas e consult¾rios que substitui pro
+    Fredd-gr05/project-hub | stars=0 | Centralizador visual de projetos com canvas infinito, templates IA e links dispe
+    Monoclinico/Extrator-de-Emails | stars=2 | O prop¾sito do Extrator de Emails Ú fazer com que seja vißvel, rßpido e simples 
+    Santosdevbjj/dashboard-de-vendas-do-Xbox-Game-Pass-em-Excel | stars=2 | Dados de assinantes Xbox Game Pass dispersos sem visibilidade de faturamento e a
+    Vinicius-Muxila/automatizacao-cartorio | stars=0 | C¾digo em Python que simplifica a compilaþÒo e anßlise dos dados de faturamento 
+    leonardo8787/Arvore_B_banco_de_dados | stars=0 | A ßrvore B Ú ideal para trabalhar com grandes n·meros de arquivos, pois sua arqu
+    Santosdevbjj/estudos-de-investimentos-no-notebooklm | stars=0 | Leigos decidem investimentos com base em conte·do disperso e jargÒo tÚcnico, sob
+    Alexandredecarvalhopaiva/ObraIndex | stars=0 | O ObraIndex nasce da integraþÒo entre a Engenharia Civil e a Engenharia de Dados
+    g-opec/gip | stars=0 | Gerenciador de inserþ§es partidarias para eleiþ§es brasileiras com foco na padro
+    rafadev075/prompt-manager | stars=0 | O Prompt Manager Ú uma aplicaþÒo web que organiza todos os seus prompts de IA em
+    Thaynoanhit/Prompts_Manager | stars=0 | O Prompt Manager Ú uma aplicaþÒo web que centraliza todos os seus prompts de Int
+    RafaelDias108/miniguia-estudos-notebooklm | stars=0 | Este projeto foi desenvolvido com o intuito de estruturar um guia prßtico e efic
+    trizcardoso/OILMAP | stars=0 | A exploraþÒo de petr¾leo ainda sofre com dados geoespaciais dispersos e difÝceis
+    ritammarques/GoCrag | stars=0 | O GoCrag Ú uma aplicaþÒo inteligente para praticantes de bouldering e escalada o
+  Query: dispersohq | total=0
+  Query: tuxpan disperso | total=0
+  Query: org:dispersohq | total=None
+  Query: org:tuxpan | total=0
+
+--- Secret hits ---
+  (none)
+
+======================================================================
+VECTOR: vector_3_notification
+======================================================================
+
+Webhook ID for XSS verification: 8d9e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4a
+
+--- CDN (api.disperso.com) results ---
+  xss-script-name: status=403 len=42 body={"message":"Missing Authentication Token"}
+  xss-img-name: status=403 len=42 body={"message":"Missing Authentication Token"}
+  xss-message: status=403 len=42 body={"message":"Missing Authentication Token"}
+  xss-company: status=403 len=42 body={"message":"Missing Authentication Token"}
+  xss-phone: status=403 len=42 body={"message":"Missing Authentication Token"}
+  ssti-jinja: status=403 len=42 body={"message":"Missing Authentication Token"}
+  ssti-other: status=403 len=42 body={"message":"Missing Authentication Token"}
+  ssti-jinja2: status=403 len=42 body={"message":"Missing Authentication Token"}
+  email-injection: status=403 len=42 body={"message":"Missing Authentication Token"}
+  phishing-sim: status=403 len=42 body={"message":"Missing Authentication Token"}
+  webhook-payment: status=403 len=42 body={"message":"Missing Authentication Token"}
+  webhook-transfer: status=403 len=42 body={"message":"Missing Authentication Token"}
+  fintech-fields: status=403 len=42 body={"message":"Missing Authentication Token"}
+  lead-form: status=403 len=42 body={"message":"Missing Authentication Token"}
+
+--- Gateway (direct API GW) results ---
+  xss-script-name: status=200 len=0 body=
+  xss-img-name: status=200 len=0 body=
+  xss-message: status=200 len=0 body=
+  xss-company: status=200 len=0 body=
+  xss-phone: status=200 len=0 body=
+  ssti-jinja: status=200 len=0 body=
+  ssti-other: status=200 len=0 body=
+  ssti-jinja2: status=200 len=0 body=
+  email-injection: status=200 len=0 body=
+  phishing-sim: status=200 len=0 body=
+  webhook-payment: status=200 len=0 body=
+  webhook-transfer: status=200 len=0 body=
+  fintech-fields: status=200 len=0 body=
+  lead-form: status=200 len=0 body=
+
+======================================================================
+VECTOR: vector_4_jwt
+======================================================================
+
+Forged tokens: 6
+  alg-none: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRtaW5AZGlzcGVyc28uY29t...
+  alg-none-kid-test: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIiwgImtpZCI6ICJ0ZXN0In0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRt...
+  alg-none-kid-rs1: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIiwgImtpZCI6ICJyczEifQ.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRta...
+  alg-none-username-admin: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRtaW5AZGlzcGVyc28uY29t...
+  alg-none-token-access: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRtaW5AZGlzcGVyc28uY29t...
+  alg-none-with-groups: eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0.eyJzdWIiOiAiYWRtaW4iLCAiZW1haWwiOiAiYWRtaW5AZGlzcGVyc28uY29t...
+
+Endpoint tests: 168
+
+  All 168 endpoint tests returned 401/403 (JWT null alg does NOT bypass)
+
+======================================================================
+VECTOR: vector_5_actuator
+======================================================================
+
+Endpoint tests: 92
+
+  All 92 actuator/api-docs tests returned 403/404 (no exposure)
+
+======================================================================
+END OF REPORT
+======================================================================

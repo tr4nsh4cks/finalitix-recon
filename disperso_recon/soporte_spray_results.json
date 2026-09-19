@@ -1,0 +1,102 @@
+{
+  "enum": [
+    {
+      "email": "sales@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:41.221964113-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1614
+    },
+    {
+      "email": "admin@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:44.261642939-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1545
+    },
+    {
+      "email": "soporte@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:47.361557137-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1589
+    },
+    {
+      "email": "support@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:50.416838100-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1552
+    },
+    {
+      "email": "info@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:53.424070707-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1502
+    },
+    {
+      "email": "contacto@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:56.507739693-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1579
+    },
+    {
+      "email": "help@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:45:59.433652384-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1422
+    },
+    {
+      "email": "test@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:02.398964904-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1463
+    },
+    {
+      "email": "demo@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:05.349808469-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1447
+    },
+    {
+      "email": "dev@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:08.289240824-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1435
+    },
+    {
+      "email": "qa@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:11.252240796-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1459
+    },
+    {
+      "email": "staging@disperso.com",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:14.146562828-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1390
+    },
+    {
+      "email": "admin@tuxpan.cl",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:17.078847275-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1430
+    },
+    {
+      "email": "soporte@tuxpan.cl",
+      "status": 401,
+      "length": 122,
+      "body": "{\"error\":\"Unauthorized\",\"status\":401,\"timestamp\":\"2026-09-19T05:46:20.024607887-03:00\",\"message\":\"Credenciales invalidas\"}",
+      "elapsed_ms": 1442
+    }
+  ]
+}

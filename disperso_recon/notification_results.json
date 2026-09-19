@@ -1,0 +1,394 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/notification",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/transfer",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/transfer",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/payment",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/payment",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/spei",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/spei",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/stp",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/stp",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/settlement",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/settlement",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/webhook",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/webhook",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/callback",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/callback",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/email",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/email",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/sms",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/sms",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/status",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/status",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/config",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/config",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/template",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/template",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification/send",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route GET"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/send",
+    "status": 403,
+    "length": 42,
+    "body_preview": "{\"message\":\"Missing Authentication Token\"}",
+    "label": "sub-route POST"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "lead form"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-lead form"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "with type"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-with type"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "fintech fields"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-fintech fields"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "webhook sim"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-webhook sim"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "transfer webhook"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-transfer webhook"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "email injection"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-email injection"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "xss stored"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-xss stored"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "body_preview": "(empty)",
+    "label": "ssti probe"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "body_preview": "{\"message\":\"Unauthorized\"}",
+    "label": "npc-ssti probe"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 415,
+    "length": 197,
+    "body_preview": "{\"type\":\"about:blank\",\"title\":\"Unsupported Media Type\",\"status\":415,\"detail\":\"Content-Type 'application/xml;charset=UTF-8' is not supported.\",\"instance\":\"/api/v1/notification/new-potential-client\"}",
+    "label": "xml"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 415,
+    "length": 215,
+    "body_preview": "{\"type\":\"about:blank\",\"title\":\"Unsupported Media Type\",\"status\":415,\"detail\":\"Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported.\",\"instance\":\"/api/v1/notification/new-potential-client\"}",
+    "label": "form"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 415,
+    "length": 192,
+    "body_preview": "{\"type\":\"about:blank\",\"title\":\"Unsupported Media Type\",\"status\":415,\"detail\":\"Content-Type 'text/plain;charset=UTF-8' is not supported.\",\"instance\":\"/api/v1/notification/new-potential-client\"}",
+    "label": "text"
+  }
+]

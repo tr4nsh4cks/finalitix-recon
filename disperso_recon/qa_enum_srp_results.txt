@@ -1,0 +1,93 @@
+============================================================
+1. USER ENUM VIA FORGOTPASSWORD — QA vs PROD
+============================================================
+
+--- QA Pool ---
+  admin@disperso.com: 200 -> EXISTS [a***@d***]
+  sales@disperso.com: 200 -> EXISTS [s***@d***]
+  contacto@disperso.com: 200 -> EXISTS [c***@d***]
+  soporte@disperso.com: 200 -> EXISTS [s***@d***]
+  info@disperso.com: 200 -> EXISTS [i***@d***]
+  casep@disperso.com: 200 -> EXISTS [c***@d***]
+  fcatrin@disperso.com: 200 -> EXISTS [f***@d***]
+  garate@disperso.com: 400 ->   InvalidParameterException [N/A]
+  maureira@disperso.com: 200 -> EXISTS [m***@d***]
+  maurro@disperso.com: 200 -> EXISTS [m***@d***]
+  mfiguerc@disperso.com: 200 -> EXISTS [m***@d***]
+  mmoossen@disperso.com: 200 -> EXISTS [m***@d***]
+  mnavea@disperso.com: 200 -> EXISTS [m***@d***]
+  smacias@disperso.com: 200 -> EXISTS [s***@d***]
+  dev@disperso.com: 200 -> EXISTS [d***@d***]
+  test@disperso.com: 200 -> EXISTS [t***@d***]
+  qa@disperso.com: 200 -> EXISTS [q***@d***]
+  staging@disperso.com: 200 -> EXISTS [s***@d***]
+  demo@disperso.com: 200 -> EXISTS [d***@d***]
+  xyzfake12345@disperso.com: 200 -> EXISTS [x***@d***]
+  notexist999@disperso.com: 400 ->   InvalidParameterException [N/A]
+
+  QA EXISTING: 19/21
+
+--- PROD Pool (control) ---
+  admin@disperso.com: 200 -> {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"a***@d***"}}
+  xyzfake12345@disperso.com: 200 -> {"CodeDeliveryDetails":{"AttributeName":"email","DeliveryMedium":"EMAIL","Destination":"x***@d***"}}
+
+
+============================================================
+2. SRP AUTH WITH CAPTCHA BYPASS ATTEMPTS
+============================================================
+
+  Attempt 1: 400
+  Body keys: ['captcha']
+  Response: {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Correo electrónico y/o password incorrecto."}
+
+  Attempt 2: 400
+  Body keys: ['captcha']
+  Response: {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Correo electrónico y/o password incorrecto."}
+
+  Attempt 3: 400
+  Body keys: ['captcha']
+  Response: {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Correo electrónico y/o password incorrecto."}
+
+  Attempt 4: 400
+  Body keys: []
+  Response: {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Missing validation data."}
+
+  Attempt 5: 400
+  Body keys: ['captcha']
+  Response: {"__type":"UserLambdaValidationException","message":"PreAuthentication failed with error Correo electrónico y/o password incorrecto."}
+
+
+============================================================
+3. ADMIN INITIATE AUTH (bypass PreAuth Lambda)
+============================================================
+  AdminInitiateAuth: 400 {"__type":"MissingAuthenticationTokenException","message":"Missing Authentication Token"}
+
+
+============================================================
+4. QA RECAPTCHA SITE KEY EXTRACTION
+============================================================
+  reCAPTCHA in HTML: ['recaptcha/api.js?hl=es']
+  reCAPTCHA keys in JS: ['6LdVG1kpAAAAAG4z0dvxKCLcjd6Nc0miq5ObHLWy', '6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCB']
+  VITE_ vars: ['VITE_MAX_UPLOAD_SIZE_BYTES']
+  captcha ctx: mi contraseña",register:"Registrate aquí",extra_info:"¿No tienes cuenta?",reset_captcha:"Resetear CAPTCHA"},dashboard:{cardBalance1:"Saldo total en cu
+  captcha ctx: o=new fc({Username:e,Pool:mc}),i=new TY({Username:e,Password:t,ValidationData:{captcha:n}});o.authenticateUser(i,{onSuccess:s=>{r(s)},onFailure:s=>{a(
+  captcha ctx: async($,O,I)=>{l(!0);const M={Username:O,Password:$.oldPassword,ValidationData:{captcha:I}},_=new TY(M),T={Username:u,Pool:mc},j=new fc(T);j.authentic
+  captcha ctx: intentar"),B()}})},b=$=>{m($),i(null)},x=async $=>{if(f===""){i("Debes validar Captcha.");return}await y($,u,f)},S=c.useCallback(($,O)=>{O&&$&&d(O)},[
+  captcha ctx: n:C,onClose:v,isOpenDrawer:t,values:r,handleEmail:S,resetRecaptcha:B,onFinish:x,onChangeCapctha:b,captcha:f,setCaptcha:m,isLoading:s,onChangePassw
+  grecaptcha: ","onChange","theme","type","tabindex","onExpired","onErrored","size","stoken","grecaptcha","badge","hl","isolated"];function bb(){return bb=Object.as
+  grecaptcha: ),r}var n=t.prototype;return n.getCaptchaFunction=function(a){return this.props.grecaptcha?this.props.grecaptcha.enterprise?this.props.grecaptcha.ente
+  grecaptcha: .grecaptcha[a]:null},n.getValue=function(){var a=this.getCaptchaFunction("getResponse");ret
+  grecaptcha: tId!==void 0?a(this._widgetId):null},n.getWidgetId=function(){return this.props.grecaptcha&&this._widgetId!==void 0?this._widgetId:null},n.execute=fun
+  grecaptcha: props.isolated}),this.captcha.appendChild(o)}this._executeRequested&&this.props.grecaptcha&&this._widgetId!==void 0&&(this._executeRequested=!1,this.e
+
+
+============================================================
+5. SOPORTE.DISPERSO.COM — REGISTER ENDPOINT
+============================================================
+  POST register: 401 
+  POST register: 401 
+  POST register: 401 
+
+============================================================
+DONE
+============================================================

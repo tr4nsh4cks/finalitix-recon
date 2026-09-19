@@ -1,0 +1,380 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter",
+    "status": 403,
+    "length": 42,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/movement",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/movement/pay-in",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/movement/pay-in-detail",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order",
+    "status": 403,
+    "length": 42,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/consolidation",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/consolidation-detail",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/get-transaction-summary",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/get-transaction-summary-status",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/get-transaction-summary-status-detail",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/users",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/reporter/payment-order/users-report",
+    "status": 401,
+    "length": 26,
+    "label": "reporter"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/movement",
+    "status": 403,
+    "length": 42,
+    "label": "movement"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/movement/get-all",
+    "status": 401,
+    "length": 26,
+    "label": "movement"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/movement/get-all?clientAccountId=test",
+    "status": 401,
+    "length": 26,
+    "label": "movement"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-report",
+    "status": 403,
+    "length": 42,
+    "label": "payment-report"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-report/client-account",
+    "status": 403,
+    "length": 42,
+    "label": "payment-report"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/payment-report/dashboard",
+    "status": 401,
+    "length": 26,
+    "label": "payment-report"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/quote",
+    "status": 403,
+    "length": 42,
+    "label": "quote"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/quote",
+    "status": 403,
+    "length": 42,
+    "label": "quote"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/quote/get-all",
+    "status": 401,
+    "length": 26,
+    "label": "quote"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/quote/get-all",
+    "status": 403,
+    "length": 42,
+    "label": "quote"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/catalog",
+    "status": 403,
+    "length": 42,
+    "label": "catalog"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/catalog/get-all",
+    "status": 403,
+    "length": 42,
+    "label": "catalog"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/catalog/countries",
+    "status": 403,
+    "length": 42,
+    "label": "catalog"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/catalog/currencies",
+    "status": 403,
+    "length": 42,
+    "label": "catalog"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/catalog/banks",
+    "status": 403,
+    "length": 42,
+    "label": "catalog"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/user",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user/me",
+    "status": 401,
+    "length": 26,
+    "label": "user"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/user/me",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user/get-all",
+    "status": 401,
+    "length": 26,
+    "label": "user"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/user/get-all",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user/profile",
+    "status": 401,
+    "length": 26,
+    "label": "user"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/user/profile",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/user/register",
+    "status": 401,
+    "length": 26,
+    "label": "user"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/user/register",
+    "status": 403,
+    "length": 42,
+    "label": "user"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/document",
+    "status": 403,
+    "length": 42,
+    "label": "document"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/document",
+    "status": 401,
+    "length": 26,
+    "label": "document"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/document/presigned-upload",
+    "status": 403,
+    "length": 42,
+    "label": "document"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/document/presigned-upload",
+    "status": 401,
+    "length": 26,
+    "label": "document"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/document/get-all",
+    "status": 403,
+    "length": 42,
+    "label": "document"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/document/get-all",
+    "status": 403,
+    "length": 42,
+    "label": "document"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/notification",
+    "status": 403,
+    "length": 42,
+    "label": "notification"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification",
+    "status": 200,
+    "length": 0,
+    "label": "notification-post"
+  },
+  {
+    "method": "POST",
+    "path": "/api/v1/notification/new-potential-client",
+    "status": 401,
+    "length": 26,
+    "label": "notification-npc"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/monthly-billing",
+    "status": 401,
+    "length": 26,
+    "label": "other"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/settlement",
+    "status": 401,
+    "length": 26,
+    "label": "other"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/ip-valid",
+    "status": 401,
+    "length": 26,
+    "label": "other"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/dashboard",
+    "status": 403,
+    "length": 42,
+    "label": "fe-route"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/config",
+    "status": 403,
+    "length": 42,
+    "label": "fe-route"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/questions",
+    "status": 403,
+    "length": 42,
+    "label": "fe-route"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/massive-payments",
+    "status": 403,
+    "length": 42,
+    "label": "fe-route"
+  },
+  {
+    "method": "GET",
+    "path": "/api/v1/online-payments",
+    "status": 403,
+    "length": 42,
+    "label": "fe-route"
+  }
+]
