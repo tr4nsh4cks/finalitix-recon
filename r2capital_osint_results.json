@@ -1,0 +1,718 @@
+{
+  "leakcheck": [],
+  "dehashed": [
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": "",
+      "hash": [
+        "XHhlPtZVEO14zQeH:None||Cisco-PIX(MD5)"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "JJCpr205"
+      ],
+      "hash": [
+        "b40c6bc4e0b677b066131bb130239fac:||MD5",
+        "2b41230dcb16a46836023a400b61d660a26909a4:||SHA1",
+        "79689b2376886283b0df9ecd7a3b9581d122a1595b9bc2fd9cb6bcb4f948a9e0:||SHA256",
+        "87fa78c20f700e9d30fe28fbef682c804b85f88b55056a2f22baff355b4bafff205b2838f4a661cb74666fa8b371b5a86c79e7c92160ba947291ed384084e62d:||SHA512",
+        "SkpDcHIyMDU=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "WMuqyW38xPL*rP9"
+      ],
+      "hash": [
+        "ea26381f790ed912de6c64054cef88cd:||MD5",
+        "6273436f547319eff283716b9341533e91a2ef63:||SHA1",
+        "60b99b4f963168604da7f1c3b6c992e9a250d5bacfb8441af73c1d8741df34ae:||SHA256",
+        "02f5768b79e0f487ab3d36b9c47f0ce153b9df2ac9b6d7a2d15e8003217aa9d72ad64ca3cda21e12a236d384f1b1bb7185ecc5a0ddb192a388f4cff2830cc7da:||SHA512",
+        "V011cXlXMzh4UEwqclA5:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "operaciones@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "Hello2022*"
+      ],
+      "hash": [
+        "8e124681fa0d00063f5bc3895178159f:||MD5",
+        "5fae8787a0e6fb75062f91626fe0639a581d4a2f:||SHA1",
+        "9d571880a25e643f7b92e00ed05c68806a6fd1dd2782024bbc070a4281ce89e2:||SHA256",
+        "aa9c945fcf8027e8b23b0f8ff0b4769785725f14fdb3c1b941f30ae3404736dd12e32e4b00295a6a729c38252459a099bc0a2b65ab2a62877e8903b58ea89ba7:||SHA512",
+        "SGVsbG8yMDIyKg==:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "JC258200"
+      ],
+      "hash": [
+        "5c9b366ac6ecc45e7562324345d292e4:||MD5",
+        "7d8b045f574a3fb86b7e1956759c0715fc318d47:||SHA1",
+        "9de802f42be3f57e8ce3ae1e36bbe31383cc4bf7cc4b6f6bfa55f497ff8604ff:||SHA256",
+        "c94fbcefd5b84bdde8343f1bdd029bea4bff01ff238e12c56a68a88010a6e470c71454d08dbceca7132b182f07e51bd7af92bb3c583386a7080472864ef9ba2e:||SHA512",
+        "SkMyNTgyMDA=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "JC258200"
+      ],
+      "hash": [
+        "5c9b366ac6ecc45e7562324345d292e4:||MD5",
+        "7d8b045f574a3fb86b7e1956759c0715fc318d47:||SHA1",
+        "9de802f42be3f57e8ce3ae1e36bbe31383cc4bf7cc4b6f6bfa55f497ff8604ff:||SHA256",
+        "c94fbcefd5b84bdde8343f1bdd029bea4bff01ff238e12c56a68a88010a6e470c71454d08dbceca7132b182f07e51bd7af92bb3c583386a7080472864ef9ba2e:||SHA512",
+        "SkMyNTgyMDA=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": "",
+      "hash": [
+        "XHhlPtZVEO14zQeH:None||Cisco-PIX(MD5)"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "natalia.calle@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "Azsx2022*"
+      ],
+      "hash": [
+        "34517492a217dea3f3a3e5b00c1bb217:||MD5",
+        "70397ace5f27ee3add0905b2bf974dd546283707:||SHA1",
+        "38e1188422b2d249f8bf1533e501c7d860ef1f5625710b581a9919cb5f68b7e1:||SHA256",
+        "26fa3da9a62f5328ff805c766f8ae41bc66f8dc89051ec7fa32bdfbad0bc21cd13dbaf67b7ee392d397283c5bdf1bdd2de1f245179b1c257e95d0edf367bc5e9:||SHA512",
+        "QXpzeDIwMjIq:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "operaciones@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "CuOpsr2*"
+      ],
+      "hash": [
+        "d1736252a3a6ba2dabb0a40c7a22972c:||MD5",
+        "e2fa555e392fac52f6fec7e3c3c839ed1bafda1c:||SHA1",
+        "b94b67dd4ca4ba198cd6c5ca56e2d305c89a793ab40b15ba925a515ec8b53652:||SHA256",
+        "4be4deb704fdb9711006b392a5f2591ad70e1bb7092fe880c078a19ce07d3343456e3ce2a0ccd11d69687b75abcefed9fc670ec2926bd5c47c71b2daca75ac39:||SHA512",
+        "Q3VPcHNyMio=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "wTKXX@dNkb5xvM3"
+      ],
+      "hash": [
+        "16dd8c2bd5a0ee0a85f1e66c5c3270c5:||MD5",
+        "2ad5ab3cf2b34952762e7e572365a8e49a9be9d9:||SHA1",
+        "1fc8d9c32f035c62f99b5c75f16d31496dfc537e1872c3d21e126270e409a0d5:||SHA256",
+        "fcd25d34a5b8f823d14d483d5736842a186081e61206da4ba5f42a02c2a409519256f70c6f41471aa18a8710a43d42b93e9c9f8a3dd77008923a0a0cf17c58eb:||SHA512",
+        "d1RLWFhAZE5rYjV4dk0z:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "Solocqncnstes3."
+      ],
+      "hash": [
+        "ca071caec9502f3788d875c0d0a091f1:||MD5",
+        "0d6aa481a567b8788a17bbe05d23d99c1f7a3e37:||SHA1",
+        "ebd721a4138d944a4069fb937a242e30c638b376265fe587721e4d8dc63708ee:||SHA256",
+        "73110e987556c95ef2e8b117b916590eacc844c1f7c53f84d43153f9b6b4878d740dfc7d318b7a1254fe24167dacf62a873a27a169a8aa56de216378f9990c0d:||SHA512",
+        "U29sb2NxbmNuc3RlczMu:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "punker_skarlodead@hotmail.com"
+      ],
+      "username": "",
+      "password": [
+        "punker_skarlodead@hotmail.com"
+      ],
+      "hash": [
+        "335540d59477e174a32fa5a6e77e87c8:||MD5",
+        "f1171576dcc8536e7d43fc596a82d94042ce2fe7:||SHA1",
+        "9bf56188252cf535fcdf9d7601b3863628d648eea415590da4be971d294c4e2d:||SHA256",
+        "8f7cde45709da5aed9206093e35c81629d2f2cd47a004b827240fc98543fd335b1f5ba1196dfcbd0e0361140b370acd9935cec5e9946a739e4aa552939b92bd4:||SHA512",
+        "cHVua2VyX3NrYXJsb2RlYWRAaG90bWFpbC5jb20=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": [
+        "WMuqyW38xPL*rP9"
+      ],
+      "hash": [
+        "ea26381f790ed912de6c64054cef88cd:||MD5",
+        "6273436f547319eff283716b9341533e91a2ef63:||SHA1",
+        "60b99b4f963168604da7f1c3b6c992e9a250d5bacfb8441af73c1d8741df34ae:||SHA256",
+        "02f5768b79e0f487ab3d36b9c47f0ce153b9df2ac9b6d7a2d15e8003217aa9d72ad64ca3cda21e12a236d384f1b1bb7185ecc5a0ddb192a388f4cff2830cc7da:||SHA512",
+        "V011cXlXMzh4UEwqclA5:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2capital.co"
+      ],
+      "username": "",
+      "password": "",
+      "hash": [
+        "XHhlPtZVEO14zQeH:None||Cisco-PIX(MD5)"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "",
+      "username": [
+        "combro56"
+      ],
+      "password": [
+        "Combro56"
+      ],
+      "hash": [
+        "7b938ce2a0be4073e463bae3602d4f37:||MD5",
+        "b559a02f4a8896d9eb27be3dded295be44e1c440:||SHA1",
+        "3d54e7ee6f94956697bb029316b54897b834951c4833ffb2e7180048f63b7540:||SHA256",
+        "d0e0a83b5748c4cbaf80ee918cf394611a5b246cd8d89da6bef57b8ef38590b3795ceae051a871fc604d930df1a9a5e86e05982aa746be6639c58ca35528d2c0:||SHA512",
+        "Q29tYnJvNTY=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "combro56@gmail.com"
+      ],
+      "username": "",
+      "password": [
+        "Combro56"
+      ],
+      "hash": [
+        "7b938ce2a0be4073e463bae3602d4f37:||MD5",
+        "b559a02f4a8896d9eb27be3dded295be44e1c440:||SHA1",
+        "3d54e7ee6f94956697bb029316b54897b834951c4833ffb2e7180048f63b7540:||SHA256",
+        "d0e0a83b5748c4cbaf80ee918cf394611a5b246cd8d89da6bef57b8ef38590b3795ceae051a871fc604d930df1a9a5e86e05982aa746be6639c58ca35528d2c0:||SHA512",
+        "Q29tYnJvNTY=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "",
+      "username": "",
+      "password": [
+        "12345balanda11"
+      ],
+      "hash": [
+        "470d42313d1909850f3d88843849da35:||MD5",
+        "64f62376ea12f0fb516882acdce0e9fd4e979b3b:||SHA1",
+        "f3ff8ed679bd5c59f6ae373d60d2633ec3c77c9602313edff7b80f19a52010bc:||SHA256",
+        "8e818f7f399017c62b80609884608234f299be6b111b9d4fbdf2a15e34b6be40463438d3511b39c7e0c2297ddf035e036c46ce9d55884915dad37d776bb3325d:||SHA512",
+        "MTIzNDViYWxhbmRhMTE=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "",
+      "username": [
+        "wtvstudio"
+      ],
+      "password": [
+        "@Wtv101176"
+      ],
+      "hash": [
+        "d59652309145e81ffe9218c30217e68f:||MD5",
+        "faab2f4f3a844b62c6158caf54808e9f325eef76:||SHA1",
+        "75ba6303b28e8b34bf444b2741e779dd045c79ae31e335e665eb225484800302:||SHA256",
+        "aaa359892a2da8e50521383864f4e6327f51f6c7a52264b81674883ebafd34a35cdaab928325b617231a4bb90077f52423e9d4366a834f21459d14aac06941dc:||SHA512",
+        "QFd0djEwMTE3Ng==:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "",
+      "username": [
+        "combro56"
+      ],
+      "password": [
+        "Combro56"
+      ],
+      "hash": [
+        "7b938ce2a0be4073e463bae3602d4f37:||MD5",
+        "b559a02f4a8896d9eb27be3dded295be44e1c440:||SHA1",
+        "3d54e7ee6f94956697bb029316b54897b834951c4833ffb2e7180048f63b7540:||SHA256",
+        "d0e0a83b5748c4cbaf80ee918cf394611a5b246cd8d89da6bef57b8ef38590b3795ceae051a871fc604d930df1a9a5e86e05982aa746be6639c58ca35528d2c0:||SHA512",
+        "Q29tYnJvNTY=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "combro56@gmail.com"
+      ],
+      "username": "",
+      "password": [
+        "Combro56"
+      ],
+      "hash": [
+        "7b938ce2a0be4073e463bae3602d4f37:||MD5",
+        "b559a02f4a8896d9eb27be3dded295be44e1c440:||SHA1",
+        "3d54e7ee6f94956697bb029316b54897b834951c4833ffb2e7180048f63b7540:||SHA256",
+        "d0e0a83b5748c4cbaf80ee918cf394611a5b246cd8d89da6bef57b8ef38590b3795ceae051a871fc604d930df1a9a5e86e05982aa746be6639c58ca35528d2c0:||SHA512",
+        "Q29tYnJvNTY=:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": [
+        "jc.juarez@r2.co"
+      ],
+      "username": "",
+      "password": [
+        "Jc258200."
+      ],
+      "hash": [
+        "ac9e464d6bcedef6d3e8d6ce54eaf21f:||MD5",
+        "e0a0753606c401f3d60888b34ecfd2e2bd438706:||SHA1",
+        "d3e5f29dd021b1cdbba2c46069ae9776512425b6a9868559c5ea63bb5aafc49c:||SHA256",
+        "6bb23772795de76182840293ce517699723debd15b0cee98f36de11f50b68f34d1dcbb6fdd75f422ef96f746a3dd0e99c6cad3ae7b99ebfd6e82021c545a36c0:||SHA512",
+        "SmMyNTgyMDAu:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": [
+        "009Fbc9A3c1aB1fC2123861e8aE073"
+      ],
+      "hash": [
+        "d21b730f539a44b3fc12d2fd05ec78c8:||MD5",
+        "fe2fc5f26d9b191dc85b0c2810e6d4b3124fc113:||SHA1",
+        "0789dc3fe1d01d61282388e6e1e14a0bb0b250c0c45cd9a9d65d29cccc918593:||SHA256",
+        "edd2e06283b9445574e649b33e6a137d7622a6fa550257c1499c71bfcf58ce9a2aa039efb2c5192419410d04df41545f14da884ca5b53294730d0987ffe3e939:||SHA512",
+        "MDA5RmJjOUEzYzFhQjFmQzIxMjM4NjFlOGFFMDcz:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": "",
+      "hash": [
+        "pbkdf2_sha256$15000$wOIRGMjn2OAY$DergXVN993F6XAluc3/GDniQCWOcMU4Ii4+WPk995KM=:None||Django(PBKDF2-HMAC-SHA256)"
+      ],
+      "source": "Dubsmash"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": "",
+      "hash": [
+        "$2a$08$0JsYirkucxQysMech/mPFuZWPAEURh9uT31QWykFwqNDmIILb/1KW:None||Blowfish(OpenBSD)"
+      ],
+      "source": "Dropbox"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": "",
+      "hash": [
+        "69c7b946a064362213e4a38b32c35e004d839aa0:None||SHA-1"
+      ],
+      "source": "LinkedIn"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": [
+        "23173184"
+      ],
+      "hash": [
+        "9b78f359944c712e4871e09fc8a23628:||MD5",
+        "69c7b946a064362213e4a38b32c35e004d839aa0:||SHA1",
+        "28eeee57f62a6a6372ff0ceb6b69f05ce98b36fc6d9fb79ac38c5cf9601a3e2b:||SHA256",
+        "ef43bbbf46a9d2c36494c2efad9ced1d8a572ad1402e91397c92da6bad46c39bf4d61e0b24383dbce713faa60014748185f901aced35a323ce508dd182a1d683:||SHA512",
+        "MjMxNzMxODQ=:||BASE64"
+      ],
+      "source": "AntiPublic"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": "",
+      "hash": [
+        "8d1717d3339f73910bb4ff4dc945deae:None||MD5"
+      ],
+      "source": "Taringa"
+    },
+    {
+      "email": "diego.pereyra@r2.co",
+      "password": [
+        "88TUris"
+      ],
+      "hash": [
+        "a1940a57a32f81e77ff3b951f9178cfa:||MD5",
+        "79fb3ed8b873e93412cf741e857d2c6be6b1aedd:||SHA1",
+        "f42554160176e46bc21876a5e28d128c9eb0ada2e6ea9ef34509102a6f8ac6f7:||SHA256",
+        "a87a67d7b9f6852641f98a7c422ef07d20794ddb6d5d756c68876a95c50c9fd7da46dae370f9e7754b0177dd47a401bd16eaf92cff92c2e4c85b8f31030eb705:||SHA512",
+        "ODhUVXJpcw==:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": "",
+      "hash": [
+        "a94339342960b7daf264423b298a5461f9744508c827f503dd56d0f821c2f451:None||SHA-256"
+      ],
+      "source": "Aptoide"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": [
+        "igk1zd1982"
+      ],
+      "hash": [
+        "dad1d6891d44785f59da46bd257774b6:||MD5",
+        "beef4e26cdd752092dfd900f9ee114244394033a:||SHA1",
+        "696cc4412e4055333fff885e3d4ebfa38e20f2ec9836d652d2be3d8e0746d677:||SHA256",
+        "8738a001f2745905d2c752f9278d036d05d16a251736bdefcff54c562e6b8baf83f85829bcd1a7460e98a3ce230f481fb5d70971c79d8160844f195c9dd79af6:||SHA512",
+        "aWdrMXpkMTk4Mg==:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": "",
+      "hash": [
+        "pbkdf2_sha256$15000$XycnafXp6xUo$xtbRNGqu2rI1yTQ9XONcYfMNzSdfjBDqezKG1nT6Mfs=:None||Django(PBKDF2-HMAC-SHA256)"
+      ],
+      "source": "Dubsmash"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": "",
+      "hash": [
+        "6874d1a6b7ff39e56e8eef62c3dbb2c8:None||MD5"
+      ],
+      "source": "Taringa"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": [
+        "cesar123"
+      ],
+      "hash": [
+        "286f6ff9be8cca78598a17b402839909:||MD5",
+        "1a58f5c310732fb37ee524d592498d438964c129:||SHA1",
+        "578bfc33d127e864cf010d2fdda8c66c018757829b7e349653760ce5e36c59c6:||SHA256",
+        "fc569d9dc39100a794b7fba1c2fd68ad95500f3fc68e0d71a43ec5c1099ebcd9364a207f5b8b1bc004ddc99b058dfcd4a33f357cca471390e613633a4790e47e:||SHA512",
+        "Y2VzYXIxMjM=:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "cesar.sepulveda@r2capital.co",
+      "password": "",
+      "hash": [
+        "5899689551d8e8028aeb0ce463924206e8ddfeea:None||SHA-1",
+        "a8098ef1e0b13cbb4872385af174e72a7a6ca2e1:None||SHA-1"
+      ],
+      "source": "Zynga.com"
+    },
+    {
+      "email": "fabrizio.albanese@r2capital.co",
+      "password": [
+        "palermo1"
+      ],
+      "hash": [
+        "0c7f138b5bd4061d07bee16a105fd677:||MD5",
+        "4d65976522bce3f90bb65f6a45b0af471a95ee2d:||SHA1",
+        "4c2afb674e6f1a64bdfa7a2e8e73a5ee83ae9c373b7d7bb2b240ba5c554c09a9:||SHA256",
+        "310f3e3670bfab27f7c7c6d465acde80cbb9fd2d5bc6f20a33b29e164e130ca8f430e55641c85b0a736c87c7c3b368a033fd34ad506077984188e34c1872855b:||SHA512",
+        "cGFsZXJtbzE=:||BASE64"
+      ],
+      "source": "Naz.API"
+    },
+    {
+      "email": "fabrizio.albanese@r2capital.co",
+      "password": [
+        "arone220873"
+      ],
+      "hash": [
+        "6783c539c3823a11045a52eacc6f397c:||MD5",
+        "3c19ad3cc04544e1fa2949f059887824d0d08a9d:||SHA1",
+        "48852f17f33b08a62aab232e1dce81e26a86890f2afc8dfee23235827cf6c78c:||SHA256",
+        "879ce98e1b75968056f43097a9706defb64c9c329460a23c1f67b131f87aa92e281ad4c0a10d6cb423f3a3a18580f5b722de3c38c2d0fa43ab4c6b43c74f8d72:||SHA512",
+        "YXJvbmUyMjA4NzM=:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "fabrizio.albanese@r2capital.co",
+      "password": [
+        "magicbox"
+      ],
+      "hash": [
+        "aed30931f2aaba9b2899e212d0bbe81a:||MD5",
+        "a097129628206f09616acac2347e378be0101c98:||SHA1",
+        "f501c5e11b5ce152a9744d3b6cb823633ac1b79c710c3f1396ea9eca5a1887a7:||SHA256",
+        "7aef5fdf61de94b0522cb76b4ed695bd1e1ef79efb8133ffce64b592bc45edd32459204fa2e1c3ca8746495ec398f45b5452c7e082968f094bc4efa2b9d85bd5:||SHA512",
+        "bWFnaWNib3g=:||BASE64"
+      ],
+      "source": "Exploit.in"
+    },
+    {
+      "email": "fabrizio.albanese@r2capital.co",
+      "password": "",
+      "hash": [
+        "4D65976522BCE3F90BB65F6A45B0AF471A95EE2D:None||SHA-1"
+      ],
+      "source": "Myspace.com"
+    },
+    {
+      "email": "fabrizio.albanese@r2capital.co",
+      "password": "",
+      "hash": [
+        "26661938F86DC5E3BB1BF3B023292570C3180896:None||SHA-1"
+      ],
+      "source": "Myspace.com"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": [
+        "666180693"
+      ],
+      "hash": [
+        "eb02729c24b88a9c35cb56799888641e:||MD5",
+        "0810e68b41a2c8f74f9e0cd39928ce738e197a69:||SHA1",
+        "549af27af3d487e7834a799bd04816afd2a2aeb6c5eba1b62e326533324827c6:||SHA256",
+        "2907419a2d2e28d59d22ef41d3fb7ed1908f5246abaf9de6c46aa7be90519d1cc52bdf93b30f0588865ad991b65996733e846c9df215c00df24d1c8f5e76cf2e:||SHA512",
+        "NjY2MTgwNjkz:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": "",
+      "hash": [
+        "$826y4$31226$dObG2JfheM3TbRem4O0Dclcl2Y421N8h7N7mfI63aY2Oc69p0ubJPL3Sh/.ACSh8uZmNvN8FyiYNAyi:None||UNKNOWN",
+        "856016a23b39ea637a509b2dda65b99c:None||MD5"
+      ],
+      "source": "Edmodo"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": [
+        "mellamoivan15"
+      ],
+      "hash": [
+        "a5063e73d05455b8328683babc28d6b8:||MD5",
+        "e49043375e44d34d19b9cc2464991918fc334187:||SHA1",
+        "90031dd5914f200f85e06c47a2a48f9897e0e01b18e6301a13d8b978ba388ab0:||SHA256",
+        "8d495354ae2cc3a028496536e3286411f9a8fb1650f6c3f4933498e06c8fd1fd886352153c9de41c0b8c773eed5b2127a330c8b3bfb26245246c071ff44cfd96:||SHA512",
+        "bWVsbGFtb2l2YW4xNQ==:||BASE64"
+      ],
+      "source": "ALIEN TXTBASE"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": [
+        "ikea92"
+      ],
+      "hash": [
+        "d404e053469ecbe359f5835b02169e8a:||MD5",
+        "ebe3131ad1cf2ffc49d3ea6dbdc75cf276646f9b:||SHA1",
+        "1e0f4406f700287c989daab8bdcf5be0f1db2217b568f32a9f94928117a3f8c6:||SHA256",
+        "75673bc458d8ac7b1e3b825b3f4adf696617b9f6675e29b2c75f4856cb7d702d0802cdc336ce86c041cde422d8bf93ee7142a3a9ac4eca1befdefedbb113ace1:||SHA512",
+        "aWtlYTky:||BASE64"
+      ],
+      "source": "Netlog.com"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": [
+        "Txuriurdin74"
+      ],
+      "hash": [
+        "3d1703e266d7174b736d0ff53ebd31a7:||MD5",
+        "d45a4b7ff6e4be751709bf225b4b10134b26f135:||SHA1",
+        "bf6a0f76a688ab18d1a22d8030cd9b9087abc4a9ae4aa7b0193af91d63aed6c4:||SHA256",
+        "b05ce130f0fc611c8ce5c004f38f118d9f4b829c299d0b39e9712fbaa53d3144c9cd394be8ceec5bf14aade3c664dc3d341629e7877ff1b4c562a0d9da46d2ca:||SHA512",
+        "VHh1cml1cmRpbjc0:||BASE64"
+      ],
+      "source": "Naz.API"
+    },
+    {
+      "email": "ivan.garcia@r2capital.co",
+      "password": "",
+      "hash": [
+        "a5136dad28010b5a0005d21a90432f766edd0355:None||SHA-1"
+      ],
+      "source": "LinkedIn"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": [
+        "wvrapper"
+      ],
+      "hash": [
+        "3d12c1a9722da9988ca5b96e88ae82ba:||MD5",
+        "7fafab73416d78ed19065b29763e0af15e9bd27a:||SHA1",
+        "b9b9d2a32c34b84a052b5959b166b60e418d3b5f4e7697d1cc8927e22561b3c2:||SHA256",
+        "c8d34aef29b680ce63fa0dc92fb93c641158042e063950f7c139e933cf70ca0b654e931cb43b4a810179407cb4e786040a330ee1381e3ae2a0d8e26e8a941742:||SHA512",
+        "d3ZyYXBwZXI=:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": [
+        "11111"
+      ],
+      "hash": [
+        "b0baee9d279d34fa1dfd71aadb908c3f:||MD5",
+        "7b21848ac9af35be0ddb2d6b9fc3851934db8420:||SHA1",
+        "d17f25ecfbcc7857f7bebea469308be0b2580943e96d13a3ad98a13675c4bfc2:||SHA256",
+        "22e7e9d85b7fe6004f7b9f3aa592ea9ec9ce098682e8192fa83785f1784c768d1d1ac3b8afcae88666f66aec24739ac133e9d4adc7506f1a5f1f6078cb27c674:||SHA512",
+        "MTExMTE=:||BASE64"
+      ],
+      "source": "Naz.API"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": [
+        "Nice166797",
+        "alexander"
+      ],
+      "hash": [
+        "04310ee7171b7cb370ee8109d12278d9:||MD5",
+        "850891729424f357d0ad69515b7f78eee9bcbb86:||SHA1",
+        "85d92628143da723a0fc0788189d1fb7589186bc3f4a0a86811a735afbb5e310:||SHA256",
+        "86b603a9c3725b216ac5ede0145a0d8f04f0d40079f1af1b5ca7fac73d0b133fc8d7cb5550503b4e651dc00ac6b72a7883a2da7622d1f2c57033d4a881c1f84d:||SHA512",
+        "TmljZTE2Njc5Nw==:||BASE64",
+        "dd22141acb5ea065acd5ed773729c98f:||MD5",
+        "e46fc836cca3acec03944314d1457c2ae6c68ef3:||SHA1",
+        "9f2a08fde416cef2158943241fee1dd8f3cca092afddef1d53ae82318e05f63e:||SHA256",
+        "6a8b7d8fa03038cc082a00573ad663989c470a26bdbe38a168cf5c5dfabcb43ac82fd8d61e0cdac0c6c54df7f8257e26faba62426f77d91a4c13ded3fac20113:||SHA512",
+        "YWxleGFuZGVy:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": "",
+      "hash": [
+        "pbkdf2_sha256$24000$uUfhFvwAxnPO$hZCy9ZPag8LjYBRf/YN9rbDRA7SOuC42hAS1X00tH/I=:None||Django(PBKDF2-HMAC-SHA256)"
+      ],
+      "source": "Dubsmash"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": [
+        "24augustus"
+      ],
+      "hash": [
+        "6e1ce589bda1a257fe164aad4a3090f2:||MD5",
+        "0aa610e3ef6de64fa17527991e9cd4fb71f00970:||SHA1",
+        "47195327178d170e7cadec6511f37a19199aed4e714551aab3357b8c7ef5f23c:||SHA256",
+        "545e43a82823d5cc3b4b1ff7100f44ca61d7195dfa37e9268e9e223268ecf537a9fda5ea93ae515c5595cd471e4ecf9b758dd31c77d8100bea272c599961cbe6:||SHA512",
+        "MjRhdWd1c3R1cw==:||BASE64"
+      ],
+      "source": "Collections"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": [
+        "cml19920224"
+      ],
+      "hash": [
+        "2fe67e1c37d77beee78abf74a19421da:||MD5",
+        "09b00e0f04443041ce690fecf1d2f843bd10f6a0:||SHA1",
+        "5cf750b286bebb8067e197936c1a2538125cee5106c8c4fcdd8262d0d93df74d:||SHA256",
+        "970248db109d4273120e1382644c04bd805c0ec089d1f5fcaca108a14f9a877f4ec9dec3936151a555c0c42b5ff60801156572c5aa77ba939b0d538f5b2ec255:||SHA512",
+        "Y21sMTk5MjAyMjQ=:||BASE64"
+      ],
+      "source": "NetEase"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": "",
+      "hash": [
+        "$826y4$31226$dZbj2lfleY3jbVem4M0zcEc42N4z1Z8m7O7DfF6jaM2.cl940Xb6UfLjzG.gqoaF8SuvHQLf/hY6Qo6:None||UNKNOWN",
+        "55a325d5abfa1acfaf3bea629f1a2116:None||MD5"
+      ],
+      "source": "Edmodo"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": "",
+      "hash": [
+        "pbkdf2_sha256$24000$aIorA9P53XUX$wxMCHBnQ5NbagIOy3/zm0N6qJ+E1AaJrIbgPpXPAqUQ=:None||Django(PBKDF2-HMAC-SHA256)"
+      ],
+      "source": "Dubsmash"
+    },
+    {
+      "email": "e@mawii.com.co",
+      "password": "",
+      "hash": [
+        "11779a9b94b95f05e04a7f3bb6f62e54d02c023f:None||SHA-1"
+      ],
+      "source": "MyFitnessPal"
+    }
+  ],
+  "intelx": []
+}
